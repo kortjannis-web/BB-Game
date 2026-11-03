@@ -108,7 +108,7 @@ console.log("  Ausgänge:");
 for (const [k, v] of Object.entries(ausgaenge)) console.log(`    ${k}:`, Object.fromEntries(Object.entries(v).map(([a, n]) => [a, pct(n)])));
 console.log("  Lore gesehen (Anteil der Durchläufe):");
 console.log("   ", Object.fromEntries([...loreGesehen].sort((a, b) => a[1] - b[1]).map(([k, n]) => [k, pct(n)])));
-console.log(`4) Umfang: ${knots.length} Knoten, ${loreStellen.size} Kern-Lore, ${pruefen} Prüfstellen (PRÜFEN), ~${platzhalterWoerter} Wörter Platzhaltertext`);
+console.log(`4) Umfang: ${knots.length} Knoten, ${loreStellen.size} Kern-Lore, ${pruefen} Prüfstellen (PRÜFEN), ~${platzhalterWoerter} Wörter Text`);
 
 if (fehler) {
   console.log(`\nNICHT BESTANDEN: ${fehler} Befund(e).`);

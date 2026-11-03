@@ -1,6 +1,6 @@
 # Kapitel 1: Yharnam — Struktur (Raster)
 
-Stand 2026-11-03. **Das Gerüst steht und ist geprüft; die Texte sind Ein-Satz-Platzhalter.** Erst wenn diese Struktur abgenommen ist, wird ausformuliert.
+Stand 2026-11-03. **Kapitel 1 ist vollständig ausgeschrieben (rund 15.700 Wörter) und im Browser spielbar** (`npm run spielen`). Struktur, Prüfer und Szenarien sind grün.
 
 - Quelle der Wahrheit: `story/kapitel1/*.ink`, `story/system.ink`, `story/traum.ink`
 - Baum als Diagramm: [`karte-kapitel1.md`](karte-kapitel1.md) (wird erzeugt, GitHub zeigt es an)
@@ -26,7 +26,7 @@ flowchart LR
 | A Ankunft | geführt, Haltungen | Prolog, Klinik, Erwachen, Jägertraum, Lernkampf, Iosefkas Tür, erste Laterne |
 | B Zentral-Yharnam | **frei**, beliebige Reihenfolge | Gilbert, Türen und alte Frau, Scheiterhaufen, Mädchen, Gasse mit Schütze, Eileen auf dem Dach, Traum |
 | Nadelöhr 1 | drei Wege | Große Brücke |
-| C Unterstadt | **frei** | Kanalisation, Gräber (Gascoigne), Eileens Jagd, Leiter zurück nach B |
+| C Unterstadt | **frei** | Kanalisation, Gräber (Gascoigne), Eileen über den Gräbern, Leiter zurück nach B |
 | Nadelöhr 2 | Pflicht | Grab des Oedon |
 | D Nachspiel | frei | Viola, Eileen, Mädchen, Gilbert, Kanalisation, Traum |
 
@@ -54,7 +54,7 @@ flowchart LR
 | Figur | Begegnungen | Was man gewinnen oder verlieren kann |
 |---|---|---|
 | **Gascoigne** | Scheiterhaufen (rettet dich vor dem Mob, lehrt die Parade, bittet um einen Gruß an seine Frau) → Brücke (als Helfer rufbar, summt das Lied der Spieluhr, kann nicht aufhören) → Gräber (kippt; erinnern, warnen, nach Viola fragen) → Grab des Oedon (Boss) | Freundschaft (Wert `gascoigne`), Parade, Moment der Klarheit, sein letztes Wort |
-| **Eileen** | Dach über dem Kanaleingang (Jägerin der Jäger, Jägermarken, fragt nach Gascoigne) → Gräber (gemeinsame Jagd auf einen Jäger im Blutrausch) → Nachspiel (Urteil) | Partnerschaft, Hilfe gegen Gascoignes Bestie, Bruch, wenn man ihn vor ihr warnt |
+| **Eileen** | Dach über dem Kanaleingang (Jägerin der Jäger, Jägermarken, fragt nach Gascoigne) → Dach über den Gräbern (erklärt, wie Jäger kippen; man bittet um Schonung, bietet Zusammenarbeit an oder schweigt) → Nachspiel (Urteil) | **Angebot der Partnerschaft für Kapitel 2** (vor der Kapelle, Henryk), Bruch, wenn man Gascoigne vor ihr warnt |
 | **Das Mädchen** | Fenster am Brunnenplatz (Spieluhr, Suche nach der Mutter) → Nachspiel (Brosche, Wahrheit, Lüge, Schweigen) | Spieluhr; ihr Leben (Kanon: kein Ausgang rettet sie endgültig) |
 | **Gilbert** | Fenster an der Laterne (Stadt, Jagd, Kirche, Brücke; Feuer; Bitte) → Bericht nach der Brücke | Feuer, Freundschaft (zahlt sich beim Blutmond aus) |
 | **Iosefka** | Tür der Klinik (Ampulle, ihre Stimme) | Merkmal, an dem man in Kapitel 2 die Hochstaplerin erkennt |
@@ -73,8 +73,9 @@ flowchart LR
 | Mob kämpfen / umgehen / Feuer | Wunden | Gascoigne trifft dich in jedem Fall | – |
 | **Mädchen sofort fortschicken** (falsch) | keine Spieluhr | **Band beim Schwein in der Kanalisation**; kein Moment mit Gascoigne | – |
 | Eileen: Gascoigne verteidigen / verraten / nichts | Freundschaft oder Verrat | Gascoigne kann nicht mehr gerufen werden, wenn verraten; Eileens Dank am Grab | Eileen und Henryk |
+| Eileen über den Gräbern: Schonung erbitten / Zusammenarbeit anbieten / schweigen | Vertrauen | Mit genug Vertrauen (und ohne Warnung an Gascoigne) bietet sie am Grab die Partnerschaft an | **Partnerschaft vor der Kapelle** |
 | **Kleriker-Bestie** kämpfen allein / mit Gascoigne / ablenken / fliehen | Wunden, Einsicht | Laterne an der Brücke nur bei Sieg; Blutgedächtnis nur bei Sieg und Berühren | – |
-| Gräber: Gascoigne erinnern / warnen / fragen | Freundschaft | Warnen = Eileen hilft nicht und bricht mit dir | – |
+| Gräber: Gascoigne erinnern / warnen / fragen | Freundschaft | Warnen = Eileen bricht mit dir | keine Partnerschaft |
 | **Moment der Klarheit** (Freundschaft ≥ 2 + Spieluhr + Blutgedächtnis) | Versprechen | Gascoigne stirbt als Mensch; dem Mädchen kann man sagen, dass er an sie dachte | – |
 | **Brosche geben** (Kanon-Tragödie) | Wahrheit | Haustür offen, **Band beim Schwein** auf dem Rückweg | – |
 | Lügen / schweigen | sie wartet | – | Kapelle oder Klinik (beides schlimm) |
@@ -92,8 +93,7 @@ Jeder Kampf: Anzeichen im Text, 2 bis 4 Möglichkeiten, feste Folge. Kein Zufall
 | Schütze in der Gasse | 1 | Schuss von hinten | Dächer im Blick behalten |
 | **Kleriker-Bestie** | 4 + Phase | langer Arm, Kreischen, Sprung | Feuer, Molotow, Parade, Gascoigne als Helfer |
 | Schwein in der Kanalisation (optional) | 2 | Ansturm, Biss | – |
-| Jäger im Glockenturm (mit Eileen) | 2 | Klinge, Schuss auf Eileen | Parade |
-| **Gascoigne** | 3 Phasen, 5 Takte | Donnerbüchse, Axt, lange Axt, Bestiensprung, Griff | Parade (seine eigene Lehre), Spieluhr (dreimal = Bestie), Feuer, Eileen |
+| **Gascoigne** | 3 Phasen, 5 Takte | Donnerbüchse, Axt, lange Axt, Bestiensprung, Griff | Parade (seine eigene Lehre), Spieluhr (dreimal = Bestie), Feuer, Molotow |
 
 ---
 
@@ -115,7 +115,7 @@ Bewusst offen: Was ist bleiches Blut? Wer hält den Traum? Wer oder was ist Oedo
 4. Moment der Klarheit im Kampf.
 5. Gilberts Feuer schon in Kapitel 1 (im Original später).
 6. Das Mädchen kann man schon vor Gascoigne fortschicken.
-7. Eileens gemeinsame Jagd, Partnerschaft, ihre Hilfe gegen Gascoigne.
+7. Eileens zweite Begegnung über den Gräbern und ihr Angebot der Partnerschaft (die gemeinsame Jagd folgt in Kapitel 2).
 8. Ablenken und Fliehen an der Brücke; Blutgedächtnis.
 9. Der Schütze in der Gasse als feste Szene.
 
@@ -128,14 +128,13 @@ Kanon nah am Original: Klinik, Vertrag, Notiz, erster Tod, Traum, Iosefkas Tür,
 - Kompiliert ohne Fehler und Warnungen.
 - 3.000 Zufallsdurchläufe: 0 steckengeblieben, alle erreichen das Kapitelende, beide Nadelöhre in jedem Lauf.
 - Jeder der 37 Knoten wird erreicht.
-- 8 Szenarien erreichbar: bester Weg (Moment der Klarheit), Mädchen weggeschickt, Bestie abgelenkt, Flucht, Verrat und Partnerschaft, Warnung und Bruch, Lüge, Kanon-Tragödie.
+- 8 Szenarien erreichbar: bester Weg (Moment der Klarheit), Mädchen weggeschickt, Bestie abgelenkt, Flucht, Verrat und Eileens Angebot, Warnung und Bruch, Lüge, Kanon-Tragödie.
+- Browser-Test (Chromium): Start mit Namen, Kampf mit Vignette (orange bei 3, rot bei 2), Notizbuch, Fortsetzen nach Neuladen, keine Fehler in der Konsole.
 - Offene Kanon-Prüfstellen: 5 (Einzelheiten der Vision, Reihenfolge im ersten Traum, Gilberts Übergabezeitpunkt, Waren der Boten, Einzelheiten des Traums).
 
 ---
 
-## 9 Fragen an dich vor dem Ausschreiben
+## 9 Entschieden
 
-1. Passt die Reihenfolge der Begegnungen mit Gascoigne (Scheiterhaufen, Brücke, Gräber, Grab)?
-2. Soll der Moment der Klarheit noch mehr verlangen oder weniger?
-3. Soll Eileen schon in Kapitel 1 so nah sein, oder erst ab Kapitel 2 die volle Partnerschaft?
-4. Fehlt dir eine Szene aus Zentral-Yharnam, die du beim ersten Spielen gefühlt hast?
+- Eileen: in Kapitel 1 zwei Begegnungen, die Partnerschaft beginnt in Kapitel 2 (Nutzer, 2026-11-03).
+- Erzählweise: Du-Form im Präsens, Lovecraft-Ton; Kapitelanfang und -ende als Auszüge aus den Aufzeichnungen des Jägers.

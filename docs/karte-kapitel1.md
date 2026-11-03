@@ -29,7 +29,7 @@ flowchart TD
   subgraph kapitel1_c_unterstadt_ink["C Unterstadt (frei)"]
     k1_hub_c["Unterstadt (frei)"]
     k1_c_kanal["Kanalisation (Schwein, Leiter)"]
-    k1_c_eileen["Eileen: gemeinsame Jagd"]
+    k1_c_eileen["Eileen über den Gräbern"]
     k1_c_graeber["Die Gräber (zweite Begegnung mit Gascoigne)"]
   end
   subgraph kapitel1_n2_gascoigne_ink["NADELÖHR 2 Gascoigne"]

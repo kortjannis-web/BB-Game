@@ -43,7 +43,7 @@ VAR gelernt = ()
     ~ echos = echos + fleck_echos
     ~ fleck_echos = 0
     ~ fleck_ort = ""
-    Auf den Steinen liegt noch dein eigenes Blut; du nimmst die Echos wieder an dich. # klang: echos
+    Auf den Steinen liegt noch dein eigenes Blut, eine dunkle, glänzende Lache an der Stelle, an der du gestorben bist. Als du dich darüber beugst, steigen die Echos daraus auf und kehren zu dir zurück, wie Tauben in den Schlag. # klang: echos
 }
 ->->
 
@@ -51,7 +51,7 @@ VAR gelernt = ()
 === ampulle_ruhig ===
 ~ ampulle = ampulle - 1
 ~ heile(AMPULLE_HEILT)
-Du stößt die Ampulle in den Schenkel; Wärme läuft bis in die Finger. # klang: ampulle
+Du stößt dir die Ampulle in den Schenkel. Das Blut brennt, dann wärmt es, und die Wärme läuft dir die Adern hinauf bis in die Fingerspitzen, und für einen Moment fühlst du dich so lebendig, dass es beinahe wehtut. # klang: ampulle
 ->->
 
 // Ampulle mitten im Angriff: heilt, aber der Gegner trifft dabei (Schaden höchstens 2, damit Trinken nie tötet).
@@ -59,7 +59,7 @@ Du stößt die Ampulle in den Schenkel; Wärme läuft bis in die Finger. # klang
 ~ ampulle = ampulle - 1
 ~ heile(AMPULLE_HEILT)
 ~ treffer(schaden)
-Du trinkst, und im selben Atemzug trifft dich der Schlag. # klang: ampulle
+Du stößt dir die Ampulle in den Schenkel, mitten im Kampf, und im selben Atemzug trifft dich der Schlag, den du kommen sahst und trotzdem nicht vermeiden konntest. Das Blut heilt, was es heilen kann. Der Rest ist Lehrgeld. # klang: ampulle
 ->->
 
 // Tod: Erwachen im Traum. Die Echos bleiben am Todesort liegen; ein zweiter Tod vorher löscht sie.
@@ -72,5 +72,5 @@ Du trinkst, und im selben Atemzug trifft dich der Schlag. # klang: ampulle
 ~ fleck_echos = echos
 ~ echos = 0
 ~ leben = LEBEN_MAX
-Die Welt kippt, und der Boden kommt dir entgegen. # tod: {ort}
+Die Welt kippt. Der Boden kommt dir entgegen, langsam, als habe er alle Zeit der Welt, und das Letzte, was du hörst, ist dein eigenes Herz, das einen Schlag aussetzt und dann noch einen. Dann wird es dunkel, und in der Dunkelheit bewegen sich kleine graue Hände. # tod: {ort} # stimmung: grauen
 -> traum_erwachen

@@ -1,0 +1,99 @@
+:root {
+  --grund: #0d0b0a;
+  --papier: #d8cfc0;
+  --blass: #8f8577;
+  --blut: #8c1b1b;
+  --gold: #b39662;
+  --linie: #2b2520;
+  --tint: rgba(0, 0, 0, 0);
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { margin: 0; background: var(--grund); color: var(--papier); }
+body {
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  min-height: 100vh;
+  background-image: radial-gradient(ellipse at 50% 0%, var(--tint), transparent 70%);
+  transition: background-color 2s ease;
+}
+body[data-stimmung="ruhig"] { --tint: rgba(120, 110, 90, 0.10); }
+body[data-stimmung="schoen"] { --tint: rgba(170, 140, 90, 0.14); }
+body[data-stimmung="spannung"] { --tint: rgba(90, 60, 50, 0.16); }
+body[data-stimmung="kampf"] { --tint: rgba(120, 20, 20, 0.20); }
+body[data-stimmung="grauen"] { --tint: rgba(60, 70, 90, 0.20); }
+
+#vignette {
+  position: fixed; inset: 0; pointer-events: none; z-index: 5;
+  box-shadow: inset 0 0 0 0 transparent;
+  transition: box-shadow 1.2s ease;
+}
+/* Fünf unsichtbare Leben: bei 3 leicht orange, bei 2 leicht rot, bei 1 schwarz. */
+#vignette[data-leben="3"] { box-shadow: inset 0 0 18vmin 4vmin rgba(214, 120, 40, 0.35); }
+#vignette[data-leben="2"] { box-shadow: inset 0 0 22vmin 6vmin rgba(170, 20, 20, 0.45); }
+#vignette[data-leben="1"] { box-shadow: inset 0 0 28vmin 10vmin rgba(0, 0, 0, 0.92); animation: puls 2.4s ease-in-out infinite; }
+@keyframes puls { 50% { box-shadow: inset 0 0 32vmin 13vmin rgba(0, 0, 0, 0.96); } }
+
+#leiste {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 4;
+  display: flex; gap: 0.9rem; align-items: center; flex-wrap: nowrap; white-space: nowrap;
+  padding: 0.5rem 0.8rem; font-size: 0.82rem; color: var(--blass);
+  background: linear-gradient(var(--grund) 70%, transparent);
+  font-family: "Cormorant Garamond", serif; letter-spacing: 0.04em;
+}
+#leiste b { color: var(--papier); font-weight: 600; }
+#leiste button { margin-left: auto; padding: 0.3rem 0.7rem; font-size: 0.9rem; }
+
+#buehne { max-width: 40rem; margin: 0 auto; padding: 3.6rem 1rem 6rem; }
+#text p { scroll-margin-top: 3.5rem; }
+
+#titel { text-align: center; padding-top: 12vh; }
+#titel h1 { font-family: "Cormorant Garamond", serif; font-weight: 400; font-size: clamp(3rem, 12vw, 5.5rem); letter-spacing: 0.12em; margin: 0.2em 0 0; color: var(--papier); }
+.vorspann, .untertitel { font-family: "Cormorant Garamond", serif; font-style: italic; color: var(--blass); margin: 0; }
+.untertitel { font-size: 1.3rem; margin-bottom: 3rem; }
+.hinweis { margin-top: 4rem; font-size: 0.8rem; color: #5d554b; }
+#namensform { display: grid; gap: 0.8rem; justify-items: center; }
+#namensform label { font-style: italic; color: var(--blass); }
+input {
+  font: inherit; color: var(--papier); background: transparent; text-align: center;
+  border: 0; border-bottom: 1px solid var(--linie); padding: 0.4rem; width: min(18rem, 100%);
+}
+input:focus { outline: none; border-color: var(--gold); }
+
+button {
+  font: inherit; font-family: "Cormorant Garamond", serif; font-size: 1.05rem; letter-spacing: 0.03em;
+  color: var(--papier); background: transparent; border: 1px solid var(--linie);
+  padding: 0.55rem 1.2rem; cursor: pointer; transition: border-color 0.3s, color 0.3s, background 0.3s;
+}
+button:hover, button:focus-visible { border-color: var(--gold); color: #fff; background: rgba(179, 150, 98, 0.06); outline: none; }
+button.leise { border: 0; color: #6d6458; font-size: 0.85rem; }
+
+#text p { margin: 0 0 1.1em; animation: auftauchen 0.9s ease both; }
+@keyframes auftauchen { from { opacity: 0; transform: translateY(4px); } }
+#text p.titel { font-family: "Cormorant Garamond", serif; text-align: center; letter-spacing: 0.25em; font-size: 1.4rem; margin: 2.5rem 0; color: var(--gold); }
+#text p.tagebuch { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 1.2rem; color: #b8ad9c; border-left: 1px solid var(--linie); padding-left: 1rem; }
+#text p.zwischentitel { font-family: "Cormorant Garamond", serif; letter-spacing: 0.2em; font-size: 0.95rem; color: var(--gold); margin-top: 2rem; }
+#text p.bilanz { color: #c4baa9; }
+#text p.anzeichen { font-style: italic; color: #e6d9c4; border-left: 2px solid var(--blut); padding-left: 0.9rem; }
+#text p.tod { color: #9a8f80; font-style: italic; }
+#text p.gedaechtnis { font-style: italic; color: #b9c2cf; }
+#text p.alt { opacity: 0.55; }
+#text hr { border: 0; text-align: center; margin: 2rem 0; }
+#text hr::after { content: "❧"; color: var(--linie); font-size: 1.2rem; }
+
+#wahl { display: grid; gap: 0.6rem; margin-top: 1.8rem; }
+#wahl button { text-align: left; padding: 0.75rem 1rem; animation: auftauchen 0.6s ease both; }
+#wahl button::before { content: "› "; color: var(--blut); }
+
+dialog {
+  max-width: 34rem; width: calc(100% - 2rem); max-height: 80vh;
+  background: #13100e; color: var(--papier); border: 1px solid var(--linie); padding: 1.5rem;
+}
+dialog::backdrop { background: rgba(0, 0, 0, 0.7); }
+dialog h2 { font-family: "Cormorant Garamond", serif; font-weight: 400; letter-spacing: 0.1em; margin-top: 0; color: var(--gold); }
+#notizen article { border-top: 1px solid var(--linie); padding: 0.8rem 0; }
+#notizen h3 { margin: 0 0 0.3rem; font-family: "Cormorant Garamond", serif; font-weight: 600; font-size: 1.1rem; }
+#notizen p { margin: 0; font-size: 1rem; color: #bdb3a3; }
+#notizen .leer { color: var(--blass); font-style: italic; }
+dialog form { display: inline; }

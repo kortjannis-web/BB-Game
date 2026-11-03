@@ -1,0 +1,25 @@
+// Notizbuch des Jägers: Einträge zu den Lore-Tags der Geschichte (# lore: id).
+// Geschrieben in der Stimme des Jägers; Kanon sinngemäß, Offenes bleibt offen.
+window.NOTIZBUCH = {
+  bluttransfusion: ["Die Bluttransfusion", "In Yharnam heilt man mit Blut. Man unterschreibt einen Vertrag, man legt sich hin, man empfängt. Es heilt, sagen sie. Was es sonst noch tut, sagt niemand."],
+  paleblood: ["Bleiches Blut", "Ein Wort aus meinem Vertrag und von einem Zettel an der Klinikwand: Ich soll das bleiche Blut suchen, um die Jagd zu überwinden. Niemand, den ich frage, kennt es."],
+  jaegertraum: ["Der Jägertraum", "Ein Garten mit weißen Blumen unter einem Himmel ohne Sonne, ein Haus auf einem Hügel. Hierhin kehre ich zurück, wenn ich sterbe. Ich sterbe nicht. Ich erwache."],
+  puppe: ["Die Puppe", "Eine Puppe in Menschengröße am Fuß einer Treppe im Traum, mit offenen Augen, die nichts sehen. Etwas an ihr wirkt, als warte sie. Ich weiß nur nicht, worauf."],
+  boten: ["Die Boten", "Kleine graue Wesen mit Gesichtern aus nassem Ton. Sie kriechen aus dem Boden, wo eine Laterne brennt, und reichen mir, was ich brauche, für Blutechos. Sie fürchten mich nicht."],
+  laternen: ["Die Laternen", "Wo ich eine Laterne entzünde, führt ein Weg zurück in den Traum und vom Traum zurück zu ihr. Es sind die einzigen Orte in Yharnam, an denen ich nicht verloren gehen kann."],
+  jagdnacht: ["Die Jagdnacht", "In manchen Nächten jagt Yharnam. Die Bürger verriegeln die Türen, hängen Räucherwerk vor die Fenster, und die Jäger gehen hinaus. Was sie jagen, war oft gestern noch ein Nachbar."],
+  raeucherwerk: ["Räucherwerk", "Rote Lampen vor den Fenstern, süßer, schwerer Rauch. Er soll die Bestien fernhalten. Man erkennt an der Zahl der Lampen, wie groß die Angst in einem Haus ist."],
+  buergerjagd: ["Die Jagd der Bürger", "Nicht nur Jäger jagen. Die Bürger selbst gehen mit Fackeln und Mistgabeln hinaus und verbrennen auf dem Scheiterhaufen, was sie für eine Bestie halten. Fremde halten sie fast immer dafür."],
+  fremde: ["Fremde", "Yharnam hasst Fremde. Man sagt, wir hätten die Seuche gebracht. Gilbert hinter seinem Fenster ist einer von uns. Ich bin einer."],
+  heilende_kirche: ["Die Heilende Kirche", "Sie verwaltet jedes Blut in Yharnam, jede Transfusion, jedes Geheimnis. Ihr Sitz ist der Kathedralenbezirk über der Stadt, hinter einer Brücke und einem verschlossenen Tor."],
+  bestienseuche: ["Die Seuche", "Menschen werden zu Bestien. Niemand weiß, wen es als Nächstes trifft. Unter der Stadt liegen die, die es getroffen hat, in Becken gestapelt, und niemand begräbt sie."],
+  kleriker_bestien: ["Kleriker-Bestien", "Man sagt, aus den Kirchenleuten werden die schlimmsten Bestien, ausgerechnet aus denen, die beten und singen. Warum gerade sie, sagt niemand."],
+  blutgedaechtnis: ["Das Gedächtnis des Blutes", "Das Blut erinnert sich, sagt Gehrman, und manchmal teilt es seine Erinnerungen mit dem, der es vergießt. Ich habe durch fremde Augen gesehen. Ich weiß nicht, ob ich es wieder tun will. Ich weiß, dass ich es wieder tun werde."],
+  blutrausch: ["Wie Jäger kippen", "Jäger, die zu tief ins Blut geraten, finden nicht mehr zurück. Sie riechen danach, sie lachen an falschen Stellen, sie vergessen Namen. Man nennt es Blutrausch, und man spricht nicht gern darüber."],
+  jaeger_der_jaeger: ["Die Jägerin der Jäger", "Eileen, die Krähe, mit Federmantel und Schnabelmaske. Sie jagt die Jäger, die sich im Blut verloren haben. Jemand muss es tun, sagt sie. Es klingt nicht stolz. Es klingt einsam."],
+  parade: ["Die Parade", "Mit der Feuerwaffe tötet man nicht. Man wartet, bis die Bestie ausholt und ihr ganzes Gewicht in den Schlag legt, und genau dann schießt man. Dann wankt sie. So lehren es die Jäger."],
+  gascoigne: ["Pater Gascoigne", "Ein Pater aus der Fremde, Jäger seit vielen Jahren, mit verbundenen Augen und einem Priesterschal. In dieser Stadt gibt es keine Pater, sagt er, nur Vikare und Jäger. Er ist einer der Besten, sagt man."],
+  familie_gascoigne: ["Viola und die Kinder", "Ein Mädchen wartet hinter einem Fenster am Brunnenplatz auf Vater und Mutter. Die Mutter trägt eine große rote Brosche. Im Deckel einer Spieluhr stehen zwei Namen: Viola und Gascoigne."],
+  spieluhr: ["Die Spieluhr", "Papas Lied, sagt das Mädchen. Wenn Papa sie vergisst, spielen sie es ihm vor, und er weiß wieder, wer sie sind."],
+  oedon: ["Oedon", "Ein Name über einem Friedhof, ohne Vornamen, ohne Jahreszahl, ohne Gebet. Wer oder was Oedon ist, weiß ich nicht. Als ich den Namen aussprach, spürte ich einen Druck hinter den Ohren wie vor einem Gewitter."],
+};

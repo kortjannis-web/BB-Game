@@ -13,7 +13,6 @@ VAR molotow = 0
 VAR kiesel = 0
 VAR feuer = false           // Gilberts Flammenwerfer
 VAR spieluhr = false
-VAR spieluhr_gespielt = false
 VAR brosche = false
 VAR band = false            // das rote Band des Mädchens
 
@@ -48,7 +47,6 @@ VAR gascoigne_gewarnt = false
 VAR moment_moeglich = false
 VAR gascoigne_moment = false
 VAR versprechen_gascoigne = false
-VAR eileen_hilft = false
 VAR jaegermarken = 0         // Eileens Marken: zurück in den Traum, ohne zu sterben
 VAR spieluhr_mal = 0         // wie oft im Kampf gegen Gascoigne gespielt (beim dritten Mal wird er zur Bestie)
 VAR gascoigne_tot = false

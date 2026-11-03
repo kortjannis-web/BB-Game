@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yharnam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="stil.css">
+</head>
+<body data-stimmung="ruhig">
+  <div id="vignette" aria-hidden="true"></div>
+
+  <header id="leiste" hidden>
+    <span title="Blutechos">Echos <b id="h-echos">0</b></span>
+    <span title="Einsicht">Einsicht <b id="h-einsicht">0</b></span>
+    <span title="Blutampulle">Ampulle <b id="h-ampulle">0</b></span>
+    <span title="Jägermarken" id="h-marken-wrap" hidden>Marken <b id="h-marken">0</b></span>
+    <button id="knopf-notizbuch" type="button">Notizbuch</button>
+  </header>
+
+  <main id="buehne">
+    <section id="titel">
+      <p class="vorspann">Ein Erzählspiel nach Bloodborne</p>
+      <h1>Yharnam</h1>
+      <p class="untertitel">Die Nacht der Jagd</p>
+      <form id="namensform">
+        <label for="name">Wie lautet dein Name, Jäger?</label>
+        <input id="name" name="name" maxlength="24" autocomplete="off" placeholder="Dein Name" required>
+        <button type="submit">Die Kutsche besteigen</button>
+      </form>
+      <button id="fortsetzen" type="button" hidden>Die Jagd fortsetzen</button>
+      <p class="hinweis">Privates Fanprojekt. Nicht mit FromSoftware oder Sony verbunden.</p>
+    </section>
+    <article id="text" hidden></article>
+    <nav id="wahl" hidden></nav>
+  </main>
+
+  <dialog id="notizbuch">
+    <h2>Notizbuch des Jägers</h2>
+    <div id="notizen"></div>
+    <form method="dialog"><button>Schließen</button></form>
+    <button id="neu" type="button" class="leise">Neu beginnen</button>
+  </dialog>
+
+  <script src="ink.js"></script>
+  <script src="notizbuch.js"></script>
+  <script src="spiel.js"></script>
+</body>
+</html>

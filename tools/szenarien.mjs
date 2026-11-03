@@ -30,16 +30,16 @@ const SZENARIEN = [
     erwartet: { kleriker: "geflohen" },
   },
   {
-    name: "Verrat an Gascoigne, Partnerschaft mit Eileen",
-    wuensche: ["Ihm danken", "Respekt", "wo du ihn gesehen", "Mitgehen", "Eileen ein Zeichen", "Rabenfedern"],
+    name: "Verrat an Gascoigne, Eileens Angebot für Kapitel 2",
+    wuensche: ["Ihm danken", "Respekt", "wo du ihn gesehen", "Rabenfedern auf dem Dach", "anbieten, mit ihr zu jagen"],
     verbote: ["warnen", "Jägermarke"],
     erwartet: { gascoigne_verraten: true, eileen_partner: true },
   },
   {
-    name: "Gascoigne gewarnt, Eileen verloren",
-    wuensche: ["Ihm danken", "Respekt", "Mitgehen", "Rabenfedern", "vor der Frau mit den Rabenfedern"],
+    name: "Gascoigne gewarnt, Bruch mit Eileen",
+    wuensche: ["Ihm danken", "Respekt", "Rabenfedern auf dem Dach", "anbieten, mit ihr zu jagen", "vor der Frau mit den Rabenfedern"],
     verbote: ["wo du ihn gesehen", "Jägermarke"],
-    erwartet: { gascoigne_gewarnt: true, eileen_partner: false, eileen_hilft: false },
+    erwartet: { gascoigne_gewarnt: true, eileen_partner: false },
   },
   {
     name: "Lüge an das Mädchen",
