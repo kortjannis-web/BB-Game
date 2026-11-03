@@ -2,13 +2,14 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Yharnam</title>
+  <meta name="claude:viewport-fit-sides" content="cover">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="stil.css">
 </head>
-<body data-stimmung="ruhig">
+<body>
   <div id="vignette" aria-hidden="true"></div>
 
   <header id="leiste" hidden>
@@ -29,7 +30,9 @@
         <input id="name" name="name" maxlength="24" autocomplete="off" placeholder="Dein Name" required>
         <button type="submit">Die Kutsche besteigen</button>
       </form>
+      <p id="warnung" class="warnung" hidden>Es gibt schon einen Spielstand. Klicke noch einmal, um neu zu beginnen und ihn zu überschreiben.</p>
       <button id="fortsetzen" type="button" hidden>Die Jagd fortsetzen</button>
+      <p class="baum"><a id="link-karte" href="karte.html">Den Erzählbaum ansehen</a> (alle Wege des Kapitels, wie in Twine)</p>
       <p class="hinweis">Privates Fanprojekt. Nicht mit FromSoftware oder Sony verbunden.</p>
     </section>
     <article id="text" hidden></article>

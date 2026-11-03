@@ -82,7 +82,14 @@
       wahl.appendChild(ende);
       const neu = document.createElement("button");
       neu.textContent = "Von vorn beginnen";
-      neu.onclick = neuBeginnen;
+      neu.onclick = () => {
+        try {
+          localStorage.removeItem(SPEICHER);
+        } catch {
+          /* nichts zu löschen */
+        }
+        location.reload();
+      };
       wahl.appendChild(neu);
       return;
     }
@@ -113,9 +120,24 @@
     $("leiste").hidden = false;
   }
 
-  function neuBeginnen() {
-    if (!confirm("Wirklich von vorn beginnen? Der jetzige Spielstand geht verloren.")) return;
-    localStorage.removeItem(SPEICHER);
+  // Bestätigung in der Seite selbst: erster Klick fragt nach, zweiter Klick löscht.
+  function neuBeginnen(e) {
+    const knopf = e?.currentTarget;
+    if (knopf && !knopf.dataset.sicher) {
+      knopf.dataset.sicher = "1";
+      knopf.dataset.text = knopf.textContent;
+      knopf.textContent = "Wirklich? Noch einmal klicken";
+      setTimeout(() => {
+        delete knopf.dataset.sicher;
+        knopf.textContent = knopf.dataset.text;
+      }, 4000);
+      return;
+    }
+    try {
+      localStorage.removeItem(SPEICHER);
+    } catch {
+      /* ohne Speicher gibt es nichts zu löschen */
+    }
     location.reload();
   }
 
@@ -137,12 +159,16 @@
   async function start() {
     const json = await (await fetch("story.json")).text();
     story = new inkjs.Story(json);
+    document.body.dataset.stimmung = "ruhig";
     const gespeichert = laden();
     if (gespeichert) $("fortsetzen").hidden = false;
 
     $("namensform").addEventListener("submit", (e) => {
       e.preventDefault();
-      if (gespeichert && !confirm("Ein Spielstand existiert. Neu beginnen und ihn überschreiben?")) return;
+      if (gespeichert && $("warnung").hidden) {
+        $("warnung").hidden = false;
+        return;
+      }
       const name = $("name").value.trim() || "Jäger";
       story.variablesState["name"] = name;
       zeigeSpiel();

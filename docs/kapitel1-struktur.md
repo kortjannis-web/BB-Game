@@ -3,7 +3,8 @@
 Stand 2026-11-03. **Kapitel 1 ist vollständig ausgeschrieben (rund 15.700 Wörter) und im Browser spielbar** (`npm run spielen`). Struktur, Prüfer und Szenarien sind grün.
 
 - Quelle der Wahrheit: `story/kapitel1/*.ink`, `story/system.ink`, `story/traum.ink`
-- Baum als Diagramm: [`karte-kapitel1.md`](karte-kapitel1.md) (wird erzeugt, GitHub zeigt es an)
+- Erzählbaum wie in Twine (alle 120 Passagen, mit Text): https://claude.ai/artifact/NPHhjkNgsNCP2FrLbTGFUX · Twine-Datei: [`yharnam-kapitel1.twee`](yharnam-kapitel1.twee)
+- Grobe Knotenkarte: [`karte-kapitel1.md`](karte-kapitel1.md) (wird erzeugt, GitHub zeigt sie an)
 - Recherche: [`recherche/kapitel1.md`](recherche/kapitel1.md), [`recherche/vorgeschichte.md`](recherche/vorgeschichte.md)
 
 ---

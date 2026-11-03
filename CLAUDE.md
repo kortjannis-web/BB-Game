@@ -30,4 +30,7 @@ Privates Fanprojekt: Bloodborne als geschriebenes, verzweigtes Erzählspiel auf 
 
 ## Prüfen (muss grün sein vor jedem Commit)
 `npm run check` = Prüfer (3.000 Zufallsdurchläufe, Erreichbarkeit, Lore an zwei Stellen) + Szenarien + Karte + Bauen der Webfassung.
-Neue Weiche ⇒ neues Szenario in `tools/szenarien.mjs`. Ink-Fallen: Kampfoptionen mit `+` (wiederholbar nach Tod); Namen von Variablen, Knoten, Stitches und LIST-Einträgen dürfen sich nicht überschneiden.
+Neue Weiche ⇒ neues Szenario in `tools/szenarien.mjs`. Der Erzählbaum (`web/twine.json`, `docs/yharnam-kapitel1.twee`) entsteht automatisch aus den Ink-Dateien; nie von Hand pflegen.
+
+## Veröffentlichen
+Spiel und Erzählbaum sind claude.ai-Artefakte (Adressen in `web/artefakte.json`). Nach `npm run bauen` die Seiten `web/artefakt/spiel.html` (Dateien: stil.css, spiel.js, notizbuch.js, ink.js, story.json) und `web/artefakt/karte.html` (Dateien: karte.css, karte.js, twine.json) mit dem Artifact-Werkzeug an dieselben Adressen veröffentlichen. Im Artefakt gibt es kein `confirm()`/`alert()`; Speicherzugriffe immer in try/catch. Ink-Fallen: Kampfoptionen mit `+` (wiederholbar nach Tod); Namen von Variablen, Knoten, Stitches und LIST-Einträgen dürfen sich nicht überschneiden.

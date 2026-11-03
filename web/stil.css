@@ -1,4 +1,5 @@
 :root {
+  color-scheme: dark;
   --grund: #0d0b0a;
   --papier: #d8cfc0;
   --blass: #8f8577;
@@ -38,21 +39,28 @@ body[data-stimmung="grauen"] { --tint: rgba(60, 70, 90, 0.20); }
 #leiste {
   position: fixed; top: 0; left: 0; right: 0; z-index: 4;
   display: flex; gap: 0.9rem; align-items: center; flex-wrap: nowrap; white-space: nowrap;
-  padding: 0.5rem 0.8rem; font-size: 0.82rem; color: var(--blass);
+  padding-block: calc(0.5rem + env(safe-area-inset-top, 0px)) 0.5rem;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  font-size: 0.82rem; color: var(--blass);
   background: linear-gradient(var(--grund) 70%, transparent);
   font-family: "Cormorant Garamond", serif; letter-spacing: 0.04em;
 }
 #leiste b { color: var(--papier); font-weight: 600; }
 #leiste button { margin-left: auto; padding: 0.3rem 0.7rem; font-size: 0.9rem; }
 
-#buehne { max-width: 40rem; margin: 0 auto; padding: 3.6rem 1rem 6rem; }
+#buehne { max-width: 40rem; margin: 0 auto; padding-block: calc(3.6rem + env(safe-area-inset-top, 0px)) 6rem;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
 #text p { scroll-margin-top: 3.5rem; }
 
 #titel { text-align: center; padding-top: 12vh; }
 #titel h1 { font-family: "Cormorant Garamond", serif; font-weight: 400; font-size: clamp(3rem, 12vw, 5.5rem); letter-spacing: 0.12em; margin: 0.2em 0 0; color: var(--papier); }
 .vorspann, .untertitel { font-family: "Cormorant Garamond", serif; font-style: italic; color: var(--blass); margin: 0; }
 .untertitel { font-size: 1.3rem; margin-bottom: 3rem; }
-.hinweis { margin-top: 4rem; font-size: 0.8rem; color: #5d554b; }
+.hinweis { margin-top: 3rem; font-size: 0.8rem; color: #5d554b; }
+.warnung { color: #d39a6a; font-style: italic; max-width: 22rem; margin: 0.5rem auto; }
+.baum { margin-top: 2.5rem; font-size: 0.95rem; color: var(--blass); }
+.baum a { color: var(--gold); }
+#fortsetzen { margin-top: 1rem; }
 #namensform { display: grid; gap: 0.8rem; justify-items: center; }
 #namensform label { font-style: italic; color: var(--blass); }
 input {
