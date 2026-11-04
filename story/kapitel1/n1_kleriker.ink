@@ -51,19 +51,19 @@ Die Bestie stützt sich auf den übergroßen linken Arm und schiebt den Kopf vor
 + [Nach rechts, unter den Arm]
     Du läufst hinein, nicht weg. Nach rechts, wo der Bogen beginnt. Luftzug über dem Scheitel. Hinter dir kippt eine Kutsche in den Abgrund. Dann bist du an ihrer Flanke, und die Säge beißt in Rippen.
     -> t2
-+ [Zurückspringen]
++ [Mit einem Satz zurückspringen]
     Du springst zurück. Zu kurz. Der Bogen ist länger, als ein Arm sein dürfte. Krallen an der Hüfte, dann ein Wagenrad im Rücken.
     ~ zuletzt = kleriker_hieb
     ~ treffer(2)
     { leben <= 0: -> tod }
     -> t2
 + [Nach links, aus dem Bogen]
-    Du wirfst dich nach links, weg von dem Arm. Der Bogen endet nicht, wo du ihn enden siehst. Die Krallen holen dich ein, am Ende ihrer Bahn, schwächer, aber sie holen dich ein.
+    Der Bogen endet nicht, wo du ihn enden siehst. Die Krallen holen dich ein, am Ende ihrer Bahn, schwächer, aber sie holen dich ein.
     ~ zuletzt = kleriker_hieb
     ~ treffer(1)
     { leben <= 0: -> tod }
     -> t2
-+ {feuer} [Gilberts Flamme in ihre Schnauze]
++ {feuer} [Gilberts Flamme in ihre Schnauze halten]
     Du reißt Gilberts Flammenwerfer hoch. Die Flamme fährt in die schnüffelnde Schnauze, das verfilzte Fell fängt sofort. Sie wirft sich zurück und schlägt blind um sich, den brennenden Kopf zwischen den Schultern. Gilbert hatte recht. # notiz: kleriker_feuer
     -> t2
 - (t2)
@@ -78,7 +78,7 @@ Sie richtet sich auf, höher und höher, bis ihr Geweih im Nebel verschwindet, u
 + [Die Ohren zuhalten und zurückweichen]
     Hände auf die Ohren, rückwärts. Der Schrei geht trotzdem durch dich hindurch, durch Haut und Knochen. Einen Augenblick lang weißt du nicht, wo oben ist. Aber du stehst.
     -> t3
-+ {molotow > 0} [Den Molotow in ihr offenes Maul]
++ {molotow > 0} [Den Molotow in ihr offenes Maul werfen]
     ~ molotow = molotow - 1
     Die Flasche fliegt im hohen Bogen und zerspringt zwischen den Zähnen. Feuer im Schlund. Der Schrei bricht ab und wird zu einem nassen, gurgelnden Würgen, und sie stürzt auf die Knie. Du bist an ihr, bevor sie wieder hochkommt, und die Säge reißt ihr die Flanke auf.
     -> t4
@@ -96,10 +96,10 @@ Sie fällt auf alle viere zurück und tastet mit dem langen Arm zwischen die Kut
     { leben <= 0: -> tod }
     -> t4
 + [Quer über die Brücke rennen]
-    Du rennst quer über die Brücke. Hinter dir schlägt die Kutsche auf, dort, wo du standest. Holz, Glas, ein Pferdebein, das durch die Luft wirbelt. Dann Stille. Du lebst.
+    Hinter dir schlägt die Kutsche auf, dort, wo du standest. Holz, Glas, ein Pferdebein, das durch die Luft wirbelt. Dann Stille. Du lebst.
     -> t4
 + [Unter dem erhobenen Arm auf sie zu]
-    Du läufst ihr entgegen, unter dem erhobenen Arm hindurch. Die Kutsche fliegt über dich hinweg und zerschellt hinter dir. Ein Hieb in den Bauch, wo das Fell dünn ist. Sie heult. Aber der kleine Arm findet dich auf dem Rückweg und schlägt dich zu Boden.
+    Die Kutsche fliegt über dich hinweg und zerschellt hinter dir. Ein Hieb in den Bauch, wo das Fell dünn ist. Sie heult. Aber der kleine Arm findet dich auf dem Rückweg und schlägt dich zu Boden.
     ~ zuletzt = wurf
     ~ treffer(1)
     { leben <= 0: -> tod }
@@ -125,7 +125,7 @@ Die Bestie kommt wieder hoch, und etwas hat sich verändert. Der lange Arm reiß
 Der verzweigte Arm schlägt um sich, links, rechts, links, ein Sturm aus Knochen und Krallen. Zwischen den Schlägen schwingt er jedes Mal ein Stück weiter aus, als ziehe ihn sein eigenes Gewicht, und für die Länge eines Atemzugs ist ihre Brust offen. # anzeichen: knochensturm
 { gelernt ? knochensturm: Links, rechts, links, und dann die Lücke. Der Sturm reicht weit, aber nicht bis an ihre Brust. }
 + [Rückwärts hinter die Kutschen]
-    Du flüchtest hinter eine Kutsche. Sie zersplittert wie eine Streichholzschachtel. Ein Speichenrad an der Schläfe.
+    Du flüchtest hinter eine Kutsche. Sie birst unter dem nächsten Schlag in Latten und Glas. Ein Speichenrad an der Schläfe.
     ~ zuletzt = knochensturm
     ~ treffer(1)
     { leben <= 0: -> tod }
@@ -171,14 +171,14 @@ Am Geländer senkt sie den Kopf, bis das verknotete Geweih auf der Höhe deiner 
 // [ERWEITERT] Die falsche Ruhe: Sie liegt still, aber der kleine Arm lauert.
 Sie liegt auf der Seite, den Knochenarm unter sich begraben, und ihr Atem geht rasselnd und flach, wie bei einem Tier, das man auf der Straße angefahren hat. Der Kopf liegt auf dem Pflaster, ganz nah, das Auge geschlossen. Nur der kleine Arm, der rechte, liegt nicht still. Seine Finger öffnen und schließen sich, langsam, wie bei einem Kind, das im Schlaf nach etwas greift. # anzeichen: letzter_griff
 { gelernt ? letzter_griff: Die Finger. Sie greifen nicht im Schlaf. Sie warten darauf, dass jemand sich über den Kopf beugt. }
-+ [Die Säge sofort in ihren Kopf]
++ [Die Säge sofort in ihren Kopf stoßen]
     Du beugst dich über den Kopf. Die kleine Hand schließt sich um deinen Knöchel und reißt dich von den Füßen. Ihr Auge ist offen. Erst als deine Säge in diesem Auge steckt, lässt die Hand los.
     ~ zuletzt = letzter_griff
     ~ treffer(1)
     { leben <= 0: -> tod }
     -> sieg
-+ [Den Stiefel auf die kleine Hand]
-    Dein Stiefel landet auf der kleinen Hand, und die Finger schnappen zu, um nichts. Dann stößt du die Säge hinter das Ohr, wo der Schädel dünn ist. Einmal. Es genügt.
++ [Den Stiefel auf die kleine Hand setzen]
+    Die Finger schnappen zu, um nichts. Dann stößt du die Säge hinter das Ohr, wo der Schädel dünn ist. Einmal. Es genügt.
     -> sieg
 + {ampulle > 0} [Die Ampulle in den Schenkel stoßen, solange sie liegt]
     Sie liegt. Du nimmst dir die Zeit.
@@ -239,7 +239,7 @@ Sie tastet mit dem langen Arm zwischen die Kutschen und hebt eine vom Pflaster, 
     -> g2
 + [Ihn aus der Bahn stoßen]
     ~ gascoigne = gascoigne + 1
-    Du rennst und rammst ihm die Schulter in die Seite. Ihr rollt über das Pflaster. Die Kutsche schlägt dort ein, wo er gekniet hat, und ein Rad springt über euch hinweg in den Abgrund. Er liegt auf dem Rücken und lacht, bis er husten muss. „Na“, sagt er. „Na, na.“
+    Du rennst und rammst ihm die Schulter in die Seite. Ihr rollt über das Pflaster. Die Kutsche schlägt dort ein, wo er gekniet hat, und ein Rad springt über euch hinweg in den Abgrund. Er liegt auf dem Rücken und lacht, bis er husten muss. „So“, sagt er. „So. Das war knapp.“
     -> g2
 - (g2)
 { spieluhr:

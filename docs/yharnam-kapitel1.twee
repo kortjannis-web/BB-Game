@@ -1393,9 +1393,9 @@ Du rufst seinen Namen über die Brücke. Nur der Nebel antwortet.{k1_c_graeber.w
 Die Bestie stützt sich auf den übergroßen linken Arm und schiebt den Kopf vor, schnüffelnd, als könne sie dich nicht sehen, nur riechen. Die Schulter des riesigen Armes hebt sich, langsam, und unter dem Fell ziehen sich die Muskeln zu einem Knoten zusammen. Der lange Arm steht dir zur Rechten, und unter ihm, zwischen Ellbogen und Pflaster, bleibt ein Spalt.
 ⟨wenn gelernt ? kleriker_hieb⟩ Du kennst diesen Knoten. Der Arm kommt flach aus deiner Rechten und reicht weiter, als du springen kannst. Nur unter ihm ist Platz. 
 [[Nach rechts, unter den Arm->k1_n1_kleriker.kampf.t1 ✦ 1]]
-[[Zurückspringen->k1_n1_kleriker.kampf.t1 ✦ 2]]
+[[Mit einem Satz zurückspringen->k1_n1_kleriker.kampf.t1 ✦ 2]]
 [[Nach links, aus dem Bogen->k1_n1_kleriker.kampf.t1 ✦ 3]]
-[[Gilberts Flamme in ihre Schnauze (nur wenn feuer)->k1_n1_kleriker.kampf.t1 ✦ 4]]
+[[Gilberts Flamme in ihre Schnauze halten (nur wenn feuer)->k1_n1_kleriker.kampf.t1 ✦ 4]]
 
 :: k1_n1_kleriker.kampf.t1 ✦ 1 [N1 folge] {"position":"7300,7700","size":"100,100"}
 Du läufst hinein, nicht weg. Nach rechts, wo der Bogen beginnt. Luftzug über dem Scheitel. Hinter dir kippt eine Kutsche in den Abgrund. Dann bist du an ihrer Flanke, und die Säge beißt in Rippen.
@@ -1407,7 +1407,7 @@ Du springst zurück. Zu kurz. Der Bogen ist länger, als ein Arm sein dürfte. K
 [[weiter->k1_n1_kleriker.kampf.t2]]
 
 :: k1_n1_kleriker.kampf.t1 ✦ 3 [N1 folge] {"position":"7650,7700","size":"100,100"}
-Du wirfst dich nach links, weg von dem Arm. Der Bogen endet nicht, wo du ihn enden siehst. Die Krallen holen dich ein, am Ende ihrer Bahn, schwächer, aber sie holen dich ein.
+Der Bogen endet nicht, wo du ihn enden siehst. Die Krallen holen dich ein, am Ende ihrer Bahn, schwächer, aber sie holen dich ein.
 <!-- Logik: zuletzt = kleriker_hieb · treffer(1) -->
 [[weiter->k1_n1_kleriker.kampf.t2]]
 
@@ -1420,7 +1420,7 @@ Sie richtet sich auf, höher und höher, bis ihr Geweih im Nebel verschwindet, u
 ⟨wenn gelernt ? kreischen⟩ Diese Stille kennst du. Sie holt Luft für den Schrei, und wer dann in ihrer Nähe steht, hört eine Weile gar nichts mehr. 
 [[In den Schrei hinein zuschlagen->k1_n1_kleriker.kampf.t2 ✦ 1]]
 [[Die Ohren zuhalten und zurückweichen->k1_n1_kleriker.kampf.t2 ✦ 2]]
-[[Den Molotow in ihr offenes Maul (nur wenn molotow > 0)->k1_n1_kleriker.kampf.t2 ✦ 3]]
+[[Den Molotow in ihr offenes Maul werfen (nur wenn molotow > 0)->k1_n1_kleriker.kampf.t2 ✦ 3]]
 [[Die Ampulle in den Schenkel stoßen (nur wenn ampulle > 0)->k1_n1_kleriker.kampf.t2 ✦ 4]]
 
 :: k1_n1_kleriker.kampf.t2 ✦ 1 [N1 folge] {"position":"7425,8040","size":"100,100"}
@@ -1455,11 +1455,11 @@ Du kauerst dich hinter eine Kutsche. Die zweite trifft die erste. Beide über di
 [[weiter->k1_n1_kleriker.kampf.t4]]
 
 :: k1_n1_kleriker.kampf.t3 ✦ 2 [N1 folge] {"position":"7565,8380","size":"100,100"}
-Du rennst quer über die Brücke. Hinter dir schlägt die Kutsche auf, dort, wo du standest. Holz, Glas, ein Pferdebein, das durch die Luft wirbelt. Dann Stille. Du lebst.
+Hinter dir schlägt die Kutsche auf, dort, wo du standest. Holz, Glas, ein Pferdebein, das durch die Luft wirbelt. Dann Stille. Du lebst.
 [[weiter->k1_n1_kleriker.kampf.t4]]
 
 :: k1_n1_kleriker.kampf.t3 ✦ 3 [N1 folge] {"position":"7935,8380","size":"100,100"}
-Du läufst ihr entgegen, unter dem erhobenen Arm hindurch. Die Kutsche fliegt über dich hinweg und zerschellt hinter dir. Ein Hieb in den Bauch, wo das Fell dünn ist. Sie heult. Aber der kleine Arm findet dich auf dem Rückweg und schlägt dich zu Boden.
+Die Kutsche fliegt über dich hinweg und zerschellt hinter dir. Ein Hieb in den Bauch, wo das Fell dünn ist. Sie heult. Aber der kleine Arm findet dich auf dem Rückweg und schlägt dich zu Boden.
 <!-- Logik: zuletzt = wurf · treffer(1) -->
 [[weiter->k1_n1_kleriker.kampf.t4]]
 
@@ -1497,7 +1497,7 @@ Der verzweigte Arm schlägt um sich, links, rechts, links, ein Sturm aus Knochen
 [[Eine Jägermarke zerdrücken (nur wenn jaegermarken > 0)->k1_n1_kleriker.marke]]
 
 :: k1_n1_kleriker.kampf.t5 ✦ 1 [N1 folge] {"position":"6735,9230","size":"100,100"}
-Du flüchtest hinter eine Kutsche. Sie zersplittert wie eine Streichholzschachtel. Ein Speichenrad an der Schläfe.
+Du flüchtest hinter eine Kutsche. Sie birst unter dem nächsten Schlag in Latten und Glas. Ein Speichenrad an der Schläfe.
 Als du wieder stehst, ist sie dir nachgekommen, bis ans Geländer.
 <!-- Logik: zuletzt = knochensturm · treffer(1) -->
 [[weiter->k1_n1_kleriker.kampf.t6]]
@@ -1543,8 +1543,8 @@ Du gehst ihr entgegen. Die Säge trifft Horn, prallt ab. Das Geweih nicht. Es he
 <!-- [ERWEITERT] Die falsche Ruhe: Sie liegt still, aber der kleine Arm lauert. -->
 Sie liegt auf der Seite, den Knochenarm unter sich begraben, und ihr Atem geht rasselnd und flach, wie bei einem Tier, das man auf der Straße angefahren hat. Der Kopf liegt auf dem Pflaster, ganz nah, das Auge geschlossen. Nur der kleine Arm, der rechte, liegt nicht still. Seine Finger öffnen und schließen sich, langsam, wie bei einem Kind, das im Schlaf nach etwas greift.
 ⟨wenn gelernt ? letzter_griff⟩ Die Finger. Sie greifen nicht im Schlaf. Sie warten darauf, dass jemand sich über den Kopf beugt. 
-[[Die Säge sofort in ihren Kopf->k1_n1_kleriker.kampf.t7 ✦ 1]]
-[[Den Stiefel auf die kleine Hand->k1_n1_kleriker.kampf.t7 ✦ 2]]
+[[Die Säge sofort in ihren Kopf stoßen->k1_n1_kleriker.kampf.t7 ✦ 1]]
+[[Den Stiefel auf die kleine Hand setzen->k1_n1_kleriker.kampf.t7 ✦ 2]]
 [[Die Ampulle in den Schenkel stoßen, solange sie liegt (nur wenn ampulle > 0)->k1_n1_kleriker.kampf.t7 ✦ 3]]
 
 :: k1_n1_kleriker.kampf.t7 ✦ 1 [N1 folge] {"position":"7340,9910","size":"100,100"}
@@ -1553,7 +1553,7 @@ Du beugst dich über den Kopf. Die kleine Hand schließt sich um deinen Knöchel
 [[weiter->k1_n1_kleriker.kampf.sieg]]
 
 :: k1_n1_kleriker.kampf.t7 ✦ 2 [N1 folge] {"position":"7480,9910","size":"100,100"}
-Dein Stiefel landet auf der kleinen Hand, und die Finger schnappen zu, um nichts. Dann stößt du die Säge hinter das Ohr, wo der Schädel dünn ist. Einmal. Es genügt.
+Die Finger schnappen zu, um nichts. Dann stößt du die Säge hinter das Ohr, wo der Schädel dünn ist. Einmal. Es genügt.
 [[weiter->k1_n1_kleriker.kampf.sieg]]
 
 :: k1_n1_kleriker.kampf.t7 ✦ 3 [N1 folge] {"position":"8510,9910","size":"100,100"}
@@ -1624,7 +1624,7 @@ Du rufst seinen Namen. Er dreht den Kopf zu dir, nicht zu ihr. Die Kutsche triff
 [[weiter->k1_n1_kleriker.mit_gascoigne.g2]]
 
 :: k1_n1_kleriker.mit_gascoigne.g_wurf ✦ 2 [N1 folge] {"position":"9170,8380","size":"100,100"}
-Du rennst und rammst ihm die Schulter in die Seite. Ihr rollt über das Pflaster. Die Kutsche schlägt dort ein, wo er gekniet hat, und ein Rad springt über euch hinweg in den Abgrund. Er liegt auf dem Rücken und lacht, bis er husten muss. „Na“, sagt er. „Na, na.“
+Du rennst und rammst ihm die Schulter in die Seite. Ihr rollt über das Pflaster. Die Kutsche schlägt dort ein, wo er gekniet hat, und ein Rad springt über euch hinweg in den Abgrund. Er liegt auf dem Rücken und lacht, bis er husten muss. „So“, sagt er. „So. Das war knapp.“
 <!-- Logik: gascoigne = gascoigne + 1 -->
 [[weiter->k1_n1_kleriker.mit_gascoigne.g2]]
 

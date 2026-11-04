@@ -84,7 +84,7 @@ for (const datei of dateien(join(WURZEL, "story"))) {
       if (woerter.length === 1) melde("option-ein-wort", datei, nr, o);
       if (!gesprochen && /[;:]/.test(o)) melde("option-zeichen", datei, nr, o);
       if (!gesprochen && META_OPTION.test(o)) melde("option-meta", datei, nr, o);
-      if (!gesprochen && /^(Die|Der|Das|Den)\s/.test(o) && !/\b\w+(en|ern|eln)\b\s*$/.test(o)) melde("option-menue", datei, nr, o);
+      if (!gesprochen && /^(Die|Der|Das|Den)\s/.test(o) && !/\p{L}+(en|ern|eln)\s*$/u.test(o)) melde("option-menue", datei, nr, o);
       if (woerter.length > 9) melde("option-lang", datei, nr, o);
       if (/Blutampulle trinken/.test(o)) melde("ampulle-trinken", datei, nr, o);
       // Echo: erste sichtbare Zeile danach wiederholt die Option
