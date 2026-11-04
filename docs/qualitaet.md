@@ -6,7 +6,9 @@ Grundsatz (CLAUDE.md, „Rolle“): **Nichts ist gut, bis der Nutzer es bestäti
 
 **Pflege:** nach jeder Arbeit Stufe, Datum und neue Schwächen eintragen. Schwächen konkret („Eileens zweite Begegnung erklärt Henryk, statt ihn zu zeigen“), nicht allgemein. Die schwächste Stelle mit der größten Wirkung ist der nächste Vorschlag an den Nutzer.
 
-Stand 2026-11-04, nach Runde 1: drei unabhängige Prüfungen (Plot und Logik, Lore und Tiefe, Figuren und Prosa, zusammen rund 75 Befunde), danach Überarbeitung des ganzen Kapitels. Die Berichte liegen nicht im Repository; ihre Punkte sind unten als „behoben“ oder „offen“ eingearbeitet. Eine zweite Gegenprüfung der neuen Fassung läuft.
+Stand 2026-11-04, nach Runde 1: drei unabhängige Prüfungen (Plot und Logik, Lore und Tiefe, Figuren und Prosa, zusammen rund 75 Befunde), danach Überarbeitung des ganzen Kapitels. Die Berichte liegen nicht im Repository; ihre Punkte sind unten als „behoben“ oder „offen“ eingearbeitet. Danach eine zweite, unabhängige Gegenprüfung (30 Befunde, darunter Phasenfehler im Gascoigne-Kampf nach einem Tod, doppelte Begrüßung der Puppe, Wissenslecks, Zeilen zu nah am Original); alle eingearbeitet und die schwersten nachgespielt.
+
+**Nacht 2026-11-04 (Freigabe des Nutzers):** Waffenwahl entfernt (Sägespalter); Stärkung bei der Puppe (zwei Stufen, je eine Zusatzmöglichkeit in Schwein, Kleriker, Gascoigne); Chronik der Nacht; Einsicht mit Kosten (falscher Schatten am Grab); Ton (erzeugte Atmosphäre je Stimmung, Herzschlag bei wenig Leben, eigene Spieluhr-Melodie, CC0-Geräusche, Schalter); Icons in der Leiste (Ampulle füllt sich, Auge öffnet sich mit Einsicht); pulsierende Anzeichen, „erkannt“ bei gelernten, Trefferrand, Schwarzblende beim Tod; Ortskarten; Notizbuch mit Reitern Aufzeichnungen, Personen, Fragen der Nacht und Neu-Markierung.
 
 **Runde 1, was sich geändert hat:**
 - *Fehler auf normalen Wegen:* Schwein-Zustand beim Vorbeischleichen, Rückweg-Kanal nach Ursache, Rückweg über die Brücke nach dem Sieg, Laternen-Rückkehr aus dem Traum (Wahl zwischen den entzündeten), Gascoigne am Scheiterhaufen nach den Gräbern (jetzt nur noch ein Schuss aus dem Nebel und blutige Spuren), Wissenslecks (Name, Parade-Quelle, Wahlen an den Gräbern), Mädchen im Nachspiel ohne frühere Begegnung, Eileen sieht Gascoigne am Tor, Mob verbrannt.
@@ -18,7 +20,7 @@ Stand 2026-11-04, nach Runde 1: drei unabhängige Prüfungen (Plot und Logik, Lo
 ## Ganzes Kapitel 1
 | Bereich | Stufe | Bekannte Schwächen, offene Fragen |
 |---|---|---|
-| Plotfäden und Logik (Saat und Ernte, Übergänge, Widersprüche) | 2 | Runde 1 behoben; Gegenprüfung läuft |
+| Plotfäden und Logik (Saat und Ernte, Übergänge, Widersprüche) | 2 | Runde 1 und Gegenprüfung eingearbeitet; nicht jeder Weg nachgespielt |
 | Einsatz der Lore (alles Wichtige drin? Potenzial verschenkt?) | 2 | offen: Kirche noch wenig „heilig“ (nur eine fromme Stimme); Ludwig fehlt bewusst |
 | Figuren (Gascoigne, Eileen, Gilbert, Viola, das Mädchen, Iosefka, Gehrman, Puppe) | 2 | Stimmen jetzt verschieden; ob sie so klingen, wie der Nutzer sie hört, ist ungeklärt |
 | Ton und Treppe des Grauens (gotisch → körperlich → Vorschein kosmisch) | 2 | je Einsichtspunkt ein Detail; Wirkung ungetestet |
@@ -62,7 +64,9 @@ Stand 2026-11-04, nach Runde 1: drei unabhängige Prüfungen (Plot und Logik, Lo
 ## Werkzeuge und Oberfläche
 | Stück | Stufe | Schwächen |
 |---|---|---|
-| Spieloberfläche (Lesen, Leiste, Vignette, Notizbuch) | 1 | |
+| Spieloberfläche (Lesen, Leiste, Vignette, Notizbuch) | 2 | Icons, Kampfdarstellung, Ortskarten, Notizbuch als Buch neu; im Browser getestet, Geschmack ungeprüft |
+| Ton | 1 | erzeugt, nur technisch getestet (kein Hörtest möglich); Lautstärke und Stimmung ungeprüft |
+| Mechaniken der Nacht (Stärkung, Chronik, Einsicht kostet) | 1 | gebaut, über Szenarien und Prüfer abgesichert, Balance ungetestet |
 | Werkstatt im Spiel und im Erzählbaum | 2 | getestet nur gegen nachgebildetes GitHub; erster echter Versand steht aus; Vorschläge liegen nur im jeweiligen Browser |
 | Erzählbaum (Karte) | 1 | |
 | Hosting | 1 | Netlify vom Nutzer eingerichtet (2026-11-04); Adresse fehlt noch in README und CLAUDE.md |

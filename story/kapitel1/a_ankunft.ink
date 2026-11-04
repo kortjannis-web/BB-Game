@@ -7,9 +7,9 @@
 KAPITEL EINS: YHARNAM # stil: titel
 Aus den Aufzeichnungen, die man später fand, in einer Schrift, die gegen Ende kaum noch eine menschliche Hand verriet: # stil: tagebuch
 „Ich schreibe dies nieder, solange ich noch weiß, in welcher Reihenfolge die Dinge geschahen. Man wird sagen, ich sei krank gewesen, und das ist wahr. Aber die Krankheit erklärt nicht, was ich gesehen habe, und sie erklärt erst recht nicht, warum ich es bis heute sehe, wenn ich die Augen schließe. Es begann mit einer Kutsche, mit Regen und mit einem Versprechen, das man mir in einer fremden Sprache gab.“ # stil: tagebuch
-Die Kutsche schlingert seit Stunden über eine Straße, die nur noch aus Schlaglöchern zu bestehen scheint. Regen trommelt auf das Dach, und durch die beschlagene Scheibe siehst du ein Land, das sich nicht entscheiden kann, ob es Moor ist oder Wald: schwarze Stämme, schwarzes Wasser, und dazwischen ein Nebel, der sich bewegt, auch wenn kein Wind geht. # bild: anreise # stimmung: ruhig
+Die Kutsche schlingert seit Stunden über eine Straße, die fast nur noch aus Schlaglöchern besteht. Regen trommelt auf das Dach, und durch die beschlagene Scheibe siehst du ein Land, das sich nicht entscheiden kann, ob es Moor ist oder Wald: schwarze Stämme, schwarzes Wasser, und dazwischen ein Nebel, der sich bewegt, auch wenn kein Wind geht. # bild: anreise # stimmung: ruhig
 Das Fieber sitzt dir hinter den Augen. Es kommt in Wellen, wie seit Wochen, und in den Tälern zwischen den Wellen denkst du an das, was man sich in den Häfen und Gasthäusern erzählt hat: dass es im Osten, jenseits der Berge, eine Stadt gibt, deren Blut alles heilt. Keine Arznei, kein Gebet, kein Glaube an irgendetwas. Blut.
-Im Westen steht die Sonne tief, ein kleiner roter Fleck hinter dem Regen, und sie scheint dort schon lange zu stehen. Dann teilt sich der Nebel, und du siehst sie. Yharnam liegt über dem Tal wie etwas, das gewachsen und nicht gebaut wurde: Turm auf Turm, Giebel auf Giebel, schwarze Spitzen, die so dicht stehen, dass sie den Himmel in schmale, kranke Streifen schneiden. Über allem eine Kathedrale, deren Ausmaße dein Auge nicht fassen will. Du wendest den Blick ab, ohne zu wissen, warum.
+Im Westen steht die Sonne tief, ein kleiner roter Fleck hinter dem Regen. Sie stand schon dort, als die Kutsche losfuhr. Dann teilt sich der Nebel, und du siehst sie. Yharnam liegt über dem Tal wie etwas, das gewachsen und nicht gebaut wurde: Turm auf Turm, Giebel auf Giebel, schwarze Spitzen, die so dicht stehen, dass sie den Himmel in schmale, kranke Streifen schneiden. Über allem eine Kathedrale, deren Ausmaße dein Auge nicht fassen will. Du wendest den Blick ab, ohne zu wissen, warum.
 Der Kutscher hat seit dem letzten Dorf kein Wort mehr gesprochen. Jetzt fragt er, ohne sich umzudrehen, woher du kommst.
 * [Aus verarmtem Adel]
     ~ herkunft = "adel"
@@ -49,11 +49,11 @@ Die Kutsche hält in einer engen Straße vor einem hohen, schmalen Haus. Die Fen
 === k1_klinik ===
 // TITEL: Iosefkas Klinik: Transfusion
 // [KANON] Der Blutminister, der Vertrag (im Original die Charaktererstellung), die Transfusion. Wortlaut nur sinngemäß.
-Drinnen riecht es nach Karbol, nach kaltem Kerzenwachs und, darunter, nach Eisen. Ein langer Raum, Liegen an den Wänden, die meisten leer, auf einigen liegen Gestalten unter Laken, die sich nicht bewegen. Das Licht kommt von Öllampen, deren Schein nicht bis in die Ecken reicht, und in diesen Ecken scheint das Dunkel dichter zu sein, als Dunkel sein dürfte. # bild: klinik_innen # stimmung: spannung
+Drinnen riecht es nach Karbol, nach kaltem Kerzenwachs und, darunter, nach Eisen. Ein langer Raum, Liegen an den Wänden, die meisten leer, auf einigen liegen Gestalten unter Laken, die sich nicht bewegen. Das Licht kommt von Öllampen, deren Schein nicht bis in die Ecken reicht, und in den Ecken ist das Dunkel dichter, als Dunkel sein dürfte. # bild: klinik_innen # stimmung: spannung
 Am Ende des Raumes sitzt ein alter Mann in einem Rollstuhl. Sein Gesicht liegt halb im Schatten, und seine Stimme klingt glatt und geübt, wie die eines Mannes, der diese Sätze schon sehr oft gesagt hat und jedes Mal ein wenig Vergnügen daran findet.
 „Noch einer“, sagt er. „Durch den Regen, mit Fieber in den Augen. Dann hat der Kutscher dich nicht umsonst gefahren. Das Blut dieser Stadt hat Leute aufgeweckt, die man anderswo schon gewaschen und eingenäht hätte.“ Er beugt sich vor, so weit, dass das Licht seine Nasenspitze erreicht, und mustert dich, als lese er etwas von deiner Stirn ab. „Bleiches Blut“, sagt er dann, leise, und lacht in sich hinein, als hättest du einen guten Witz erzählt. # lore: paleblood
 { herkunft == "adel": Sein Blick wandert über deine Handschuhe, das gute Leder, die gestopften Fingerspitzen, und das Lachen wird ein wenig breiter. }
-„Aber zuerst ein Vertrag. Eine Formalität.“ # lore: bluttransfusion
+„Erst die Papiere. Ohne Papiere kein Blut, so ist das hier.“ # lore: bluttransfusion
 // [ERWEITERT] Die braune Tinte, die nicht abgeht: Anker für die Bindung an den Traum (nur gezeigt, nie erklärt; dass der Vertrag bindet, ist [Deutung]).
 Er schiebt dir ein Papier hin. Die Tinte ist braun, und du bist nicht sicher, ob es Tinte ist.
 * [Unterschreiben, ohne zu lesen]
@@ -66,7 +66,7 @@ Er schiebt dir ein Papier hin. Die Tinte ist braun, und du bist nicht sicher, ob
     ~ haltung_vertrag = "zoegernd"
     Du zögerst. Der alte Mann drängt nicht. Er wartet, die Hände gefaltet, mit der Geduld eines Menschen, der weiß, dass am Ende jeder unterschreibt. Und du unterschreibst.
 - Die Tinte bleibt an deinen Fingerkuppen kleben, braun und ein wenig klebrig. Du reibst sie am Mantel ab. Sie geht nicht ab.
-„Gut“, sagt der alte Mann. „Sehr gut. Und falls dir heute Nacht etwas begegnet, das du nicht glauben willst: Dann glaub es nicht. Leg es zu den Träumen. Da gehört es ohnehin hin.“ Er lacht wieder, dasselbe leise Lachen, und rollt rückwärts in den Schatten.
+„Gut“, sagt der alte Mann. „Sehr gut. Und wenn dir heute Nacht etwas über den Weg läuft, das nicht sein kann: Schlaf darüber. Am Ende war alles nur das Fieber.“ Er lacht wieder, dasselbe leise Lachen, und rollt rückwärts in den Schatten.
 Man legt dich auf eine Liege. Die Nadel ist dicker, als sie sein sollte. Das Blut, das in deinen Arm fließt, ist zuerst warm wie ein Bad, dann kalt wie ein Fluss im Winter, und dann ist es nichts mehr, das man mit einem Wort für Temperatur beschreiben könnte. Es ist fremd. Es breitet sich in dir aus, als suche es etwas.
 // [KANON] Fiebervision: eine Bestie steigt aus einer Blutlache, fängt Feuer; kleine graue Wesen kriechen über dich. PRÜFEN: Einzelheiten nur aus Erinnerung.
 Du träumst, oder etwas träumt dich. Auf dem Boden der Klinik breitet sich eine Lache aus, rot und glänzend, und aus ihr steigt etwas auf: zuerst Fell, dann Klauen, dann ein Kopf, der zu lang ist und zu viele Zähne hat. Es beugt sich über dich, und sein Atem riecht nach Grab. Dann fängt es Feuer, einfach so, als hätte jemand es so beschlossen, und verbrennt kreischend, bis nur Asche bleibt. # gedaechtnis: vision_klinik # stimmung: grauen
@@ -101,19 +101,12 @@ Du stehst auf. Du lebst. Du solltest nicht leben. Der Gedanke ist so groß, dass
 Ein Pfad führt zwischen Grabsteinen einen Hügel hinauf zu einem kleinen Haus mit erleuchteten Fenstern. Die Tür ist verschlossen. Im Garten stehen leere Bänke, und im Gras liegt eine umgekippte Gießkanne, in der das Wasser längst verdunstet ist, während ringsum alles blüht. Es ist ein Ort, den jemand sehr geliebt und dann sehr lange nicht mehr betreten hat.
 // [ERWEITERT] Kein Weg hinaus. PRÜFEN: Gartentor im Original.
 Du gehst den Zaun entlang und suchst ein Tor. Jeder Weg, den du nimmst, biegt zwischen den Grabsteinen ab und führt dich zurück zum Fuß des Hügels.
-Am Fuß einer Treppe steht eine Frau, reglos, in einem schlichten Kleid und mit einer Haube. Erst als du näher kommst, siehst du die Gelenke an ihren Händen: Sie ist eine Puppe, so groß wie ein Mensch, mit einem Gesicht von stiller, unheimlicher Schönheit. Ihre Augen sind offen. Sie sehen dich nicht. # lore: puppe
+Am Fuß einer Treppe steht eine Frau, reglos, in einem schlichten Kleid und mit einer Haube. Erst als du näher kommst, siehst du die Gelenke an ihren Händen: Sie ist eine Puppe, so groß wie ein Mensch, mit einem Gesicht, so sorgfältig gemalt, dass du die Pinselstriche an den Wimpern siehst. Ihre Augen sind offen. Sie sehen dich nicht. # lore: puppe
 Dann bewegt sich der Boden. Aus der Erde zwischen den Blumen kriechen die kleinen grauen Wesen aus deinem Traum, und diesmal träumst du nicht. Sie fürchten dich nicht. Sie benehmen sich nicht wie Fremde, eher wie Leute, die etwas abholen, das man ihnen versprochen hat. Sie strecken dir ihre dünnen Arme entgegen, und in ihren Händen liegen Waffen. Boten, denkst du, ohne zu wissen, woher dieses Wort kommt. # lore: boten
-Die erste Waffe, die sie dir reichen, ist eine Wandelwaffe der Jäger, gemacht, um sich im Kampf zu verwandeln.
-* [Den Sägespalter: reißt, schnell, ausgeklappt weit]
-    ~ waffe = "saege"
-    Eine gezahnte Klinge, die sich zu doppelter Länge ausklappt. Die Zähne sind nach hinten geschliffen, für Fell und für das, was darunter liegt. Wer sie entworfen hat, wusste genau, wogegen er sie baute.
-* [Die Jägeraxt: spaltet, wuchtig, langsam]
-    ~ waffe = "axt"
-    Eine schwere Axt, deren Stiel sich zu einer langen Stange ausfahren lässt. Sie liegt dir wie ein Versprechen in der Hand: Was immer kommt, sie wird es spalten.
-* [Den Gewindestock: elegant, wird zur Peitsche]
-    ~ waffe = "stock"
-    Ein Spazierstock eines Gentleman, besetzt mit Klingen, die sich mit einem Ruck zu einer Peitsche aus Stahl entrollen. Eine Waffe für jemanden, der Würde behalten will, während er Dinge tut, die keine Würde kennen.
-- Dazu eine Feuerwaffe, kurz und schwer, in einer Hand, die zu klein ist, um sie zu tragen.
+// Entscheidung des Nutzers (2026-11-04): keine Waffenwahl, der Sägespalter reicht.
+~ waffe = "saege"
+Die erste Waffe, die sie dir reichen, ist eine Wandelwaffe der Jäger: ein Sägespalter, eine gezahnte Klinge, die sich mit einem Ruck zu doppelter Länge ausklappt. Die Zähne sind nach hinten geschliffen, für Fell und für das, was darunter liegt. Wer ihn entworfen hat, wusste genau, wogegen er ihn baute. Der Griff ist abgegriffen. Jemand vor dir hat ihn lange getragen.
+Dazu eine Feuerwaffe, kurz und schwer, in einer Hand, die zu klein ist, um sie zu tragen.
 * [Die Pistole: genau]
     ~ feuerwaffe = "pistole"
     Eine schwere Pistole, die Kugeln aus Quecksilber verschießt. Ihr Gewicht beruhigt dich.
@@ -170,7 +163,7 @@ Sie taumelt, Blut tropft aus ihrer Seite, und sie reißt das Maul auf, um ein le
     -> sieg
 - (sieg)
 ~ echos = echos + 2
-Die Bestie liegt still. Aus ihrem Körper steigt etwas auf, kein Rauch, kein Dampf, sondern eine Art Schimmer, der in dich hineinfließt, und für einen Augenblick fühlst du dich stärker, satter, als hättest du gegessen. Blutechos, denkst du, und wieder weißt du nicht, woher das Wort kommt. # notiz: blutechos
+Die Bestie liegt still. Aus ihrem Körper steigt ein Schimmer auf, dünner als Rauch, und fließt in dich hinein, und für einen Augenblick fühlst du dich stärker, satter, als hättest du gegessen. Blutechos. Das Wort liegt dir auf der Zunge, bevor du es gedacht hast. # notiz: blutechos
 Du stehst lange da und siehst sie an. Ein Knopf glänzt in ihrem Fell. Irgendjemand hat ihn einmal angenäht.
 Dann ruft eine Frauenstimme, gedämpft, hinter einer Tür am Ende des Ganges.
 -> k1_iosefka

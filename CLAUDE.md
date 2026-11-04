@@ -31,6 +31,8 @@ Der Nutzer ist der Visionär mit wenig Zeit. Claude führt, prüft und holt die 
 - Das Spielgefühl des Originals einfangen (Schuss von hinten, Kreischen in der Ferne, die Leiche beim Schwein).
 - Ton: Lovecraft und gotischer Horror; zuerst gotische Volkskunde, mit Einsicht und Kapiteln immer kosmischer.
 - Nur Deutsch.
+- Keine Waffenwahl: Der Jäger bekommt den Sägespalter, „der reicht“ (2026-11-04). Die Feuerwaffe bleibt wählbar.
+- Ton: im Browser erzeugt (eigene Spieluhr-Melodie) plus CC0-Geräusche, abschaltbar. Darstellung: Icons in der Leiste, sichtbare Kämpfe, Ortskarten, Notizbuch mit Reitern. Mechaniken: Stärkung bei der Puppe gegen Echos, Chronik der Nacht, Einsicht mit Kosten (alle 2026-11-04).
 
 ## Schreibregeln
 Vor jedem Schreiben die Skills laden: `erzaehlkunst-deutsch` (allgemeines Handwerk, aus dem Spielleiter des Nutzers im Repo AI-Dungeon-Master) und `hpl-horror` (Horror von gotischer Volkskunde bis kosmisch, Lovecraft, Perspektiven, Dialog, Buchbau; Projektteil in `references/bb-game.md`). Quellen in `.claude/skills/`, Pakete zum Hochladen in claude.ai in `skills-pakete/` (nach Änderungen neu packen).
@@ -55,4 +57,4 @@ Neue Weiche ⇒ neues Szenario in `tools/szenarien.mjs`. Der Erzählbaum (`web/t
 
 ## Veröffentlichen
 Hauptadresse: Netlify, verbunden mit GitHub (`netlify.toml`, Einrichtung in `docs/hosting.md`); alles auf `main` geht automatisch online.
-Zusätzlich sind Spiel und Erzählbaum claude.ai-Artefakte (Adressen in `web/artefakte.json`). Nach `npm run bauen` die Seiten `web/artefakt/spiel.html` (Dateien: stil.css, werkstatt.css, spiel.js, notizbuch.js, werkstatt.js, ink.js, ink-full.js, story.json, quelle.json) und `web/artefakt/karte.html` (Dateien: karte.css, werkstatt.css, werkstatt.js, karte.js, twine.json, quelle.json) mit dem Artifact-Werkzeug an dieselben Adressen veröffentlichen. Im Artefakt gibt es kein `confirm()`/`alert()`; Speicherzugriffe immer in try/catch. Ink-Fallen: Kampfoptionen mit `+` (wiederholbar nach Tod); Namen von Variablen, Knoten, Stitches und LIST-Einträgen dürfen sich nicht überschneiden.
+Zusätzlich sind Spiel und Erzählbaum claude.ai-Artefakte (Adressen in `web/artefakte.json`). Nach `npm run bauen` die Seiten `web/artefakt/spiel.html` (Dateien: stil.css, werkstatt.css, spiel.js, notizbuch.js, werkstatt.js, klang.js, klang/*.mp3, klang/LICENSE-kenney.txt, ink.js, ink-full.js, story.json, quelle.json) und `web/artefakt/karte.html` (Dateien: karte.css, werkstatt.css, werkstatt.js, karte.js, twine.json, quelle.json) mit dem Artifact-Werkzeug an dieselben Adressen veröffentlichen. Im Artefakt gibt es kein `confirm()`/`alert()`; Speicherzugriffe immer in try/catch. Ink-Fallen: Kampfoptionen mit `+` (wiederholbar nach Tod); Namen von Variablen, Knoten, Stitches und LIST-Einträgen dürfen sich nicht überschneiden.

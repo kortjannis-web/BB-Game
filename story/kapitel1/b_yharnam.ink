@@ -7,7 +7,7 @@
 { k1_hub_b == 1:
     Yharnam ist eine Stadt aus Treppen. Sie steigen und fallen zwischen Häusern, deren Fassaden sich nach vorn neigen, als lauschten sie, und über den Dächern hängt ein Rauch, der sich nicht verzieht. Irgendwo in der Ferne läuten Glocken, unregelmäßig, als zöge niemand an den Seilen. Unten in den Straßen wandern Fackeln. # bild: zentral_yharnam # stimmung: spannung # lore: jagdnacht
     Vor vielen Fenstern hängen kleine Laternen mit rotem Glas, in denen Räucherwerk schwelt. Der Geruch ist süß und schwer, und er liegt über allem wie ein Tuch über einem Gesicht. An manchen Häusern hängen drei, vier Lampen übereinander, an einem ein ganzes Dutzend, so dicht, dass das Fenster dahinter verschwindet. # lore: raeucherwerk
-    Eine Jagdnacht, hat der Kutscher gesagt. Die Stadt hält den Atem an, und du bist der Einzige auf der Straße, der nicht weiß, warum.
+    „Die Jagd ist bald“, hat der Kutscher gesagt. Die Stadt hält den Atem an, und du bist der Einzige auf der Straße, der nicht weiß, warum.
 - else:
     {~Die Laterne brennt, und die Straßen von Zentral-Yharnam liegen vor dir, nass und glänzend wie die Haut eines Tieres.|Der Rauch über den Dächern hat sich nicht bewegt. Irgendwo bellt ein Hund und hört mitten im Bellen auf.|Wieder die Laterne, wieder das Räucherwerk. Eine Glocke schlägt, dann noch eine, und dann ist es so still, dass du dein eigenes Blut hörst.|Fackeln ziehen in einer fernen Straße vorbei, und jemand singt dazu ein Lied, das klingt wie ein Kinderlied und keines ist.|Die Sonne hängt noch immer über den Giebeln, rot und klein. Sie hat sich nicht bewegt, seit du aus der Klinik getreten bist.}
 }
@@ -27,8 +27,12 @@
 + [An der Laterne in den Traum]
     ~ laterne = -> k1_hub_b
     -> traum_von_laterne
-+ {kleriker != "besiegt"} [Zur großen Brücke] -> k1_n1_kleriker
-+ {kleriker == "besiegt"} [Über die große Brücke in die Unterstadt] -> k1_n1_kleriker
++ {kleriker != "besiegt"} [Zur großen Brücke]
+    ~ bruecke_von = "oben"
+    -> k1_n1_kleriker
++ {kleriker == "besiegt"} [Über die große Brücke in die Unterstadt]
+    ~ bruecke_von = "oben"
+    -> k1_n1_kleriker
 
 === schrei ===
 // TITEL: Kreischen von der Brücke
@@ -47,7 +51,7 @@
 -> betreten("gilbert") ->
 { k1_b_gilbert == 1:
     Neben der Laterne, hinter einem vergitterten Fenster, hustet jemand. Es ist ein Husten, der tief unten sitzt, nass und rasselnd, und der klingt, als habe er seinen Besitzer schon lange vor dieser Nacht bewohnt. # bild: gilbert # stimmung: ruhig
-    Hinter dem Gitter erscheint ein Gesicht, eingefallen, mit fiebrigen, freundlichen Augen. „Ein Jäger“, sagt der Mann. „Und kein Hiesiger. Die Hiesigen gehen anders, schneller, mit dem Kopf zwischen den Schultern. Ich auch nicht, falls Sie sich wundern. Gilbert.“ Er deutet eine Verbeugung an, so weit das Gitter es zulässt. „Man hat mir hier Blut gegeben. Es kauft mir Zeit. Nur Zeit, wissen Sie, nichts weiter.“ # lore: fremde # lore: bluttransfusion
+    Hinter dem Gitter erscheint ein Gesicht, eingefallen, mit fiebrigen, freundlichen Augen. „Sie riechen nach Regen und nach Kutsche“, sagt der Mann, „nicht nach Räucherwerk. Von draußen also. Wie ich. Gilbert.“ Er deutet eine Verbeugung an, so weit das Gitter es zulässt. „Man hat mir hier Blut gegeben. Es kauft mir Zeit. Nur Zeit, wissen Sie, nichts weiter.“ # lore: fremde # lore: bluttransfusion
     { herkunft == "kranker":
         Dann hustest du, und er hört auf zu lächeln. „Oh“, sagt er leise. „Oh, das kenne ich. Das kenne ich sehr gut.“
     }
@@ -179,7 +183,7 @@ Sie kommen von zwei Seiten zugleich. Ein hagerer Mann mit einer Mistgabel löst 
     { leben <= 0: -> tod }
     -> t2
 + {feuer} [Feuer in die Menge]
-    Du hebst Gilberts Flammenwerfer, und eine Zunge aus Feuer fährt in die Menge. Sie schreien, nicht wie ein Mob, sondern wie einzelne, erschrockene Menschen, und sie stieben auseinander, in Gassen und Hauseingänge. Eine bleibt liegen. Ihre Schürze brennt noch, als sie schon still ist. Die Düse in deiner Hand ist warm.
+    Du hebst Gilberts Flammenwerfer, und eine Zunge aus Feuer fährt in die Menge. Sie schreien, jeder für sich, erschrockene Menschen, die eben noch eine Menge waren, und sie stieben auseinander, in Gassen und Hauseingänge. Eine bleibt liegen. Ihre Schürze brennt noch, als sie schon still ist. Die Düse in deiner Hand ist warm.
     ~ mob = "zerstreut"
     ~ mob_verbrannt = true
     -> gascoigne_greift_ein
@@ -213,22 +217,29 @@ Mehr kommen. Und der Riese hat aufgehört, gegen die Tür zu schlagen. Er dreht 
     ~ gascoigne = gascoigne - 1
 - "durchbrochen":
     Hinter dir kracht ein Schuss, so laut, dass die Fensterscheiben zittern. Zwischen dich und die Verfolger tritt ein Mann, groß, breitschultrig, in einem langen Jägermantel, eine Kappe tief in der Stirn und um den Hals einen schmutzigen Schal, wie ihn Priester tragen. Um seine Augen ist ein Verband gewickelt, und trotzdem dreht er den Kopf, als sehe er jeden Einzelnen. In der einen Hand eine Axt, in der anderen eine rauchende Donnerbüchse. # stimmung: ruhig # lore: gascoigne
-    „Martha“, sagt er, ruhig, tief, mit einem fremden Rollen in der Stimme. „Hennings. Brack, du alter Esel. Geht heim. Geht heim zu euren Kindern.“ Und sie gehen, einer nach dem anderen, die Fackeln gesenkt, und selbst der Riese trottet davon und zieht den Ziegel hinter sich her.
+    „Martha“, sagt er, ruhig, tief, mit einem Rollen in der Stimme, das nicht aus diesen Gassen stammt. „Hennings. Brack, du alter Esel. Geht heim. Geht heim zu euren Kindern.“ Und sie gehen, einer nach dem anderen, die Fackeln gesenkt, und selbst der Riese trottet davon und zieht den Ziegel hinter sich her.
 - else:
     Ein Schuss kracht über den Platz, so laut, dass die Fensterscheiben zittern. Zwischen dich und die Bürger tritt ein Mann, groß, breitschultrig, in einem langen Jägermantel, eine Kappe tief in der Stirn und um den Hals einen schmutzigen Schal, wie ihn Priester tragen. Um seine Augen ist ein Verband gewickelt, und trotzdem dreht er den Kopf, als sehe er jeden Einzelnen. In der einen Hand eine Axt, in der anderen eine rauchende Donnerbüchse. # stimmung: ruhig # lore: gascoigne
-    „Martha“, sagt er, ruhig, tief, mit einem fremden Rollen in der Stimme. „Hennings. Brack, du alter Esel. Geht heim. Geht heim zu euren Kindern.“ Und sie gehen, einer nach dem anderen, die Fackeln gesenkt, und selbst der Riese trottet davon und zieht den Ziegel hinter sich her.
+    „Martha“, sagt er, ruhig, tief, mit einem Rollen in der Stimme, das nicht aus diesen Gassen stammt. „Hennings. Brack, du alter Esel. Geht heim. Geht heim zu euren Kindern.“ Und sie gehen, einer nach dem anderen, die Fackeln gesenkt, und selbst der Riese trottet davon und zieht den Ziegel hinter sich her.
 }
 { mob != "zerstreut":
     Dann wendet er sich dir zu und streckt dir die Hand hin. Sie ist warm und trocken und sehr groß. „Gascoigne. Pater, wenn man es genau nimmt, aber so nennt mich hier keiner. In dieser Stadt gibt es keine Pater. Nur Vikare und Jäger.“ Er legt den Kopf schief. „Und du bist auch nicht von hier, Fremder. Man hört es an deinen Stiefeln.“ # notiz: gascoigne_pater
     { herkunft == "soldat": „Und du gehst wie einer, der Gräben kennt“, fügt er hinzu. „Ich auch. Lange her.“ }
 }
-* [Ihm danken]
+* {mob == "zerstreut"} [Sagen, du hattest keine Wahl]
+    „Man hat immer eine“, sagt er. „Meistens eine schlechte.“ Er wischt die Hand an seinem Mantel ab, obwohl nichts daran ist.
+* {mob == "zerstreut"} [Fragen, wer sie war]
+    ~ gascoigne = gascoigne + 1
+    „Martha. Hat unten am Markt Brot gebacken. Zu viel Kümmel drin, immer.“ Er schweigt. „Sie hatte Angst vor dir. Deshalb war sie hier.“
+* {mob == "zerstreut"} [Schweigen]
+    Du sagst nichts. Er auch nicht. Das Feuer auf dem Scheiterhaufen knackt.
+* {mob != "zerstreut"} [Ihm danken]
     ~ gascoigne = gascoigne + 1
     Du dankst ihm. Er winkt ab, aber seine Mundwinkel ziehen sich hoch. „Bedankt wird sich selten bei einem Jäger. Meistens macht man nur die Tür zu.“
-* [Fragen, warum er einem Fremden hilft]
+* {mob != "zerstreut"} [Fragen, warum er einem Fremden hilft]
     ~ gascoigne = gascoigne + 1
     „Weil ich selbst einer war“, sagt er. „Und es manchmal vergesse. Damals hat mir auch jemand geholfen.“ Unter dem Verband lächelt er, warm und ein wenig schief.
-* [Sagen, du hättest es allein geschafft]
+* {mob != "zerstreut"} [Sagen, du hättest es allein geschafft]
     Er lacht, laut und herzlich, und schlägt dir auf die Schulter, genau auf die Stelle, die wehtut. „Natürlich. Natürlich hättest du das.“
 - „Wie heißt du, Fremder?“
 * [Ihm deinen Namen sagen]
@@ -246,7 +257,7 @@ Dann sagt er, beinahe verlegen: „Wenn du heute Nacht einer Frau begegnest, mit
     ~ gascoigne = gascoigne + 1
     Du versprichst es. Er nickt, und etwas in seinen Schultern löst sich.
 * [Nicken]
-    Du nickst. Er scheint es zu sehen, trotz des Verbandes.
+    Du nickst. Er nickt zurück, trotz des Verbandes, genau im selben Augenblick.
 -
 { kleriker != "besiegt":
     // [ERWEITERT] Gascoigne glaubt, die Bestie auf der Brücke gekannt zu haben. Wer sie war, ist im Kanon [OFFEN]; hier nur seine Vermutung.
@@ -298,7 +309,7 @@ Dann, mit einem Trotz, der größer ist als sie: „Wenn Mama nicht bald kommt, 
 
 = spieluhr_geben
 // [KANON] Inhalt sinngemäß, Wortlaut eigen.
-Etwas schabt am Fensterbrett. Durch den Spalt zwischen den Läden kommt eine kleine Spieluhr, kaum größer als deine Handfläche, aus Holz und abgegriffenem Messing. „Das ist Papas Lied. Wenn Papa wieder komisch ist und uns nicht mehr kennt, spielen wir es ihm, und dann kennt er uns wieder. Mama hätte sie mitnehmen müssen. Sie liegt die ganze Zeit hier auf dem Tisch. Bring sie ihr.“ # lore: spieluhr # stimmung: schoen
+Etwas schabt am Fensterbrett. Durch den Spalt zwischen den Läden kommt eine kleine Spieluhr, kaum größer als deine Handfläche, aus Holz und abgegriffenem Messing. „Die ist von Papa. Papa wird manchmal ganz fremd, so mit den Augen. Dann zieh ich die auf, und er hört zu, und hinterher ist er wieder Papa. Mama hätte sie mitnehmen müssen. Sie liegt die ganze Zeit hier auf dem Tisch. Bring sie ihr.“ # lore: spieluhr # stimmung: schoen
 ~ spieluhr = true
 Du öffnest den Deckel. Auf der Innenseite klebt ein vergilbter Zettel mit zwei Namen, in einer feinen Schrift, deren V einen kleinen Kringel nach links macht: Viola. Gascoigne. # lore: familie_gascoigne
 { q_frau == 1:
@@ -403,26 +414,38 @@ Es ist eine Frau. Sie trägt einen Mantel aus schwarzen Federn, die leise rasche
 * [Nach den Abzeichen fragen]
     Sie fasst die Schnur mit zwei Fingern und lässt die Abzeichen durch die Hand laufen, eins nach dem anderen, wie Perlen beim Beten. „Jäger“, sagt sie. „Die nicht mehr wussten, was sie jagen.“ Sie lässt die Schnur fallen. „Irgendwer muss sie heimbringen. Eileen.“ Erst nach einem Atemzug merkst du, dass das ihr Name war. # lore: jaeger_der_jaeger # lore: blutrausch
     ~ eileen = eileen + 1
+    ~ eileen_genannt = true
 * [Misstrauisch bleiben]
     Du hältst die Hand am Griff deiner Waffe. Sie bemerkt es und nickt, beinahe zufrieden. „Gut. Misstrauen hält länger als Mut.“ Sie klopft gegen die Abzeichen an ihrer Schnur. „Die hier waren mutig. Eileen.“ # lore: jaeger_der_jaeger # lore: blutrausch
+    ~ eileen_genannt = true
 * [Ihr sagen, sie solle sich um ihren Kram kümmern]
     ~ eileen = eileen - 1
-    Sie lacht, ein kurzes, raues Krächzen. „Mach ich. Genau das mach ich.“ Die Abzeichen klappern. Sie sagt dir ihren Namen nicht; du hörst ihn später von anderen. # lore: jaeger_der_jaeger # lore: blutrausch
+    Sie lacht, ein kurzes, raues Krächzen. „Mach ich. Genau das mach ich.“ Die Abzeichen klappern. Ihren Namen sagt sie dir nicht. # lore: jaeger_der_jaeger # lore: blutrausch
 - Sie greift in ihren Mantel und wirft dir zwei kleine, abgegriffene Marken zu, aus Messing, mit einem eingeprägten Zeichen. „Zerdrücken, und du wachst im Garten auf. Ohne vorher zu sterben. Für den Fall, dass deine Beine zu langsam sind.“ # notiz: jaegermarke
 ~ jaegermarken = 2
 // [ERWEITERT] Eileen kennt den Garten. PRÜFEN: Was Eileen im Kanon über den Traum weiß.
-Du hast niemandem von dem Garten erzählt. „Du kennst den Garten?“ Sie antwortet nicht. Sie rückt nur die Maske zurecht.
-Dann, beiläufig, als ginge es um nichts: „Ein Pater. Groß, Verband über den Augen. Schon gesehen?“ # notiz: eileen_frage
+Du hast niemandem von dem Garten erzählt.
+* [Fragen, woher sie den Garten kennt]
+    Sie antwortet nicht. Sie rückt nur die Maske zurecht, und die Abzeichen an ihrem Hals klappern einmal.
+* [Nichts dazu sagen]
+    Sie sieht, dass du es bemerkt hast. Sie sagt nichts dazu.
+- Dann, beiläufig, als ginge es um nichts: „Ein Pater. Groß, Verband über den Augen. Schon gesehen?“ # notiz: eileen_frage
 * {q_frau == 1} [Ja, und er hat dir geholfen; du verteidigst ihn]
     ~ gascoigne = gascoigne + 1
-    Du erzählst ihr, wie er dich vor dem Mob gerettet hat, wie er die Bürger beim Namen nannte. Eileen unterbricht dich nicht. „Hoffentlich bleibt er so“, sagt sie dann. „Er und Henryk, sein alter Partner. Zu lange zusammen draußen. Zu viele Nächte.“ Sie zählt nicht weiter. # notiz: henryk
+    { mob == "zerstreut": Du erzählst ihr, wie er neben einer Toten kniete und ihren Namen sagte, und dass er dir trotzdem gezeigt hat, wie man wartet. | Du erzählst ihr, wie er dich vor dem Mob gerettet hat, wie er die Bürger beim Namen nannte. } Eileen unterbricht dich nicht. „Hoffentlich bleibt er so“, sagt sie dann. „Er und Henryk, sein alter Partner. Zu lange zusammen draußen. Zu viele Nächte.“ Sie zählt nicht weiter. # notiz: henryk
 * {q_frau == 1} [Ja; du sagst ihr, wo du ihn gesehen hast]
     ~ gascoigne_verraten = true
     ~ eileen = eileen + 1
     Du sagst ihr, wo du ihn getroffen hast und in welche Richtung er gegangen ist. Sie nickt, langsam. Eine ihrer Hände findet die Schnur mit den Abzeichen und hält sie fest. „Danke“, sagt sie. „Ist richtig so.“ Ihre Stimme klingt nicht, als glaube sie es. # notiz: verrat_gascoigne
 * {q_frau == 1} [Nein]
     „Nein.“ Sie nickt, als habe sie diese Antwort erwartet und glaube sie nur halb.
-* {q_frau == 0} [Nein]
+* {q_frau == 0 and gascoigne2} [Ja, zwischen den Gräbern]
+    „Dann weißt du's schon.“ Sie sieht in die Richtung der großen Brücke. „Wie er riecht.“
+* {q_frau == 0 and gascoigne2} [Ja; du sagst ihr, wohin er gegangen ist]
+    ~ gascoigne_verraten = true
+    ~ eileen = eileen + 1
+    Du sagst ihr, dass er durch das Tor hinter dem Friedhof gegangen ist. Sie nickt, langsam. „Danke. Ist richtig so.“ # notiz: verrat_gascoigne
+* {q_frau == 0 and not gascoigne2} [Nein]
     ~ eileen_frage_offen = true
     „Nein.“ Sie neigt den Schnabel. „Wirst du. Merk dir, wie er riecht.“
 - Dann steht sie auf, breitet den Mantel aus wie Flügel, und ist mit einem Sprung auf dem nächsten Dach. „Jäger sehen sich wieder“, ruft sie, ohne sich umzudrehen. „Meistens zu spät.“ # quest: eileen_treffen

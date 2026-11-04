@@ -5,15 +5,18 @@
 // [KANON] Nach Gascoignes Tod: Laterne am Grab, Schlüssel zum Kathedralenbezirk; Violas Leiche auf einem Dach über der Arena, bei ihr die rote Brosche mit ihrem Namen.
 // [OFFEN] Wer Viola getötet hat, sagt das Spiel nicht. Der Text lässt beide Lesarten offen.
 ~ laterne = -> k1_d_rueckweg
-An der Mauer des Friedhofs flammt eine Laterne auf, von selbst. Neben dem, was von Gascoigne übrig ist, liegt ein schwerer eiserner Schlüssel mit einem eingeprägten Zeichen, das du schon über dem Tor gesehen hast. Er wird das Tor zum Kathedralenbezirk öffnen. Er wiegt mehr, als ein Schlüssel wiegen sollte. # lore: laternen # notiz: oedon_schluessel # bild: grab_oedon # stimmung: ruhig
+An der Mauer des Friedhofs flammt eine Laterne auf, von selbst. Neben dem, was von {kennt_gascoigne():Gascoigne|dem Mann mit dem Verband} übrig ist, liegt ein schwerer eiserner Schlüssel mit einem eingeprägten Zeichen{k1_c_graeber:, das du schon über dem Tor bei den Gräbern gesehen hast}. Er wird das Tor zum Kathedralenbezirk öffnen. Er wiegt mehr, als ein Schlüssel wiegen sollte. # lore: laternen # notiz: oedon_schluessel # bild: grab_oedon # stimmung: ruhig
 Am Ende des Friedhofs führt eine schmale Treppe hinauf auf ein flaches Dach. Du steigst hinauf, Stufe um Stufe, langsamer, als deine Beine könnten.
 Oben auf dem Dach liegt eine Frau. Sie liegt auf der Seite, als habe sie sich hingelegt, um auszuruhen, das Gesicht abgewandt, das Haar über den Stein gebreitet. Ihr Kleid ist dunkel und nass. Und an ihrer Brust, über dem Herzen, steckt eine große Brosche, rot wie ein Tropfen frischen Blutes, und in die goldene Fassung ist ein Name graviert: Viola. Das V macht einen kleinen Kringel nach links. # notiz: gascoigne_schicksal # lore: familie_gascoigne # stimmung: grauen
 { spieluhr: Du kennst diesen Kringel. Er steht im Deckel der Spieluhr in deiner Tasche. }
-Die Wunden sind breit und tief, zu breit für eine Klinge, zu ordentlich für Zähne. Was sie bedeuten, sagen sie dir nicht.
-{ q_mutter >= 1: Du denkst an ein Fenster am Brunnenplatz und an eine kleine Stimme, die gut im Warten ist. }
+Die Wunden sind breit und tief, zu breit für eine Klinge, zu ordentlich für Zähne.
+{ q_mutter >= 1: Ein Fenster am Brunnenplatz, ein rotes Band am Riegel, eine kleine Stimme, die alles richtig gemacht hat. }
 * {q_frau == 1} [Ihr ausrichten, was er dir aufgetragen hat]
     ~ gruss_ausgerichtet = true
     Du kniest dich neben sie. „Er kommt bald“, sagst du leise. „Er hat gesagt, du sollst bei der Kleinen bleiben.“ Der Wind hebt eine Strähne ihres Haares und legt sie wieder hin.
+    -> brosche_wahl
+* [Ihr das Haar aus dem Gesicht streichen]
+    Du streichst ihr das Haar aus dem Gesicht. Es ist kalt und schwer vom Regen. Ihre Augen sind halb offen; du schließt sie nicht.
     -> brosche_wahl
 * [Schweigen]
     -> brosche_wahl
@@ -22,17 +25,17 @@ Die Wunden sind breit und tief, zu breit für eine Klinge, zu ordentlich für Z�
 * [Die Brosche an dich nehmen]
     ~ brosche = true
     Du löst die Brosche von ihrem Kleid, so behutsam, als könne sie es noch spüren. Sie ist warm von deiner Hand, und dann nicht mehr. # notiz: brosche
-* [Sie ihr lassen]
-    Du lässt ihr die Brosche. Sie gehört zu ihr. Du legst ihr deinen Mantel über die Schultern, weil es kalt ist auf dem Dach und weil du sonst nichts tun kannst.
+* [Sie ihr lassen und sie zudecken]
+    Du lässt ihr die Brosche. Du nimmst den Mantel von den Schultern und legst ihn über sie, bis zum Kinn. Ohne ihn ist es kalt auf dem Dach.
 - { eileen_stufe >= 1 and eileen >= 0: -> eileen_danach }
 -> k1_d_rueckweg
 
 = eileen_danach
 // [ERWEITERT] Keine dritte Begegnung (Entscheidung des Nutzers: zwei in Kapitel 1). Eileen ist nur zu sehen; ihr Urteil steckt in einer Geste.
-Als du vom Dach herabsteigst, steht Eileen zwischen den Gräbern, ein Stück entfernt, bei dem, was von Gascoigne übrig ist. Sie hat die Schnabelmaske gesenkt, als neige sie den Kopf an einem Grab. Sie kommt nicht näher. # stimmung: ruhig
+Als du vom Dach herabsteigst, steht {eileen_genannt:Eileen|die Frau im Federmantel} zwischen den Gräbern, ein Stück entfernt, bei dem Toten. Sie hat die Schnabelmaske gesenkt, als neige sie den Kopf an einem Grab. Sie kommt nicht näher. # stimmung: ruhig
 {
 - gascoigne_verraten and gascoigne_gewarnt:
-    Sie hebt den Kopf, sieht dich an, und dreht dir dann langsam den Rücken zu. So bleibt sie stehen, bis du gegangen bist. Wer erst verrät und dann warnt, hat beide verloren. # notiz: eileen_bruch
+    Sie hebt den Kopf, sieht dich an, und dreht dir dann langsam den Rücken zu. So bleibt sie stehen, bis du gegangen bist. # notiz: eileen_bruch
 - gascoigne_gewarnt:
     Sie sieht dich an, lange, durch die gläsernen Augen der Maske. Dann geht sie, ohne Gruß. Auf dem Grabstein, an dem sie stand, liegt nichts. # notiz: eileen_bruch
 - gascoigne_verraten:
@@ -51,8 +54,8 @@ Als du vom Dach herabsteigst, steht Eileen zwischen den Gräbern, ein Stück ent
 // [KANON · wahrscheinlich] Kapitel 1 spielt in der Abenddämmerung; der Blutmond kommt erst viel später (nicht hier verbrauchen). PRÜFEN: Tageszeit im Original.
 -> betreten("rueckweg") ->
 { k1_d_rueckweg == 1:
-    Der Weg zurück führt durch dieselben Straßen, und sie sind nicht mehr dieselben. Die Glocken schweigen. Das Lachen hinter der Tür in der Gasse mit den Räucherlampen hat aufgehört.{ alte_frau: Der Hund der alten Frau liegt vor ihrer Tür und hebt nicht einmal den Kopf.} # bild: zentral_yharnam # stimmung: grauen
-    Über den Giebeln hängt die Sonne, tief und rot, genau dort, wo sie hing, als du aus der Klinik getreten bist. Du hast es den ganzen Abend gesehen, an der Brücke, über dem Friedhof, und es dir nicht eingestanden: Sie hat sich nicht bewegt. Sie wird nicht untergehen. Die Nacht der Jagd hat noch nicht einmal richtig angefangen.
+    Der Weg zurück führt durch dieselben Straßen, und sie sind nicht mehr dieselben. Die Glocken schweigen.{k1_b_tueren: Das Lachen hinter der Tür in der Gasse mit den Räucherlampen hat aufgehört.}{ alte_frau: Der Hund der alten Frau liegt vor ihrer Tür und hebt nicht einmal den Kopf.} # bild: zentral_yharnam # stimmung: grauen
+    Über den Giebeln hängt die Sonne, tief und rot, genau dort, wo sie hing, als du aus der Klinik getreten bist. An der Brücke stand sie so. Über dem Friedhof stand sie so. Sie hat sich nicht bewegt. Sie wird nicht untergehen. Die Nacht der Jagd hat noch nicht einmal richtig angefangen.
     { kleriker == "abgelenkt" or kleriker == "geflohen": Von der Brücke herüber kommt ein Kreischen. Sie ist noch da. Sie wartet. }
     { einsicht >= 3: An einer Hauswand hängt etwas, das sich bewegt und kein Schatten ist, lang und dünn wie gefaltete Finger. Du blinzelst, und es ist eine Dachrinne. }
     { schuetze_verschont:
@@ -95,14 +98,14 @@ Und dann ist da das Versprechen, das du einem Mann gegeben hast, der für einen 
 * {brosche} [Ihr die Brosche geben und die Wahrheit sagen]
     ~ q_mutter = 3
     ~ maedchen_wo = "fort"
-    Du schiebst die Brosche durch den Spalt zwischen den Läden. Eine kleine Hand nimmt sie. Lange ist es still. Dann weint sie, nicht laut, nicht wie ein Kind, das sich das Knie aufgeschlagen hat, sondern leise und gleichmäßig. { gruss_ausgerichtet: „Ich habe es ihr noch gesagt“, sagst du. „Dass er bald kommt.“ Das Weinen hört nicht auf. } # quest: maedchen_fort # stimmung: grauen
+    Du schiebst die Brosche durch den Spalt zwischen den Läden. Eine kleine Hand nimmt sie. Lange ist es still. Dann weint sie, leise und gleichmäßig, ohne zu schluchzen. { gruss_ausgerichtet: „Ich habe es ihr noch gesagt“, sagst du. „Dass er bald kommt.“ Das Weinen hört nicht auf. } # quest: maedchen_fort # stimmung: grauen
     Sie sagt nichts mehr zu dir. Als du später noch einmal über den Platz gehst, steht die Haustür offen, und das Band ist nicht mehr am Riegel.
 * {not brosche} [Ihr die Wahrheit sagen, ohne Beweis]
     ~ q_mutter = 7
     Du sagst ihr, dass ihre Mutter nicht wiederkommt. Du sagst es so einfach, wie es geht. „Das stimmt nicht“, sagt sie sofort. „Das sagst du nur.“ Dann, nach einer langen Weile, sehr leise: „Woher weißt du das?“ Du hast nichts in der Hand, das du ihr durch den Spalt reichen könntest. Sie zieht die Finger zurück. Aber die Haustür bleibt zu. Sie wartet weiter, halb im Glauben, halb im Trotz. # quest: maedchen_wartet
 * [Lügen: Ihre Mutter kommt bald]
     ~ q_mutter = 4
-    Du sagst ihr, ihre Mutter komme bald. Sie habe nur noch etwas erledigen müssen. Die Lüge kommt dir leicht über die Lippen. Sie glaubt dir. „Dann warte ich“, sagt sie. „Ich kann gut warten.“ {not spieluhr: Hinter den Läden fängt die Spieluhr wieder an zu spielen.} # quest: maedchen_wartet
+    Du sagst ihr, ihre Mutter komme bald. Sie habe nur noch etwas erledigen müssen. Sie glaubt dir. „Dann warte ich“, sagt sie. „Ich kann gut warten.“ {not spieluhr: Hinter den Läden fängt die Spieluhr wieder an zu spielen.} # quest: maedchen_wartet
 * [Schweigen]
     ~ q_mutter = 5
     Du sagst nichts. Du stehst nur da. Und sie fragt nicht weiter. Die Finger verschwinden aus dem Spalt, und hinter den Läden bleibt es still, keine Spieluhr, kein Summen, nichts. # quest: maedchen_wartet
@@ -113,7 +116,7 @@ Und dann ist da das Versprechen, das du einem Mann gegeben hast, der für einen 
 // Wer sie fortgeschickt hat (früh zur Klinik oder jetzt mit der Brosche), findet hier, was das Schwein getan hat.
 ~ maedchen_tot = true
 Du nimmst den Weg durch die Kanalisation, weil er kürzer ist. # bild: kanal_schwein # stimmung: grauen
-Das Schwein ist wieder da, wie alles in dieser Nacht wiederkommt. Es wühlt im Wasser, und neben ihm liegt etwas Kleines, ein heller Stoff, ein Schuh. Aus seinem Maul, zwischen den gelben Hauern, hängt ein rotes Band. { maedchen_gesehen: Am Fensterriegel hat es geknotet gehangen, damit eine Mutter den Weg nach Hause findet. } # quest: maedchen_tot
+{k1_c_kanal:Das Schwein ist wieder da, wie alles in dieser Nacht wiederkommt.|Unten im Kanal wühlt ein Schwein, doppelt so groß wie ein Ochse.} Es wühlt im Wasser, und neben ihm liegt etwas Kleines, ein heller Stoff, ein Schuh. Aus seinem Maul, zwischen den gelben Hauern, hängt ein rotes Band. { maedchen_gesehen: Am Fensterriegel hat es geknotet gehangen, damit eine Mutter den Weg nach Hause findet. } # quest: maedchen_tot
 { q_mutter == 3:
     Sie ist gegangen, ihre Mutter zu suchen. Mit der Brosche in der Hand. So, wie sie es gesagt hat.
 - else:
@@ -121,7 +124,7 @@ Das Schwein ist wieder da, wie alles in dieser Nacht wiederkommt. Es wühlt im W
 }
 * [Das Band an dich nehmen]
     ~ band = true
-    Du ziehst das Band aus dem Maul des Schweins, und es lässt es dir, satt und gleichgültig. Das Band ist nass und schwer und dunkler, als es heute Morgen gewesen sein kann. Du steckst es zu dem Schlüssel{spieluhr: und der Spieluhr}. # notiz: rotes_band
+    Du ziehst das Band aus dem Maul des Schweins, und es lässt es dir, satt und gleichgültig. Das Band ist nass und schwer und dunkler, als es vorhin gewesen sein kann. Du steckst es zu dem Schlüssel{spieluhr: und der Spieluhr}. # notiz: rotes_band
 * [Weitergehen]
     Du gehst weiter, ohne dich umzudrehen. Das Schmatzen begleitet dich bis zur Leiter.
 - -> k1_d_rueckweg
@@ -134,7 +137,7 @@ Das Schwein ist wieder da, wie alles in dieser Nacht wiederkommt. Es wühlt im W
 Gilbert ist am Fenster. Er hustet schlimmer als zuvor, ein tiefer, reißender Husten, nach dem er lange braucht, um wieder sprechen zu können. „Erzählen Sie“, sagt er. „Bitte. Was liegt dahinter?“ # bild: gilbert # stimmung: ruhig # quest: gilbert_bericht
 Du erzählst ihm von den Treppen, der Unterstadt, in der das Wasser nie aufhört zu laufen{k1_c_graeber:, von den Gräbern und dem Namen über dem Tor}. Er hört zu, die Stirn ans Gitter gelehnt. „Und die Glocken?“, fragt er. „Klingen sie dort unten anders?“ Du sagst ihm, dass sie dort gar nicht klingen. Er nickt, als hätte er das geahnt.
 * [Ihm von Gascoigne erzählen]
-    Du erzählst ihm von dem Pater mit dem Verband und davon, was am Ende aus ihm geworden ist. Gilbert sagt lange nichts. Dann: „Und wenn es bei mir so weit ist?“ Er lächelt schief, das Lächeln vom ersten Abend. „Holen Sie mich dann? Ich hätte gern, dass es jemand ist, der meinen Namen weiß.“
+    Du erzählst ihm von dem Pater mit dem Verband und davon, was am Ende aus ihm geworden ist. Gilbert sagt lange nichts. Dann: „Und wenn es bei mir so weit ist?“ Er lächelt schief, so wie beim ersten Mal am Gitter. „Holen Sie mich dann? Ich hätte gern, dass es jemand ist, der meinen Namen weiß.“
     ** [Es ihm versprechen]
         ~ versprechen_gilbert = true
         Du versprichst es. „Danke“, sagt er, und dann noch einmal: „Danke.“ Er hustet, und diesmal klingt es beinahe wie ein Lachen. # notiz: versprechen_gilbert
@@ -154,14 +157,16 @@ Du erzählst ihm von den Treppen, der Unterstadt, in der das Wasser nie aufhört
 Du berührst die Laterne, und die stehende Sonne weicht dem elfenbeinfarbenen Himmel des Traumes. Die weißen Blumen. Das Haus auf dem Hügel mit seinen erleuchteten Fenstern. Und eine Stille, so vollkommen, dass du erst jetzt merkst, wie laut die Stadt gewesen ist. # bild: traum # stimmung: ruhig
 { not puppe_wach:
     -> puppe_erwacht ->
+    Sie löst sich vom Fuß der Treppe und geht ein paar Schritte, vorsichtig, wie jemand, der das Gehen erst wieder lernt. Ihr Blick bleibt an deinen Händen hängen, an der braunen Tinte an deinen Fingerkuppen. „Daheim“, sagt sie leise, als probiere sie, wie das Wort schmeckt. # lore: puppe
+- else:
+    Die Puppe kommt dir entgegen. Sie geht langsam, mit kleinen, vorsichtigen Schritten, und als sie vor dir steht, neigt sie den Kopf und sieht dir ins Gesicht. In ihren gläsernen Augen spiegelt sich das Haus. „Daheim“, sagt sie, als sei das eine Antwort auf eine Frage, die du nicht gestellt hast. Sie fragt nicht, was geschehen ist. Ihr Blick bleibt an deinen Händen hängen, an der braunen Tinte an deinen Fingerkuppen, die nicht abgeht. # lore: puppe
 }
-Die Puppe kommt dir entgegen. Sie geht langsam, mit kleinen, vorsichtigen Schritten, und als sie vor dir steht, neigt sie den Kopf und sieht dir ins Gesicht. In ihren gläsernen Augen spiegelt sich das Haus. „Da bist du wieder“, sagt sie. „Daheim.“ Sie fragt nicht, was geschehen ist. Ihr Blick bleibt an deinen Händen hängen, an der braunen Tinte an deinen Fingerkuppen, die nicht abgeht. # lore: puppe
-Du willst sie verbessern. Das hier ist nicht daheim. Du sagst es nicht.
-Du setzt dich auf die Stufen vor dem Haus. Sie setzt sich neben dich, die Hände im Schoß gefaltet. Eine Weile sitzt ihr nur da, eine Puppe und ein Jäger, und seht über die Blumen. „Sei vorsichtig, guter Jäger“, sagt sie nach einer langen Zeit, als hätte sie es sich lange überlegt. „Du kommst immer zurück. Aber jedes Mal ein wenig anders.“
+Das Wort bleibt zwischen euch liegen. Keiner von euch hebt es auf.
+Du setzt dich auf die Stufen vor dem Haus. Sie setzt sich neben dich, die Hände im Schoß gefaltet. Eine Weile sitzt ihr nur da, eine Puppe und ein Jäger, und seht über die Blumen. „Sei vorsichtig“, sagt sie nach einer langen Zeit, als hätte sie es sich lange überlegt. „Du kommst immer zurück. Aber jedes Mal ein wenig anders.“
 // Kapitelbilanz: Was du jetzt weißt, was offen bleibt (die Oberfläche zeigt dazu das Notizbuch).
 WAS DU JETZT WEISST # stil: zwischentitel
-Dass Yharnam mit Blut heilt und dass die Stadt trotzdem Bestien verbrennt, die gestern noch Nachbarn waren. Dass die Jagd nicht nur Bestien frisst, sondern auch die, die jagen. # stil: bilanz
-{ q_frau == 1 or gascoigne2:
+Dass Yharnam mit Blut heilt{k1_b_scheiterhaufen or k1_b_gilbert: und dass die Stadt trotzdem Bestien verbrennt, die gestern noch Nachbarn waren}. Dass die Jagd ihre Jäger mitfrisst. # stil: bilanz
+{ kennt_gascoigne():
     Dass selbst ein Pater, ein Vater{q_frau == 1:, ein Freund} nicht sicher ist vor dem, was in seinen Adern fließt. # stil: bilanz
 }
 { gedaechtnis_kleriker:
@@ -186,7 +191,11 @@ Aus den Aufzeichnungen, die man später fand: # stil: tagebuch
 - q_frau == 1 and gascoigne >= 2:
     „Ich habe in dieser ersten Nacht einen Freund gewonnen und ihn mit eigener Hand erschlagen. Er hat mir Branntwein gegeben, der nach Birne schmeckte. Man sagt mir, das sei die Jagd. # stil: tagebuch
 - else:
-    „Ich habe in dieser ersten Nacht einen Pater getötet, der seinen eigenen Namen vergessen hatte. Ich wusste nicht, wer er war, bis ich die Kappe auf dem Grabstein sah. Man sagt mir, das sei die Jagd. # stil: tagebuch
+    { kennt_gascoigne():
+        „Ich habe in dieser ersten Nacht einen Pater getötet, der seinen eigenen Namen vergessen hatte. Er hieß Gascoigne. Man sagt mir, das sei die Jagd. # stil: tagebuch
+    - else:
+        „Ich habe in dieser ersten Nacht einen Mann mit verbundenen Augen getötet, der einen Priesterschal trug. Seinen Namen weiß ich nicht. Seine Kappe liegt noch auf einem Grabstein. Man sagt mir, das sei die Jagd. # stil: tagebuch
+    }
 }
 { im_lied_getroffen:
     Ich habe zugeschlagen, während er dem Lied seiner Tochter zuhörte. Ich weiß nicht, ob man mir das vergeben kann; ich weiß nur, wer es nicht mehr kann. # stil: tagebuch
@@ -204,8 +213,57 @@ Aus den Aufzeichnungen, die man später fand: # stil: tagebuch
     Man sagt, Yharnam mache aus einem Menschen etwas Neues. Ich fange an zu verstehen, dass niemand gesagt hat, etwas Besseres. # stil: tagebuch
 }
 { grund == "suche":
-    Weihrauch. Ich weiß jetzt, wo man ihn riecht. Morgen gehe ich dorthin. # stil: tagebuch
+    Weihrauch. Ich weiß jetzt, wo man ihn riecht: oben, bei der Kathedrale. # stil: tagebuch
 }
-Ich habe gelernt, dass man in Yharnam nicht stirbt, sondern nur erwacht, immer wieder. Ich erinnere mich, unterschrieben zu haben. Ich erinnere mich nicht mehr, was. Die Tinte ist noch an meinen Fingern. Morgen gehe ich hinauf, zur Kathedrale. Die Puppe sagt, ich solle vorsichtig sein.“ # stil: tagebuch
+Ich habe gelernt, dass man in Yharnam nicht stirbt. Man erwacht, immer wieder. Ich erinnere mich, unterschrieben zu haben. Ich erinnere mich nicht mehr, was. Die Tinte ist noch an meinen Fingern. Als Nächstes gehe ich hinauf, zur Kathedrale. Die Puppe sagt, ich solle vorsichtig sein.“ # stil: tagebuch
+CHRONIK DER NACHT # stil: zwischentitel
+// [ERWEITERT] Was du entschieden hast und was nachwirkt. Eine Zeile je Figur, nur für das, was auf diesem Weg geschah.
+{
+- gascoigne_moment: Gascoigne. Für einen Atemzug war er wieder er selbst. Dann hast du ihn getötet, auf seine Bitte. # stil: chronik
+- im_lied_getroffen: Gascoigne. Du hast zugeschlagen, während er dem Lied seiner Tochter zuhörte. # stil: chronik
+- gascoigne_verraten: Gascoigne. Du hast der Krähe verraten, wo er war. Am Grab hast du ihn selbst gefunden. # stil: chronik
+- q_frau == 1: Gascoigne. Er hat dir Branntwein gegeben und dich das Warten gelehrt. Am Grab hast du ihn getötet. # stil: chronik
+- kennt_gascoigne(): Gascoigne. Ein Pater, den du erst kennengelernt hast, als er niemanden mehr kannte. # stil: chronik
+- else: Der Mann mit dem Verband. Du kennst seinen Namen nicht. Seine Kappe liegt auf einem Grabstein. # stil: chronik
+}
+{
+- maedchen_tot: Das Mädchen. Ein rotes Band im Maul eines Schweins.{band: Du trägst es bei dir.} # stil: chronik
+- q_mutter == 4: Das Mädchen. Du hast ihr gesagt, ihre Mutter komme bald. Sie wartet. Wirkt nach. # stil: chronik
+- q_mutter == 5: Das Mädchen. Du hast geschwiegen. Sie wartet und fragt nicht mehr. Wirkt nach. # stil: chronik
+- q_mutter == 7: Das Mädchen. Du hast ihr die Wahrheit gesagt, ohne Beweis. Sie glaubt dir halb und bleibt. Wirkt nach. # stil: chronik
+- q_mutter == 3: Das Mädchen. Sie ist losgegangen, die Brosche ihrer Mutter in der Hand. Wirkt nach. # stil: chronik
+- maedchen_wo == "fort": Das Mädchen. Sie ist losgelaufen, zur Klinik, und dann die Treppe hinunter. Wirkt nach. # stil: chronik
+- maedchen_gesehen: Das Mädchen. Sie wartet hinter dem Fenster am Brunnenplatz, das Band am Riegel. Wirkt nach. # stil: chronik
+}
+{
+- eileen_partner: {eileen_genannt:Eileen|Die Frau im Federmantel}. Sie hat zum Kathedralenbezirk gezeigt und zweimal gegen die Maske getippt. Sie erwartet dich vor der Kapelle. # stil: chronik
+- eileen < 0: {eileen_genannt:Eileen|Die Frau im Federmantel}. Sie hat dich vom Dach über den Gräbern geschickt. Wirkt nach. # stil: chronik
+- gascoigne_gewarnt and gascoigne_verraten: {eileen_genannt:Eileen|Die Frau im Federmantel}. Du hast ihr den Pater verraten und ihn dann vor ihr gewarnt. Sie hat dir den Rücken zugekehrt. Wirkt nach. # stil: chronik
+- gascoigne_gewarnt: {eileen_genannt:Eileen|Die Frau im Federmantel}. Du hast dich zwischen sie und den Pater gestellt. Sie ist ohne Gruß gegangen. Wirkt nach. # stil: chronik
+- eileen_stufe >= 1: {eileen_genannt:Eileen|Die Frau im Federmantel}. Ihr habt euch gesehen. Mehr nicht. # stil: chronik
+}
+{
+- versprechen_gilbert: Gilbert. Du hast versprochen, ihn zu holen, wenn es bei ihm so weit ist. Wirkt nach. # stil: chronik
+- q_gilbert == 2: Gilbert. Du hast ihm erzählt, was hinter der Brücke liegt. # stil: chronik
+- gilbert < 0: Gilbert. Du hast ihn angefahren. Er hustet, wenn du vorbeigehst, und sieht nicht auf. # stil: chronik
+- k1_b_gilbert: Gilbert. Er wartet hinter seinem Gitter und sammelt Namen. # stil: chronik
+}
+{ alte_frau_versprochen:
+    Die alte Frau mit dem Hund. Du hast ihr einen sicheren Ort versprochen. Wirkt nach. # stil: chronik
+}
+{
+- kleriker == "besiegt": Die Bestie auf der Brücke. Tot. An der Brücke brennt eine Laterne. # stil: chronik
+- kleriker != "": Die Bestie auf der Brücke. Sie lebt und wartet. Wirkt nach. # stil: chronik
+}
+{
+- schuetze_verschont: Der Alte mit den Kieseln. Du hast ihn leben lassen, und er hat dir den Rücken freigeschossen. # stil: chronik
+- schuetze == "erledigt": Der Alte mit den Kieseln. Sein Haar war gekämmt wie für den Sonntag. # stil: chronik
+}
+{ mob_verbrannt:
+    Martha. Sie hat einem Jäger manchmal Brot gegeben. Du hast sie verbrannt. # stil: chronik
+}
+{ iosefka != 0:
+    Iosefka. {iosefka > 0:Sie hat sich notiert, dass du höflich warst.|Sie hat sich notiert, dass du gegen ihre Tür geschlagen hast.} Wirkt nach. # stil: chronik
+}
 ENDE DES ERSTEN KAPITELS # stil: titel # kapitel: ende
 -> END

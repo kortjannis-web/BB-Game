@@ -20,7 +20,7 @@ Es springt. Es landet so schwer zwischen den Kutschen, dass die Brücke unter de
 Es ist größer als ein Haus, ausgemergelt bis auf die Knochen, und das Fell hängt in verfilzten Strähnen von ihm herab wie nasses Moos von einem toten Baum. Aus seinem Schädel wächst ein Geweih, verdreht und verknotet, als hätte es nicht wachsen wollen und es trotzdem getan. Sein linker Arm ist ein Unding, doppelt so lang wie der rechte, aufgebläht von Muskeln, an deren Ende Krallen sitzen wie Sicheln. Und um seinen Hals, in das Fell eingewachsen, hängen die Reste von etwas Weißem. Ein Kragen. Ein Priesterkragen.
 { k1_n1_kleriker == 1:
     ~ einsicht = einsicht + 1
-    Dein Blick bleibt an dem langen Arm hängen und will nicht los. Du zählst die Gelenke, ohne es zu wollen: Schulter, Ellbogen, noch ein Ellbogen, noch einer. Du zählst noch einmal und kommst auf eine andere Zahl. Hinter deiner Stirn öffnet sich etwas, ein Spalt, so schmal wie der unter einer Tür, und durch diesen Spalt siehst du, dass der Arm nicht gewachsen ist, sondern noch wächst, jetzt, während du hinsiehst. Einsicht, denkst du, und weißt nicht, woher das Wort kommt. # notiz: erste_einsicht # lore: einsicht # stimmung: grauen
+    Dein Blick bleibt an dem langen Arm hängen und will nicht los. Du zählst die Gelenke, ohne es zu wollen: Schulter, Ellbogen, noch ein Ellbogen, noch einer. Du zählst noch einmal und kommst auf eine andere Zahl. Hinter deiner Stirn öffnet sich etwas, ein Spalt, so schmal wie der unter einer Tür, und durch diesen Spalt siehst du, dass der Arm noch wächst, jetzt, während du hinsiehst. Einsicht. Das Wort ist einfach da, wie ein Geschmack im Mund. # notiz: erste_einsicht # lore: einsicht # stimmung: grauen
 }
 { schreie >= 1: Es reißt das Maul auf und kreischt, und du erkennst den Laut wieder, den du über den Dächern gehört hast. Jetzt hat er einen Körper. }
 { kleriker == "abgelenkt" or kleriker == "geflohen": Es hat dich nicht vergessen. Es dreht den Kopf, langsam, und sucht genau die Stelle, an der du stehst. }
@@ -36,7 +36,7 @@ Es ist größer als ein Haus, ausgemergelt bis auf die Knochen, und das Fell hä
     -> kampf
 }
 { gascoigne2:
-    Du rufst seinen Namen über die Brücke. Nur der Nebel antwortet. Wo er jetzt ist, hast du gesehen: hinter einem Tor mit einem Namen darüber.
+    Du rufst seinen Namen über die Brücke. Nur der Nebel antwortet.{k1_c_graeber.warnung: Wo er jetzt ist, hast du gesehen: hinter einem Tor mit einem Namen darüber.}
     -> kampf
 }
 -> mit_gascoigne
@@ -98,6 +98,9 @@ Der verzweigte Arm schlägt um sich, links, rechts, links, ein Sturm aus Knochen
 + [Zwischen den Hieben nach vorn, dorthin, wo der Arm nicht hinkommt]
     Zwischen zwei Schlägen ist ein Atemzug Zeit. Du nimmst ihn. Du bist an ihrer Brust, so nah, dass du ihren Herzschlag spürst, und dort, wo der lange Arm dich nicht erreichen kann, schlägst du zu, wieder und wieder, bis das Herz aufhört.
     -> sieg
++ {staerke >= 1} [Den Knochenarm abfangen und festhalten]
+    Du fängst den nächsten Hieb nicht ab, du fängst den Arm. Die Knochen schlagen dir gegen die Brust, und du schließt beide Arme darum und hältst fest, mit der Wärme der Puppe in den Schultern. Die Bestie zerrt, einmal, zweimal. Lange genug. Mit der freien Hand findest du ihre Kehle. # notiz: staerke_genutzt
+    -> sieg
 + [Rückwärts, bis die Kutschen dich decken]
     Du flüchtest dich hinter eine Kutsche. Sie zersplittert unter dem nächsten Schlag wie eine Streichholzschachtel, und ein Speichenrad trifft dich an der Schläfe.
     ~ zuletzt = kleriker_hieb
@@ -108,15 +111,14 @@ Der verzweigte Arm schlägt um sich, links, rechts, links, ein Sturm aus Knochen
     -> ampulle_gefahr(2) -> t4
 + {jaegermarken > 0} [Eine Jägermarke zerdrücken] -> marke
 - (sieg)
+Die Bestie bricht zusammen. Sie fällt wie ein Gebäude, das einstürzt: langsam erst, dann auf einmal, und ihr Geweih kratzt noch lange über das Pflaster, nachdem alles andere still ist. Dann ist auch das still. # stimmung: ruhig
+Die Zähne deiner Klinge haben sich in ihrem Fell festgefressen. Du musst den Fuß auf ihre Brust stellen, um sie herauszuziehen.
+-> beute
+
+= beute
 ~ kleriker = "besiegt"
 ~ einsicht = einsicht + 1
 ~ echos = echos + 6
-Die Bestie bricht zusammen. Sie fällt nicht wie ein Tier, das stirbt, sondern wie ein Gebäude, das einstürzt: langsam erst, dann auf einmal, und ihr Geweih kratzt noch lange über das Pflaster, nachdem alles andere still ist. Dann ist auch das still. # stimmung: ruhig
-{ waffe:
-- "saege": Die Zähne deiner Klinge haben sich in ihrem Fell festgefressen. Du musst den Fuß auf ihre Brust stellen, um sie herauszuziehen.
-- "axt": Die Axt steckt so tief in ihrem Hals, dass du sie mit beiden Händen und deinem ganzen Gewicht lösen musst.
-- "stock": Die Stahlpeitsche rollt sich von ihrem Arm, Glied um Glied, und jedes Glied ist rot.
-}
 Aus ihrem Leib steigt der Schimmer der Echos und fließt in dich hinein, mehr als je zuvor, so viel, dass dir schwindlig wird. Unter dem Fell, über der Brust, wo es dünner wird, siehst du Narben. Kleine, runde, in ordentlichen Reihen, Dutzende, Hunderte, wie die Stiche einer Nadel. Du reibst dir die Armbeuge, ohne es zu merken. # notiz: nadelnarben
 Zwischen den Fellsträhnen glänzt etwas: ein silbernes Abzeichen, ein Schwert auf einem Wappen. Das Zeichen der Kirchenjäger. Du denkst an das, was man sich in dieser Stadt zuflüstert, dass aus Kirchenleuten die schlimmsten Bestien werden. Beweisen kann es dir niemand. Das Abzeichen wiegt trotzdem schwer. # lore: kleriker_bestien # notiz: jaegerabzeichen
 -> gedaechtnis
@@ -143,32 +145,33 @@ Die Bestie hat nur noch Augen für ihn. Ihr langer Arm hebt sich, der Muskelknot
 Die Bestie fällt. Gascoigne hört nicht auf. Er schlägt weiter, in den Kadaver hinein, und weiter, nass und gleichmäßig, und er lacht dabei, leise, fast zärtlich, bis du ihn an der Schulter packst. # notiz: gascoigne_kippt # stimmung: grauen
 * [Ihn beim Namen rufen, bis er aufhört]
     ~ gascoigne = gascoigne + 1
-    Du sagst seinen Namen. Dann noch einmal. Beim dritten Mal hält er inne, blinzelt hinter dem Verband und senkt die Axt. Er lacht verlegen, und es ist wieder sein eigenes Lachen. „Ruhig. Ruhig. Das geht einem ins Blut, wenn man nicht aufpasst.“ Er wischt die Klinge am Mantel ab. „Pass du besser auf als ich.“
+    Du sagst seinen Namen. Dann noch einmal. Beim dritten Mal hält er inne, blinzelt hinter dem Verband und senkt die Axt. Er lacht verlegen, und es ist wieder sein eigenes Lachen. „Ruhig. Ruhig. Das geht einem ins Blut, wenn man nicht aufpasst.“ Er wischt die Klinge am Mantel ab. „Pass du besser auf als ich.“ Dann geht er, die Treppe hinab, in Richtung der Gräber.
 * [Ihn nach dem Lied fragen]
     ~ gascoigne = gascoigne + 1
     ~ gascoigne_lied = true
-    Du fragst ihn, was er da gesummt hat. Er hört auf zu schlagen und sieht dich an, als hättest du ihn geweckt. „Gesummt?“ Er denkt nach. „Das Lied von der Kleinen. Sie heißt …“ Er bricht ab. Sein Mund bleibt offen. „Sie heißt“, sagt er noch einmal, und dann nichts mehr. Er senkt die Axt sehr langsam, als wäre sie schwerer geworden.
+    Du fragst ihn, was er da gesummt hat. Er hört auf zu schlagen und sieht dich an, als hättest du ihn geweckt. „Gesummt?“ Er denkt nach. „Das Lied von der Kleinen. Sie heißt …“ Er bricht ab. Sein Mund bleibt offen. „Sie heißt“, sagt er noch einmal, und dann nichts mehr. Er senkt die Axt sehr langsam, als wäre sie schwerer geworden. Ohne ein weiteres Wort geht er die Treppe hinab.
 * [Fragen, wer sie war]
     ~ gascoigne = gascoigne + 1
-    Er sieht auf den Kadaver hinunter, auf das, was vom Kragen übrig ist. „Ich glaub, der hat uns getraut. Viola und mich. Unten in der Kapelle am Fluss.“ Er schweigt. „Oder einer, der genauso gesungen hat. Hier singen viele gleich.“
+    Er sieht auf den Kadaver hinunter, auf das, was vom Kragen übrig ist. „Ich glaub, der hat uns getraut. Viola und mich. Unten in der Kapelle am Fluss.“ Er schweigt. „Oder ich verwechsle ihn. Die singen hier alle gleich.“ Dann geht er, die Treppe hinab, ohne sich umzudrehen.
 * [Nichts sagen]
     ~ gascoigne = gascoigne - 1
     Du sagst nichts. Nach einer Weile hört er von selbst auf, steht schwer atmend da und starrt auf das, was er angerichtet hat. Dann geht er, ohne ein Wort, in Richtung der Gräber.
-- -> sieg
+- -> beute
 
 = ablenken
 { kiesel > 0:
     ~ kiesel = kiesel - 1
-    Du wirfst einen Kieselstein, so weit du kannst, an der Bestie vorbei. Er klappert gegen eine Kutsche am anderen Ende der Brücke, hell und deutlich, und die Bestie fährt herum, schneller, als du es ihr zugetraut hättest, und schnüffelt in die falsche Richtung.
+    Du wirfst einen Kieselstein hinter dich, zurück zu dem Ende der Brücke, von dem du gekommen bist. Er klappert gegen eine Kutsche, hell und deutlich, und die Bestie fährt herum, schneller, als du es ihr zugetraut hättest, und schnüffelt dem Klang nach.
 - else:
     ~ molotow = molotow - 1
-    Du wirfst den Molotow nicht auf sie, sondern daneben, auf die Kutschen am Rand. Das alte Holz fängt sofort Feuer, und die Bestie wendet sich kreischend dem Brand zu, als erinnere sie sich an etwas.
+    Du wirfst den Molotow neben sie, auf die Kutschen am Rand. Das alte Holz fängt sofort Feuer, und die Bestie wendet sich kreischend dem Brand zu, als erinnere sie sich an etwas.
 }
 Du läufst. Geduckt, zwischen den toten Pferden, so leise, wie es mit klopfendem Herzen geht. Hinter dir schlägt etwas so schwer ins Pflaster, dass dir die Zähne klappern, aber du drehst dich nicht um, nicht bis du die Treppen am anderen Ende erreichst. Dann erst siehst du zurück. Sie steht noch auf der Brücke, riesig im Nebel, und sieht dir nach. # notiz: kleriker_lebt
 ~ kleriker = "abgelenkt"
 -> uebergang
 
 = fliehen
+~ ort = "gassen"
 Du springst über das Geländer, auf ein tiefer gelegenes Dach, rutschst über nasse Ziegel und fällst in eine Gasse. Über dir hörst du sie, wie sie dir folgt, von Dach zu Dach, und die Ziegel regnen herab, wo sie aufsetzt. Einmal erwischt sie dich, als du um eine Ecke biegst, ein Hieb, der dich gegen eine Hauswand schleudert. # anzeichen: sprung # stimmung: kampf
 ~ zuletzt = sprung
 ~ treffer(2)
@@ -192,9 +195,9 @@ Du zerdrückst die Marke in der Faust. Das Messing wird warm, dann heiß, und da
 Du stehst vor ihrem Kopf. Er ist so groß wie ein Fass, und aus dem verknoteten Geweih tropft noch Blut, langsam, einzeln, wie aus einem undichten Dach. Du denkst an die Klinik, an das, was du gesehen hast, als fremdes Blut in deinen Arm floss. Deine Hand will dorthin, wie eine Zunge zu einem wackelnden Zahn will. Deine Schultern wollen weg.
 + [Den Kopf berühren]
     Deine Hand liegt auf dem nassen Fell, und das Blut ist warm, und dann bist du nicht mehr auf der Brücke. # stimmung: grauen
-    Er sah durch diese Augen eine Kathedrale, hoch und hell, Kerzen zu Tausenden, und hörte einen Gesang, so schön, dass es wehtat. Er kniete. Er trug einen weißen Kragen. Eine Hand legte sich auf seinen Kopf, und eine Nadel ging in seinen Arm, und das Blut, das hineinfloss, war heilig, hieß es, das Blut der Kirche, das reinste. Es brannte. Es brannte jeden Tag ein bisschen mehr. # gedaechtnis: kleriker # lore: blutgedaechtnis
+    Er sah durch diese Augen eine Kathedrale, hoch und hell, Kerzen zu Tausenden, und hörte einen Gesang, so schön, dass es wehtat. Er kniete. Er trug einen weißen Kragen. Eine Hand legte sich auf seinen Kopf, und eine Nadel ging in seinen Arm, und das Blut, das hineinfloss, war heilig, hieß es, das Blut der Kirche, das reinste. Es war warm. Er dankte dafür. # gedaechtnis: kleriker # lore: blutgedaechtnis
     Dann ein anderer Tag. Er sang, und seine Stimme kippte mitten im Lied, und alle drehten sich zu ihm um. Er sah auf seine Hände. Sie waren zu groß. Und ganz hinten, in einem Winkel, den das Blut noch nicht erreichte, saß noch jemand und suchte nach einem Namen. Seinem eigenen. Und fand ihn nicht.
-    Du reißt die Hand zurück. Du kniest auf der Brücke, und dein Atem geht, als wärst du gerannt. Aber jetzt weißt du, woran man den Augenblick erkennt, in dem einer kippt: die Stimme, die bricht. Der Blick auf die eigenen Hände. Und dass dahinter, wenn man ihn ruft, noch jemand antworten kann, für einen Atemzug. # notiz: rest_mensch
+    Du reißt die Hand zurück. Du kniest auf der Brücke, und dein Atem geht, als wärst du gerannt. Die Bilder bleiben, als hättest du sie auswendig gelernt: die Stimme, die mitten im Lied kippt. Der Blick auf die eigenen Hände. Und ganz hinten einer, der nach seinem Namen sucht. Hätte ihn jemand gerufen, bei diesem Namen, in diesem Augenblick. # notiz: rest_mensch
     ~ gedaechtnis_kleriker = true
     -> uebergang
 + [Nicht berühren und weitergehen]
@@ -205,6 +208,11 @@ Du stehst vor ihrem Kopf. Er ist so groß wie ein Fass, und aus dem verknoteten 
 { kleriker == "besiegt" and not bruecke_laterne:
     ~ bruecke_laterne = true
     Am Ende der Brücke, wo der Turm in den Fels übergeht, steht eine Laterne. Als du sie berührst, flammt sie auf, und die Boten kriechen aus dem Boden und neigen die Köpfe, als grüßten sie dich. # lore: laternen
+}
+{ bruecke_von == "unten":
+    ~ bruecke_von = "oben"
+    Am Ende der Brücke führen die Treppen hinauf, zurück nach Zentral-Yharnam, zum Räucherwerk und zu den Glocken.
+    -> k1_hub_b
 }
 Hinter der Brücke führen breite Treppen hinab, in einen tieferen, älteren Teil der Stadt, wo die Häuser enger stehen und die Luft nach Wasser und Moder riecht. Weiter unten, zwischen Dächern, ragen die Spitzen von Grabsteinen.
 -> k1_hub_c

@@ -47,6 +47,7 @@ flowchart TD
     traum_erwachen["Erwachen nach dem Tod"]
     traum_hub["Jägertraum"]
     puppe_gespraech["Gespräch mit der Puppe"]
+    puppe_staerken["Die Puppe stärkt dich"]
   end
   k1_b_daecher --> k1_hub_b
   k1_b_eileen --> k1_hub_b
@@ -85,6 +86,7 @@ flowchart TD
   k1_klinik --> k1_erwachen
   k1_laterne_zentral --> k1_hub_b
   k1_n1_kleriker --> k1_c_kanal
+  k1_n1_kleriker --> k1_hub_b
   k1_n1_kleriker --> k1_hub_c
   k1_n2_gascoigne --> k1_d_grab
   k1_prolog --> k1_klinik
@@ -94,5 +96,6 @@ flowchart TD
   traum_hub --> k1_hub_b
   traum_hub --> k1_hub_c
   traum_hub --> puppe_gespraech
+  traum_hub --> puppe_staerken
   traum_von_laterne --> traum_hub
 ```

@@ -26,7 +26,7 @@ VAR laterne = -> k1_klinik_kampf
 
 // --- Lernen durch Sterben ---------------------------------------------------
 // Vor jedem Treffer wird das Anzeichen gemerkt; wer daran stirbt, erkennt es beim nächsten Mal.
-LIST anzeichen = sprung, schwer, biss, mobhieb, schuss, kleriker_hieb, kreischen, ansturm, axt_lang, bestie_sprung, griff, jaeger_klinge
+LIST anzeichen = sprung, schwer, biss, mobhieb, schuss, gascoigne_schuss, kleriker_hieb, kreischen, ansturm, axt_lang, bestie_sprung, griff, jaeger_klinge
 VAR zuletzt = ()
 VAR gelernt = ()
 
@@ -66,6 +66,7 @@ VAR gelernt = ()
 === tod ===
 // TITEL: Tod
 ~ tode = tode + 1
+~ neu_gelernt = zuletzt != () and not (gelernt ? zuletzt)
 ~ gelernt += zuletzt
 ~ zuletzt = ()
 ~ fleck_ort = ort

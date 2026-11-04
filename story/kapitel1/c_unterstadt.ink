@@ -23,8 +23,10 @@
 + {kleriker == "besiegt"} [Über die große Brücke zurück nach Zentral-Yharnam]
     Auf der Brücke liegt die Bestie noch, wo sie gefallen ist. Die Ratten haben angefangen, und das Geweih ragt über die Kutschen wie die Krone eines umgestürzten Baumes. Du gehst vorbei, ohne stehen zu bleiben.
     -> k1_hub_b
-+ {kleriker != "besiegt"} [Zurück über die Brücke] -> k1_n1_kleriker
-+ [Durch das Friedhofstor zum Grab des Oedon] -> k1_n2_gascoigne
++ {kleriker != "besiegt"} [Zurück über die Brücke]
+    ~ bruecke_von = "unten"
+    -> k1_n1_kleriker
++ [{k1_c_graeber:Durch das Tor mit dem Namen Oedon|Durch das Tor hinter dem Friedhof}] -> k1_n2_gascoigne
 
 === k1_c_kanal ===
 // TITEL: Kanalisation (Schwein, Leiter)
@@ -67,6 +69,9 @@ Das Schwein hebt den Kopf. Es sieht dich, und es senkt den Schädel, scharrt mit
 + [Zur Seite, im letzten Moment]
     Es rennt. Du wartest, bis es so nah ist, dass du seinen heißen, fauligen Atem spürst, und springst zur Seite. Es donnert an dir vorbei und rammt die Wand mit solcher Wucht, dass Steine aus dem Gewölbe brechen.
     -> t2
++ {staerke >= 1} [Den Ansturm mit der Schulter abfangen]
+    Du stemmst die Füße in den Schlamm unter dem Wasser und nimmst den Schädel mit der Schulter, so wie man ein Tor zuhält. Die Wärme der Puppe sitzt in deinen Armen, und du hältst. Das Schwein schiebt, quiekt, und als es zurückweicht, um Anlauf zu nehmen, ist seine Flanke offen. # notiz: staerke_genutzt
+    -> t2
 + [Stehen bleiben und zustechen]
     Du stemmst dich gegen den Ansturm. Es ist, als stelle man sich einer Lawine entgegen. Die Hauer reißen dir den Schenkel auf, und du fliegst ins Wasser.
     ~ zuletzt = ansturm
@@ -92,13 +97,13 @@ Es dreht sich, schwerfällig, und reißt das Maul auf. Darin stecken noch Fetzen
 Das Schwein sinkt ins Wasser, und das Wasser färbt sich, langsam, wie Tinte in einem Glas.
 { maedchen_tot and not band:
     ~ band = true
-    Du ziehst das rote Band aus seinem Maul. Es ist nass und schwerer, als ein Band sein sollte, und dunkler, als es heute Morgen gewesen sein kann. Du wickelst es dir um zwei Finger und steckst es ein. # notiz: rotes_band
+    Du ziehst das rote Band aus seinem Maul. Es ist nass und schwerer, als ein Band sein sollte, und dunkler, als es {maedchen_gesehen:am Fensterriegel war|sein sollte}. Du wickelst es dir um zwei Finger und steckst es ein. # notiz: rotes_band
 }
 -> leiter
 
 = leiter
 { not kanal_leiter:
-    Am Ende des Kanals führt eine eiserne Leiter nach oben, zu einem Gitter. Es ist von unten verriegelt. Du schiebst den rostigen Riegel zurück, und das Gitter schwingt auf, und durch die Öffnung siehst du ein Stück Himmel, das du kennst: die Dächer von Zentral-Yharnam, ganz in der Nähe der Laterne. Ein Weg zurück, der nicht über die Brücke führt. Zum ersten Mal in dieser Nacht ist die Stadt ein klein wenig kleiner. # notiz: abkuerzung
+    Am Ende des Kanals führt eine eiserne Leiter nach oben, zu einem Gitter. Es ist von unten verriegelt. Du schiebst den rostigen Riegel zurück, und das Gitter schwingt auf, und durch die Öffnung siehst du ein Stück Himmel, das du kennst: die Dächer von Zentral-Yharnam, ganz in der Nähe der Laterne. Ein Weg zurück, der nicht über die Brücke führt. # notiz: abkuerzung
     ~ kanal_leiter = true
 }
 -> k1_hub_c
@@ -112,15 +117,15 @@ Das Wasser riecht nach Eisen. Das Schwein liegt, wo es liegt, und die Ratten hab
 // [ERWEITERT] Zweite und letzte Begegnung in Kapitel 1. Sie beobachtet Gascoigne. Bereitet die Partnerschaft in Kapitel 2 vor (das Angebot kommt nur hier).
 -> betreten("eileen_graeber") ->
 ~ eileen_stufe = 2
-Auf dem Dach einer alten Totengräberhütte sitzt Eileen, so reglos wie eine der Krähen, die auf dem Friedhof unter ihr hocken. Als du zu ihr hinaufkletterst, rückt sie ein Stück zur Seite, ohne den Blick abzuwenden. # bild: daecher_eileen # stimmung: ruhig
+Auf dem Dach einer alten Totengräberhütte sitzt {eileen_genannt:Eileen|die Frau im Federmantel}, so reglos wie eine der Krähen, die auf dem Friedhof unter ihr hocken. Als du zu ihr hinaufkletterst, rückt sie ein Stück zur Seite, ohne den Blick abzuwenden. # bild: daecher_eileen # stimmung: ruhig
 { eileen < 0:
     Sie sagt lange nichts. Dann: „Geh. Das hier ist nichts für jemanden, der nicht weiß, wann man den Mund hält.“ # notiz: eileen_kalt
     -> k1_hub_c
 }
 { gascoigne2:
-    Sie sieht nicht auf die Gräber, sondern auf das Tor mit dem Namen darüber. „Reingegangen“, sagt sie. „Nicht wieder rausgekommen. Ich warte.“
+    Ihr Blick hängt am Tor mit dem Namen darüber. „Reingegangen“, sagt sie. „Nicht wieder rausgekommen. Ich warte.“
 - else:
-    Sie zeigt mit dem Schnabel ihrer Maske nach unten, ins Halbdunkel zwischen den Grabsteinen. Dort bewegt sich ein großer Schatten in einem langen Mantel. Du weißt, wer es ist, bevor du ihn erkennst.
+    Sie zeigt mit dem Schnabel ihrer Maske nach unten, ins Halbdunkel zwischen den Grabsteinen. Dort bewegt sich ein großer Schatten in einem langen Mantel.{q_frau == 1: Du kennst diesen Gang. Du hast ihn auf dem Platz am Scheiterhaufen gesehen.}
 }
 Sie greift nach der Schnur an ihrem Hals und dreht eines der Abzeichen ans Licht, ein schlichtes aus Eisen. „Der hier hat an Stellen gelacht, wo keiner lacht. Drei Wochen vorher.“ Sie lässt es zurückfallen. Mehr sagt sie nicht. # lore: blutrausch # notiz: wie_jaeger_kippen
 { eileen_frage_offen and (q_frau == 1 or gascoigne2):
@@ -132,13 +137,9 @@ Sie greift nach der Schnur an ihrem Hals und dreht eines der Abzeichen ans Licht
     { q_frau == 1:
         Du bittest sie und sagst ihr, was er für dich getan hat.
     - else:
-        Du bittest sie, und du weißt selbst nicht genau, warum. Vielleicht wegen der Art, wie er seinen Namen zu sich selbst gesagt hat.
+        Du bittest sie trotzdem. Er hat seinen Namen zu sich selbst gesagt, zwischen den Gräbern, wie einen Gegenstand, den man in der Tasche ertastet.
     }
     Eileen schweigt lange. „Heute Nacht töte ich niemanden“, sagt sie. „Aber ich bin hier.“ Eine Pause. „Hoffentlich lernst du nie, wozu.“ # notiz: eileen_bitte
-* {(q_frau == 1 or gascoigne2) and not gascoigne_verraten} [Ihr sagen, wohin er gegangen ist]
-    ~ gascoigne_verraten = true
-    ~ eileen = eileen + 1
-    Du sagst es ihr. Sie nickt, ohne dich anzusehen. „Ist richtig so.“ Ihre Hand liegt dabei auf den Abzeichen, als zähle sie sie. # notiz: verrat_gascoigne
 * [Ihr anbieten, mit ihr zu jagen]
     ~ eileen = eileen + 2
     Du sagst ihr, dass du verstehst, was sie tut. Dass jemand es tun muss. Dass sie es vielleicht nicht allein tun müsste. Zum ersten Mal dreht sie den Kopf zu dir, und hinter den gläsernen Augen der Maske ist für einen Augenblick nichts als Überraschung. „Nicht heute. Drüben, im Kathedralenbezirk, vor der Kapelle. Wenn du dann noch willst.“ # quest: eileen_angebot
@@ -158,7 +159,7 @@ Sie greift nach der Schnur an ihrem Hals und dreht eines der Abzeichen ans Licht
 { k1_c_graeber == 1:
     Die Gräber beginnen ohne Warnung, zwischen den Häusern, als sei die Stadt hier einfach in einen Friedhof übergegangen. Grabsteine, schief und moosig, so dicht, dass man nicht zwischen ihnen gehen kann, ohne auf einen Namen zu treten. Engel mit abgeschlagenen Gesichtern. Holzkreuze, in die jemand Hufeisen genagelt hat, und auf vielen Gräbern ein Stein auf der Brust des Toten, damit er liegen bleibt. # bild: graeber # stimmung: grauen
     Über einem schmiedeeisernen Tor am Ende des Friedhofs steht ein einziges Wort in den Stein gemeißelt: Oedon. Kein Vorname, keine Jahreszahl, kein Gebet.{ herkunft == "gelehrter": In keinem der schlecht gebundenen Bücher über diese Stadt stand dieser Name, und du hast sie alle gelesen.} Du sprichst es leise aus. # lore: oedon
-    { einsicht >= 1: Für einen Augenblick antwortet etwas, nicht mit einer Stimme, sondern mit einem Druck hinter den Ohren, wie vor einem Gewitter, das nicht vom Himmel kommt. }
+    { einsicht >= 1: Für einen Augenblick antwortet etwas. Keine Stimme: ein Druck hinter den Ohren, wie vor einem Gewitter, das nicht vom Himmel kommt. }
 }
 { gascoigne2: -> still }
 ~ gascoigne2 = true
@@ -184,17 +185,23 @@ Zwischen den Gräbern kniet ein Mann. Es ist Gascoigne, und er kniet nicht, um z
 * {q_frau == 1 or q_mutter >= 1} [Fragen, wo seine Frau ist]
     Er sieht dich an, als verstehe er die Frage nicht. Dann lächelt er. „Zu Hause. Ich hab sie heimgeschickt. Sie ist mir nachgekommen, hierher, in so eine Nacht, so eine Dummheit, so eine Dummheit, und ich hab sie heimgeschickt.“ Während er das sagt, reibt er die Hände aneinander, als wolle er die Graberde loswerden, und sie wird nicht weniger. # notiz: viola_luege # stimmung: grauen
     -> warnung
+* {q_frau == 0 and not spieluhr and not maedchen_gesehen} [Ihn ansprechen]
+    Du sagst etwas, irgendetwas, über die Nacht und die Gräber. Er hört zu, den Kopf schief, als lausche er einer anderen Stimme hinter deiner.
+    -> warnung
 * [Leise zurückweichen]
     ~ gascoigne = gascoigne - 1
-    Du gehst rückwärts, Schritt für Schritt, ohne ihn aus den Augen zu lassen. Er sieht dir nach. Er folgt dir nicht. Noch nicht.
+    Du gehst rückwärts, Schritt für Schritt, ohne ihn aus den Augen zu lassen. Er sieht dir nach. Er folgt dir nicht.
     -> k1_hub_c
 
 = tochter
-{ spieluhr:
+{
+- spieluhr:
     Du nimmst die Spieluhr aus der Tasche und ziehst sie auf. Das Lied steigt zwischen den Gräbern auf, dünn und klar, und Gascoigne erstarrt. Seine Hände sinken in den Schoß. Unter dem Verband laufen ihm Tränen über die Wangen, und er wischt sie nicht weg. Er summt mit, leise, jede Note. Als das Lied endet, flüstert er einen Namen, den du nicht verstehst, und dann: „Die Kleine. Die Kinder. Die Kleine.“ # lore: spieluhr # stimmung: schoen
     ~ gascoigne = gascoigne + 1
-- else:
+- maedchen_gesehen:
     Du erzählst ihm von dem Fenster am Brunnenplatz, von der kleinen Stimme hinter den Läden und dem roten Band am Riegel. Er nickt langsam, immer weiter, viel zu lange. „Die schläft“, sagt er. „Ich jag, damit sie schläft. Dafür. Nur dafür.“
+- else:
+    Du erinnerst ihn an die Kleine, von der er am Scheiterhaufen gesprochen hat. Er nickt langsam, immer weiter, viel zu lange. „Die schläft“, sagt er. „Ich jag, damit sie schläft. Dafür. Nur dafür.“
 }
 -> warnung
 

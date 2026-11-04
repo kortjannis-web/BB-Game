@@ -17,6 +17,18 @@
   let notizen = [];
   let letzterPfad = "";
   let letzteWahl = "";
+  let letztesBild = "";
+  let gelesen = [];
+  let vorher = null;
+  const K = () => window.KLANG;
+  // Ortskarten: Name des Ortes beim Betreten (Tag # bild: id), ein Zeichen, bis es echte Bilder gibt.
+  const ORTE = {
+    anreise: "Die Straße nach Yharnam", klinik_innen: "Iosefkas Klinik", traum: "Der Jägertraum", laterne: "Vor der Klinik",
+    zentral_yharnam: "Zentral-Yharnam", gilbert: "Gilberts Fenster", tueren: "Die Gasse der Räucherlampen",
+    scheiterhaufen: "Der Platz am Scheiterhaufen", brunnenplatz: "Der Brunnenplatz", gasse: "Die Gasse unter den Dächern",
+    daecher_eileen: "Die Dachbalken", bruecke: "Die große Brücke", unterstadt: "Die Unterstadt", kanal: "Die Kanalisation",
+    kanal_schwein: "Die Kanalisation", graeber: "Die Gräber", grab_oedon: "Das Grab des Oedon", werkstatt: "Gehrmans Werkstatt",
+  };
 
   const speichern = () => {
     try {
@@ -24,7 +36,7 @@
         .filter((el) => !el.classList.contains("eingefuegt") && !el.classList.contains("ws-werkzeug") && el.tagName !== "TEXTAREA")
         .slice(-40)
         .map((el) => ({ tag: el.tagName, html: el.dataset.orig === undefined ? el.innerHTML : "", orig: el.dataset.orig, pfad: el.dataset.pfad, cls: el.className.replace(/\b(geaendert|gestrichen)\b/g, "").trim() }));
-      localStorage.setItem(SPEICHER, JSON.stringify({ state: story.state.toJson(), notizen, absaetze, stimmung: document.body.dataset.stimmung, pfad: letzterPfad }));
+      localStorage.setItem(SPEICHER, JSON.stringify({ state: story.state.toJson(), notizen, gelesen, absaetze, stimmung: document.body.dataset.stimmung, pfad: letzterPfad, bild: letztesBild }));
     } catch {
       /* Speichern ist Komfort; ohne Speicher läuft das Spiel trotzdem. */
     }
@@ -39,17 +51,71 @@
 
   const wert = (name) => story.variablesState[name];
 
+  // Leiste: Zahlen und Icons. Ändert sich ein Wert, leuchtet sein Icon kurz auf; Treffer und Heilung zeigt der Rand.
+  function aufleuchten(id) {
+    const el = $(id);
+    if (!el) return;
+    el.classList.remove("leuchtet");
+    void el.offsetWidth;
+    el.classList.add("leuchtet");
+  }
   function leisteAktualisieren() {
-    $("h-echos").textContent = wert("echos");
-    $("h-einsicht").textContent = wert("einsicht");
-    $("h-ampulle").textContent = wert("ampulle");
-    const marken = wert("jaegermarken");
-    $("h-marken-wrap").hidden = !marken;
-    $("h-marken").textContent = marken;
-    const leben = wert("leben");
+    const jetzt = { echos: wert("echos"), einsicht: wert("einsicht"), ampulle: wert("ampulle"), marken: wert("jaegermarken"), leben: wert("leben") };
+    $("h-echos").textContent = jetzt.echos;
+    $("h-einsicht").textContent = jetzt.einsicht;
+    $("h-ampulle").textContent = jetzt.ampulle;
+    $("w-einsicht").dataset.stufe = String(Math.min(4, jetzt.einsicht));
+    $("w-ampulle").dataset.voll = String(jetzt.ampulle);
+    $("h-marken-wrap").hidden = !jetzt.marken;
+    $("h-marken").textContent = jetzt.marken;
     const v = $("vignette");
-    if (leben <= 3 && leben >= 1) v.dataset.leben = String(leben);
+    if (jetzt.leben <= 3 && jetzt.leben >= 1) v.dataset.leben = String(jetzt.leben);
     else delete v.dataset.leben;
+    if (vorher) {
+      if (jetzt.echos !== vorher.echos) aufleuchten("w-echos");
+      if (jetzt.einsicht !== vorher.einsicht) aufleuchten("w-einsicht");
+      if (jetzt.ampulle !== vorher.ampulle) aufleuchten("w-ampulle");
+      if (jetzt.marken !== vorher.marken) aufleuchten("h-marken-wrap");
+      if (jetzt.leben < vorher.leben && jetzt.leben > 0) {
+        randBlitz("treffer");
+        K()?.treffer();
+      } else if (jetzt.leben > vorher.leben && jetzt.ampulle < vorher.ampulle) {
+        randBlitz("heilung");
+      }
+    }
+    K()?.leben(jetzt.leben);
+    vorher = jetzt;
+    neuMarkieren();
+  }
+  function randBlitz(art) {
+    document.body.classList.remove("treffer", "heilung");
+    void document.body.offsetWidth;
+    document.body.classList.add(art);
+    setTimeout(() => document.body.classList.remove(art), 900);
+  }
+  // Tod: Schwarzblende, kurzer Satz, dann wieder Licht (der Text darunter geht weiter).
+  function ueberblende(satz) {
+    const u = $("ueberblende");
+    u.querySelector("p").textContent = satz;
+    u.classList.remove("an");
+    void u.offsetWidth;
+    u.classList.add("an");
+    setTimeout(() => u.classList.remove("an"), 3400);
+  }
+  function gelernt(id) {
+    try {
+      const liste = story.variablesState["gelernt"];
+      if (!liste) return false;
+      return [...liste.keys()].some((k) => {
+        try {
+          return JSON.parse(k).itemName === id;
+        } catch {
+          return String(k).endsWith(`.${id}`);
+        }
+      });
+    } catch {
+      return false;
+    }
   }
 
   function absatz(zeile, tags, pfad) {
@@ -62,13 +128,31 @@
       const k = schluessel.trim();
       const v = rest.join(":").trim();
       if (k === "stil") p.classList.add(v);
-      if (k === "anzeichen") p.classList.add("anzeichen");
+      if (k === "anzeichen") {
+        p.classList.add("anzeichen");
+        if (gelernt(v)) p.classList.add("erkannt");
+      }
       if (k === "tod") p.classList.add("tod");
       if (k === "gedaechtnis") p.classList.add("gedaechtnis");
       if (k === "stimmung") document.body.dataset.stimmung = v;
       if (k === "lore" && window.NOTIZBUCH[v] && !notizen.includes(v)) notizen.push(v);
+      if (k === "bild") p.dataset.bild = v;
+      if (["klang", "stimmung", "kampf", "tod", "bild"].includes(k)) K()?.tag(k, v);
     }
     return p;
+  }
+  function ortskarte(bild) {
+    const name = ORTE[bild];
+    if (!name || bild === letztesBild) return null;
+    const ort = ORTE[letztesBild];
+    letztesBild = bild;
+    if (ort === name) return null;
+    document.body.dataset.ort = bild;
+    const d = document.createElement("div");
+    d.className = "ortskarte";
+    d.innerHTML = '<span class="zier" aria-hidden="true">✦</span><span class="ortsname"></span><span class="zier" aria-hidden="true">✦</span>';
+    d.querySelector(".ortsname").textContent = name;
+    return d;
   }
 
   function weiter() {
@@ -80,8 +164,14 @@
       const p = absatz(zeile, tags, pfad);
       if (pfad) letzterPfad = pfad;
       if (!zeile) continue;
+      const karte = p.dataset.bild && ortskarte(p.dataset.bild);
+      if (karte) {
+        text.appendChild(karte);
+        erster ??= karte;
+      }
       text.appendChild(p);
       erster ??= p;
+      if (p.classList.contains("tod")) ueberblende("Du erwachst.");
     }
     ueberarbeitungAnwenden();
     leisteAktualisieren();
@@ -463,23 +553,77 @@
     }));
   }
 
-  function notizbuchZeigen() {
+  // Notizbuch als Buch: Reiter Aufzeichnungen, Personen, Fragen der Nacht. Neues ist markiert, bis man es gesehen hat.
+  let reiter = "lore";
+  const eintragTexte = (id) => {
+    const e = window.NOTIZBUCH[id];
+    const stufen = Array.isArray(e) ? [["", e[1]]] : e.stufen;
+    return { titel: Array.isArray(e) ? e[0] : e.titel, texte: stufen.filter(([b]) => bedingungGilt(b)).map(([, t]) => t) };
+  };
+  const schluesselFuer = (id) => `${id}:${eintragTexte(id).texte.length}`;
+  const personen = () => (window.PERSONEN ?? []).filter((p) => bedingungGilt(p.wenn)).map((p) => ({ name: p.name, text: p.stufen.find(([b]) => bedingungGilt(b))?.[1] ?? "" }));
+  const fragen = () => (window.FRAGEN ?? []).filter(([b]) => bedingungGilt(b)).map(([, t]) => t);
+  function alleSchluessel() {
+    if (!story) return [];
+    return [...notizen.map(schluesselFuer), ...personen().map((p) => `p:${p.name}:${p.text.length}`), ...fragen().map((f) => `f:${f}`)];
+  }
+  function neuMarkieren() {
+    const neu = alleSchluessel().some((k) => !gelesen.includes(k));
+    $("nb-neu").hidden = !neu;
+  }
+  function notizbuchFuellen() {
     const box = $("notizen");
     box.innerHTML = "";
-    if (!notizen.length) box.innerHTML = '<p class="leer">Noch leer. Yharnam wird es füllen.</p>';
-    for (const id of notizen) {
-      const e = window.NOTIZBUCH[id];
-      const titel = Array.isArray(e) ? e[0] : e.titel;
-      const stufen = Array.isArray(e) ? [["", e[1]]] : e.stufen;
-      const texte = stufen.filter(([b]) => bedingungGilt(b)).map(([, t]) => t);
-      if (!texte.length) continue;
+    for (const b of document.querySelectorAll("#notizbuch [data-reiter]")) b.setAttribute("aria-selected", String(b.dataset.reiter === reiter));
+    const artikel = (titel, texte, schluessel) => {
       const a = document.createElement("article");
+      if (!gelesen.includes(schluessel)) a.classList.add("neu");
       a.appendChild(document.createElement("h3")).textContent = titel;
       for (const t of texte) a.appendChild(document.createElement("p")).textContent = t;
       box.appendChild(a);
+    };
+    if (reiter === "lore") {
+      if (!notizen.length) box.innerHTML = '<p class="leer">Noch leer. Yharnam wird es füllen.</p>';
+      for (const id of notizen) {
+        const { titel, texte } = eintragTexte(id);
+        if (texte.length) artikel(titel, texte, schluesselFuer(id));
+      }
+    } else if (reiter === "personen") {
+      const liste = personen();
+      if (!liste.length) box.innerHTML = '<p class="leer">Noch niemand.</p>';
+      for (const p of liste) artikel(p.name, [p.text], `p:${p.name}:${p.text.length}`);
+    } else {
+      const liste = fragen();
+      const a = document.createElement("article");
+      const ul = document.createElement("ul");
+      ul.className = "fragen";
+      for (const f of liste) {
+        const li = document.createElement("li");
+        li.textContent = f;
+        if (!gelesen.includes(`f:${f}`)) li.classList.add("neu");
+        ul.appendChild(li);
+      }
+      a.appendChild(ul);
+      box.appendChild(a);
     }
-    $("notizbuch").showModal();
   }
+  function notizbuchZeigen() {
+    reiter = "lore";
+    notizbuchFuellen();
+    $("notizbuch").showModal();
+    K()?.notizbuch();
+  }
+  for (const b of document.querySelectorAll("#notizbuch [data-reiter]")) {
+    b.addEventListener("click", () => {
+      reiter = b.dataset.reiter;
+      notizbuchFuellen();
+    });
+  }
+  $("notizbuch").addEventListener("close", () => {
+    gelesen = [...new Set([...gelesen, ...alleSchluessel()])];
+    neuMarkieren();
+    speichern();
+  });
 
   // ------------------------------------------------------------ Geschichte laden (normal oder Testfassung)
   function skriptLaden(src) {
@@ -549,10 +693,12 @@
     $("fortsetzen").addEventListener("click", () => {
       story.state.LoadJson(gespeichert.state);
       notizen = gespeichert.notizen ?? [];
+      gelesen = gespeichert.gelesen ?? [];
+      letztesBild = gespeichert.bild ?? "";
       letzterPfad = gespeichert.pfad ?? "";
       document.body.dataset.stimmung = gespeichert.stimmung ?? "ruhig";
       for (const a of gespeichert.absaetze ?? []) {
-        const el = document.createElement(a.tag === "HR" ? "hr" : "p");
+        const el = document.createElement(a.tag === "HR" ? "hr" : a.tag === "DIV" ? "div" : "p");
         if (a.orig !== undefined) {
           el.textContent = a.orig;
           el.dataset.orig = a.orig;
@@ -569,6 +715,17 @@
       wahl.scrollIntoView({ block: "end" });
     });
     $("knopf-notizbuch").addEventListener("click", notizbuchZeigen);
+    const tonKnopf = $("knopf-ton");
+    const tonZeigen = () => {
+      const an = K()?.an() ?? false;
+      tonKnopf.setAttribute("aria-pressed", String(an));
+      tonKnopf.textContent = an ? "Ton an" : "Ton aus";
+    };
+    tonKnopf.addEventListener("click", () => {
+      K()?.umschalten();
+      tonZeigen();
+    });
+    tonZeigen();
     $("neu").addEventListener("click", neuBeginnen);
     // Probe ab einer Passage: ohne Titelbildschirm sofort hinein.
     if (AB) beginnen("Jäger");

@@ -7,15 +7,17 @@
 <div id="vignette" aria-hidden="true"></div>
 
   <header id="leiste" hidden>
-    <span title="Blutechos">Echos <b id="h-echos">0</b></span>
-    <span title="Einsicht">Einsicht <b id="h-einsicht">0</b></span>
-    <span title="Blutampulle">Ampulle <b id="h-ampulle">0</b></span>
-    <span title="Jägermarken" id="h-marken-wrap" hidden>Marken <b id="h-marken">0</b></span>
+    <span class="wert" id="w-echos" title="Blutechos"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="echo" d="M12 3c2.5 4 5 6.5 5 10a5 5 0 0 1-10 0c0-3.5 2.5-6 5-10z"/><path class="echo2" d="M5 9c1 1.6 2 2.6 2 4a2 2 0 0 1-4 0c0-1.4 1-2.4 2-4zM19 6c1 1.6 2 2.6 2 4a2 2 0 0 1-4 0c0-1.4 1-2.4 2-4z"/></svg><span class="unsichtbar">Echos</span> <b id="h-echos">0</b></span>
+    <span class="wert" id="w-einsicht" title="Einsicht" data-stufe="0"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="lid" d="M2 12c3-5 7-7 10-7s7 2 10 7c-3 5-7 7-10 7s-7-2-10-7z"/><g class="iris"><circle cx="12" cy="12" r="4.2"/><circle class="pupille" cx="12" cy="12" r="1.6"/></g></svg><span class="unsichtbar">Einsicht</span> <b id="h-einsicht">0</b></span>
+    <span class="wert" id="w-ampulle" title="Blutampulle" data-voll="0"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="glas" d="M9.5 2h5v3l3 4v11a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V9l3-4z"/><path class="blut" d="M7.5 12h9v8a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1z"/></svg><span class="unsichtbar">Ampulle</span> <b id="h-ampulle">0</b></span>
+    <span class="wert" title="Jägermarken" id="h-marken-wrap" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><circle class="marke" cx="12" cy="12" r="8"/><path class="marke-zeichen" d="M12 7v10M8.5 10l3.5-3 3.5 3"/></svg><span class="unsichtbar">Marken</span> <b id="h-marken">0</b></span>
     <span class="umbruch" aria-hidden="true"></span>
-    <button id="knopf-notizbuch" type="button">Notizbuch</button>
+    <button id="knopf-notizbuch" type="button">Notizbuch<span id="nb-neu" class="neu-punkt" hidden></span></button>
     <a id="link-baum" class="werkzeugknopf" href="https://claude.ai/artifact/NPHhjkNgsNCP2FrLbTGFUX" target="_blank" rel="noopener" title="Diese Stelle im Erzählbaum öffnen">Baum</a>
     <button type="button" class="werkzeugknopf" data-werkstatt-modus aria-pressed="false" title="Texte, Entscheidungen und Mechanik als Vorschlag ändern">✎ Bearbeiten</button>
+    <button type="button" id="knopf-ton" class="werkzeugknopf" aria-pressed="true" title="Ton an oder aus">Ton</button>
   </header>
+  <div id="ueberblende" aria-hidden="true"><p></p></div>
 
   <main id="buehne">
     <section id="titel">
@@ -39,6 +41,11 @@
 
   <dialog id="notizbuch">
     <h2>Notizbuch des Jägers</h2>
+    <nav class="reiter" role="tablist">
+      <button type="button" role="tab" data-reiter="lore" aria-selected="true">Aufzeichnungen</button>
+      <button type="button" role="tab" data-reiter="personen" aria-selected="false">Personen</button>
+      <button type="button" role="tab" data-reiter="fragen" aria-selected="false">Fragen der Nacht</button>
+    </nav>
     <div id="notizen"></div>
     <form method="dialog"><button>Schließen</button></form>
     <button id="neu" type="button" class="leise">Neu beginnen</button>
@@ -46,5 +53,6 @@
 
   <script src="ink.js"></script>
   <script src="notizbuch.js"></script>
+  <script src="klang.js"></script>
   <script src="werkstatt.js"></script>
   <script src="spiel.js"></script>

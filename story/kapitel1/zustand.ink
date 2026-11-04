@@ -1,11 +1,14 @@
 // KAPITEL 1: alle Merker. Was hier steht, prägt Kapitel 1 und spätere Kapitel.
 
+=== function kennt_gascoigne ===
+~ return q_frau == 1 or gascoigne2 or spieluhr
+
 // --- Wer du bist ------------------------------------------------------------
 VAR name = "Jäger"          // setzt die Oberfläche bei der Namenswahl
 VAR herkunft = ""           // adel, soldat, gelehrter, ueberlebender, kranker, gesuchter
 VAR grund = ""              // heilung_selbst, heilung_anderer, suche, schuld
 VAR haltung_vertrag = ""    // blind, wach, zoegernd
-VAR waffe = ""              // saege, axt, stock
+VAR waffe = ""              // saege (Entscheidung des Nutzers: keine Waffenwahl)
 VAR feuerwaffe = ""         // pistole, donnerbuechse
 
 // --- Gegenstände ----------------------------------------------------------------
@@ -65,3 +68,12 @@ VAR schuetze_verschont = false
 VAR maedchen_gesehen = false    // das rote Band am Fenster gesehen
 VAR bruecke_laterne = false
 VAR marke_benutzt = false
+VAR g_phase = 1               // Phase im Kampf gegen Gascoigne (überdauert keinen Tod, wird beim Betreten gesetzt)
+VAR bruecke_von = "oben"      // aus welcher Richtung man die Brücke betritt
+VAR eileen_genannt = false
+VAR gehrman_gesehen = false
+VAR gehrman_blut = false
+VAR gehrman_nacht = false
+VAR gehrman_jaeger = false
+VAR neu_gelernt = false
+VAR staerke = 0               // Stärkungen der Puppe gegen Echos (0 bis 2): je eine zusätzliche Möglichkeit in bestimmten Kämpfen
