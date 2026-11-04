@@ -4,6 +4,8 @@
 
 ## Als Figur
 
+**Überschrift in LK:** Adella, Nonne der Heilenden Kirche
+
 - **Wer:** Nonne der Kirche, nach der Nacht der Jagd von den **Snatchers** (Säckeschleppern) aus dem Kathedralenviertel ins Hypogean Gaol im Unsichtbaren Dorf verschleppt. Die Entführungen gehören zum Mensis-Ritual (Notiz, sinngemäß: Wahnsinnige führen heimlich Rituale aus, um den Mond herbeizurufen).
 - **Quest:** Man trifft sie nur, wenn man nach dem Blood-Starved Beast von einem Snatcher verschleppt wird. Sie flüstert verängstigt Bitten an die Kirche, sie von diesem Albtraum zu befreien, und beruhigt sich nur, wenn der Spieler eine Brustrüstung der Kirche trägt (Schwarze/Weiße Kirche, Gascoigne, Chor, Gräberforscher, Henker). Dann fragt sie nach einem sicheren Ort: **Oedon-Kapelle** oder **Iosefkas Klinik**.
 - **Kapelle (gut):** Sie bietet ihr Blut an (**Blood of Adella**) und lehrt die „Church Bow (Female)“. Wer jedoch mehrfach (mehr als dreimal) **Ariannas Blut** nimmt, löst Eifersucht aus: Adella tötet Arianna, verfällt später dem Wahnsinn und greift den Spieler als „unrein“ an.

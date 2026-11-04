@@ -4,6 +4,8 @@
 
 ## Als Boss
 
+**Überschrift in LK:** 6.1.15 Mergos Amme (Mergo's Wet Nurse) – verpflichtend (Einsicht: Fund / Sieg)
+
 **Rolle:** Das Wesen im Albtraum, das Mergos Kinderwagen bewacht. Sie hat vier Armpaare, ähnelt der Amygdala und kämpft mit Klingen, die dem Bestattungsklinge (Burial Blade) ähneln. Das Siderit der Klinge „fiel vom Himmel"; sie könnte die Klinge fallen gelassen haben. **[Theorie]**
 **Lore:**
 - Der „Albtraum", den man erschlägt, ist eigentlich Mergo (oder die Albtraum-Verbindung zu ihm); die Amme ist nur die Wächterin. Die lange Pause nach ihrem Tod, bis das Schreien des Babys aufhört, bevor „Nightmare Slain" erscheint, stützt das.

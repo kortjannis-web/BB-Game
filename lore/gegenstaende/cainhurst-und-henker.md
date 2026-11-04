@@ -2,7 +2,11 @@
 
 > Quelle: `quellen/lore-komplett.md` (LK), Abschnitte LK 4. Wichtig für Kapitel: ab 3. Kennzeichnung der Quelle: ohne Zusatz = im Spiel belegt, **[Theorie]** = Deutung, *sinngemäß* = Inhalt, nicht Wortlaut. Für das Spiel gilt: [Theorie] nie als Tatsache erzählen. Wurzel und Lesepfade: `lore/README.md`.
 
+**Arianna's Shoes** (Rüstung) – Schuhe von Arianna, der Frau aus dem Kathedralenviertel. Sie wirken unschuldig und niedlich, ganz anders als ihre Besitzerin.
+
 **Blood Dreg** (Verbrauchsgut) – Die Vilebloods von Cainhurst sehen diese schrecklichen Dinger im kalten Blut. Oft finden sie sich im Blut von „Echo-Fiends“, also im Blut von Jägern. Königin Annalise nimmt solche Opfergaben an, um eines Tages das Kind des Bluts, den nächsten Vileblood-Erben, zu gebären. Verbrauch erhöht den Insight um 1.
+
+**Blood of Arianna** (Verbrauchsgut) – Blut von Arianna, der Frau aus dem Kathedralenviertel. Es heilt und beschleunigt kurz die Ausdauererholung. Wer das alte Wissen der Kirche kennt, merkt, dass es genau dem gleicht, was einst verboten war.
 
 **Cainhurst Armor / Cainhurst Set** (Rüstung) – Silberne Rüstung der Garde von Königin Annalise auf Burg Cainhurst. Sie ist papierdünn und soll Blut mit böser Absicht abwehren, damit die Wächter Beute für ihre geliebte Königin fangen können – damit sie eines Tages das Kind des Bluts gebären kann.
 
@@ -25,6 +29,8 @@
 **Logarius' Wheel** (Waffe) – Waffe der Henkerbande von Märtyrer Logarius, mit der die Vilebloods in Cainhurst abgeschlachtet wurden. In Pfützen ihres Bluts gebadet und für immer von ihrem Zorn durchtränkt. Beim Verwandeln entfaltet sie ihre Kraft und lässt ihren Zorn in strahlender Pracht erscheinen.
 
 **Noble Dress** (Kleidung) – Fein geschneidertes bordeauxrotes Kleid, getragen von den Adligen der alten Blutlinie, die auf die verlassene Burg Cainhurst zurückgeht.
+
+**Numbing Mist** (Wurfgegenstand) – Erzeugt eine Nebelwolke, die die Lebensessenz betäubt und die Heilung verhindert. Soll von den Bluthäschern Cainhursts genutzt werden; das Rezept hütet die Adelslinie des Schlosses als Geheimnis.
 
 **Queenly Flesh** (Schlüsselitem) – Was von Annalise, der Blutkönigin von Cainhurst, übrig ist. Der rosa Fleischklumpen ist warm, wie verflucht. Hoch lebe die unsterbliche Blutkönigin! Wird am Altar der Verzweiflung zur Wiederbelebung Annalises verwendet.
 

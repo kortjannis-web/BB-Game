@@ -4,6 +4,8 @@
 
 ## Als Boss
 
+**Überschrift in LK:** 6.1.12 Amygdala – optional (Insight 3 / 3) (Einsicht: Fund / Sieg)
+
 **Rolle:** Eine Große im Albtraum-Grenzland (Nightmare Frontier), von der die Kleinen Amygdalae (Lesser Amygdala) als „Kinder" abhängen. Der Weg führt über den **Tonsillenstein** (Tonsil Stone) von vier NPCs nach Einbruch der Nacht und die Entführung durch die Kleine Amygdala.
 **Lore:** Laut Lore.txt gelang es Micolash und der Schule von Mensis, die Amygdala und ihre kleineren Formen zu beschwören. Im Blutmond werden die Kinder der Amygdala sichtbar.
 **Namens-Hinweis:** Das lateinische/griechische Wort für „Mandel"; so heißt auch der Gehirnbereich der Furchtreaktion. Das passt zur Gehirn-Thematik von Mensis (siehe 2.7).

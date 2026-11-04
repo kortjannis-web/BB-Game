@@ -27,6 +27,7 @@
 - *Werkstatt-Nabelschnur:* Die dritte Nabelschnur führte zur Begegnung mit dem blassen Mond, der die Jäger rief und den Jägertraum zeugte.
 - *Ariannas Nabelschnur:* Auch Oedon, das formlose Große Wesen, verliert sein Kind und sucht Ersatz. Verdorbenes Blut löste diese eldritch Liaison aus.
 - *Iosefkas Nabelschnur:* Propst Willem suchte die Schnur, um sein Wesen und Denken auf die Höhe eines Großen Wesens zu heben, indem er sein Gehirn mit Augen auskleidete. Das war, wie er wusste, die einzige Möglichkeit, dass der Mensch ihrer Größe je gleichkommt.
+Drei Nabelschnüre zu verbrauchen schaltet ein neues Ende und einen Bosskampf frei (+3 Insight).
 
 **Orphanage Key** (Schlüsselitem) – Schlüssel zum Waisenhaus, dem Geburtsort des Chors. Das Waisenhaus lag im Schatten der Großen Kathedrale und war ein Ort der Gelehrsamkeit und des Experimentierens, an dem junge Waisen zu mächtigen unsichtbaren Denkern für die Heilende Kirche gemacht wurden. Der Chor, der die Kirche später spalten sollte, entstand im Waisenhaus.
 

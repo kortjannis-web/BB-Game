@@ -4,7 +4,8 @@ Vor jeder Arbeit an Kapitel 1 lesen: `lore/kern.md`, dann dieses Paket, dann nur
 
 ## Zeit und Weltzustand
 - Mondphase **Abend** (LK 9.7): Iosefka gibt durch die Tür Blutampullen, die Überlebenden sitzen hinter verriegelten Türen. Der Sonnenuntergang beginnt erst nach Gascoigne beim Betreten der Oedon-Kapelle, also nach Kapitel 1.
-- Einsicht: In Kapitel 1 meist 1 bis 4. Die Puppe erwacht bei 1. Bad der Boten für Einsicht ab 1. `welt/mechanik-und-welt.md`
+- Einsicht im Kanon nach ganz gespieltem Kapitel 1 etwa 6 bis 8: Kleriker-Bestie Fund 1 / Sieg 3, Gascoigne 1 / 1 / 2 (PRÜFEN: drei Werte passen nicht zur Legende Fund / Sieg), abzüglich der Glocke für die Beschwörung Gascoignes (RK1 §8). Die Puppe erwacht bei 1, das Bad der Boten für Einsicht öffnet bei 1. `welt/mechanik-und-welt.md`
+- [ERWEITERT, unser Spiel] Höchstens 4 Einsicht in Kapitel 1 (Anblick und Sieg je Boss), damit die Treppe des Grauens langsam steigt.
 - [ERWEITERT, unser Spiel] Die Sonne, die nicht untergeht.
 
 ## Orte (je Szene nur die eine Datei)
@@ -13,7 +14,7 @@ Vor jeder Arbeit an Kapitel 1 lesen: `lore/kern.md`, dann dieses Paket, dann nur
 | Prolog, Klinik, Erwachen | `orte/iosefkas-klinik.md` | RK1 §1 |
 | Jägertraum | `orte/jaegertraum.md` | RK1 §2 |
 | Zentral-Yharnam, Brücke, Kanalisation | `orte/zentral-yharnam.md` | RK1 §4, §7, §8, §13 |
-| Grab des Oedon | `orte/oedon-grab-und-kapelle.md` (nur der Grab-Teil) | RK1 §9, §10 |
+| Grab des Oedon | `orte/oedon-grab-und-kapelle.md` (nur der Grab-Teil; **den Zettel zur Spinne von Byrgenwerth nicht verwenden**, Wissenssperre und PRÜFEN) | RK1 §9, §10 |
 
 ## Figuren
 | Figur | Datei | Was davon in Kapitel 1 gilt |
@@ -23,10 +24,10 @@ Vor jeder Arbeit an Kapitel 1 lesen: `lore/kern.md`, dann dieses Paket, dann nur
 | Gehrman | `figuren/gehrman.md` | Nur der frühe Dialog (Zuflucht, nicht zu viel nachdenken, jagen). Alles ab „Nach Gascoigne“ nicht. RK1 §2 |
 | Die Puppe | `figuren/puppe.md` | Erwachen bei Einsicht 1, erste Worte, die Boten als „die Kleinen“. Fragen nach Liebe und Göttern erst später. |
 | Die Boten | `figuren/boten.md` | Händler, kleine graue Wesen. Deutung als Kin nie aussprechen. |
-| Gilbert | `figuren/gilbert.md` | Kranker Fremder, Blut kaufte ihm Zeit, kennt bleiches Blut nicht, verweist auf die Kirche. Flammenwerfer und Verzweiflung im Kanon erst ab Sonnenuntergang. RK1 §5 |
-| Eileen | `figuren/eileen.md` | Nur das erste Treffen (Jägermarken, Warnung, Jäger der Jäger). Henryk-Auftrag ist Kapitel 2. RK1 §12 |
+| Gilbert | `figuren/gilbert.md` | Kranker Fremder, kennt bleiches Blut nicht, verweist auf die Kirche, nennt zuerst die Große Brücke als Weg (RK1 §5, sicher), den Aquädukt erst später. Im Kanon erst ab Sonnenuntergang: Flammenwerfer, der Satz, das Blut habe ihm Zeit gekauft, die Verzweiflung. Bei uns kommen Flammenwerfer und Satz früher: [ERWEITERT]. |
+| Eileen | `figuren/eileen.md` | Nur das erste Treffen (Jägermarken, Warnung, Jäger der Jäger), auf den Dachbalken über dem Kanaleingang (RK1 §7, §12, sicher; LK sagt „Seitenraum der Kanalisation“). Henryk-Auftrag ist Kapitel 2. |
 | Vater Gascoigne | `figuren/gascoigne.md` | Ganz (Figur und Boss). RK1 §11 |
-| Viola, das Mädchen, die ältere Schwester | fehlt in LK → RK1 §6 | Spieluhr, Brosche, rote Schleife, Schwein. |
+| Viola und das Mädchen | Gegenstände in `gegenstaende/yharnam-und-blut.md` (Spieluhr, Brosche), Questablauf nur in RK1 §6 | Spieluhr, Brosche, rote Schleife, Schwein. Die ältere Schwester erscheint im Kanon erst ab Blutmond (RK1 §6), also nicht in Kapitel 1. |
 | Henryk | `figuren/henryk.md` | Nur als Name oder Gerücht (Gascoignes alter Partner). |
 | Die einsame alte Frau | `figuren/einsame-alte-frau.md` | Hinter ihrer Tür, Fremdenhass. Die Kapelle gibt es erst ab Kapitel 2. |
 
@@ -42,8 +43,8 @@ Vor jeder Arbeit an Kapitel 1 lesen: `lore/kern.md`, dann dieses Paket, dann nur
 | Gegenstand | Datei |
 |---|---|
 | Blutampulle, Iosefkas Blutampulle, Spieluhr, rote Brosche, Gegengift | `gegenstaende/yharnam-und-blut.md` |
-| Sägespalter, Jägerkleidung, Molotow, Fackel, Feuerpapier, Jägermarke, Wurfmesser, Krähenfedern und Krähenjäger-Abzeichen, Gascoignes und Henryks Kleidung | `gegenstaende/jaeger-und-werkstatt.md` |
-| Flammenwerfer, Abzeichen der Schwertjäger (Beute der Kleriker-Bestie), Emblem des Jägerhauptmanns, Schlüssel zum Grab des Oedon, Kleidung der Kirchenjäger | `gegenstaende/heilende-kirche.md` |
+| Sägespalter, Jägeraxt (Gascoignes Waffe), Jägerkleidung, Molotow, Fackel, Feuerpapier, Jägermarke, Wurfmesser, Eileens Krähenfedern, Gascoignes und Henryks Kleidung (das Krähenjäger-Abzeichen erst am Ende von Eileens Quest, nur als Wissen über sie) | `gegenstaende/jaeger-und-werkstatt.md` |
+| Flammenwerfer, Abzeichen der Schwertjäger (Beute der Kleriker-Bestie, zugleich Beleg für das Ludwig-Gerücht), Kleidung der Yharnam-Jäger (Ludwigs Anwerbung), Emblem des Jägerhauptmanns, Schlüssel zum Grab des Oedon, Kleidung der Kirchenjäger | `gegenstaende/heilende-kirche.md`; für Ludwig nur dazu `fraktionen/jaeger.md` (2.9), nicht `figuren/ludwig.md` (DLC) |
 | Pistole, Donnerbüchse | **Lücke in LK**, siehe `offen.md` |
 
 ## Wissenssperre Kapitel 1
@@ -53,6 +54,6 @@ Vor jeder Arbeit an Kapitel 1 lesen: `lore/kern.md`, dann dieses Paket, dann nur
 
 ## Bekannte Abweichungen unseres Kapitels 1 vom Kanon (bewusst oder zu prüfen)
 - [ERWEITERT, bewusst] Gilbert gibt den Flammenwerfer schon in Kapitel 1; im Kanon erst ab Sonnenuntergang (LK 5.1, 9.7).
-- **Zu prüfen:** Gilbert sagt bei uns, zur Kathedrale gehe es „nur über die große Brücke“. LK 5.1: Er nennt den Weg über das Aquädukt, weil die Brücke in Jagdnächten geschlossen ist. Unser Text sollte das aufnehmen.
-- [ERWEITERT, bewusst] Eileens erstes Treffen auf den Dachbalken über dem Kanaleingang; im Kanon in einem Seitenraum der Kanalisation.
+- Gilbert nennt bei uns die große Brücke als Weg: Kanon nach RK1 §5 (sicher); den Aquädukt nennt er erst später (LK 5.1). Kein Fehler.
+- Eileens erstes Treffen auf den Dachbalken: Kanon nach RK1 (sicher); LK weicht ab (`offen.md`, E1).
 - **Zu prüfen:** LK 6.1.2 sagt, Gascoignes Kleidung erwähne zwei Töchter; der Eintrag zur Kleidung selbst (LK 4) nennt keine. Ältere Schwester und Mädchen siehe RK1 §6.

@@ -60,6 +60,10 @@ haenge("fraktionen/buende.md", null, text(finde("5.2 ")), "LK 5.2");
 // ---------- Handlung, Enden, Zeitlinie, Mechanik, Deutungen
 lege("welt/spielablauf.md", "Die Handlung des Spiels in Kurzform", "alle (Planung, nie dem Spieler vorwegnehmen)");
 haenge("welt/spielablauf.md", null, text(finde("3. Die Handlung")), "LK 3");
+haenge("welt/spielablauf.md", "Zeitfenster der Figuren", text(finde("5. NPCs")).split("\n## ")[0], "LK 5");
+lege("welt/kennzeichnung-der-quelle.md", "Einleitung, Methode und Grenzen der Quelle LK", "alle");
+haenge("welt/kennzeichnung-der-quelle.md", null, text(finde("1. Einleitung")), "LK 1");
+haenge("welt/kennzeichnung-der-quelle.md", "Quellen und Methode", text(finde("16. Quellen")), "LK 16");
 lege("welt/enden.md", "Die drei Enden", "6 (Planung)");
 haenge("welt/enden.md", null, text(finde("8. Die drei Enden")), "LK 8");
 lege("welt/zeitlinie.md", "Zeitlinie (Rekonstruktionen)", "alle (Planung)");
@@ -111,7 +115,7 @@ for (const a of abschnitte.filter((b) => b.ebene === 3 && b.von > npcBlock.von &
   if (!key) throw new Error(`NPC ohne Datei: ${a.titel}`);
   const [pfad, titel, kap] = NPC_DATEI[key];
   lege(pfad, titel, kap);
-  haenge(pfad, "Als Figur", text(a), "LK 5.1");
+  haenge(pfad, "Als Figur", `**Überschrift in LK:** ${a.titel}\n\n` + text(a), "LK 5.1");
 }
 
 const BOSS_DATEI = {
@@ -142,9 +146,10 @@ const BOSS_DATEI = {
 for (const [an, [pfad, titel, kap]] of Object.entries(BOSS_DATEI)) {
   const a = finde(an);
   lege(pfad, titel ?? a.titel, kap);
-  haenge(pfad, "Als Boss", text(a), quelleVon(a));
+  haenge(pfad, "Als Boss", `**Überschrift in LK:** ${a.titel} (Einsicht: Fund / Sieg)\n\n` + text(a), quelleVon(a));
 }
 lege("bosse/README.md", "Bosse: Überblick und Weltveränderungen", "alle");
+haenge("bosse/README.md", "Lesehinweis", text(finde("6. Bosse")).split("\n---")[0], "LK 6");
 haenge("bosse/README.md", "Weitere Bosse und Kelch-Bosse", text(finde("6.3 ")), "LK 6.3");
 haenge("bosse/README.md", "Welche Bosse verändern die Welt", text(finde("6.4 ")), "LK 6.4");
 
@@ -180,17 +185,18 @@ for (const [an, [pfad, titel, kap]] of Object.entries(ORT_DATEI)) {
 
 // ---------- Gegenstände: nach Thema statt Alphabet
 const GRUPPEN = {
-  "gegenstaende/yharnam-und-blut.md": ["Yharnam, Blut und Alltag der Stadt", "1, 2", ["Antidote", "Blood Vial", "Iosefka's Blood Vial", "Tiny Music Box", "Red Jeweled Brooch", "Sedative", "Blue Elixir", "Beast Blood Pellet", "Numbing Mist"]],
-  "gegenstaende/jaeger-und-werkstatt.md": ["Jäger und Werkstatt: Waffen, Kleidung, Werkzeuge", "1, 2", ["Saw Cleaver", "Hunter Axe", "Hunter Set", "Gehrman's Hunter Set / Cap", "Burial Blade", "Old Hunter Badge", "Old Hunter Bone", "Molotov Cocktail", "Torch", "Hunter's Torch", "Fire Paper", "Bolt Paper", "Tonitrus / Tiny Tonitrus", "Spark Hunter Badge", "Charred Hunter Set", "Blade of Mercy", "Crow Hunter Badge", "Crowfeather Set", "Hunter's Mark", "Throwing Knife", "Henryk's Hunter Set", "Gascoigne's Set", "Powder Keg Hunter Badge", "Stake Driver", "Cannon", "Gatling Gun", "Grey Wolf Cap", "Beast Claw", "Beast Roar", "Blood Gem Workshop Tool", "Workshop Haze Extractor", "Rune Workshop Tool"]],
+  "gegenstaende/yharnam-und-blut.md": ["Yharnam, Blut und Alltag der Stadt", "1, 2", ["Antidote", "Blood Vial", "Iosefka's Blood Vial", "Tiny Music Box", "Red Jeweled Brooch", "Sedative", "Beast Blood Pellet"]],
+  "gegenstaende/jaeger-und-werkstatt.md": ["Jäger und Werkstatt: Waffen, Kleidung, Werkzeuge", "1, 2", ["Saw Cleaver", "Hunter Axe", "Hunter Set", "Gehrman's Hunter Set / Cap", "Burial Blade", "Old Hunter Badge", "Old Hunter Bone", "Molotov Cocktail", "Torch", "Hunter's Torch", "Fire Paper", "Bolt Paper", "Tonitrus / Tiny Tonitrus", "Spark Hunter Badge", "Charred Hunter Set", "Blade of Mercy", "Crow Hunter Badge", "Crowfeather Set", "Hunter's Mark", "Throwing Knife", "Henryk's Hunter Set", "Gascoigne's Set", "Powder Keg Hunter Badge", "Stake Driver", "Cannon", "Gatling Gun", "Grey Wolf Cap", "Beast Claw", "Beast Roar", "Blood Gem Workshop Tool", "Workshop Haze Extractor"]],
   "gegenstaende/jaegertraum.md": ["Jägertraum: Puppe und Boten", "alle", ["Doll Set", "Small Hair Ornament", "Tear Stone / Tear Blood Gem", "Messenger's Gift", "Notebook"]],
-  "gegenstaende/heilende-kirche.md": ["Heilende Kirche: Kirchenjäger, Ärzte, Vikare, Gräberforscher", "1, 2", ["Black Church Set", "White Church Set", "Kirkhammer", "Ludwig's Holy Blade", "Ludwig's Rifle", "Holy Moonlight Sword", "Sword Hunter Badge", "Radiant Sword Hunter Badge", "Yharnam Hunter Set", "Harrowed Set", "Poison Knife", "Flamesprayer", "Hunter Chief Emblem", "Oedon Tomb Key", "Gold Blood Gem / Gold Pendant", "Laurence's Skull", "Blood of Adella", "Blood of Arianna", "Arianna's Shoes", "Tomb Prospector Set", "Madman Set", "Madman's Knowledge"]],
+  "gegenstaende/heilende-kirche.md": ["Heilende Kirche: Kirchenjäger, Ärzte, Vikare, Gräberforscher", "1, 2", ["Black Church Set", "White Church Set", "Kirkhammer", "Ludwig's Holy Blade", "Ludwig's Rifle", "Holy Moonlight Sword", "Sword Hunter Badge", "Radiant Sword Hunter Badge", "Yharnam Hunter Set", "Harrowed Set", "Poison Knife", "Flamesprayer", "Hunter Chief Emblem", "Oedon Tomb Key", "Gold Blood Gem / Gold Pendant", "Blood of Adella", "Blue Elixir", "Tomb Prospector Set", "Madman Set", "Madman's Knowledge"]],
   "gegenstaende/chor-und-kosmos.md": ["Chor und Kosmos", "spät", ["A Call Beyond", "Augur of Ebrietas", "Blindfold Cap / Choir Set", "Choir Bell", "Cosmic Eye Watcher Badge", "Rosmarinus", "Orphanage Key", "Upper Cathedral Key", "Empty Phantasm Shell", "Great One's Wisdom", "Great One Coldblood", "Kin Coldblood", "Frenzied Coldblood", "One Third of Umbilical Cord (Nabelschnur)", "Tonsil Stone"]],
   "gegenstaende/byrgenwerth-und-mensis.md": ["Byrgenwerth und Mensis", "3 bis 5", ["Student Set / Student Uniform", "Graveguard Set", "Lunarium Key", "Mensis Cage", "Yahar'gul Set", "Lecture Theatre Key", "Iron Door Key", "Living String"]],
-  "gegenstaende/caryll-runen.md": ["Caryll-Runen", "ab 2", ["Caryll Runes", "Anti-clockwise Metamorphosis", "Arcane Lake", "Beast", "Beast's Embrace", "Blood Rapture", "Communion", "Corruption", "Eye", "Formless Oedon", "Heir", "Hunter (Caryll-Rune)", "Milkweed", "Moon", "Oedon Writhe", "Radiance"]],
-  "gegenstaende/cainhurst-und-henker.md": ["Cainhurst und die Henker", "ab 3", ["Blood Dreg", "Cainhurst Armor / Cainhurst Set", "Cainhurst Badge", "Cainhurst Summons", "Unopened Summons", "Chikage", "Evelyn", "Reiterpallasch", "Knight's Set", "Noble Dress", "Crown of Illusions", "Queenly Flesh", "Vileblood Register", "Executioner's Gloves", "Executioner Set", "Logarius' Wheel", "Wheel Hunter Badge"]],
+  "gegenstaende/caryll-runen.md": ["Caryll-Runen", "ab 2", ["Caryll Runes", "Rune Workshop Tool", "Anti-clockwise Metamorphosis", "Arcane Lake", "Beast", "Beast's Embrace", "Blood Rapture", "Communion", "Corruption", "Eye", "Formless Oedon", "Heir", "Hunter (Caryll-Rune)", "Milkweed", "Moon", "Oedon Writhe", "Radiance"]],
+  "gegenstaende/cainhurst-und-henker.md": ["Cainhurst und die Henker", "ab 3", ["Blood Dreg", "Blood of Arianna", "Arianna's Shoes", "Numbing Mist", "Cainhurst Armor / Cainhurst Set", "Cainhurst Badge", "Cainhurst Summons", "Unopened Summons", "Chikage", "Evelyn", "Reiterpallasch", "Knight's Set", "Noble Dress", "Crown of Illusions", "Queenly Flesh", "Vileblood Register", "Executioner's Gloves", "Executioner Set", "Logarius' Wheel", "Wheel Hunter Badge"]],
   "gegenstaende/labyrinth-und-kelche.md": ["Labyrinth, Pthumerer und Kelche", "ab 4", ["Ailing Loran Chalice", "Ailing Loran Root Chalice", "Bastard of Loran", "Defiled Chalice", "Great Isz Chalice / Isz Chalice", "Isz Root Chalice", "Great Pthumeru Ihyll Chalice", "Hintertomb Chalice", "Pthumeru Chalice", "Pthumeru Root Chalice", "Pthumeru Ihyll Root Chalice", "Inflicted Organ", "Pearl Slug", "Red Jelly", "Sage's Hair / Sage's Wrist", "Shaman Bone Blade", "Yharnam Stone", "Bone Ash Set"]],
-  "gegenstaende/dlc-albtraum.md": ["Albtraum der Jäger (DLC)", "DLC", ["Amygdalan Arm", "Kos Parasite", "Rakuyo", "Maria Hunter Set"]],
+  "gegenstaende/dlc-albtraum.md": ["Albtraum der Jäger (DLC)", "DLC", ["Amygdalan Arm", "Kos Parasite", "Rakuyo", "Maria Hunter Set", "Laurence's Skull"]],
 };
+const DLC = new Set(["Cannon", "Gatling Gun", "Beast Claw", "Beast Roar", "Old Hunter Bone", "Bone Ash Set", "Anti-clockwise Metamorphosis", "Milkweed", "Laurence's Skull", "Amygdalan Arm", "Kos Parasite", "Rakuyo", "Maria Hunter Set"]);
 const itemZuGruppe = new Map();
 for (const [pfad, [titel, kap, namen]] of Object.entries(GRUPPEN)) {
   lege(pfad, titel, kap);
@@ -209,8 +215,8 @@ for (let i = itemBlock.von + 1; i < itemBlock.bis; i++) {
     if (!pfad) lege("gegenstaende/sonstige.md", "Sonstige Gegenstände", "–");
     haenge(aktuell.pfad, null, null, "LK 4");
     dateien.get(aktuell.pfad).teile.at(-1).ref = aktuell;
-  } else if (aktuell && z.startsWith("- ") ) aktuell.zeilen.push(z);
-  else if (!z.trim() || z.startsWith("#") || z.startsWith(">") || z.startsWith("---")) aktuell = z.trim() ? null : aktuell;
+  } else if (aktuell && z.trim() && !z.startsWith("#") && !z.startsWith(">") && !z.startsWith("---")) aktuell.zeilen.push(z);
+  else if (z.startsWith("#") || z.startsWith("---")) aktuell = null;
 }
 
 // ---------- Schreiben
@@ -218,11 +224,15 @@ let anzahl = 0;
 for (const [pfad, d] of dateien) {
   const kopf = [`# ${d.titel}`, "", `> Quelle: \`quellen/lore-komplett.md\` (LK), Abschnitte ${[...new Set(d.teile.map((t) => t.quelle))].join(", ")}. Wichtig für Kapitel: ${d.kapitel}. Kennzeichnung der Quelle: ohne Zusatz = im Spiel belegt, **[Theorie]** = Deutung, *sinngemäß* = Inhalt, nicht Wortlaut. Für das Spiel gilt: [Theorie] nie als Tatsache erzählen. Wurzel und Lesepfade: \`lore/README.md\`.`, ""];
   const koerper = d.teile.map((t) => {
-    if (t.ref) return t.ref.zeilen.join("\n");
+    if (t.ref) {
+      const name = t.ref.zeilen[0].match(/^\*\*([^*]+)\*\*/)[1];
+      const dlc = DLC.has(name) && !/DLC/.test(t.ref.zeilen[0]) ? " *(DLC)*" : "";
+      return t.ref.zeilen.join("\n") + dlc;
+    }
     return (t.abschnittTitel ? `## ${t.abschnittTitel}\n\n` : "") + t.inhalt;
   });
   const ziel = join(WURZEL, process.argv.includes("--neu") ? "lore-neu" : "lore", pfad);
-  if (!process.argv.includes("--neu") && existsSync(ziel) && !process.argv.includes("--erstmals")) continue;
+  if (!process.argv.includes("--neu") && existsSync(ziel)) continue;
   mkdirSync(dirname(ziel), { recursive: true });
   writeFileSync(ziel, kopf.join("\n") + "\n" + koerper.join("\n\n") + "\n");
   anzahl++;

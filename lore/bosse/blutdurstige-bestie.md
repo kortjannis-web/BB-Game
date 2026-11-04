@@ -4,6 +4,8 @@
 
 ## Als Boss
 
+**Überschrift in LK:** 6.1.4 Blutdurstige Bestie (Blood-Starved Beast) – optional (Insight 1 / 3) (Einsicht: Fund / Sieg)
+
 **Rolle:** Eine skelettierte Bestie mit abgezogener Haut am Rücken, im Altarraum einer Kirche am Grund von Alt-Yharnam. Sie ist vergiftet und giftig; das passt zur Lore der Seuche: In Alt-Yharnam hat sich die Krankheit mit den Bluttherapien verbreitet, und die Betroffenen wurden zu giftigen Bestien. Die Stadt wurde versiegelt, und Zentral-Yharnam samt Großer Kathedrale wurde neu errichtet. Hier entstanden vermutlich die ersten Jäger im heutigen Sinn.
 **Umgebung (wichtig für die Lore):**
 - In der Kirche hängt eine gekreuzigte Blutdurstige Bestie in der Mitte des Raums; die Bestienpatienten darunter bilden einen Kreis und singen.

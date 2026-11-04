@@ -4,6 +4,8 @@
 
 ## Als Boss
 
+**Überschrift in LK:** 6.1.11 Dunkelbestie Paarl (Darkbeast Paarl) – optional (Insight 1 / 3) (Einsicht: Fund / Sieg)
+
 **Rolle:** Eine alte, knochige Bestie in blauen Blitzen, im „Friedhof der Dunkelbestie" bei Alt-Yharnam, erreichbar über die Zellen von Yahar'gul oder das Hypogeäische Gefängnis. Der Name stammt wohl vom afrikaans/niederländischen Wort für „Perle". Das Spiel nennt sie uralt, womöglich ein Nachkomme der Stadt der Bestienseuche.
 **Hinweise:**
 - Archibald fand Gefallen an den Funken der Dunkelbestie und schuf Tonitrus und Bolt Paper, um sie nachzubilden.

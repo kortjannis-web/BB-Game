@@ -12,6 +12,8 @@ Stand 2026-11-04, nach dem Einarbeiten von LK. Zwei Arten: **Lücken** (das Spie
 | A5 | **Frühe Dialoge von Gehrman und der Puppe** vollständig (vor Gascoigne), sinngemäß | Der Traum ist in jedem Kapitel; die Stimmen müssen sitzen | Fextralife „Gehrman, the First Hunter“ und „Plain Doll“ (Abschnitt Dialogue) |
 | A6 | **Feuerwaffen** Pistole und Donnerbüchse (Beschreibung), Startwaffen außer Säge und Axt | Die Feuerwaffe ist im Spiel wählbar | Fextralife „Hunter Pistol“, „Hunter Blunderbuss“ |
 | A7 | **Widerspruch in LK:** Abschnitt 6.1.2 sagt, Gascoignes Kleidung erwähne zwei Töchter; der Eintrag zur Kleidung (Abschnitt 4) nennt keine | Gascoignes Familie ist der Kern von Kapitel 1 | Fextralife „Gascoigne's Set“ (Beschreibung von Mantel, Hut, Handschuhen, Hose) |
+| A9 | **Kampfwissen für erzählte Kämpfe:** Bewegungen, Phasen und Schwächen der Kleriker-Bestie und Gascoignes (LK lässt Taktik bewusst weg; RK1 meldet widersprüchliche Phasenschwellen) | Ohne echte Bewegungen keine echten Anzeichen | Fextralife „Cleric Beast“, „Father Gascoigne“ (Abschnitte Strategy, Attacks), oder ein Video des Kampfes als Beschreibung |
+| A10 | **Verbrauchsgüter und Werkzeuge ohne Eintrag in LK:** Quecksilberkugeln, Kiesel, Blutcocktail (Ablenken bei der Kleriker-Bestie), Old Hunter Bell und Beckoning Bell (Gascoignes Beschwörung), Handlaterne, die Rune Clawmark (Gilberts Ende) | Werkzeuge, die in unseren Kämpfen vorkommen | Fextralife je Gegenstand |
 | A8 | **Architektur, Kleidung, Licht, Geräusche** der Stadt (wie sieht eine Straße in Yharnam aus, was hängt an den Türen, wie klingen die Glocken) | Atmosphäre braucht genaue Dinge | Artbook „Bloodborne Official Artworks“ (Fotos der Textseiten), oder Screenshots, die du magst |
 
 ## B Lücken für Kapitel 2
@@ -21,6 +23,8 @@ Stand 2026-11-04, nach dem Einarbeiten von LK. Zwei Arten: **Lücken** (das Spie
 | B2 | Notizen im Kathedralbezirk vollständig, Inschriften in der Großen Kathedrale | Fextralife „Cathedral Ward“, „Notes“ |
 | B3 | Gegner des Kathedralbezirks (Kirchendiener, Kirchenriesen, Wandernder Wahnsinn, Entführer) | Fextralife „Enemies“ |
 | B4 | Amelias Gebet sinngemäß vollständig, ihre Kampfphasen | Fextralife „Vicar Amelia“ |
+| B5 | Dialoge von Alfred, Djura, Eileen (zweites Treffen, Henryk), dem späteren Gilbert, Gehrman und der Puppe zur Mitte des Spiels | Fextralife je Figur, Dialogue |
+| B6 | Der Kampf gegen Henryk; Notizen in Alt-Yharnam und der Kirchenwerkstatt vollständig; Geschichte der Kirchenjäger unter Ludwig | Fextralife „Henryk“, „Old Yharnam“, „Healing Church Workshop“ |
 
 ## C Lücken allgemein
 - **Japanische Originaltexte** neben der englischen Übersetzung (verschiebt manche Bedeutung). Lieferbar als Download der Tabelle mit japanischen und englischen Texten (Google Sheets, „Datei“, „Herunterladen“, .xlsx).
@@ -30,7 +34,7 @@ Stand 2026-11-04, nach dem Einarbeiten von LK. Zwei Arten: **Lücken** (das Spie
 
 ## D Offen im Spiel selbst (bleibt offen, nie auflösen)
 Aus LK 15, ergänzt:
-- Was das Alte Blut ist (Blut eines Großen, welches?).
+- Was das Alte Blut ist; das Spiel nennt es nicht (Deutungen: Blut eines Großen, der Mondpräsenz, von Ebrietas).
 - Wer der Blutminister ist.
 - Wann der Jägertraum entstand, verglichen mit dem Brand von Alt-Yharnam.
 - Was der Mensis-Käfig wirklich ist.
@@ -39,3 +43,17 @@ Aus LK 15, ergänzt:
 - Worauf sich „Flora“ im Gebet der Puppe bezieht.
 - Wer Viola getötet hat (RK1 §6).
 - Wer die Kreuze am Eingang von Alt-Yharnam angezündet hat.
+- Wer im Grab des Oedon liegt (RK1 §10).
+- Warum die Schule von Mensis im Unsichtbaren Dorf sitzt und was ihr Ziel war (LK 15).
+
+## E Widersprüche zwischen den Quellen (Regel: RK1/RV „sicher“ vor LK, sonst PRÜFEN)
+| Nr | Punkt | LK | RK1/RV | Stand |
+|---|---|---|---|---|
+| E1 | Eileens erstes Treffen | Seitenraum der Kanalisation | Dachbalken über dem Kanaleingang, sicher | RK1 gilt |
+| E2 | Eileens zweites Treffen | nach Amelia | nach Gascoigne vor der Kapelle | PRÜFEN |
+| E3 | Gascoignes zwei Töchter | laut Set-Beschreibung (6.1.2) | Set nennt keine (4, RK1 §11) | PRÜFEN |
+| E4 | Tausch der echten gegen die falsche Iosefka | nach Gascoigne (7.1.4) und Betreten der Kapelle (9.7) | siehe RK1, Widerspruch 2 | PRÜFEN |
+| E5 | Der Verdächtige Bettler in der Kapelle | bleibt nicht (7.1.3) / bleibt und mordet (5.1) | – | PRÜFEN |
+| E6 | Zettel zur Spinne von Byrgenwerth am Grab | am Grab „wieder“ (7.1.3) | am Grab kein Zettel (RK1 §9) | PRÜFEN, in Kapitel 1 nicht verwenden |
+| E7 | Gilberts Weg zur Kathedrale | Aquädukt (5.1) | zuerst die Große Brücke, sicher (RK1 §5) | RK1 gilt |
+| E8 | Die ältere Schwester | in Zentral-Yharnam genannt (7.1.2) | erst ab Blutmond (RK1 §6) | RK1 gilt |

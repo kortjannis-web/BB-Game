@@ -4,6 +4,8 @@
 
 ## Als Figur
 
+**Überschrift in LK:** Eileen die Krähe (Jägerin der Jäger)
+
 - **Wer:** Fremde in Yharnam wie der Spieler; Auftragsmörderin für verdorbene Jäger, Anführerin des Bundes **Hunter of Hunters** (Schnabelmaske).
 - **Quest:** (1) Erstes Treffen im Seitenraum der Zentral-Yharnam-Kanalisation (vier Bold Hunter's Marks, Geste „Shake Off Cape“; zweimal ansprechen). (2) Im Kathedralenviertel (nach Amelia) warnt sie vor dem Grab unter der Oedon-Kapelle, wo der gewordene Wahnsinnige **Henryk** wartet, ihr „Ziel“ (Geste „Shhh!“). (3) Am Tomb of Oedon hilft man ihr gegen Henryk (Geste „Approval“, Rune **Heir** von Henryks Leiche); trifft man sie zu oft, wird sie feindlich. (4) Nach **Roms** Tod steht sie oben an den Stufen zur Großen Kathedrale, verletzt, und sagt, sie habe sich verschätzt und nehme Blut: „Keine Träume mehr für mich, das ist meine letzte Chance.“ Man hilft gegen den **Bloody Crow of Cainhurst**; danach gibt sie das **Crow Hunter Badge** und die Rune **Hunter**.
 - **Wird sie feindlich:** Sie lacht, spricht vom Rausch der Jagd und ruft, dass die Jäger sterben müssten und der Albtraum enden müsse – „nur ich kann den Wahnsinn stoppen“.

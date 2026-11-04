@@ -4,12 +4,16 @@
 
 ## Als Figur
 
+**Überschrift in LK:** Gehrman (NPC im Jägertraum)
+
 - **Wer:** Der Erste Jäger, im Jägertraum als freundlicher alter Mann; im Rollstuhl, Führer des Spielers.
 - **Dialogverlauf:** Anfangs sagt er, der Spieler solle sich nicht zu viele Gedanken machen, Bestien jagen und fertig. Nach Gascoigne rät er, den Heiligen Kelch zu suchen (Grab der Götter, Kommunion). Nach dem Blood-Starved Beast erinnert er an die Blutminister der Kirche, die einst die Jäger beschützten und zur Zeit von Ludwig eine eigene Werkstatt hatten, und weist zur Oedon-Kapelle. Bei viel Insight murmelt er nach **Laurence** („was dauert so lange…“); nach **Rom** klagt er, er sei entkettet werden wolle und habe den Traum satt, „Nacht verdeckt jede Sicht“. Nach Mergos Amme bietet er an, den Spieler zu töten und im Morgenlicht aufwachen zu lassen: „Fürchte das Blut.“
 - **Ende (siehe Kapitel 8).** Ablehnung führt zum Kampf („Heute Nacht schließt sich Gehrman der Jagd an“); beim Sterben sagt er, die Nacht und der Traum seien lang gewesen.
 - **Lore:** Er kennt Willem und Laurence aus Byrgenwerth-Zeiten, er ist seit „zu langer Zeit“ im Traum gefangen. Notizzettel und Unterhaltungen vor dem Tod bestätigen das.
 
 ## Als Boss
+
+**Überschrift in LK:** 6.1.16 Gehrman, der erste Jäger – optional/Endweg (Einsicht: Fund / Sieg)
 
 **Rolle:** Der Bewohner und Namensgeber des Jägertraums (zu seinem NPC-Dasein siehe Kapitel 5). Im Kampf trägt er einen Zylinder, Henryks Handschuhe und einen Umhang statt seiner üblichen Kleidung.
 **Wie man kämpft:** Man kämpft gegen ihn, wenn man sein Angebot ablehnt oder ihn nach dem Sieg über Mergos Amme angreift.

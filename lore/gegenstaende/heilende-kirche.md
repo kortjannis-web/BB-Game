@@ -2,13 +2,11 @@
 
 > Quelle: `quellen/lore-komplett.md` (LK), Abschnitte LK 4. Wichtig für Kapitel: 1, 2. Kennzeichnung der Quelle: ohne Zusatz = im Spiel belegt, **[Theorie]** = Deutung, *sinngemäß* = Inhalt, nicht Wortlaut. Für das Spiel gilt: [Theorie] nie als Tatsache erzählen. Wurzel und Lesepfade: `lore/README.md`.
 
-**Arianna's Shoes** (Rüstung) – Schuhe von Arianna, der Frau aus dem Kathedralenviertel. Sie wirken unschuldig und niedlich, ganz anders als ihre Besitzerin.
-
 **Black Church Set** (Rüstung) – Kleidung der Jäger der Heilenden Kirche. Die meisten sind einfache „Ärzte“, die früh vorbeugen: Sie beseitigen Erkrankte und sogar bloße Verdachtsfälle, bevor Symptome auftreten. Ihr schwarzes Gewand steht für Furcht und den typischen Yharnam-Wahn. Bei Krebs müsse man die Stelle genau finden, hineingreifen und ihn aus der Brust des Wirts reißen – so ihre Denkweise.
 
 **Blood of Adella** (Verbrauchsgut) – Blut der Nonne Adella. Nonnen der Kirche werden nach ihrer Eignung als Blutgefäße ausgewählt und zu „Blutheiligen“ erzogen. Allein die Aussicht, mit ihrem Blut behandelt zu werden, verleiht der Kirche und ihrer Kommunion Legitimität.
 
-**Blood of Arianna** (Verbrauchsgut) – Blut von Arianna, der Frau aus dem Kathedralenviertel. Es heilt und beschleunigt kurz die Ausdauererholung. Wer das alte Wissen der Kirche kennt, merkt, dass es genau dem gleicht, was einst verboten war.
+**Blue Elixir** (Verbrauchsgut) – Zweifelhafte Arznei aus seltsamen Experimenten hochrangiger Kirchenvertreter. Ein Betäubungsmittel, das das Gehirn dämpft. Jäger bleiben dank Willenskraft bei Bewusstsein und nutzen die Nebenwirkung, im Stehen kaum wahrgenommen zu werden.
 
 **Flamesprayer** (Feuerwaffe) – Spezialwaffe bestimmter Kirchenmitglieder. Sie speit Flammen, mit blutgetränkten Quecksilberkugeln als Medium. Nicht effizient, aber manchmal ist ein Flammenmeer genau das Richtige: Die Bestien von Yharnam können eine Reinigung gut gebrauchen.
 
@@ -21,8 +19,6 @@
 **Hunter Chief Emblem** (Schlüsselitem) – Stoffabzeichen des Hauptmanns der Kirchenjäger aus alter Zeit. Es öffnet das Haupttor zum runden Platz der Großen Kathedrale. In Jagdnächten ist es fest verschlossen und nur von innen mit diesem Zeichen zu öffnen. Die Rückkehr des Hauptmanns und sein Abzeichen bestimmten also das Ende der Jagd.
 
 **Kirkhammer** (Waffe) – Transformationswaffe der Kirchenjäger: auf der einen Seite ein handliches Silberschwert, auf der anderen ein riesiger stumpfer Stein mit enormer Schlagkraft. Die Kirche zeigt gegenüber der Tierseuche eine harte, gnadenlose Haltung – eine Ironie, die den Trägern dieser symbolträchtigen Waffe nicht entgeht. (In der UK-Fassung: Transformationswaffen aus der Kirchenwerkstatt, angeblich in der Großen Kathedrale verwahrt, folgten den Regeln einer rivalisierenden Handwerksschule.)
-
-**Laurence's Skull** (Schlüsselitem) – Schädel von Laurence, dem ersten Vikar der Heilenden Kirche. In Wahrheit wurde er zur ersten Klerikerbestie, und sein menschlicher Schädel existiert nur noch im Albtraum. Der Schädel symbolisiert seine Vergangenheit und das, was er nicht schützen konnte. Er ist dazu bestimmt, ihn zu suchen, doch selbst wenn er ihn fände, würde er ihm die Erinnerungen nicht zurückgeben.
 
 **Ludwig's Holy Blade** (Waffe) – Transformationswaffe der Kirchenjäger, die Ludwig, der erste Jäger der Kirche, geführt haben soll. Verwandelt verbindet sich das Silberschwert mit der Scheide zum Großschwert. Mehrere Abweichungen vom Werkstattdesign deuten an, dass die Kirche viel größere, unmenschliche Bestien erwartete.
 

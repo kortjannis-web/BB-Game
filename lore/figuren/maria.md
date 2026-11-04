@@ -4,6 +4,8 @@
 
 ## Als Boss
 
+**Überschrift in LK:** 6.2.4 Lady Maria vom Astralen Uhrturm – verpflichtend (Einsicht: Fund / Sieg)
+
 **Rolle:** Die Jägerin im Uhrturm der Forschungshalle, eine ehemalige Jägerin und Schülerin der Kirche, bei der die Hilfe der Puppe mit ihr verbunden ist. Sie liegt als Leiche vor einem Schaukelstuhl.
 **Was sie sagt:** Beim Betrachten ihres Körpers: Ein Leichnam solle man in Ruhe lassen; sie wisse, wie süß die Geheimnisse locken; nur ein ehrlicher Tod könne den Jäger von seiner wilden Neugier befreien.
 **Kampf:** Sie führt die Rakuyo (Säbel), wechselt zwischen verwandelter und unverwandelter Form und nutzt die Pistole Evelyn. In Phase 2 sticht sie sich mit beiden Klingen und bedeckt sie mit Blut, wie es die Chikage tut; in Phase 3 schwebt sie und löst Blutexplosionen aus.

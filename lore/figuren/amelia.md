@@ -4,6 +4,8 @@
 
 ## Als Boss
 
+**Überschrift in LK:** 6.1.3 Vikarin Amelia – verpflichtend (Insight 1 / 3) (Einsicht: Fund / Sieg)
+
 **Rolle:** Sie betet in der Großen Kathedrale am Altar in der Kathedralenwache vor einem verformten Schädel. Nach ihrem Sieg und dem Berühren des Altars wird es in Yharnam Nacht.
 **Was sie sagt (sinngemäß):** Sie warnt vor der Schwäche der Menschen: schwacher Wille, junger Geist. Man solle das Alte Blut suchen, in Kommunion mit ihm treten und von ihm trinken; die Blutlust beruhige und nehme die Angst. Zugleich warnt sie, dass Bestien Nektar ausstreuen, um die Schwachen in die Tiefe zu locken. Das ist beinahe die ganze Ideologie der Kirche in einem Gebet: Sehnsucht nach dem Blut, gemischt mit dem Bewusstsein, dass genau dieses Blut Verderben bringt.
 **Verwandlung:** Sie wird zu einer Variante der Cleric Beast, gleichfalls feuer- und zackenanfällig.

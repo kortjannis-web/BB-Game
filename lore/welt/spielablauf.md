@@ -1,6 +1,6 @@
 # Die Handlung des Spiels in Kurzform
 
-> Quelle: `quellen/lore-komplett.md` (LK), Abschnitte LK 3. Wichtig für Kapitel: alle (Planung, nie dem Spieler vorwegnehmen). Kennzeichnung der Quelle: ohne Zusatz = im Spiel belegt, **[Theorie]** = Deutung, *sinngemäß* = Inhalt, nicht Wortlaut. Für das Spiel gilt: [Theorie] nie als Tatsache erzählen. Wurzel und Lesepfade: `lore/README.md`.
+> Quelle: `quellen/lore-komplett.md` (LK), Abschnitte LK 3, LK 5. Wichtig für Kapitel: alle (Planung, nie dem Spieler vorwegnehmen). Kennzeichnung der Quelle: ohne Zusatz = im Spiel belegt, **[Theorie]** = Deutung, *sinngemäß* = Inhalt, nicht Wortlaut. Für das Spiel gilt: [Theorie] nie als Tatsache erzählen. Wurzel und Lesepfade: `lore/README.md`.
 
 Diese Zusammenfassung folgt dem Ablauf des Spiels. Einzelheiten stehen in den späteren Kapiteln.
 
@@ -13,3 +13,8 @@ Diese Zusammenfassung folgt dem Ablauf des Spiels. Einzelheiten stehen in den sp
 7. **Gehrman.** Nach Mergos Amme ist der Albtraum erschlagen. Gehrman bietet dem Jäger Gnade an, oder der Jäger kämpft gegen ihn. Je nach Wahl drei Enden (Kapitel 8).
 8. **Nebenhandlungen.** Eileen, Alfred, Djura, Arianna, Annalise, Patches, Iosefka, der Blutminister, der Chor im Waisenhaus und Ebrietas im Altar der Verzweiflung (Kapitel 5–7).
 9. **Old Hunters (DLC).** Der Jäger wird in den Jägeralbtraum gezogen: Ludwig, Laurence, die Forschungshalle mit den Lebenden Fehlschlägen, Lady Maria im Astralen Uhrturm, das Fischerdorf und die Waise von Kos.
+
+## Zeitfenster der Figuren
+
+> Format pro Figur: **Wer/was** → **Questablauf** → **Lore aus Dialogen und Items**. Dialoge sind sinngemäß wiedergegeben, nicht wörtlich. Hinweis zu den „Zeitfenstern“: Viele NPC-Quests brechen ab, wenn man bestimmte Bosse (vor allem **Rom**) tötet, bevor man mit der Figur gesprochen hat.
+

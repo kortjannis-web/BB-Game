@@ -6,6 +6,8 @@
 
 **Kos Parasite** (Waffe, DLC) – Als der Kadaver von Kos an die Küste gespült wurde, wimmelte sein Inneres von winzigen Parasiten, anders als alles beim Menschen. Die ungewöhnliche Waffe lässt sich nur festhalten und schwingen, doch der Parasit soll Phantasmen anregen, die in einem Lumenwood leben.
 
-**Maria Hunter Set** (Rüstung) – Unter den ersten Jägern, alle Schüler Gehrmans, war die Jägerin Maria. Dies ist ihre in Cainhurst gefertigte Jägerkleidung. Maria ist entfernt mit der untoten Königin verwandt, bewunderte Gehrman aber sehr und ahnte nichts von seiner seltsamen Manie.
+**Laurence's Skull** (Schlüsselitem) – Schädel von Laurence, dem ersten Vikar der Heilenden Kirche. In Wahrheit wurde er zur ersten Klerikerbestie, und sein menschlicher Schädel existiert nur noch im Albtraum. Der Schädel symbolisiert seine Vergangenheit und das, was er nicht schützen konnte. Er ist dazu bestimmt, ihn zu suchen, doch selbst wenn er ihn fände, würde er ihm die Erinnerungen nicht zurückgeben. *(DLC)*
+
+**Maria Hunter Set** (Rüstung) – Unter den ersten Jägern, alle Schüler Gehrmans, war die Jägerin Maria. Dies ist ihre in Cainhurst gefertigte Jägerkleidung. Maria ist entfernt mit der untoten Königin verwandt, bewunderte Gehrman aber sehr und ahnte nichts von seiner seltsamen Manie. *(DLC)*
 
 **Rakuyo** (Waffe, DLC) – Waffe von Lady Maria vom Astral-Uhrenturm. Ein Transformationsschwert aus demselben Land wie das Chikage von Cainhurst, doch es zehrt nicht von Blut, sondern verlangt große Geschicklichkeit. Maria mochte das, denn sie missbilligte Blutklingen, obwohl sie eine entfernte Verwandte der Königin war. Eines Tages warf sie ihr geliebtes Rakuyo in einen dunklen Brunnen, weil sie seine Anwesenheit nicht mehr ertrug.

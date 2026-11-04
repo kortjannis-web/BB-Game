@@ -14,11 +14,9 @@ Datei: `welt/welt.md`, `fraktionen/heilende-kirche.md`.
 - **Jäger:** Werkstattjäger (Gehrmans Linie, leicht und beweglich), Kirchenjäger (Ludwigs Linie, schwer), Jäger der Jäger (Eileen). `fraktionen/jaeger.md`
 
 ## Die Wissenstreppe (was der Spieler wann erfahren darf)
-| Kapitel | Erlaubt als Tatsache | Nur als Gerücht oder Andeutung | Gar nicht |
-|---|---|---|---|
-| 1 Yharnam | Blut, Kirche, Seuche, Jagdnacht, Jäger, Traum, Fremdenhass | Kirchenleute werden die schlimmsten Bestien; ein erster Jäger der Kirche (Ludwig, ohne Namen); ein Kosmos hinter dem Blut (nur als Detail, das nicht stimmt) | Große Wesen beim Namen, Byrgenwerth, Chor, Mensis, Mondpräsenz, Herkunft des Alten Bluts |
-| 2 Kathedralbezirk | Kirche aus der Nähe, Vikare, Kapelle als Zuflucht, Alt-Yharnam verbrannt | Byrgenwerth (Passwort, „verlorener Meister“), Chor („Himmel und Kosmos sind eins“), Cainhurst (Alfred, Arianna) | Rom, Mensis, Mondpräsenz, Mergo |
-| 3 und später | siehe Lesepaket des Kapitels | | |
+Verbindlich ist die Wissenssperre im Lesepaket des Kapitels (`kapitel/kapitelN.md`). Grob:
+- **Kapitel 1:** Blut, Kirche, Seuche, Jagdnacht, Jäger, Traum und Fremdenhass als Tatsache; Kirchenleute als schlimmste Bestien und ein erster Jäger der Kirche ohne Namen nur als Gerücht; alles Kosmische nur als Detail, das nicht stimmt.
+- **Kapitel 2:** die Kirche aus der Nähe; Byrgenwerth, Chor und Cainhurst nur als Gerücht oder Fund; die Großen weiter gesperrt.
 Grundregel: Was das Spiel erst spät zeigt, darf früh nur als Detail erscheinen, das nicht stimmt.
 
 ## Regeln für den Einsatz der Lore

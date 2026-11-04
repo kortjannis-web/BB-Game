@@ -4,6 +4,8 @@
 
 ## Als Figur
 
+**Überschrift in LK:** Alfred, Jäger der Vilebloods
+
 - **Wer:** Schüler des Märtyrers **Logarius**, Henker-Jäger mit Kirkhammer und Ludwigs Gewehr. Fröhlicher, zuvorkommender Typ, der den Spieler als Gleichgesinnten anspricht.
 - **Treffpunkte:** Erst im Kathedralenviertel nahe dem Eingang nach Alt-Yharnam; nach Vikarin Amelia vor dem Eingang zum Verbotenen Wald. Er lässt sich als Co-op-Hilfe gegen das **Cleric Beast** und das **Blood-Starved Beast** beschwören.
 - **Quest:** (1) Zusammenarbeit zusagen → 3× Fire Paper und die „Pray“-Geste. (2) In Cainhurst nach Logarius die **Krone der Illusionen** aufheben und tragen – sie enthüllt den Thronsaal. (3) Dort liegt die **Unopened Summons** auf einem Tisch; sie zu Alfred bringen. (4) Er reist nach Cainhurst und steht über Annalises zerstückelter Leiche („Jetzt kann Meister als wahrer Märtyrer heiliggesprochen werden“) – dafür gibt er die „Roar“-Geste. Man kann **Queenly Flesh** vom Thron nehmen (die Überreste pulsieren unheimlich). (5) Zurück am ersten Treffpunkt liegt seine Leiche mit der Rune **Radiance**; man deutet es als Selbstmord, um selbst Märtyrer zu werden.

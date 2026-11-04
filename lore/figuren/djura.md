@@ -4,6 +4,8 @@
 
 ## Als Figur
 
+**Überschrift in LK:** Djura (Gyula), ausgeschiedener Jäger
+
 - **Wer:** Veteran der Powder Kegs in **Alt-Yharnam**, im Turm mit der Gatling-Kanone. Ist standardmäßig feindlich.
 - **Nach dem Blood Moon:** Er wird freundlich, wenn man (nach Roms Tod) **Darkbeast Paarl** im Unsichtbaren Dorf besucht (1 Insight beim Betreten des Boss-Raums). Man spricht ihn auf dem Turm an: die Antwort, die Bestien von Alt-Yharnam zu verschonen, bringt das **Powder Keg Hunter Badge** und die Geste „Brush Off Dust“. Wer dann in seinem Bereich Tiere angreift, wird von ihm gejagt.
 - **Dialog-Lore:** Er warnt, Alt-Yharnam sei „von Menschen verbrannt und aufgegeben“ und nur noch Heimat von Bestien, die niemandem oben schaden. Er sagt, er träume nicht mehr, sei aber einst auch Jäger gewesen: „Es gibt nichts Schrecklicheres als eine Jagd. Was ihr jagt, sind keine Bestien, es sind Menschen.“ Wenn der Spieler stirbt und er ihn tötet, fragt er, ob man noch träume; stirbt er selbst, wirft er dem Spieler Wahnsinn vor.

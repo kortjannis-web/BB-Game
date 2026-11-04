@@ -4,6 +4,8 @@
 
 ## Als Boss
 
+**Überschrift in LK:** 6.1.6 Himmelsbote (Celestial Emissary) – optional (Insight 0 / 2) (Einsicht: Fund / Sieg)
+
 **Rolle:** Ein Großer, der sich unter einer Menge identisch aussehender Himmelsmobs (Celestial Mobs) im Waisenhaus-Gartenbereich (Lumenflower Gardens, Obere Kathedralenwache) versteckt. Man erkennt ihn, weil er beim Treffer keine Lebensleiste zeigt.
 **Bedeutung:** Er ist das, was die Kirche mit den **Lebenden Fehlschlägen** (Living Failures) im DLC erst versuchte herzustellen: einen Boten, der mit den Großen kommuniziert (siehe 6.2.3). Zum Waisenhaus und zum Chor siehe Kapitel 2.6.
 **Zugang:** Nur mit dem Waisenhausschlüssel (Orphanage Key). Er erscheint auch im Großen Isz-Kelch.

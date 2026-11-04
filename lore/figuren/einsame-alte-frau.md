@@ -4,5 +4,7 @@
 
 ## Als Figur
 
+**Überschrift in LK:** Die einsame alte Frau (Lonely Old Woman)
+
 - **Wo/Quest:** Überlebende in Zentral-Yharnam jenseits des Bereichs mit infizierten Hunden. Anfangs undankbar: Jäger und Fremde seien schuld am Elend. Schickt man sie in die Oedon-Kapelle, sitzt sie auf einem Stuhl nahe der Tür zu Alfreds Bereich. Ihre Stimmung kippt über die Phasen der Nacht in Verzweiflung bis Hysterie.
 - **Besonderheit:** Wählt man bei ihr mehrfach „Ich habe meine Sorgen“, gibt sie **Sedative**, „das wird dir helfen zu vergessen“ – ein Hinweis auf die Medikamentenabhängigkeit der Stadt. In der Klinik wird sie zum Celestial Mob, der Sedative hinterlässt.

@@ -1,6 +1,13 @@
 # Bosse: Überblick und Weltveränderungen
 
-> Quelle: `quellen/lore-komplett.md` (LK), Abschnitte LK 6.3, LK 6.4. Wichtig für Kapitel: alle. Kennzeichnung der Quelle: ohne Zusatz = im Spiel belegt, **[Theorie]** = Deutung, *sinngemäß* = Inhalt, nicht Wortlaut. Für das Spiel gilt: [Theorie] nie als Tatsache erzählen. Wurzel und Lesepfade: `lore/README.md`.
+> Quelle: `quellen/lore-komplett.md` (LK), Abschnitte LK 6, LK 6.3, LK 6.4. Wichtig für Kapitel: alle. Kennzeichnung der Quelle: ohne Zusatz = im Spiel belegt, **[Theorie]** = Deutung, *sinngemäß* = Inhalt, nicht Wortlaut. Für das Spiel gilt: [Theorie] nie als Tatsache erzählen. Wurzel und Lesepfade: `lore/README.md`.
+
+## Lesehinweis
+
+> **Lesehinweis:** Dieses Kapitel ordnet die Bosse so, wie man ihnen im Spiel begegnet. Zu jedem Boss stehen Rolle in der Geschichte, Fundort, die Dinge, die er sagt (sinngemäß in eigenen Worten, nicht wörtlich), die Gegenstände, die er hinterlässt und die Lore-Querverweise. Kampftaktik steht bewusst nur dort, wo sie etwas über die Welt verrät (Schwächen, Zustandsänderungen der Welt). Die Kampf-Mechaniken stehen im Kapitel zu Gameplay und Mechaniken. Aussagen, die nicht direkt aus dem Spiel stammen, sind mit **[Theorie]** gekennzeichnet.
+>
+> Die Insight-Zahlen (Einsicht) in Klammern geben an: *Fund / Sieg*.
+
 
 ## Weitere Bosse und Kelch-Bosse
 

@@ -4,6 +4,8 @@
 
 ## Als Boss
 
+**Überschrift in LK:** 6.1.17 Mondgeist (Moon Presence), „Flora" – optional (Insight 5 / 5) (Einsicht: Fund / Sieg)
+
 **Rolle:** Das Wesen, das den Jägertraum beherrscht und als stärkste Große in der Welt gilt. Es kann nur bekämpft werden, wenn man drei der vier Nabelschnüre verzehrt, Gehrmans Angebot ablehnt und ihn besiegt.
 **Name:** Die Puppe spricht es sinngemäß als „Flora" an, die Große des Mondes und des Traums; damit wäre es weiblich gedacht. **[Theorie]**
 **Lore-Deutung (Fextralife):**

@@ -4,5 +4,7 @@
 
 ## Als Figur
 
+**Überschrift in LK:** Der Skeptische Mann (Narrow Minded Man)
+
 - **Wer:** Mürrischer Mann gegenüber von Ariannas Fenster. Man schickt ihn auf Wunsch an einen sicheren Ort – er geht zum jeweils anderen. Wer ihn in die Klinik schicken will, sage „Oedon-Kapelle“.
 - **Dialog:** In der Kapelle gibt er „Ratschläge“ über andere NPCs; die Wahrheit ist stets das Gegenteil (z. B. lästert er über Arianna und die Heilige Adella oder den blinden Kapellenbewohner).

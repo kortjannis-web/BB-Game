@@ -4,6 +4,8 @@
 
 ## Als Boss
 
+**Überschrift in LK:** 6.1.10 Märtyrer Logarius – optional (Insight 1 / 3) (Einsicht: Fund / Sieg)
+
 **Rolle:** Der Anführer der Henker (Executioners), der auf dem Dach von Schloss Cainhurst wartet. Laut Lore hatte Königin Annalise Blut der Vilebloods als „Kind des Blutes" gesammelt. Logarius sah darin einen Frevel, gründete die Henker und stürmte das Schloss, ließ aber die Königin selbst am Leben, weil sie unsterblich war. Als er sie nicht töten konnte, schickte er seine Henker fort und opferte sich selbst als Wächter; sein Platz am Turm der Königin und die **Krone der Illusionen** (Crown of Illusions) verschließen den Zugang.
 **Waffen:** Ein Kris-Schwert und eine Sense, die der Sense des Pthumerischen Ältesten ähnelt; die Ähnlichkeit zum Sensen-Zauber ist ein Hinweis auf seine Verbindung zu den Pthumeriern. **[Theorie]**
 **Belohnung:** Krone der Illusionen; sie öffnet den Weg zu Annalise. Danach kann Alfred den „Unopened Summons"-Auftrag erfüllen: Er tötet Annalise und nimmt sich später selbst das Leben (siehe 5.1).

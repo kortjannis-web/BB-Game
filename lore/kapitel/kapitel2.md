@@ -8,22 +8,24 @@ Vorläufig, bis das Gerüst von Kapitel 2 steht. Vor jeder Arbeit an Kapitel 2: 
 - Datei: `welt/mechanik-und-welt.md` (9.7), `bosse/README.md` (6.4).
 
 ## Orte
-`orte/kathedralbezirk.md` (Große Kathedrale, Notizen), `orte/oedon-grab-und-kapelle.md` (Kapelle, Henryk im Grab), `orte/iosefkas-klinik.md` (falsche Iosefka), `orte/alt-yharnam.md` (Zugang, Djura), `orte/kirchenwerkstatt.md`, `orte/verlassene-alte-werkstatt.md` (Ursprung des Traums, nur als Fund), `orte/hemwick.md` (nur als Weg, falls nötig).
+`orte/jaegertraum.md` (in jedem Kapitel), `orte/zentral-yharnam.md` (Gilbert, die alte Frau), `orte/kathedralbezirk.md` (Große Kathedrale, Notizen), `orte/oedon-grab-und-kapelle.md` (Kapelle, Henryk im Grab), `orte/iosefkas-klinik.md` (falsche Iosefka), `orte/alt-yharnam.md` (Zugang, Djura), `orte/kirchenwerkstatt.md`, `orte/verlassene-alte-werkstatt.md` (Ursprung des Traums, nur als Fund), `orte/hemwick.md` (nur als Weg, falls nötig).
 
 ## Figuren
-`figuren/amelia.md`, `figuren/eileen.md` (Henryk-Auftrag, Partnerschaft nach unserem Plan), `figuren/henryk.md`, `figuren/alfred.md`, `figuren/arianna.md`, `figuren/skeptischer-mann.md`, `figuren/kapellenbewohner.md`, `figuren/einsame-alte-frau.md`, `figuren/iosefka.md` (die falsche), `figuren/gilbert.md`, `figuren/djura.md`, `figuren/patches.md` (erst nach Amelia), `figuren/adella.md` (im Kanon erst über die Entführer; prüfen, ob sie in Kapitel 2 passt), `figuren/gehrman.md` (Dialog nach Gascoigne: der Heilige Kelch).
+`figuren/amelia.md`, `figuren/eileen.md` (Henryk-Auftrag, Partnerschaft nach unserem Plan), `figuren/henryk.md`, `figuren/alfred.md`, `figuren/arianna.md`, `figuren/skeptischer-mann.md`, `figuren/kapellenbewohner.md`, `figuren/einsame-alte-frau.md`, `figuren/iosefka.md` (die falsche), `figuren/gilbert.md`, `figuren/djura.md`, `figuren/patches.md` (erst nach Amelia), `figuren/adella.md` (im Kanon erst über die Entführer; prüfen, ob sie in Kapitel 2 passt), `figuren/gehrman.md` (Dialog nach Gascoigne: der Heilige Kelch), `figuren/puppe.md`, `figuren/boten.md`, `figuren/ludwig.md` (nur das Wissen: Gründer der Kirchenwerkstatt, Gehrmans Satz über die Blutminister), `figuren/laurence.md` und `figuren/willem.md` (nur als Name in Notizen: Leitspruch Meister Laurence', „verlorener Meister“).
+- **Nur wenn Kapitel 2 über Amelia hinausgeht** (im Kanon erst danach): Eileens Henryk-Auftrag, Patches, Alfreds zweiter Treffpunkt, Adella (über die Entführer).
 
 ## Bosse
 `figuren/amelia.md` (Pflicht im Kanon), `bosse/blutdurstige-bestie.md` (optional, Alt-Yharnam).
 
 ## Fraktionen
-`fraktionen/heilende-kirche.md` (Vikare, Blutheilige, Kirchenränge), `fraktionen/chor.md` (nur Andeutung), `fraktionen/byrgenwerth.md` (nur Gerücht), `fraktionen/cainhurst-und-henker.md` (Alfred, Arianna), `fraktionen/buende.md`.
+`fraktionen/heilende-kirche.md` (Vikare, Blutheilige, Kirchenränge), `fraktionen/chor.md` (nur Andeutung), `fraktionen/byrgenwerth.md` (nur Gerücht), `fraktionen/cainhurst-und-henker.md` (Alfred, Arianna), `fraktionen/buende.md`, `fraktionen/jaeger.md` (Kirchenjäger gegen Werkstattjäger, Jäger der Jäger für die Partnerschaft).
 
 ## Gegenstände
-`gegenstaende/heilende-kirche.md` (Goldanhänger, Blut der Adella, Blut der Arianna, Kirchenkleidung), `gegenstaende/jaeger-und-werkstatt.md` (Pulverfässer, Djura), `gegenstaende/caryll-runen.md` (nur die Runen, die in Kapitel 2 fallen).
+`gegenstaende/heilende-kirche.md` (Goldanhänger, Blut der Adella, Blut der Arianna, Kirchenkleidung), `gegenstaende/jaeger-und-werkstatt.md` (Pulverfässer, Djura), `gegenstaende/caryll-runen.md` (nur die Runen, die in Kapitel 2 fallen), `gegenstaende/cainhurst-und-henker.md` (Ariannas Kleid und Blut, Alfreds Henkerkleidung, Logarius' Rad), `gegenstaende/yharnam-und-blut.md` (Sedativum der alten Frau), `gegenstaende/jaegertraum.md`.
 
 ## Wissenssperre Kapitel 2
 - **Als Tatsache:** Kirche aus der Nähe, Vikare, Blutheilige, Kapelle als Zuflucht, Alt-Yharnam verbrannt und versiegelt, Kirchenjäger.
 - **Nur als Gerücht oder Fund:** Byrgenwerth (Passwort, „verlorener Meister“), der Chor („Himmel und Kosmos sind eins“), Cainhurst (Alfred, Ariannas Kleid), der Schädel am Altar.
-- **Gar nicht:** Rom, Mensis, Mondpräsenz, Mergo, Nabelschnüre, Ebrietas.
+- **Gar nicht:** Rom, Mensis, Mondpräsenz, Mergo, Nabelschnüre, Ebrietas, Kos, Amygdala beim Namen.
+- **Als unerklärtes Bild erlaubt, Name und Erklärung gesperrt:** die goldenen Reliefs am Altar der Blutdurstigen Bestie, die leblose Puppe in der verlassenen Werkstatt (die Nabelschnur dort nicht), die Entführer mit ihren Säcken (Mensis nicht), die Riesenhand rechts der Kathedrale und die Gestalt an der Kapelle (Kleine Amygdala), die Werkzeuge der falschen Iosefka (Chor und Ebrietas nicht).
 - **Saat aus Kapitel 1, die hier geerntet werden kann:** Choral und Glocken, der Anschlag an der Kapellentür, der Kirchenbrief der Boten (Vikarin, Glocken), Wendels Mantel, Henryk als Name, Eileens Angebot.

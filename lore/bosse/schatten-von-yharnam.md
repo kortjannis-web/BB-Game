@@ -4,6 +4,8 @@
 
 ## Als Boss
 
+**Überschrift in LK:** 6.1.5 Schatten von Yharnam (Shadow of Yharnam) – verpflichtend (Insight 0 / 2) (Einsicht: Fund / Sieg)
+
 **Rolle:** Drei verhüllte Gestalten – Schwertkämpfer, Feuerwerfer (Kerzenhand) und Magier – am Ende des Verbotenen Waldes. Sie versperren den Weg nach Byrgenwerth. Sie erscheinen später als gewöhnliche Gegner in Mergos Loft.
 **Besonderheiten:** Wenn sie zu lange leben, verwandeln sie sich alle und können Schlangen beschwören (siehe Kapitel zu Mechaniken). Wer die Rune Impurity trägt, kann Henryk oder Madaras Zwilling beschwören.
 **Hintergrund:** Ihr Aussehen erinnert an die Ringgeister aus *Der Herr der Ringe*. Eine Zuordnung zur Geschichte gibt es nicht; das Spiel erklärt sie nicht. Sie stehen als Wächter für die Zugangsbeschränkung nach Byrgenwerth.

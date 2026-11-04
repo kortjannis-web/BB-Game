@@ -4,6 +4,8 @@
 
 ## Als Boss
 
+**Überschrift in LK:** 6.2.5 Waise von Kos (Orphan of Kos) – DLC-Endboss (Einsicht: Fund / Sieg)
+
 **Rolle:** Der Sohn von Kos (oder Kosm) am Strand der Fischerküste (Fishing Hamlet Coast). Er kämpft mit einer Plazenta-ähnlichen Waffe, in die er in Phase 2 hineinbeißt und sich verwandelt, größer und beweglicher wird. Die Plazenta ähnelt einem riesigen verfluchten Blutgemstein; **[Theorie]**, dass Kos verflucht wurde.
 **Was gesagt wird:** Ein Ausruf um Gnade für das arme, verschrumpelte Kind.
 **Details:**

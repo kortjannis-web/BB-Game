@@ -4,6 +4,8 @@
 
 ## Als Boss
 
+**Überschrift in LK:** 6.2.2 Ludwig, der Verfluchte / der Heilige Klinge – verpflichtend im DLC (Einsicht: Fund / Sieg)
+
 **Rolle:** Gründer der Heilenden Kirche-Werkstatt und erster Jäger der Kirche. Er ist im Jägeralbtraum ein kriechendes, schreiendes Wesen mit Doppelkopf (Gesicht und Zweitkopf) und legt in Phase 2 den Zustand der Verfluchung ab, richtet sich auf und führt als **Ludwig, die Heilige Klinge** seine Waffe.
 **Was gesprochen wird:**
 - Beim Betreten ruft ein bisher namenloser, lebender Leichnam (nicht Ludwig) um Hilfe: Ein hässliches Ungeheuer komme, ein großer Schrecken, Ludwig der Verfluchte. Er kann den Kampf überleben und lacht danach nur noch höhnisch.

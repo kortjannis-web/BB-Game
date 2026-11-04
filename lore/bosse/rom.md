@@ -4,6 +4,8 @@
 
 ## Als Boss
 
+**Überschrift in LK:** 6.1.8 Rom, die Leere Spinne – verpflichtend (Insight 2 / 2) (Einsicht: Fund / Sieg)
+
 **Rolle:** Die Große, die in der Mondseite (Moonside Lake) hinter Byrgenwerths Lunarium sitzt. Sie hält einen Schleier über die Welt, der das wahre Wesen der Dinge verbirgt. Ihr Tod löst den **Blutmond** aus: Die Kleinen Amygdalae (Lesser Amygdala) werden sichtbar, Bestien rasen, die Welt zeigt sich so, wie sie ein Jäger mit 40 Insight sähe.
 **Zeitlicher Hintergrund:** Laut Fextralife-Lore transzendierte Rom in Byrgenwerth und bildet seither den Schleier, der den Menschen den wahren Zustand der Welt verbirgt. Dass ihr Tod den Blutmond auslöst, stimmt mit dem hochgeladenen Artikel überein.
 **Hinweise:**

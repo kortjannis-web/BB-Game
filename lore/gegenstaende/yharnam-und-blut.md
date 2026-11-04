@@ -8,11 +8,7 @@
 
 **Blood Vial** (Verbrauchsgut) – Spezielles Blut aus der Blutministration. Wer einmal damit behandelt wurde, spürt bei jeder weiteren Infusion die erste nach. Das macht sie umso belebender. Kein Wunder, dass die meisten Yharnamiten viel Blut verbrauchen.
 
-**Blue Elixir** (Verbrauchsgut) – Zweifelhafte Arznei aus seltsamen Experimenten hochrangiger Kirchenvertreter. Ein Betäubungsmittel, das das Gehirn dämpft. Jäger bleiben dank Willenskraft bei Bewusstsein und nutzen die Nebenwirkung, im Stehen kaum wahrgenommen zu werden.
-
 **Iosefka's Blood Vial** (Verbrauchsgut) – Blutfläschchen aus Iosefkas Klinik. Es ist verfeinertes, stark belebendes Blut, Ergebnis eines langsamen, sorgfältigen Prozesses; offenbar eine Spezialität der Klinik.
-
-**Numbing Mist** (Wurfgegenstand) – Erzeugt eine Nebelwolke, die die Lebensessenz betäubt und die Heilung verhindert. Soll von den Bluthäschern Cainhursts genutzt werden; das Rezept hütet die Adelslinie des Schlosses als Geheimnis.
 
 **Red Jeweled Brooch** (Verbrauchsgut) – Leuchtend rote Brosche einer Frau, mit dem Namen Viola graviert. Vielleicht ein Geschenk eines Jägers. Lässt sich in eine tropfenförmige Blutgemme verwandeln.
 

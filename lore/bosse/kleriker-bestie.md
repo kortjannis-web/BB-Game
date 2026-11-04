@@ -4,6 +4,8 @@
 
 ## Als Boss
 
+**Überschrift in LK:** 6.1.1 Cleric Beast (Geistlichen-Bestie) – optional (Insight 1 / 3) (Einsicht: Fund / Sieg)
+
 **Rolle:** Das erste große Monster, auf das man trifft, am Ende der Großen Brücke in Zentral-Yharnam. Schon beim ersten Aufstieg über die Leiter zu Gilbert hört man ein Kreischen durch die Stadt. Das ist die Bestie, die noch kreischt, während sie später den Spieler jagt.
 **Name und Bedeutung:** Der Name geht auf ein Gerücht zurück, wonach Angehörige der Heilenden Kirche sich irgendwann in Bestien verwandeln. Das bestätigt der Rest des Spiels: Die Kirche hat das Blut ausgegeben, und ihre eigenen Geistlichen trifft es am härtesten.
 **Aussehen:** Gewaltig, gehörnt, die Hörner auffällig verwachsen, die linke Pranke größer als die rechte. Im Fell der Beine sitzen Nägel, das Fell wirkt stellenweise pilzartig.

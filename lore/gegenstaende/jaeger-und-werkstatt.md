@@ -2,9 +2,9 @@
 
 > Quelle: `quellen/lore-komplett.md` (LK), Abschnitte LK 4. Wichtig für Kapitel: 1, 2. Kennzeichnung der Quelle: ohne Zusatz = im Spiel belegt, **[Theorie]** = Deutung, *sinngemäß* = Inhalt, nicht Wortlaut. Für das Spiel gilt: [Theorie] nie als Tatsache erzählen. Wurzel und Lesepfade: `lore/README.md`.
 
-**Beast Claw** (Waffe) – Waffe des „Irreverent Izzy“. Sie besteht aus den Langknochen eines untoten Dunkelbestien, die auf die Waffe montiert wurden. Die Knochen leben noch und schenken dem Träger beim Einsatz einen Schub tierischer Macht. Je mehr Fleisch zerrissen wird und Blut spritzt, desto stärker erwacht das Tier im Träger – bis zu Kraft und fiebrigem Rausch.
+**Beast Claw** (Waffe) – Waffe des „Irreverent Izzy“. Sie besteht aus den Langknochen eines untoten Dunkelbestien, die auf die Waffe montiert wurden. Die Knochen leben noch und schenken dem Träger beim Einsatz einen Schub tierischer Macht. Je mehr Fleisch zerrissen wird und Blut spritzt, desto stärker erwacht das Tier im Träger – bis zu Kraft und fiebrigem Rausch. *(DLC)*
 
-**Beast Roar** (Jägerwerkzeug) – Eines der verbotenen Werkzeuge von Irreverent Izzy. Man leiht sich für einen Moment die Kraft der untoten Dunkelbestien und schleudert Gegner mit einem Brüllen zurück. Der unbeschreibliche Laut entsteht in den eigenen Stimmbändern – was für Schreckliches muss da im Inneren von Menschen stecken?
+**Beast Roar** (Jägerwerkzeug) – Eines der verbotenen Werkzeuge von Irreverent Izzy. Man leiht sich für einen Moment die Kraft der untoten Dunkelbestien und schleudert Gegner mit einem Brüllen zurück. Der unbeschreibliche Laut entsteht in den eigenen Stimmbändern – was für Schreckliches muss da im Inneren von Menschen stecken? *(DLC)*
 
 **Blade of Mercy** (Waffe) – Besondere Transformationswaffe, unter den Jägern der Jäger weitergereicht und eine der ältesten Waffen der Werkstatt. Aktiviert teilt sie sich in zwei Klingen. Die verzogenen Klingen sind aus Siderit geschmiedet, einem seltenen Himmelsmineral, und wirken am besten bei schnellen Angriffen, etwa nach einem Ausweichschritt.
 
@@ -49,8 +49,6 @@
 **Old Hunter Bone** (Jägerwerkzeug, DLC) – Knochen eines alten Jägers, dessen Name vergessen ist. Er soll Gehrmans Schüler gewesen sein und die „Quickening“-Kunst beherrscht haben, eine Technik der ersten Jäger. Passend, dass Jäger, Fackelträger und vom Traum genährt, aus seinen Überresten eine alte Kunst herauskitzeln.
 
 **Powder Keg Hunter Badge** (Abzeichen) – Von den Powder Kegs, den Ketzern der Werkstatt, gefertigt. Ihre Vorliebe für komplexe Konstruktionen und große Knalleffekte führte zu Waffen, die von der traditionellen Werkstatt abweichen. Ihr Motto: Eine Waffe ohne Rückstoß ist nichts wert.
-
-**Rune Workshop Tool** (Schlüsselitem) – Der Runenschmied Caryll, Student von Byrgenwerth, übertrug das unmenschliche Raunen der Großen Wesen in die heutigen Caryll-Runen. Wer dieses Werkstattwerkzeug findet, kann Runen in den Geist ritzen und ihre Kraft nutzen. Propst Willem wäre stolz auf Carylls Runen gewesen, denn sie hängen in keiner Weise vom Blut ab.
 
 **Saw Cleaver** (Waffe) – Transformationswaffe der Werkstatt, bei der Jagd gängig. Eine Säge, die Bestienblut gut zieht und sich in ein langes Hackmesser verwandelt, das die Fliehkraft nutzt. Die Zähne der Aderlasssäge wurden zum Symbol der Jagd und wirken umso besser, je grotesker die Bestie verwandelt ist.
 

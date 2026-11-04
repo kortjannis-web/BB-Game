@@ -33,3 +33,5 @@
 **Oedon Writhe** (Caryll-Rune) – Sieht in der Wärme des Bluts einen feinen Schleim und kennt viszerale Angriffe als dunklere Jägertechnik. Viszerale Angriffe stellen Quecksilberkugeln wieder her. Das sickernde Blut, ob menschlich oder nicht, gilt als Medium höchster Güte und Wesen des formlosen Großen Wesens. Oedon und seine unfreiwilligen Anbeter suchen heimlich das kostbare Blut.
 
 **Radiance** (Caryll-Rune) – Zeichen für „Strahlkraft“, angenommen von den Henkern unter Logarius' Befehl. Die Henker verachten die unreinen Vilebloods und würden unter keinen Umständen mit den blutdürstigen Jägern der untoten Königin Annalise zusammenarbeiten.
+
+**Rune Workshop Tool** (Schlüsselitem) – Der Runenschmied Caryll, Student von Byrgenwerth, übertrug das unmenschliche Raunen der Großen Wesen in die heutigen Caryll-Runen. Wer dieses Werkstattwerkzeug findet, kann Runen in den Geist ritzen und ihre Kraft nutzen. Propst Willem wäre stolz auf Carylls Runen gewesen, denn sie hängen in keiner Weise vom Blut ab.

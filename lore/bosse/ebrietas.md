@@ -4,6 +4,8 @@
 
 ## Als Boss
 
+**Überschrift in LK:** 6.1.7 Ebrietas, Tochter des Kosmos – optional (Insight 3 / 3) (Einsicht: Fund / Sieg)
+
 **Rolle:** Eine Große mit Schmetterlings- und Kraken-Zügen am Altar der Verzweiflung (Altar of Despair). Man erreicht ihn über das Fenster im Raum des Himmelsboten und einen Aufzug. Der Name ist lateinisch für „Trunkenheit". Ihr Aussehen ist stark an Cthulhu aus Lovecrafts *Der Ruf Cthulhus* angelehnt.
 **Verknüpfung:** Ihr Name steckt im Hunter Tool „Augur of Ebrietas", das Micolash im Kampf einsetzt.
 **Hinweise:**

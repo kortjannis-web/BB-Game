@@ -4,6 +4,8 @@
 
 ## Als Figur
 
+**Überschrift in LK:** Die Puppe (Plain Doll)
+
 - **Wer:** Lebendige Puppe im Jägertraum; wandelt Blutechos in Attribute um. Sie bleibt immer freundlich: „Willkommen zu Hause, guter Jäger.“
 - **Dialog-Verlauf:** Sie sagt, sie sei eine Puppe, die Jägern hilft; Gehrman war einst Jäger, nun diene er nur noch als Wächter. Die Gräber im Traum stünden für unzählige frühere Jäger. In der Mitte des Spiels fragt sie, ob Götter ihre Geschöpfe lieben und ob Menschen sie, die Puppe, lieben könnten – denn sie sei von Menschen geschaffen. Nach Maria im DLC fühlt sie sich „von schweren Fesseln befreit“. Am Spielende sagt sie, Gehrman erwarte den Spieler am großen Baum.
 - **Haarschmuck-Szene:** Gibt man ihr den **Small Hair Ornament**, wird sie verwirrt und spürt Sehnsucht, „vielleicht Freude“ – sie erinnert sich an nichts, fühlt aber etwas.
