@@ -175,8 +175,9 @@ Hinter ihr, vielleicht nur eine Täuschung des Lichts, sitzen Dinge auf den Grab
 === boten_laden ===
 // TITEL: Bad der Boten
 // [KANON] Die Boten verkaufen gegen Blutechos. PRÜFEN: welche Waren im ersten Abschnitt.
+In einem steinernen Becken voller trüben Wassers hocken Boten, dicht gedrängt, und einer von ihnen trägt einen winzigen, zerbeulten Hut. Sie heben ihre kleinen grauen Hände, wenn du näher kommst, und in ihren Gesichtern aus nassem Ton ist so etwas wie Erwartung. # lore: boten
 - (wahl)
-In einem steinernen Becken voller trüben Wassers hocken Boten, dicht gedrängt, und einer von ihnen trägt einen winzigen, zerbeulten Hut. Sie heben ihre kleinen grauen Hände, wenn du näher kommst, und in ihren Gesichtern aus nassem Ton ist so etwas wie Erwartung. Du hast {echos} Echos. # lore: boten
+Du hast {echos} Echos.
 + {echos >= 3 and molotow < 3} [Molotow kaufen (3 Echos)]
     ~ echos = echos - 3
     ~ molotow = molotow + 1
@@ -188,17 +189,17 @@ In einem steinernen Becken voller trüben Wassers hocken Boten, dicht gedrängt,
     Ein glatter, grauer Kiesel, kühl in der Hand. Etwas, um Lärm zu machen, wo man selbst nicht sein will.
     -> wahl
 // [ERWEITERT] Wissen und Kleidung (Entscheidung des Nutzers 2026-11-04): Was die Boten anbieten, haben sie Toten abgenommen.
-+ {echos >= 3 and not jagdnotizen} [Jagdnotizen eines Toten kaufen (3 Echos)]
-    ~ echos = echos - 3
++ {echos >= 6 and not jagdnotizen} [Jagdnotizen eines Toten kaufen (6 Echos)]
+    ~ echos = echos - 6
     ~ jagdnotizen = true
     ~ gelernt += (wurf, ansturm, axt_wirbel)
-    Ein Heft mit gewellten Seiten, das einmal nass geworden ist. Ein Jäger hat darin gezeichnet, was ihn beinahe umgebracht hat, mit Bleistift und mit Pfeilen: ein Arm, der eine Kutsche über die Schulter hebt. Ein Geweih, gesenkt, und daneben das Wort „spät“, dreimal unterstrichen. Ein Mann mit erhobener Axt, und darunter die Ziffern eins, zwei, drei, die Drei eingekreist. Die letzte Seite ist leer bis auf einen braunen Daumenabdruck. # notiz: jagdnotizen
+    Ein Heft mit gewellten Seiten, das einmal nass geworden ist. Ein Jäger hat darin gezeichnet, was ihn beinahe umgebracht hat, mit Bleistift und mit Pfeilen: ein Arm, der eine Kutsche über die Schulter hebt. Ein Geweih, gesenkt, und daneben das Wort „spät“, dreimal unterstrichen. Ein Strich, gerade von oben nach unten, und darunter drei Kerben, die dritte tiefer als die anderen. Die letzte Seite ist leer bis auf einen braunen Daumenabdruck. # notiz: jagdnotizen
     -> wahl
 + {echos >= 2 and not kirchenbrief} [Einen Brief mit Kirchensiegel kaufen (2 Echos)]
     ~ echos = echos - 2
     ~ kirchenbrief = true
-    // [KANON] Die Oedon-Kapelle ist im Kathedralbezirk Zuflucht für Überlebende; eine Vikarin der Kirche. [ERWEITERT] Der Brief, der Schreiber, die Glocken.
-    Das Siegel ist gebrochen, der Brief schon gelesen, von wem auch immer. Ein Kirchendiener schreibt an seine Schwester, in einer kleinen, sorgfältigen Hand. In der Kapelle oben im Bezirk nehme man jetzt jeden auf, der an die Tür klopfe und noch sprechen könne. Die Vikarin bete jede Nacht am längsten von allen, und manchmal, wenn sie glaube, allein zu sein, weine sie dabei. Er solle die Glocken läuten, auch wenn niemand komme. Das Letzte ist ausgestrichen, so fest, dass die Feder das Papier zerrissen hat. # notiz: kirchenbrief
+    // [KANON] Die Oedon-Kapelle ist im Kathedralbezirk Zuflucht für Überlebende; die Vikarin betet in der Großen Kathedrale. [ERWEITERT] Der Brief, der Schreiber, die Glocken. PRÜFEN: Ort der Vikarin.
+    Das Siegel ist gebrochen, der Brief schon gelesen, von wem auch immer. Ein Kirchendiener schreibt an seine Schwester, in einer kleinen, sorgfältigen Hand. In der Kapelle oben im Bezirk nehme man jetzt jeden auf, der an die Tür klopfe und noch sprechen könne. Oben in der Kathedrale bete die Vikarin jede Nacht am längsten von allen, und manchmal, wenn sie glaube, allein zu sein, weine sie dabei. Man habe ihm aufgetragen, die Glocken zu läuten, auch wenn niemand mehr komme. Das Letzte ist ausgestrichen, so fest, dass die Feder das Papier zerrissen hat. # notiz: kirchenbrief
     -> wahl
 + {echos >= 3 and not mantel} [Einen Jägermantel kaufen (3 Echos)]
     ~ echos = echos - 3

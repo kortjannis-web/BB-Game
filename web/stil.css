@@ -83,6 +83,7 @@ button.leise { border: 0; color: #6d6458; font-size: 0.85rem; }
 #text p { margin: 0 0 1.1em; animation: auftauchen 0.9s ease both; }
 @keyframes auftauchen { from { opacity: 0; transform: translateY(4px); } }
 #text p.titel { font-family: "Cormorant Garamond", serif; text-align: center; letter-spacing: 0.25em; font-size: 1.4rem; margin: 2.5rem 0; color: var(--gold); }
+#text p.anschlag { font-family: "Cormorant Garamond", serif; font-size: 1.15rem; letter-spacing: 0.02em; color: #c9bfae; text-align: center; border-top: 1px solid var(--linie); border-bottom: 1px solid var(--linie); padding: 0.6rem 0.4rem; }
 #text p.tagebuch { font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 1.2rem; color: #b8ad9c; border-left: 1px solid var(--linie); padding-left: 1rem; }
 #text p.zwischentitel { font-family: "Cormorant Garamond", serif; letter-spacing: 0.2em; font-size: 0.95rem; color: var(--gold); margin-top: 2rem; }
 #text p.bilanz { color: #c4baa9; }

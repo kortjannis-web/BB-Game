@@ -128,25 +128,25 @@ Dazu eine Feuerwaffe, kurz und schwer, in einer Hand, die zu klein ist, um sie z
 }
 Die Bestie hockt zwischen den Liegen, über etwas gebeugt, das du nicht ansehen willst. Sie hebt den Kopf, als hätte sie auf dich gewartet. # kampf: klinik_bestie
 - (t1)
-Sie duckt sich tief. Die Hinterläufe spannen sich, die Krallen graben sich in die Dielen, und das ganze Gewicht ihres Körpers wandert nach hinten wie bei einer Feder, die man zusammendrückt. # anzeichen: sprung
-{ gelernt ? sprung: Du kennst das. Wer sich so duckt, springt, und er springt dorthin, wo du jetzt stehst. }
+Sie duckt sich tief. Die Hinterläufe spannen sich, die Krallen graben sich in die Dielen, und das ganze Gewicht ihres Körpers wandert nach hinten wie bei einer Feder, die man zusammendrückt. # anzeichen: klinik_sprung
+{ gelernt ? klinik_sprung: Du kennst das. Wer sich so duckt, springt, und er springt dorthin, wo du jetzt stehst. }
 + [Zur Seite ausweichen]
     Du wirfst dich nach links. Die Bestie fliegt an dir vorbei, so nah, dass ihr Fell dein Gesicht streift, und kracht in ein Regal. Glas zersplittert, irgendetwas Flüssiges läuft über den Boden.
     -> t2
 + [Den Sprung mit der Waffe abfangen]
     Du stemmst dich gegen den Sprung, als könntest du ihn aufhalten. Das Gewicht trifft dich wie ein Fuhrwerk und wirft dich gegen eine Liege. Etwas in deiner Schulter knackt.
-    ~ zuletzt = sprung
+    ~ zuletzt = klinik_sprung
     ~ treffer(2)
     { leben <= 0: -> tod }
     -> t2
 - (t2)
-Sie richtet sich auf, größer, als du dachtest, und hebt beide Arme weit über den Kopf. Für einen Augenblick steht sie offen da, wie ein Prediger auf der Kanzel. # anzeichen: schwer
+Sie richtet sich auf, größer, als du dachtest, und hebt beide Arme weit über den Kopf. Für einen Augenblick steht sie offen da, wie ein Prediger auf der Kanzel. # anzeichen: klinik_schwer
 + [Unter dem Schlag hindurch nach vorn]
     Du gehst nach vorn statt zurück, in den Schlag hinein und unter ihm hindurch. Die Arme fahren hinter dir zusammen, und deine Waffe findet ihre Seite. Sie heult, und es klingt fast menschlich.
     -> t3
 + [Zurückweichen]
     Du weichst zurück, aber die Arme sind länger, als sie aussehen. Die Krallen ziehen drei heiße Linien über deine Brust.
-    ~ zuletzt = schwer
+    ~ zuletzt = klinik_schwer
     ~ treffer(1)
     { leben <= 0: -> tod }
     -> t3

@@ -95,9 +95,10 @@
         „Über die große Brücke.“ Er sieht dich an, dann auf deine Hände. „Aber das wissen Sie schon, nicht wahr. Sie waren dort. Ist es … ist es noch da oben?“ # lore: kleriker_bestien
     }
     -> themen
-* {gilbert_bruecke} [Wer die Jäger der Kirche sind]
-    // [KANON] Ludwig führte die ersten Jäger der Kirche an; sie wurden auch aus einfachen Bürgern geworben. Hier nur als Gerücht, ohne Namen ([Deutung] und Name kommen später).
-    Gilbert lehnt die Stirn ans Gitter. „Die Leute hier erzählen von einem, der als Erster für die Kirche gejagt hat. Kein Adliger. Einer aus den Gassen, so wie die, die er dann anwarb, Fuhrknechte, Gerber, Söhne von Wäscherinnen.“ Er hustet und wartet, bis es vorbei ist. „Man hat Lieder auf ihn gesungen, sagt man. Seine Klinge soll im Dunkeln geleuchtet haben, wie ein Stück vom Mond.“ Er lächelt schief. „Dann hat man aufgehört, die Lieder zu singen. Seinen Namen sagt hier keiner mehr gern. Ich habe gefragt, warum. Da haben sie die Fensterläden zugemacht.“ # notiz: erster_kirchenjaeger
+* {gilbert_bruecke and (k1_b_anschlag or gehrman_jaeger or kleriker == "besiegt")} [Wer die Jäger der Kirche sind]
+    // [KANON] Ludwig führte die ersten Jäger der Kirche an; viele Kirchenjäger waren Kleriker, geworben wurden auch einfache Bürger. Hier nur als Gerücht, ohne Namen.
+    // PRÜFEN: Ludwigs eigene Herkunft aus dem einfachen Volk ist nicht belegt; hier nur, was die Leute erzählen.
+    Gilbert lehnt die Stirn ans Gitter. „Die Leute hier erzählen von einem, der als Erster für die Kirche gejagt hat. Kein Adliger, sagen sie, einer aus den Gassen, so wie die, die er dann anwarb. Fuhrknechte, Gerber, Söhne von Wäscherinnen. Und Kleriker. Viele Kleriker.“ Er hustet und wartet, bis es vorbei ist. „Man hat Lieder auf ihn gesungen, sagt man. Seine Klinge soll im Dunkeln geleuchtet haben, wie ein Stück vom Mond.“ Er lächelt schief. „Dann hat man aufgehört, die Lieder zu singen. Seinen Namen sagt hier keiner mehr gern. Ich habe gefragt, warum. Da haben sie die Fensterläden zugemacht.“ # notiz: erster_kirchenjaeger
     -> themen
 * {grund == "suche"} [Nach dem Menschen fragen, den du suchst]
     Du beschreibst ihn, so gut es durch ein Gitter geht, und erwähnst den letzten Brief, der nach Weihrauch roch. Gilbert schüttelt langsam den Kopf. „Nein. Hier kommt niemand vorbei, der stehen bleibt, außer Ihnen.“ Dann, nach einer Weile: „Weihrauch. Das riecht man nur oben, bei der Kathedrale. Da unten im Viertel ist es Räucherwerk, süß, Sie haben es gerochen. Weihrauch ist etwas anderes.“ # notiz: spur_vermisst
@@ -166,8 +167,9 @@
 -> betreten("anschlag") ->
 Zwischen zwei Häusern duckt sich eine kleine Kapelle, kaum breiter als ein Hauseingang, mit einer Tür aus schwarzem Holz und einem Fenster darüber, dessen Glas jemand von innen mit Brettern vernagelt hat. Die Tür ist verschlossen. Auf ihr klebt, mit vier Nägeln befestigt, ein Anschlag. Drei Nägel sind braun vor Rost. Der vierte ist neu und blank. Das Papier ist nass vom Nebel und riecht, als du dich vorbeugst, nicht nach dem süßen Räucherwerk der Gassen, sondern nach etwas Herberem, Harzigem. Weihrauch. # bild: tueren # stimmung: spannung
 Oben ein Siegel, ein Kelch mit Strahlen darüber. Darunter, in großen, sauberen Lettern:
-An die Gemeinde in der Nacht der Jagd. Bleibt in euren Häusern und lasst das Räucherwerk nicht erlöschen. Die Jäger der Kirche wachen über euch. Wer Fieber an sich spürt, wer Durst hat, den kein Wasser stillt, wer seine eigene Stimme fremd findet, der zögere nicht und begebe sich zur nächsten Stelle des Blutes. Das Blut der Kirche heilt, was es berührt. Fürchtet nicht das Blut. Fürchtet, was ohne das Blut aus euch würde. # stil: tagebuch # lore: heilende_kirche
-Unter dem Siegel hat jemand mit Kreide etwas dazugeschrieben, klein und schief, und dann versucht, es mit dem Ärmel wegzuwischen. Lesbar ist es noch. Mein Bruder ist gegangen. Er hatte keinen Durst. # notiz: anschlag_kreide
+// PRÜFEN: welches Zeichen die Heilende Kirche führt (Verwechslung mit den Kelchen der Pthumerer vermeiden).
+An die Gemeinde in der Nacht der Jagd. Bleibt in euren Häusern und lasst das Räucherwerk nicht erlöschen. Die Jäger der Kirche wachen über euch. Wer Fieber an sich spürt, wer Durst hat, den kein Wasser stillt, wer seine eigene Stimme fremd findet, der zögere nicht und begebe sich zur nächsten Stelle des Blutes. Das Blut der Kirche heilt, was es berührt. Fürchtet nicht das Blut. Fürchtet, was ohne das Blut aus euch würde. # stil: anschlag # lore: heilende_kirche
+Darunter, auf dem Holz der Tür, hat jemand mit Kreide etwas dazugeschrieben, klein und schief, und dann versucht, es mit dem Ärmel wegzuwischen. Lesbar ist es noch. Mein Bruder ist gegangen. Er hatte keinen Durst. # notiz: anschlag_kreide
 Hinter der Tür, ganz nah am Holz, atmet jemand. Als du die Hand hebst, um zu klopfen, hört das Atmen auf.
 -> k1_hub_b
 
@@ -210,17 +212,17 @@ Sie kommen von zwei Seiten zugleich. Ein hagerer Mann mit einer Mistgabel löst 
     Von oben, von der Kathedrale her, setzt ein Choral ein, langsam und fern, und es ist, als habe er gewartet. Die Frau am Boden rührt sich nicht. # klang: choral
     -> gascoigne_greift_ein
 - (t2)
-Mehr kommen. Und der Riese hat aufgehört, gegen die Tür zu schlagen. Er dreht sich langsam um, den Ziegel in der Faust, und dann rennt er, schwerfällig und unaufhaltsam, wie ein Fuhrwerk, dem die Pferde durchgegangen sind. # anzeichen: ansturm
+Mehr kommen. Und der Riese hat aufgehört, gegen die Tür zu schlagen. Er dreht sich langsam um, den Ziegel in der Faust, und dann rennt er, schwerfällig und unaufhaltsam, wie ein Fuhrwerk, dem die Pferde durchgegangen sind. # anzeichen: riese_ansturm
 + [Dort durchbrechen, wo der Kreis am dünnsten ist]
     Du suchst die Lücke, findest sie und wirfst dich hindurch. Ein Ellbogen trifft dein Kinn, ein Stiefel dein Knie, aber du bist draußen, und hinter dir schlägt der Riese in die eigenen Leute.
-    ~ zuletzt = ansturm
+    ~ zuletzt = riese_ansturm
     ~ treffer(1)
     { leben <= 0: -> tod }
     ~ mob = "durchbrochen"
     -> gascoigne_greift_ein
 + [Stehen und weiterkämpfen]
     Du bleibst stehen. Der Ziegel trifft dich an der Schulter, und die Welt wird für einen Augenblick weiß.
-    ~ zuletzt = ansturm
+    ~ zuletzt = riese_ansturm
     ~ treffer(2)
     { leben <= 0: -> tod }
     ~ mob = "durchbrochen"
@@ -275,7 +277,7 @@ Mehr kommen. Und der Riese hat aufgehört, gegen die Tür zu schlagen. Er dreht 
 - Er nimmt deine Feuerwaffe, wiegt sie in der Hand und gibt sie dir zurück. „Damit tötest du keine Bestie. Damit bringst du sie ins Wanken.“ Und dann zeigt er es dir, mitten auf dem Platz, mit dem Feuer im Rücken: das Warten, bis sie ausholt, bis das ganze Gewicht im Schlag liegt, und genau dann der Schuss. „Nicht davor. Nicht danach. Dann wankt sie, und dann gehört sie dir. So.“ # lore: parade
 ~ parade = true
 ~ parade_quelle = "gascoigne"
-Er lehnt sich an einen Laternenpfahl, zieht eine flache Blechflasche aus dem Mantel und hält sie dir hin. „Gegen die Kälte. Und gegen das andere.“ Es ist Branntwein, scharf, mit einem Nachgeschmack nach Birne. Er trinkt nach dir und wischt den Hals der Flasche mit dem Ärmel ab, sorgfältig, wie ein Mann, der das zu Hause für jemanden tut. # notiz: gascoigne_flasche
+Er lehnt sich an einen Laternenpfahl, zieht eine flache Blechflasche aus dem Mantel und hält sie dir hin. „Gegen die Kälte. Und gegen das andere.“ Es ist Branntwein, scharf, mit einem Nachgeschmack nach Birne. { mantel_gelogen: Er trinkt zuerst und wischt den Hals der Flasche diesmal nicht ab, bevor er sie dir reicht.| Er trinkt nach dir und wischt den Hals der Flasche mit dem Ärmel ab, sorgfältig, wie ein Mann, der das zu Hause für jemanden tut.} # notiz: gascoigne_flasche
 Dann sagt er, beinahe verlegen: „Wenn du heute Nacht einer Frau begegnest, mit einer großen roten Brosche am Kleid: Sag ihr, ich komme bald. Sie macht sich immer Sorgen. Sie soll bei der Kleinen bleiben.“ # quest: gascoigne_frau
 * [Versprechen, es auszurichten]
     ~ gascoigne = gascoigne + 1
@@ -305,10 +307,11 @@ Ein Schuss kracht über den Platz. Die Menge stiebt auseinander, als wüsste jed
 
 = mantel_frage
 // [ERWEITERT] Wendels Mantel: Gascoigne kennt den Geruch. Er wird misstrauisch.
-Mitten in der Bewegung hält er inne. Er beugt sich vor, bis die Krempe seiner Kappe fast deine Schulter berührt, und zieht die Luft ein, lange, durch die Nase. Dann richtet er sich auf, und das Freundliche ist aus seinem Gesicht gegangen, nicht ganz, aber so, wie die Wärme aus einem Zimmer geht, wenn jemand die Tür offen lässt.
+{ mob == "zerstreut": Er tritt einen Schritt näher, beugt sich vor, bis die Krempe seiner Kappe fast deine Schulter berührt, und zieht die Luft ein, lange, durch die Nase. Sein Gesicht wird noch eine Spur härter, so wie Reif auf einer Scheibe dichter wird.| Mitten im Satz hält er inne. Er beugt sich vor, bis die Krempe seiner Kappe fast deine Schulter berührt, und zieht die Luft ein, lange, durch die Nase. Dann richtet er sich auf, und das Freundliche geht aus seinem Gesicht, nicht ganz, aber so, wie die Wärme aus einem Zimmer geht, wenn jemand die Tür offen lässt.}
 „Teer. Pulver. Und Wendel.“ Er sagt den Namen, als lege er ihn auf einen Tisch. „Wendel ist seit zwei Jagden nicht heimgekommen. Woher hast du seinen Mantel?“
 ~ mantel_erkannt = true
 * [Die Wahrheit sagen: von den kleinen grauen Wesen im Traum]
+    // [ERWEITERT] PRÜFEN: Ob Gascoigne den Jägertraum kennt, ist [Offen]. Er glaubt dir, ohne zu sagen, warum.
     Du sagst es ihm, so wie es war: der Garten, das Becken, die kleinen Hände. Es klingt verrückt, noch während du es sagst. Gascoigne schweigt lange. „Im Traum“, sagt er endlich. „Von denen.“ Er reibt sich mit dem Daumen über den Verband, dort, wo die Augen sein müssten. „Das glaub ich dir. Das ist ja das Schlimme.“ # notiz: gascoigne_mantel
 * [Lügen: in einer Gasse gefunden]
     ~ mantel_gelogen = true

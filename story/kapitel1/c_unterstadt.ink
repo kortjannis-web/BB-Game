@@ -67,7 +67,7 @@
 = kampf
 # stimmung: kampf
 - (t1)
-Das Schwein hebt den Kopf. Es sieht dich, und es senkt den Schädel, scharrt mit den Vorderhufen im Wasser, dass es spritzt, und die kleinen roten Augen werden starr. # anzeichen: ansturm
+Das Schwein hebt den Kopf. Es sieht dich, und es senkt den Schädel, scharrt mit den Vorderhufen im Wasser, dass es spritzt, und die kleinen roten Augen werden starr. # anzeichen: schwein_ansturm
 + [Zur Seite, im letzten Moment]
     Es rennt. Du wartest, bis es so nah ist, dass du seinen heißen, fauligen Atem spürst, und springst zur Seite. Es donnert an dir vorbei und rammt die Wand mit solcher Wucht, dass Steine aus dem Gewölbe brechen.
     -> t2
@@ -76,7 +76,7 @@ Das Schwein hebt den Kopf. Es sieht dich, und es senkt den Schädel, scharrt mit
     -> t2
 + [Stehen bleiben und zustechen]
     Du stemmst dich gegen den Ansturm. Es ist, als stelle man sich einer Lawine entgegen. Die Hauer reißen dir den Schenkel auf, und du fliegst ins Wasser.
-    ~ zuletzt = ansturm
+    ~ zuletzt = schwein_ansturm
     ~ treffer(2)
     { leben <= 0: -> tod }
     -> t2

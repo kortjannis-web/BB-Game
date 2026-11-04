@@ -230,17 +230,17 @@
     },
     // Ferner Choral von der Kathedrale: vier Stimmen (Sägezahn durch Vokalfilter „a“), langsam an- und abschwellend, dumpf wie durch Mauern.
     choral() {
-      const t = jetzt();
+      const t = jetzt() + 0.05;
       const dumpf = ctx.createBiquadFilter();
       dumpf.type = "lowpass";
-      dumpf.frequency.value = 1400;
+      dumpf.frequency.value = 750;
       const g = ctx.createGain();
       g.gain.setValueAtTime(0, t);
-      g.gain.linearRampToValueAtTime(0.05, t + 1.8);
-      g.gain.setValueAtTime(0.05, t + 4.2);
+      g.gain.linearRampToValueAtTime(0.5, t + 1.8);
+      g.gain.setValueAtTime(0.5, t + 4.2);
       g.gain.linearRampToValueAtTime(0, t + 7);
       dumpf.connect(g).connect(master);
-      const akkorde = [[50, 57, 62, 65], [48, 55, 60, 63], [50, 57, 62, 66]];
+      const akkorde = [[50, 57, 62, 65], [48, 55, 60, 63], [50, 56, 62, 65]];
       akkorde.forEach((akk, i) => {
         for (const midi of akk) {
           const f = 440 * Math.pow(2, (midi - 69) / 12);
@@ -255,7 +255,7 @@
             const s = ctx.createGain();
             const a = t + i * 2.3;
             s.gain.setValueAtTime(0, a);
-            s.gain.linearRampToValueAtTime(0.25, a + 0.8);
+            s.gain.linearRampToValueAtTime(0.6, a + 0.8);
             s.gain.linearRampToValueAtTime(0, a + 2.6);
             o.connect(bp).connect(s).connect(dumpf);
             o.start(a);
@@ -266,7 +266,7 @@
     },
     // Ferne Kirchenglocke: unharmonische Teiltöne, langes Ausklingen.
     glocke() {
-      const t = jetzt();
+      const t = jetzt() + 0.05;
       for (const [faktor, l, d] of [[0.5, 0.05, 5], [1, 0.07, 4], [1.19, 0.035, 3], [1.5, 0.03, 2.5], [2.0, 0.02, 2], [2.66, 0.012, 1.4]]) {
         ton(196 * faktor, t, d, { laut: l, angriff: 0.004 });
       }

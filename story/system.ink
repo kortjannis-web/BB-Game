@@ -26,7 +26,7 @@ VAR laterne = -> k1_klinik_kampf
 
 // --- Lernen durch Sterben ---------------------------------------------------
 // Vor jedem Treffer wird das Anzeichen gemerkt; wer daran stirbt, erkennt es beim nächsten Mal.
-LIST anzeichen = sprung, schwer, biss, mobhieb, schuss, gascoigne_schuss, kleriker_hieb, kreischen, ansturm, axt_lang, bestie_sprung, griff, jaeger_klinge, wurf, knochensturm, letzter_griff, donner_nah, axt_wirbel, bestie_kreis
+LIST anzeichen = sprung, klinik_sprung, klinik_schwer, gascoigne_bogen, riese_ansturm, schwein_ansturm, biss, mobhieb, schuss, gascoigne_schuss, kleriker_hieb, kreischen, ansturm, axt_lang, bestie_sprung, griff, jaeger_klinge, wurf, knochensturm, letzter_griff, donner_nah, axt_wirbel, bestie_kreis
 VAR zuletzt = ()
 VAR gelernt = ()
 
