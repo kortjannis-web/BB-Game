@@ -6,6 +6,8 @@ Privates Fanprojekt: Bloodborne als geschriebenes, verzweigtes Erzählspiel auf 
 1. `docs/spieldesign.md` (Richtung, Mechaniken, Entscheidungen des Nutzers)
 2. `docs/kapitel1-struktur.md` (Raster des aktuellen Kapitels)
 3. Für Kanon: `docs/recherche/*.md` (jede Angabe mit [Kanon]/[Deutung]/[Offen], Sicherheit, Quellen)
+4. `docs/nutzerstil.md` (wie der Nutzer schreibt und denkt, gelernt aus seinen Vorschlägen)
+5. `npm run vorschlaege`: offene Vorschläge des Nutzers aus der Werkstatt. Gibt es welche, zuerst diese umsetzen (Ablauf in `docs/vorschlaege.md`).
 
 ## Entscheidungen des Nutzers (verbindlich)
 - Viel festgelegt, führt den Spieler; Freiheit, **wie und wo** man erkundet und was man tut.
@@ -28,9 +30,17 @@ Privates Fanprojekt: Bloodborne als geschriebenes, verzweigtes Erzählspiel auf 
 - Notizbuch (`web/notizbuch.js`): Einträge dürfen beim ersten Fund nichts vorwegnehmen.
 - Konventionen für Tags stehen oben in `story/main.ink`.
 
+## Vorschläge des Nutzers (Werkstatt)
+Der Nutzer spielt im Browser und ändert dabei Texte, Entscheidungen, Passagen und Ink-Quelltext; die Seite reicht das als JSON auf dem Zweig `vorschlaege` ein (`vorschlaege/eingang/`). Alles ist Vorschlag, nie direkt übernommen.
+- **Jede Änderung ein eigener Commit** (`Vorschlag v12: …`), Text des Nutzers möglichst wörtlich; Abweichungen begründen.
+- **Muster lernen:** nach jeder Einreichung `docs/nutzerstil.md` mit Regel und Beleg ergänzen; eindeutige Muster auf andere Stränge übertragen (eigene Commits `Übertragen aus v12: …`).
+- **Antworten** in `vorschlaege/antworten/<gleicher Name>.json` auf dem Zweig `vorschlaege` (übernommen/angepasst/abgelehnt/offen mit Begründung, übertragene Stellen). Format und Schritte: `docs/vorschlaege.md`.
+- Die Werkstatt (`web/werkstatt.js`) liest `web/quelle.json` (Ink-Quellen und Knotenzeilen, erzeugt von `npm run bauen`). Neue Felder oder Arten im Vorschlagsformat immer in `docs/vorschlaege.md` und `tools/vorschlaege.mjs` nachziehen.
+
 ## Prüfen (muss grün sein vor jedem Commit)
 `npm run check` = Prüfer (3.000 Zufallsdurchläufe, Erreichbarkeit, Lore an zwei Stellen) + Szenarien + Karte + Bauen der Webfassung.
 Neue Weiche ⇒ neues Szenario in `tools/szenarien.mjs`. Der Erzählbaum (`web/twine.json`, `docs/yharnam-kapitel1.twee`) entsteht automatisch aus den Ink-Dateien; nie von Hand pflegen.
 
 ## Veröffentlichen
-Spiel und Erzählbaum sind claude.ai-Artefakte (Adressen in `web/artefakte.json`). Nach `npm run bauen` die Seiten `web/artefakt/spiel.html` (Dateien: stil.css, spiel.js, notizbuch.js, ink.js, story.json) und `web/artefakt/karte.html` (Dateien: karte.css, karte.js, twine.json) mit dem Artifact-Werkzeug an dieselben Adressen veröffentlichen. Im Artefakt gibt es kein `confirm()`/`alert()`; Speicherzugriffe immer in try/catch. Ink-Fallen: Kampfoptionen mit `+` (wiederholbar nach Tod); Namen von Variablen, Knoten, Stitches und LIST-Einträgen dürfen sich nicht überschneiden.
+Hauptadresse: Netlify, verbunden mit GitHub (`netlify.toml`, Einrichtung in `docs/hosting.md`); alles auf `main` geht automatisch online.
+Zusätzlich sind Spiel und Erzählbaum claude.ai-Artefakte (Adressen in `web/artefakte.json`). Nach `npm run bauen` die Seiten `web/artefakt/spiel.html` (Dateien: stil.css, werkstatt.css, spiel.js, notizbuch.js, werkstatt.js, ink.js, ink-full.js, story.json, quelle.json) und `web/artefakt/karte.html` (Dateien: karte.css, werkstatt.css, werkstatt.js, karte.js, twine.json, quelle.json) mit dem Artifact-Werkzeug an dieselben Adressen veröffentlichen. Im Artefakt gibt es kein `confirm()`/`alert()`; Speicherzugriffe immer in try/catch. Ink-Fallen: Kampfoptionen mit `+` (wiederholbar nach Tod); Namen von Variablen, Knoten, Stitches und LIST-Einträgen dürfen sich nicht überschneiden.

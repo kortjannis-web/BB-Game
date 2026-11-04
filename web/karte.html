@@ -8,8 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=EB+Garamond:ital@0;1&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="karte.css">
+  <link rel="stylesheet" href="werkstatt.css">
 </head>
-<body>
+<body data-seite="baum">
   <header id="kopf">
     <div class="marke">
       <h1>Yharnam <span>Erzählbaum</span></h1>
@@ -23,6 +24,8 @@
       <button id="z-fit" type="button" title="Alles zeigen">Alles</button>
       <button id="z-minus" type="button" aria-label="Verkleinern">−</button>
       <button id="z-plus" type="button" aria-label="Vergrößern">+</button>
+      <button type="button" data-werkstatt-modus aria-pressed="false" title="Passagen, Entscheidungen und Verbindungen als Vorschlag ändern">✎ Bearbeiten</button>
+      <button id="neu-passage" type="button" hidden title="Neue Passage anlegen (von der gewählten aus)">+ Passage</button>
       <a id="link-spiel" class="spielen" href="index.html">Spielen</a>
     </div>
     <ul id="legende" aria-label="Legende"></ul>
@@ -46,6 +49,7 @@
     <div id="tafel-inhalt"></div>
   </aside>
 
+  <script src="werkstatt.js"></script>
   <script src="karte.js"></script>
 </body>
 </html>

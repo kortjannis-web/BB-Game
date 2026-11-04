@@ -91,8 +91,40 @@ button.leise { border: 0; color: #6d6458; font-size: 0.85rem; }
 #text hr::after { content: "❧"; color: var(--linie); font-size: 1.2rem; }
 
 #wahl { display: grid; gap: 0.6rem; margin-top: 1.8rem; }
-#wahl button { text-align: left; padding: 0.75rem 1rem; animation: auftauchen 0.6s ease both; }
-#wahl button::before { content: "› "; color: var(--blut); }
+#wahl .wahlzeile { display: flex; gap: 0.4rem; }
+#wahl .wahlzeile > button:first-child { flex: 1; text-align: left; padding: 0.75rem 1rem; animation: auftauchen 0.6s ease both; }
+#wahl .wahlzeile > button:first-child::before { content: "› "; color: var(--blut); }
+#wahl > button { text-align: left; padding: 0.75rem 1rem; }
+#wahl.ruhig .wahlzeile > button:first-child { animation: none; }
+
+/* Werkstatt im Spiel: im Modus "Bearbeiten" ist jeder Absatz und jede Entscheidung anklickbar. */
+#leiste .werkzeugknopf { margin-left: 0; padding: 0.3rem 0.6rem; font-size: 0.85rem; text-decoration: none; color: var(--papier); border: 1px solid var(--linie); }
+#leiste .werkzeugknopf:hover { border-color: var(--gold); }
+#leiste #knopf-notizbuch { margin-left: auto; }
+.stift { display: none; padding: 0 0.8rem !important; color: var(--blass); }
+body.bearbeiten .stift { display: block; }
+.nur-bearbeiten { display: none; }
+body.bearbeiten .nur-bearbeiten { display: grid; gap: 0.5rem; }
+body.bearbeiten #text p[data-orig], body.bearbeiten #text p.eingefuegt { cursor: text; border-radius: 2px; transition: background 0.2s, box-shadow 0.2s; }
+body.bearbeiten #text p[data-orig]:hover, body.bearbeiten #text p.eingefuegt:hover { background: rgba(179, 150, 98, 0.07); box-shadow: -0.6rem 0 0 rgba(179, 150, 98, 0.07), 0.6rem 0 0 rgba(179, 150, 98, 0.07); }
+body.bearbeiten #text p.geaendert, body.bearbeiten #wahl button.geaendert { box-shadow: inset 3px 0 0 #7fae86; padding-left: 0.6rem; }
+body.bearbeiten #text p.eingefuegt { box-shadow: inset 3px 0 0 #7fae86; padding-left: 0.6rem; font-style: normal; }
+body.bearbeiten #text p.gestrichen, body.bearbeiten #wahl button.gestrichen { text-decoration: line-through; text-decoration-color: rgba(194, 91, 79, 0.7); opacity: 0.5; }
+body:not(.bearbeiten) #text p.gestrichen { display: none; }
+#wahl .vorschlag { text-align: left; padding: 0.6rem 1rem; border-style: dashed; color: var(--blass); font-style: italic; }
+.wahl-editor input, .neue-wahl input, .neue-wahl textarea { margin-bottom: 0.2rem; }
+.wahl-extra .ws-werkzeug { margin-bottom: 0; }
+#leiste .umbruch { display: none; }
+@media (max-width: 520px) {
+  #leiste { flex-wrap: wrap; row-gap: 0.4rem; column-gap: 0.6rem; }
+  #leiste .umbruch { display: block; flex-basis: 100%; height: 0; }
+  #leiste #knopf-notizbuch { margin-left: 0; }
+  #leiste button, #leiste .werkzeugknopf { padding: 0.25rem 0.6rem; font-size: 0.85rem; }
+  #buehne { padding-top: calc(5.6rem + env(safe-area-inset-top, 0px)); }
+  #text p { scroll-margin-top: 5.6rem; }
+  .ws-schwebe { padding: 0.35rem 0.7rem; font-size: 0.9rem; }
+}
+#titel .werkstatt-start { margin-top: 0.8rem; font-size: 0.95rem; color: var(--blass); }
 
 dialog {
   max-width: 34rem; width: calc(100% - 2rem); max-height: 80vh;

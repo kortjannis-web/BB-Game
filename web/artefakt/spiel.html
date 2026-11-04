@@ -3,6 +3,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=EB+Garamond:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="stil.css">
+<link rel="stylesheet" href="werkstatt.css">
 <div id="vignette" aria-hidden="true"></div>
 
   <header id="leiste" hidden>
@@ -10,7 +11,10 @@
     <span title="Einsicht">Einsicht <b id="h-einsicht">0</b></span>
     <span title="Blutampulle">Ampulle <b id="h-ampulle">0</b></span>
     <span title="Jägermarken" id="h-marken-wrap" hidden>Marken <b id="h-marken">0</b></span>
+    <span class="umbruch" aria-hidden="true"></span>
     <button id="knopf-notizbuch" type="button">Notizbuch</button>
+    <a id="link-baum" class="werkzeugknopf" href="https://claude.ai/artifact/NPHhjkNgsNCP2FrLbTGFUX" target="_blank" rel="noopener" title="Diese Stelle im Erzählbaum öffnen">Baum</a>
+    <button type="button" class="werkzeugknopf" data-werkstatt-modus aria-pressed="false" title="Texte, Entscheidungen und Mechanik als Vorschlag ändern">✎ Bearbeiten</button>
   </header>
 
   <main id="buehne">
@@ -26,6 +30,7 @@
       <p id="warnung" class="warnung" hidden>Es gibt schon einen Spielstand. Klicke noch einmal, um neu zu beginnen und ihn zu überschreiben.</p>
       <button id="fortsetzen" type="button" hidden>Die Jagd fortsetzen</button>
       <p class="baum"><a id="link-karte" href="https://claude.ai/artifact/NPHhjkNgsNCP2FrLbTGFUX" target="_blank" rel="noopener">Den Erzählbaum ansehen</a> (alle Wege des Kapitels, wie in Twine)</p>
+      <p class="werkstatt-start"><button type="button" class="leise" data-werkstatt-modus aria-pressed="false">✎ Bearbeiten</button> Beim Spielen Texte, Entscheidungen und Mechanik als Vorschlag ändern.</p>
       <p class="hinweis">Privates Fanprojekt. Nicht mit FromSoftware oder Sony verbunden.</p>
     </section>
     <article id="text" hidden></article>
@@ -41,4 +46,5 @@
 
   <script src="ink.js"></script>
   <script src="notizbuch.js"></script>
+  <script src="werkstatt.js"></script>
   <script src="spiel.js"></script>

@@ -11,7 +11,8 @@
     "karte": "node tools/karte.mjs",
     "szenarien": "node tools/szenarien.mjs",
     "check": "node tools/pruefen.mjs && node tools/szenarien.mjs && node tools/karte.mjs && node tools/bauen.mjs",
-    "twine": "node tools/twine.mjs"
+    "twine": "node tools/twine.mjs",
+    "vorschlaege": "node tools/vorschlaege.mjs"
   },
   "dependencies": {
     "inkjs": "2.4.0"

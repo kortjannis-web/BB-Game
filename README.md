@@ -4,10 +4,14 @@ Bloodborne als geschriebenes, verzweigtes Erzählspiel auf Deutsch. Privates Fan
 
 **Stand:** Kapitel 1 (Yharnam bis Gascoigne) vollständig geschrieben und im Browser spielbar.
 
-- **Spielen:** https://claude.ai/artifact/8K6UJippKkrq1CsXpkXvaL
+- **Spielen (eigene Adresse):** über Netlify, verbunden mit GitHub; Einrichtung in [`docs/hosting.md`](docs/hosting.md)
+- **Spielen (Artefakt):** https://claude.ai/artifact/8K6UJippKkrq1CsXpkXvaL
 - **Erzählbaum (Twine-Ansicht):** https://claude.ai/artifact/NPHhjkNgsNCP2FrLbTGFUX
 
 Beide Seiten sind privat; Teilen geht über das Teilen-Menü der Seite.
+
+## Mitschreiben: die Werkstatt
+Im Spiel und im Erzählbaum oben **✎ Bearbeiten** einschalten: Absätze umschreiben, streichen oder ergänzen, Entscheidungen umbenennen oder neue vorschlagen, im Baum ganze Passagen anlegen, verbinden oder streichen, und über **Quelltext** die Ink-Mechanik ändern und sofort testen. Alles bleibt Vorschlag und geht über **Werkstatt → An GitHub senden** auf den Zweig `vorschlaege`. Claude setzt jede Änderung einzeln um, antwortet in der Werkstatt und lernt daraus den eigenen Stil (`docs/nutzerstil.md`). Ablauf: [`docs/vorschlaege.md`](docs/vorschlaege.md).
 
 ## Aufbau
 - `story/` die Geschichte in [Ink](https://www.inklestudios.com/ink/) (`main.ink`, `system.ink`, `traum.ink`, `kapitel1/`)
@@ -33,6 +37,7 @@ npm run szenarien  # bestimmte Wege und Ausgänge erreichbar?
 npm run karte      # docs/karte-kapitel1.md neu erzeugen
 npm run bauen      # Spiel- und Baumdaten, Twee-Datei und Artefakt-Fassungen neu erzeugen
 npm run twine      # nur Erzählbaum und Twee-Datei
+npm run vorschlaege  # eingereichte Vorschläge lesen (mit Datei:Zeile im Quelltext)
 ```
 
 Zum Durchklicken und Bearbeiten eignet sich auch [Inky](https://github.com/inkle/inky) (Datei `story/main.ink` öffnen).

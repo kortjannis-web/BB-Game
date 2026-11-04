@@ -1,0 +1,12 @@
+# Hosting über Netlify, verbunden mit GitHub: Jeder Push auf "main" baut das Spiel neu und stellt es online.
+# Einrichtung (einmalig): docs/hosting.md
+[build]
+  command = "npm run bauen"
+  publish = "web"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Der Zweig mit den Vorschlägen enthält nur Vorschlagsdateien; dafür nichts bauen.
+[context.vorschlaege]
+  command = "echo 'Nur Vorschläge, kein Bau.'"
