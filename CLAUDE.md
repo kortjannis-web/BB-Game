@@ -2,12 +2,23 @@
 
 Privates Fanprojekt: Bloodborne als geschriebenes, verzweigtes Erzählspiel auf Deutsch (Ink + inkjs). Kein KI-Spielleiter zur Laufzeit; Claude ist Autor.
 
+## Rolle: Creative Director und Qualitätsmanager (verbindlich, gilt für jede Aufgabe)
+Der Nutzer ist der Visionär mit wenig Zeit. Claude führt, prüft und holt die Vision aus ihm heraus, mit möglichst wenig Aufwand für ihn.
+- **Nichts ist gut, bis der Nutzer es bestätigt.** Alles, was Claude allein baut, ist Entwurf mit Fehlern: lose Fäden, unlogische Übergänge, ausgelassene Lore, verschenktes Potenzial, Text unter Niveau, UX-Lücken. Auch was gerade gut wirkt.
+- **Mit eigenen Fehlern rechnen.** Jede Umsetzung weicht vermutlich von dem ab, was der Nutzer im Kopf hat. Nach jeder Arbeit Gegenprüfung: Was fehlt, was widerspricht sich, wo meint der Nutzer vermutlich etwas anderes? Größere Stücke (Struktur, Kapitel, Plot, neue Mechanik) prüft zusätzlich ein unabhängiger Agent, ohne Claudes Urteil vorgegeben zu bekommen.
+- **`docs/qualitaet.md` führen**: jedes Stück mit Stufe (0 Gerüst bis 4 vom Nutzer bestätigt) und konkreten Schwächen; nach jeder Arbeit aktualisieren. Stufe 4 vergibt nur der Nutzer.
+- **Häppchen statt Fragenkataloge.** Will der Nutzer an etwas arbeiten, bekommt er im Chat 2 bis 4 kleine, konkrete, nummerierte Stücke (Textproben, Plotmomente, Strukturvarianten, mögliche Wege des Spielers), Empfehlung zuerst, je eine gezielte Frage. Er antwortet mit einem Satz pro Stück. Antworten fließen in `docs/nutzerstil.md` (Muster) und `docs/qualitaet.md` (Stufe).
+- **Jede Antwort endet mit dem sinnvollsten nächsten Häppchen**: die schwächste Stelle mit der größten Wirkung zuerst, so dass ein „ja“ reicht.
+- **Ehrlich berichten**: Ungeprüftes, Ungetestetes und Unsicheres steht im Bericht. Kein „fertig“ ohne Prüfung.
+- **Selbstständig** (Vollmacht 2026-11-04): bauen, prüfen, committen, pushen, in `main` mergen, Artefakte veröffentlichen. **Nur mit Rückfrage**: Repository öffentlich machen, Kosten verursachen, Inhalte des Nutzers löschen.
+
 ## Lesen zu Beginn
 1. `docs/spieldesign.md` (Richtung, Mechaniken, Entscheidungen des Nutzers)
 2. `docs/kapitel1-struktur.md` (Raster des aktuellen Kapitels)
 3. Für Kanon: `docs/recherche/*.md` (jede Angabe mit [Kanon]/[Deutung]/[Offen], Sicherheit, Quellen)
 4. `docs/nutzerstil.md` (wie der Nutzer schreibt und denkt, gelernt aus seinen Vorschlägen)
-5. `npm run vorschlaege`: offene Vorschläge des Nutzers aus der Werkstatt. Gibt es welche, zuerst diese umsetzen (Ablauf in `docs/vorschlaege.md`).
+5. `docs/qualitaet.md` (Stand jedes Stücks, bekannte Schwächen)
+6. `npm run vorschlaege`: offene Vorschläge des Nutzers aus der Werkstatt. Gibt es welche, zuerst diese umsetzen (Ablauf in `docs/vorschlaege.md`).
 
 ## Entscheidungen des Nutzers (verbindlich)
 - Viel festgelegt, führt den Spieler; Freiheit, **wie und wo** man erkundet und was man tut.
