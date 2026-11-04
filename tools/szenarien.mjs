@@ -7,8 +7,8 @@ import { compile, play, rng, variable } from "./ink.mjs";
 const SZENARIEN = [
   {
     name: "Bester Weg: Moment der Klarheit mit Gascoigne",
-    wuensche: ["Ihm danken", "Ihm deinen Namen sagen", "Versprechen, es auszurichten", "Versprechen, die Mutter", "Allein kämpfen", "Gascoigne rufen", "Ihn beim Namen rufen", "Den Kopf berühren", "an seine Tochter", "Spieluhr aufziehen", "Ihn rufen", "Ihm versprechen", "Lügen", "Ihr sagen, ihr Vater"],
-    verbote: ["Klinik zu laufen", "anfahren", "drohen", "fliehen", "werfen", "wo du ihn gesehen", "Brosche geben", "Jägermarke"],
+    wuensche: ["Ihm danken", "Ihm deinen Namen sagen", "Versprechen, es auszurichten", "Versprechen, die Mutter", "allein entgegengehen", "Nach Gascoigne rufen", "„Gascoigne. Gascoigne!“", "Den Kopf berühren", "an seine Tochter", "Spieluhr aufziehen", "Ihn rufen", "Ihm versprechen", "Lügen", "Ihr sagen, ihr Vater"],
+    verbote: ["Klinik zu laufen", "anfahren", "drohen", "fliehen", "Wurf ablenken", "wo du ihn gesehen", "Brosche geben", "Jägermarke"],
     erwartet: { gascoigne_moment: true, gedaechtnis_kleriker: true, versprechen_gascoigne: true, maedchen_wo: "zuhause" },
   },
   {
@@ -19,14 +19,14 @@ const SZENARIEN = [
   },
   {
     name: "Kleriker-Bestie abgelenkt",
-    wuensche: ["Langsam, die Dächer", "Hinaufklettern", "Etwas werfen"],
-    verbote: ["kämpfen", "fliehen"],
+    wuensche: ["Langsam, die Dächer", "Hinaufklettern", "Wurf ablenken"],
+    verbote: ["allein entgegengehen", "fliehen"],
     erwartet: { kleriker: "abgelenkt" },
   },
   {
     name: "Kleriker-Bestie: Flucht durch die Gassen",
     wuensche: ["fliehen"],
-    verbote: ["kämpfen", "werfen"],
+    verbote: ["allein entgegengehen", "Wurf ablenken"],
     erwartet: { kleriker: "geflohen" },
   },
   {
@@ -61,7 +61,7 @@ const SZENARIEN = [
   },
   {
     name: "Mob verbrannt: Martha stirbt, Gascoigne kühler",
-    wuensche: ["Gilberts Fenster", "Ihm deinen Namen sagen und zuhören", "Gehen", "Hauptstraße mit dem Scheiterhaufen", "Stehen bleiben und kämpfen", "Feuer in die Menge"],
+    wuensche: ["Gilberts Fenster", "„Ich heiße", "„Ich muss weiter", "Hauptstraße mit dem Scheiterhaufen", "Stehen bleiben und kämpfen", "Feuer in die Menge"],
     verbote: [],
     erwartet: { mob_verbrannt: true },
   },
@@ -91,7 +91,7 @@ const SZENARIEN = [
   },
   {
     name: "Gilbert das Versprechen gegeben",
-    wuensche: ["Gilberts Fenster", "Ihm deinen Namen sagen und zuhören", "Gehen", "Zu Gilbert", "Ihm von Gascoigne erzählen", "Es ihm versprechen"],
+    wuensche: ["Gilberts Fenster", "„Ich heiße", "„Ich muss weiter", "Zu Gilbert", "Ihm von Gascoigne erzählen", "Es ihm versprechen"],
     verbote: [],
     erwartet: { versprechen_gilbert: true },
   },

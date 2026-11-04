@@ -10,7 +10,8 @@
     "pruefen": "node tools/pruefen.mjs",
     "karte": "node tools/karte.mjs",
     "szenarien": "node tools/szenarien.mjs",
-    "check": "node tools/pruefen.mjs && node tools/szenarien.mjs && node tools/karte.mjs && node tools/bauen.mjs",
+    "check": "node tools/pruefen.mjs && node tools/szenarien.mjs && node tools/stil.mjs --kurz && node tools/karte.mjs && node tools/bauen.mjs",
+    "stil": "node tools/stil.mjs",
     "twine": "node tools/twine.mjs",
     "vorschlaege": "node tools/vorschlaege.mjs"
   },

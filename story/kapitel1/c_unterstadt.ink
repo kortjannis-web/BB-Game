@@ -18,7 +18,7 @@
 + {eileen_stufe == 1} [Die Rabenfedern auf dem Dach über den Gräbern] -> k1_c_eileen
 + [Zu den Gräbern] -> k1_c_graeber
 + {kanal_leiter} [Die Leiter hinauf nach Zentral-Yharnam] -> k1_hub_b
-+ {ampulle > 0 and leben < LEBEN_MAX} [Die Blutampulle trinken] -> ampulle_ruhig -> wohin
++ {ampulle > 0 and leben < LEBEN_MAX} [Die Ampulle in den Schenkel stoßen] -> ampulle_ruhig -> wohin
 + {kleriker == "besiegt"} [An der Laterne an der Brücke in den Traum]
     ~ laterne = -> k1_hub_c
     -> traum_von_laterne
@@ -91,7 +91,7 @@ Es dreht sich, schwerfällig, und reißt das Maul auf. Darin stecken noch Fetzen
     ~ treffer(1)
     { leben <= 0: -> tod }
     -> t2
-+ {ampulle > 0} [Die Blutampulle trinken]
++ {ampulle > 0} [Die Ampulle in den Schenkel stoßen]
     -> ampulle_gefahr(1) -> t2
 - (sieg)
 ~ schwein = "tot"

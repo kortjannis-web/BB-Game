@@ -75,7 +75,7 @@ Er lässt die Donnerbüchse sinken und kommt in langen Schritten über die Gräb
 + [Unter dem Bogen durch und zuschlagen]
     Du duckst dich. Die Axt pfeift über deinen Kopf. Dann bist du an ihm, und die Säge findet seine Seite. Er grunzt, mehr überrascht als verletzt.
     -> t2b
-+ {ampulle > 0} [Die Blutampulle trinken]
++ {ampulle > 0} [Die Ampulle in den Schenkel stoßen]
     -> ampulle_gefahr(2) -> t2
 + {jaegermarken > 0} [Eine Jägermarke zerdrücken] -> marke
 - (t2b)
@@ -112,7 +112,7 @@ Er fasst den Stiel ganz am Ende und beginnt sich zu drehen. Die Schneide zieht e
     Du tust das Gegenteil von dem, was deine Beine wollen. In den Kreis der Axt hinein, bis du seinen Atem riechst, Eisen und etwas Süßes, Verdorbenes. Hier trifft die lange Klinge nicht. Hier triffst du.
     -> t3b
 + {spieluhr and spieluhr_mal < 3} [Die Spieluhr aufziehen] -> uhr
-+ {ampulle > 0} [Die Blutampulle trinken]
++ {ampulle > 0} [Die Ampulle in den Schenkel stoßen]
     -> ampulle_gefahr(2) -> t3
 - (t3b)
 // [ERWEITERT] Der Hieb von oben: Er stemmt die lange Axt in die Höhe.
@@ -147,7 +147,7 @@ Er stößt dich mit dem Stiel von sich, nicht fest, nur weit genug. Dann hebt er
     ~ im_lied_getroffen = true
     Du schlägst zu. Er wehrt sich nicht. Er steht da, gekrümmt, die Hände am Kopf, und nimmt den Hieb, ohne die Arme zu senken, weil die Hände an seinem Kopf wichtiger sind. Das Lied spielt weiter, bis die Feder abgelaufen ist.
     -> weiter_nach_lied
-+ {ampulle > 0} [Die Blutampulle trinken, solange er lauscht]
++ {ampulle > 0} [Die Ampulle in den Schenkel stoßen, solange er lauscht]
     Er hört nur das Lied. Du hast Zeit.
     -> ampulle_ruhig -> weiter_nach_lied
 + [Abwarten, bis das Lied endet]
@@ -212,12 +212,12 @@ Sie springt. Sie springt über drei Gräber hinweg, die Klauen voran, mit einem 
     ~ treffer(2)
     { leben <= 0: -> tod }
     -> t4b
-+ {ampulle > 0} [Die Blutampulle trinken]
++ {ampulle > 0} [Die Ampulle in den Schenkel stoßen]
     -> ampulle_gefahr(2) -> t4
 - (t4b)
 // [ERWEITERT] Sie umkreist dich über die Gräber; wenn das Heulen aussetzt, kommt sie.
 Sie greift nicht an. Sie läuft. Im Kreis um dich, über die Gräber, auf allen vieren, und wo ihre Klauen aufsetzen, reißt die Erde in Furchen auf. Sie heult dabei, ohne Pause, ein langer Ton, der von der Mauer zurückkommt, so dass du sie von zwei Seiten zugleich zu hören glaubst.
-+ {ampulle > 0} [Die Blutampulle trinken, solange sie heult]
++ {ampulle > 0} [Die Ampulle in den Schenkel stoßen, solange sie heult]
     Solange sie heult, ist Zeit. Du nimmst sie dir.
     -> ampulle_ruhig -> t4c
 + [Horchen, wo sie ist]

@@ -24,11 +24,11 @@ Es ist größer als ein Haus, ausgemergelt bis auf die Knochen, und das Fell hä
 }
 { schreie >= 1: Es reißt das Maul auf und kreischt, und du erkennst den Laut wieder, den du über den Dächern gehört hast. Jetzt hat er einen Körper. }
 { kleriker == "abgelenkt" or kleriker == "geflohen": Es hat dich nicht vergessen. Es dreht den Kopf, langsam, und sucht genau die Stelle, an der du stehst. }
-+ {q_frau == 1} [Gascoigne rufen und gemeinsam kämpfen] -> rufen
-+ [Allein kämpfen] -> kampf
-+ {kiesel > 0 or molotow > 0} [Etwas werfen, damit sie sich abwendet, und an ihr vorbei] -> ablenken
-+ [Über das Geländer und durch die Gassen fliehen] -> fliehen
-+ {jaegermarken > 0} [Eine Jägermarke zerdrücken] -> marke
++ {q_frau == 1} [Nach Gascoigne rufen] -> rufen
++ [Die Säge ausklappen und ihr allein entgegengehen] -> kampf
++ {kiesel > 0 or molotow > 0} [Sie mit einem Wurf ablenken und vorbeischleichen] -> ablenken
++ [Über das Geländer springen und fliehen] -> fliehen
++ {jaegermarken > 0} [Die Jägermarke in der Faust zerdrücken] -> marke
 
 = rufen
 { gascoigne_verraten:
@@ -51,38 +51,38 @@ Die Bestie stützt sich auf den übergroßen linken Arm und schiebt den Kopf vor
 + [Nach rechts, unter den Arm]
     Du läufst hinein, nicht weg. Nach rechts, wo der Bogen beginnt. Luftzug über dem Scheitel. Hinter dir kippt eine Kutsche in den Abgrund. Dann bist du an ihrer Flanke, und die Säge beißt in Rippen.
     -> t2
-+ [Nach hinten ausweichen]
++ [Zurückspringen]
     Du springst zurück. Zu kurz. Der Bogen ist länger, als ein Arm sein dürfte. Krallen an der Hüfte, dann ein Wagenrad im Rücken.
     ~ zuletzt = kleriker_hieb
     ~ treffer(2)
     { leben <= 0: -> tod }
     -> t2
-+ [Nach links, aus dem Bogen heraus]
++ [Nach links, aus dem Bogen]
     Du wirfst dich nach links, weg von dem Arm. Der Bogen endet nicht, wo du ihn enden siehst. Die Krallen holen dich ein, am Ende ihrer Bahn, schwächer, aber sie holen dich ein.
     ~ zuletzt = kleriker_hieb
     ~ treffer(1)
     { leben <= 0: -> tod }
     -> t2
-+ {feuer} [Feuer in ihr Gesicht]
++ {feuer} [Gilberts Flamme in ihre Schnauze]
     Du reißt Gilberts Flammenwerfer hoch. Die Flamme fährt in die schnüffelnde Schnauze, das verfilzte Fell fängt sofort. Sie wirft sich zurück und schlägt blind um sich, den brennenden Kopf zwischen den Schultern. Gilbert hatte recht. # notiz: kleriker_feuer
     -> t2
 - (t2)
 Sie richtet sich auf, höher und höher, bis ihr Geweih im Nebel verschwindet, und reißt das Maul auf. Ihr Hals weitet sich wie ein Blasebalg, die Rippen treten unter dem Fell hervor, und für einen Herzschlag ist es auf der Brücke so still, dass du die Tropfen hörst, die von ihrem Geweih fallen. # anzeichen: kreischen
 { gelernt ? kreischen: Diese Stille kennst du. Sie holt Luft für den Schrei, und wer dann in ihrer Nähe steht, hört eine Weile gar nichts mehr. }
-+ [Jetzt angreifen, solange sie schreit]
++ [In den Schrei hinein zuschlagen]
     Du greifst an. Der Schrei trifft dich aus nächster Nähe, als schlüge eine Glocke dicht neben deinem Kopf. Du taumelst. Ihr kleiner Arm erwischt dich, beinahe beiläufig.
     ~ zuletzt = kreischen
     ~ treffer(1)
     { leben <= 0: -> tod }
     -> t3
-+ [Ohren zu, Abstand halten]
++ [Die Ohren zuhalten und zurückweichen]
     Hände auf die Ohren, rückwärts. Der Schrei geht trotzdem durch dich hindurch, durch Haut und Knochen. Einen Augenblick lang weißt du nicht, wo oben ist. Aber du stehst.
     -> t3
-+ {molotow > 0} [Molotow ins offene Maul]
++ {molotow > 0} [Den Molotow in ihr offenes Maul]
     ~ molotow = molotow - 1
     Die Flasche fliegt im hohen Bogen und zerspringt zwischen den Zähnen. Feuer im Schlund. Der Schrei bricht ab und wird zu einem nassen, gurgelnden Würgen, und sie stürzt auf die Knie. Du bist an ihr, bevor sie wieder hochkommt, und die Säge reißt ihr die Flanke auf.
     -> t4
-+ {ampulle > 0} [Die Blutampulle trinken]
++ {ampulle > 0} [Die Ampulle in den Schenkel stoßen]
     Während sie schreit, ist Zeit. Du stößt dir die Ampulle in den Schenkel.
     -> ampulle_ruhig -> t3
 - (t3)
@@ -95,10 +95,10 @@ Sie fällt auf alle viere zurück und tastet mit dem langen Arm zwischen die Kut
     ~ treffer(2)
     { leben <= 0: -> tod }
     -> t4
-+ [Quer über die Brücke laufen]
++ [Quer über die Brücke rennen]
     Du rennst quer über die Brücke. Hinter dir schlägt die Kutsche auf, dort, wo du standest. Holz, Glas, ein Pferdebein, das durch die Luft wirbelt. Dann Stille. Du lebst.
     -> t4
-+ [Auf sie zu, solange der Arm hinten ist]
++ [Unter dem erhobenen Arm auf sie zu]
     Du läufst ihr entgegen, unter dem erhobenen Arm hindurch. Die Kutsche fliegt über dich hinweg und zerschellt hinter dir. Ein Hieb in den Bauch, wo das Fell dünn ist. Sie heult. Aber der kleine Arm findet dich auf dem Rückweg und schlägt dich zu Boden.
     ~ zuletzt = wurf
     ~ treffer(1)
@@ -110,10 +110,10 @@ Sie zieht sich zusammen, die Hinterläufe unter den Leib, den langen Arm nach vo
 + {parade} [Im Absprung schießen]
     Du wartest, {parade_quelle == "gascoigne":wie Gascoigne es dir auf dem Platz gezeigt hat|wie der alte Mann im Traum es beschrieben hat}, bis das ganze Gewicht im Sprung liegt. Dann schießt du. Sie wankt mitten in der Luft und schlägt vor dir auf die Brust. Du bist über ihr, bevor sie sich fängt, und stößt zu, tief, mit beiden Händen. # notiz: viszeral
     -> phase2
-+ [Seitlich wegrollen]
++ [Zur Seite rollen]
     Du rollst zur Seite. Sie landet, wo du standest. Das Pflaster springt in Platten auf.
     -> phase2
-+ [Den Sprung abfangen]
++ [Den Sprung mit der Säge abfangen]
     Du stellst dich ihr entgegen, und schon dabei weiß dein Rücken, dass es falsch ist. Das Gewicht begräbt dich. Die Brücke unter deinen Schulterblättern ist kalt.
     ~ zuletzt = sprung
     ~ treffer(2)
@@ -124,7 +124,7 @@ Die Bestie kommt wieder hoch, und etwas hat sich verändert. Der lange Arm reiß
 - (t5)
 Der verzweigte Arm schlägt um sich, links, rechts, links, ein Sturm aus Knochen und Krallen. Zwischen den Schlägen schwingt er jedes Mal ein Stück weiter aus, als ziehe ihn sein eigenes Gewicht, und für die Länge eines Atemzugs ist ihre Brust offen. # anzeichen: knochensturm
 { gelernt ? knochensturm: Links, rechts, links, und dann die Lücke. Der Sturm reicht weit, aber nicht bis an ihre Brust. }
-+ [Rückwärts, bis die Kutschen dich decken]
++ [Rückwärts hinter die Kutschen]
     Du flüchtest hinter eine Kutsche. Sie zersplittert wie eine Streichholzschachtel. Ein Speichenrad an der Schläfe.
     ~ zuletzt = knochensturm
     ~ treffer(1)
@@ -137,14 +137,14 @@ Der verzweigte Arm schlägt um sich, links, rechts, links, ein Sturm aus Knochen
 + [Zwischen den Hieben nach vorn, an ihre Brust]
     Ein Atemzug Zeit. Du nimmst ihn. An ihrer Brust, so nah, dass du den Herzschlag durch das Fell spürst. Hier erreicht der Arm dich nicht. Du schlägst zu, wieder und wieder. Sie taumelt rückwärts gegen das Geländer.
     -> t6
-+ {ampulle > 0} [Die Blutampulle trinken]
++ {ampulle > 0} [Die Ampulle in den Schenkel stoßen]
     -> ampulle_gefahr(2) -> t5
 + {jaegermarken > 0} [Eine Jägermarke zerdrücken] -> marke
 - (t6)
 // [ERWEITERT] Der Ansturm mit dem Geweih.
 Am Geländer senkt sie den Kopf, bis das verknotete Geweih auf der Höhe deiner Brust steht. Die Hinterläufe scharren über das Pflaster, einmal, zweimal, und mit jedem Scharren rückt sie ein Stück zur Seite, bis sie dich genau vor den Hörnern hat. Ihre Augen sind halb geschlossen, als ziele sie mit etwas anderem als mit ihnen. Als du einen halben Schritt zur Seite machst, scharrt sie und rückt nach. # anzeichen: ansturm
 { gelernt ? ansturm: Wer vor diesem Geweih davonläuft, läuft in ihrer Richtung. Sie ist schneller. Nur im letzten Augenblick zur Seite, nicht früher. }
-+ [Zurück über die Brücke laufen]
++ [Über die Brücke davonrennen]
     Du rennst. Hinter dir das Trommeln ihrer Läufe, näher, näher. Das Geweih erwischt dich im Rücken und wirft dich über eine Kutsche hinweg.
     ~ zuletzt = ansturm
     ~ treffer(2)
@@ -156,31 +156,31 @@ Am Geländer senkt sie den Kopf, bis das verknotete Geweih auf der Höhe deiner 
     ~ treffer(2)
     { leben <= 0: -> tod }
     -> t7
-+ [Stehen bleiben, dann zur Seite]
++ [Warten, bis das Geweih dich fast berührt]
     Du bleibst stehen. Das Geweih wächst vor dir, ein Wald aus Horn. Jetzt. Ein Schritt nach links. Sie rast vorbei, und das Geländer, gegen das sie prallt, bricht in Stücken in den Abgrund. Sie hängt halb darüber, die Hinterläufe in der Luft.
     -> t7
-+ [Ihr entgegen und zuschlagen]
++ [Dem Geweih entgegenstürmen]
     Du gehst ihr entgegen. Die Säge trifft Horn, prallt ab. Das Geweih nicht. Es hebt dich hoch und lässt dich fallen.
     ~ zuletzt = ansturm
     ~ treffer(2)
     { leben <= 0: -> tod }
     -> t7
-+ {ampulle > 0} [Die Blutampulle trinken]
++ {ampulle > 0} [Die Ampulle in den Schenkel stoßen]
     -> ampulle_gefahr(2) -> t6
 - (t7)
 // [ERWEITERT] Die falsche Ruhe: Sie liegt still, aber der kleine Arm lauert.
 Sie liegt auf der Seite, den Knochenarm unter sich begraben, und ihr Atem geht rasselnd und flach, wie bei einem Tier, das man auf der Straße angefahren hat. Der Kopf liegt auf dem Pflaster, ganz nah, das Auge geschlossen. Nur der kleine Arm, der rechte, liegt nicht still. Seine Finger öffnen und schließen sich, langsam, wie bei einem Kind, das im Schlaf nach etwas greift. # anzeichen: letzter_griff
 { gelernt ? letzter_griff: Die Finger. Sie greifen nicht im Schlaf. Sie warten darauf, dass jemand sich über den Kopf beugt. }
-+ [Sofort den Kopf, solange sie liegt]
++ [Die Säge sofort in ihren Kopf]
     Du beugst dich über den Kopf. Die kleine Hand schließt sich um deinen Knöchel und reißt dich von den Füßen. Ihr Auge ist offen. Erst als deine Säge in diesem Auge steckt, lässt die Hand los.
     ~ zuletzt = letzter_griff
     ~ treffer(1)
     { leben <= 0: -> tod }
     -> sieg
-+ [Auf den kleinen Arm treten]
++ [Den Stiefel auf die kleine Hand]
     Dein Stiefel landet auf der kleinen Hand, und die Finger schnappen zu, um nichts. Dann stößt du die Säge hinter das Ohr, wo der Schädel dünn ist. Einmal. Es genügt.
     -> sieg
-+ {ampulle > 0} [Die Blutampulle trinken, solange sie liegt]
++ {ampulle > 0} [Die Ampulle in den Schenkel stoßen, solange sie liegt]
     Sie liegt. Du nimmst dir die Zeit.
     -> ampulle_ruhig -> t7
 - (sieg)
@@ -213,16 +213,16 @@ Die Bestie hat nur noch Augen für ihn. Ihr langer Arm hebt sich, der Muskelknot
 + [Ihm den Rücken decken]
     Du stellst dich neben ihn, Schulter an Schulter, und ihr nehmt den Schlag gemeinsam, du mit der Säge, er mit der Axt. Dann treibt ihr sie Schritt für Schritt zurück, bis das Geländer in ihrem Rücken knirscht. Er hält den Takt, Hieb, Schritt, Hieb, ohne den Kopf zu wenden, und dir fällt auf, dass er dabei atmet wie ein Mann beim Holzhacken, ruhig, gleichmäßig.
     -> g_schrei
-+ [Die Gelegenheit nutzen und zuschlagen]
++ [Ihr in die Flanke fallen]
     Während sie nach ihm schlägt, bist du an ihrer Seite und triffst, tief. Gascoigne fängt den Arm mit der Axt ab und brüllt etwas, das du nicht verstehst, kehlig und rund, in einer Sprache, die nicht die dieser Stadt ist.
     -> g_schrei
 - (g_schrei)
 Am Geländer richtet sie sich auf, das Maul weit offen, und die Rippen treten unter dem Fell hervor wie die Spanten eines Bootes. Gascoigne achtet nicht darauf. Er will nur an ihren Hals. # anzeichen: kreischen
-+ [Ihn am Mantel zurückreißen und die Ohren zuhalten]
++ [Ihn am Kragen zurückreißen]
     ~ gascoigne = gascoigne + 1
     Du packst ihn am Kragen und ziehst. Der Schrei geht über euch hinweg. Er schüttelt den Kopf wie ein Hund, der aus dem Wasser kommt, und dreht dir den Verband zu. „Danke“, sagt er. Dann noch einmal, leiser, als müsse er sich das Wort merken: „Danke.“
     -> g_wurf
-+ [Mit ihm nach vorn, solange sie schreit]
++ [Mit ihm in den Schrei hinein]
     Ihr lauft beide hinein. Der Schrei trifft euch zugleich, und das Pflaster kippt unter dir. Er steht als Erster wieder, lachend, mit blutenden Ohren.
     ~ zuletzt = kreischen
     ~ treffer(1)
@@ -231,7 +231,7 @@ Am Geländer richtet sie sich auf, das Maul weit offen, und die Rippen treten un
 - (g_wurf)
 // [ERWEITERT] Sie wirft nach ihm, nicht nach dir.
 Sie tastet mit dem langen Arm zwischen die Kutschen und hebt eine vom Pflaster, langsam, das Holz knarrt. Der Arm wandert über ihre Schulter, und ihr Kopf zeigt nicht auf dich. Er zeigt auf Gascoigne, der zwischen zwei Pferdeleibern kniet und seine Donnerbüchse lädt, mit dem Rücken zu ihr. # anzeichen: wurf
-+ [Ihm zurufen]
++ [Ihm eine Warnung zurufen]
     Du rufst seinen Namen. Er dreht den Kopf zu dir, nicht zu ihr. Die Kutsche trifft ihn in den Rücken und wirft ihn gegen dich, und ihr geht beide zu Boden.
     ~ zuletzt = wurf
     ~ treffer(1)
@@ -248,19 +248,19 @@ Sie tastet mit dem langen Arm zwischen die Kutschen und hebt eine vom Pflaster, 
     Und mitten im Kampf, zwischen zwei Axthieben, summt er, leise und zärtlich, ein Kinderlied, das nicht in diesen Lärm passt. Er weiß nicht, dass er summt. # notiz: gascoigne_lied
 }
 Die Bestie fällt. Gascoigne hört nicht auf. Er schlägt weiter, in den Kadaver hinein, und weiter, nass und gleichmäßig, und er lacht dabei, leise, fast zärtlich, bis du ihn an der Schulter packst. # notiz: gascoigne_kippt # stimmung: grauen
-* [Ihn beim Namen rufen, bis er aufhört]
+* [„Gascoigne. Gascoigne!“]
     ~ gascoigne = gascoigne + 1
-    Du sagst seinen Namen. Dann noch einmal. Beim dritten Mal hält er inne, blinzelt hinter dem Verband und senkt die Axt. Er lacht verlegen, und es ist wieder sein eigenes Lachen. „Ruhig. Ruhig. Das geht einem ins Blut, wenn man nicht aufpasst.“ Er wischt die Klinge am Mantel ab. „Pass du besser auf als ich.“ Dann geht er, die Treppe hinab, in Richtung der Gräber.
-* [Ihn nach dem Lied fragen]
+    Erst beim dritten Mal hält er inne, blinzelt hinter dem Verband und senkt die Axt. Er lacht verlegen, und es ist wieder sein eigenes Lachen. „Ruhig. Ruhig. Das geht einem ins Blut, wenn man nicht aufpasst.“ Er wischt die Klinge am Mantel ab. „Pass du besser auf als ich.“ Dann geht er, die Treppe hinab, in Richtung der Gräber.
+* [„Was hast du da gesummt?“]
     ~ gascoigne = gascoigne + 1
     ~ gascoigne_lied = true
-    Du fragst ihn, was er da gesummt hat. Er hört auf zu schlagen und wendet dir das Gesicht zu, als hättest du ihn geweckt. „Gesummt?“ Er denkt nach. „Das Lied von der Kleinen. Sie heißt …“ Er bricht ab. Sein Mund bleibt offen. „Sie heißt“, sagt er noch einmal, und dann nichts mehr. Er senkt die Axt sehr langsam, als wäre sie schwerer geworden. Ohne ein weiteres Wort geht er die Treppe hinab.
-* [Fragen, wer sie war]
+    Er hört auf zu schlagen und wendet dir das Gesicht zu, als hättest du ihn geweckt. „Gesummt?“ Er denkt nach. „Das Lied von der Kleinen. Sie heißt …“ Er bricht ab. Sein Mund bleibt offen. „Sie heißt“, sagt er noch einmal, und dann nichts mehr. Er senkt die Axt sehr langsam, als wäre sie schwerer geworden. Ohne ein weiteres Wort geht er die Treppe hinab.
+* [„Hast du ihn gekannt?“]
     ~ gascoigne = gascoigne + 1
     Seine Hand findet im Fell den Rest des Kragens und bleibt darauf liegen. „Ich glaub, der hat uns getraut. Viola und mich. Unten in der Kapelle am Fluss.“ Er schweigt. „Oder ich verwechsle ihn. Die singen hier alle gleich.“ Dann geht er, die Treppe hinab, ohne sich umzudrehen.
-* [Nichts sagen]
+* [Schweigen und warten, bis er aufhört]
     ~ gascoigne = gascoigne - 1
-    Du sagst nichts. Nach einer Weile hört er von selbst auf, steht schwer atmend da und starrt auf das, was er angerichtet hat. Dann geht er, ohne ein Wort, in Richtung der Gräber.
+    Nach einer Weile hört er von selbst auf, steht schwer atmend da und starrt auf das, was er angerichtet hat. Dann geht er, ohne ein Wort, in Richtung der Gräber.
 - -> beute
 
 = ablenken
@@ -305,7 +305,7 @@ Du stehst vor ihrem Kopf. Er ist so groß wie ein Fass, und aus dem verknoteten 
     Du reißt die Hand zurück. Du kniest auf der Brücke, und dein Atem geht, als wärst du gerannt. Die Bilder bleiben, als hättest du sie auswendig gelernt: die Stimme, die mitten im Lied kippt. Der Blick auf die eigenen Hände. Und ganz hinten einer, der nach seinem Namen sucht. Hätte ihn jemand gerufen, bei diesem Namen, in diesem Augenblick. # notiz: rest_mensch
     ~ gedaechtnis_kleriker = true
     -> uebergang
-+ [Nicht berühren und weitergehen]
++ [Die Hand zurückziehen]
     Du lässt die Hand sinken. Was immer in diesem Blut ist, es gehört nicht dir. Hinter dir seufzt etwas, das längst tot sein sollte, oder es ist nur der Wind im Geweih.
     -> uebergang
 

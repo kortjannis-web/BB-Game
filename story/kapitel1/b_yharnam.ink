@@ -24,7 +24,7 @@
 + [Die Gasse unter den Dächern] -> k1_b_daecher
 + [Die Dachbalken über dem Kanaleingang] -> k1_b_eileen
 + {kanal_leiter} [Durch die Kanalisation in die Unterstadt] -> k1_hub_c
-+ {ampulle > 0 and leben < LEBEN_MAX} [Die Blutampulle trinken] -> ampulle_ruhig -> wohin
++ {ampulle > 0 and leben < LEBEN_MAX} [Die Ampulle in den Schenkel stoßen] -> ampulle_ruhig -> wohin
 + [An der Laterne in den Traum]
     ~ laterne = -> k1_hub_b
     -> traum_von_laterne
@@ -67,48 +67,48 @@
 }
 
 = haltung
-* [Ihm deinen Namen sagen und zuhören]
+* [„Ich heiße {name}. Husten Sie ruhig zu Ende.“]
     ~ gilbert = gilbert + 1
-    Du sagst ihm deinen Namen, {name}, und bleibst, bis er ausgehustet hat. „{name}“, wiederholt er, leise, zweimal, wie man sich eine Hausnummer merkt. „Danke. Man wird ein bisschen seltsam hinter so einem Gitter. Man sammelt Namen.“
-* [Knapp bleiben]
-    Du nickst nur. „Schon gut“, sagt er. „Jäger reden wenig. Ich rede für zwei, das gleicht sich aus.“
-* [Ihn anfahren, er solle dich in Ruhe lassen]
+    Du bleibst am Gitter, bis er ausgehustet hat. „{name}“, wiederholt er, leise, zweimal, wie man sich eine Hausnummer merkt. „Danke. Man wird ein bisschen seltsam hinter so einem Gitter. Man sammelt Namen.“
+* [„Ich bin nur auf der Durchreise.“]
+    „Schon gut“, sagt er. „Jäger reden wenig. Ich rede für zwei, das gleicht sich aus.“
+* [„Behalten Sie Ihren Husten für sich.“]
     ~ gilbert = gilbert - 2
-    Du sagst ihm, er solle seinen Husten für sich behalten. Er zieht sich vom Gitter zurück. Lange ist es still, und dann hustet er wieder, gedämpft, als halte er sich etwas vor den Mund.
+    Er zieht sich vom Gitter zurück. Lange ist es still, und dann hustet er wieder, gedämpft, als halte er sich etwas vor den Mund.
 - -> themen
 
 = themen
-* [Wer er ist]
+* [„Was hat Sie in diese Stadt verschlagen?“]
     Er erzählt, stockend, zwischen den Anfällen. „Eine Krankheit, für die mein Arzt zu Hause keinen Namen hatte. Dann ein Gerücht über diese Stadt. Dann eine lange Reise.“ Er lächelt schief. „Das Blut hat geholfen, eine Weile. Dann hat es aufgehört zu helfen. Ich kannte Leute im Hospiz, bei denen hat es nicht nur aufgehört.“ Er schweigt einen Atemzug lang. „Wir hatten einen Birnbaum zu Hause. Ich denke dauernd an diesen Birnbaum. Ist das nicht albern? Gehen Sie, sobald Sie können. Was man hier gewinnt, bezahlt man doppelt.“
     -> themen
-* [Was diese Nacht ist]
+* [„Warum sind alle Türen verriegelt?“]
     „Eine Jagdnacht.“ Er sagt es, als wäre es Wetter. „Dann verriegeln die Leute ihre Türen und hängen Räucherwerk vor die Fenster. Und die, die nicht mehr warten wollen, nehmen Fackeln und Mistgabeln und gehen selbst.“ Er senkt die Stimme. „Was ihnen da draußen begegnet, haben sie meistens gestern noch gegrüßt. Die Seuche macht aus Menschen Bestien. Wen es als Nächsten trifft, weiß keiner.“ # lore: jagdnacht # lore: bestienseuche # lore: buergerjagd
     -> themen
-* [Was bleiches Blut ist]
+* [„Wissen Sie, was bleiches Blut ist?“]
     Er denkt lange nach. „Das Wort kenne ich nicht. Aber Blut, Blut ist die Sache der Heilenden Kirche. Jede Transfusion in dieser Stadt geht durch ihre Hände. Ihr Blut, heißt es, kommt aus der großen Kathedrale da oben, wie Wasser aus einer Quelle.“ Er hustet. „Wenn einer weiß, was bleiches Blut ist, dann die. Und ob die es Ihnen sagen …“ Er hebt die Schultern. # lore: heilende_kirche # lore: paleblood
     ~ gilbert_bruecke = true
     -> themen
-* {gilbert_bruecke} [Wie man zur Kirche kommt]
+* {gilbert_bruecke} [„Wie komme ich zur Kathedrale hinauf?“]
     { kleriker == "":
         „Nur über die große Brücke. Aber da oben haust etwas.“ Er lauscht, als könne er es jetzt hören. „Man sagt, es hat einmal in der Kirche gedient. Gesungen, gepredigt, ich weiß es nicht. Man sagt auch, aus Kirchenleuten werden die schlimmsten.“ Er bekreuzigt sich nicht. Er sieht nur sehr müde aus. # lore: kleriker_bestien
     - else:
         „Über die große Brücke.“ Er sieht dich an, dann auf deine Hände. „Aber das wissen Sie schon, nicht wahr. Sie waren dort. Ist es … ist es noch da oben?“ # lore: kleriker_bestien
     }
     -> themen
-* {gilbert_bruecke and (k1_b_anschlag or gehrman_jaeger or kleriker == "besiegt")} [Wer die Jäger der Kirche sind]
+* {gilbert_bruecke and (k1_b_anschlag or gehrman_jaeger or kleriker == "besiegt")} [„Wer jagt eigentlich für die Kirche?“]
     // [KANON] Ludwig führte die ersten Jäger der Kirche an; viele Kirchenjäger waren Kleriker, geworben wurden auch einfache Bürger. Hier nur als Gerücht, ohne Namen.
     // PRÜFEN: Ludwigs eigene Herkunft aus dem einfachen Volk ist nicht belegt; hier nur, was die Leute erzählen.
     Gilbert lehnt die Stirn ans Gitter. „Die Leute hier erzählen von einem, der als Erster für die Kirche gejagt hat. Kein Adliger, sagen sie, einer aus den Gassen, so wie die, die er dann anwarb. Fuhrknechte, Gerber, Söhne von Wäscherinnen. Und Kleriker. Viele Kleriker.“ Er hustet und wartet, bis es vorbei ist. „Man hat Lieder auf ihn gesungen, sagt man. Seine Klinge soll im Dunkeln geleuchtet haben, wie ein Stück vom Mond.“ Er lächelt schief. „Dann hat man aufgehört, die Lieder zu singen. Seinen Namen sagt hier keiner mehr gern. Ich habe gefragt, warum. Da haben sie die Fensterläden zugemacht.“ # notiz: erster_kirchenjaeger
     -> themen
-* {grund == "suche"} [Nach dem Menschen fragen, den du suchst]
+* {grund == "suche"} [„Ich suche jemanden, der vor mir hierherkam.“]
     Du beschreibst ihn, so gut es durch ein Gitter geht, und erwähnst den letzten Brief, der nach Weihrauch roch. Gilbert schüttelt langsam den Kopf. „Nein. Hier kommt niemand vorbei, der stehen bleibt, außer Ihnen.“ Dann, nach einer Weile: „Weihrauch. Das riecht man nur oben, bei der Kathedrale. Da unten im Viertel ist es Räucherwerk, süß, Sie haben es gerochen. Weihrauch ist etwas anderes.“ # notiz: spur_vermisst
     -> themen
-* {q_gilbert == 1 and k1_hub_c} [Ihm erzählen, was hinter der Brücke liegt]
+* {q_gilbert == 1 and k1_hub_c} [„Ich war hinter der Brücke.“]
     ~ q_gilbert = 2
     ~ gilbert = gilbert + 1
     Du erzählst ihm von der Brücke, den Treppen, der Unterstadt, in der das Wasser nie aufhört zu laufen{k1_c_graeber:, von den Gräbern}. Gilbert hört zu, die Stirn gegen das Gitter gelehnt, und hustet die ganze Zeit nicht. „Gibt es da unten Bäume?“, fragt er, als du fertig bist. Du denkst nach und sagst ihm die Wahrheit: einen, verkrüppelt, an einer Treppe. „Einen“, sagt er zufrieden. „Das ist mehr, als ich hier habe.“ # quest: gilbert_bericht
     -> themen
-+ [Gehen]
++ [„Ich muss weiter.“]
     { gilbert >= 0 and not gilbert_geschenk: -> geschenk }
     { gilbert < 0: Er hustet, als du gehst, und tut nicht so, als hätte er dich gehört. }
     { gilbert >= 0: „Gute Jagd“, sagt Gilbert, und er meint es. }
@@ -227,7 +227,7 @@ Mehr kommen. Und der Riese hat aufgehört, gegen die Tür zu schlagen. Er dreht 
     { leben <= 0: -> tod }
     ~ mob = "durchbrochen"
     -> gascoigne_greift_ein
-+ {ampulle > 0} [Die Blutampulle trinken]
++ {ampulle > 0} [Die Ampulle in den Schenkel stoßen]
     -> ampulle_gefahr(1) -> t2
 
 = gascoigne_greift_ein
