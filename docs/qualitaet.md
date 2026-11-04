@@ -69,6 +69,6 @@ Stand 2026-11-04, nach Runde 1: drei unabhängige Prüfungen (Plot und Logik, Lo
 | Mechaniken der Nacht (Stärkung, Chronik, Einsicht kostet) | 1 | gebaut, über Szenarien und Prüfer abgesichert, Balance ungetestet |
 | Werkstatt im Spiel und im Erzählbaum | 2 | getestet nur gegen nachgebildetes GitHub; erster echter Versand steht aus; Vorschläge liegen nur im jeweiligen Browser |
 | Erzählbaum (Karte) | 1 | |
-| Hosting | 1 | Netlify vom Nutzer eingerichtet (2026-11-04); Adresse fehlt noch in README und CLAUDE.md |
+| Hosting | 2 | Netlify läuft: https://yahrnams-neverending-night.netlify.app/; von hier aus nicht erreichbar, daher nicht selbst geprüft |
 | Skills `erzaehlkunst-deutsch`, `hpl-horror` | 2 | ein Vergleich (Gascoigne); Rede-Regel in hpl-horror nach Runde 1 geändert, Paket neu |
 | Notizbuch (Stufen nach Erlebtem) | 2 | neu gebaut, im Browser noch nicht durchgesehen |

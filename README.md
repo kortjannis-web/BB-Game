@@ -4,7 +4,8 @@ Bloodborne als geschriebenes, verzweigtes Erzählspiel auf Deutsch. Privates Fan
 
 **Stand:** Kapitel 1 (Yharnam bis Gascoigne) vollständig geschrieben und im Browser spielbar.
 
-- **Spielen (eigene Adresse):** über Netlify, verbunden mit GitHub; Einrichtung in [`docs/hosting.md`](docs/hosting.md)
+- **Spielen:** https://yahrnams-neverending-night.netlify.app/ (Netlify, baut bei jedem Push auf `main` neu; Einrichtung in [`docs/hosting.md`](docs/hosting.md))
+- **Erzählbaum:** https://yahrnams-neverending-night.netlify.app/karte.html
 - **Spielen (Artefakt):** https://claude.ai/artifact/8K6UJippKkrq1CsXpkXvaL
 - **Erzählbaum (Twine-Ansicht):** https://claude.ai/artifact/NPHhjkNgsNCP2FrLbTGFUX
 

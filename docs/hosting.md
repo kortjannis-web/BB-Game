@@ -2,6 +2,8 @@
 
 Das Spiel ist eine fertige statische Seite (Ordner `web/`). Damit es unter einer festen Adresse im Browser läuft und sich bei jeder Änderung auf `main` von selbst erneuert, wird es mit GitHub verbunden gehostet.
 
+**Aktuell:** Netlify, https://yahrnams-neverending-night.netlify.app/ (eingerichtet 2026-11-04).
+
 Es gibt zwei Wege, beide mit GitHub verbunden, beide bauen bei jedem Push auf `main` von selbst neu. Die Werkstatt funktioniert auf beiden gleich.
 
 | | GitHub Pages | Netlify |

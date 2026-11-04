@@ -56,5 +56,5 @@ Der Nutzer spielt im Browser und ändert dabei Texte, Entscheidungen, Passagen u
 Neue Weiche ⇒ neues Szenario in `tools/szenarien.mjs`. Der Erzählbaum (`web/twine.json`, `docs/yharnam-kapitel1.twee`) entsteht automatisch aus den Ink-Dateien; nie von Hand pflegen.
 
 ## Veröffentlichen
-Hauptadresse: Netlify, verbunden mit GitHub (`netlify.toml`, Einrichtung in `docs/hosting.md`); alles auf `main` geht automatisch online.
+Hauptadresse: https://yahrnams-neverending-night.netlify.app/ (Netlify, verbunden mit GitHub; `netlify.toml`, Einrichtung in `docs/hosting.md`). Alles auf `main` geht automatisch online.
 Zusätzlich sind Spiel und Erzählbaum claude.ai-Artefakte (Adressen in `web/artefakte.json`). Nach `npm run bauen` die Seiten `web/artefakt/spiel.html` (Dateien: stil.css, werkstatt.css, spiel.js, notizbuch.js, werkstatt.js, klang.js, klang/*.mp3, klang/LICENSE-kenney.txt, ink.js, ink-full.js, story.json, quelle.json) und `web/artefakt/karte.html` (Dateien: karte.css, werkstatt.css, werkstatt.js, karte.js, twine.json, quelle.json) mit dem Artifact-Werkzeug an dieselben Adressen veröffentlichen. Im Artefakt gibt es kein `confirm()`/`alert()`; Speicherzugriffe immer in try/catch. Ink-Fallen: Kampfoptionen mit `+` (wiederholbar nach Tod); Namen von Variablen, Knoten, Stitches und LIST-Einträgen dürfen sich nicht überschneiden.
