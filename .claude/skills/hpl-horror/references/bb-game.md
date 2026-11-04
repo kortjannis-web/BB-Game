@@ -31,6 +31,9 @@ Immer erzählt und geschrieben, kein Zufall: Anzeichen (`# anzeichen: id`), Mög
 - **Eileen**: in Kapitel 1 zwei Begegnungen, Partnerschaft ab Kapitel 2. Eine Stimme, die wenig sagt und viel weiß.
 - **Gilbert**: der kranke Fremde; seine Stimme bleibt freundlich, sein Husten ist sein Merkmal und seine Uhr.
 
+## Stimme (Entscheidung des Nutzers 2026-11-04)
+Drei Register, beschrieben in `docs/stimme.md` im Repository: **A Chronik** für Orte, Szenenbilder und Vergangenheit (lange ruhige Perioden, Gemeinschaftswissen, Bräuche); **B fiebrig und nah** als Standard (kippende Wahrnehmung, der Körper antwortet, Satzketten, die reißen); **C kalt und amtlich** für alles, was von der Heilenden Kirche kommt. Diese Datei vor jedem Schreiben lesen; sie geht allen allgemeinen Stilregeln vor.
+
 ## Perspektiven im Spiel
 - Spieltext: Du, Präsens.
 - Die Aufzeichnungen im Prolog und andere Fundstücke: Ich, Präteritum, rückblickend (Stil-Tag `# stil: tagebuch`).

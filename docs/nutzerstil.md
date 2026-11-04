@@ -19,6 +19,7 @@ Lebendes Profil, gepflegt von Claude aus den Vorschlägen der Werkstatt (`docs/v
 *(Wörter, die der Nutzer einsetzt oder streicht; Fremdwörter, Archaismen, Bildsprache)*
 
 ## Ton und Gefühl
+- Stimme gewählt nach Stimmproben (2026-11-04): A Chronik für Orte, Szenen und Vergangenheit, B fiebrig und nah als Standard, C kalt und amtlich für die Kirche (`docs/stimme.md`).
 - Kirche als ferne Macht: Glocken, Choral bei schlimmen Momenten, ein Anschlag; kein sichtbarer Kirchendiener (Abfrage 2026-11-04).
 - Ludwig nur als namenloses Gerücht (Abfrage 2026-11-04).
 
@@ -50,3 +51,4 @@ Lebendes Profil, gepflegt von Claude aus den Vorschlägen der Werkstatt (`docs/v
 | 2026-11-04 | Abfrage Runde 3 | Boten | Molotow, Kiesel | Wissen, Kleidung mit Folgen | Spuren statt Werkzeuge |
 | 2026-11-04 | Abfrage Runde 3 | Härte, Einsicht, Ton | | 2 bis 3 Tode; mehr, aber leise; Wahl beim Start | |
 | 2026-11-04 | Abfrage Runde 4 | Kapitel 2, Reihenfolge, Kleidung | | Kathedralbezirk; Kämpfe zuerst; Mantel eines toten Jägers | |
+| 2026-11-04 | Stimmproben Gilbert | Stimme | ein einheitlicher Erzählton | A Orte/Vergangenheit, B Standard, C Kirche | Register nach Gegenstand wechseln |
