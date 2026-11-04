@@ -22,6 +22,7 @@ Privates Fanprojekt: Bloodborne als geschriebenes, verzweigtes Erzählspiel auf 
 - Nur Deutsch.
 
 ## Schreibregeln
+Vor jedem Schreiben die Skills laden: `erzaehlkunst-deutsch` (allgemeines Handwerk, aus dem Spielleiter des Nutzers im Repo AI-Dungeon-Master) und `hpl-horror` (Horror von gotischer Volkskunde bis kosmisch, Lovecraft, Perspektiven, Dialog, Buchbau; Projektteil in `references/bb-game.md`). Quellen in `.claude/skills/`, Pakete zum Hochladen in claude.ai in `skills-pakete/` (nach Änderungen neu packen).
 - Nur eigene Prosa. **Keine wörtlichen Zitate** aus dem Spiel (Dialoge, Itemtexte), höchstens sinngemäß.
 - Kanon vor Erfindung; Erfindungen mit `// [ERWEITERT]` kennzeichnen, Kanon mit `// [KANON]`, Unsicheres mit `PRÜFEN:`.
 - [Deutung] nie als Tatsache erzählen, nur als Meinung einer Figur. [Offen] bleibt offen.

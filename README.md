@@ -13,6 +13,9 @@ Beide Seiten sind privat; Teilen geht über das Teilen-Menü der Seite.
 ## Mitschreiben: die Werkstatt
 Im Spiel und im Erzählbaum oben **✎ Bearbeiten** einschalten: Absätze umschreiben, streichen oder ergänzen, Entscheidungen umbenennen oder neue vorschlagen, im Baum ganze Passagen anlegen, verbinden oder streichen, und über **Quelltext** die Ink-Mechanik ändern und sofort testen. Alles bleibt Vorschlag und geht über **Werkstatt → An GitHub senden** auf den Zweig `vorschlaege`. Claude setzt jede Änderung einzeln um, antwortet in der Werkstatt und lernt daraus den eigenen Stil (`docs/nutzerstil.md`). Ablauf: [`docs/vorschlaege.md`](docs/vorschlaege.md).
 
+## Schreib-Skills
+Zwei Skills für Claude: `erzaehlkunst-deutsch` (deutsches Erzählhandwerk, aus der Erzählstimme des AI-Dungeon-Masters) und `hpl-horror` (Horror, Lovecraft, Perspektiven, Dialog, Buchbau). In Claude-Code-Sitzungen in diesem Repo laden sie von selbst (`.claude/skills/`). Für normale Chats, auch in der Claude-App am Handy: die Dateien aus `skills-pakete/` unter claude.ai → Einstellungen → Fähigkeiten → Skills hochladen.
+
 ## Aufbau
 - `story/` die Geschichte in [Ink](https://www.inklestudios.com/ink/) (`main.ink`, `system.ink`, `traum.ink`, `kapitel1/`)
 - `tools/` Prüfer, Szenarien, Karte (Node, mit inkjs)
