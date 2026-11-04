@@ -529,8 +529,17 @@
     }, "ws-haupt");
     if (!daten.aenderungen.length) senden.disabled = true;
     const speichern = knopf("Als Datei speichern", () => herunterladen(titel.value.trim(), kommentar.value.trim()));
+    // Wo weder GitHub noch Downloads erreichbar sind (z. B. im claude.ai-Artefakt): kopieren und in den Chat einfügen.
+    const kopieren = knopf("Kopieren (für den Chat)", async () => {
+      try {
+        await navigator.clipboard.writeText(JSON.stringify(paket(titel.value.trim(), kommentar.value.trim()), null, 2));
+        status.textContent = "Kopiert. Im Chat mit Claude einfügen; danach hier „Alle verwerfen“, wenn du magst.";
+      } catch {
+        status.textContent = "Kopieren hat der Browser nicht erlaubt.";
+      }
+    });
     form.append(titel, kommentar, el("div", "ws-leiste"), status);
-    form.querySelector(".ws-leiste").append(senden, speichern, ...(daten.aenderungen.length ? [sicherKnopf("Alle verwerfen", "Wirklich alle verwerfen?", () => {
+    form.querySelector(".ws-leiste").append(senden, speichern, kopieren, ...(daten.aenderungen.length ? [sicherKnopf("Alle verwerfen", "Wirklich alle verwerfen?", () => {
       daten.aenderungen = [];
       melden();
       oeffnen();
