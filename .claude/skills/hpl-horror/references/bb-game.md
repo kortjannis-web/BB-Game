@@ -8,6 +8,7 @@ Nur laden, wenn im Repository `BB-Game` gearbeitet wird. Die verbindlichen Regel
 3. Dieser Skill und `erzaehlkunst-deutsch`.
 
 ## Kanon und Rechte
+- **Lore-Archiv:** `lore/README.md` im Repository ist die Wurzel. Vor jedem Schreiben `lore/kern.md` und das Lesepaket des Kapitels (`lore/kapitel/kapitelN.md`) mit Wissenssperre lesen, dann nur die Dateien der Szene.
 - **Keine wörtlichen Zitate aus Bloodborne** (Dialoge, Itemtexte), höchstens sinngemäß. Keine wörtlichen Zitate aus Lovecraft oder anderen Werken.
 - **[Kanon] vor Erfindung.** Erfindungen im Ink-Quelltext mit `// [ERWEITERT]` kennzeichnen, Kanon mit `// [KANON]`, Unsicheres mit `PRÜFEN:`.
 - **[Deutung] nie als Tatsache**, nur als Meinung einer Figur. **[Offen] bleibt offen.** Die Lovecraft-Parallelen (`lovecraft.md`, Abschnitt 4) sind Deutung.

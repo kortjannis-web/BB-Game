@@ -42,5 +42,6 @@ Die drei Register sind eine Stimme mit drei Lagen, kein Wechsel des Erzählers. 
 - Betritt die Kirche eine Szene (ein Anschlag, ein Kleriker, der Choral), wechselt nur dieser Teil in C. Der Kontrast ist gewollt.
 
 ## Optionen
+- **Entscheidung des Nutzers (2026-11-04): Die Wahl fließt in den Satz des Buches.** Sichtbar ist ein kurzer Anfang („Ihm deinen Namen nennen“); gewählt, setzt der Text ihn als vollständigen Satz fort („Du nennst ihm deinen Namen und bleibst am Gitter, bis …“). Keine eigene Zeile mit der gewählten Option. Die Regeln unten gelten für den sichtbaren Anfang.
 - In A und B: gesprochen in Anführungszeichen oder als Handlung mit dem Körper, 2 bis 7 Wörter, nie ein einzelnes Wort, nie ein Meta-Verb. Regeln im Einzelnen: `docs/stil-und-lore-plan.md`, B2.
 - In C: Antworten auf die Kirche sachlich und knapp, wie ein Gegenüber in einem Amt („Ihr Termin ist seit drei Tagen vorbei.“).

@@ -28,6 +28,7 @@ Lebendes Profil, gepflegt von Claude aus den Vorschlägen der Werkstatt (`docs/v
 - Gascoigne: Wärme, die zerbricht. Guter Freund, Vater, Spaßmacher; das Grauen ist sein Verfall (Abfrage 2026-11-04).
 
 ## Entscheidungen und Struktur
+- Optionen als Variante 1 gewählt: Die Wahl fließt in den Satz des Buches (2026-11-04).
 - Weniger Text im Ganzen, mehr handgearbeitetes Gefühl; immer fragen, wie ein Buch es schreiben würde (2026-11-04, nach der Probe der neuen Optionen).
 *(Wie Entscheidungen formuliert werden; wie viele; welche Folgen der Nutzer erwartet; neue Wege)*
 

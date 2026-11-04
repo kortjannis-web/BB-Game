@@ -15,3 +15,6 @@ Ablage:
 Verzeichnis (Kürzel für Belege in `lore/`):
 | Kürzel | Art | Titel | Autor/Kanal | Datei | Zuverlässigkeit |
 |---|---|---|---|---|---|
+| LK | Lore-Dokument (Fextralife, Wikipedia, Paleblood Hunt, Presse; in eigenen Worten) | Bloodborne – Die komplette Lore-Dokumentation | vom Nutzer geliefert, 2026-11-04 | `lore-komplett.md` | gut; eigene Kennzeichnung [Theorie]; Fandom, Reddit, YouTube fehlen |
+| RK1 | Recherche Kapitel 1 (Websuche) | Recherchepaket Kapitel 1 | Claude, 2026-11-03 | `../docs/recherche/kapitel1.md` | mittel; nur Suchtreffer |
+| RV | Recherche Vorgeschichte (Websuche) | Vorgeschichte und Gesamt-Lore | Claude, 2026-11-03 | `../docs/recherche/vorgeschichte.md` | mittel |
