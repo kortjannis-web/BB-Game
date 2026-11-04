@@ -33,6 +33,10 @@ Die drei Register sind eine Stimme mit drei Lagen, kein Wechsel des Erzählers. 
 - Kirchensprache: Behandlung, Blutstelle, Gemeinde, Gnade, Vermerk, Ordnung; Anrede „Sie“ oder „ihr“ (an die Gemeinde).
 **Nie:** Pathos, Ausrufezeichen, Drohung im Klartext.
 
+## Arbeitsweise (Nutzer, 2026-11-04)
+- **Handgearbeitet statt in Masse:** wenige Stücke je Runde, jedes einzeln gebaut und geprüft; kein Überarbeiten ganzer Kapitel in einem Zug.
+- **Prüffrage vor jedem Satz und jeder Option: Wie würde ein gutes Buch das schreiben?** Was ein Buch so nicht schreiben würde, wird neu gefasst.
+
 ## Übergänge
 - Eine Szene beginnt meist in A (Ortsbild), geht in B über, sobald jemand spricht oder etwas geschieht, und kehrt am Ende für einen Satz in A zurück, wenn ein Nachklang nötig ist.
 - Betritt die Kirche eine Szene (ein Anschlag, ein Kleriker, der Choral), wechselt nur dieser Teil in C. Der Kontrast ist gewollt.
