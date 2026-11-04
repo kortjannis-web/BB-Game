@@ -473,13 +473,18 @@
   function waehlen(i) {
     werkzeugSchliessen();
     for (const p of text.querySelectorAll("p:not(.alt)")) p.classList.add("alt");
-    const gewaehlt = document.createElement("p");
-    gewaehlt.className = "alt";
     letzteWahl = story.currentChoices[i].text;
-    const angezeigt = vorschlaege().wahlNeu.get(letzteWahl)?.nachher ?? letzteWahl;
-    gewaehlt.innerHTML = "<em></em>";
-    gewaehlt.firstChild.textContent = `› ${angezeigt}`;
-    text.appendChild(gewaehlt);
+    // Wahl mit #fliesst: Der folgende Text setzt sie als Satz fort (Entscheidung des Nutzers 2026-11-04);
+    // dann keine eigene Zeile mit der Wahl, nur ein leiser Absatzwechsel.
+    const fliesst = (story.currentChoices[i].tags ?? []).includes("fliesst");
+    if (!fliesst) {
+      const gewaehlt = document.createElement("p");
+      gewaehlt.className = "alt";
+      const angezeigt = vorschlaege().wahlNeu.get(letzteWahl)?.nachher ?? letzteWahl;
+      gewaehlt.innerHTML = "<em></em>";
+      gewaehlt.firstChild.textContent = `› ${angezeigt}`;
+      text.appendChild(gewaehlt);
+    }
     text.appendChild(document.createElement("hr"));
     story.ChooseChoiceIndex(i);
     weiter();

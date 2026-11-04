@@ -46,80 +46,87 @@
 
 === k1_b_gilbert ===
 // TITEL: Gilbert
-// [KANON] Kranker Fremder hinter dem Fenster bei der ersten Laterne; verweist auf die Heilende Kirche, die Kathedrale als Ursprung ihres Blutes und die Brücke; wird nach dem Blutmond zur Bestie.
-// [ERWEITERT] Mehr Gespräch, seine Bitte, der Birnbaum. Sein Feuer gibt er hier schon (im Original später). PRÜFEN: Zeitpunkt der Übergabe.
-// Stimme: höflich, selbstironisch, fragt zurück; der Husten unterbricht ihn mitten im Satz.
+// Handgearbeitet 2026-11-04 nach docs/stimme.md: Ortsbild in Stimme A, Begegnung in Stimme B. Optionen fließen in den Satz (#fliesst).
+// Lore: lore/figuren/gilbert.md, lore/orte/zentral-yharnam.md, RK1 §5. Wissenssperre: lore/kapitel/kapitel1.md.
+// [KANON lore:figuren/gilbert] Kranker Fremder hinter dem Fenster bei der ersten Laterne; nennt den Jäger einen Mitfremden; kennt bleiches Blut nicht und verweist auf die Kirche und die Kathedrale; nennt zuerst die Große Brücke als Weg (RK1 §5, sicher); wird nach dem Blutmond zur Bestie.
+// [ERWEITERT] Kampfer und kalter Tee, der zu weite Ring, der Birnbaum, das Sammeln von Namen, seine Bitte. Der Flammenwerfer kommt bei uns schon in Kapitel 1 und mit ihm der Satz vom erkauften Aufschub (Kanon: beides ab Sonnenuntergang).
+// [Deutung, nur als Detail, nie aussprechen] Er könnte einst Kirchenjäger gewesen sein (LK 5.1): Die Düse ist alt verrußt, obwohl er sagt, er habe das Gerät nie benutzt.
+// Stimme Gilbert: höflich, siezt, selbstironisch, fragt zurück; der Husten schneidet ihm die Sätze ab.
 -> betreten("gilbert") ->
 { k1_b_gilbert == 1:
-    Neben der Laterne, hinter einem vergitterten Fenster, hustet jemand. Es ist ein Husten, der tief unten sitzt, nass und rasselnd, und der klingt, als habe er seinen Besitzer schon lange vor dieser Nacht bewohnt. # bild: gilbert # stimmung: ruhig
-    Hinter dem Gitter erscheint ein Gesicht, eingefallen, mit fiebrigen, freundlichen Augen. „Sie riechen nach Regen und nach Kutsche“, sagt der Mann, „nicht nach Räucherwerk. Von draußen also. Wie ich. Gilbert.“ Er deutet eine Verbeugung an, so weit das Gitter es zulässt. „Man hat mir hier Blut gegeben. Es kauft mir Zeit. Nur Zeit, wissen Sie, nichts weiter.“ # lore: fremde # lore: bluttransfusion
+    Neben der Laterne, wo die Gasse sich zum Platz hin weitet, steht ein schmales Haus mit einem Fenster zu ebener Erde, und vor dem Fenster sitzt ein Gitter, wie man es in Yharnam vor die Kammern der Kranken setzt, damit nichts hinein kann und nichts heraus. Die Läden sind bis auf einen Spalt geschlossen. Aus dem Spalt dringt kein Räucherwerk wie aus den Nachbarhäusern; es riecht nach Kampfer und kaltem Tee, nach einer Stube, in der seit Wochen niemand gelüftet hat. # bild: gilbert # stimmung: ruhig
+    Dahinter atmet jemand, nass und tief, und der Atem verhakt sich an einer Stelle und reißt und wird zu einem Husten, der nicht enden will. Dein eigener Hals zieht sich zusammen. Der Einstich in deiner Armbeuge, durch den in der Klinik das fremde Blut in dich hineinlief, pocht im Takt dieses Hustens, so genau, dass du die Hand darauflegst.
+    Am Gitter erscheint ein Gesicht, hager und gelb wie Kerzenwachs, mit Augen, die freundlicher sind, als eine Jagdnacht es erlaubt. In jedem steht eine winzige Laterne. „Sie riechen nach Regen“, sagt der Mann, „und nach Landstraße. Nicht nach Rauch. Von draußen also.“ Er legt die Hand an einen Stab, eine Hand, an der der Ring zu weit geworden ist. „Gilbert. Auch von draußen, nur schon länger, als mir lieb ist. Und Jäger sind Sie geworden, nicht wahr? Man sieht es an der Art, wie Sie stehen.“ # lore: fremde
     { herkunft == "kranker":
-        Dann hustest du, und er hört auf zu lächeln. „Oh“, sagt er leise. „Oh, das kenne ich. Das kenne ich sehr gut.“
+        Da hustest du selbst, und er hört auf zu lächeln. „Oh“, sagt er leise. „Das kenne ich. Das kenne ich sehr gut.“
     }
     -> haltung
 - else:
-    Gilbert ist am Fenster, bevor du anklopfst. „Ich hab Sie kommen hören“, sagt er. „Ich habe nicht viel anderes zu tun als hören.“
+    Gilbert steht schon am Gitter, bevor du anklopfst. „Ich habe Sie kommen hören“, sagt er. „Viel anderes als Hören bleibt einem hier nicht.“
     // [ERWEITERT] Einsicht kostet leise: Figuren merken, dass du anders bist.
     { einsicht >= 2:
-        Er sieht dich an, dann an dir vorbei, auf die Wand hinter dir, und wieder zurück. „Verzeihung“, sagt er. „Sie sehen auf Dinge, die nicht da sind. Oder ich sehe nicht, was da ist. Das wäre mir lieber.“ # notiz: einsicht_gilbert
+        Er sieht dich an, dann an dir vorbei auf die Wand hinter dir, und wieder zurück. „Verzeihung“, sagt er. „Sie sehen auf Dinge, die nicht da sind. Oder ich sehe nicht, was da ist. Das zweite wäre mir lieber.“ # notiz: einsicht_gilbert
     }
     -> themen
 }
 
 = haltung
-* [„Ich heiße {name}. Husten Sie ruhig zu Ende.“]
+* [Ihm deinen Namen nennen #fliesst]
     ~ gilbert = gilbert + 1
-    Du bleibst am Gitter, bis er ausgehustet hat. „{name}“, wiederholt er, leise, zweimal, wie man sich eine Hausnummer merkt. „Danke. Man wird ein bisschen seltsam hinter so einem Gitter. Man sammelt Namen.“
-* [„Ich bin nur auf der Durchreise.“]
-    „Schon gut“, sagt er. „Jäger reden wenig. Ich rede für zwei, das gleicht sich aus.“
-* [„Behalten Sie Ihren Husten für sich.“]
+    Du nennst ihm deinen Namen und bleibst am Gitter, bis der Husten sich gelegt hat. „{name}“, wiederholt er, leise, zweimal, so wie man sich eine Hausnummer merkt. „Danke. Hinter so einem Gitter wird man wunderlich, wissen Sie. Man sammelt Namen, wie andere Leute Knöpfe sammeln.“
+* [Dich für einen Durchreisenden ausgeben #fliesst]
+    Du sagst, du seist nur auf der Durchreise. Er lächelt, als hättest du einen alten Scherz erzählt, den er gern noch einmal hört. „Das waren wir alle, als wir kamen.“ Er hustet in die Faust und wartet, bis es vorbei ist. „Jäger reden wenig, ich weiß. Ich rede für zwei, das gleicht sich aus.“
+* [Dich vom Gitter abwenden #fliesst]
     ~ gilbert = gilbert - 2
-    Er zieht sich vom Gitter zurück. Lange ist es still, und dann hustet er wieder, gedämpft, als halte er sich etwas vor den Mund.
+    Du wendest dich ab, noch bevor er ausgesprochen hat. Hinter dir weicht das Gesicht vom Gitter zurück, ohne ein Wort des Vorwurfs, und eine Weile ist es still. Dann hustet er wieder, gedämpft, als presse er sich ein Tuch vor den Mund, damit es dich nicht stört.
+    -> k1_hub_b
 - -> themen
 
 = themen
-* [„Was hat Sie in diese Stadt verschlagen?“]
-    Er erzählt, stockend, zwischen den Anfällen. „Eine Krankheit, für die mein Arzt zu Hause keinen Namen hatte. Dann ein Gerücht über diese Stadt. Dann eine lange Reise.“ Er lächelt schief. „Das Blut hat geholfen, eine Weile. Dann hat es aufgehört zu helfen. Ich kannte Leute im Hospiz, bei denen hat es nicht nur aufgehört.“ Er schweigt einen Atemzug lang. „Wir hatten einen Birnbaum zu Hause. Ich denke dauernd an diesen Birnbaum. Ist das nicht albern? Gehen Sie, sobald Sie können. Was man hier gewinnt, bezahlt man doppelt.“
+* [Nach seinem Husten fragen #fliesst]
+    Du fragst ihn nach seinem Husten. Er lacht darüber, kurz, und das Lachen kostet ihn einen neuen Anfall. „Eine Krankheit, für die mein Arzt zu Hause keinen Namen hatte“, sagt er, als er wieder kann. „Dann ein Gerücht über diese Stadt, in einer Postkutsche, von einem Mann, der nicht hustete. Dann eine lange Reise.“ Er dreht den zu weiten Ring am Finger. „Man hat mir hier Blut gegeben. Es hat geholfen, eine Weile. Im Spital lagen Leute, bei denen hat es nicht bloß aufgehört zu helfen.“ Sein Blick geht an dir vorbei in die Gasse. „Wir hatten einen Birnbaum hinter dem Haus. Ich denke dauernd an diesen Birnbaum, ist das nicht albern? Gehen Sie, sobald Sie können. Was diese Stadt einem gibt, holt sie sich doppelt zurück.“ # lore: bluttransfusion
     -> themen
-* [„Warum sind alle Türen verriegelt?“]
-    „Eine Jagdnacht.“ Er sagt es, als wäre es Wetter. „Dann verriegeln die Leute ihre Türen und hängen Räucherwerk vor die Fenster. Und die, die nicht mehr warten wollen, nehmen Fackeln und Mistgabeln und gehen selbst.“ Er senkt die Stimme. „Was ihnen da draußen begegnet, haben sie meistens gestern noch gegrüßt. Die Seuche macht aus Menschen Bestien. Wen es als Nächsten trifft, weiß keiner.“ # lore: jagdnacht # lore: bestienseuche # lore: buergerjagd
+* [Nach den verriegelten Türen fragen #fliesst]
+    Du fragst, warum in dieser Stadt jede Tür verriegelt ist. „Eine Jagdnacht“, sagt er, als nenne er das Wetter. „Dann schieben die Leute die Riegel vor und hängen Räucherwerk ins Fenster, und wer das Warten nicht mehr aushält, nimmt Fackel und Mistgabel und geht selbst hinaus.“ Er senkt die Stimme, obwohl niemand zuhört. „Was ihnen da draußen begegnet, haben sie meistens gestern noch gegrüßt. Die Seuche macht aus Menschen Bestien, und wen es als Nächsten trifft, weiß keiner. Mich hat es noch nicht getroffen.“ Er hustet. „Noch nicht.“ # lore: jagdnacht # lore: bestienseuche # lore: buergerjagd
     -> themen
-* [„Wissen Sie, was bleiches Blut ist?“]
-    Er denkt lange nach. „Das Wort kenne ich nicht. Aber Blut, Blut ist die Sache der Heilenden Kirche. Jede Transfusion in dieser Stadt geht durch ihre Hände. Ihr Blut, heißt es, kommt aus der großen Kathedrale da oben, wie Wasser aus einer Quelle.“ Er hustet. „Wenn einer weiß, was bleiches Blut ist, dann die. Und ob die es Ihnen sagen …“ Er hebt die Schultern. # lore: heilende_kirche # lore: paleblood
+* [Nach dem bleichen Blut fragen #fliesst]
+    Du fragst ihn nach den Worten auf dem Zettel in der Klinik, nach dem bleichen Blut. Er denkt lange nach, die Stirn am Eisen. „Das Wort kenne ich nicht. Aber Blut ist in dieser Stadt die Sache der Heilenden Kirche. Jede Behandlung, jede Ampulle, jeder Tropfen geht durch ihre Hände. Ihr Blut, sagt man, kommt aus der großen Kathedrale da oben, so wie Wasser aus einer Quelle.“ Er hebt die Schultern, so weit das Gitter es zulässt. „Wenn einer weiß, was bleiches Blut ist, dann die. Ob sie es einem Fremden sagen, ist eine andere Frage.“ # lore: heilende_kirche # lore: paleblood
     ~ gilbert_bruecke = true
     -> themen
-* {gilbert_bruecke} [„Wie komme ich zur Kathedrale hinauf?“]
+* {gilbert_bruecke} [Nach dem Weg zur Kathedrale fragen #fliesst]
+    Du fragst nach dem Weg hinauf zur Kathedrale.
     { kleriker == "":
-        „Nur über die große Brücke. Aber da oben haust etwas.“ Er lauscht, als könne er es jetzt hören. „Man sagt, es hat einmal in der Kirche gedient. Gesungen, gepredigt, ich weiß es nicht. Man sagt auch, aus Kirchenleuten werden die schlimmsten.“ Er bekreuzigt sich nicht. Er sieht nur sehr müde aus. # lore: kleriker_bestien
+        „Über die große Brücke, einen anderen kenne ich nicht.“ Er lauscht in die Richtung, als könne er es von hier aus hören. „Aber auf der Brücke haust etwas. Es soll einmal in der Kirche gedient haben, gesungen oder gepredigt, so genau weiß das keiner. Man sagt auch, aus Kirchenleuten werden die schlimmsten.“ Er bekreuzigt sich nicht. Er sieht nur sehr müde aus. # lore: kleriker_bestien
     - else:
-        „Über die große Brücke.“ Er sieht dich an, dann auf deine Hände. „Aber das wissen Sie schon, nicht wahr. Sie waren dort. Ist es … ist es noch da oben?“ # lore: kleriker_bestien
+        „Über die große Brücke.“ Sein Blick geht zu deinen Händen und bleibt dort. „Aber das wissen Sie schon, nicht wahr? Sie waren oben. Ist es … ist es noch da?“ # lore: kleriker_bestien
     }
     -> themen
-* {gilbert_bruecke and (k1_b_anschlag or gehrman_jaeger or kleriker == "besiegt")} [„Wer jagt eigentlich für die Kirche?“]
-    // [KANON] Ludwig führte die ersten Jäger der Kirche an; viele Kirchenjäger waren Kleriker, geworben wurden auch einfache Bürger. Hier nur als Gerücht, ohne Namen.
+* {gilbert_bruecke and (k1_b_anschlag or gehrman_jaeger or kleriker == "besiegt")} [Nach den Jägern der Kirche fragen #fliesst]
+    // [KANON lore:fraktionen/jaeger] Ludwig führte die ersten Jäger der Kirche an; viele Kirchenjäger waren Kleriker, geworben wurden auch einfache Bürger. Hier nur als Gerücht, ohne Namen.
     // PRÜFEN: Ludwigs eigene Herkunft aus dem einfachen Volk ist nicht belegt; hier nur, was die Leute erzählen.
-    Gilbert lehnt die Stirn ans Gitter. „Die Leute hier erzählen von einem, der als Erster für die Kirche gejagt hat. Kein Adliger, sagen sie, einer aus den Gassen, so wie die, die er dann anwarb. Fuhrknechte, Gerber, Söhne von Wäscherinnen. Und Kleriker. Viele Kleriker.“ Er hustet und wartet, bis es vorbei ist. „Man hat Lieder auf ihn gesungen, sagt man. Seine Klinge soll im Dunkeln geleuchtet haben, wie ein Stück vom Mond.“ Er lächelt schief. „Dann hat man aufgehört, die Lieder zu singen. Seinen Namen sagt hier keiner mehr gern. Ich habe gefragt, warum. Da haben sie die Fensterläden zugemacht.“ # notiz: erster_kirchenjaeger
+    Du fragst ihn, wer für die Kirche jagt. Gilbert lehnt die Stirn ans Gitter. „Die Leute hier erzählen von einem, der als Erster für sie gejagt hat. Kein Adliger, sagen sie, einer aus den Gassen, so wie die, die er dann anwarb: Fuhrknechte, Gerber, Söhne von Wäscherinnen. Und Kleriker. Viele Kleriker.“ Er wartet, bis der Husten vorbei ist. „Man hat Lieder auf ihn gesungen. Seine Klinge soll im Dunkeln geleuchtet haben wie ein Stück vom Mond.“ Ein schiefes Lächeln. „Dann hat man die Lieder nicht mehr gesungen, und seinen Namen sagt hier keiner gern. Ich habe einmal gefragt, warum. Da sind ringsum die Läden zugefallen.“ # notiz: erster_kirchenjaeger
     -> themen
-* {grund == "suche"} [„Ich suche jemanden, der vor mir hierherkam.“]
-    Du beschreibst ihn, so gut es durch ein Gitter geht, und erwähnst den letzten Brief, der nach Weihrauch roch. Gilbert schüttelt langsam den Kopf. „Nein. Hier kommt niemand vorbei, der stehen bleibt, außer Ihnen.“ Dann, nach einer Weile: „Weihrauch. Das riecht man nur oben, bei der Kathedrale. Da unten im Viertel ist es Räucherwerk, süß, Sie haben es gerochen. Weihrauch ist etwas anderes.“ # notiz: spur_vermisst
+* {grund == "suche"} [Ihm den Menschen beschreiben, den du suchst #fliesst]
+    Du beschreibst ihm den Menschen, den du suchst, so gut es sich durch ein Gitter beschreiben lässt, und erzählst vom letzten Brief, der nach Weihrauch roch. Gilbert schüttelt langsam den Kopf. „Hier kommt niemand vorbei, der stehen bleibt. Außer Ihnen.“ Nach einer Weile sagt er: „Weihrauch. Den riecht man nur oben, bei der Kathedrale. Hier unten ist es Räucherwerk, süß und schwer, Sie haben es gerochen. Weihrauch ist etwas anderes.“ # notiz: spur_vermisst
     -> themen
-* {q_gilbert == 1 and k1_hub_c} [„Ich war hinter der Brücke.“]
+* {q_gilbert == 1 and k1_hub_c} [Ihm von der Unterstadt erzählen #fliesst]
     ~ q_gilbert = 2
     ~ gilbert = gilbert + 1
-    Du erzählst ihm von der Brücke, den Treppen, der Unterstadt, in der das Wasser nie aufhört zu laufen{k1_c_graeber:, von den Gräbern}. Gilbert hört zu, die Stirn gegen das Gitter gelehnt, und hustet die ganze Zeit nicht. „Gibt es da unten Bäume?“, fragt er, als du fertig bist. Du denkst nach und sagst ihm die Wahrheit: einen, verkrüppelt, an einer Treppe. „Einen“, sagt er zufrieden. „Das ist mehr, als ich hier habe.“ # quest: gilbert_bericht
+    Du erzählst ihm von der Brücke, von den Treppen dahinter und von der Unterstadt, in der das Wasser nie aufhört zu laufen{k1_c_graeber:, und von den Gräbern}. Gilbert hört zu, die Stirn am Eisen, und hustet die ganze Zeit kein einziges Mal. „Gibt es da unten Bäume?“, fragt er, als du fertig bist. Du denkst nach und sagst ihm die Wahrheit: einen, verkrüppelt, an einer Treppe. „Einen“, sagt er zufrieden. „Das ist einer mehr, als ich hier habe.“ # quest: gilbert_bericht
     -> themen
-+ [„Ich muss weiter.“]
++ [Dich verabschieden #fliesst]
     { gilbert >= 0 and not gilbert_geschenk: -> geschenk }
-    { gilbert < 0: Er hustet, als du gehst, und tut nicht so, als hätte er dich gehört. }
-    { gilbert >= 0: „Gute Jagd“, sagt Gilbert, und er meint es. }
+    { gilbert < 0: Du gehst. Hinter dir hustet er und tut nicht so, als hätte er dich gehört. }
+    { gilbert >= 0: Du verabschiedest dich. „Gute Jagd“, sagt Gilbert, und er meint es. }
     -> k1_hub_b
 
 = geschenk
 ~ gilbert_geschenk = true
 ~ feuer = true
-„Warten Sie.“ Gilbert verschwindet vom Fenster. Du hörst ihn kramen, hörst etwas Schweres über Holz schleifen, und dann schiebt er dir durch die Lücke zwischen den Gitterstäben einen eisernen Behälter mit einem Schlauch und einer Düse. „Feuer. Bestien fürchten Feuer mehr als alles andere. Ich habe es nie benutzt. Ich dachte immer, eines Tages brauche ich es, und dann …“ Ein Hustenanfall schneidet den Satz ab, und er nimmt ihn nicht wieder auf. „Nehmen Sie es einfach.“ # notiz: bestien_feuer
+Du willst dich verabschieden, doch er hebt die Hand. „Warten Sie.“ Das Gesicht verschwindet vom Gitter. Drinnen wird ein Stuhl gerückt, dann schleift Schweres über die Dielen, und durch die Lücke zwischen zwei Stäben schiebt er dir einen eisernen Tank mit Schlauch und Düse zu, so behutsam, als reiche er ein schlafendes Kind über einen Zaun.
+„Feuer“, sagt er. „Die Bestien fürchten es mehr als alles andere. Ich habe es nie benutzt.“ Die Düse ist schwarz von Ruß, alt und tief ins Eisen gebrannt. Er sieht, wohin du siehst, und sieht weg. „Das Blut dieser Stadt hat mir Aufschub gekauft, wissen Sie. Nur Aufschub, nichts weiter. Ich dachte immer, eines Tages brauche ich das Ding selbst, und dann …“ Der Husten schneidet ihm den Satz ab, und er nimmt ihn nicht wieder auf. „Nehmen Sie es einfach.“ # notiz: bestien_feuer
 { gilbert >= 1:
-    „Und noch etwas. Wenn Sie über die Brücke kommen, erzählen Sie mir, was dahinter liegt. Ich werde es nicht mehr selbst sehen.“ # quest: gilbert_bericht
+    „Und noch etwas.“ Er zögert. „Wenn Sie über die Brücke kommen, erzählen Sie mir, was dahinter liegt. Ich werde es nicht mehr selbst sehen.“ # quest: gilbert_bericht
     ~ q_gilbert = 1
 }
 -> k1_hub_b

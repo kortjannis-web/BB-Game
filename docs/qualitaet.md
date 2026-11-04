@@ -49,7 +49,7 @@ Stand 2026-11-04, nach Runde 1: drei unabhängige Prüfungen (Plot und Logik, Lo
 | k1_laterne_zentral | Laterne Zentral-Yharnam | 2 | |
 | k1_hub_b | Zentral-Yharnam (frei) | 2 | |
 | schrei | Kreischen von der Brücke | 1 | |
-| k1_b_gilbert | Gilbert | 2 | |
+| k1_b_gilbert | Gilbert | 2 | **Erste handgearbeitete Szene** (2026-11-04): Ortsbild in Stimme A, Begegnung in B, Optionen fließen in den Satz (#fliesst), Lore aus `lore/`; vom Nutzer nicht gelesen. Offen: Gilberts Sätze nur sinngemäß gegen Kanon geprüft (RK1 §5), Ruß an der Düse als Deutungs-Detail |
 | k1_b_tueren | Türen mit Räucherlampen | 2 | |
 | k1_b_scheiterhaufen | Scheiterhaufen, erste Begegnung mit Gascoigne | 2 | |
 | k1_b_maedchen | Das Mädchen am Fenster | 2 | |

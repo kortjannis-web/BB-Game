@@ -245,7 +245,7 @@ CHRONIK DER NACHT # stil: zwischentitel
 {
 - versprechen_gilbert: Gilbert. Du hast versprochen, ihn zu holen, wenn es bei ihm so weit ist. Wirkt nach. # stil: chronik
 - q_gilbert == 2: Gilbert. Du hast ihm erzählt, was hinter der Brücke liegt. # stil: chronik
-- gilbert < 0: Gilbert. Du hast ihn angefahren. Er hustet, wenn du vorbeigehst, und sieht nicht auf. # stil: chronik
+- gilbert < 0: Gilbert. Du hast dich von ihm abgewandt. Er hustet, wenn du vorbeigehst, und sieht nicht auf. # stil: chronik
 - k1_b_gilbert: Gilbert. Er wartet hinter seinem Gitter und sammelt Namen. # stil: chronik
 }
 { alte_frau_versprochen:

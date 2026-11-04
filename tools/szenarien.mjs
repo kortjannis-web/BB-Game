@@ -61,7 +61,7 @@ const SZENARIEN = [
   },
   {
     name: "Mob verbrannt: Martha stirbt, Gascoigne kühler",
-    wuensche: ["Gilberts Fenster", "„Ich heiße", "„Ich muss weiter", "Hauptstraße mit dem Scheiterhaufen", "Stehen bleiben und kämpfen", "Feuer in die Menge"],
+    wuensche: ["Gilberts Fenster", "Ihm deinen Namen nennen", "Dich verabschieden", "Hauptstraße mit dem Scheiterhaufen", "Stehen bleiben und kämpfen", "Feuer in die Menge"],
     verbote: [],
     erwartet: { mob_verbrannt: true },
   },
@@ -91,7 +91,7 @@ const SZENARIEN = [
   },
   {
     name: "Gilbert das Versprechen gegeben",
-    wuensche: ["Gilberts Fenster", "„Ich heiße", "„Ich muss weiter", "Zu Gilbert", "Ihm von Gascoigne erzählen", "Es ihm versprechen"],
+    wuensche: ["Gilberts Fenster", "Ihm deinen Namen nennen", "Dich verabschieden", "Zu Gilbert", "Ihm von Gascoigne erzählen", "Es ihm versprechen"],
     verbote: [],
     erwartet: { versprechen_gilbert: true },
   },

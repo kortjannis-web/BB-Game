@@ -78,18 +78,20 @@ for (const datei of dateien(join(WURZEL, "story"))) {
     // --- Optionen
     const opt = z.match(/^[+*]+\s*(\([^)]*\)\s*)?(\{[^}]*\}\s*)?\[([^\]]+)\]/);
     if (opt) {
-      const o = opt[3].replace(/\{[^{}:]*:([^|}]*)\|[^}]*\}/g, "$1").trim();
+      const fliesst = /#\s*fliesst/.test(opt[3]);
+      const o = opt[3].replace(/#.*$/, "").replace(/\{[^{}:]*:([^|}]*)\|[^}]*\}/g, "$1").trim();
       const gesprochen = /^„/.test(o);
       const woerter = o.replace(/[„“]/g, "").split(/\s+/).filter(Boolean);
       if (woerter.length === 1) melde("option-ein-wort", datei, nr, o);
       if (!gesprochen && /[;:]/.test(o)) melde("option-zeichen", datei, nr, o);
-      if (!gesprochen && META_OPTION.test(o)) melde("option-meta", datei, nr, o);
+      if (!gesprochen && !fliesst && META_OPTION.test(o)) melde("option-meta", datei, nr, o);
       if (!gesprochen && /^(Die|Der|Das|Den)\s/.test(o) && !/\p{L}+(en|ern|eln)\s*$/u.test(o)) melde("option-menue", datei, nr, o);
       if (woerter.length > 9) melde("option-lang", datei, nr, o);
       if (/Blutampulle trinken/.test(o)) melde("ampulle-trinken", datei, nr, o);
       // Echo: erste sichtbare Zeile danach wiederholt die Option
       const ow = new Set(inhaltswoerter(o));
-      if (ow.size >= 2) {
+      // Bei #fliesst ist die Fortsetzung der Wahl im Text gewollt.
+      if (ow.size >= 2 && !fliesst) {
         for (let j = i + 1; j < Math.min(zeilen.length, i + 5); j++) {
           const n = zeilen[j].trim();
           if (!n || n.startsWith("~") || n.startsWith("//") || n.startsWith("{") && !sichtbar(n)) continue;
@@ -121,7 +123,9 @@ for (const datei of dateien(join(WURZEL, "story"))) {
       du = /^„?Du\b/.test(s) ? du + 1 : 0;
       if (du === 3) melde("du-anfang", datei, nr, s);
     }
-    saetze.push(...satzliste);
+    // Satzlänge nur über Erzähltext messen: Rede ist in jeder Stimme kürzer.
+    const erzaehlt = t.replace(/„[^“]*“/g, " ").replace(/\s+/g, " ").trim();
+    saetze.push(...erzaehlt.split(/(?<=[.!?])\s+(?=[A-ZÄÖÜ])/).filter((x) => x.split(/\s+/).length > 2));
   }
   knotenAbschluss();
 }
@@ -144,7 +148,7 @@ const ERKLAERUNG = {
   tic: "Verlegenheitswort mehrfach in einer Zeile",
   vergleich: "mehr als ein Vergleich in einer Zeile",
   "du-anfang": "drei Sätze in Folge beginnen mit „Du“",
-  satzlaenge: "Knoten mit zu kurzen Sätzen (Stakkato)",
+  satzlaenge: "Knoten mit zu kurzen Sätzen im Erzähltext (Stakkato)",
 };
 console.log("Stilprüfer (Warnungen; Regeln: docs/stimme.md, docs/stil-und-lore-plan.md)");
 for (const [klasse, liste] of Object.entries(nachKlasse).sort((a, b) => b[1].length - a[1].length)) {
