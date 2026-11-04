@@ -1,6 +1,6 @@
 # Probe: Gascoigne am Grab, mit und ohne Skill
 
-Stand 2026-11-04. Gleiche Aufgabe an zwei unabhängige Schreiber (Hilfs-Agenten), einer mit den Skills `erzaehlkunst-deutsch` und `hpl-horror`, einer ohne. Fall: Freundschaft mit Gascoigne (zwei Begegnungen vorher, Parieren am Scheiterhaufen gelernt), Szene von der Ankunft am Grab des Oedon bis zum Heben der Donnerbüchse, 350 bis 500 Wörter, eigene Worte. **Nicht im Spiel**, nur zum Vergleichen; was davon ins Spiel kommt, entscheidet der Nutzer.
+Stand 2026-11-04. Gleiche Aufgabe an zwei unabhängige Schreiber (Hilfs-Agenten), einer mit den Skills `erzaehlkunst-deutsch` und `hpl-horror`, einer ohne. Fall: Freundschaft mit Gascoigne (zwei Begegnungen vorher, Parieren am Scheiterhaufen gelernt), Szene von der Ankunft am Grab des Oedon bis zum Heben der Donnerbüchse, 350 bis 500 Wörter, eigene Worte. **Stand:** Fassung B ist mit Vollmacht des Nutzers ins Spiel übernommen (`story/kapitel1/n2_gascoigne.ink`), mit Varianten für Freund mit und ohne Scheiterhaufen, für den Fremden und für die Rückkehr nach dem Tod. Aus A kam das Wittern (in der Fassung für den Fremden) dazu.
 
 ## A: ohne Skill (495 Wörter)
 
@@ -72,4 +72,4 @@ Schwächen: ein halber Kommentarsatz („Diesmal schickt er niemanden nach Hause
 
 **Mein Urteil:** B ist die stärkere Szene, vor allem, weil sie Gascoignes Zerfall an die beiden früheren Begegnungen bindet und dem Spieler die richtige Entscheidung fair ankündigt. A hat einzelne Bilder, die ich behalten würde (die abgeleckten Namen, der warme Nebel, das Wittern). Der Vergleich ist kein Blindtest: Ich habe die Skills geschrieben und urteile über sie. Das Urteil des Nutzers zählt.
 
-**Offene Frage an den Nutzer:** Direkte Rede („…“) wie in B oder indirekte Rede wie im jetzigen Spieltext und in A? B wirkt näher; die indirekte Rede passt zum Bericht, aber nicht zur Freundschaft.
+**Rede:** entschieden für eine Regel statt einen Wechsel: Der Spieltext bleibt im Bericht (indirekte Rede), und Gascoignes Stimme bricht am Grab als erste wörtlich durch. Steht in `hpl-horror`, `references/bb-game.md`. Der Nutzer kann es ändern.

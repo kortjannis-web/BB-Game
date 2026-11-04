@@ -12,22 +12,38 @@
 ~ moment_moeglich = gascoigne >= 2 and spieluhr and gedaechtnis_kleriker
 { k1_n2_gascoigne == 1:
     ~ einsicht = einsicht + 1
-    Hinter dem Tor liegt das Grab des Oedon. Es ist kein einzelnes Grab, sondern ein weiter, offener Friedhof unter einem Himmel, der hier tiefer zu hängen scheint als anderswo, so tief, dass du dich unwillkürlich duckst. Hunderte Grabsteine, kreuz und quer, und zwischen ihnen Nebel, der sich in Bodennähe hält wie Wasser in einem Becken. Ein Name ohne Gesicht über einem Ort, an dem niemand mehr betet. # bild: grab_oedon # stimmung: grauen # lore: oedon
-    In der Mitte des Friedhofs beugt sich ein Mann über einen Leichnam. Er hackt. Wieder und wieder hebt sich die Axt und fällt, mit einem Geräusch wie Holzhacken im Winter, nur nasser, und bei jedem Hieb bebt der lange Mantel auf seinen Schultern. # kampf: gascoigne
+    Hinter dem Tor hört das Räucherwerk auf. Den ganzen Weg durch die Unterstadt hat es dir in den Kleidern gehangen, süß und harzig, und an den Gitterstäben bleibt es zurück. Hier riecht es nach umgegrabener Erde und kaltem Eisen. Der Friedhof steigt in breiten Stufen an, Grab über Grab, und der Nebel liegt so flach zwischen den Steinen, dass nur ihre Köpfe herausragen, Reihe um Reihe, wie eine Gemeinde, die auf den Beginn der Predigt wartet. Der Himmel hängt hier tiefer als über der Stadt. Ohne es zu wollen, ziehst du den Kopf ein. # bild: grab_oedon # stimmung: grauen # lore: oedon
+    Weiter oben schlägt etwas. Dumpf und gleichmäßig kommt es herunter, im Takt eines Dreschflegels auf der Tenne, und zwischen zwei Schlägen schmatzt es jedes Mal leise und nass. Ab und zu fährt die Klinge ganz hindurch und trifft auf Stein. Dann klingt es hell und kurz, und der Ton läuft über die Gräber davon, bis der Nebel ihn schluckt.
+    // [ERWEITERT] Hut auf dem Grabstein. PRÜFEN: Trägt Gascoigne im Original einen Hut? Sonst den Schal nehmen.
+    Er steht auf der obersten Stufe, mit dem Rücken zu dir, der lange Mantel nass bis an die Knie. Die Axt hebt sich und fällt. Seinen Hut hat er auf einen Grabstein gelegt, die Krempe nach oben, so ordentlich, wie man ihn vor der Messe auf die Bank legt. Was zu seinen Füßen liegt, trägt noch einen Stiefel, und die Schnalle daran ist blank geputzt. Der Griff deiner Feuerwaffe ist warm in deiner Hand. Wann du ihn gepackt hast, weißt du nicht. # kampf: gascoigne
 - else:
-    Wieder das Grab des Oedon, wieder der Nebel zwischen den Steinen. Und wieder der Mann mit der Axt über dem Leichnam, als hätte er nie aufgehört, als hätte deine Rückkehr für ihn nicht stattgefunden. # bild: grab_oedon # stimmung: grauen # kampf: gascoigne
+    Hinter dem Tor bleibt das Räucherwerk wieder zurück. Die Steine stehen im Nebel wie zuvor, und oben auf der letzten Stufe hebt sich die Axt und fällt, im selben Takt, als hätte deine Rückkehr für ihn nicht stattgefunden. Der Hut liegt noch auf dem Grabstein. Niemand hat ihn angerührt. # bild: grab_oedon # stimmung: grauen # kampf: gascoigne
 }
+// Direkte Rede: Der Spieltext erzählt Gespräche als Bericht (indirekt). Hier bricht Gascoignes Stimme zum ersten Mal wörtlich durch; der Wechsel ist Absicht (siehe hpl-horror, references/bb-game.md).
 { gascoigne >= 1:
-    Dann hört er auf. Er dreht sich um, langsam, und es ist Gascoigne, der Verband über den Augen ist schwarz vor Blut. Er sagt deinen Namen, {name}, und er sagt ihn, als wäre es ein Fluch, als hättest du ihm etwas genommen. Überall seien Bestien, sagt er, überall, überall, und früher oder später werdest auch du eine sein. Du wirst sehen. Du wirst sehen.
+    Die Axt bleibt oben stehen. Langsam dreht er sich um. Der Verband über seinen Augen ist steif geworden und dunkel bis zum Knoten, und trotzdem findet sein Gesicht dich sofort.{ gascoigne2 and q_frau == 1: Zwischen den Gräbern der Unterstadt hat er einen Atemzug zu lang gebraucht, um dich zu erkennen. Jetzt lächelt er gleich.| Er lächelt.}
+    „{name}.“ Es klingt wie ein Gruß an der Haustür{ q_frau == 1:, mit dem fremden Rollen in der Stimme, das du vom Scheiterhaufen kennst}. „Gut. Gut, dass du kommst. Dann siehst du's auch.“
+    // [ERWEITERT] Der Bäckerjunge ist erfunden; Martha, Hennings und der alte Brack stammen aus der Szene am Scheiterhaufen.
+    { q_frau == 1:
+        Er deutet mit der Axt hinab auf die Dächer, und von der Schneide fällt Tropfen um Tropfen in den Nebel. „Martha. Hennings. Der alte Brack. Der Bäckerjunge.“ Mit den ersten drei Namen hat er auf dem Platz den Mob nach Hause geschickt. „Alle. Hinter jeder Tür, unter jedem Hut. Ich riech's durch das Räucherwerk.“
+    - else:
+        Er deutet mit der Axt hinab auf die Dächer, und von der Schneide fällt Tropfen um Tropfen in den Nebel. „Alle da unten. Hinter jeder Tür, unter jedem Hut. Ich riech's durch das Räucherwerk.“
+    }
+    Er hebt das Kinn und zieht die Luft ein, einmal, zweimal, wie ein Hund an einer fremden Schwelle. „An dir noch nicht.“ Das Lächeln wird breiter. „Noch nicht, {name}. Ist nur eine Frage der Nächte.“
 - else:
-    Dann hört er auf. Er dreht sich um, die Augen verbunden, groß und schwer, und er lächelt nicht. Überall Bestien, sagt er mit einer Stimme wie aus einem tiefen Brunnen, überall. Und früher oder später werde man selbst eine. Du wirst sehen. # lore: gascoigne
+    Die Axt bleibt oben stehen. Er hebt den Kopf und nimmt Witterung auf, mit kleinen Rucken, wie ein Jagdhund im Wind, dann dreht er sich um. Die Augen sind verbunden, der Verband ist schwarz und steif, und das Gesicht darunter ist das eines Mannes, der lange nicht geschlafen hat. # lore: gascoigne
+    „Noch einer“, sagt er. Seine Stimme kommt tief und ruhig, mit einem fremden Rollen darin. Er deutet mit der Axt über die Gräber hinab auf die Stadt. „Da unten. Hinter jeder Tür, in jedem Bett, in jeder Kirchenbank. Die tragen ihre Gesichter nur noch wie Mäntel.“ Er zieht die Luft ein und legt den Kopf schief. „Du auch. Nicht heute vielleicht. Aber du auch.“
 }
 -> p1
 
 = p1
 # stimmung: kampf
 - (t1)
-Er reißt die Donnerbüchse hoch. Der trichterförmige Lauf schwenkt herum, sucht dich, und du siehst seinen Finger am Abzug. # anzeichen: schuss
+{ t1 == 1:
+    Dann hebt er die Donnerbüchse, ohne Hast. Der trichterförmige Lauf schwenkt über die Steine, findet dich und bleibt ruhig. Das Gewicht liegt auf seinem hinteren Fuß, die Axt hängt locker an der Seite.{ q_frau == 1 and parade: Diese Haltung kennst du. Auf dem Platz am Scheiterhaufen hat er sie dir vorgemacht, für den Augenblick, in dem eine Bestie ausholt.} Jetzt wartet er darauf, dass du es tust. # anzeichen: schuss
+- else:
+    Er reißt die Donnerbüchse hoch. Der trichterförmige Lauf schwenkt herum, sucht dich, und du siehst seinen Finger am Abzug. # anzeichen: schuss
+}
 { gelernt ? schuss: Du kennst das jetzt. Erst der Schuss, der dich auf Abstand hält, dann kommt die Axt, sobald du dich zeigst. }
 + [Hinter einen Grabstein]
     Du wirfst dich hinter den nächsten Grabstein. Die Ladung schlägt in den Stein, und Splitter regnen auf dich herab, Bruchstücke eines Namens, den niemand mehr lesen wird.

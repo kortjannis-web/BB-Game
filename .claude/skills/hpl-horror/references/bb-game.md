@@ -36,6 +36,7 @@ Immer erzählt und geschrieben, kein Zufall: Anzeichen (`# anzeichen: id`), Mög
 - Die Aufzeichnungen im Prolog und andere Fundstücke: Ich, Präteritum, rückblickend (Stil-Tag `# stil: tagebuch`).
 - Blutgedächtnis (`# gedaechtnis: id`): personale Perspektive einer fremden Figur, sichtbar abgesetzt.
 - Notizbuch (`web/notizbuch.js`): Stimme des Jägers, Ich; Einträge dürfen beim ersten Fund nichts vorwegnehmen.
+- **Rede**: Gespräche stehen im Spieltext als Bericht in indirekter Rede (passt zum Rahmen der Aufzeichnungen aus dem Prolog). Direkte Rede in „…“ bricht nur dort durch, wo sich eine Stimme ins Gedächtnis brennt: zuerst Gascoigne am Grab. Sparsam halten, damit der Bruch wirkt. (Festgelegt 2026-11-04 nach dem Vergleich in `docs/proben/gascoigne-vergleich.md`; der Nutzer kann es jederzeit ändern.)
 
 ## Struktur und Prüfung
 - Erst Struktur, dann Text: neue Kapitel als Gerüst mit Ein-Satz-Platzhaltern, ausformuliert nach Abnahme.
