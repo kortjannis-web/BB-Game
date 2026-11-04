@@ -36,7 +36,9 @@ Immer erzählt und geschrieben, kein Zufall: Anzeichen (`# anzeichen: id`), Mög
 - Die Aufzeichnungen im Prolog und andere Fundstücke: Ich, Präteritum, rückblickend (Stil-Tag `# stil: tagebuch`).
 - Blutgedächtnis (`# gedaechtnis: id`): personale Perspektive einer fremden Figur, sichtbar abgesetzt.
 - Notizbuch (`web/notizbuch.js`): Stimme des Jägers, Ich; Einträge dürfen beim ersten Fund nichts vorwegnehmen.
-- **Rede**: Gespräche stehen im Spieltext als Bericht in indirekter Rede (passt zum Rahmen der Aufzeichnungen aus dem Prolog). Direkte Rede in „…“ bricht nur dort durch, wo sich eine Stimme ins Gedächtnis brennt: zuerst Gascoigne am Grab. Sparsam halten, damit der Bruch wirkt. (Festgelegt 2026-11-04 nach dem Vergleich in `docs/proben/gascoigne-vergleich.md`; der Nutzer kann es jederzeit ändern.)
+- **Rede** (geändert 2026-11-04 nach der Gegenprüfung): Figuren sprechen in direkter Rede in „…“, jede mit eigener Stimme (Stimmprofil als Kommentar am Knoten). Indirekte Rede nur für Zusammenfassungen, Gerüchte und Nebensätze. Grund: In indirekter Rede klangen alle Figuren gleich, und Gascoignes Zerfall war nur zu sehen, nie zu hören.
+- **Stimmen**: Gascoigne gesund tief, ruhig, kurz, sagt „Fremder“, bis er deinen Namen hat, beendet Dinge mit „So.“; kippend wiederholt er Wörter, verwechselt Namen. Gilbert höflich, selbstironisch, siezt, der Husten schneidet Sätze ab. Eileen heiser, Sätze ohne Anlauf, antwortet mit Gegenfragen oder gar nicht. Iosefka siezt, genau, ärztlich, „Das notiere ich“ (Maßstab gegen die Hochstaplerin in Kapitel 2). Gehrman warm, müde, Pausen. Der Mann in der Klinik glatt, geübt, amüsiert. Die Puppe förmlich, sanft, atmet nicht zwischen den Sätzen, fragt nach der Welt draußen. Das Mädchen schnell, ernst, zählt auf, was sie richtig gemacht hat.
+- **Der Traum als Fluch** (Dosierung): Tinte an den Fingern, Nadelstich beim Erwachen, „daheim“, die Sonne, die nicht untergeht. Nie sagen, dass der Vertrag bindet ([Deutung]).
 
 ## Struktur und Prüfung
 - Erst Struktur, dann Text: neue Kapitel als Gerüst mit Ein-Satz-Platzhaltern, ausformuliert nach Abnahme.

@@ -46,6 +46,7 @@ flowchart TD
   subgraph traum_ink["Jägertraum"]
     traum_erwachen["Erwachen nach dem Tod"]
     traum_hub["Jägertraum"]
+    puppe_gespraech["Gespräch mit der Puppe"]
   end
   k1_b_daecher --> k1_hub_b
   k1_b_eileen --> k1_hub_b
@@ -90,5 +91,8 @@ flowchart TD
   k1_traum_erst --> k1_klinik_kampf
   tod --> traum_erwachen
   traum_erwachen --> traum_hub
+  traum_hub --> k1_hub_b
+  traum_hub --> k1_hub_c
+  traum_hub --> puppe_gespraech
   traum_von_laterne --> traum_hub
 ```

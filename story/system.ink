@@ -51,7 +51,7 @@ VAR gelernt = ()
 === ampulle_ruhig ===
 ~ ampulle = ampulle - 1
 ~ heile(AMPULLE_HEILT)
-Du stößt dir die Ampulle in den Schenkel. Das Blut brennt, dann wärmt es, und die Wärme läuft dir die Adern hinauf bis in die Fingerspitzen, und für einen Moment fühlst du dich so lebendig, dass es beinahe wehtut. # klang: ampulle
+{~Du stößt dir die Ampulle in den Schenkel. Das Blut brennt, dann wärmt es, und die Wärme läuft dir die Adern hinauf bis in die Fingerspitzen.|Die Nadel der Ampulle geht durch den Stoff in den Schenkel. Einen Herzschlag lang nichts, dann eine Hitze, die vom Bein aufsteigt wie Branntwein in die Kehle.|Du drückst die Ampulle in den Schenkel und lehnst dich an die nächste Wand, bis das Zittern in deinen Händen aufhört. Es hört auf. Es hört jedes Mal auf.} # klang: ampulle
 ->->
 
 // Ampulle mitten im Angriff: heilt, aber der Gegner trifft dabei (Schaden höchstens 2, damit Trinken nie tötet).
@@ -59,7 +59,7 @@ Du stößt dir die Ampulle in den Schenkel. Das Blut brennt, dann wärmt es, und
 ~ ampulle = ampulle - 1
 ~ heile(AMPULLE_HEILT)
 ~ treffer(schaden)
-Du stößt dir die Ampulle in den Schenkel, mitten im Kampf, und im selben Atemzug trifft dich der Schlag, den du kommen sahst und trotzdem nicht vermeiden konntest. Das Blut heilt, was es heilen kann. Der Rest ist Lehrgeld. # klang: ampulle
+{~Du stößt dir die Ampulle in den Schenkel, mitten im Kampf, und im selben Atemzug trifft dich der Schlag, den du kommen sahst. Das Blut heilt, was es heilen kann.|Du hast die Ampulle gerade im Bein, als der Hieb kommt. Das Blut wärmt dich von innen, und von außen wird es kalt, dort, wo er dich getroffen hat.|Trinken und Ausweichen zugleich geht nicht; dein Körper merkt es eher als dein Kopf. Die Wärme der Ampulle und der Schmerz des Treffers kommen im selben Augenblick.} # klang: ampulle
 ->->
 
 // Tod: Erwachen im Traum. Die Echos bleiben am Todesort liegen; ein zweiter Tod vorher löscht sie.
@@ -72,5 +72,12 @@ Du stößt dir die Ampulle in den Schenkel, mitten im Kampf, und im selben Atemz
 ~ fleck_echos = echos
 ~ echos = 0
 ~ leben = LEBEN_MAX
-Die Welt kippt. Der Boden kommt dir entgegen, langsam, als habe er alle Zeit der Welt, und das Letzte, was du hörst, ist dein eigenes Herz, das einen Schlag aussetzt und dann noch einen. Dann wird es dunkel, und in der Dunkelheit bewegen sich kleine graue Hände. # tod: {ort} # stimmung: grauen
+{ ort:
+- "bruecke": Das Letzte, was du siehst, ist das Geweih über dir, schwarz gegen den Nebel, und eine Kutsche, die sich langsam dreht, als läge sie auf Wasser. # tod: {ort} # stimmung: grauen
+- "kanal": Das Wasser schlägt über dir zusammen, kalt, mit einem Geschmack nach Eisen, und von oben, sehr weit weg, hörst du die Ratten. # tod: {ort} # stimmung: grauen
+- "grab": Zwischen zwei Grabsteinen liegst du auf dem Rücken. Über dir hängt die rote Sonne. Sie hat sich nicht bewegt. Sie wird es nicht. # tod: {ort} # stimmung: grauen
+- "scheiterhaufen": Der Pflasterstein unter deiner Wange ist warm vom Feuer. Jemand sagt etwas, eine Frau, und du verstehst es nicht mehr. # tod: {ort} # stimmung: grauen
+- else: Der Boden kommt dir entgegen, langsam, als habe er alle Zeit der Welt. Das Letzte, was du hörst, ist dein eigener Atem, der an einer Stelle hängen bleibt und nicht weitergeht. # tod: {ort} # stimmung: grauen
+}
+Dann wird es dunkel, und in der Dunkelheit bewegen sich kleine graue Hände.
 -> traum_erwachen

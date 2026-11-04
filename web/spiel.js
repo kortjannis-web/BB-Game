@@ -432,16 +432,50 @@
     location.reload();
   }
 
+  // Notizbuch-Stufen: "var", "!var", "var>=2", "var==wert", verknüpft mit && und ||. Unbekannte Namen gelten als Knoten (Besuche).
+  function groesse(name) {
+    try {
+      const v = story.variablesState[name];
+      if (v !== undefined && v !== null) return typeof v === "object" && "count" in v ? v.count : v;
+    } catch {
+      /* kein Merker dieses Namens */
+    }
+    try {
+      return story.state.VisitCountAtPathString(name);
+    } catch {
+      return 0;
+    }
+  }
+  function bedingungGilt(ausdruck) {
+    if (!ausdruck) return true;
+    return ausdruck.split("||").some((oder) => oder.split("&&").every((teil) => {
+      const m = teil.trim().match(/^(!)?([\w.]+)\s*(>=|<=|==|!=|>|<)?\s*(.*)$/);
+      if (!m) return false;
+      const [, nicht, name, op, rechts] = m;
+      const v = groesse(name);
+      let ok;
+      if (!op) ok = !!v;
+      else {
+        const r = rechts.trim() === "" ? "" : Number.isNaN(Number(rechts)) ? rechts.trim() : Number(rechts);
+        ok = { ">=": v >= r, "<=": v <= r, "==": v == r, "!=": v != r, ">": v > r, "<": v < r }[op];
+      }
+      return nicht ? !ok : ok;
+    }));
+  }
+
   function notizbuchZeigen() {
     const box = $("notizen");
     box.innerHTML = "";
     if (!notizen.length) box.innerHTML = '<p class="leer">Noch leer. Yharnam wird es füllen.</p>';
     for (const id of notizen) {
-      const [titel, inhalt] = window.NOTIZBUCH[id];
+      const e = window.NOTIZBUCH[id];
+      const titel = Array.isArray(e) ? e[0] : e.titel;
+      const stufen = Array.isArray(e) ? [["", e[1]]] : e.stufen;
+      const texte = stufen.filter(([b]) => bedingungGilt(b)).map(([, t]) => t);
+      if (!texte.length) continue;
       const a = document.createElement("article");
-      a.innerHTML = "<h3></h3><p></p>";
-      a.querySelector("h3").textContent = titel;
-      a.querySelector("p").textContent = inhalt;
+      a.appendChild(document.createElement("h3")).textContent = titel;
+      for (const t of texte) a.appendChild(document.createElement("p")).textContent = t;
       box.appendChild(a);
     }
     $("notizbuch").showModal();

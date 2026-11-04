@@ -7,7 +7,7 @@ import { compile, play, rng, variable } from "./ink.mjs";
 const SZENARIEN = [
   {
     name: "Bester Weg: Moment der Klarheit mit Gascoigne",
-    wuensche: ["Ihm danken", "Versprechen, die Mutter", "Allein kämpfen", "Gascoigne rufen", "Den Kopf berühren", "an seine Tochter", "Spieluhr aufziehen", "Ihm versprechen", "Lügen", "Ihr sagen, ihr Vater"],
+    wuensche: ["Ihm danken", "Ihm deinen Namen sagen", "Versprechen, es auszurichten", "Versprechen, die Mutter", "Allein kämpfen", "Gascoigne rufen", "Ihn beim Namen rufen", "Den Kopf berühren", "an seine Tochter", "Spieluhr aufziehen", "Ihn rufen", "Ihm versprechen", "Lügen", "Ihr sagen, ihr Vater"],
     verbote: ["Klinik zu laufen", "anfahren", "drohen", "fliehen", "werfen", "wo du ihn gesehen", "Brosche geben", "Jägermarke"],
     erwartet: { gascoigne_moment: true, gedaechtnis_kleriker: true, versprechen_gascoigne: true, maedchen_wo: "zuhause" },
   },
@@ -31,13 +31,13 @@ const SZENARIEN = [
   },
   {
     name: "Verrat an Gascoigne, Eileens Angebot für Kapitel 2",
-    wuensche: ["Ihm danken", "Respekt", "wo du ihn gesehen", "Rabenfedern auf dem Dach", "anbieten, mit ihr zu jagen"],
+    wuensche: ["Ihm danken", "Nach den Abzeichen", "wo du ihn gesehen", "Rabenfedern auf dem Dach", "anbieten, mit ihr zu jagen"],
     verbote: ["warnen", "Jägermarke"],
     erwartet: { gascoigne_verraten: true, eileen_partner: true },
   },
   {
     name: "Gascoigne gewarnt, Bruch mit Eileen",
-    wuensche: ["Ihm danken", "Respekt", "Rabenfedern auf dem Dach", "anbieten, mit ihr zu jagen", "vor der Frau mit den Rabenfedern"],
+    wuensche: ["Ihm danken", "Nach den Abzeichen", "Rabenfedern auf dem Dach", "anbieten, mit ihr zu jagen", "vor der Frau mit den Rabenfedern"],
     verbote: ["wo du ihn gesehen", "Jägermarke"],
     erwartet: { gascoigne_gewarnt: true, eileen_partner: false },
   },
@@ -52,6 +52,48 @@ const SZENARIEN = [
     wuensche: ["Versprechen, die Mutter", "Die Brosche an dich", "Brosche geben", "Durch die Kanalisation zurück"],
     verbote: ["Klinik zu laufen"],
     erwartet: { q_mutter: 3, maedchen_tot: true },
+  },
+  {
+    name: "Namen getauscht: Gascoigne kennt dich beim Namen",
+    wuensche: ["Ihm deinen Namen sagen", "In den Schatten um den Platz"],
+    verbote: [],
+    erwartet: { gascoigne_name: true, q_frau: 1 },
+  },
+  {
+    name: "Mob verbrannt: Martha stirbt, Gascoigne kühler",
+    wuensche: ["Gilberts Fenster", "Ihm deinen Namen sagen und zuhören", "Gehen", "Hauptstraße mit dem Scheiterhaufen", "Stehen bleiben und kämpfen", "Feuer in die Menge"],
+    verbote: [],
+    erwartet: { mob_verbrannt: true },
+  },
+  {
+    name: "Im Lied zugeschlagen",
+    wuensche: ["Versprechen, die Mutter", "Spieluhr aufziehen", "Zuschlagen, solange er zuhört"],
+    verbote: ["Klinik zu laufen"],
+    erwartet: { im_lied_getroffen: true },
+  },
+  {
+    name: "Wahrheit ohne Brosche: Sie glaubt halb und bleibt",
+    wuensche: ["Versprechen, die Mutter", "Sie ihr lassen", "Die Wahrheit sagen, ohne Beweis", "Ihr die Wahrheit sagen, ohne Beweis", "Brunnenplatz, wo das Mädchen wartet"],
+    verbote: ["Klinik zu laufen", "Die Brosche an dich"],
+    erwartet: { q_mutter: 7, maedchen_wo: "zuhause" },
+  },
+  {
+    name: "Schütze verschont, rettet dich auf dem Rückweg",
+    wuensche: ["Gasse unter den Dächern", "Langsam, die Dächer", "Hinaufklettern", "Ihm das Gewehr abnehmen"],
+    verbote: ["Es beenden"],
+    erwartet: { schuetze_verschont: true },
+  },
+  {
+    name: "Gilbert das Versprechen gegeben",
+    wuensche: ["Gilberts Fenster", "Ihm deinen Namen sagen und zuhören", "Gehen", "Zu Gilbert", "Ihm von Gascoigne erzählen", "Es ihm versprechen"],
+    verbote: [],
+    erwartet: { versprechen_gilbert: true },
+  },
+  {
+    name: "Verraten und gewarnt: Eileen wendet sich ab",
+    wuensche: ["Ihm danken", "In den Schatten um den Platz", "Dachbalken über dem Kanaleingang", "wo du ihn gesehen", "Zu den Gräbern", "vor der Frau mit den Rabenfedern"],
+    verbote: [],
+    erwartet: { gascoigne_verraten: true, gascoigne_gewarnt: true, eileen_partner: false },
   },
 ];
 
