@@ -36,7 +36,7 @@ Lebendes Profil, gepflegt von Claude aus den Vorschlägen der Werkstatt (`docs/v
 - Boten: Wissen und Kleidung mit Folgen statt Kampfwerkzeuge (Abfrage 2026-11-04, Empfehlung „Werkzeuge“ abgewählt).
 
 ## Was der Nutzer nicht mag
-*(gestrichene Muster, mit Beleg)*
+- Eigenartige Wörter, unlogische Aussagen, schwache, nicht fesselnde Sprache, fehlende Atmosphäre, Sätze, die aus der Welt werfen; vor allem die Entscheidungsoptionen (Kritik 2026-11-04, Analyse in `docs/stil-und-lore-plan.md`).
 
 ## Belege
 | Datum | Einreichung | ID | Vorher (kurz) | Nachher (kurz) | Abgeleitete Regel |
