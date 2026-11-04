@@ -18,6 +18,7 @@ flowchart TD
     k1_hub_b["Zentral-Yharnam (frei)"]
     k1_b_gilbert["Gilbert"]
     k1_b_tueren["Türen mit Räucherlampen"]
+    k1_b_anschlag["Der Anschlag an der Kapellentür"]
     k1_b_scheiterhaufen["Scheiterhaufen und Mob, erste Begegnung mit Gascoigne"]
     k1_b_maedchen["Das Mädchen am Fenster"]
     k1_b_daecher["Die Gasse unter den Dächern (Schütze)"]
@@ -49,6 +50,7 @@ flowchart TD
     puppe_gespraech["Gespräch mit der Puppe"]
     puppe_staerken["Die Puppe stärkt dich"]
   end
+  k1_b_anschlag --> k1_hub_b
   k1_b_daecher --> k1_hub_b
   k1_b_eileen --> k1_hub_b
   k1_b_gilbert --> k1_hub_b
@@ -67,6 +69,7 @@ flowchart TD
   k1_d_rueckweg --> k1_d_maedchen
   k1_d_rueckweg --> k1_d_traum
   k1_erwachen --> k1_traum_erst
+  k1_hub_b --> k1_b_anschlag
   k1_hub_b --> k1_b_daecher
   k1_hub_b --> k1_b_eileen
   k1_hub_b --> k1_b_gilbert

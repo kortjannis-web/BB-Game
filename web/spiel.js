@@ -688,6 +688,11 @@
         $("warnung").hidden = false;
         return;
       }
+      const ton = e.submitter?.value;
+      if (ton) {
+        K()?.setzen(ton === "an");
+        tonZeigen();
+      }
       beginnen($("name").value.trim() || "Jäger");
     });
     $("fortsetzen").addEventListener("click", () => {

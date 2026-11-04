@@ -84,6 +84,12 @@ const SZENARIEN = [
     erwartet: { schuetze_verschont: true },
   },
   {
+    name: "Wendels Mantel: Gascoigne angelogen",
+    wuensche: ["Gasse unter den Dächern", "Langsam, die Dächer", "Hinaufklettern", "An der Laterne in den Traum", "Zum Bad der Boten", "Jägermantel kaufen", "Zurück zur Laterne", "Hauptstraße mit dem Scheiterhaufen", "In den Schatten", "Lügen: in einer Gasse"],
+    verbote: ["Molotow kaufen", "Kieselstein kaufen", "Jagdnotizen", "Brief mit Kirchensiegel"],
+    erwartet: { mantel: true, mantel_erkannt: true, mantel_gelogen: true },
+  },
+  {
     name: "Gilbert das Versprechen gegeben",
     wuensche: ["Gilberts Fenster", "Ihm deinen Namen sagen und zuhören", "Gehen", "Zu Gilbert", "Ihm von Gascoigne erzählen", "Es ihm versprechen"],
     verbote: [],

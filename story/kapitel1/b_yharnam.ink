@@ -5,7 +5,7 @@
 // TITEL: Zentral-Yharnam (frei)
 -> betreten("zentral") ->
 { k1_hub_b == 1:
-    Yharnam ist eine Stadt aus Treppen. Sie steigen und fallen zwischen Häusern, deren Fassaden sich nach vorn neigen, als lauschten sie, und über den Dächern hängt ein Rauch, der sich nicht verzieht. Irgendwo in der Ferne läuten Glocken, unregelmäßig, als zöge niemand an den Seilen. Unten in den Straßen wandern Fackeln. # bild: zentral_yharnam # stimmung: spannung # lore: jagdnacht
+    Yharnam ist eine Stadt aus Treppen. Sie steigen und fallen zwischen Häusern, deren Fassaden sich nach vorn neigen, als lauschten sie, und über den Dächern hängt ein Rauch, der sich nicht verzieht. Irgendwo in der Ferne läuten Glocken, unregelmäßig, als zöge niemand an den Seilen. Unten in den Straßen wandern Fackeln. # bild: zentral_yharnam # stimmung: spannung # lore: jagdnacht # klang: glocke
     Vor vielen Fenstern hängen kleine Laternen mit rotem Glas, in denen Räucherwerk schwelt. Der Geruch ist süß und schwer, und er liegt über allem wie ein Tuch über einem Gesicht. An manchen Häusern hängen drei, vier Lampen übereinander, an einem ein ganzes Dutzend, so dicht, dass das Fenster dahinter verschwindet. # lore: raeucherwerk
     „Die Jagd ist bald“, hat der Kutscher gesagt. Die Stadt hält den Atem an, und du bist der Einzige auf der Straße, der nicht weiß, warum.
 - else:
@@ -18,6 +18,7 @@
 - (wohin)
 + [Gilberts Fenster neben der Laterne] -> k1_b_gilbert
 + [Die Türen mit den Räucherlampen] -> k1_b_tueren
++ {not k1_b_anschlag} [Der Anschlag an der Kapellentür] -> k1_b_anschlag
 + [Die Hauptstraße mit dem Scheiterhaufen] -> k1_b_scheiterhaufen
 + [Der Brunnenplatz, wo eine Spieluhr spielt] -> k1_b_maedchen
 + [Die Gasse unter den Dächern] -> k1_b_daecher
@@ -58,6 +59,10 @@
     -> haltung
 - else:
     Gilbert ist am Fenster, bevor du anklopfst. „Ich hab Sie kommen hören“, sagt er. „Ich habe nicht viel anderes zu tun als hören.“
+    // [ERWEITERT] Einsicht kostet leise: Figuren merken, dass du anders bist.
+    { einsicht >= 2:
+        Er sieht dich an, dann an dir vorbei, auf die Wand hinter dir, und wieder zurück. „Verzeihung“, sagt er. „Sie sehen auf Dinge, die nicht da sind. Oder ich sehe nicht, was da ist. Das wäre mir lieber.“ # notiz: einsicht_gilbert
+    }
     -> themen
 }
 
@@ -89,6 +94,10 @@
     - else:
         „Über die große Brücke.“ Er sieht dich an, dann auf deine Hände. „Aber das wissen Sie schon, nicht wahr. Sie waren dort. Ist es … ist es noch da oben?“ # lore: kleriker_bestien
     }
+    -> themen
+* {gilbert_bruecke} [Wer die Jäger der Kirche sind]
+    // [KANON] Ludwig führte die ersten Jäger der Kirche an; sie wurden auch aus einfachen Bürgern geworben. Hier nur als Gerücht, ohne Namen ([Deutung] und Name kommen später).
+    Gilbert lehnt die Stirn ans Gitter. „Die Leute hier erzählen von einem, der als Erster für die Kirche gejagt hat. Kein Adliger. Einer aus den Gassen, so wie die, die er dann anwarb, Fuhrknechte, Gerber, Söhne von Wäscherinnen.“ Er hustet und wartet, bis es vorbei ist. „Man hat Lieder auf ihn gesungen, sagt man. Seine Klinge soll im Dunkeln geleuchtet haben, wie ein Stück vom Mond.“ Er lächelt schief. „Dann hat man aufgehört, die Lieder zu singen. Seinen Namen sagt hier keiner mehr gern. Ich habe gefragt, warum. Da haben sie die Fensterläden zugemacht.“ # notiz: erster_kirchenjaeger
     -> themen
 * {grund == "suche"} [Nach dem Menschen fragen, den du suchst]
     Du beschreibst ihn, so gut es durch ein Gitter geht, und erwähnst den letzten Brief, der nach Weihrauch roch. Gilbert schüttelt langsam den Kopf. „Nein. Hier kommt niemand vorbei, der stehen bleibt, außer Ihnen.“ Dann, nach einer Weile: „Weihrauch. Das riecht man nur oben, bei der Kathedrale. Da unten im Viertel ist es Räucherwerk, süß, Sie haben es gerochen. Weihrauch ist etwas anderes.“ # notiz: spur_vermisst
@@ -150,6 +159,18 @@
     Der Hund sieht dir nach, bis du um die Ecke bist.
 - -> k1_hub_b
 
+=== k1_b_anschlag ===
+// TITEL: Der Anschlag an der Kapellentür
+// [ERWEITERT] Ein Anschlag der Heilenden Kirche zur Jagdnacht, eigener Wortlaut. [KANON] Die Kirche verwaltet das Blut; die Bürger verriegeln sich mit Räucherwerk.
+// Die Kirche ist in Kapitel 1 nur zu hören und zu lesen, nie zu sehen (Entscheidung des Nutzers 2026-11-04: Choral und Predigt).
+-> betreten("anschlag") ->
+Zwischen zwei Häusern duckt sich eine kleine Kapelle, kaum breiter als ein Hauseingang, mit einer Tür aus schwarzem Holz und einem Fenster darüber, dessen Glas jemand von innen mit Brettern vernagelt hat. Die Tür ist verschlossen. Auf ihr klebt, mit vier Nägeln befestigt, ein Anschlag. Drei Nägel sind braun vor Rost. Der vierte ist neu und blank. Das Papier ist nass vom Nebel und riecht, als du dich vorbeugst, nicht nach dem süßen Räucherwerk der Gassen, sondern nach etwas Herberem, Harzigem. Weihrauch. # bild: tueren # stimmung: spannung
+Oben ein Siegel, ein Kelch mit Strahlen darüber. Darunter, in großen, sauberen Lettern:
+An die Gemeinde in der Nacht der Jagd. Bleibt in euren Häusern und lasst das Räucherwerk nicht erlöschen. Die Jäger der Kirche wachen über euch. Wer Fieber an sich spürt, wer Durst hat, den kein Wasser stillt, wer seine eigene Stimme fremd findet, der zögere nicht und begebe sich zur nächsten Stelle des Blutes. Das Blut der Kirche heilt, was es berührt. Fürchtet nicht das Blut. Fürchtet, was ohne das Blut aus euch würde. # stil: tagebuch # lore: heilende_kirche
+Unter dem Siegel hat jemand mit Kreide etwas dazugeschrieben, klein und schief, und dann versucht, es mit dem Ärmel wegzuwischen. Lesbar ist es noch. Mein Bruder ist gegangen. Er hatte keinen Durst. # notiz: anschlag_kreide
+Hinter der Tür, ganz nah am Holz, atmet jemand. Als du die Hand hebst, um zu klopfen, hört das Atmen auf.
+-> k1_hub_b
+
 === k1_b_scheiterhaufen ===
 // TITEL: Scheiterhaufen und Mob, erste Begegnung mit Gascoigne
 // [KANON] Scheiterhaufen mit brennender Bestie, Mob aus bewaffneten Bürgern; ein Riese mit Ziegelstein hämmert an eine Tür. Gascoignes Kappe gehört zu seinem Set.
@@ -186,6 +207,7 @@ Sie kommen von zwei Seiten zugleich. Ein hagerer Mann mit einer Mistgabel löst 
     Du hebst Gilberts Flammenwerfer, und eine Zunge aus Feuer fährt in die Menge. Sie schreien, jeder für sich, erschrockene Menschen, die eben noch eine Menge waren, und sie stieben auseinander, in Gassen und Hauseingänge. Eine bleibt liegen. Ihre Schürze brennt noch, als sie schon still ist. Die Düse in deiner Hand ist warm.
     ~ mob = "zerstreut"
     ~ mob_verbrannt = true
+    Von oben, von der Kathedrale her, setzt ein Choral ein, langsam und fern, und es ist, als habe er gewartet. Die Frau am Boden rührt sich nicht. # klang: choral
     -> gascoigne_greift_ein
 - (t2)
 Mehr kommen. Und der Riese hat aufgehört, gegen die Tür zu schlagen. Er dreht sich langsam um, den Ziegel in der Faust, und dann rennt er, schwerfällig und unaufhaltsam, wie ein Fuhrwerk, dem die Pferde durchgegangen sind. # anzeichen: ansturm
@@ -226,6 +248,8 @@ Mehr kommen. Und der Riese hat aufgehört, gegen die Tür zu schlagen. Er dreht 
     Dann wendet er sich dir zu und streckt dir die Hand hin. Sie ist warm und trocken und sehr groß. „Gascoigne. Pater, wenn man es genau nimmt, aber so nennt mich hier keiner. In dieser Stadt gibt es keine Pater. Nur Vikare und Jäger.“ Er legt den Kopf schief. „Und du bist auch nicht von hier, Fremder. Man hört es an deinen Stiefeln.“ # notiz: gascoigne_pater
     { herkunft == "soldat": „Und du gehst wie einer, der Gräben kennt“, fügt er hinzu. „Ich auch. Lange her.“ }
 }
+{ mantel: -> mantel_frage }
+- (nach_mantel)
 * {mob == "zerstreut"} [Sagen, du hattest keine Wahl]
     „Man hat immer eine“, sagt er. „Meistens eine schlechte.“ Er wischt die Hand an seinem Mantel ab, obwohl nichts daran ist.
 * {mob == "zerstreut"} [Fragen, wer sie war]
@@ -278,6 +302,19 @@ Ein Schuss kracht über den Platz. Die Menge stiebt auseinander, als wüsste jed
 - else: Das Feuer ist heruntergebrannt, und doch hängt auf dem Pfahl wieder etwas, schwarz und still, als hätte die Nacht es neu aufgehängt. Du siehst nicht genauer hin.
 }
 -> k1_hub_b
+
+= mantel_frage
+// [ERWEITERT] Wendels Mantel: Gascoigne kennt den Geruch. Er wird misstrauisch.
+Mitten in der Bewegung hält er inne. Er beugt sich vor, bis die Krempe seiner Kappe fast deine Schulter berührt, und zieht die Luft ein, lange, durch die Nase. Dann richtet er sich auf, und das Freundliche ist aus seinem Gesicht gegangen, nicht ganz, aber so, wie die Wärme aus einem Zimmer geht, wenn jemand die Tür offen lässt.
+„Teer. Pulver. Und Wendel.“ Er sagt den Namen, als lege er ihn auf einen Tisch. „Wendel ist seit zwei Jagden nicht heimgekommen. Woher hast du seinen Mantel?“
+~ mantel_erkannt = true
+* [Die Wahrheit sagen: von den kleinen grauen Wesen im Traum]
+    Du sagst es ihm, so wie es war: der Garten, das Becken, die kleinen Hände. Es klingt verrückt, noch während du es sagst. Gascoigne schweigt lange. „Im Traum“, sagt er endlich. „Von denen.“ Er reibt sich mit dem Daumen über den Verband, dort, wo die Augen sein müssten. „Das glaub ich dir. Das ist ja das Schlimme.“ # notiz: gascoigne_mantel
+* [Lügen: in einer Gasse gefunden]
+    ~ mantel_gelogen = true
+    ~ gascoigne = gascoigne - 1
+    Du sagst, er habe in einer Gasse gelegen, einfach so. Gascoigne nickt langsam. „Wendel lag in keiner Gasse“, sagt er. „Wendel lag nie irgendwo. So.“ Er sagt nichts weiter dazu, aber als er dir den Rücken zuwendet, tut er es einen halben Schritt später als vorher. # notiz: gascoigne_mantel
+- -> gascoigne_greift_ein.nach_mantel
 
 === k1_b_maedchen ===
 // TITEL: Das Mädchen am Fenster
@@ -411,6 +448,10 @@ Eine enge Gasse, so schmal, dass du die Hauswände zu beiden Seiten berühren k�
 ~ eileen_stufe = 1
 Über dem Eingang zur Kanalisation führen alte Dachbalken von Haus zu Haus, und auf ihnen, halb verborgen hinter ein paar Fässern, sitzt jemand, so still, dass du ihn für einen Haufen alter Kleider gehalten hättest, wenn er nicht den Kopf gedreht hätte. # bild: daecher_eileen # stimmung: ruhig
 Es ist eine Frau. Sie trägt einen Mantel aus schwarzen Federn, die leise rascheln, und vor dem Gesicht eine Maske mit einem langen, gebogenen Schnabel, wie die Pestärzte sie in alten Holzschnitten tragen. Um ihren Hals hängt eine Schnur, an der kleine Abzeichen klappern, Messing, Silber, Eisen, jedes anders, jedes abgegriffen. Sie sieht dich lange an. „Neu“, sagt sie. Nicht als Frage. „Riecht man.“
+{ mantel:
+    ~ mantel_erkannt = true
+    Dann bleibt ihr Blick an deinem Mantel hängen, am Saum, wo das Stück fehlt. Sie streckt die Hand aus und fährt mit dem Daumen über die Schnittkante, glatt, wie mit einer Klinge gezogen. „Wendel“, sagt sie. Sie zieht die Hand zurück. „Steht dir nicht.“ Unter ihrem Federmantel, an der Schnur mit den Abzeichen, klappert etwas, als sie sich wieder zurücklehnt. Du kannst nicht sehen, welches. # notiz: eileen_mantel
+}
 * [Nach den Abzeichen fragen]
     Sie fasst die Schnur mit zwei Fingern und lässt die Abzeichen durch die Hand laufen, eins nach dem anderen, wie Perlen beim Beten. „Jäger“, sagt sie. „Die nicht mehr wussten, was sie jagen.“ Sie lässt die Schnur fallen. „Irgendwer muss sie heimbringen. Eileen.“ Erst nach einem Atemzug merkst du, dass das ihr Name war. # lore: jaeger_der_jaeger # lore: blutrausch
     ~ eileen = eileen + 1

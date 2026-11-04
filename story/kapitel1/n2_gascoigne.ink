@@ -51,13 +51,13 @@
 }
 { gelernt ? gascoigne_schuss: Du kennst das jetzt. Erst der Schuss, der dich auf Abstand hält, dann kommt die Axt, sobald du dich zeigst. }
 + [Hinter einen Grabstein]
-    Du wirfst dich hinter den nächsten Grabstein. Die Ladung schlägt in den Stein, und Splitter regnen auf dich herab, Bruchstücke eines Namens, den niemand mehr lesen wird.
+    Hinter den nächsten Grabstein. Die Ladung schlägt in den Stein. Splitter regnen auf dich, Bruchstücke eines Namens, den niemand mehr lesen wird.
     -> t2
 + {parade} [Selbst schießen, im Moment seines Ausholens]
     Du wartest. Er hebt die Axt nach dem Schuss, das ganze Gewicht in den Schlag. Und du schießt, genau in diesem Augenblick. Er wankt. { parade_quelle == "gascoigne": Er wankt, wie er es dir beigebracht hat, auf dem Platz, mit dem Feuer im Rücken, und für eine Sekunde zieht sich sein Mund zu etwas zusammen, das Stolz sein könnte. | Er wankt, und du stößt zu, bevor er sich fangen kann. } # notiz: seine_lehre
     -> t2
 + [Auf ihn zu]
-    Du stürmst auf ihn zu, quer über die Gräber. Die Ladung trifft dich in die Brust, Dutzende kleine Kugeln, als renne man gegen eine Wand aus glühenden Nadeln.
+    Du stürmst auf ihn zu, quer über die Gräber. Die Ladung trifft dich in die Brust. Dutzende kleine Kugeln, eine Wand aus glühenden Nadeln.
     ~ zuletzt = gascoigne_schuss
     ~ treffer(2)
     { leben <= 0: -> tod }
@@ -66,17 +66,31 @@
 - (t2)
 Er kommt. Die Axt beschreibt einen weiten, flachen Bogen über die Grabsteine, so schnell, dass sie in der Luft singt. # anzeichen: schwer
 + [Unter dem Bogen durch und zuschlagen]
-    Du duckst dich, und die Axt pfeift über deinen Kopf. Dann bist du an ihm, und deine Waffe findet seine Seite, und er grunzt, mehr überrascht als verletzt.
-    -> p2
+    Du duckst dich. Die Axt pfeift über deinen Kopf. Dann bist du an ihm, und die Säge findet seine Seite. Er grunzt, mehr überrascht als verletzt.
+    -> t2b
 + [Zurückweichen]
-    Du weichst zurück. Er folgt, schneller als ein Mann seiner Größe sein dürfte, und die Axt trifft dich an der Schulter.
+    Du weichst zurück. Er folgt, schneller, als ein Mann seiner Größe sein dürfte. Die Axt an der Schulter.
     ~ zuletzt = schwer
     ~ treffer(1)
     { leben <= 0: -> tod }
-    -> p2
+    -> t2b
 + {ampulle > 0} [Die Blutampulle trinken]
     -> ampulle_gefahr(2) -> t2
 + {jaegermarken > 0} [Eine Jägermarke zerdrücken] -> marke
+- (t2b)
+// [ERWEITERT] Der Schuss aus nächster Nähe: Er lässt dich herankommen.
+Er tritt nicht zurück. Er lässt die Axt sinken, ganz, bis die Schneide im Gras liegt, und dreht dir die linke Schulter zu, als wolle er dich umarmen. Die Donnerbüchse hängt an seiner Hüfte, der Trichter zeigt zu Boden. Nur sein Daumen bewegt sich. Er spannt den Hahn, und das Klicken ist das lauteste Geräusch auf dem Friedhof. # anzeichen: donner_nah
+{ gelernt ? donner_nah: Die gesenkte Axt ist ein Köder. Der Schuss kommt aus der Hüfte, nach oben, und er trifft jeden, der vor ihm steht. }
++ [Hinter ihn, auf die Seite der Axt]
+    Du gehst nicht vor ihm vorbei, du gehst um ihn herum, auf die Seite, wo die Axt im Gras liegt. Der Schuss geht ins Leere, in den Nebel. Ein Hieb in den Rücken, dicht unter dem Mantelkragen. Er brüllt.
+    -> p2
++ [Jetzt zuschlagen, die Axt ist unten]
+    Du schlägst zu. Er auch. Der Trichter kommt hoch, und der Schuss reißt dich von den Füßen. Pulverdampf, Glut im Gesicht, Gras im Mund.
+    ~ zuletzt = donner_nah
+    ~ treffer(2)
+    { leben <= 0: -> tod }
+    -> p2
++ {spieluhr and spieluhr_mal < 3} [Die Spieluhr aufziehen] -> uhr
 
 = p2
 ~ g_phase = 2
@@ -85,20 +99,40 @@ Er tritt zurück, und mit einem Ruck seiner Handgelenke klappt er die Axt aus. D
 Die lange Axt fegt über die Gräber, kreisend, und zerschlägt Grabsteine wie Brotlaibe. # anzeichen: axt_lang
 { gelernt ? axt_lang: Du weißt jetzt: Die lange Axt reicht weiter, als seine Arme sind. Wer zurückweicht, ist schon getroffen. Nur ganz nah ist man sicher. }
 + [Ganz nah heran, wo die lange Axt nicht hinkommt]
-    Du tust das Gegenteil von dem, was deine Beine wollen. Du gehst auf ihn zu, in den Kreis der Axt hinein, bis du so nah bist, dass du seinen Atem riechst, Eisen und etwas Süßes, Verdorbenes. Hier kann die lange Klinge dich nicht treffen. Hier triffst du.
-    -> p3
+    Du tust das Gegenteil von dem, was deine Beine wollen. In den Kreis der Axt hinein, bis du seinen Atem riechst, Eisen und etwas Süßes, Verdorbenes. Hier trifft die lange Klinge nicht. Hier triffst du.
+    -> t3b
 + {staerke >= 1} [Die lange Axt mit dem Sägespalter abfangen]
     Du stellst dich in den Kreis der Axt und fängst sie mit der ausgeklappten Säge ab. Der Schlag geht dir bis in die Zähne, aber deine Arme halten, warm und schwer von dem, was die Puppe dir gegeben hat. Für einen Augenblick steht ihr so, Stahl an Stahl, und er neigt den Kopf, als erkenne er etwas an dir. Dann reißt er sich los. # notiz: staerke_genutzt
-    -> p3
+    -> t3b
 + [Zurück hinter die Gräber]
-    Du weichst zurück, hinter einen hohen Stein. Die Axt geht durch den Stein hindurch, als wäre er aus Kreide, und trifft dich dahinter.
+    Zurück, hinter einen hohen Stein. Die Axt geht durch den Stein wie durch Kreide. Und durch dich.
     ~ zuletzt = axt_lang
     ~ treffer(2)
     { leben <= 0: -> tod }
-    -> p3
+    -> t3b
 + {spieluhr and spieluhr_mal < 3} [Die Spieluhr aufziehen] -> uhr
 + {ampulle > 0} [Die Blutampulle trinken]
     -> ampulle_gefahr(2) -> t3
+- (t3b)
+// [ERWEITERT] Der Hieb von oben: Er stemmt die lange Axt in die Höhe.
+Er stößt dich mit dem Stiel von sich, nicht fest, nur weit genug. Dann hebt er die lange Axt über den Kopf, beide Hände am Ende des Stiels, und hält sie dort. Die Schneide zittert hoch über ihm im Nebel. Er lacht nicht mehr. Er zählt, stumm, mit den Lippen, wie ein Mann, der früher die Glocke geläutet hat und den Takt im Blut trägt. # anzeichen: axt_wirbel
+{ gelernt ? axt_wirbel: Er zählt bis drei. Bei drei fällt die Axt, gerade herab, und spaltet, was vor ihm steht. Wer bei zwei geht, geht zu früh: Er folgt ihm mit der Schneide. }
++ [Bis zwei warten, bei drei zur Seite]
+    Eins. Zwei. Seine Lippen formen die Drei, und du bist weg. Die Axt fällt in einen Grabstein und bleibt darin stecken. Er zerrt am Stiel. Du schlägst ihm in die Kniekehle, und er sinkt auf ein Knie.
+    -> p3
++ [Sofort weglaufen]
+    Du rennst bei eins. Sein Kopf unter dem Verband folgt dir, und die Schneide folgt seinem Kopf. Sie trifft dich zwischen den Schulterblättern.
+    ~ zuletzt = axt_wirbel
+    ~ treffer(2)
+    { leben <= 0: -> tod }
+    -> p3
++ [Hinein, solange die Arme oben sind]
+    Du gehst auf ihn zu. Seine Arme sind oben, seine Brust ist offen, und du triffst. Aber er zählt nicht weiter. Er lässt einfach los, und der Stiel trifft dich am Kopf.
+    ~ zuletzt = axt_wirbel
+    ~ treffer(1)
+    { leben <= 0: -> tod }
+    -> p3
++ {spieluhr and spieluhr_mal < 3} [Die Spieluhr aufziehen] -> uhr
 
 = uhr
 ~ spieluhr_mal = spieluhr_mal + 1
@@ -158,24 +192,54 @@ Sie springt. Sie springt über drei Gräber hinweg, die Klauen voran, mit einem 
         ~ molotow = molotow - 1
         Du wirfst den Molotow. Er zerspringt an ihrer Brust, und das Feuer läuft über ihr Fell wie Wasser über einen Stein.
     }
-    -> t5
+    -> t4b
 + {einsicht >= 3} [Dem Schatten ausweichen, nach rechts]
-    Du wirfst dich nach rechts, weg von dem Schatten. Der Schatten lag falsch, wie schon bei deiner Ankunft, dem Licht entgegen, und sie landet genau dort, wohin du dich geworfen hast.
+    Du wirfst dich nach rechts, weg von dem Schatten. Der Schatten lag falsch, wie schon bei deiner Ankunft. Sie landet genau dort, wohin du dich geworfen hast.
     ~ zuletzt = bestie_sprung
     ~ treffer(2)
     { leben <= 0: -> tod }
-    -> t5
+    -> t4b
 + [Seitlich weg]
-    Du wirfst dich zur Seite, und sie landet hinter dir, so schwer, dass ein Grabstein aus der Erde springt.
-    -> t5
+    Zur Seite. Sie landet hinter dir. Ein Grabstein springt aus der Erde.
+    -> t4b
 + [Den Sprung abfangen]
-    Du versuchst, sie mit der Waffe aufzuhalten. Es ist, als wolle man einen Wasserfall mit einem Brett aufhalten.
+    Du stellst dich ihr mit der Säge entgegen. Ein Brett gegen einen Wasserfall.
     ~ zuletzt = bestie_sprung
     ~ treffer(2)
     { leben <= 0: -> tod }
-    -> t5
+    -> t4b
 + {ampulle > 0} [Die Blutampulle trinken]
     -> ampulle_gefahr(2) -> t4
+- (t4b)
+// [ERWEITERT] Sie umkreist dich über die Gräber; wenn das Heulen aussetzt, kommt sie.
+Sie greift nicht an. Sie läuft. Im Kreis um dich, über die Gräber, auf allen vieren, und wo ihre Klauen aufsetzen, reißt die Erde in Furchen auf. Sie heult dabei, ohne Pause, ein langer Ton, der von der Mauer zurückkommt, so dass du sie von zwei Seiten zugleich zu hören glaubst. Dann setzt das Heulen aus. Mitten im Kreis, hinter dir. # anzeichen: bestie_kreis
+{ gelernt ? bestie_kreis: Solange sie heult, läuft sie. Wenn sie still ist, springt sie, und sie springt von dort, wo die Stille anfing. }
+// [ERWEITERT] Einsicht kostet: Wer zu viel hört, hört das Heulen weiter, auch als es schon aufgehört hat.
+{ einsicht >= 3: Aber in deinem Kopf hört es nicht auf. Es läuft weiter, rund um dich, und jetzt kommt es von vorn. }
++ {einsicht >= 3} [Dem Heulen nach, das du noch hörst, nach vorn ausweichen]
+    Du weichst dem Heulen aus, das von vorn kommt. Von vorn kommt nichts. Von hinten kommt sie.
+    ~ zuletzt = bestie_kreis
+    ~ treffer(2)
+    { leben <= 0: -> tod }
+    -> t5
++ [Herumfahren, dorthin, wo das Heulen abbrach]
+    Du drehst dich um. Da ist sie, schon in der Luft. Du duckst dich unter ihr weg und reißt die Säge hoch, und sie reißt sich selbst den Bauch daran auf.
+    -> t5
++ [Nach vorn, weg von ihr]
+    Du läufst nach vorn. Sie landet auf deinem Rücken. Klauen, Gewicht, der Geruch von nassem Fell.
+    ~ zuletzt = bestie_kreis
+    ~ treffer(2)
+    { leben <= 0: -> tod }
+    -> t5
++ [Stehen bleiben und horchen]
+    Du bleibst stehen und horchst. Der Friedhof ist still. Zu lange. Sie trifft dich von hinten, mit der Schulter, und du fliegst gegen einen Stein.
+    ~ zuletzt = bestie_kreis
+    ~ treffer(1)
+    { leben <= 0: -> tod }
+    -> t5
++ {ampulle > 0} [Die Blutampulle trinken, solange sie läuft]
+    Solange sie heult, ist Zeit. Du nimmst sie dir.
+    -> ampulle_ruhig -> t4b
 - (t5)
 Sie packt dich. Beide Klauen schließen sich um deine Schultern, und sie hebt dich hoch, bis ihr Gesicht vor deinem ist. Ihr Atem riecht nach Blut, nach Eisen, und darunter, ganz schwach, nach Weihrauch. # anzeichen: griff
 { grund == "suche": Weihrauch. So roch der letzte Brief. }
@@ -213,5 +277,6 @@ Du zerdrückst die Marke. Das Grab, das Heulen, die glühenden Augen, alles zerf
     Die Bestie fällt zwischen die Gräber und rührt sich nicht mehr. Um ihren Hals hängt noch der zerrissene Priesterschal, und eine Hand, halb Klaue, halb Hand, liegt offen auf der Erde{q_frau == 1:, die Hand, die dir am Laternenpfahl die Blechflasche gereicht hat}. # notiz: gascoigne_ende_bestie
 }
 Die Echos, die aus ihm aufsteigen, sind so zahlreich, dass sie dich beinahe von den Füßen reißen. Du stehst da und wartest, dass etwas geschieht, und es geschieht nichts. Er ist tot. Er bleibt tot. Er wacht nicht zwischen weißen Blumen auf. Deine Hand liegt an deiner Armbeuge, dort, wo der Einstich pocht, und sie bleibt lange dort.
+Von oben, hinter der Mauer, aus dem Bezirk der Kathedrale, kommt Gesang. Er ist leise und langsam und so fern, dass er auch der Wind sein könnte, und er bricht ab, mitten in einer Zeile, als habe drinnen jemand eine Tür geschlossen. # klang: choral
 Auf dem Grabstein liegt noch seine Kappe, die Krempe nach oben. Niemand wird sie holen.
 -> k1_d_grab

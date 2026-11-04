@@ -54,6 +54,8 @@ window.NOTIZBUCH = {
     ["", "Sie verwaltet das Blut in Yharnam, jede Transfusion. Ihr Blut, heißt es, kommt aus der großen Kathedrale über der Stadt."],
     ["k1_hub_c", "Das Tor zum Kathedralenbezirk ist verschlossen, mit Ketten so dick wie mein Arm."],
     ["k1_b_tueren", "Hinter einer Tür betet eine Frau, die Kirche habe ihnen das Räucherwerk gesegnet. Andere sagen, die Kirche lasse die Fremden mit ihrem Blut herein."],
+    ["k1_b_anschlag", "An einer Kapellentür ein Anschlag: Wer Fieber hat oder Durst, den kein Wasser stillt, solle zur nächsten Stelle des Blutes gehen. Darunter in Kreide: Mein Bruder ist gegangen. Er hatte keinen Durst. Das Papier roch nach Weihrauch."],
+    ["kirchenbrief", "Ein Kirchendiener schreibt seiner Schwester von einer Kapelle oben im Bezirk, die jeden aufnimmt, der noch sprechen kann, und von einer Vikarin, die am längsten betet."],
   ] },
   bestienseuche: { titel: "Die Seuche", stufen: [
     ["", "Menschen werden zu Bestien. Niemand weiß, wen es als Nächstes trifft."],

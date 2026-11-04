@@ -27,7 +27,11 @@
       <form id="namensform">
         <label for="name">Wie lautet dein Name, Jäger?</label>
         <input id="name" name="name" maxlength="24" autocomplete="off" placeholder="Dein Name" required>
-        <button type="submit">Die Kutsche besteigen</button>
+        <span class="tonwahl">
+          <button type="submit" name="ton" value="an">Mit Ton die Kutsche besteigen</button>
+          <button type="submit" name="ton" value="aus" class="zweit">Ohne Ton</button>
+        </span>
+        <small class="tonhinweis">Musik und Geräusche lassen sich jederzeit in der Leiste umschalten.</small>
       </form>
       <p id="warnung" class="warnung" hidden>Es gibt schon einen Spielstand. Klicke noch einmal, um neu zu beginnen und ihn zu überschreiben.</p>
       <button id="fortsetzen" type="button" hidden>Die Jagd fortsetzen</button>

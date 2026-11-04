@@ -11,6 +11,8 @@
 - else:
     {~Das Wasser in den Rinnen rauscht, und irgendwo tropft es in einen Eimer, der längst übergelaufen ist.|In der Unterstadt ist es noch dunkler geworden, oder deine Augen sind müder.|Ein Fenster schlägt, auf, zu, auf, zu, und niemand schließt es.}
 }
+// [ERWEITERT] Einsicht kostet leise: Ab 2 hört man, was nicht da ist (einmal).
+{ k1_hub_c > 1 and einsicht >= 2: {Hinter einem Fenster ruft jemand deinen Namen, {name}, zweimal, leise und freundlich, wie man jemanden zum Essen ruft. Das Fenster ist von außen zugenagelt, und die Nägel sind alt.|} }
 - (wohin)
 + [Hinab in die Kanalisation] -> k1_c_kanal
 + {eileen_stufe == 1} [Die Rabenfedern auf dem Dach über den Gräbern] -> k1_c_eileen
@@ -121,6 +123,10 @@ Auf dem Dach einer alten Totengräberhütte sitzt {eileen_genannt:Eileen|die Fra
 { eileen < 0:
     Sie sagt lange nichts. Dann: „Geh. Das hier ist nichts für jemanden, der nicht weiß, wann man den Mund hält.“ # notiz: eileen_kalt
     -> k1_hub_c
+}
+// [ERWEITERT] Einsicht kostet leise: Eileen merkt es.
+{ einsicht >= 2:
+    Sie mustert dich, länger als nötig, und tippt sich mit einem Finger gegen die Schläfe der Maske. „Du siehst schon zu viel“, sagt sie. „Merkt man an den Augen. Wird nicht besser.“ # notiz: einsicht_eileen
 }
 { gascoigne2:
     Ihr Blick hängt am Tor mit dem Namen darüber. „Reingegangen“, sagt sie. „Nicht wieder rausgekommen. Ich warte.“

@@ -118,6 +118,8 @@ Du willst, dass Dinge erklärt werden. Bloodborne lebt davon, dass vieles offen 
 - Möglichkeiten sind **richtig, riskant oder falsch**. Richtig kostet nichts, riskant kann mehr bringen oder kosten, falsch kostet Blut.
 - **Bosse haben Phasen**: Bei einer Wende ändert sich die Szene und die Anzeichen ändern sich mit.
 
+- **Festgelegt vom Nutzer (2026-11-04):** Bosskämpfe haben 6 bis 8 Takte in Phasen. Tempo gemischt: das Anzeichen ruhig und genau, die Folge kurz und hart. Die Möglichkeiten nennen Richtung und Handlung ausdrücklich („Nach rechts, unter den Arm“); das Rätsel liegt im Anzeichen, nicht im Wortlaut der Wahl. Ein aufmerksamer Spieler stirbt in Kapitel 1 zwei- bis dreimal.
+
 ### 6.2 Werte (so wenige wie möglich)
 - **Blut**: 5 Tropfen. Am Bildschirm als Vignette und Tropfen, nie als Zahlenkolonne.
 - **Blutampullen**: wenige, im Traum oder bei Iosefka nachzufüllen.
@@ -142,6 +144,7 @@ Du willst, dass Dinge erklärt werden. Bloodborne lebt davon, dass vieles offen 
 - Steigt an festen Stellen: Begegnungen mit etwas Großem, Bosse, verbotene Schriften.
 - **Schaltet frei**: andere Beschreibungen derselben Orte, verborgene Möglichkeiten, die Stufe *Was du ahnst* im Notizbuch.
 - **Kostet**: Angst in bestimmten Szenen, schwierigere Möglichkeiten. Später lässt sie sich ausgeben (bei den Boten), dann sieht man weniger und ist sicherer.
+- **Festgelegt vom Nutzer (2026-11-04): mehr, aber leise.** Ab 2 Einsicht merken Figuren es (Gilbert, Eileen) und man hört Dinge, die nicht da sind (ein Ruf hinter einem zugenagelten Fenster); ab 3 werden manche Anzeichen unzuverlässig (falscher Schatten, ein Heulen, das im Kopf weiterläuft) und bieten eine verlockende falsche Möglichkeit.
 - **Kapitel 1** endet mit dem ersten Punkt Einsicht: Die Puppe im Traum erwacht und spricht zum ersten Mal. Ein leiser, starker Kapitelschluss.
 
 ---
@@ -210,7 +213,7 @@ flowchart TD
 
 | Kapitel | Bezirk | Bosse (Auswahl) | Register |
 |---|---|---|---|
-| 2 | Kathedralenbezirk, Alt-Yharnam | Blutdurstige Bestie, Vikarin Amelia | Kirche, Heilung als Lüge |
+| 2 | Kathedralenbezirk (vom Nutzer gewählt, 2026-11-04), danach Alt-Yharnam | Blutdurstige Bestie, Vikarin Amelia | Kirche, Heilung als Lüge; Eileen als Partnerin; Saat aus Kapitel 1: Choral, Anschlag, Kirchenbrief, Wendels Mantel |
 | 3 | Hemwick, Verbotene Wälder | Hexe von Hemwick, Schatten von Yharnam | Wahn, Augen, das Unsichtbare |
 | 4 | Byrgenwerth, der Mondsee | Rom | Wendepunkt: Blutmond, die Welt kippt ins Kosmische |
 | 5 | Yahar'gul, Albtraum-Grenze, Albtraum von Mensis | Der Wiedergeborene, Micolash, Mergos Amme | Kosmischer Horror |

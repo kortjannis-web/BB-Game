@@ -10,6 +10,8 @@ Stand 2026-11-04, nach Runde 1: drei unabhängige Prüfungen (Plot und Logik, Lo
 
 **Nacht 2026-11-04 (Freigabe des Nutzers):** Waffenwahl entfernt (Sägespalter); Stärkung bei der Puppe (zwei Stufen, je eine Zusatzmöglichkeit in Schwein, Kleriker, Gascoigne); Chronik der Nacht; Einsicht mit Kosten (falscher Schatten am Grab); Ton (erzeugte Atmosphäre je Stimmung, Herzschlag bei wenig Leben, eigene Spieluhr-Melodie, CC0-Geräusche, Schalter); Icons in der Leiste (Ampulle füllt sich, Auge öffnet sich mit Einsicht); pulsierende Anzeichen, „erkannt“ bei gelernten, Trefferrand, Schwarzblende beim Tod; Ortskarten; Notizbuch mit Reitern Aufzeichnungen, Personen, Fragen der Nacht und Neu-Markierung.
 
+**Abfragerunde 2026-11-04 (16 Antworten des Nutzers, umgesetzt):** Kleriker-Bestie 7 Takte (neu: Kutschenwurf, Ansturm mit dem Geweih, falsche Ruhe), Weg mit Gascoigne 3 Takte; Gascoigne 8 Takte (neu: Schuss aus nächster Nähe, Hieb von oben mit Zählen, Umkreisen); Folgen kürzer und härter. Kirche: Glocke und Choral als Klänge (nach beiden Bossen und nach Marthas Tod), Anschlag an einer Kapellentür (neuer Knoten). Ludwig als Gerücht bei Gilbert. Boten: Jagdnotizen (lehren drei Anzeichen vorab), Kirchenbrief (Saat Kapitel 2), Wendels Mantel (Gascoigne und Eileen erkennen ihn, Weiche Wahrheit/Lüge mit Szenario). Einsicht kostet leise (Gilbert und Eileen merken es ab 2, Ruf hinter dem Fenster ab 2, Heulen im Kopf ab 3). Tonwahl auf der Titelseite.
+
 **Runde 1, was sich geändert hat:**
 - *Fehler auf normalen Wegen:* Schwein-Zustand beim Vorbeischleichen, Rückweg-Kanal nach Ursache, Rückweg über die Brücke nach dem Sieg, Laternen-Rückkehr aus dem Traum (Wahl zwischen den entzündeten), Gascoigne am Scheiterhaufen nach den Gräbern (jetzt nur noch ein Schuss aus dem Nebel und blutige Spuren), Wissenslecks (Name, Parade-Quelle, Wahlen an den Gräbern), Mädchen im Nachspiel ohne frühere Begegnung, Eileen sieht Gascoigne am Tor, Mob verbrannt.
 - *Traum als Fluch:* Tinte an den Fingern, Nadelstich beim Erwachen, „daheim“, die Sonne, die nicht untergeht (statt des zu frühen Blutmonds), Frauenstimme in der Vision, Gehrman (Zuflucht, Vertrag, „wann ist die Nacht vorbei“, Schlaf), die Puppe (die Kleinen, Fragen nach draußen, „sei vorsichtig“).
@@ -21,12 +23,12 @@ Stand 2026-11-04, nach Runde 1: drei unabhängige Prüfungen (Plot und Logik, Lo
 | Bereich | Stufe | Bekannte Schwächen, offene Fragen |
 |---|---|---|
 | Plotfäden und Logik (Saat und Ernte, Übergänge, Widersprüche) | 2 | Runde 1 und Gegenprüfung eingearbeitet; nicht jeder Weg nachgespielt |
-| Einsatz der Lore (alles Wichtige drin? Potenzial verschenkt?) | 2 | offen: Kirche noch wenig „heilig“ (nur eine fromme Stimme); Ludwig fehlt bewusst |
+| Einsatz der Lore (alles Wichtige drin? Potenzial verschenkt?) | 2 | Kirche jetzt hörbar und lesbar (Choral, Glocke, Anschlag, Brief), Ludwig als Gerücht; ob der Choral im Ohr wirkt, ungetestet |
 | Figuren (Gascoigne, Eileen, Gilbert, Viola, das Mädchen, Iosefka, Gehrman, Puppe) | 2 | Stimmen jetzt verschieden; ob sie so klingen, wie der Nutzer sie hört, ist ungeklärt |
 | Ton und Treppe des Grauens (gotisch → körperlich → Vorschein kosmisch) | 2 | je Einsichtspunkt ein Detail; Wirkung ungetestet |
 | Entscheidungen (richtig/falsch fair angekündigt, Folgen sichtbar) | 2 | 7 neue Weichen mit Szenario; Folgen in Kapitel 2 noch nicht gebaut |
-| Kämpfe (Anzeichen, Möglichkeiten, Folgen, Tod als Erzählung) | 1 | Todestexte je Ort; Kämpfe selbst kaum überarbeitet |
-| Rede: direkte Rede mit eigenen Stimmen | 2 | Regel von Claude nach der Prüfung gesetzt; Nutzer hat nicht entschieden |
+| Kämpfe (Anzeichen, Möglichkeiten, Folgen, Tod als Erzählung) | 2 | Bosse nach Vorgabe des Nutzers verlängert (7 und 8 Takte), unabhängig geprüft; Balance nur mit Zufallsspieler gemessen (9,4 Tode je Durchlauf, sagt wenig über aufmerksame Spieler); Mob, Schwein, Klinik noch alte Länge |
+| Rede: direkte Rede mit eigenen Stimmen | 3 | vom Nutzer per Abfrage bestätigt (2026-11-04); einzelne Stimmen noch nicht gehört |
 | Der Traum als Fluch (Dosierung) | 2 | gebaut nach Plan; ob es „cool“ genug ist, entscheidet der Nutzer |
 
 ## Knoten
@@ -47,26 +49,27 @@ Stand 2026-11-04, nach Runde 1: drei unabhängige Prüfungen (Plot und Logik, Lo
 | k1_b_maedchen | Das Mädchen am Fenster | 2 | |
 | k1_b_daecher | Gasse unter den Dächern (Schütze) | 2 | |
 | k1_b_eileen | Eileen die Krähe (Dach) | 2 | |
-| k1_n1_kleriker | Nadelöhr 1: Kleriker-Bestie | 2 | |
+| k1_n1_kleriker | Nadelöhr 1: Kleriker-Bestie | 2 | 7 Takte (Abfrage); vom Nutzer nicht gespielt |
+| k1_b_anschlag | Der Anschlag an der Kapellentür | 1 | neu; Wortlaut der Kirche eigen |
 | k1_hub_c | Unterstadt (frei) | 2 | |
 | k1_c_kanal | Kanalisation (Schwein, Leiter) | 2 | |
 | k1_c_eileen | Eileen über den Gräbern | 2 | |
 | k1_c_graeber | Die Gräber, zweite Begegnung mit Gascoigne | 2 | |
-| k1_n2_gascoigne | Nadelöhr 2: Gascoigne | 2 | Kappe ist Kanon; Kampfphasen selbst kaum überarbeitet |
+| k1_n2_gascoigne | Nadelöhr 2: Gascoigne | 2 | 8 Takte (Abfrage); neue Takte unabhängig geprüft, vom Nutzer nicht gespielt |
 | k1_d_grab | Viola und die Brosche | 2 | |
 | k1_d_rueckweg | Rückweg durch die Stadt | 2 | zeigt jetzt Veränderungen an bekannten Orten |
 | k1_d_maedchen | Weiche: Was sagst du dem Mädchen? | 2 | |
 | k1_d_kanal | Rückweg durch die Kanalisation | 2 | |
 | k1_d_gilbert | Gilbert hinter der Brücke | 2 | |
 | k1_d_traum | Kapitelende im Traum | 2 | |
-| traum_hub, gehrman, puppe_erwacht, puppe_gespraech, boten_laden, traum_erwachen | Jägertraum | 2 | Bad der Boten unverändert; Echos können außer Molotow und Kiesel nichts kaufen |
+| traum_hub, gehrman, puppe_erwacht, puppe_gespraech, boten_laden, traum_erwachen | Jägertraum | 2 | Boten verkaufen jetzt Jagdnotizen, Kirchenbrief, Wendels Mantel; Preise geschätzt; Wendels Spur ist Saat für Kapitel 2 und dort noch nicht geerntet |
 
 ## Werkzeuge und Oberfläche
 | Stück | Stufe | Schwächen |
 |---|---|---|
 | Spieloberfläche (Lesen, Leiste, Vignette, Notizbuch) | 2 | Icons, Kampfdarstellung, Ortskarten, Notizbuch als Buch neu; im Browser getestet, Geschmack ungeprüft |
-| Ton | 1 | erzeugt, nur technisch getestet (kein Hörtest möglich); Lautstärke und Stimmung ungeprüft |
-| Mechaniken der Nacht (Stärkung, Chronik, Einsicht kostet) | 1 | gebaut, über Szenarien und Prüfer abgesichert, Balance ungetestet |
+| Ton | 1 | erzeugt, nur technisch getestet (kein Hörtest möglich); Lautstärke und Stimmung ungeprüft; Choral und Glocke neu; Wahl beim Start |
+| Mechaniken der Nacht (Stärkung, Chronik, Einsicht kostet) | 1 | Einsicht kostet jetzt an fünf Stellen leise; Balance ungetestet |
 | Werkstatt im Spiel und im Erzählbaum | 2 | getestet nur gegen nachgebildetes GitHub; erster echter Versand steht aus; Vorschläge liegen nur im jeweiligen Browser |
 | Erzählbaum (Karte) | 1 | |
 | Hosting | 2 | Netlify läuft: https://yahrnams-neverending-night.netlify.app/; von hier aus nicht erreichbar, daher nicht selbst geprüft |

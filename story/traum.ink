@@ -187,6 +187,25 @@ In einem steinernen Becken voller trüben Wassers hocken Boten, dicht gedrängt,
     ~ kiesel = kiesel + 1
     Ein glatter, grauer Kiesel, kühl in der Hand. Etwas, um Lärm zu machen, wo man selbst nicht sein will.
     -> wahl
+// [ERWEITERT] Wissen und Kleidung (Entscheidung des Nutzers 2026-11-04): Was die Boten anbieten, haben sie Toten abgenommen.
++ {echos >= 3 and not jagdnotizen} [Jagdnotizen eines Toten kaufen (3 Echos)]
+    ~ echos = echos - 3
+    ~ jagdnotizen = true
+    ~ gelernt += (wurf, ansturm, axt_wirbel)
+    Ein Heft mit gewellten Seiten, das einmal nass geworden ist. Ein Jäger hat darin gezeichnet, was ihn beinahe umgebracht hat, mit Bleistift und mit Pfeilen: ein Arm, der eine Kutsche über die Schulter hebt. Ein Geweih, gesenkt, und daneben das Wort „spät“, dreimal unterstrichen. Ein Mann mit erhobener Axt, und darunter die Ziffern eins, zwei, drei, die Drei eingekreist. Die letzte Seite ist leer bis auf einen braunen Daumenabdruck. # notiz: jagdnotizen
+    -> wahl
++ {echos >= 2 and not kirchenbrief} [Einen Brief mit Kirchensiegel kaufen (2 Echos)]
+    ~ echos = echos - 2
+    ~ kirchenbrief = true
+    // [KANON] Die Oedon-Kapelle ist im Kathedralbezirk Zuflucht für Überlebende; eine Vikarin der Kirche. [ERWEITERT] Der Brief, der Schreiber, die Glocken.
+    Das Siegel ist gebrochen, der Brief schon gelesen, von wem auch immer. Ein Kirchendiener schreibt an seine Schwester, in einer kleinen, sorgfältigen Hand. In der Kapelle oben im Bezirk nehme man jetzt jeden auf, der an die Tür klopfe und noch sprechen könne. Die Vikarin bete jede Nacht am längsten von allen, und manchmal, wenn sie glaube, allein zu sein, weine sie dabei. Er solle die Glocken läuten, auch wenn niemand komme. Das Letzte ist ausgestrichen, so fest, dass die Feder das Papier zerrissen hat. # notiz: kirchenbrief
+    -> wahl
++ {echos >= 3 and not mantel} [Einen Jägermantel kaufen (3 Echos)]
+    ~ echos = echos - 3
+    ~ mantel = true
+    // [ERWEITERT] Wendel, ein erfundener Jäger. Saat für Kapitel 2: Wer ihn zuletzt gesehen hat.
+    Zwei Boten ziehen ihn gemeinsam aus dem Wasser, einen langen Mantel aus geöltem Leder, schwer wie ein nasser Hund. Er riecht nach Teer, nach Pulver und nach einem Menschen, der nicht du bist. Am Saum fehlt ein Stück, glatt abgetrennt. Innen, ins Futter gestickt, mit rotem Garn und ungeschickten Stichen, steht ein Name: Wendel. # notiz: mantel_wendel
+    -> wahl
 + [Genug]
     Die Boten sinken zurück ins Wasser, enttäuscht oder gleichgültig, du kannst es nicht sagen.
     ->->

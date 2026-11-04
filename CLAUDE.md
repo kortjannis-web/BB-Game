@@ -32,6 +32,7 @@ Der Nutzer ist der Visionär mit wenig Zeit. Claude führt, prüft und holt die 
 - Ton: Lovecraft und gotischer Horror; zuerst gotische Volkskunde, mit Einsicht und Kapiteln immer kosmischer.
 - Nur Deutsch.
 - Keine Waffenwahl: Der Jäger bekommt den Sägespalter, „der reicht“ (2026-11-04). Die Feuerwaffe bleibt wählbar.
+- Abfragerunde 2026-11-04 (Häppchen per Abfrage, dann umsetzen und mergen): Bosskämpfe 6 bis 8 Takte; Kampftempo gemischt (Anzeichen ruhig und genau, Folge kurz und hart); Kampfoptionen nennen die Richtung ausdrücklich. Kirche in Kapitel 1 nur hörbar und lesbar (Glocken, Choral bei schlimmen Momenten, Anschlag an einer Kapellentür). Ludwig nur als namenloses Gerücht bei Gilbert. Direkte Rede bestätigt. Gascoigne: Wärme, die zerbricht. Boten verkaufen auch Wissen und Kleidung mit Folgen (Wendels Mantel). Ein aufmerksamer Spieler stirbt in Kapitel 1 zwei- bis dreimal. Einsicht kostet mehr, aber leise (ab 2 bis 3: Dinge, die nicht da sind, unzuverlässige Anzeichen, Figuren merken es). Ton: Wahl auf der Titelseite. Kapitel 2 führt in den Kathedralbezirk.
 - Ton: im Browser erzeugt (eigene Spieluhr-Melodie) plus CC0-Geräusche, abschaltbar. Darstellung: Icons in der Leiste, sichtbare Kämpfe, Ortskarten, Notizbuch mit Reitern. Mechaniken: Stärkung bei der Puppe gegen Echos, Chronik der Nacht, Einsicht mit Kosten (alle 2026-11-04).
 
 ## Schreibregeln
