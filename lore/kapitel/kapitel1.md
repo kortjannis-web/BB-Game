@@ -62,4 +62,9 @@ Vor jeder Arbeit an Kapitel 1 lesen: `lore/kern.md`, dann dieses Paket, dann nur
 - [ERWEITERT, bewusst] Gilbert gibt den Flammenwerfer schon in Kapitel 1; im Kanon erst ab Sonnenuntergang (LK 5.1, 9.7).
 - Gilbert nennt bei uns die große Brücke als Weg: Kanon nach RK1 §5 (sicher); den Aquädukt nennt er erst später (LK 5.1). Kein Fehler.
 - Eileens erstes Treffen auf den Dachbalken: Kanon nach RK1 (sicher); LK weicht ab (`offen.md`, E1).
-- **Zu prüfen:** LK 6.1.2 sagt, Gascoignes Kleidung erwähne zwei Töchter; der Eintrag zur Kleidung selbst (LK 4) nennt keine. Ältere Schwester und Mädchen siehe RK1 §6.
+- Gascoignes Familie: in der neuen Fassung von LK berichtigt; die Kleidung nennt keine Töchter, die Familie ergibt sich aus der Mädchen-Quest und der Spieluhr (`figuren/maedchen-und-viola.md`).
+- [ERWEITERT, bewusst] Die Große Brücke ist bei uns der Übergang zur Unterstadt; zur Kathedrale hin ist sie am Ende von der Kirche verriegelt (Notiz Nr. 2). Im Kanon ist die Brücke eine Sackgasse, der Weg zu Gascoigne führt unten herum.
+- [ERWEITERT, bewusst] Iosefka spricht bei uns durch eine Tür im Inneren der Klinik, vor der ersten Laterne; im Kanon von außen, nach dem ersten Traum (RK1 §3).
+- [ERWEITERT, bewusst] Gascoigne kommt gegen die Kleriker-Bestie auf Zuruf; im Kanon über die Glocke der alten Jäger.
+- Jägermarke wie im Kanon: Sie bringt in den Traum und kostet alle Blutechos (seit 2026-11-05).
+- Das Band des Mädchens ist weiß wie im Kanon; rot ist es erst beim Schwein (seit 2026-11-05).

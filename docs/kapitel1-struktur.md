@@ -18,7 +18,7 @@ flowchart LR
   N1 -->|besiegt, abgelenkt| C{C Unterstadt: frei}
   N1 -->|geflohen| K[Kanalisation] --> C
   C --> N2[[NADELÖHR 2: Gascoigne]]
-  N2 --> D[D Nachspiel: Viola, Eileen, Mädchen, Gilbert]
+  N2 --> D[D Nachspiel: Viola, Eileens Spuren, Mädchen, Gilbert]
   D --> T[Traum: Kapitelende]
 ```
 
@@ -29,7 +29,7 @@ flowchart LR
 | Nadelöhr 1 | drei Wege | Große Brücke |
 | C Unterstadt | **frei** | Kanalisation, Gräber (Gascoigne), Eileen über den Gräbern, Leiter zurück nach B |
 | Nadelöhr 2 | Pflicht | Grab des Oedon |
-| D Nachspiel | frei | Viola, Eileen, Mädchen, Gilbert, Kanalisation, Traum |
+| D Nachspiel | frei | Viola, Eileens Spuren, Mädchen, Gilbert, Kanalisation, Traum |
 
 ---
 
@@ -43,7 +43,7 @@ flowchart LR
 | **Lernen durch Sterben** | Jedes Anzeichen, an dem du stirbst, erkennst du beim nächsten Mal (eigener Satz im Kampf). |
 | **Laternen** | Zentral-Yharnam (immer), Große Brücke (**nur wenn die Kleriker-Bestie besiegt ist**), Grab des Oedon (nach Gascoigne). Wer die Bestie umgeht, hat in der Unterstadt keine Laterne und lange Rückwege. |
 | **Abkürzung** | Die Leiter in der Kanalisation verbindet Unterstadt und Zentral-Yharnam, ohne Brücke. |
-| **Jägermarken** | Von Eileen (2). Zerdrücken heißt: in den Traum, ohne zu sterben (Echos bleiben). In den Bosskämpfen nutzbar. |
+| **Jägermarken** | Von Eileen (2). Zerdrücken heißt: in den Traum, ohne zu sterben; wie im Kanon gehen dabei alle Blutechos verloren (2026-11-05). In den Bosskämpfen nutzbar. |
 | **Einsicht** | +1 beim ersten Anblick der Kleriker-Bestie, +1 beim Sieg, +1 beim ersten Anblick Gascoignes, +1 beim Sieg. Bei Einsicht 1 erwacht die Puppe (Kanon). |
 | **Blutgedächtnis** | Wer den Kopf der besiegten Kleriker-Bestie berührt, sieht ihre Erinnerung: wie ein Kleriker kippt und dass ein Rest Mensch bleibt. Das öffnet bei Gascoigne den Moment der Klarheit. Spätere Bosse geben weitere Erinnerungen (Vorgeschichte). |
 | **Laden der Boten** | Molotow (3 Echos), Kieselstein (1 Echo). |
@@ -55,7 +55,7 @@ flowchart LR
 | Figur | Begegnungen | Was man gewinnen oder verlieren kann |
 |---|---|---|
 | **Gascoigne** | Scheiterhaufen (rettet dich vor dem Mob, lehrt die Parade, bittet um einen Gruß an seine Frau) → Brücke (als Helfer rufbar, summt das Lied der Spieluhr, kann nicht aufhören) → Gräber (kippt; erinnern, warnen, nach Viola fragen) → Grab des Oedon (Boss) | Freundschaft (Wert `gascoigne`), Parade, Moment der Klarheit, sein letztes Wort |
-| **Eileen** | Dach über dem Kanaleingang (Jägerin der Jäger, Jägermarken, fragt nach Gascoigne) → Dach über den Gräbern (erklärt, wie Jäger kippen; man bittet um Schonung, bietet Zusammenarbeit an oder schweigt) → Nachspiel (Urteil) | **Angebot der Partnerschaft für Kapitel 2** (vor der Kapelle, Henryk), Bruch, wenn man Gascoigne vor ihr warnt |
+| **Eileen** | Dach über dem Kanaleingang (Jägerin der Jäger, Jägermarken, fragt nach Gascoigne) → Dach über den Gräbern (erklärt, wie Jäger kippen; man bittet um Schonung, bietet Zusammenarbeit an oder schweigt); im Nachspiel nur ihre Spuren, nicht sie selbst (zwei Begegnungen, Entscheidung des Nutzers) | **Angebot der Partnerschaft für Kapitel 2** (vor der Kapelle, Henryk), Bruch, wenn man Gascoigne vor ihr warnt |
 | **Das Mädchen** | Fenster am Brunnenplatz (Spieluhr, Suche nach der Mutter) → Nachspiel (Brosche, Wahrheit, Lüge, Schweigen) | Spieluhr; ihr Leben (Kanon: kein Ausgang rettet sie endgültig) |
 | **Gilbert** | Fenster an der Laterne (Stadt, Jagd, Kirche, Brücke; Feuer; Bitte) → Bericht nach der Brücke | Feuer, Freundschaft (zahlt sich beim Blutmond aus) |
 | **Iosefka** | Tür der Klinik (Ampulle, ihre Stimme) | Merkmal, an dem man in Kapitel 2 die Hochstaplerin erkennt |
@@ -77,7 +77,7 @@ flowchart LR
 | Eileen über den Gräbern: Schonung erbitten / Zusammenarbeit anbieten / schweigen | Vertrauen | Mit genug Vertrauen (und ohne Warnung an Gascoigne) bietet sie am Grab die Partnerschaft an | **Partnerschaft vor der Kapelle** |
 | **Kleriker-Bestie** kämpfen allein / mit Gascoigne / ablenken / fliehen | Wunden, Einsicht | Laterne an der Brücke nur bei Sieg; Blutgedächtnis nur bei Sieg und Berühren | – |
 | Gräber: Gascoigne erinnern / warnen / fragen | Freundschaft | Warnen = Eileen bricht mit dir | keine Partnerschaft |
-| **Moment der Klarheit** (Freundschaft ≥ 2 + Spieluhr + Blutgedächtnis) | Versprechen | Gascoigne stirbt als Mensch; dem Mädchen kann man sagen, dass er an sie dachte | – |
+| **Moment der Klarheit** (Freundschaft ≥ 3 + Spieluhr + Blutgedächtnis) | Versprechen | Gascoigne stirbt als Mensch; dem Mädchen kann man sagen, dass er an sie dachte | – |
 | **Brosche geben** (Kanon-Tragödie) | Wahrheit | Haustür offen, **Band beim Schwein** auf dem Rückweg | – |
 | Lügen / schweigen | sie wartet | – | Kapelle oder Klinik (beides schlimm) |
 
@@ -94,7 +94,7 @@ Jeder Kampf: Anzeichen im Text, 2 bis 4 Möglichkeiten, feste Folge. Kein Zufall
 | Schütze in der Gasse | 1 | Schuss von hinten | Dächer im Blick behalten |
 | **Kleriker-Bestie** | 4 + Phase | langer Arm, Kreischen, Sprung | Feuer, Molotow, Parade, Gascoigne als Helfer |
 | Schwein in der Kanalisation (optional) | 2 | Ansturm, Biss | – |
-| **Gascoigne** | 3 Phasen, 5 Takte | Donnerbüchse, Axt, lange Axt, Bestiensprung, Griff | Parade (seine eigene Lehre), Spieluhr (dreimal = Bestie), Feuer, Molotow |
+| **Gascoigne** | 3 Phasen, höchstens 8 Takte (Entscheidung 6 bis 8) | Donnerbüchse, Axt, lange Axt, Bestiensprung, Griff | Parade (seine eigene Lehre), Spieluhr (dreimal = Bestie), Feuer, Molotow |
 
 ---
 
