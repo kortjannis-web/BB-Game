@@ -51,14 +51,17 @@ Die Kutsche hält in einer engen Straße vor einem hohen, schmalen Haus. Die Fen
 === k1_klinik ===
 // TITEL: Iosefkas Klinik: Transfusion
 // Handgearbeitet 2026-11-05: Raum in A, Begegnung in B, der Vertrag in C (Formular der Blutstelle). Optionen fließen in den Satz.
-// [KANON lore:figuren/blutminister] Ein alter Mann im Rollstuhl empfängt den Fremden: Wer bleiches Blut suche, sei hier richtig; zuerst ein wenig Blut aus Yharnam und ein Vertrag; was auch geschehe, man solle es für einen bösen Traum halten. Wortlaut eigen.
+// Faktencheck 2026-11-05 (a_ankunft Nr. 1, 2, 7): böser Traum statt Fieber, Ministration als Fachwort, Stuhl mit Riemen statt Liege.
+// [KANON lore:figuren/blutminister] Ein alter Mann im Rollstuhl empfängt den Fremden: Wer bleiches Blut suche, sei hier richtig; die Seuche der Heimat verschone kaum einen, das Blut der Ministration sei Yharnams Handel und heile, danach sei man wie neu; zuerst ein wenig Blut aus Yharnam und ein Vertrag; was auch geschehe, man solle es für einen bösen Traum halten. Wortlaut eigen.
+// [KANON lore:orte/iosefkas-klinik] Artbook: Regale voller Flaschen; für die Transfusion ein schwerer Holzstuhl mit Riemen und ein Ständer mit zwei Flaschen.
 // [KANON lore:orte/iosefkas-klinik] Vision während der Transfusion: eine Bestie aus einer Blutlache, die Feuer fängt; kleine graue Wesen kriechen über den Liegenden; eine Frauenstimme. PRÜFEN: Einzelheiten nach RK1 §1 (wahrscheinlich).
 // [ERWEITERT] Die braune Tinte, die nicht abgeht: Anker für die Bindung an den Traum (nur gezeigt, nie erklärt; dass der Vertrag bindet, ist [Deutung]).
 // Stimme des Blutministers: glatt, geübt, amüsiert, duzt.
-Drinnen riecht es nach Karbol, nach kaltem Kerzenwachs und darunter nach Eisen. Ein langer Saal, Liegen an beiden Wänden, die meisten leer; auf einigen liegen Gestalten unter Laken, die sich nicht rühren. Öllampen brennen in Wandhaltern, und ihr Schein reicht nicht bis in die Ecken, wo das Dunkel dichter steht, als Dunkel stehen dürfte. An einem Haken neben der Tür hängt eine Schürze, steif von etwas, das getrocknet ist. # bild: klinik_innen # stimmung: spannung
+Drinnen riecht es nach Karbol, nach kaltem Kerzenwachs und darunter nach Eisen. Ein langer Saal, Liegen an beiden Wänden, die meisten leer; auf einigen liegen Gestalten unter Laken, die sich nicht rühren. Öllampen brennen in Wandhaltern, und ihr Schein reicht nicht bis in die Ecken, wo das Dunkel dichter steht, als Dunkel stehen dürfte. Zwischen den verhängten Fenstern reichen Regale bis unter die Decke, Flasche an Flasche, und in manchen hat sich der Inhalt in zwei Schichten getrennt, oben hell und unten trüb. An einem Haken neben der Tür hängt eine Schürze, steif von etwas, das getrocknet ist. # bild: klinik_innen # stimmung: spannung
 Am Ende des Saals sitzt ein alter Mann in einem Rollstuhl, das Gesicht zur Hälfte im Schatten. Er spricht, bevor du ihn erreichst, mit einer glatten, geübten Stimme, die diese Sätze schon sehr oft gesagt hat und jedes Mal ein kleines Vergnügen daran findet.
 „Noch einer, durch den Regen, mit Fieber in den Augen. Dann hat der Kutscher dich nicht umsonst gefahren.“ Er beugt sich vor, bis das Lampenlicht seine Nasenspitze erreicht, und mustert dich, als lese er dir etwas von der Stirn ab. „Bleiches Blut“, sagt er leise, und dann lacht er in sich hinein, als hättest du ihm einen guten Witz erzählt. „Da bist du hier richtig. Nur muss man erst ein wenig von unserem Blut im Leib haben, ehe man solche Dinge versteht.“ # lore: paleblood
 { herkunft == "adel": Sein Blick wandert über deine Handschuhe, das gute Leder, die gestopften Fingerspitzen, und das Lachen wird breiter. }
+„Gegen das Fieber hilft es nebenbei auch. Wo du herkommst, rafft so etwas die halben Gassen hin; hier bekommst du Blut, und danach bist du wie neu.“ Das nächste Wort spricht er aus wie ein Krämer den Namen seiner besten Ware. „Ministration. Die ganze Stadt lebt davon.“
 „Erst die Papiere. Ohne Papiere kein Blut, so ist das hier.“ # lore: bluttransfusion
 Er schiebt dir einen Bogen hin, eng bedruckt, mit einer Feder darauf. Die Tinte im Fass ist braun, und du bist nicht sicher, dass es Tinte ist.
 Vereinbarung über die Behandlung mit Blut. Der Unterzeichnete erklärt, aus freien Stücken und bei klarem Verstand zu kommen. Er erklärt, die Behandlung zu empfangen, wie sie ihm gereicht wird, und keine andere zu verlangen. Er erklärt, dass er den Grund seiner Reise wahrheitsgemäß angegeben hat. Folgen, die aus der Behandlung erwachsen, fallen dem Empfänger zu. # stil: anschlag
@@ -72,10 +75,11 @@ Vereinbarung über die Behandlung mit Blut. Der Unterzeichnete erklärt, aus fre
     ~ haltung_vertrag = "zoegernd"
     Die Feder zögert über dem Bogen, und ein Tropfen fällt auf das Papier und läuft in die Fasern. Der alte Mann drängt nicht. Er wartet, die Hände im Schoß gefaltet, mit der Geduld eines Menschen, der weiß, dass am Ende jeder unterschreibt. Und du unterschreibst.
 - Die Tinte bleibt an deinen Fingerkuppen kleben, braun und ein wenig zäh. Du reibst sie am Mantel ab. Sie geht nicht ab.
-„Gut“, sagt der alte Mann. „Sehr gut. Und wenn dir heute Nacht etwas über den Weg läuft, das es nicht geben kann: Schlaf darüber. Am Ende war alles nur das Fieber.“ Er lacht wieder, dasselbe leise Lachen, und rollt rückwärts in den Schatten, bis nur noch das Knarren der Räder von ihm bleibt.
-Man legt dich auf eine Liege; wer, siehst du nicht. Die Nadel ist dicker, als sie sein sollte. Das Blut, das in deinen Arm fließt, ist zuerst warm wie ein Bad, dann kalt wie ein Fluss im Winter, und dann ist es nichts mehr, wofür es ein Wort der Wärme oder der Kälte gäbe. Es ist fremd. Es breitet sich in dir aus und tastet, Ader um Ader, nach einem Zimmer, das ihm gehört.
-Du träumst, oder etwas träumt dich. Auf dem Boden der Klinik breitet sich eine Lache aus, rot und glänzend, und aus ihr wächst eine Gestalt: zuerst Fell, dann Klauen, dann ein Kopf, der zu lang ist und zu viele Zähne hat. Es beugt sich über dich, und sein Atem riecht nach umgegrabener Erde. Dann fängt es Feuer, ohne Funken, ohne Grund, und verbrennt kreischend über dir, bis nur noch Asche auf dein Laken rieselt. # gedaechtnis: vision_klinik # stimmung: grauen
-Danach kommen die Kleinen. Graue, verdrehte Wesen, nicht größer als ein Kind, mit Gesichtern aus nassem Ton, kriechen über die Kante der Liege, über deine Beine, deine Brust, und ihre Berührung ist kalt und neugierig. Eines hebt den Kopf und sieht dich an. Du willst schreien, und deine Kehle gehorcht dir nicht.
+„Gut“, sagt der alte Mann. „Sehr gut. Und was dir heute Nacht auch über den Weg läuft und es nicht geben dürfte: Am Morgen hältst du es für einen bösen Traum. Das tun sie alle.“ Er lacht wieder, dasselbe leise Lachen, und rollt rückwärts in den Schatten, bis nur noch das Knarren der Räder von ihm bleibt.
+Man setzt dich in einen schweren Stuhl aus Holz. Riemen legen sich über deine Handgelenke und über die Brust, Schnalle um Schnalle, von Händen, die du nicht siehst. Über dir hängen zwei Flaschen an einem eisernen Ständer, eine leer, eine dunkel.
+Die Nadel ist dicker, als sie sein sollte. Das Blut, das in deinen Arm fließt, ist zuerst warm wie ein Bad, dann kalt wie ein Fluss im Winter, und dann ist es nichts mehr, wofür es ein Wort der Wärme oder der Kälte gäbe. Es ist fremd. Es breitet sich in dir aus und tastet, Ader um Ader, nach einem Zimmer, das ihm gehört.
+Du träumst, oder etwas träumt dich. Auf dem Boden der Klinik breitet sich eine Lache aus, rot und glänzend, und aus ihr wächst eine Gestalt: zuerst Fell, dann Klauen, dann ein Kopf, der zu lang ist und zu viele Zähne hat. Es beugt sich über dich, und sein Atem riecht nach umgegrabener Erde. Dann fängt es Feuer, ohne Funken, ohne Grund, und verbrennt kreischend über dir, bis nur noch Asche in deinen Schoß rieselt. # gedaechtnis: vision_klinik # stimmung: grauen
+Danach kommen die Kleinen. Graue, verdrehte Wesen, nicht größer als ein Kind, mit Gesichtern aus nassem Ton, kriechen an den Stuhlbeinen herauf, über die Riemen, über deine Knie und deine Brust, und ihre Berührung ist kalt und neugierig. Eines hebt den Kopf und sieht dich an. Du willst schreien, und deine Kehle gehorcht dir nicht.
 // [KANON] Am Ende der Vision eine Frauenstimme, die sich freut, einen Jäger gefunden zu haben (Wortlaut eigen, Sprecherin [Offen]).
 Ganz nah an deinem Ohr sagt eine Frauenstimme, sanft und zufrieden wie jemand, der lange gesucht hat: „Da bist du ja. Ein Jäger.“ Dann ist nichts mehr.
 -> k1_erwachen
@@ -83,118 +87,143 @@ Ganz nah an deinem Ohr sagt eine Frauenstimme, sanft und zufrieden wie jemand, d
 === k1_erwachen ===
 // TITEL: Erwachen und erster Tod
 // Handgearbeitet 2026-11-05 in Stimme B. Optionen fließen in den Satz; der erste Tod ist unausweichlich.
-// [KANON lore:orte/iosefkas-klinik] Zettel über bleiches Blut (sinngemäß: suchen, um die Jagd zu überwinden); die Bestie im Krankensaal. Der erste Tod zählt als erster (tode = 1), damit der Traum danach nicht noch einmal „zum ersten Mal“ erzählt.
+// Faktencheck 2026-11-05 (a_ankunft Nr. 3, 9, 10): das Fieber ist fort, die Bestie bleibt „es“, der Zettel liegt auf dem Stuhl rechts und verrät nicht, wessen Hand ihn schrieb.
+// [KANON lore:orte/iosefkas-klinik] Zettel über bleiches Blut (sinngemäß: suchen, um die Jagd zu überwinden), nach RK1 §1 auf einem Stuhl rechts (wahrscheinlich); die Bestie im Krankensaal. Dass der Jäger ihn selbst schrieb, ist [Deutung] (RK1 §1, unsicher) und wird nur im Vertragszweig „wach“ angedeutet.
+// [KANON lore:gegenstaende/yharnam-und-blut] Wer einmal Blut empfing, spürt es bei jedem weiteren nach: hier als Hunger unter der Klarheit.
+// Der erste Tod zählt als erster (tode = 1), damit der Traum danach nicht noch einmal „zum ersten Mal“ erzählt.
 ~ tode = 1
-Du erwachst, und die Klinik ist leer. Der Rollstuhl ist fort, die Lampen sind fast heruntergebrannt, und auf den Liegen an der Wand liegt niemand mehr unter den Laken, nur die Laken selbst, zerwühlt, als sei jemand hastig aufgestanden. Dein Arm pocht dort, wo die Nadel war, und unter der Haut bewegt sich etwas, langsam, im Takt deines Herzens. # stimmung: spannung
-An der Wand, auf Augenhöhe, steckt ein Zettel. Die Schrift ist eilig, die Buchstaben drängen sich aneinander, als habe der Schreiber keine Zeit gehabt oder keine Ruhe mehr: Es geht um bleiches Blut, und darum, dass man es suchen müsse, um über die Jagd hinauszukommen. Wer das geschrieben hat, weißt du nicht. Die Hand, die es schrieb, hält den Stift so, wie du ihn hältst. # lore: paleblood
+Du erwachst im Stuhl, und die Klinik ist leer. Die Riemen hängen offen von den Armlehnen, und am Ständer ist auch die dunkle Flasche durchsichtig geworden, bis auf einen roten Rand am Boden. Der Rollstuhl ist fort, die Lampen sind fast heruntergebrannt, und auf den Liegen an der Wand liegt niemand mehr unter den Laken, nur die Laken selbst, zerwühlt, als sei jemand hastig aufgestanden. Dein Arm pocht dort, wo die Nadel war, und unter der Haut bewegt sich etwas, langsam, im Takt deines Herzens. # stimmung: spannung
+Das Fieber ist fort. Zum ersten Mal seit Wochen ist dein Kopf klar, so klar, dass die Kanten der Dinge schärfer stehen als zuvor, und unter der Klarheit liegt ein Hunger, der nicht nach Brot fragt.
+{ grund == "heilung_selbst": Du bist gekommen, um zu genesen, und du bist genesen. Deine Hand legt sich von selbst auf die Armbeuge und bleibt dort liegen, die Finger fest um den Einstich. }
+Auf dem Stuhl rechts von dir, einem einfachen, auf dem sonst ein Besucher sitzt, liegt ein Zettel, als habe jemand ihn dort vergessen. Die Schrift ist eilig, die Buchstaben drängen sich aneinander, und die letzte Zeile läuft über den Rand des Papiers hinaus. Es geht um bleiches Blut, und darum, dass man es suchen müsse, um über die Jagd hinauszukommen. Wer das geschrieben hat, weißt du nicht. # lore: paleblood
 Hinter dir knarrt eine Diele.
 Zwischen den Liegen richtet sich etwas auf. Es ist größer als ein Mensch und hat einmal einem gehört: Fetzen eines Hemdes hängen ihm an den Schultern, und im Fell an seiner Brust glänzt ein einzelner Hornknopf. Es atmet schwer und nass, und als es den Kopf dreht, siehst du, dass seine Augen kein Weiß mehr haben. # anzeichen: erster_tod # stimmung: grauen
-* [Nach dem Stuhl neben der Liege greifen #fliesst]
-    Nach dem Stuhl neben der Liege greifst du, hebst ihn, und die Bestie schlägt ihn dir aus den Händen, als wäre er aus Papier.
+* [Nach dem Stuhl rechts von dir greifen #fliesst]
+    Nach dem Stuhl rechts von dir greifst du, der Zettel segelt zu Boden, und als du den Stuhl hebst, schlägt die Bestie ihn dir aus den Händen, als wäre er aus Papier.
 * [Zur Tür stürzen #fliesst]
     Zur Tür stürzt du und kommst drei Schritte weit. Dann trifft dich etwas in den Rücken, schwer wie ein fallender Balken.
-* [Den Atem anhalten und still liegen #fliesst]
-    Du hältst den Atem an und liegst still. Es hilft nichts. Sie riecht dich, sie riecht das neue Blut in deinen Adern.
+* [Den Atem anhalten und still sitzen #fliesst]
+    Du hältst den Atem an und rührst dich nicht, die Hände flach auf den Armlehnen. Es hilft nichts. Es riecht dich, es riecht das neue Blut in deinen Adern.
 - Klauen, Zähne, Gewicht. Es tut nicht weh; du staunst nur, wie schnell es geht. Dann senkt sich eine große, dunkle Stille über dich, und in dieser Stille bewegt sich etwas Kleines, Graues.
 -> k1_traum_erst
 
 === k1_traum_erst ===
 // TITEL: Erster Besuch im Jägertraum
-// [KANON] Erster Besuch: das Haus ist verschlossen, die Puppe leblos, die Boten geben Wandelwaffe und Feuerwaffe. PRÜFEN: Reihenfolge.
+// Handgearbeitet 2026-11-05 (Faktencheck): Garten und Haus in A, Erwachen, Boten und Waffen in B. Optionen fließen in den Satz.
+// [KANON lore:orte/jaegertraum] Erster Besuch: das Haus ist verschlossen, die Puppe leblos, die Boten geben Wandelwaffe und Feuerwaffe. PRÜFEN: Reihenfolge.
+// [KANON lore:gegenstaende/jaeger-und-werkstatt] Sägespalter: Zähne, die Bestienblut ziehen, Klinge, die sich ausklappt. Pistole und Donnerbüchse: Quecksilberkugeln, mit dem Blut des Trägers verschmolzen (LK §19); hier gezeigt durch den Stich in die Fingerkuppe.
+// Übergreifend Nr. 6: Der Name „Boten“ fällt dem Jäger einmal zu; das bleibt die einzige solche Eingebung.
 ~ ort = "traum"
-Du liegst auf dem Rücken. Über dir ein Himmel ohne Sonne, ohne Wolken, ohne Sterne, ein Himmel von der Farbe alten Elfenbeins, der weder Tag noch Nacht ist. Unter deinen Händen Blumen, weiß und unzählig, und ihr Duft ist so süß, dass er dir die Kehle zuschnürt. # bild: traum # stimmung: ruhig # lore: jaegertraum
-Du stehst auf. Du lebst. Du solltest nicht leben. Der Gedanke ist so groß, dass er keinen Platz in deinem Kopf findet, und so legst du ihn beiseite wie einen Brief, den man später lesen will. Der Einstich in deiner Armbeuge pocht, frisch, als hätte man dir eben erst Blut gegeben. Sonst ist es still. Kein Vogel, kein Wind, kein Wasser. Nur dein eigenes Herz.
-Ein Pfad führt zwischen Grabsteinen einen Hügel hinauf zu einem kleinen Haus mit erleuchteten Fenstern. Die Tür ist verschlossen. Im Garten stehen leere Bänke, und im Gras liegt eine umgekippte Gießkanne, in der das Wasser längst verdunstet ist, während ringsum alles blüht. Es ist ein Ort, den jemand sehr geliebt und dann sehr lange nicht mehr betreten hat.
+Du liegst auf dem Rücken, und über dir steht ein Himmel ohne Sonne, ohne Wolken und ohne Sterne, von der Farbe alten Elfenbeins, ein Himmel, der weder Tag sein will noch Nacht. Unter deinen Händen wachsen Blumen, weiß und unzählig, und ihr Duft ist so süß, dass er dir die Kehle zuschnürt. # bild: traum # stimmung: ruhig # lore: jaegertraum
+Beim Aufstehen tastest du nach der Stelle, an der dich die Klauen trafen, und findest den Mantel heil und die Haut darunter glatt. Du lebst. Der Gedanke ist zu groß für deinen Kopf, und so legst du ihn beiseite wie einen Brief, den man später öffnen will. Nur der Einstich in der Armbeuge pocht noch, und er ist frisch. Kein Vogel singt hier, kein Wind geht, nirgends läuft Wasser; zu hören ist nur dein eigenes Herz.
+Ein Pfad führt zwischen Grabsteinen einen Hügel hinauf zu einem kleinen Haus, in dessen Fenstern Licht brennt, ohne dass sich dahinter je ein Schatten bewegt. Die Tür ist verschlossen. Im Garten stehen leere Bänke, und im Gras liegt eine umgekippte Gießkanne, längst trocken, während ringsum alles blüht. Es ist ein Ort, den jemand sehr geliebt und dann sehr lange nicht mehr betreten hat.
 // [ERWEITERT] Kein Weg hinaus. PRÜFEN: Gartentor im Original.
-Du gehst den Zaun entlang und suchst ein Tor. Jeder Weg, den du nimmst, biegt zwischen den Grabsteinen ab und führt dich zurück zum Fuß des Hügels.
-Am Fuß einer Treppe steht eine Frau, reglos, in einem schlichten Kleid und mit einer Haube. Erst als du näher kommst, siehst du die Gelenke an ihren Händen: Sie ist eine Puppe, so groß wie ein Mensch, mit einem Gesicht, so sorgfältig gemalt, dass du die Pinselstriche an den Wimpern siehst. Ihre Augen sind offen. Sie sehen dich nicht. # lore: puppe
-Dann bewegt sich der Boden. Aus der Erde zwischen den Blumen kriechen die kleinen grauen Wesen aus deinem Traum, und diesmal träumst du nicht. Sie fürchten dich nicht. Sie benehmen sich nicht wie Fremde, eher wie Leute, die etwas abholen, das man ihnen versprochen hat. Sie strecken dir ihre dünnen Arme entgegen, und in ihren Händen liegen Waffen. Boten, denkst du, ohne zu wissen, woher dieses Wort kommt. # lore: boten
+Am Zaun entlang suchst du ein Tor. Jeder Weg biegt zwischen den Grabsteinen ab, sanft und ohne Eile, und bringt dich zum Fuß des Hügels zurück, und beim dritten Mal erkennst du den Stein wieder, an dem du losgegangen bist.
+Am Fuß einer Treppe steht eine Frau, reglos, in einem schlichten Kleid und mit einer Haube. Erst als du näher kommst, siehst du die Gelenke an ihren Händen: Sie ist eine Puppe, so groß wie ein Mensch, mit einem Gesicht, so sorgfältig gemalt, dass sich an den Wimpern jeder Pinselstrich zählen lässt. Ihre Augen sind offen. Sie sehen dich nicht. # lore: puppe
+Dann regt sich der Boden. Zwischen den Blumen bricht die Erde auf, und heraus kriechen die kleinen grauen Wesen aus deinem Fiebertraum, und diesmal träumst du nicht. Sie fürchten dich nicht. Sie drängen heran wie Leute, die abholen, was man ihnen versprochen hat, und strecken dir ihre dünnen Arme entgegen, und in ihren Händen liegen Waffen. Boten, denkst du, und weißt nicht, wer dir das Wort eingegeben hat. # lore: boten
 // Entscheidung des Nutzers (2026-11-04): keine Waffenwahl, der Sägespalter reicht.
 ~ waffe = "saege"
-Die erste Waffe, die sie dir reichen, ist eine Wandelwaffe der Jäger: ein Sägespalter, eine gezahnte Klinge, die sich mit einem Ruck zu doppelter Länge ausklappt. Die Zähne sind nach hinten geschliffen, für Fell und für das, was darunter liegt. Wer ihn entworfen hat, wusste genau, wogegen er ihn baute. Der Griff ist abgegriffen. Jemand vor dir hat ihn lange getragen.
-Dazu eine Feuerwaffe, kurz und schwer, in einer Hand, die zu klein ist, um sie zu tragen.
-* [Die Pistole: genau]
+Die erste Waffe, die sie dir reichen, ist ein Sägespalter: eine gezahnte Klinge, die mit einem Ruck aus ihrem Gelenk schnellt und dann doppelt so lang ist. Die Zähne stehen schräg nach hinten, so gefeilt, dass sie beim Herausziehen mehr mitnehmen als beim Hineingehen. Das Leder am Griff ist schwarz und glatt gegriffen, und in der Mulde für den Daumen hat ein anderer Daumen vor dir eine Kuhle hinterlassen.
+Dann halten dir zwei Hände je eine Feuerwaffe hin, Hände, die zu klein sind, um dieses Gewicht zu tragen, und es trotzdem tragen.
+* [Nach der schweren Pistole greifen #fliesst]
     ~ feuerwaffe = "pistole"
-    Eine schwere Pistole, die Kugeln aus Quecksilber verschießt. Ihr Gewicht beruhigt dich.
-* [Die Donnerbüchse: streut, hält auf Abstand]
+    Nach der schweren Pistole greifst du, und ihr Gewicht legt sich in deine Hand, als habe sie dort schon einmal gelegen.
+* [Die kurze Büchse mit dem Trichter nehmen #fliesst]
     ~ feuerwaffe = "donnerbuechse"
-    Eine kurze, plumpe Büchse mit trichterförmigem Lauf, die eine Handvoll Kugeln auf einmal in die Welt speit.
-- Am Fuß des Hügels steht ein Grabstein, auf dem kein Name steht. Es ist der einzige Ort im Garten, der irgendwohin führt. Als du ihn berührst, verschwimmt der Garten, die Blumen, die Puppe, das Haus, wie Farbe in Wasser, und der Geruch von Karbol kehrt zurück.
+    Die kurze Büchse mit dem Trichter nimmst du, eine plumpe Donnerbüchse, deren Lauf sich zur Mündung hin weitet, damit eine Handvoll Kugeln auf einmal hinausfährt.
+- Ein Bote zupft dich am Ärmel. In seiner Hand liegt eine Nadel, und ehe du zurückweichen kannst, sticht er dir in die Fingerkuppe, ohne Hast und ohne Bosheit. Den Tropfen, der aufquillt, reibt er auf eine Kugel aus Quecksilber, die in seiner Handfläche zittert, als lebe sie, und das Blut zieht in das Silber ein und ist fort. Dann legt er die Kugel zu den anderen, in die Tasche an deinem Gürtel.
+Nur vor einem Grabstein am Fuß des Hügels, einem ohne Namen, sind die Blumen niedergetreten, zu einem schmalen Pfad aus geknickten Stängeln. Als du die Hand auf den Stein legst, verschwimmen der Garten, die Blumen, die Puppe und das Haus wie Farbe in Wasser, und der Geruch von Karbol kehrt zurück.
 -> k1_klinik_kampf
 
 === k1_klinik_kampf ===
 // TITEL: Lernkampf in der Klinik
-// [KANON] Die Bestie in der Klinik. Erster Kampf, lehrt das Lesen der Anzeichen.
+// Handgearbeitet 2026-11-05 (Faktencheck): Anzeichen ruhig und genau, Folge kurz und hart; Optionen fließen in den Satz und nennen die Richtung.
+// [KANON lore:orte/iosefkas-klinik] Die Bestie im Krankensaal frisst an einer Leiche (RK1 §1). Erster Kampf, lehrt das Lesen der Anzeichen. Kronleuchter und Flaschenregale aus dem Artbook (LK §25.3).
 ~ laterne = -> k1_klinik_kampf
 -> betreten("klinik") ->
 { k1_klinik_kampf == 1:
-    Du stehst wieder in der Klinik, auf genau der Diele, auf der du gestorben bist. Unter deinen Stiefeln ist das Holz noch dunkel. Deine Hand liegt um den Griff der Waffe, so fest, dass die Knöchel weiß werden. # stimmung: kampf
+    Du stehst wieder in der Klinik, auf genau der Diele, auf der du gestorben bist. Das Holz unter deinen Stiefeln ist noch dunkel und klebt. Deine Hand liegt um den Griff des Sägespalters, so fest, dass die Knöchel weiß hervortreten. # stimmung: kampf
 - else:
-    Wieder die Klinik, wieder der Geruch von Eisen. Du kennst diesen Raum jetzt besser, als dir lieb ist. # stimmung: kampf
+    Wieder die Klinik, wieder Karbol und Eisen. Inzwischen kennst du die Diele, die unter dem ersten Schritt knarrt, und die Stelle auf dem Boden, an der du zuletzt gelegen hast. # stimmung: kampf
 }
-Die Bestie hockt zwischen den Liegen, über etwas gebeugt, das du nicht ansehen willst. Sie hebt den Kopf, als hätte sie auf dich gewartet. # kampf: klinik_bestie
+Die Bestie hockt zwischen den Liegen über einem Körper, von dem nur noch ein Fuß in einem Filzpantoffel zu dir herüberzeigt. Sie hebt den Kopf, als hätte sie auf dich gewartet. # kampf: klinik_bestie
 - (t1)
-Sie duckt sich tief. Die Hinterläufe spannen sich, die Krallen graben sich in die Dielen, und das ganze Gewicht ihres Körpers wandert nach hinten wie bei einer Feder, die man zusammendrückt. # anzeichen: klinik_sprung
+Sie duckt sich tief. Die Hinterläufe spannen sich, die Krallen graben sich in die Dielen, und das ganze Gewicht ihres Körpers wandert nach hinten wie bei einer Feder, die man zusammendrückt. Ihr Blick hängt an der Stelle, an der du stehst, und links von dir ist zwischen zwei Liegen eine Lücke frei. # anzeichen: klinik_sprung
 { gelernt ? klinik_sprung: Du kennst das. Wer sich so duckt, springt, und er springt dorthin, wo du jetzt stehst. }
-+ [Zur Seite ausweichen]
-    Du wirfst dich nach links. Die Bestie fliegt an dir vorbei, so nah, dass ihr Fell dein Gesicht streift, und kracht in ein Regal. Glas zersplittert, irgendetwas Flüssiges läuft über den Boden.
++ [Nach links ausweichen #fliesst]
+    Nach links wirfst du dich, flach über die Dielen. Die Bestie fliegt an dir vorbei, so nah, dass ihr Fell dein Gesicht streift, und kracht in ein Regal. Glas zersplittert, und über den Boden läuft, was in den Flaschen war, dunkel und dick.
     -> t2
-+ [Den Sprung mit der Waffe abfangen]
-    Du stemmst dich gegen den Sprung, als könntest du ihn aufhalten. Das Gewicht trifft dich wie ein Fuhrwerk und wirft dich gegen eine Liege. Etwas in deiner Schulter knackt.
++ [Nach vorn gegen den Sprung stemmen #fliesst]
+    Nach vorn stemmst du dich gegen den Sprung, die Klinge quer vor der Brust. Das Gewicht trifft dich wie ein Fuhrwerk und wirft dich rückwärts gegen eine Liege, und in deiner Schulter knackt es.
     ~ zuletzt = klinik_sprung
     ~ treffer(2)
     { leben <= 0: -> tod }
     -> t2
 - (t2)
-Sie richtet sich auf, größer, als du dachtest, und hebt beide Arme weit über den Kopf. Für einen Augenblick steht sie offen da, wie ein Prediger auf der Kanzel. # anzeichen: klinik_schwer
-+ [Unter dem Schlag hindurch nach vorn]
-    Du gehst nach vorn statt zurück, in den Schlag hinein und unter ihm hindurch. Die Arme fahren hinter dir zusammen, und deine Waffe findet ihre Seite. Sie heult, und es klingt fast menschlich.
+Sie richtet sich auf, größer, als du dachtest, und hebt beide Arme über den Kopf, bis die Krallen beinahe an den Kronleuchter rühren. Für einen Augenblick steht sie offen da wie ein Prediger auf der Kanzel, und unter ihren Armen, zwischen Achsel und Hüfte, klafft eine Lücke, breit genug für einen Menschen. # anzeichen: klinik_schwer
++ [Unter den Armen hindurch nach vorn #fliesst]
+    Unter den Armen hindurch gehst du nach vorn, in den Schlag hinein statt aus ihm heraus. Hinter dir fahren die Arme zusammen, und deine Säge findet ihre Seite. Sie heult, und es klingt fast menschlich.
     -> t3
-+ [Zurückweichen]
-    Du weichst zurück, aber die Arme sind länger, als sie aussehen. Die Krallen ziehen drei heiße Linien über deine Brust.
++ [Zwei Schritte nach hinten weichen #fliesst]
+    Zwei Schritte weichst du nach hinten, aber die Arme reichen weiter, als du gedacht hast. Die Krallen ziehen drei heiße Linien über deine Brust.
     ~ zuletzt = klinik_schwer
     ~ treffer(1)
     { leben <= 0: -> tod }
     -> t3
 - (t3)
-Sie taumelt, Blut tropft aus ihrer Seite, und sie reißt das Maul auf, um ein letztes Mal nach dir zu schnappen. # anzeichen: biss
-+ [Feuerwaffe ins aufgerissene Maul]
-    Du hebst die Feuerwaffe und schießt, mitten hinein. Die Bestie bricht in die Knie, und du bist über ihr, bevor sie sich fangen kann.
+Sie taumelt. Blut läuft ihr aus der Seite, und der Kopf sinkt auf deine Höhe herab. Dann reißt sie das Maul auf, so weit, dass hinter den Zähnen der Schlund offen liegt, und für einen Herzschlag hält sie still, den Atem tief in der Brust, bevor sie zubeißt. # anzeichen: biss
++ [Vorn in das offene Maul schießen #fliesst]
+    { feuerwaffe == "pistole":
+        Vorn in das offene Maul schießt du, eine einzige Kugel, und der Knall springt zwischen den Wänden hin und her.
+    - else:
+        Vorn in das offene Maul schießt du, und die Donnerbüchse speit ihre Handvoll Kugeln so nah hinein, dass dir das Blut warm ins Gesicht spritzt.
+    }
+    Die Bestie bricht in die Knie, und du bist über ihr, bevor sie sich fangen kann.
     -> sieg
-+ [Zuschlagen, bevor sie beißt]
-    Du schlägst zu, und sie beißt zu, im selben Herzschlag. Ihre Zähne schließen sich um deinen Unterarm, dann erschlaffen sie.
++ [Mit der Säge von oben zuschlagen #fliesst]
+    Mit der Säge schlägst du von oben zu, und im selben Herzschlag beißt sie. Ihre Zähne schließen sich um deinen Unterarm, dann erschlaffen sie.
     ~ zuletzt = biss
     ~ treffer(1)
     { leben <= 0: -> tod }
     -> sieg
 - (sieg)
 ~ echos = echos + 2
-Die Bestie liegt still. Aus ihrem Körper steigt ein Schimmer auf, dünner als Rauch, und fließt in dich hinein, und für einen Augenblick fühlst du dich stärker, satter, als hättest du gegessen. Blutechos. Das Wort liegt dir auf der Zunge, bevor du es gedacht hast. # notiz: blutechos
-Du stehst lange da und siehst sie an. Ein Knopf glänzt in ihrem Fell. Irgendjemand hat ihn einmal angenäht.
-Dann ruft eine Frauenstimme, gedämpft, hinter einer Tür am Ende des Ganges.
+Die Bestie liegt still. Aus ihrem Körper steigt ein Schimmer, dünner als Rauch, und fließt dir über die Hände in die Ärmel, und für einen Augenblick bist du satt, als hättest du gegessen, warm bis in die Fingerspitzen. # notiz: blutechos
+Lange stehst du da und siehst sie an. Im Fell an ihrer Brust glänzt der Hornknopf, und an ihm hängen noch zwei Fäden. Irgendjemand hat ihn einmal angenäht.
+Dann ruft hinter einer Tür am Ende des Ganges eine Frauenstimme, gedämpft durch das Holz, ob da draußen noch jemand atme.
 -> k1_iosefka
 
 === k1_iosefka ===
 // TITEL: Iosefkas Tür
-// [KANON] Iosefka öffnet nicht, um ihre Patienten zu schützen, schiebt aber eine Blutampulle hinaus.
-// Später (Kapitel 2) steht hier eine Hochstaplerin; die Stimme jetzt ist der Maßstab, an dem man sie erkennt.
-// [ERWEITERT] Ihre Eigenart (Sie-Form, „Das notiere ich“) ist der Maßstab, an dem man in Kapitel 2 die Hochstaplerin erkennt.
-Die Tür ist aus schwerem Holz und von innen verriegelt. Dahinter eine junge Stimme, müde und sehr genau, die jedes Wort setzt wie einen Stich mit der Nadel. „Bleiben Sie, wo Sie sind. Ich bin Iosefka, und das hier ist meine Klinik. Heute Nacht öffne ich nicht. Nicht für Sie und nicht für sonst jemanden. Was die Jagd aus Menschen macht, lasse ich nicht zu meinen Kranken.“ # notiz: iosefka
-* [Höflich bitten]
+// Handgearbeitet 2026-11-05 (Faktencheck Nr. 6, 11): Tür in A, Iosefka in B. Optionen fließen in den Satz.
+// [KANON lore:figuren/iosefka] Iosefka öffnet nicht, damit ihre Patienten sich nicht anstecken; sie weiß, dass der Jäger für die Stadt jagt, und gibt eine Blutampulle hinaus. Sie hofft auf das Ende der Nacht, um dem Jäger dann ins Gesicht zu sehen, sollte das nicht denken und freut sich trotzdem; sie betet um Licht für ihn. Wer gegen die Tür schlägt, wird gefragt, warum er sich wie ein Tier benimmt, er jage doch Bestien; danach: sich nicht von der Jagd überwältigen lassen. Wortlaut eigen.
+// [ERWEITERT] Ort: Im Kanon spricht man Iosefka von außen an der Kliniktür, nach dem ersten Traum (RK1 §3). Bei uns hinter einer Tür im Inneren der Klinik, vor der ersten Laterne.
+// [ERWEITERT] „Besser als das, was die Kirche ausgibt“: eigener Vergleich (Kanon: verfeinertes Blut, Spezialität der Klinik, lore:gegenstaende/yharnam-und-blut).
+// [ERWEITERT] Ihre Eigenart (Sie-Form, „Das notiere ich“) ist der Maßstab, an dem man in Kapitel 2 die Hochstaplerin erkennt; ebenso ihre Wärme.
+Die Tür am Ende des Ganges ist aus schwerem Holz, mit Eisen beschlagen und von innen verriegelt. Unter ihr liegt ein Streifen Licht, und durch die Ritze zieht ein scharfer Geruch nach Alkohol und Kampfer, sauberer als alles andere in diesem Haus.
+„Bleiben Sie, wo Sie sind.“ Die Stimme ist jung, müde und sehr genau, und sie setzt jedes Wort wie einen Stich mit der Nadel. „Ich bin Iosefka, und das hier ist meine Klinik. Heute Nacht öffne ich nicht, nicht für Sie und für niemanden sonst. Meine Kranken dürfen sich nicht anstecken, und was die Jagd aus den Menschen macht, lasse ich nicht zu ihnen herein.“ # notiz: iosefka
+* [Leise durch das Holz bitten #fliesst]
     ~ iosefka = iosefka + 1
-    Du bittest sie, ruhig, wie man einen Arzt bittet. Hinter der Tür ein kurzes Schweigen, dann ein Laut, der beinahe ein Lachen ist. „Ein höflicher Jäger. Das notiere ich mir.“ Du hörst tatsächlich eine Feder kratzen. # notiz: iosefka_stimme
-* [Gegen die Tür schlagen]
+    Leise bittest du durch das Holz, mit der Geduld, die man in Wartezimmern lernt. Hinter der Tür ein kurzes Schweigen, dann ein Laut, der beinahe ein Lachen ist. „Ein höflicher Jäger. Das notiere ich mir.“ Drinnen kratzt tatsächlich eine Feder. Dann, leiser und mehr zu sich selbst: „Wenn diese Nacht vorbei ist, schiebe ich den Riegel zurück, und dann möchte ich das Gesicht sehen, das so höflich war.“ Eine Pause. „So etwas sollte ich nicht einmal denken. Ich denke es trotzdem gern.“ # notiz: iosefka_stimme
+* [Mit der Faust gegen das Holz schlagen #fliesst]
     ~ iosefka = iosefka - 1
-    Du schlägst gegen die Tür, bis dir die Knöchel brennen. Drinnen wird es still. „Faustschläge gegen eine verriegelte Tür“, sagt sie dann, kühl. „Das notiere ich auch.“ Eine Feder kratzt. # notiz: iosefka_stimme
-- Etwas schabt über den Boden. Durch den Spalt unter der Tür kommt eine kleine Phiole. Das Blut darin ist heller als alles, was du heute Nacht gesehen hast, und durch das Glas hindurch warm. „Aus meinem eigenen Vorrat“, sagt sie. „Besser als das, was die Kirche ausgibt. In den Oberschenkel, kräftig, nicht zögern. Sie jagen für diese Stadt, ob die Stadt es Ihnen dankt oder nicht. Mehr kann ich nicht tun.“ # notiz: blutampulle
+    Mit der Faust schlägst du gegen das Holz, bis dir die Knöchel brennen. Drinnen wird es still. Dann, nah an der Ritze: „Sind Sie das noch, der Jäger, der für diese Stadt jagt? Oder schon das, was die Jagd aus ihm gemacht hat? Sie jagen Bestien. Benehmen Sie sich nicht wie eine.“ Eine Weile hörst du nur ihren Atem. „Faustschläge gegen eine verriegelte Tür“, sagt sie dann, kühl. „Das notiere ich auch.“ Eine Feder kratzt. # notiz: iosefka_stimme
+- Über die Dielen schabt Glas. Durch den Spalt unter der Tür schiebt sich eine kleine Phiole, und das Blut darin ist heller als alles Blut, das du in dieser Stadt gesehen hast, und durch das Glas hindurch warm. „Aus meinem eigenen Vorrat“, sagt sie. „Besser als das, was die Kirche ausgibt. In den Oberschenkel, kräftig, und nicht zögern. Sie jagen für diese Stadt, ob die Stadt es Ihnen dankt oder nicht. Mehr kann ich nicht für Sie tun.“ # notiz: blutampulle
 ~ ampulle = 1
-Du hörst ihre Schritte, die sich entfernen, und dann das leise Stöhnen von jemandem, der hinter dieser Tür in einem Bett liegt und nicht schlafen kann.
+{ iosefka > 0:
+    Ihre Stimme entfernt sich schon, als sie noch einmal spricht. „Ich bete, dass Ihnen in dieser Nacht ein Licht bleibt.“
+- else:
+    Ihre Stimme entfernt sich schon, als sie noch einmal spricht. „Und lassen Sie nicht zu, dass die Jagd Sie frisst.“
+}
+Dann Schritte, die leiser werden, und gedämpft durch eine zweite Tür das Stöhnen von jemandem, der in einem Bett liegt und nicht schlafen kann.
 -> k1_laterne_zentral
 
 === k1_laterne_zentral ===
 // TITEL: Laterne Zentral-Yharnam
-// [KANON] Erste Laterne gleich vor der Klinik, neben Gilberts Fenster.
-Vor der Klinik öffnet sich die Stadt. Kalte Luft, die nach Rauch riecht, nach nassem Stein und nach etwas Verbranntem, das kein Holz ist. Über den Dächern hängt die Sonne, tief und rot hinter dem Rauch, kurz vor dem Untergang. Neben der Tür steht eine Laterne auf einem eisernen Pfahl, erloschen. Als du sie berührst, flammt sie auf, und aus dem Boden um sie herum kriechen die Boten, als hätten sie hier auf dich gewartet. # bild: laterne # lore: laternen
-Du verstehst, ohne dass es dir jemand sagt: Von hier aus führt ein Weg zurück in den Garten mit den weißen Blumen. An einer Laterne kannst du nicht verloren gehen. Ein zweiter Gedanke folgt dem ersten so leise, dass du nicht weißt, ob er deiner ist: Wer nicht verloren gehen kann, kann auch nicht davonlaufen.
+// Handgearbeitet 2026-11-05 (Faktencheck): Gasse in A, Laterne und Boten in B. Sonne nur als Wahrnehmung (G5).
+// [KANON lore:orte/zentral-yharnam] Erste Laterne gleich vor der Klinik, neben Gilberts Fenster (Gilbert hier nur als Husten hinter dem Gitter; Begegnung in b_yharnam).
+Vor der Klinik schlägt dir kalte Luft entgegen, die nach Rauch riecht, nach nassem Stein und nach einem Brand, in dem kein Holz gebrannt hat. Die Gasse ist steil und leer. Zwischen zwei Giebeln hängt die Sonne, tief und rot, und du wartest darauf, dass sie sinkt.
+Neben der Tür steht auf einem eisernen Pfahl eine Laterne, erloschen, das Glas von innen verrußt. Als du sie berührst, flammt sie auf, ohne dass du Feuer gemacht hättest, und um ihren Fuß bricht die Erde auf: Die Boten kriechen heraus, drei, vier, und drängen sich an das Eisen, wo es warm ist. Über dir, hinter einem vergitterten Fenster, bricht ein Husten ab, mitten im Anfall. # bild: laterne # lore: laternen
+Im Flackern hinter dem Glas liegt für einen Lidschlag der Garten, weiß und still, und sein süßer Duft weht dir in die Nase. Dorthin führt von hier ein Weg zurück, das weiß dein Körper, bevor du es denkst; an einer Laterne kannst du nicht verloren gehen. Ein zweiter Gedanke folgt dem ersten so leise, dass du nicht weißt, ob er deiner ist: Wer nicht verloren gehen kann, kann auch nicht davonlaufen.
 ~ laterne = -> k1_hub_b
 -> k1_hub_b
