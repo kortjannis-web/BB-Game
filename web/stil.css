@@ -191,6 +191,7 @@ body.heilung #vignette { animation: heilung 0.9s ease; }
 #text .ortskarte .zier { font-size: 0.7rem; color: var(--blass); }
 #text p.titel { font-size: 1.6rem; padding: 1.4rem 0; border-top: 1px solid var(--linie); border-bottom: 1px solid var(--linie); }
 #text p.chronik { font-size: 1rem; color: #c4baa9; padding-left: 1rem; border-left: 1px solid var(--linie); margin-bottom: 0.6em; }
+#text p.chronik.nachwirkt::after { content: "  · wirkt nach"; font-style: italic; color: var(--blass); font-size: 0.85em; }
 body[data-ort="traum"], body[data-ort="werkstatt"] { --tint: rgba(200, 190, 160, 0.12); }
 body[data-ort="kanal"], body[data-ort="kanal_schwein"], body[data-ort="unterstadt"] { --tint: rgba(70, 90, 80, 0.16); }
 body[data-ort="grab_oedon"], body[data-ort="graeber"] { --tint: rgba(110, 50, 40, 0.16); }

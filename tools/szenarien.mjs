@@ -7,7 +7,7 @@ import { compile, play, rng, variable } from "./ink.mjs";
 const SZENARIEN = [
   {
     name: "Bester Weg: Moment der Klarheit mit Gascoigne",
-    wuensche: ["Ihm danken", "Ihm deinen Namen sagen", "Versprechen, es auszurichten", "Versprechen, die Mutter", "allein entgegengehen", "Nach Gascoigne rufen", "„Gascoigne. Gascoigne!“", "Den Kopf berühren", "an seine Tochter", "Spieluhr aufziehen", "Ihn rufen", "Ihm versprechen", "Lügen", "Ihr sagen, ihr Vater"],
+    wuensche: ["Ihm danken", "Ihm deinen Namen sagen", "Versprechen, es auszurichten", "Versprechen, die Mutter", "allein entgegengehen", "Nach Gascoigne rufen", "„Gascoigne. Gascoigne!“", "Den Kopf berühren", "an seine Tochter", "Spieluhr aufziehen", "Ihn rufen", "Ihm versprechen", "Lügen", "ihre Mutter komme bald", "Ihr sagen, ihr Vater"],
     verbote: ["Klinik zu laufen", "anfahren", "drohen", "fliehen", "Wurf ablenken", "wo du ihn gesehen", "Brosche geben", "Jägermarke"],
     erwartet: { gascoigne_moment: true, gedaechtnis_kleriker: true, versprechen_gascoigne: true, maedchen_wo: "zuhause" },
   },
@@ -43,7 +43,7 @@ const SZENARIEN = [
   },
   {
     name: "Lüge an das Mädchen",
-    wuensche: ["Versprechen, die Mutter", "Lügen"],
+    wuensche: ["Versprechen, die Mutter", "Lügen", "ihre Mutter komme bald"],
     verbote: ["Klinik zu laufen"],
     erwartet: { q_mutter: 4, maedchen_wo: "zuhause" },
   },
@@ -91,7 +91,7 @@ const SZENARIEN = [
   },
   {
     name: "Gilbert das Versprechen gegeben",
-    wuensche: ["Gilberts Fenster", "Ihm deinen Namen nennen", "Dich verabschieden", "Zu Gilbert", "Ihm von Gascoigne erzählen", "Es ihm versprechen"],
+    wuensche: ["Gilberts Fenster", "Ihm deinen Namen nennen", "Dich verabschieden", "Zu Gilbert", "Ihm vom Kampf am Grab erzählen", "Es ihm versprechen"],
     verbote: [],
     erwartet: { versprechen_gilbert: true },
   },
