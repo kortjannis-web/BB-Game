@@ -14,7 +14,6 @@
 // [KANON lore:gegenstaende/jaeger-und-werkstatt] Die Jägermarke bringt in den Traum und kostet alle Blutechos, ohne Fleck (G3).
 // [ERWEITERT] Ablenken, Fliehen, das Blutgedächtnis, das Lied auf der Brücke, der Wurf mit der Kutsche, der Ansturm, die falsche Ruhe.
 
-VAR gilbert_kleriker = false    // Gilbert hat das Gerücht erzählt, aus Kirchenleuten würden die schlimmsten Bestien; setzen muss es k1_b_gilbert.themen (Weg zur Kathedrale, Zweig kleriker == "")
 VAR abzeichen_schwert = false   // Abzeichen der Schwertjäger aus der Beute der Bestie; schaltet bei den Boten Waren frei (traum.ink)
 
 === k1_n1_kleriker ===

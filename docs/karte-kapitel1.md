@@ -19,6 +19,7 @@ flowchart TD
     k1_b_gilbert["Gilbert"]
     k1_b_tueren["Türen mit Räucherlampen"]
     k1_b_anschlag["Der Anschlag an der Kapellentür"]
+    k1_b_haus["Das dunkle Haus (Zettel über die Brücke)"]
     k1_b_scheiterhaufen["Scheiterhaufen und Mob, erste Begegnung mit Gascoigne"]
     k1_b_maedchen["Das Mädchen am Fenster"]
     k1_b_daecher["Die Gasse unter den Dächern (Schütze)"]
@@ -54,6 +55,7 @@ flowchart TD
   k1_b_daecher --> k1_hub_b
   k1_b_eileen --> k1_hub_b
   k1_b_gilbert --> k1_hub_b
+  k1_b_haus --> k1_hub_b
   k1_b_maedchen --> k1_hub_b
   k1_b_scheiterhaufen --> k1_hub_b
   k1_b_tueren --> k1_hub_b
@@ -73,6 +75,7 @@ flowchart TD
   k1_hub_b --> k1_b_daecher
   k1_hub_b --> k1_b_eileen
   k1_hub_b --> k1_b_gilbert
+  k1_hub_b --> k1_b_haus
   k1_hub_b --> k1_b_maedchen
   k1_hub_b --> k1_b_scheiterhaufen
   k1_hub_b --> k1_b_tueren
