@@ -2,7 +2,7 @@
 
 **Zweck:** Wer hier neu einsteigt (ein neuer Chat, eine neue Sitzung), liest zuerst diese Datei und weiß dann, wo wir stehen und was als Nächstes kommt. Claude aktualisiert sie nach jeder Arbeit, committet und merged nach `main`. Alles Wichtige liegt im Repository, nichts nur im Chat.
 
-**Zuletzt aktualisiert:** 2026-11-05
+**Zuletzt aktualisiert:** 2026-11-05 (Lore Teil B eingearbeitet; Faktencheck von Kapitel 1 läuft)
 
 ## So startet ein neuer Chat
 1. `CLAUDE.md` wird automatisch gelesen. Danach diese Datei, dann die Leseliste in `CLAUDE.md` („Lesen zu Beginn“).
@@ -37,7 +37,7 @@ Jede Szene wird von Hand neu geschrieben: Lore aus dem Lesepaket, Ortsbild in A,
 | Unterstadt, Gascoigne, Nachspiel, Traum | Rest des Kapitels | danach |
 
 ## Offen beim Nutzer
-- Quellen für die Lücken in `lore/offen.md`, vor allem: gewöhnliche Gegner, Bürgerstimmen in Zentral-Yharnam, Kampfwissen zu Kleriker-Bestie und Gascoigne (Fextralife als PDF oder Netzfreigabe der Umgebung).
+- Lore: Der Nutzer hat alles geliefert, was er hat (LK mit Teil B, 2026-11-05). Restlücken in `lore/offen.md` (Bewegungen der Bosse, einige Werkzeuge, Fensterzuordnung der Bürgerstimmen) und LK §26.
 - Abnahme der neuen Szenen (ein Satz pro Szene reicht).
 
 ## Bekannte Baustellen
