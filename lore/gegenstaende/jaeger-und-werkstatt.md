@@ -63,3 +63,10 @@
 **Torch** (Waffe) – Gewöhnliche Fackel aus pechgetränktem Tuch am Stock. Jäger wählen sie, weil die Jagd sie in die dunkelsten Winkel führt und manche Kreaturen eine tödliche Angst vor Feuer haben.
 
 **Workshop Haze Extractor** (Schlüsselitem) – Ein verlegtes Werkzeug aus der Werkstatt des Jägertraums. Wer es findet, kann arkanen Dunst aus Ritualmaterial gewinnen. Das verbrauchte Material geht dabei verloren.
+
+## Hunter-Pistole und Hunter-Donnerbüchse (LK §19)
+
+- **Werkstatt-Feuerwaffen.** Beide stammen aus der Jäger-Werkstatt und sind für den Einsatz mit **Quecksilberkugeln** gebaut, die **mit dem eigenen Blut des Trägers** verschmolzen werden – das steigert den Schaden gegen Bestien. Das ist die eigentliche Lore-Aussage: Das Blut des Jägers ist selbst Munition.
+- **Hunter-Pistole:** Die Beschreibung betont die **schnelleren Ziehzeiten** als die Donnerbüchse, also schnellere Reaktion auf Angriffe. Sie ist eine von drei Pistolen im Spiel, wird als **Startwaffe** über die Boten angeboten oder später nach dem Fund des **Sägejäger-Abzeichens** (beim Riesenschwein in der Kanalisation) gekauft (laut Wiki 1.600 Echos). Bei Bluttinge unter 21 ist sie stärker als die Evelyn, bei 21 gleich, darüber schwächer; je Schuss kostet sie nur eine Kugel (die Repetierpistole zwei).
+- **Hunter-Donnerbüchse:** Eine von drei Schrotflinten. Laut Beschreibung **kontert sie die schnellen Bewegungen** von Bestien, ihre breite Streuung treffe „fast garantiert". Erwerb ebenfalls über die Boten nach dem Sägejäger-Abzeichen. Ludwigs Gewehr ist bei niedriger Bluttinge (bis 27) stärker, ab ca. 33 übertrifft die Donnerbüchse es.
+- **Taktisch relevant:** Gegen Henker (Executioner) ist die Donnerbüchse ein gutes Stoppmittel, wenn man sie beim Beginn der Angriffsanimation abfeuert.

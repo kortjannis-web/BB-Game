@@ -1,8 +1,9 @@
 # Lücken des Archivs und offene Fragen
 
-Stand 2026-11-04, nach dem Einarbeiten von LK. Zwei Arten: **Lücken** (das Spiel sagt es, uns fehlt es) und **Offenes** (das Spiel lässt es bewusst offen; bleibt offen).
+Stand 2026-11-05, nach dem Einarbeiten von LK Teil B (Kapitel 17 bis 28). Teil B selbst führt seine verbleibenden Lücken in LK §26 (`welt/kennzeichnung-der-quelle.md` und Quelle). Zwei Arten: **Lücken** (das Spiel sagt es, uns fehlt es) und **Offenes** (das Spiel lässt es bewusst offen; bleibt offen).
 
-## A Lücken, die Kapitel 1 betreffen (zuerst schließen)
+## A Lücken, die Kapitel 1 betreffen
+**Stand 2026-11-05:** A1 geschlossen (`gegner/`), A2 weitgehend geschlossen (`figuren/buerger.md`; offen bleibt, welches Fenster welche Zeile spricht), A3 für Zentral-Yharnam und Jägertraum geschlossen (`welt/notizen.md`), A4 geschlossen (`figuren/maedchen-und-viola.md`), A5 geschlossen (`figuren/gehrman.md`, `figuren/puppe.md`), A6 geschlossen (`gegenstaende/jaeger-und-werkstatt.md`, LK §19), A7 geschlossen (keine Töchter in der Set-Beschreibung; Familie aus der Mädchen-Quest), A8 weitgehend geschlossen (`welt/aussehen.md`, Ortsdateien). **Offen:** A9 (Bewegungen der Bosse für Anzeichen; nur grob über Artbook und Bossdateien) und A10 (Kiesel, Blutcocktail, Glocken, Handlaterne, Clawmark).
 | Nr | Was fehlt | Warum wichtig | So lieferst du es |
 |---|---|---|---|
 | A1 | **Gewöhnliche Gegner und ihre Lore:** Bürger mit Fackeln und Mistgabeln, Werwolf-Bestien (Scourge Beast), der Riese mit dem Ziegel, das Riesenschwein (Maneater Boar), Krähen, Hunde, Ratten, Rollstuhl-Jäger, Kirchendiener | Fast jede Szene in Kapitel 1 hat diese Gegner; ohne ihre Beschreibungen und Fundorte schreiben wir Grusel von der Stange | Fextralife-Seite „Enemies“ und je Gegner die Unterseite, als PDF drucken oder Domain freigeben |
@@ -27,7 +28,7 @@ Stand 2026-11-04, nach dem Einarbeiten von LK. Zwei Arten: **Lücken** (das Spie
 | B6 | Der Kampf gegen Henryk; Notizen in Alt-Yharnam und der Kirchenwerkstatt vollständig; Geschichte der Kirchenjäger unter Ludwig | Fextralife „Henryk“, „Old Yharnam“, „Healing Church Workshop“ |
 
 ## C Lücken allgemein
-- **Japanische Originaltexte** neben der englischen Übersetzung (verschiebt manche Bedeutung). Lieferbar als Download der Tabelle mit japanischen und englischen Texten (Google Sheets, „Datei“, „Herunterladen“, .xlsx).
+- **Japanische Originaltexte:** für Gegenstände geschlossen (`welt/japanische-originaltexte.md`); für die veröffentlichten Dialoge offen.
 - **Videos und Fan-Diskussionen** (YouTube, Reddit, Fandom) fehlen ganz; LK konnte sie nicht abrufen. Lieferbar als Transkripte (siehe `quellen/README.md`).
 - **Lateinische Chortexte** der Bosslieder: LK nennt nur Inhalte. Nur sinngemäß verwenden.
 - **Kin, Bestien, „Ungeziefer“:** eine saubere Einteilung der Gegnerklassen fehlt (LK 11.2 nur als Deutung).
@@ -51,9 +52,9 @@ Aus LK 15, ergänzt:
 |---|---|---|---|---|
 | E1 | Eileens erstes Treffen | Seitenraum der Kanalisation | Dachbalken über dem Kanaleingang, sicher | RK1 gilt |
 | E2 | Eileens zweites Treffen | nach Amelia | nach Gascoigne vor der Kapelle | PRÜFEN |
-| E3 | Gascoignes zwei Töchter | laut Set-Beschreibung (6.1.2) | Set nennt keine (4, RK1 §11) | PRÜFEN |
+| E3 | Gascoignes zwei Töchter | in der neuen Fassung berichtigt: Set nennt keine, Familie aus der Mädchen-Quest (LK §6.1.2, §17) | Set nennt keine (RK1 §11) | gelöst |
 | E4 | Tausch der echten gegen die falsche Iosefka | nach Gascoigne (7.1.4) und Betreten der Kapelle (9.7) | siehe RK1, Widerspruch 2 | PRÜFEN |
 | E5 | Der Verdächtige Bettler in der Kapelle | bleibt nicht (7.1.3) / bleibt und mordet (5.1) | – | PRÜFEN |
-| E6 | Zettel zur Spinne von Byrgenwerth am Grab | am Grab „wieder“ (7.1.3) | am Grab kein Zettel (RK1 §9) | PRÜFEN, in Kapitel 1 nicht verwenden |
+| E6 | Zettel zur Spinne von Byrgenwerth am Grab | am Grab „wieder“ (7.1.3); Notizliste: im Kathedralbezirk, Studierzimmer nach Gascoigne (LK §21) | am Grab kein Zettel (RK1 §9) | gelöst: nicht am Grab; in Kapitel 1 nicht verwenden |
 | E7 | Gilberts Weg zur Kathedrale | Aquädukt (5.1) | zuerst die Große Brücke, sicher (RK1 §5) | RK1 gilt |
 | E8 | Die ältere Schwester | in Zentral-Yharnam genannt (7.1.2) | erst ab Blutmond (RK1 §6) | RK1 gilt |

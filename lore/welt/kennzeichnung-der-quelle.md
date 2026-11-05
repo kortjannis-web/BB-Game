@@ -30,3 +30,12 @@
 **Nicht erreichbar:** Fandom-Wiki, Reddit, YouTube (gesperrt/nicht zugänglich). Es wurden keine Umgehungen versucht.
 
 **Methode und Urheberrecht:** Alle Item-Beschreibungen, Dialoge und Notizen sind in eigenen deutschen Worten wiedergegeben, ohne den englischen Wortlaut zu übernehmen; der Inhalt ist vollständig erhalten. Theorien und Fan-Analysen sind als solche gekennzeichnet. Zahlenangaben (Blutechos, Prozentwerte) wurden bewusst nicht aufgenommen, weil sie sich je nach Patch und Durchgang unterscheiden.
+
+
+## Vom Nutzer gelieferte Quellen für Teil B (LK §16)
+
+**Vom Nutzer gelieferte Quellen (Teil B):** (1) *Bloodborne Dialogue Reference* – komplettes Dialogskript (Untertitel: BellringerKat und Sanadsk; Übersetzung japanischer Texte: Lockey; Audio: JackSparrow420, Sanadsk, Lance McDonald; Zusammenstellung: Sophie/Richard Pilbeam laut den beiden Kopfzeilen – die beiden Fassungen nennen den Namen unterschiedlich; Stand der ersten Fassung 17.03.2018); (2) *Bloodborne Official Artworks* (PDF, Bildband); (3) eine Notizzettel-Liste des Nutzers (Fundorte, Kap. 21.9); (4) die Fextralife-Seite **Survivors** (Überlebende hinter Türen und Fenstern); (5) die Fextralife-Seite **Japanese Text** (japanische und englische Itemtexte, 360 Einträge; Kap. 27); (6) die Textdatei **Original Cut Dialogues** (japanischer Entwurf mit Übersetzung; Kap. 28).
+
+## Stand der Lücken nach Teil B (LK §15)
+
+- **Stand nach Teil B:** Viele dieser Lücken sind inzwischen durch das Dialogskript und das Artbook teilweise gefüllt; was weiterhin offen ist (Notizzettel aus DLC- und Nebenorten, Ortszuordnung der Fensterstimmen; die japanischen Originaltexte der Items und der gestrichenen NPCs liegen inzwischen vor, Kap. 27/28), steht in Kapitel 26.

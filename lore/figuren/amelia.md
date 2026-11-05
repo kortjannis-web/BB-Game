@@ -14,3 +14,7 @@
 - Der Schädel am Altar ist vermutlich der von Laurence, dem Gründer der Kirche. Die Kirche betet also seit jeher zum Schädel ihres Gründers, der selbst zum Tier wurde. **[Theorie]**
 - In einem frühen Trailer war an dieser Stelle noch Ebrietas als Boss vorgesehen; sie wurde im fertigen Spiel durch Amelia ersetzt.
 **Belohnung:** Goldanhänger. Nachtwechsel: Manche Gegner werden stärker, andere schlafen.
+
+## Der Kirchendiener im Erholungsraum und Amelia (LK §22.10)
+
+Die Zeilen des **Church Doctors im Erholungsraum** wiederholen einen Teil der **Predigt der Vikarin Amelia**: Man solle das **alte Blut** suchen, im Gebet und in Kommunion davon zehren; es besänftige die Furcht. Dann die Mahnung vor der **Schwäche der Menschen**: Ihr Wille sei schwach, ihr Geist jung; die Bestien lockten mit **Nektar** und führten die Schwachen in die Tiefe; ohne Furcht würde der Tod unbeweint bleiben. **[Deutung]:** Es wirkt wie ein feststehender Predigttext der Kirche, den mehrere Figuren aufsagen.

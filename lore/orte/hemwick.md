@@ -7,3 +7,8 @@
 - Man erreicht sie über die Große Kathedrale; auf dem Weg: Friedhof mit Gewehr-Jägern und Hunden. Von hier kann man nach Cainhurst reisen.
 - Bewohner: Hemwick-Gräberinnen, Hexen (6.1.9). Wer das Passwort des Verbotenen Waldes kennt, 15 Insight besitzt und Amelia besiegt hat, begegnet dem **Stalker** (Gespenst).
 - Eine Krähe im Nest oben auf dem Abkürzungs-Aufzug greift nie an. Auf der linken Seite des Eingangs sieht man eine mit Laternen beleuchtete Wagenstraße, die aus einem Tunnel der Kathedralenwache kommt und in einem anderen verschwindet; **[Theorie]**, dass sie einst nach Cainhurst führte.
+
+## Hemwick (S. 74–83) (LK §25.8)
+
+- **Friedhofsdorf:** **Schiefe Grabsteine**, **Laternen**, ein **zerbrochenes Wagenrad**, **Sarg-Karren**, **rauchende Häuser**, **Wachtürme mit Spitzdach**; ein **Höhleneingang** im Hang voller Grabsteine; ein **hoher Wehrturm mit Spitzdach**, Balkon, Mauer.
+- **Gegner:** *Hunting Dog* (Stachelhund mit Klingen), *Hemwick Grave Woman* (Kapuzenmantel, Fackel, zerlumpt); Waffen: Fackel, Hackbeil, Sichel, Fleischerbeil, Hacke.

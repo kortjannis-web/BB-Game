@@ -12,3 +12,7 @@
 - **Klinik (schlecht):** Sie wird zu einem Celestial Mob (Iosefka belohnt mit 1 Insight und 2 Numbing Mist). Die Oedon-Writhe-Rune liegt dann beim blauen Wesen im Klinikflur oder auf ihrem Leichnam in Yahar'gul.
 - **Zeitfenster:** Sie verschwindet, wenn man vor Roms Tod nicht mit ihr gesprochen hat.
 - **Lore:** Ihr Item sagt, Nonnen würden als „Blutgefäße“ erzogen. Ihr Gebet („cleanse us of this dream“) macht deutlich, dass sie die Nacht als Albtraum erlebt.
+
+## Adelines Dialoge (DLC) und Adella (LK §24.9)
+
+Das Skript hat auch **Saint Adeline** (DLC) in voller Länge: Sie sitzt bewegungsunfähig und bittet um **Hirnflüssigkeit** („zähe, schmatzende"), damit sie das „klebrige Geräusch" hören kann, das sie führt; fehlt es, verblasse das Geräusch und sie falle in ihre „früheren, kleineren Jahre" zurück. Zum Dank bietet sie ihr **Heiligenblut** an; sie sei selbst **Blutheilige** gewesen, und **Lady Maria** habe ihr einst einen Talisman gegeben. Man darf aber nicht gierig sein: „Fürchte den Durst nach Blut." Als Blutheilige könne sie die Regeln der Kirche nicht brechen, selbst für den Jäger nicht. (Details und Questablauf bereits in Kap. 5.)

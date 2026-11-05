@@ -15,10 +15,12 @@ lore/
   README.md            diese Wurzel
   kern.md              immer lesen
   kapitel/             Lesepakete je Kapitel mit Wissenssperre
-  welt/                Welt, Glossar, Regeln der Welt (Einsicht, Mondphasen), Spielablauf, Zeitlinie, Enden, Monde und Albtraum
+  welt/                Welt, Glossar, Regeln der Welt (Einsicht, Mondphasen), Spielablauf, Zeitlinie, Enden, Monde und Albtraum,
+                       Notizzettel nach Orten, Aussehen der Welt (Artbook), Dialogskript, japanische Originaltexte
   fraktionen/          Heilende Kirche, Jäger, Byrgenwerth, Chor, Mensis, Cainhurst und Henker, Pthumerer, Große Wesen, Bünde
   orte/                je Schauplatz eine Datei (Klinik, Zentral-Yharnam, Grab des Oedon, Kathedralbezirk … Fischerdorf)
-  figuren/             je Figur eine Datei; Figuren, die auch Boss sind, stehen hier statt unter bosse/ (Gascoigne und Gehrman mit Figuren- und Boss-Teil; Amelia, Laurence, Ludwig, Logarius, Micolash, Maria nur mit Boss-Teil)
+  figuren/             je Figur eine Datei, dazu die Bürger hinter Türen und Fenstern (`buerger.md`) und das Mädchen mit Viola; Figuren, die auch Boss sind, stehen hier statt unter bosse/ (Gascoigne und Gehrman mit Figuren- und Boss-Teil; Amelia, Laurence, Ludwig, Logarius, Micolash, Maria nur mit Boss-Teil)
+  gegner/              gewöhnliche Gegner (Jagdmeute, Wolfsbestien, Schwein, Krähen, Hunde, Riesen …)
   bosse/               Bosse, die keine Figuren sind, und ein Überblick, welche Bosse die Welt verändern
   gegenstaende/        nach Thema statt Alphabet (Yharnam und Blut, Jäger und Werkstatt, Kirche, Chor, Runen, Cainhurst, Labyrinth …)
   deutungen/           Theorien, gestrichene Inhalte, Entwicklung und Einflüsse
@@ -32,6 +34,7 @@ lore/
 - Alle Spieltexte sind in LK in eigenen Worten wiedergegeben. Ins Spiel kommt trotzdem nichts aus dem Archiv wörtlich: Das Archiv liefert Fakten, die Sätze schreiben wir selbst.
 
 ## Pflege
+- Teil B der Quelle (Kapitel 17 bis 28: Mädchen, Dialoge von Gehrman und Puppe, Feuerwaffen, Gegner, Notizen, Bürgerstimmen, Dialogskript, Artbook, japanische Texte, Original-Entwurf) wurde am 2026-11-05 mit `tools/lore-teil-b.py` eingearbeitet; jeder angehängte Abschnitt trägt die Marke „(LK §nr)“.
 - Die Dateien werden ab jetzt von Hand gepflegt. Neue Funde kommen in die passende Datei mit Quellenkürzel.
 - Neue Quelle: in `quellen/` ablegen, in `quellen/README.md` eintragen, Inhalte in die Äste einarbeiten, Lücken in `offen.md` abhaken.
 - `tools/lore-aufteilen.mjs` hat die erste Aufteilung erzeugt (2026-11-04, nach der Gegenprüfung einmal neu). Es überschreibt keine vorhandene Datei. Bei einer neuen Fassung von LK: `node tools/lore-aufteilen.mjs --neu` schreibt nach `lore-neu/` zum Vergleich; Unterschiede von Hand zusammenführen.

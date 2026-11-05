@@ -12,3 +12,10 @@
 - Laut dem Verwundeten Jäger (Harrowed Hunter) ein Reich, in dem blutrauschende Jäger ewig jagen. Seine Geographie kopiert Teile der Kathedralenwache und Zentral-Yharnams.
 - Orte und Bewohner: Ludwig (6.2.2), Laurence (6.2.1), Simon der Verwundete Jäger (Harrowed Hunter, siehe 5.1), die Abkürzung zurück zur ersten Lampe, Eye Pendant.
 - Hinweise auf dem Boden: Verbrannte und aufgehängte Bestien. Die Blutdurstige Bestie taucht dort in einer Höhle mit dem Gatling-Jäger auf.
+
+## Albtraum der Jäger und Forschungshalle (S. 200–215) (LK §25.15)
+
+- **Albtraum der Jäger:** Ein **Stadtpanorama auf Felsen** mit Türmen, Brücke, **blutrotem Fluss** unten und Nebel, **gelb-grauem Himmel**; eine **Kryptahalle mit Säulen**; **Hunter's Garb** und ein **Jäger mit Kanone/Donnerbüchse** (Details unsicher).
+- **Ludwig, der Verfluchte:** Ein **Pferdekörper mit menschlichem Oberkörper, langem grauem Haar und Schwert**; ein Bild, auf dem **Gestalten am Tisch** sitzen (ob Ludwig-Szene, unsicher).
+- **Forschungshalle:** Eine **spiralförmige Doppeltreppe um eine zentrale Säule, Zahnräder oben, Gaslaternen mit Statuenbüsten, viele Galerie-Ebenen, blau-kaltes Licht**; ein **Labor-/Bibliotheksgang** mit Regalen voller Gläser, Pendellampe; ein **Operationsraum** mit Kerzen und Geräten; ein **Stuhl mit Apparat am Kopf** (ein „Folterstuhl") und ein **verhülltes weißes Gewand**; **Research Hall Patients** (weiße Kittel, Kopf wie Fleischklumpen an einem Gestell, Infusionsständer/Kreuzgestell); **Failures** („失敗作たち", grau-blauer hagerer Humanoid mit verhülltem Kopf); die **zentrale Säule** mit Plattformen; eine **obere Etage mit Sonnenblumenstamm und Blumenfeld** (Geländer, Himmel); ein **Uhrturm** (neugotisch, Rosette/Uhr, Spitztürmchen, gelblicher Himmel); ein **Glockensaal** mit großem **Rosenfenster**, **drei Glocken**, **Kerzenreihen**; ein **Kellergang** („地下牢", Zellen); ein **Himmelbett**; ein **Kirchenschiff mit Betten**; ein **Leichnam auf einem Altar/Tisch**.
+- **Lady Maria of the Astral Clocktower:** **Dreispitz, Schwert, Mantel**; Dialogtext teilweise lesbar; ein Bild mit rotem Blutwirbel.

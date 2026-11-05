@@ -11,3 +11,10 @@
 - Cainhurst ist der abgelegenste Ort; der Blutmond ist dort nicht sichtbar, es liegt außerhalb des Einflussbereichs der Großen über Yharnam.
 - Die Königin sagt im Spiel, nur sie und der Spieler seien die letzten Vilebloods; offen bleibt, was die Blutige Krähe dann ist.
 - Eine Insel im See sieht aus wie ein Modell der Insel aus *King's Field*.
+
+## Cainhurst (S. 148–167) (LK §25.13)
+
+- **Außen:** Ein **Schloss im Schnee** mit Eiszapfen, kahlen Bäumen, hohen Türmen, Mauern und Statuen im Nebel; Cainhurst **vom See aus** (Burg auf einer Felseninsel, Mond); eine **Kutsche mit zotteligen Pferden**; die Konstruktion eines Tors mit Schwert.
+- **Innenräume:** **Eingangshalle** (zwei geschwungene Treppen, **roter Teppich**, Statuen, Kronleuchter, grünliche Fenster), **Bibliothek** (mehrstöckig, Banner mit Wappen, Tisch mit Kerzen), **Porträtzimmer** mit elf Gemälden (Männer und Frauen in Rüstung und Adelsgewand, auch eine **Mutter mit Kind**), **Audienzsaal** (hohes Gewölbe, Banner, buntes blasses Endfenster), **Thronsaal** (Teppiche mit **Blutflecken**, Kerzen, Standbilder, Fenster, **Annalise in Weiß** am Ende), **Thron-Stühle mit violetten Polstern**, **Eis-Thron(e)**.
+- **Figuren:** *Bloodlicker* (Wesen mit rotem Blutbeutel, langem weißen Fell), **Cain's Servant** (gebückt, bärtig, zerfetzte Kleidung, Federn), *Forsaken Castle Spirit* (weiße Dame mit langem Haar), **Flag of Cainhurst** (rote Fahne mit weißem Wappen, Greif-/Drachenmotiv), **Knight's Attire** (schwarze Mäntel mit rotem Futter, Spitzenkragen, rote Handschuhe), **Cainhurst Armor** (schwarze Plattenrüstung, zerfetzter Umhang), **Martyr Logarius** (hohe Gestalt mit Krone, Kreuzstab, langem Gewand mit Fransen, Schwert), **Vileblood Queen Annalise** (mehrere Entwürfe: schwarzes Kleid, lange Haare, Hals- und Gesichtsmaske).
+- **Schlussbild des Hauptspiel-Teils:** Ein **Vollmond hinter einem großen Baum**, **Holzkreuze/Pfähle in einem Blumenfeld**, eine ferne Gestalt mit Sense (Jägertraum-Feld / Gehrman).

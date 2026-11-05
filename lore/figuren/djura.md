@@ -10,3 +10,11 @@
 - **Nach dem Blood Moon:** Er wird freundlich, wenn man (nach Roms Tod) **Darkbeast Paarl** im Unsichtbaren Dorf besucht (1 Insight beim Betreten des Boss-Raums). Man spricht ihn auf dem Turm an: die Antwort, die Bestien von Alt-Yharnam zu verschonen, bringt das **Powder Keg Hunter Badge** und die Geste „Brush Off Dust“. Wer dann in seinem Bereich Tiere angreift, wird von ihm gejagt.
 - **Dialog-Lore:** Er warnt, Alt-Yharnam sei „von Menschen verbrannt und aufgegeben“ und nur noch Heimat von Bestien, die niemandem oben schaden. Er sagt, er träume nicht mehr, sei aber einst auch Jäger gewesen: „Es gibt nichts Schrecklicheres als eine Jagd. Was ihr jagt, sind keine Bestien, es sind Menschen.“ Wenn der Spieler stirbt und er ihn tötet, fragt er, ob man noch träume; stirbt er selbst, wirft er dem Spieler Wahnsinn vor.
 - **Lore (Wiki):** Djura sieht Alt-Yharnam als sein Utopia; die Frage, wer die Kreuze am Anfang des Gebiets angezündet hat, bleibt offen.
+
+## Djura: Dialoge aus dem Skript (LK §24.12/Djura)
+
+- Warnung am Alt-Yharnam-Eingang: **Alt-Yharnam**, von Menschen verbrannt und aufgegeben, sei jetzt nur von Bestien bewohnt, „sie schaden denen oben nicht".
+- Kern: **„Ihr jagt keine Bestien – ihr jagt Menschen."** Er selbst träume nicht mehr, sei aber einmal Jäger gewesen – „es gibt nichts Schrecklicheres als eine Jagd".
+- Dem Jäger, den er bekämpft: „Du bist geschickt, gnadenlos, halb betrunken von Blut – wie die besten Jäger. Darum muss ich dich aufhalten."
+- Wenn man ihn stellt: „Es ist das Blut, oder bist du einfach verrückt?", „Wenn die Schwachen sich einmischen, wird der Jäger zum **Gejagten**". Beim Kampf klagt er an: „Du bist die Bestie. **Alle Bestien waren einmal Menschen.** Was nützt ihr Mord? Wir verlassen Alt-Yharnam nie – was für Schaden könnten wir anrichten? Was deinen Blutdurst nährt, hast **du** erschaffen, nicht wir."
+- Er schenkt (vor dem Kampf) einen Abschiedsgruß, nachdem man seine Warnung befolgt.

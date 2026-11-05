@@ -27,13 +27,19 @@ Vor jeder Arbeit an Kapitel 1 lesen: `lore/kern.md`, dann dieses Paket, dann nur
 | Gilbert | `figuren/gilbert.md` | Kranker Fremder, kennt bleiches Blut nicht, verweist auf die Kirche, nennt zuerst die Große Brücke als Weg (RK1 §5, sicher), den Aquädukt erst später. Im Kanon erst ab Sonnenuntergang: Flammenwerfer, der Satz, das Blut habe ihm Zeit gekauft, die Verzweiflung. Bei uns kommen Flammenwerfer und Satz früher: [ERWEITERT]. |
 | Eileen | `figuren/eileen.md` | Nur das erste Treffen (Jägermarken, Warnung, Jäger der Jäger), auf den Dachbalken über dem Kanaleingang (RK1 §7, §12, sicher; LK sagt „Seitenraum der Kanalisation“). Henryk-Auftrag ist Kapitel 2. |
 | Vater Gascoigne | `figuren/gascoigne.md` | Ganz (Figur und Boss). RK1 §11 |
-| Viola und das Mädchen | Gegenstände in `gegenstaende/yharnam-und-blut.md` (Spieluhr, Brosche), Questablauf nur in RK1 §6 | Spieluhr, Brosche, rote Schleife, Schwein. Die ältere Schwester erscheint im Kanon erst ab Blutmond (RK1 §6), also nicht in Kapitel 1. |
+| Viola und das Mädchen | `figuren/maedchen-und-viola.md` (LK §17, §24.14), Gegenstände in `gegenstaende/yharnam-und-blut.md` | Spieluhr, Brosche, rote Schleife, Schwein. Die ältere Schwester erscheint im Kanon erst ab Blutmond (RK1 §6), also nicht in Kapitel 1. |
 | Henryk | `figuren/henryk.md` | Nur als Name oder Gerücht (Gascoignes alter Partner). |
 | Die einsame alte Frau | `figuren/einsame-alte-frau.md` | Hinter ihrer Tür, Fremdenhass. Die Kapelle gibt es erst ab Kapitel 2. |
 
 ## Bosse und Gegner
 - `bosse/kleriker-bestie.md`, `figuren/gascoigne.md` (Teil „Als Boss“).
-- Gewöhnliche Gegner (Bürger mit Fackeln, Werwolf-Bestien, Riese, Schwein, Krähen, Hunde, Ratten): **Lücke in LK**, nur grob in `orte/zentral-yharnam.md` und RK1 §4. Siehe `offen.md`.
+- Gewöhnliche Gegner: `gegner/jagdmeute.md`, `gegner/wolfsbestien.md`, `gegner/ziegel-troll.md` (der Riese mit dem Ziegel), `gegner/schwein.md`, `gegner/kraehen.md`, `gegner/hunde.md`, `gegner/rollstuhl-mob.md`, `gegner/weitere.md`; Rufe der Verfolger in `figuren/buerger.md` (LK §22.2).
+
+## Stimmen, Notizen, Aussehen
+- `figuren/buerger.md`: Stimmen hinter Türen und Fenstern (Volksgrauen, Stimme A und B), nach Haltung geordnet; welches Fenster welche Zeile spricht, ist offen.
+- `welt/notizen.md`: nur die Abschnitte Zentral-Yharnam und Jägertraum (Nr. 1 bis 4). Die übrigen Notizen sind gesperrt.
+- `welt/aussehen.md` (Gesamtstil) und die Abschnitte „Aussehen“ in `orte/iosefkas-klinik.md`, `orte/zentral-yharnam.md`, `orte/jaegertraum.md`.
+- Dialoge aus dem Skript stehen jetzt in den Figurendateien (Abschnitte mit „Dialoge aus dem Skript“).
 
 ## Fraktionen
 - `fraktionen/heilende-kirche.md`: Blutministration, Kirchenjäger, die Kleriker-Bestien. Kapitel 1 kennt die Kirche nur von außen (Glocken, Choral, Anschlag).
@@ -45,7 +51,7 @@ Vor jeder Arbeit an Kapitel 1 lesen: `lore/kern.md`, dann dieses Paket, dann nur
 | Blutampulle, Iosefkas Blutampulle, Spieluhr, rote Brosche, Gegengift | `gegenstaende/yharnam-und-blut.md` |
 | Sägespalter, Jägeraxt (Gascoignes Waffe), Jägerkleidung, Molotow, Fackel, Feuerpapier, Jägermarke, Wurfmesser, Eileens Krähenfedern, Gascoignes und Henryks Kleidung (das Krähenjäger-Abzeichen erst am Ende von Eileens Quest, nur als Wissen über sie) | `gegenstaende/jaeger-und-werkstatt.md` |
 | Flammenwerfer, Abzeichen der Schwertjäger (Beute der Kleriker-Bestie, zugleich Beleg für das Ludwig-Gerücht), Kleidung der Yharnam-Jäger (Ludwigs Anwerbung), Emblem des Jägerhauptmanns, Schlüssel zum Grab des Oedon, Kleidung der Kirchenjäger | `gegenstaende/heilende-kirche.md`; für Ludwig nur dazu `fraktionen/jaeger.md` (2.9), nicht `figuren/ludwig.md` (DLC) |
-| Pistole, Donnerbüchse | **Lücke in LK**, siehe `offen.md` |
+| Pistole, Donnerbüchse | `gegenstaende/jaeger-und-werkstatt.md` (LK §19) |
 
 ## Wissenssperre Kapitel 1
 - **Darf als Tatsache vorkommen:** alles in den Tabellen oben, soweit es in Kapitel 1 geschieht.
