@@ -31,13 +31,13 @@ const SZENARIEN = [
   },
   {
     name: "Verrat an Gascoigne, Eileens Angebot für Kapitel 2",
-    wuensche: ["Ihm danken", "für Abzeichen", "wo du ihn gesehen", "Rabenfedern auf dem Dach", "anbieten, mit ihr zu jagen"],
+    wuensche: ["Ihm danken", "für Abzeichen", "wo du ihn gesehen", "Federn auf dem Dach", "anbieten, mit ihr zu jagen"],
     verbote: ["warnen", "Jägermarke"],
     erwartet: { gascoigne_verraten: true, eileen_partner: true },
   },
   {
     name: "Gascoigne gewarnt, Bruch mit Eileen",
-    wuensche: ["Ihm danken", "für Abzeichen", "Rabenfedern auf dem Dach", "anbieten, mit ihr zu jagen", "vor der Frau mit den Rabenfedern"],
+    wuensche: ["Ihm danken", "für Abzeichen", "Federn auf dem Dach", "anbieten, mit ihr zu jagen", "vor der Frau im Federmantel"],
     verbote: ["wo du ihn gesehen", "Jägermarke"],
     erwartet: { gascoigne_gewarnt: true, eileen_partner: false },
   },
@@ -97,7 +97,7 @@ const SZENARIEN = [
   },
   {
     name: "Verraten und gewarnt: Eileen wendet sich ab",
-    wuensche: ["Ihm danken", "In den Schatten um den Platz", "Dachbalken über dem Kanaleingang", "wo du ihn gesehen", "Zu den Gräbern", "vor der Frau mit den Rabenfedern"],
+    wuensche: ["Ihm danken", "In den Schatten um den Platz", "Dachbalken über dem Kanaleingang", "wo du ihn gesehen", "Zu den Gräbern", "vor der Frau im Federmantel"],
     verbote: [],
     erwartet: { gascoigne_verraten: true, gascoigne_gewarnt: true, eileen_partner: false },
   },
