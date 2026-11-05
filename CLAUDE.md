@@ -13,6 +13,7 @@ Der Nutzer ist der Visionär mit wenig Zeit. Claude führt, prüft und holt die 
 - **Selbstständig** (Vollmacht 2026-11-04): bauen, prüfen, committen, pushen, in `main` mergen, Artefakte veröffentlichen. **Nur mit Rückfrage**: Repository öffentlich machen, Kosten verursachen, Inhalte des Nutzers löschen.
 
 ## Lesen zu Beginn
+0. **`docs/stand.md`** (Übergabe: wo wir stehen, was als Nächstes kommt, was beim Nutzer offen ist). Nach jeder Arbeit aktualisieren, committen und in `main` mergen, damit jederzeit ein neuer Chat übernehmen kann (Wunsch des Nutzers 2026-11-05).
 1. `docs/spieldesign.md` (Richtung, Mechaniken, Entscheidungen des Nutzers)
 2. `docs/kapitel1-struktur.md` (Raster des aktuellen Kapitels)
 3. Für Kanon: `lore/README.md` (Wurzel des Lore-Archivs), dann immer `lore/kern.md` und das Lesepaket `lore/kapitel/kapitelN.md` des Kapitels mit Wissenssperre; nur die Dateien laden, die die Szene braucht. Lücken in `lore/offen.md`.

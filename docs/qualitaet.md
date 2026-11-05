@@ -40,9 +40,9 @@ Stand 2026-11-04, nach Runde 1: drei unabhängige Prüfungen (Plot und Logik, Lo
 ## Knoten
 | Knoten | Titel | Stufe | Schwächen |
 |---|---|---|---|
-| k1_prolog | Prolog: Wer du bist | 1 | |
-| k1_klinik | Iosefkas Klinik: Transfusion | 2 | |
-| k1_erwachen | Erwachen und erster Tod | 1 | |
+| k1_prolog | Prolog: Wer du bist | 2 | Handgearbeitet 2026-11-05 (A, B, Optionen fließen); nicht abgenommen |
+| k1_klinik | Iosefkas Klinik: Transfusion | 2 | Handgearbeitet 2026-11-05 (Vertrag in Stimme C); Vision nur nach RK1 (wahrscheinlich); nicht abgenommen |
+| k1_erwachen | Erwachen und erster Tod | 2 | Handgearbeitet 2026-11-05; nicht abgenommen |
 | k1_traum_erst | Erster Besuch im Jägertraum | 2 | |
 | k1_klinik_kampf | Lernkampf in der Klinik | 1 | sehr kurz (81 Wörter) |
 | k1_iosefka | Iosefkas Tür | 2 | |

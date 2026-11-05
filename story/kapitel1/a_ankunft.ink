@@ -2,94 +2,100 @@
 
 === k1_prolog ===
 // TITEL: Prolog: Wer du bist
+// Handgearbeitet 2026-11-05 nach docs/stimme.md: Aufzeichnungen in A (Ich, Präteritum), Anreise A, Fieber und Kutscher B. Optionen fließen in den Satz (#fliesst).
 // [ERWEITERT] Eigene Szene vor dem Original, eingeleitet von einem Auszug aus den Aufzeichnungen des Jägers. Den Namen setzt die Oberfläche (VAR name).
+// Lore: lore/kern.md, lore/kapitel/kapitel1.md (Wissenssperre), lore/welt/welt.md (Fremde sind verhasst, Blut als Heilmittel).
 # kapitel: 1
 KAPITEL EINS: YHARNAM # stil: titel
 Aus den Aufzeichnungen, die man später fand, in einer Schrift, die gegen Ende kaum noch eine menschliche Hand verriet: # stil: tagebuch
-„Ich schreibe dies nieder, solange ich noch weiß, in welcher Reihenfolge die Dinge geschahen. Man wird sagen, ich sei krank gewesen, und das ist wahr. Aber die Krankheit erklärt nicht, was ich gesehen habe, und sie erklärt erst recht nicht, warum ich es bis heute sehe, wenn ich die Augen schließe. Es begann mit einer Kutsche, mit Regen und mit einem Versprechen, das man mir in einer fremden Sprache gab.“ # stil: tagebuch
-Die Kutsche schlingert seit Stunden über eine Straße, die fast nur noch aus Schlaglöchern besteht. Regen trommelt auf das Dach, und durch die beschlagene Scheibe siehst du ein Land, das sich nicht entscheiden kann, ob es Moor ist oder Wald: schwarze Stämme, schwarzes Wasser, und dazwischen ein Nebel, der sich bewegt, auch wenn kein Wind geht. # bild: anreise # stimmung: ruhig
-Das Fieber sitzt dir hinter den Augen. Es kommt in Wellen, wie seit Wochen, und in den Tälern zwischen den Wellen denkst du an das, was man sich in den Häfen und Gasthäusern erzählt hat: dass es im Osten, jenseits der Berge, eine Stadt gibt, deren Blut alles heilt. Keine Arznei, kein Gebet, kein Glaube an irgendetwas. Blut.
-Im Westen steht die Sonne tief, ein kleiner roter Fleck hinter dem Regen. Sie stand schon dort, als die Kutsche losfuhr. Dann teilt sich der Nebel, und du siehst sie. Yharnam liegt über dem Tal wie etwas, das gewachsen und nicht gebaut wurde: Turm auf Turm, Giebel auf Giebel, schwarze Spitzen, die so dicht stehen, dass sie den Himmel in schmale, kranke Streifen schneiden. Über allem eine Kathedrale, deren Ausmaße dein Auge nicht fassen will. Du wendest den Blick ab, ohne zu wissen, warum.
-Der Kutscher hat seit dem letzten Dorf kein Wort mehr gesprochen. Jetzt fragt er, ohne sich umzudrehen, woher du kommst.
-* [Aus verarmtem Adel]
+„Ich schreibe dies nieder, solange ich die Reihenfolge der Dinge noch weiß. Man wird sagen, ich sei krank gewesen, und das ist wahr; aber eine Krankheit erklärt nicht, was ich gesehen habe, und erst recht nicht, warum ich es noch heute sehe, sobald ich die Augen schließe. Es begann mit einer Kutsche, mit Regen und mit einem Versprechen, das man mir in einer Sprache gab, die ich nur halb verstand.“ # stil: tagebuch
+Seit Stunden schlingert die Kutsche über eine Straße, die fast nur noch aus Schlaglöchern besteht. Der Regen trommelt auf das Dach, und hinter der beschlagenen Scheibe zieht ein Land vorbei, das sich nicht entscheiden kann, ob es Moor sein will oder Wald: schwarze Stämme, schwarzes Wasser, und dazwischen ein Nebel, der sich bewegt, obwohl kein Wind geht. In den Dörfern, durch die ihr kommt, sind die Läden geschlossen, und an manchen Türen hängt ein Bündel trockener Kräuter, das niemand mehr erneuert hat. # bild: anreise # stimmung: ruhig
+Das Fieber sitzt dir hinter den Augen. Es kommt in Wellen, wie seit Wochen, und in den Tälern zwischen den Wellen denkst du an das, was man sich in Häfen und Gasthäusern erzählt hat, leise und mit einem Blick zur Tür: Im Osten, jenseits der Berge, liege eine Stadt, deren Blut jede Krankheit heile. Keine Arznei, kein Gebet. Blut.
+Im Westen hängt die Sonne tief, ein kleiner roter Fleck hinter dem Regen; sie hing schon dort, als die Kutsche losfuhr. Dann reißt der Nebel auf, und vor dir liegt Yharnam, über dem Tal aufgetürmt wie etwas, das gewachsen ist und nicht gebaut: Turm auf Turm, Giebel auf Giebel, schwarze Spitzen, so dicht gedrängt, dass sie den Himmel in schmale, kranke Streifen schneiden. Über allem erhebt sich eine Kathedrale, deren Maße dein Auge nicht halten will. Du siehst weg und weißt nicht, warum.
+Der Kutscher hat seit dem letzten Dorf kein Wort gesprochen. Jetzt fragt er, ohne sich umzudrehen, woher du kommst.
+* [Aus einem Haus mit großem Namen #fliesst]
     ~ herkunft = "adel"
-    „Aus einem Haus mit einem großen Namen und leeren Kellern“, sagst du. Der Kutscher lacht kurz, ohne Freude. Hier, sagt er, gelte ein Name nur so viel wie das Blut dahinter.
-* [Aus dem Krieg]
+    Aus einem Haus mit großem Namen und leeren Kellern, sagst du, und es klingt bitterer, als du es meintest. Der Kutscher lacht kurz, ohne Freude. „Hier gilt ein Name so viel wie das Blut dahinter“, sagt er.
+* [Aus dem Krieg #fliesst]
     ~ herkunft = "soldat"
-    „Aus dem Krieg“, sagst du, und mehr musst du nicht sagen. Deine Hände wissen noch, wie sich ein Bajonett anfühlt, auch wenn dein Kopf es lieber vergessen würde.
-* [Aus den Hörsälen]
+    Aus dem Krieg, sagst du, und mehr musst du nicht sagen. Deine Hände wissen noch, wie sich ein Bajonett anfühlt, auch wenn dein Kopf es lieber vergessen würde.
+* [Aus den Hörsälen einer Universität #fliesst]
     ~ herkunft = "gelehrter"
-    „Von der Universität.“ Du hast Bücher über diese Stadt gelesen, wenige, schlecht gebundene, deren Verfasser ihre Sätze mitten im Gedanken abbrachen. Damals hielt man das für schlechten Stil.
-* [Als Einziger, der übrig blieb]
+    Aus den Hörsälen einer Universität, sagst du. Über diese Stadt hast du dort Bücher gelesen, wenige, schlecht gebunden, und ihre Verfasser brachen die Sätze mitten im Gedanken ab. Damals hieltest du das für schlechten Stil.
+* [Aus einem Dorf, das es nicht mehr gibt #fliesst]
     ~ herkunft = "ueberlebender"
-    „Von nirgendwo mehr.“ Das Dorf, aus dem du kommst, gibt es nicht mehr, und die Namen der Menschen darin sprichst du nicht aus, weil niemand mehr da ist, der sie dir zurückgeben könnte.
-* [Aus einem Fieber, das dich nicht loslässt]
+    Aus einem Dorf, das es nicht mehr gibt, sagst du, und die Namen der Menschen darin sprichst du nicht aus. Es ist niemand mehr da, der sie dir zurückgeben könnte.
+* [Aus einem Krankenbett #fliesst]
     ~ herkunft = "kranker"
-    „Aus dem Bett“, sagst du und hustest. Die Ärzte zu Hause haben aufgehört, dir in die Augen zu sehen. Das war der Tag, an dem du deine Sachen gepackt hast.
-* [Vor dem Galgen davon]
+    Aus einem Krankenbett, sagst du, und dann hustest du, als müsstest du es beweisen. Die Ärzte zu Hause haben dir zuletzt nicht mehr in die Augen gesehen. An dem Tag hast du deine Sachen gepackt.
+* [Vor dem Galgen davon #fliesst]
     ~ herkunft = "gesuchter"
-    Du antwortest nicht. Der Kutscher nickt, als sei auch das eine Antwort, die er schon oft gehört hat. Nach Yharnam, sagt er, fragt niemand, was einer getan hat. Nur, was er geworden ist.
-- Und warum, will er wissen, kommt jemand freiwillig hierher, in diesen Tagen?
-* [Um selbst geheilt zu werden]
+    Vor dem Galgen bist du davon, aber das sagst du ihm nicht; du sagst gar nichts. Der Kutscher nickt, als sei auch Schweigen eine Antwort, die er oft gehört hat. „In Yharnam fragt keiner, was einer getan hat“, sagt er. „Nur, was aus ihm geworden ist.“
+- Und warum, will er wissen, fährt einer freiwillig dorthin, in diesen Tagen?
+* [Um selbst zu genesen #fliesst]
     ~ grund = "heilung_selbst"
-    Weil das Fieber dich sonst noch vor dem Winter frisst. Du sagst es so ruhig, als ginge es um das Wetter.
-* [Für jemanden, der zu Hause stirbt]
+    Um selbst zu genesen, sagst du, weil das Fieber dich sonst noch vor dem Winter frisst. Du sagst es so ruhig, als ginge es um das Wetter.
+* [Für jemanden, der zu Hause stirbt #fliesst]
     ~ grund = "heilung_anderer"
-    Weil zu Hause jemand in einem abgedunkelten Zimmer liegt und auf einen Brief wartet, der sagt, dass es Hoffnung gibt. Du hast versprochen, diesen Brief zu schreiben.
-* [Um jemanden zu finden, der hierher ging]
+    Für jemanden, der zu Hause in einem abgedunkelten Zimmer liegt und auf einen Brief wartet, in dem steht, dass es Hoffnung gibt. Du hast versprochen, diesen Brief zu schreiben.
+* [Um jemanden zu finden, der vorausging #fliesst]
     ~ grund = "suche"
-    Weil jemand, den du liebst, vor einem Jahr in dieselbe Richtung gefahren ist und seitdem nicht mehr geschrieben hat. Der letzte Brief roch nach Weihrauch und nach etwas darunter, das du nicht benennen konntest.
-* [Weil du etwas wiedergutmachen musst]
+    Um jemanden zu finden, sagst du, der vor einem Jahr in dieselbe Richtung gefahren ist und seither nicht mehr geschrieben hat. Der letzte Brief roch nach Weihrauch und nach etwas darunter, für das du keinen Namen hattest.
+* [Um eine Schuld abzutragen #fliesst]
     ~ grund = "schuld"
-    Weil du etwas getan hast, das sich nicht wiedergutmachen lässt, und weil man sagt, Yharnam mache aus einem Menschen etwas Neues. Vielleicht genügt das.
-- Der Kutscher schweigt lange. Dann sagt er nur: „Die Jagd ist bald.“ Du verstehst nicht, was er meint, und er erklärt es nicht.
-Die Kutsche hält in einer engen Straße vor einem hohen, schmalen Haus. Die Fenster sind von innen mit Tüchern verhängt, und über der Tür hängt ein Schild, das jemand mit roter Farbe beschriftet hat: eine Klinik. Der Kutscher wartet nicht, bis du die Tür geschlossen hast.
+    Um eine Schuld abzutragen, sagst du, eine, die sich mit nichts begleichen lässt. Man erzählt sich, Yharnam mache aus einem Menschen etwas Neues. Vielleicht genügt das.
+- Der Kutscher schweigt so lange, dass du glaubst, er habe dich nicht gehört. Dann sagt er nur: „Bald ist Jagd.“ Was er damit meint, erklärt er nicht, und du fragst nicht nach.
+Die Kutsche hält in einer engen Straße vor einem hohen, schmalen Haus. Die Fenster sind von innen mit Tüchern verhängt, und über der Tür hat jemand mit roter Farbe ein einziges Wort auf ein Brett gemalt: Klinik. Der Kutscher wartet nicht, bis du die Tür geschlossen hast.
 -> k1_klinik
 
 === k1_klinik ===
 // TITEL: Iosefkas Klinik: Transfusion
-// [KANON] Der Blutminister, der Vertrag (im Original die Charaktererstellung), die Transfusion. Wortlaut nur sinngemäß.
-Drinnen riecht es nach Karbol, nach kaltem Kerzenwachs und, darunter, nach Eisen. Ein langer Raum, Liegen an den Wänden, die meisten leer, auf einigen liegen Gestalten unter Laken, die sich nicht bewegen. Das Licht kommt von Öllampen, deren Schein nicht bis in die Ecken reicht, und in den Ecken ist das Dunkel dichter, als Dunkel sein dürfte. # bild: klinik_innen # stimmung: spannung
-Am Ende des Raumes sitzt ein alter Mann in einem Rollstuhl. Sein Gesicht liegt halb im Schatten, und seine Stimme klingt glatt und geübt, wie die eines Mannes, der diese Sätze schon sehr oft gesagt hat und jedes Mal ein wenig Vergnügen daran findet.
-„Noch einer“, sagt er. „Durch den Regen, mit Fieber in den Augen. Dann hat der Kutscher dich nicht umsonst gefahren. Das Blut dieser Stadt hat Leute aufgeweckt, die man anderswo schon gewaschen und eingenäht hätte.“ Er beugt sich vor, so weit, dass das Licht seine Nasenspitze erreicht, und mustert dich, als lese er etwas von deiner Stirn ab. „Bleiches Blut“, sagt er dann, leise, und lacht in sich hinein, als hättest du einen guten Witz erzählt. # lore: paleblood
-{ herkunft == "adel": Sein Blick wandert über deine Handschuhe, das gute Leder, die gestopften Fingerspitzen, und das Lachen wird ein wenig breiter. }
-„Erst die Papiere. Ohne Papiere kein Blut, so ist das hier.“ # lore: bluttransfusion
+// Handgearbeitet 2026-11-05: Raum in A, Begegnung in B, der Vertrag in C (Formular der Blutstelle). Optionen fließen in den Satz.
+// [KANON lore:figuren/blutminister] Ein alter Mann im Rollstuhl empfängt den Fremden: Wer bleiches Blut suche, sei hier richtig; zuerst ein wenig Blut aus Yharnam und ein Vertrag; was auch geschehe, man solle es für einen bösen Traum halten. Wortlaut eigen.
+// [KANON lore:orte/iosefkas-klinik] Vision während der Transfusion: eine Bestie aus einer Blutlache, die Feuer fängt; kleine graue Wesen kriechen über den Liegenden; eine Frauenstimme. PRÜFEN: Einzelheiten nach RK1 §1 (wahrscheinlich).
 // [ERWEITERT] Die braune Tinte, die nicht abgeht: Anker für die Bindung an den Traum (nur gezeigt, nie erklärt; dass der Vertrag bindet, ist [Deutung]).
-Er schiebt dir ein Papier hin. Die Tinte ist braun, und du bist nicht sicher, ob es Tinte ist.
-* [Unterschreiben, ohne zu lesen]
+// Stimme des Blutministers: glatt, geübt, amüsiert, duzt.
+Drinnen riecht es nach Karbol, nach kaltem Kerzenwachs und darunter nach Eisen. Ein langer Saal, Liegen an beiden Wänden, die meisten leer; auf einigen liegen Gestalten unter Laken, die sich nicht rühren. Öllampen brennen in Wandhaltern, und ihr Schein reicht nicht bis in die Ecken, wo das Dunkel dichter steht, als Dunkel stehen dürfte. An einem Haken neben der Tür hängt eine Schürze, steif von etwas, das getrocknet ist. # bild: klinik_innen # stimmung: spannung
+Am Ende des Saals sitzt ein alter Mann in einem Rollstuhl, das Gesicht zur Hälfte im Schatten. Er spricht, bevor du ihn erreichst, mit einer glatten, geübten Stimme, die diese Sätze schon sehr oft gesagt hat und jedes Mal ein kleines Vergnügen daran findet.
+„Noch einer, durch den Regen, mit Fieber in den Augen. Dann hat der Kutscher dich nicht umsonst gefahren.“ Er beugt sich vor, bis das Lampenlicht seine Nasenspitze erreicht, und mustert dich, als lese er dir etwas von der Stirn ab. „Bleiches Blut“, sagt er leise, und dann lacht er in sich hinein, als hättest du ihm einen guten Witz erzählt. „Da bist du hier richtig. Nur muss man erst ein wenig von unserem Blut im Leib haben, ehe man solche Dinge versteht.“ # lore: paleblood
+{ herkunft == "adel": Sein Blick wandert über deine Handschuhe, das gute Leder, die gestopften Fingerspitzen, und das Lachen wird breiter. }
+„Erst die Papiere. Ohne Papiere kein Blut, so ist das hier.“ # lore: bluttransfusion
+Er schiebt dir einen Bogen hin, eng bedruckt, mit einer Feder darauf. Die Tinte im Fass ist braun, und du bist nicht sicher, dass es Tinte ist.
+Vereinbarung über die Behandlung mit Blut. Der Unterzeichnete erklärt, aus freien Stücken und bei klarem Verstand zu kommen. Er erklärt, die Behandlung zu empfangen, wie sie ihm gereicht wird, und keine andere zu verlangen. Er erklärt, dass er den Grund seiner Reise wahrheitsgemäß angegeben hat. Folgen, die aus der Behandlung erwachsen, fallen dem Empfänger zu. # stil: anschlag
+* [Ungelesen unterschreiben #fliesst]
     ~ haltung_vertrag = "blind"
-    Du unterschreibst. Die Feder kratzt, und für einen Moment ist es das einzige Geräusch im Raum. Der alte Mann lächelt, und das Lächeln bleibt etwas zu lange in seinem Gesicht.
-* [Lesen, dann unterschreiben]
+    Ungelesen unterschreibst du. Die Feder kratzt, und für einen Augenblick ist sie das einzige Geräusch im Saal. Der alte Mann lächelt, und das Lächeln bleibt ein wenig zu lange in seinem Gesicht.
+* [Erst lesen, dann unterschreiben #fliesst]
     ~ haltung_vertrag = "wach"
-    Du liest. Die Sätze sind lang und verschachtelt, und am Ende eines jeden hast du etwas verpasst, das in der Mitte stand. Weiter unten, in der Zeile, in der du deinen Grund für die Reise einträgst, stehen schon zwei Wörter: bleiches Blut. Die Schrift sieht deiner ähnlich. Du hast sie nicht geschrieben, oder du weißt es nicht mehr. Du unterschreibst darunter.
-* [Zögern, bis er lächelt und wartet]
+    Erst liest du, Zeile für Zeile, und am Ende jedes Satzes hast du etwas verpasst, das in seiner Mitte stand. Weiter unten, in der Zeile für den Grund der Reise, stehen schon zwei Wörter: bleiches Blut. Die Schrift sieht deiner ähnlich. Du hast sie nicht geschrieben, oder du weißt es nicht mehr. Dann unterschreibst du darunter.
+* [Die Feder über dem Bogen zögern lassen #fliesst]
     ~ haltung_vertrag = "zoegernd"
-    Du zögerst. Der alte Mann drängt nicht. Er wartet, die Hände gefaltet, mit der Geduld eines Menschen, der weiß, dass am Ende jeder unterschreibt. Und du unterschreibst.
-- Die Tinte bleibt an deinen Fingerkuppen kleben, braun und ein wenig klebrig. Du reibst sie am Mantel ab. Sie geht nicht ab.
-„Gut“, sagt der alte Mann. „Sehr gut. Und wenn dir heute Nacht etwas über den Weg läuft, das nicht sein kann: Schlaf darüber. Am Ende war alles nur das Fieber.“ Er lacht wieder, dasselbe leise Lachen, und rollt rückwärts in den Schatten.
-Man legt dich auf eine Liege. Die Nadel ist dicker, als sie sein sollte. Das Blut, das in deinen Arm fließt, ist zuerst warm wie ein Bad, dann kalt wie ein Fluss im Winter, und dann ist es nichts mehr, das man mit einem Wort für Temperatur beschreiben könnte. Es ist fremd. Es breitet sich in dir aus, als suche es etwas.
-// [KANON] Fiebervision: eine Bestie steigt aus einer Blutlache, fängt Feuer; kleine graue Wesen kriechen über dich. PRÜFEN: Einzelheiten nur aus Erinnerung.
-Du träumst, oder etwas träumt dich. Auf dem Boden der Klinik breitet sich eine Lache aus, rot und glänzend, und aus ihr steigt etwas auf: zuerst Fell, dann Klauen, dann ein Kopf, der zu lang ist und zu viele Zähne hat. Es beugt sich über dich, und sein Atem riecht nach Grab. Dann fängt es Feuer, einfach so, als hätte jemand es so beschlossen, und verbrennt kreischend, bis nur Asche bleibt. # gedaechtnis: vision_klinik # stimmung: grauen
-Und dann kommen die Kleinen. Graue, verdrehte Wesen, nicht größer als ein Kind, mit Gesichtern wie aus nassem Ton, kriechen über die Kante der Liege, über deine Beine, deine Brust, und ihre Berührung ist kalt und neugierig. Eines von ihnen sieht dich an. Du willst schreien. Es gelingt dir nicht.
-// [KANON] Am Ende der Vision eine Frauenstimme, die sich freut, einen Jäger gefunden zu haben (Wortlaut eigen, Sprecherin [OFFEN]).
-Ganz nah an deinem Ohr sagt eine Frauenstimme, sanft und zufrieden wie jemand, der lange gesucht hat: „Da bist du ja. Ein Jäger.“ Dann ist da nichts mehr.
+    Die Feder zögert über dem Bogen, und ein Tropfen fällt auf das Papier und läuft in die Fasern. Der alte Mann drängt nicht. Er wartet, die Hände im Schoß gefaltet, mit der Geduld eines Menschen, der weiß, dass am Ende jeder unterschreibt. Und du unterschreibst.
+- Die Tinte bleibt an deinen Fingerkuppen kleben, braun und ein wenig zäh. Du reibst sie am Mantel ab. Sie geht nicht ab.
+„Gut“, sagt der alte Mann. „Sehr gut. Und wenn dir heute Nacht etwas über den Weg läuft, das es nicht geben kann: Schlaf darüber. Am Ende war alles nur das Fieber.“ Er lacht wieder, dasselbe leise Lachen, und rollt rückwärts in den Schatten, bis nur noch das Knarren der Räder von ihm bleibt.
+Man legt dich auf eine Liege; wer, siehst du nicht. Die Nadel ist dicker, als sie sein sollte. Das Blut, das in deinen Arm fließt, ist zuerst warm wie ein Bad, dann kalt wie ein Fluss im Winter, und dann ist es nichts mehr, wofür es ein Wort der Wärme oder der Kälte gäbe. Es ist fremd. Es breitet sich in dir aus und tastet, Ader um Ader, nach einem Zimmer, das ihm gehört.
+Du träumst, oder etwas träumt dich. Auf dem Boden der Klinik breitet sich eine Lache aus, rot und glänzend, und aus ihr wächst eine Gestalt: zuerst Fell, dann Klauen, dann ein Kopf, der zu lang ist und zu viele Zähne hat. Es beugt sich über dich, und sein Atem riecht nach umgegrabener Erde. Dann fängt es Feuer, ohne Funken, ohne Grund, und verbrennt kreischend über dir, bis nur noch Asche auf dein Laken rieselt. # gedaechtnis: vision_klinik # stimmung: grauen
+Danach kommen die Kleinen. Graue, verdrehte Wesen, nicht größer als ein Kind, mit Gesichtern aus nassem Ton, kriechen über die Kante der Liege, über deine Beine, deine Brust, und ihre Berührung ist kalt und neugierig. Eines hebt den Kopf und sieht dich an. Du willst schreien, und deine Kehle gehorcht dir nicht.
+// [KANON] Am Ende der Vision eine Frauenstimme, die sich freut, einen Jäger gefunden zu haben (Wortlaut eigen, Sprecherin [Offen]).
+Ganz nah an deinem Ohr sagt eine Frauenstimme, sanft und zufrieden wie jemand, der lange gesucht hat: „Da bist du ja. Ein Jäger.“ Dann ist nichts mehr.
 -> k1_erwachen
 
 === k1_erwachen ===
 // TITEL: Erwachen und erster Tod
-// [KANON] Notiz über bleiches Blut an der Wand. Der erste Tod ist unausweichlich; er zählt als erster (tode = 1), damit der Traum danach nicht noch einmal „zum ersten Mal“ erzählt.
+// Handgearbeitet 2026-11-05 in Stimme B. Optionen fließen in den Satz; der erste Tod ist unausweichlich.
+// [KANON lore:orte/iosefkas-klinik] Zettel über bleiches Blut (sinngemäß: suchen, um die Jagd zu überwinden); die Bestie im Krankensaal. Der erste Tod zählt als erster (tode = 1), damit der Traum danach nicht noch einmal „zum ersten Mal“ erzählt.
 ~ tode = 1
-Du erwachst. Die Klinik ist leer, der Rollstuhl verschwunden, die Lampen fast heruntergebrannt. Dein Arm pocht dort, wo die Nadel war, und unter der Haut bewegt sich etwas, langsam, im Takt deines Herzens. # stimmung: spannung
-An der Wand, auf Augenhöhe, steckt ein Zettel. Die Schrift ist eilig, die Buchstaben drängen sich aneinander, als habe der Schreiber keine Zeit gehabt oder keine Ruhe: Etwas über bleiches Blut, und darüber, dass man es suchen müsse, um die Jagd zu überwinden. Du weißt nicht, wer das geschrieben hat. Du hast das unbestimmte Gefühl, dass es deine eigene Handschrift sein könnte. # lore: paleblood
+Du erwachst, und die Klinik ist leer. Der Rollstuhl ist fort, die Lampen sind fast heruntergebrannt, und auf den Liegen an der Wand liegt niemand mehr unter den Laken, nur die Laken selbst, zerwühlt, als sei jemand hastig aufgestanden. Dein Arm pocht dort, wo die Nadel war, und unter der Haut bewegt sich etwas, langsam, im Takt deines Herzens. # stimmung: spannung
+An der Wand, auf Augenhöhe, steckt ein Zettel. Die Schrift ist eilig, die Buchstaben drängen sich aneinander, als habe der Schreiber keine Zeit gehabt oder keine Ruhe mehr: Es geht um bleiches Blut, und darum, dass man es suchen müsse, um über die Jagd hinauszukommen. Wer das geschrieben hat, weißt du nicht. Die Hand, die es schrieb, hält den Stift so, wie du ihn hältst. # lore: paleblood
 Hinter dir knarrt eine Diele.
-Zwischen den Liegen richtet sich etwas auf. Es ist größer als ein Mensch und hat einmal einer gehört: Fetzen eines Hemdes hängen an seinen Schultern, ein Knopf glänzt im Fell. Es atmet schwer und nass, und als es den Kopf dreht, siehst du, dass seine Augen kein Weiß mehr haben. # anzeichen: erster_tod # stimmung: grauen
-* [Nach etwas greifen, das als Waffe taugt]
-    Deine Hand findet einen Stuhl, du hebst ihn, und die Bestie schlägt ihn dir aus den Händen, als wäre er aus Papier.
-* [Zur Tür rennen]
-    Du kommst drei Schritte weit. Dann trifft dich etwas in den Rücken, schwer wie ein fallender Balken.
-* [Still liegen bleiben]
-    Du hältst den Atem an. Es hilft nichts; sie riecht dich, sie riecht das neue Blut in deinen Adern.
-- Klauen, Zähne, Gewicht. Du spürst keinen Schmerz, nur Erstaunen darüber, wie schnell es geht, und dann eine große, dunkle Stille, in der sich etwas Kleines, Graues bewegt.
+Zwischen den Liegen richtet sich etwas auf. Es ist größer als ein Mensch und hat einmal einem gehört: Fetzen eines Hemdes hängen ihm an den Schultern, und im Fell an seiner Brust glänzt ein einzelner Hornknopf. Es atmet schwer und nass, und als es den Kopf dreht, siehst du, dass seine Augen kein Weiß mehr haben. # anzeichen: erster_tod # stimmung: grauen
+* [Nach dem Stuhl neben der Liege greifen #fliesst]
+    Nach dem Stuhl neben der Liege greifst du, hebst ihn, und die Bestie schlägt ihn dir aus den Händen, als wäre er aus Papier.
+* [Zur Tür stürzen #fliesst]
+    Zur Tür stürzt du und kommst drei Schritte weit. Dann trifft dich etwas in den Rücken, schwer wie ein fallender Balken.
+* [Den Atem anhalten und still liegen #fliesst]
+    Du hältst den Atem an und liegst still. Es hilft nichts. Sie riecht dich, sie riecht das neue Blut in deinen Adern.
+- Klauen, Zähne, Gewicht. Es tut nicht weh; du staunst nur, wie schnell es geht. Dann senkt sich eine große, dunkle Stille über dich, und in dieser Stille bewegt sich etwas Kleines, Graues.
 -> k1_traum_erst
 
 === k1_traum_erst ===
