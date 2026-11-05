@@ -6,7 +6,7 @@
 
 ## So startet ein neuer Chat
 1. `CLAUDE.md` wird automatisch gelesen. Danach diese Datei, dann die Leseliste in `CLAUDE.md` („Lesen zu Beginn“).
-2. Arbeitszweig: Jede Sitzung bekommt ihren eigenen Zweig. `main` ist immer der aktuelle, geprüfte Stand und geht automatisch online (https://yahrnams-neverending-night.netlify.app/).
+2. Arbeitszweig: Jede Sitzung bekommt ihren eigenen Zweig. `main` ist immer der aktuelle, geprüfte Stand und geht automatisch online (https://kortjannis-web.github.io/BB-Game/, GitHub Pages).
 3. Der Nutzer will: Häppchen statt Fragenkataloge; selbstständig bauen, prüfen, mergen; jede Szene von Hand; am Ende jeder Antwort das nächste Häppchen.
 
 ## Protokoll der letzten Sitzung (2026-11-04 bis 2026-11-05)

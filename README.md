@@ -4,12 +4,12 @@ Bloodborne als geschriebenes, verzweigtes Erzählspiel auf Deutsch. Privates Fan
 
 **Stand:** Kapitel 1 (Yharnam bis Gascoigne) vollständig geschrieben und im Browser spielbar.
 
-- **Spielen:** https://yahrnams-neverending-night.netlify.app/ (Netlify, baut bei jedem Push auf `main` neu; Einrichtung in [`docs/hosting.md`](docs/hosting.md))
-- **Erzählbaum:** https://yahrnams-neverending-night.netlify.app/karte.html
+- **Spielen:** https://kortjannis-web.github.io/BB-Game/ (GitHub Pages, baut bei jedem Push auf `main` neu; Einrichtung in [`docs/hosting.md`](docs/hosting.md))
+- **Erzählbaum:** https://kortjannis-web.github.io/BB-Game/karte.html
 - **Spielen (Artefakt):** https://claude.ai/artifact/8K6UJippKkrq1CsXpkXvaL
 - **Erzählbaum (Twine-Ansicht):** https://claude.ai/artifact/NPHhjkNgsNCP2FrLbTGFUX
 
-Beide Seiten sind privat; Teilen geht über das Teilen-Menü der Seite.
+Die Artefakte sind privat; Teilen geht über das Teilen-Menü der Seite. Das Repository ist öffentlich; die Spielseite ist für Suchmaschinen gesperrt (Meta-Tag), aber für jeden mit der Adresse lesbar.
 
 ## Mitschreiben: die Werkstatt
 Im Spiel und im Erzählbaum oben **✎ Bearbeiten** einschalten: Absätze umschreiben, streichen oder ergänzen, Entscheidungen umbenennen oder neue vorschlagen, im Baum ganze Passagen anlegen, verbinden oder streichen, und über **Quelltext** die Ink-Mechanik ändern und sofort testen. Alles bleibt Vorschlag und geht über **Werkstatt → An GitHub senden** auf den Zweig `vorschlaege`. Claude setzt jede Änderung einzeln um, antwortet in der Werkstatt und lernt daraus den eigenen Stil (`docs/nutzerstil.md`). Ablauf: [`docs/vorschlaege.md`](docs/vorschlaege.md).

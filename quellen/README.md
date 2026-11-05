@@ -1,7 +1,7 @@
 # Quellen (Rohmaterial für das Lore-Archiv)
 
 Hier liegen Quellen, die der Nutzer liefert: PDF-Analysen, Transkripte von Videos, Exporte von Tabellen.
-Der Ordner liegt außerhalb von `web/` und wird deshalb nie veröffentlicht (Netlify baut nur `web/`).
+Der Ordner liegt außerhalb von `web/` und kommt deshalb nicht auf die Spielseite (GitHub Pages veröffentlicht nur `web/`). **Achtung:** Sobald das Repository öffentlich ist (seit 2026-11-05), kann jeder den Ordner im Repository lesen.
 
 Regeln:
 - Rohmaterial wird **gelesen und ausgewertet, nie ins Spiel kopiert**. Ins Archiv (`lore/`) kommen nur eigene Zusammenfassungen mit Fundstelle.

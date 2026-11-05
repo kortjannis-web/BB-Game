@@ -1,4 +1,5 @@
-# Hosting über Netlify, verbunden mit GitHub: Jeder Push auf "main" baut das Spiel neu und stellt es online.
+# Rückfall, nicht mehr in Gebrauch: Seit 2026-11-05 läuft das Spiel über GitHub Pages (.github/workflows/pages.yml).
+# Netlify hatte die Credits aufgebraucht (Production-Deploys pausiert). Die Site bei Netlify am besten vom Repository trennen.
 # Einrichtung (einmalig): docs/hosting.md
 [build]
   command = "npm run bauen"

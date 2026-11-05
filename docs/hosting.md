@@ -2,7 +2,9 @@
 
 Das Spiel ist eine fertige statische Seite (Ordner `web/`). Damit es unter einer festen Adresse im Browser läuft und sich bei jeder Änderung auf `main` von selbst erneuert, wird es mit GitHub verbunden gehostet.
 
-**Aktuell:** Netlify, https://yahrnams-neverending-night.netlify.app/ (eingerichtet 2026-11-04).
+**Aktuell:** GitHub Pages, https://kortjannis-web.github.io/BB-Game/ (umgestellt 2026-11-05; das Repository ist öffentlich).
+
+**Warum die Umstellung:** Netlify (eingerichtet 2026-11-04) rechnet nach Credits ab, jeder Deploy kostet welche. Nach wenigen Tagen mit vielen Merges waren die Credits aufgebraucht: Production-Deploys pausiert, die Seite hing an 30 Not-Credits und wäre gesperrt worden. GitHub Pages ist kostenlos, ohne Credits und ohne zweites Konto. Der Preis: Das Repository ist öffentlich.
 
 Es gibt zwei Wege, beide mit GitHub verbunden, beide bauen bei jedem Push auf `main` von selbst neu. Die Werkstatt funktioniert auf beiden gleich.
 
@@ -15,15 +17,26 @@ Es gibt zwei Wege, beide mit GitHub verbunden, beide bauen bei jedem Push auf `m
 
 Die Seite selbst ist bei beiden für jeden mit der Adresse erreichbar; Einreichen kann trotzdem nur, wer einen GitHub-Schlüssel hat.
 
-## GitHub Pages (nur GitHub)
+## GitHub Pages (nur GitHub) — in Gebrauch
 
-Das Repository ist privat. GitHub Pages gibt es für private Repositories nur im bezahlten Plan; im kostenlosen Plan nur für öffentliche.
-- **Repository öffentlich machen:** *Settings → General → Danger Zone → Change visibility → Public*. Dann ist auch der Quelltext samt Geschichte und Vorschlägen öffentlich lesbar (der GitHub-Schlüssel nicht, der bleibt im Browser).
-- **Oder privat lassen mit GitHub Pro:** Plan wechseln, dann unter *Settings → Secrets and variables → Actions → Variables* eine Variable `PAGES` mit dem Wert `an` anlegen.
+Einmalig, nachdem das Repository öffentlich ist:
+1. *Settings → Pages → Build and deployment → Source: **GitHub Actions***.
+2. *Actions → Spiel veröffentlichen (GitHub Pages) → Run workflow* (oder ein Push auf `main`). Nach etwa einer Minute ist die Seite unter https://kortjannis-web.github.io/BB-Game/ erreichbar.
 
-Danach einmalig: *Settings → Pages → Build and deployment → Source: GitHub Actions*. Beim nächsten Push auf `main` (oder unter *Actions → Spiel veröffentlichen → Run workflow*) ist das Spiel nach etwa einer Minute online. Solange keine der beiden Bedingungen erfüllt ist, überspringt der Workflow sich still und schickt keine Fehlermails.
+Der Workflow `.github/workflows/pages.yml` baut mit `npm run bauen`, entfernt die Artefakt-Fragmente (`web/artefakt/`, nur für claude.ai) und veröffentlicht `web/`. Solange das Repository privat ist und `PAGES` nicht auf `an` steht, überspringt er sich still.
 
-## Netlify (Repository bleibt privat, kostenlos)
+**Was „öffentlich“ bedeutet**
+- Quelltext, Geschichte, Lore-Archiv, `quellen/` und der Zweig `vorschlaege` samt Vorschlägen sind für jeden lesbar. Es stehen keine Schlüssel im Repository (am 2026-11-05 geprüft); der GitHub-Schlüssel der Werkstatt liegt nur im Browser des Nutzers.
+- Das Spiel ist ein privates, nicht kommerzielles Fanprojekt. Keine wörtlichen Zitate aus dem Spiel; die Quellen des Nutzers unter `quellen/` bleiben trotzdem im Blick, falls dort fremde Texte liegen.
+- Einreichen über die Werkstatt kann weiterhin nur, wer einen GitHub-Schlüssel mit Schreibrecht hat.
+
+**Suchmaschinen:** Auf GitHub Pages wirken `web/_headers` und `web/robots.txt` nicht (sie lägen im Unterpfad `/BB-Game/`, nicht an der Wurzel). Es schützt allein der Meta-Tag `noindex, nofollow` in `index.html` und `karte.html`. Wer die Adresse kennt, kann spielen.
+
+**Eigene Domain** (optional): *Settings → Pages → Custom domain*.
+
+## Netlify (abgelöst, nur Rückfall)
+
+Netlify bleibt als Rückfall beschrieben, ist aber wegen der Credits keine gute Dauerlösung. Wer es nicht mehr braucht: in Netlify *Site configuration → Build & deploy → Continuous deployment → Unlink repository* oder die Site löschen, damit keine Builds mehr Credits verbrauchen.
 
 1. Auf <https://app.netlify.com/signup> mit **„Sign up with GitHub“** anmelden.
 2. **Add new site → Import an existing project → GitHub**. Netlify fragt nach Zugriff: nur **BB-Game** freigeben.

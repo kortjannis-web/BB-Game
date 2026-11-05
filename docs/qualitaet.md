@@ -82,6 +82,6 @@ Stand 2026-11-04, nach Runde 1: drei unabhängige Prüfungen (Plot und Logik, Lo
 | Mechaniken der Nacht (Stärkung, Chronik, Einsicht kostet) | 1 | Einsicht kostet jetzt an fünf Stellen leise; Balance ungetestet |
 | Werkstatt im Spiel und im Erzählbaum | 2 | getestet nur gegen nachgebildetes GitHub; erster echter Versand steht aus; Vorschläge liegen nur im jeweiligen Browser |
 | Erzählbaum (Karte) | 1 | |
-| Hosting | 2 | Netlify läuft: https://yahrnams-neverending-night.netlify.app/; von hier aus nicht erreichbar, daher nicht selbst geprüft |
+| Hosting | 1 | Umstellung 2026-11-05 von Netlify (Credits aufgebraucht, Production-Deploys pausiert) auf GitHub Pages: https://kortjannis-web.github.io/BB-Game/. Workflow vorhanden, erster Lauf und Erreichbarkeit noch nicht geprüft (von hier aus nicht erreichbar) |
 | Skills `erzaehlkunst-deutsch`, `hpl-horror` | 2 | ein Vergleich (Gascoigne); Rede-Regel in hpl-horror nach Runde 1 geändert, Paket neu |
 | Notizbuch (Stufen nach Erlebtem) | 2 | neu gebaut, im Browser noch nicht durchgesehen |
