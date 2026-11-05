@@ -91,10 +91,11 @@ Die Kutsche hält in einer engen Straße vor einem hohen, schmalen Haus. Die Fen
 :: k1_klinik [A] {"position":"6050,900","size":"100,100"}
 <!-- [KANON lore:orte/iosefkas-klinik] Vision während der Transfusion: eine Bestie aus einer Blutlache, die Feuer fängt; kleine graue Wesen kriechen über den Liegenden; eine Frauenstimme. PRÜFEN: Einzelheiten nach RK1 §1 (wahrscheinlich). -->
 <!-- [ERWEITERT] Die braune Tinte, die nicht abgeht: Anker für die Bindung an den Traum (nur gezeigt, nie erklärt; dass der Vertrag bindet, ist [Deutung]). -->
-Drinnen riecht es nach Karbol, nach kaltem Kerzenwachs und darunter nach Eisen. Ein langer Saal, Liegen an beiden Wänden, die meisten leer; auf einigen liegen Gestalten unter Laken, die sich nicht rühren. Öllampen brennen in Wandhaltern, und ihr Schein reicht nicht bis in die Ecken, wo das Dunkel dichter steht, als Dunkel stehen dürfte. An einem Haken neben der Tür hängt eine Schürze, steif von etwas, das getrocknet ist.
+Drinnen riecht es nach Karbol, nach kaltem Kerzenwachs und darunter nach Eisen. Ein langer Saal, Liegen an beiden Wänden, die meisten leer; auf einigen liegen Gestalten unter Laken, die sich nicht rühren. Öllampen brennen in Wandhaltern, und ihr Schein reicht nicht bis in die Ecken, wo das Dunkel dichter steht, als Dunkel stehen dürfte. Zwischen den verhängten Fenstern reichen Regale bis unter die Decke, Flasche an Flasche, und in manchen hat sich der Inhalt in zwei Schichten getrennt, oben hell und unten trüb. An einem Haken neben der Tür hängt eine Schürze, steif von etwas, das getrocknet ist.
 Am Ende des Saals sitzt ein alter Mann in einem Rollstuhl, das Gesicht zur Hälfte im Schatten. Er spricht, bevor du ihn erreichst, mit einer glatten, geübten Stimme, die diese Sätze schon sehr oft gesagt hat und jedes Mal ein kleines Vergnügen daran findet.
 „Noch einer, durch den Regen, mit Fieber in den Augen. Dann hat der Kutscher dich nicht umsonst gefahren.“ Er beugt sich vor, bis das Lampenlicht seine Nasenspitze erreicht, und mustert dich, als lese er dir etwas von der Stirn ab. „Bleiches Blut“, sagt er leise, und dann lacht er in sich hinein, als hättest du ihm einen guten Witz erzählt. „Da bist du hier richtig. Nur muss man erst ein wenig von unserem Blut im Leib haben, ehe man solche Dinge versteht.“
 ⟨wenn herkunft == "adel"⟩ Sein Blick wandert über deine Handschuhe, das gute Leder, die gestopften Fingerspitzen, und das Lachen wird breiter. 
+„Gegen das Fieber hilft es nebenbei auch. Wo du herkommst, rafft so etwas die halben Gassen hin; hier bekommst du Blut, und danach bist du wie neu.“ Das nächste Wort spricht er aus wie ein Krämer den Namen seiner besten Ware. „Ministration. Die ganze Stadt lebt davon.“
 „Erst die Papiere. Ohne Papiere kein Blut, so ist das hier.“
 Er schiebt dir einen Bogen hin, eng bedruckt, mit einer Feder darauf. Die Tinte im Fass ist braun, und du bist nicht sicher, dass es Tinte ist.
 Vereinbarung über die Behandlung mit Blut. Der Unterzeichnete erklärt, aus freien Stücken und bei klarem Verstand zu kommen. Er erklärt, die Behandlung zu empfangen, wie sie ihm gereicht wird, und keine andere zu verlangen. Er erklärt, dass er den Grund seiner Reise wahrheitsgemäß angegeben hat. Folgen, die aus der Behandlung erwachsen, fallen dem Empfänger zu.
@@ -120,25 +121,28 @@ Die Feder zögert über dem Bogen, und ein Tropfen fällt auf das Papier und lä
 :: k1_klinik.~1 [A] {"position":"6050,1240","size":"100,100"}
 <!-- [KANON] Am Ende der Vision eine Frauenstimme, die sich freut, einen Jäger gefunden zu haben (Wortlaut eigen, Sprecherin [Offen]). -->
 Die Tinte bleibt an deinen Fingerkuppen kleben, braun und ein wenig zäh. Du reibst sie am Mantel ab. Sie geht nicht ab.
-„Gut“, sagt der alte Mann. „Sehr gut. Und wenn dir heute Nacht etwas über den Weg läuft, das es nicht geben kann: Schlaf darüber. Am Ende war alles nur das Fieber.“ Er lacht wieder, dasselbe leise Lachen, und rollt rückwärts in den Schatten, bis nur noch das Knarren der Räder von ihm bleibt.
-Man legt dich auf eine Liege; wer, siehst du nicht. Die Nadel ist dicker, als sie sein sollte. Das Blut, das in deinen Arm fließt, ist zuerst warm wie ein Bad, dann kalt wie ein Fluss im Winter, und dann ist es nichts mehr, wofür es ein Wort der Wärme oder der Kälte gäbe. Es ist fremd. Es breitet sich in dir aus und tastet, Ader um Ader, nach einem Zimmer, das ihm gehört.
-Du träumst, oder etwas träumt dich. Auf dem Boden der Klinik breitet sich eine Lache aus, rot und glänzend, und aus ihr wächst eine Gestalt: zuerst Fell, dann Klauen, dann ein Kopf, der zu lang ist und zu viele Zähne hat. Es beugt sich über dich, und sein Atem riecht nach umgegrabener Erde. Dann fängt es Feuer, ohne Funken, ohne Grund, und verbrennt kreischend über dir, bis nur noch Asche auf dein Laken rieselt.
-Danach kommen die Kleinen. Graue, verdrehte Wesen, nicht größer als ein Kind, mit Gesichtern aus nassem Ton, kriechen über die Kante der Liege, über deine Beine, deine Brust, und ihre Berührung ist kalt und neugierig. Eines hebt den Kopf und sieht dich an. Du willst schreien, und deine Kehle gehorcht dir nicht.
+„Gut“, sagt der alte Mann. „Sehr gut. Und was dir heute Nacht auch über den Weg läuft und es nicht geben dürfte: Am Morgen hältst du es für einen bösen Traum. Das tun sie alle.“ Er lacht wieder, dasselbe leise Lachen, und rollt rückwärts in den Schatten, bis nur noch das Knarren der Räder von ihm bleibt.
+Man setzt dich in einen schweren Stuhl aus Holz. Riemen legen sich über deine Handgelenke und über die Brust, Schnalle um Schnalle, von Händen, die du nicht siehst. Über dir hängen zwei Flaschen an einem eisernen Ständer, eine leer, eine dunkel.
+Die Nadel ist dicker, als sie sein sollte. Das Blut, das in deinen Arm fließt, ist zuerst warm wie ein Bad, dann kalt wie ein Fluss im Winter, und dann ist es nichts mehr, wofür es ein Wort der Wärme oder der Kälte gäbe. Es ist fremd. Es breitet sich in dir aus und tastet, Ader um Ader, nach einem Zimmer, das ihm gehört.
+Du träumst, oder etwas träumt dich. Auf dem Boden der Klinik breitet sich eine Lache aus, rot und glänzend, und aus ihr wächst eine Gestalt: zuerst Fell, dann Klauen, dann ein Kopf, der zu lang ist und zu viele Zähne hat. Es beugt sich über dich, und sein Atem riecht nach umgegrabener Erde. Dann fängt es Feuer, ohne Funken, ohne Grund, und verbrennt kreischend über dir, bis nur noch Asche in deinen Schoß rieselt.
+Danach kommen die Kleinen. Graue, verdrehte Wesen, nicht größer als ein Kind, mit Gesichtern aus nassem Ton, kriechen an den Stuhlbeinen herauf, über die Riemen, über deine Knie und deine Brust, und ihre Berührung ist kalt und neugierig. Eines hebt den Kopf und sieht dich an. Du willst schreien, und deine Kehle gehorcht dir nicht.
 Ganz nah an deinem Ohr sagt eine Frauenstimme, sanft und zufrieden wie jemand, der lange gesucht hat: „Da bist du ja. Ein Jäger.“ Dann ist nichts mehr.
 [[weiter->k1_erwachen]]
 
 :: k1_erwachen [A] {"position":"6050,1410","size":"100,100"}
-Du erwachst, und die Klinik ist leer. Der Rollstuhl ist fort, die Lampen sind fast heruntergebrannt, und auf den Liegen an der Wand liegt niemand mehr unter den Laken, nur die Laken selbst, zerwühlt, als sei jemand hastig aufgestanden. Dein Arm pocht dort, wo die Nadel war, und unter der Haut bewegt sich etwas, langsam, im Takt deines Herzens.
-An der Wand, auf Augenhöhe, steckt ein Zettel. Die Schrift ist eilig, die Buchstaben drängen sich aneinander, als habe der Schreiber keine Zeit gehabt oder keine Ruhe mehr: Es geht um bleiches Blut, und darum, dass man es suchen müsse, um über die Jagd hinauszukommen. Wer das geschrieben hat, weißt du nicht. Die Hand, die es schrieb, hält den Stift so, wie du ihn hältst.
+Du erwachst im Stuhl, und die Klinik ist leer. Die Riemen hängen offen von den Armlehnen, und am Ständer ist auch die dunkle Flasche durchsichtig geworden, bis auf einen roten Rand am Boden. Der Rollstuhl ist fort, die Lampen sind fast heruntergebrannt, und auf den Liegen an der Wand liegt niemand mehr unter den Laken, nur die Laken selbst, zerwühlt, als sei jemand hastig aufgestanden. Dein Arm pocht dort, wo die Nadel war, und unter der Haut bewegt sich etwas, langsam, im Takt deines Herzens.
+Das Fieber ist fort. Zum ersten Mal seit Wochen ist dein Kopf klar, so klar, dass die Kanten der Dinge schärfer stehen als zuvor, und unter der Klarheit liegt ein Hunger, der nicht nach Brot fragt.
+⟨wenn grund == "heilung_selbst"⟩ Du bist gekommen, um zu genesen, und du bist genesen. Deine Hand legt sich von selbst auf die Armbeuge und bleibt dort liegen, die Finger fest um den Einstich. 
+Auf dem Stuhl rechts von dir, einem einfachen, auf dem sonst ein Besucher sitzt, liegt ein Zettel, als habe jemand ihn dort vergessen. Die Schrift ist eilig, die Buchstaben drängen sich aneinander, und die letzte Zeile läuft über den Rand des Papiers hinaus. Es geht um bleiches Blut, und darum, dass man es suchen müsse, um über die Jagd hinauszukommen. Wer das geschrieben hat, weißt du nicht.
 Hinter dir knarrt eine Diele.
 Zwischen den Liegen richtet sich etwas auf. Es ist größer als ein Mensch und hat einmal einem gehört: Fetzen eines Hemdes hängen ihm an den Schultern, und im Fell an seiner Brust glänzt ein einzelner Hornknopf. Es atmet schwer und nass, und als es den Kopf dreht, siehst du, dass seine Augen kein Weiß mehr haben.
 <!-- Logik: tode = 1 -->
-[[Nach dem Stuhl neben der Liege greifen #fliesst->k1_erwachen ✦ 1]]
+[[Nach dem Stuhl rechts von dir greifen #fliesst->k1_erwachen ✦ 1]]
 [[Zur Tür stürzen #fliesst->k1_erwachen ✦ 2]]
-[[Den Atem anhalten und still liegen #fliesst->k1_erwachen ✦ 3]]
+[[Den Atem anhalten und still sitzen #fliesst->k1_erwachen ✦ 3]]
 
 :: k1_erwachen ✦ 1 [A folge] {"position":"5910,1580","size":"100,100"}
-Nach dem Stuhl neben der Liege greifst du, hebst ihn, und die Bestie schlägt ihn dir aus den Händen, als wäre er aus Papier.
+Nach dem Stuhl rechts von dir greifst du, der Zettel segelt zu Boden, und als du den Stuhl hebst, schlägt die Bestie ihn dir aus den Händen, als wäre er aus Papier.
 [[weiter->k1_erwachen.~1]]
 
 :: k1_erwachen ✦ 2 [A folge] {"position":"6050,1580","size":"100,100"}
@@ -146,7 +150,7 @@ Zur Tür stürzt du und kommst drei Schritte weit. Dann trifft dich etwas in den
 [[weiter->k1_erwachen.~1]]
 
 :: k1_erwachen ✦ 3 [A folge] {"position":"6190,1580","size":"100,100"}
-Du hältst den Atem an und liegst still. Es hilft nichts. Sie riecht dich, sie riecht das neue Blut in deinen Adern.
+Du hältst den Atem an und rührst dich nicht, die Hände flach auf den Armlehnen. Es hilft nichts. Es riecht dich, es riecht das neue Blut in deinen Adern.
 [[weiter->k1_erwachen.~1]]
 
 :: k1_erwachen.~1 [A] {"position":"6050,1750","size":"100,100"}
@@ -154,121 +158,131 @@ Klauen, Zähne, Gewicht. Es tut nicht weh; du staunst nur, wie schnell es geht. 
 [[weiter->k1_traum_erst]]
 
 :: k1_traum_erst [A] {"position":"6050,1920","size":"100,100"}
-<!-- [KANON] Erster Besuch: das Haus ist verschlossen, die Puppe leblos, die Boten geben Wandelwaffe und Feuerwaffe. PRÜFEN: Reihenfolge. -->
+<!-- [KANON lore:orte/jaegertraum] Erster Besuch: das Haus ist verschlossen, die Puppe leblos, die Boten geben Wandelwaffe und Feuerwaffe. PRÜFEN: Reihenfolge. -->
 <!-- [ERWEITERT] Kein Weg hinaus. PRÜFEN: Gartentor im Original. -->
-Du liegst auf dem Rücken. Über dir ein Himmel ohne Sonne, ohne Wolken, ohne Sterne, ein Himmel von der Farbe alten Elfenbeins, der weder Tag noch Nacht ist. Unter deinen Händen Blumen, weiß und unzählig, und ihr Duft ist so süß, dass er dir die Kehle zuschnürt.
-Du stehst auf. Du lebst. Du solltest nicht leben. Der Gedanke ist so groß, dass er keinen Platz in deinem Kopf findet, und so legst du ihn beiseite wie einen Brief, den man später lesen will. Der Einstich in deiner Armbeuge pocht, frisch, als hätte man dir eben erst Blut gegeben. Sonst ist es still. Kein Vogel, kein Wind, kein Wasser. Nur dein eigenes Herz.
-Ein Pfad führt zwischen Grabsteinen einen Hügel hinauf zu einem kleinen Haus mit erleuchteten Fenstern. Die Tür ist verschlossen. Im Garten stehen leere Bänke, und im Gras liegt eine umgekippte Gießkanne, in der das Wasser längst verdunstet ist, während ringsum alles blüht. Es ist ein Ort, den jemand sehr geliebt und dann sehr lange nicht mehr betreten hat.
-Du gehst den Zaun entlang und suchst ein Tor. Jeder Weg, den du nimmst, biegt zwischen den Grabsteinen ab und führt dich zurück zum Fuß des Hügels.
-Am Fuß einer Treppe steht eine Frau, reglos, in einem schlichten Kleid und mit einer Haube. Erst als du näher kommst, siehst du die Gelenke an ihren Händen: Sie ist eine Puppe, so groß wie ein Mensch, mit einem Gesicht, so sorgfältig gemalt, dass du die Pinselstriche an den Wimpern siehst. Ihre Augen sind offen. Sie sehen dich nicht.
-Dann bewegt sich der Boden. Aus der Erde zwischen den Blumen kriechen die kleinen grauen Wesen aus deinem Traum, und diesmal träumst du nicht. Sie fürchten dich nicht. Sie benehmen sich nicht wie Fremde, eher wie Leute, die etwas abholen, das man ihnen versprochen hat. Sie strecken dir ihre dünnen Arme entgegen, und in ihren Händen liegen Waffen. Boten, denkst du, ohne zu wissen, woher dieses Wort kommt.
-Die erste Waffe, die sie dir reichen, ist eine Wandelwaffe der Jäger: ein Sägespalter, eine gezahnte Klinge, die sich mit einem Ruck zu doppelter Länge ausklappt. Die Zähne sind nach hinten geschliffen, für Fell und für das, was darunter liegt. Wer ihn entworfen hat, wusste genau, wogegen er ihn baute. Der Griff ist abgegriffen. Jemand vor dir hat ihn lange getragen.
-Dazu eine Feuerwaffe, kurz und schwer, in einer Hand, die zu klein ist, um sie zu tragen.
+Du liegst auf dem Rücken, und über dir steht ein Himmel ohne Sonne, ohne Wolken und ohne Sterne, von der Farbe alten Elfenbeins, ein Himmel, der weder Tag sein will noch Nacht. Unter deinen Händen wachsen Blumen, weiß und unzählig, und ihr Duft ist so süß, dass er dir die Kehle zuschnürt.
+Beim Aufstehen tastest du nach der Stelle, an der dich die Klauen trafen, und findest den Mantel heil und die Haut darunter glatt. Du lebst. Der Gedanke ist zu groß für deinen Kopf, und so legst du ihn beiseite wie einen Brief, den man später öffnen will. Nur der Einstich in der Armbeuge pocht noch, und er ist frisch. Kein Vogel singt hier, kein Wind geht, nirgends läuft Wasser; zu hören ist nur dein eigenes Herz.
+Ein Pfad führt zwischen Grabsteinen einen Hügel hinauf zu einem kleinen Haus, in dessen Fenstern Licht brennt, ohne dass sich dahinter je ein Schatten bewegt. Die Tür ist verschlossen. Im Garten stehen leere Bänke, und im Gras liegt eine umgekippte Gießkanne, längst trocken, während ringsum alles blüht. Es ist ein Ort, den jemand sehr geliebt und dann sehr lange nicht mehr betreten hat.
+Am Zaun entlang suchst du ein Tor. Jeder Weg biegt zwischen den Grabsteinen ab, sanft und ohne Eile, und bringt dich zum Fuß des Hügels zurück, und beim dritten Mal erkennst du den Stein wieder, an dem du losgegangen bist.
+Am Fuß einer Treppe steht eine Frau, reglos, in einem schlichten Kleid und mit einer Haube. Erst als du näher kommst, siehst du die Gelenke an ihren Händen: Sie ist eine Puppe, so groß wie ein Mensch, mit einem Gesicht, so sorgfältig gemalt, dass sich an den Wimpern jeder Pinselstrich zählen lässt. Ihre Augen sind offen. Sie sehen dich nicht.
+Dann regt sich der Boden. Zwischen den Blumen bricht die Erde auf, und heraus kriechen die kleinen grauen Wesen aus deinem Fiebertraum, und diesmal träumst du nicht. Sie fürchten dich nicht. Sie drängen heran wie Leute, die abholen, was man ihnen versprochen hat, und strecken dir ihre dünnen Arme entgegen, und in ihren Händen liegen Waffen. Boten, denkst du, und weißt nicht, wer dir das Wort eingegeben hat.
+Die erste Waffe, die sie dir reichen, ist ein Sägespalter: eine gezahnte Klinge, die mit einem Ruck aus ihrem Gelenk schnellt und dann doppelt so lang ist. Die Zähne stehen schräg nach hinten, so gefeilt, dass sie beim Herausziehen mehr mitnehmen als beim Hineingehen. Das Leder am Griff ist schwarz und glatt gegriffen, und in der Mulde für den Daumen hat ein anderer Daumen vor dir eine Kuhle hinterlassen.
+Dann halten dir zwei Hände je eine Feuerwaffe hin, Hände, die zu klein sind, um dieses Gewicht zu tragen, und es trotzdem tragen.
 <!-- Logik: ort = "traum" · waffe = "saege" -->
-[[Die Pistole: genau->k1_traum_erst ✦ 1]]
-[[Die Donnerbüchse: streut, hält auf Abstand->k1_traum_erst ✦ 2]]
+[[Nach der schweren Pistole greifen #fliesst->k1_traum_erst ✦ 1]]
+[[Die kurze Büchse mit dem Trichter nehmen #fliesst->k1_traum_erst ✦ 2]]
 
 :: k1_traum_erst ✦ 1 [A folge] {"position":"5980,2090","size":"100,100"}
-Eine schwere Pistole, die Kugeln aus Quecksilber verschießt. Ihr Gewicht beruhigt dich.
+Nach der schweren Pistole greifst du, und ihr Gewicht legt sich in deine Hand, als habe sie dort schon einmal gelegen.
 <!-- Logik: feuerwaffe = "pistole" -->
 [[weiter->k1_traum_erst.~1]]
 
 :: k1_traum_erst ✦ 2 [A folge] {"position":"6120,2090","size":"100,100"}
-Eine kurze, plumpe Büchse mit trichterförmigem Lauf, die eine Handvoll Kugeln auf einmal in die Welt speit.
+Die kurze Büchse mit dem Trichter nimmst du, eine plumpe Donnerbüchse, deren Lauf sich zur Mündung hin weitet, damit eine Handvoll Kugeln auf einmal hinausfährt.
 <!-- Logik: feuerwaffe = "donnerbuechse" -->
 [[weiter->k1_traum_erst.~1]]
 
 :: k1_traum_erst.~1 [A] {"position":"6050,2260","size":"100,100"}
-Am Fuß des Hügels steht ein Grabstein, auf dem kein Name steht. Es ist der einzige Ort im Garten, der irgendwohin führt. Als du ihn berührst, verschwimmt der Garten, die Blumen, die Puppe, das Haus, wie Farbe in Wasser, und der Geruch von Karbol kehrt zurück.
+Ein Bote zupft dich am Ärmel. In seiner Hand liegt eine Nadel, und ehe du zurückweichen kannst, sticht er dir in die Fingerkuppe, ohne Hast und ohne Bosheit. Den Tropfen, der aufquillt, reibt er auf eine Kugel aus Quecksilber, die in seiner Handfläche zittert, als lebe sie, und das Blut zieht in das Silber ein und ist fort. Dann legt er die Kugel zu den anderen, in die Tasche an deinem Gürtel.
+Nur vor einem Grabstein am Fuß des Hügels, einem ohne Namen, sind die Blumen niedergetreten, zu einem schmalen Pfad aus geknickten Stängeln. Als du die Hand auf den Stein legst, verschwimmen der Garten, die Blumen, die Puppe und das Haus wie Farbe in Wasser, und der Geruch von Karbol kehrt zurück.
 [[weiter->k1_klinik_kampf]]
 
 :: k1_klinik_kampf [A] {"position":"6050,2430","size":"100,100"}
-<!-- [KANON] Die Bestie in der Klinik. Erster Kampf, lehrt das Lesen der Anzeichen. -->
 ⟨wenn k1_klinik_kampf == 1⟩
-Du stehst wieder in der Klinik, auf genau der Diele, auf der du gestorben bist. Unter deinen Stiefeln ist das Holz noch dunkel. Deine Hand liegt um den Griff der Waffe, so fest, dass die Knöchel weiß werden.
+Du stehst wieder in der Klinik, auf genau der Diele, auf der du gestorben bist. Das Holz unter deinen Stiefeln ist noch dunkel und klebt. Deine Hand liegt um den Griff des Sägespalters, so fest, dass die Knöchel weiß hervortreten.
 ⟨sonst⟩
-Wieder die Klinik, wieder der Geruch von Eisen. Du kennst diesen Raum jetzt besser, als dir lieb ist.
-Die Bestie hockt zwischen den Liegen, über etwas gebeugt, das du nicht ansehen willst. Sie hebt den Kopf, als hätte sie auf dich gewartet.
+Wieder die Klinik, wieder Karbol und Eisen. Inzwischen kennst du die Diele, die unter dem ersten Schritt knarrt, und die Stelle auf dem Boden, an der du zuletzt gelegen hast.
+Die Bestie hockt zwischen den Liegen über einem Körper, von dem nur noch ein Fuß in einem Filzpantoffel zu dir herüberzeigt. Sie hebt den Kopf, als hätte sie auf dich gewartet.
 <!-- Logik: laterne = -> k1_klinik_kampf -->
 [[weiter->k1_klinik_kampf.t1]]
 
 :: k1_klinik_kampf.t1 [A] {"position":"2790,2600","size":"100,100"}
-Sie duckt sich tief. Die Hinterläufe spannen sich, die Krallen graben sich in die Dielen, und das ganze Gewicht ihres Körpers wandert nach hinten wie bei einer Feder, die man zusammendrückt.
+Sie duckt sich tief. Die Hinterläufe spannen sich, die Krallen graben sich in die Dielen, und das ganze Gewicht ihres Körpers wandert nach hinten wie bei einer Feder, die man zusammendrückt. Ihr Blick hängt an der Stelle, an der du stehst, und links von dir ist zwischen zwei Liegen eine Lücke frei.
 ⟨wenn gelernt ? klinik_sprung⟩ Du kennst das. Wer sich so duckt, springt, und er springt dorthin, wo du jetzt stehst. 
-[[Zur Seite ausweichen->k1_klinik_kampf.t1 ✦ 1]]
-[[Den Sprung mit der Waffe abfangen->k1_klinik_kampf.t1 ✦ 2]]
+[[Nach links ausweichen #fliesst->k1_klinik_kampf.t1 ✦ 1]]
+[[Nach vorn gegen den Sprung stemmen #fliesst->k1_klinik_kampf.t1 ✦ 2]]
 
 :: k1_klinik_kampf.t1 ✦ 1 [A folge] {"position":"2720,2770","size":"100,100"}
-Du wirfst dich nach links. Die Bestie fliegt an dir vorbei, so nah, dass ihr Fell dein Gesicht streift, und kracht in ein Regal. Glas zersplittert, irgendetwas Flüssiges läuft über den Boden.
+Nach links wirfst du dich, flach über die Dielen. Die Bestie fliegt an dir vorbei, so nah, dass ihr Fell dein Gesicht streift, und kracht in ein Regal. Glas zersplittert, und über den Boden läuft, was in den Flaschen war, dunkel und dick.
 [[weiter->k1_klinik_kampf.t2]]
 
 :: k1_klinik_kampf.t1 ✦ 2 [A folge] {"position":"4085,2770","size":"100,100"}
-Du stemmst dich gegen den Sprung, als könntest du ihn aufhalten. Das Gewicht trifft dich wie ein Fuhrwerk und wirft dich gegen eine Liege. Etwas in deiner Schulter knackt.
+Nach vorn stemmst du dich gegen den Sprung, die Klinge quer vor der Brust. Das Gewicht trifft dich wie ein Fuhrwerk und wirft dich rückwärts gegen eine Liege, und in deiner Schulter knackt es.
 <!-- Logik: zuletzt = klinik_sprung · treffer(2) -->
 [[weiter->k1_klinik_kampf.t2]]
 
 :: k1_klinik_kampf.t2 [A] {"position":"2720,2940","size":"100,100"}
-Sie richtet sich auf, größer, als du dachtest, und hebt beide Arme weit über den Kopf. Für einen Augenblick steht sie offen da, wie ein Prediger auf der Kanzel.
-[[Unter dem Schlag hindurch nach vorn->k1_klinik_kampf.t2 ✦ 1]]
-[[Zurückweichen->k1_klinik_kampf.t2 ✦ 2]]
+Sie richtet sich auf, größer, als du dachtest, und hebt beide Arme über den Kopf, bis die Krallen beinahe an den Kronleuchter rühren. Für einen Augenblick steht sie offen da wie ein Prediger auf der Kanzel, und unter ihren Armen, zwischen Achsel und Hüfte, klafft eine Lücke, breit genug für einen Menschen.
+[[Unter den Armen hindurch nach vorn #fliesst->k1_klinik_kampf.t2 ✦ 1]]
+[[Zwei Schritte nach hinten weichen #fliesst->k1_klinik_kampf.t2 ✦ 2]]
 
 :: k1_klinik_kampf.t2 ✦ 1 [A folge] {"position":"2650,3110","size":"100,100"}
-Du gehst nach vorn statt zurück, in den Schlag hinein und unter ihm hindurch. Die Arme fahren hinter dir zusammen, und deine Waffe findet ihre Seite. Sie heult, und es klingt fast menschlich.
+Unter den Armen hindurch gehst du nach vorn, in den Schlag hinein statt aus ihm heraus. Hinter dir fahren die Arme zusammen, und deine Säge findet ihre Seite. Sie heult, und es klingt fast menschlich.
 [[weiter->k1_klinik_kampf.t3]]
 
 :: k1_klinik_kampf.t2 ✦ 2 [A folge] {"position":"4015,3110","size":"100,100"}
-Du weichst zurück, aber die Arme sind länger, als sie aussehen. Die Krallen ziehen drei heiße Linien über deine Brust.
+Zwei Schritte weichst du nach hinten, aber die Arme reichen weiter, als du gedacht hast. Die Krallen ziehen drei heiße Linien über deine Brust.
 <!-- Logik: zuletzt = klinik_schwer · treffer(1) -->
 [[weiter->k1_klinik_kampf.t3]]
 
 :: k1_klinik_kampf.t3 [A] {"position":"2650,3280","size":"100,100"}
-Sie taumelt, Blut tropft aus ihrer Seite, und sie reißt das Maul auf, um ein letztes Mal nach dir zu schnappen.
-[[Feuerwaffe ins aufgerissene Maul->k1_klinik_kampf.t3 ✦ 1]]
-[[Zuschlagen, bevor sie beißt->k1_klinik_kampf.t3 ✦ 2]]
+Sie taumelt. Blut läuft ihr aus der Seite, und der Kopf sinkt auf deine Höhe herab. Dann reißt sie das Maul auf, so weit, dass hinter den Zähnen der Schlund offen liegt, und für einen Herzschlag hält sie still, den Atem tief in der Brust, bevor sie zubeißt.
+[[Vorn in das offene Maul schießen #fliesst->k1_klinik_kampf.t3 ✦ 1]]
+[[Mit der Säge von oben zuschlagen #fliesst->k1_klinik_kampf.t3 ✦ 2]]
 
 :: k1_klinik_kampf.t3 ✦ 1 [A folge] {"position":"2580,3450","size":"100,100"}
-Du hebst die Feuerwaffe und schießt, mitten hinein. Die Bestie bricht in die Knie, und du bist über ihr, bevor sie sich fangen kann.
+⟨wenn feuerwaffe == "pistole"⟩
+Vorn in das offene Maul schießt du, eine einzige Kugel, und der Knall springt zwischen den Wänden hin und her.
+⟨sonst⟩
+Vorn in das offene Maul schießt du, und die Donnerbüchse speit ihre Handvoll Kugeln so nah hinein, dass dir das Blut warm ins Gesicht spritzt.
+Die Bestie bricht in die Knie, und du bist über ihr, bevor sie sich fangen kann.
 [[weiter->k1_klinik_kampf.sieg]]
 
 :: k1_klinik_kampf.t3 ✦ 2 [A folge] {"position":"3945,3450","size":"100,100"}
-Du schlägst zu, und sie beißt zu, im selben Herzschlag. Ihre Zähne schließen sich um deinen Unterarm, dann erschlaffen sie.
+Mit der Säge schlägst du von oben zu, und im selben Herzschlag beißt sie. Ihre Zähne schließen sich um deinen Unterarm, dann erschlaffen sie.
 <!-- Logik: zuletzt = biss · treffer(1) -->
 [[weiter->k1_klinik_kampf.sieg]]
 
 :: k1_klinik_kampf.sieg [A] {"position":"2580,3620","size":"100,100"}
-Die Bestie liegt still. Aus ihrem Körper steigt ein Schimmer auf, dünner als Rauch, und fließt in dich hinein, und für einen Augenblick fühlst du dich stärker, satter, als hättest du gegessen. Blutechos. Das Wort liegt dir auf der Zunge, bevor du es gedacht hast.
-Du stehst lange da und siehst sie an. Ein Knopf glänzt in ihrem Fell. Irgendjemand hat ihn einmal angenäht.
-Dann ruft eine Frauenstimme, gedämpft, hinter einer Tür am Ende des Ganges.
+Die Bestie liegt still. Aus ihrem Körper steigt ein Schimmer, dünner als Rauch, und fließt dir über die Hände in die Ärmel, und für einen Augenblick bist du satt, als hättest du gegessen, warm bis in die Fingerspitzen.
+Lange stehst du da und siehst sie an. Im Fell an ihrer Brust glänzt der Hornknopf, und an ihm hängen noch zwei Fäden. Irgendjemand hat ihn einmal angenäht.
+Dann ruft hinter einer Tür am Ende des Ganges eine Frauenstimme, gedämpft durch das Holz, ob da draußen noch jemand atme.
 <!-- Logik: echos = echos + 2 -->
 [[weiter->k1_iosefka]]
 
 :: k1_iosefka [A] {"position":"2580,3790","size":"100,100"}
-<!-- [KANON] Iosefka öffnet nicht, um ihre Patienten zu schützen, schiebt aber eine Blutampulle hinaus. -->
-<!-- [ERWEITERT] Ihre Eigenart (Sie-Form, „Das notiere ich“) ist der Maßstab, an dem man in Kapitel 2 die Hochstaplerin erkennt. -->
-Die Tür ist aus schwerem Holz und von innen verriegelt. Dahinter eine junge Stimme, müde und sehr genau, die jedes Wort setzt wie einen Stich mit der Nadel. „Bleiben Sie, wo Sie sind. Ich bin Iosefka, und das hier ist meine Klinik. Heute Nacht öffne ich nicht. Nicht für Sie und nicht für sonst jemanden. Was die Jagd aus Menschen macht, lasse ich nicht zu meinen Kranken.“
-[[Höflich bitten->k1_iosefka ✦ 1]]
-[[Gegen die Tür schlagen->k1_iosefka ✦ 2]]
+<!-- [ERWEITERT] Ort: Im Kanon spricht man Iosefka von außen an der Kliniktür, nach dem ersten Traum (RK1 §3). Bei uns hinter einer Tür im Inneren der Klinik, vor der ersten Laterne. -->
+<!-- [ERWEITERT] „Besser als das, was die Kirche ausgibt“: eigener Vergleich (Kanon: verfeinertes Blut, Spezialität der Klinik, lore:gegenstaende/yharnam-und-blut). -->
+<!-- [ERWEITERT] Ihre Eigenart (Sie-Form, „Das notiere ich“) ist der Maßstab, an dem man in Kapitel 2 die Hochstaplerin erkennt; ebenso ihre Wärme. -->
+Die Tür am Ende des Ganges ist aus schwerem Holz, mit Eisen beschlagen und von innen verriegelt. Unter ihr liegt ein Streifen Licht, und durch die Ritze zieht ein scharfer Geruch nach Alkohol und Kampfer, sauberer als alles andere in diesem Haus.
+„Bleiben Sie, wo Sie sind.“ Die Stimme ist jung, müde und sehr genau, und sie setzt jedes Wort wie einen Stich mit der Nadel. „Ich bin Iosefka, und das hier ist meine Klinik. Heute Nacht öffne ich nicht, nicht für Sie und für niemanden sonst. Meine Kranken dürfen sich nicht anstecken, und was die Jagd aus den Menschen macht, lasse ich nicht zu ihnen herein.“
+[[Leise durch das Holz bitten #fliesst->k1_iosefka ✦ 1]]
+[[Mit der Faust gegen das Holz schlagen #fliesst->k1_iosefka ✦ 2]]
 
 :: k1_iosefka ✦ 1 [A folge] {"position":"2580,3960","size":"100,100"}
-Du bittest sie, ruhig, wie man einen Arzt bittet. Hinter der Tür ein kurzes Schweigen, dann ein Laut, der beinahe ein Lachen ist. „Ein höflicher Jäger. Das notiere ich mir.“ Du hörst tatsächlich eine Feder kratzen.
+Leise bittest du durch das Holz, mit der Geduld, die man in Wartezimmern lernt. Hinter der Tür ein kurzes Schweigen, dann ein Laut, der beinahe ein Lachen ist. „Ein höflicher Jäger. Das notiere ich mir.“ Drinnen kratzt tatsächlich eine Feder. Dann, leiser und mehr zu sich selbst: „Wenn diese Nacht vorbei ist, schiebe ich den Riegel zurück, und dann möchte ich das Gesicht sehen, das so höflich war.“ Eine Pause. „So etwas sollte ich nicht einmal denken. Ich denke es trotzdem gern.“
 <!-- Logik: iosefka = iosefka + 1 -->
 [[weiter->k1_iosefka.~1]]
 
 :: k1_iosefka ✦ 2 [A folge] {"position":"6815,3960","size":"100,100"}
-Du schlägst gegen die Tür, bis dir die Knöchel brennen. Drinnen wird es still. „Faustschläge gegen eine verriegelte Tür“, sagt sie dann, kühl. „Das notiere ich auch.“ Eine Feder kratzt.
+Mit der Faust schlägst du gegen das Holz, bis dir die Knöchel brennen. Drinnen wird es still. Dann, nah an der Ritze: „Sind Sie das noch, der Jäger, der für diese Stadt jagt? Oder schon das, was die Jagd aus ihm gemacht hat? Sie jagen Bestien. Benehmen Sie sich nicht wie eine.“ Eine Weile hörst du nur ihren Atem. „Faustschläge gegen eine verriegelte Tür“, sagt sie dann, kühl. „Das notiere ich auch.“ Eine Feder kratzt.
 <!-- Logik: iosefka = iosefka - 1 -->
 [[weiter->k1_iosefka.~1]]
 
 :: k1_iosefka.~1 [A] {"position":"2580,4130","size":"100,100"}
-Etwas schabt über den Boden. Durch den Spalt unter der Tür kommt eine kleine Phiole. Das Blut darin ist heller als alles, was du heute Nacht gesehen hast, und durch das Glas hindurch warm. „Aus meinem eigenen Vorrat“, sagt sie. „Besser als das, was die Kirche ausgibt. In den Oberschenkel, kräftig, nicht zögern. Sie jagen für diese Stadt, ob die Stadt es Ihnen dankt oder nicht. Mehr kann ich nicht tun.“
-Du hörst ihre Schritte, die sich entfernen, und dann das leise Stöhnen von jemandem, der hinter dieser Tür in einem Bett liegt und nicht schlafen kann.
+Über die Dielen schabt Glas. Durch den Spalt unter der Tür schiebt sich eine kleine Phiole, und das Blut darin ist heller als alles Blut, das du in dieser Stadt gesehen hast, und durch das Glas hindurch warm. „Aus meinem eigenen Vorrat“, sagt sie. „Besser als das, was die Kirche ausgibt. In den Oberschenkel, kräftig, und nicht zögern. Sie jagen für diese Stadt, ob die Stadt es Ihnen dankt oder nicht. Mehr kann ich nicht für Sie tun.“
+⟨wenn iosefka > 0⟩
+Ihre Stimme entfernt sich schon, als sie noch einmal spricht. „Ich bete, dass Ihnen in dieser Nacht ein Licht bleibt.“
+⟨sonst⟩
+Ihre Stimme entfernt sich schon, als sie noch einmal spricht. „Und lassen Sie nicht zu, dass die Jagd Sie frisst.“
+Dann Schritte, die leiser werden, und gedämpft durch eine zweite Tür das Stöhnen von jemandem, der in einem Bett liegt und nicht schlafen kann.
 <!-- Logik: ampulle = 1 -->
 [[weiter->k1_laterne_zentral]]
 
 :: k1_laterne_zentral [A] {"position":"2580,4300","size":"100,100"}
-<!-- [KANON] Erste Laterne gleich vor der Klinik, neben Gilberts Fenster. -->
-Vor der Klinik öffnet sich die Stadt. Kalte Luft, die nach Rauch riecht, nach nassem Stein und nach etwas Verbranntem, das kein Holz ist. Über den Dächern hängt die Sonne, tief und rot hinter dem Rauch, kurz vor dem Untergang. Neben der Tür steht eine Laterne auf einem eisernen Pfahl, erloschen. Als du sie berührst, flammt sie auf, und aus dem Boden um sie herum kriechen die Boten, als hätten sie hier auf dich gewartet.
-Du verstehst, ohne dass es dir jemand sagt: Von hier aus führt ein Weg zurück in den Garten mit den weißen Blumen. An einer Laterne kannst du nicht verloren gehen. Ein zweiter Gedanke folgt dem ersten so leise, dass du nicht weißt, ob er deiner ist: Wer nicht verloren gehen kann, kann auch nicht davonlaufen.
+Vor der Klinik schlägt dir kalte Luft entgegen, die nach Rauch riecht, nach nassem Stein und nach einem Brand, in dem kein Holz gebrannt hat. Die Gasse ist steil und leer. Zwischen zwei Giebeln hängt die Sonne, tief und rot, und du wartest darauf, dass sie sinkt.
+Neben der Tür steht auf einem eisernen Pfahl eine Laterne, erloschen, das Glas von innen verrußt. Als du sie berührst, flammt sie auf, ohne dass du Feuer gemacht hättest, und um ihren Fuß bricht die Erde auf: Die Boten kriechen heraus, drei, vier, und drängen sich an das Eisen, wo es warm ist. Über dir, hinter einem vergitterten Fenster, bricht ein Husten ab, mitten im Anfall.
+Im Flackern hinter dem Glas liegt für einen Lidschlag der Garten, weiß und still, und sein süßer Duft weht dir in die Nase. Dorthin führt von hier ein Weg zurück, das weiß dein Körper, bevor du es denkst; an einer Laterne kannst du nicht verloren gehen. Ein zweiter Gedanke folgt dem ersten so leise, dass du nicht weißt, ob er deiner ist: Wer nicht verloren gehen kann, kann auch nicht davonlaufen.
 <!-- Logik: laterne = -> k1_hub_b -->
 [[weiter->k1_hub_b]]
 
@@ -1056,34 +1070,39 @@ Die Gräber schweigen. Am Holzkreuz des Bäckerlehrlings ist die Erde aufgewühl
 [[weiter->k1_hub_c]]
 
 :: k1_d_grab [D] {"position":"11015,11440","size":"100,100"}
-<!-- [KANON] Nach Gascoignes Tod: Laterne am Grab, Schlüssel zum Kathedralenbezirk; Violas Leiche auf einem Dach über der Arena, bei ihr die rote Brosche mit ihrem Namen. -->
 <!-- [OFFEN] Wer Viola getötet hat, sagt das Spiel nicht. Der Text lässt beide Lesarten offen. -->
-An der Mauer des Friedhofs flammt eine Laterne auf, von selbst. Neben dem, was von {kennt_gascoigne():Gascoigne|dem Mann mit dem Verband} übrig ist, liegt ein schwerer eiserner Schlüssel mit einem eingeprägten Zeichen{k1_c_graeber:, das du schon über dem Tor bei den Gräbern gesehen hast}. Er wird das Tor zum Kathedralenbezirk öffnen. Er wiegt mehr, als ein Schlüssel wiegen sollte.
-Am Ende des Friedhofs führt eine schmale Treppe hinauf auf ein flaches Dach. Du steigst hinauf, Stufe um Stufe, langsamer, als deine Beine könnten.
-Oben auf dem Dach liegt eine Frau. Sie liegt auf der Seite, als habe sie sich hingelegt, um auszuruhen, das Gesicht abgewandt, das Haar über den Stein gebreitet. Ihr Kleid ist dunkel und nass. Und an ihrer Brust, über dem Herzen, steckt eine große Brosche, rot wie ein Tropfen frischen Blutes, und in die goldene Fassung ist ein Name graviert: Viola. Das V macht einen kleinen Kringel nach links.
+<!-- [ERWEITERT] Das Zeichen auf dem Schlüssel und über dem Tor (Befund 8: zeigen statt sagen, wohin der Schlüssel führt); die Treppe, die am Tor vorbei auf das Dach führt. -->
+An der Friedhofsmauer flammt eine Laterne auf, und niemand hat sie angezündet. Ihr Licht reicht bis zu dem, was von {kennt_gascoigne():Gascoigne|dem Mann mit dem Verband} übrig ist, und daneben im nassen Gras liegt ein eiserner Schlüssel, lang und grob geschmiedet. In seinen Griff ist ein Zeichen geprägt: ein Kreis, durch den drei Striche laufen, die sich in der Mitte nicht treffen. Als du ihn aufhebst, zieht er dir den Arm nach unten. Er wiegt mehr, als ein Schlüssel wiegen dürfte.
+Hinter der Stelle, an der ihr gekämpft habt, steigt eine steinerne Treppe die Friedhofsmauer hinauf, schmal und in der Mitte ausgetreten, wie man sie in alten Städten für Totengräber und Glöckner baut und für niemanden sonst. Oben endet sie an einem Tor aus schwarzer Eiche, mit Eisen beschlagen, und über seinem Sturz ist dasselbe Zeichen in den Stein gehauen, der Kreis und die drei Striche. Jenseits des Tores zieht sich die Stadt weiter hinauf, Dach über Dach, bis zu den Türmen, von denen vorhin der Gesang herabkam.
+Kurz unter dem Tor führt ein Sims hinaus auf ein flaches Dach über dem Friedhof. Du steigst hinauf, Stufe um Stufe, langsamer, als deine Beine könnten.
+Auf dem Dach liegt eine Frau. Sie liegt auf der Seite, das Gesicht abgewandt, das Haar über den Stein gebreitet, und von der Treppe aus könnte man meinen, sie habe sich nur hingelegt, um auszuruhen. Ihr Kleid ist dunkel und nass. Über dem Herzen steckt eine große Brosche, rot wie ein frischer Tropfen, und in die goldene Fassung ist ein Name graviert: Viola. Das V macht einen kleinen Kringel nach links.
 ⟨wenn spieluhr⟩ Du kennst diesen Kringel. Er steht im Deckel der Spieluhr in deiner Tasche. 
 Die Wunden sind breit und tief, zu breit für eine Klinge, zu ordentlich für Zähne.
-⟨wenn q_mutter >= 1⟩ Ein Fenster am Brunnenplatz, ein rotes Band am Riegel, eine kleine Stimme, die alles richtig gemacht hat. 
+⟨wenn q_mutter >= 1⟩ Ein Fenster am Brunnenplatz, ein weißes Band am Riegel, eine kleine Stimme, die alles richtig gemacht hat. 
 <!-- Logik: laterne = -> k1_d_rueckweg -->
-[[Ihr ausrichten, was er dir aufgetragen hat (nur wenn q_frau == 1)->k1_d_grab ✦ 1]]
-[[Ihr das Haar aus dem Gesicht streichen->k1_d_grab ✦ 2]]
-[[Schweigen->k1_d_grab.brosche_wahl]]
+[[Ihr ausrichten, was er dir aufgetragen hat #fliesst (nur wenn q_frau == 1)->k1_d_grab ✦ 1]]
+[[Ihr das Haar aus dem Gesicht streichen #fliesst->k1_d_grab ✦ 2]]
+[[Stumm neben ihr stehen bleiben #fliesst->k1_d_grab ✦ 3]]
 
-:: k1_d_grab ✦ 1 [D folge] {"position":"10835,11610","size":"100,100"}
-Du kniest dich neben sie. „Er kommt bald“, sagst du leise. „Er hat gesagt, du sollst bei der Kleinen bleiben.“ Der Wind hebt eine Strähne ihres Haares und legt sie wieder hin.
+:: k1_d_grab ✦ 1 [D folge] {"position":"10805,11610","size":"100,100"}
+Du kniest dich neben sie und richtest ihr aus, was er dir aufgetragen hat, leise, so nah an ihrem Ohr, wie man es bei Schlafenden tut. „Er kommt bald. Du sollst bei der Kleinen bleiben.“ Der Wind hebt eine Strähne ihres Haares und legt sie wieder hin.
 <!-- Logik: gruss_ausgerichtet = true -->
 [[weiter->k1_d_grab.brosche_wahl]]
 
-:: k1_d_grab ✦ 2 [D folge] {"position":"10975,11610","size":"100,100"}
-Du streichst ihr das Haar aus dem Gesicht. Es ist kalt und schwer vom Regen. Ihre Augen sind halb offen; du schließt sie nicht.
+:: k1_d_grab ✦ 2 [D folge] {"position":"10945,11610","size":"100,100"}
+Du streichst ihr das Haar aus dem Gesicht. Es ist kalt und schwer vom Regen. Ihre Augen sind halb offen, und du schließt sie nicht.
 [[weiter->k1_d_grab.brosche_wahl]]
 
-:: k1_d_grab.brosche_wahl [D] {"position":"11155,11780","size":"100,100"}
-[[Die Brosche an dich nehmen->k1_d_grab.brosche_wahl ✦ 1]]
-[[Sie ihr lassen und sie zudecken->k1_d_grab.brosche_wahl ✦ 2]]
+:: k1_d_grab ✦ 3 [D folge] {"position":"11590,11610","size":"100,100"}
+Du bleibst stumm neben ihr stehen, die Säge noch in der Hand, bis dir das Wasser aus dem Haar in den Kragen läuft.
+[[weiter->k1_d_grab.brosche_wahl]]
 
-:: k1_d_grab.brosche_wahl ✦ 1 [D folge] {"position":"11015,11950","size":"100,100"}
-Du löst die Brosche von ihrem Kleid, so behutsam, als könne sie es noch spüren. Sie ist warm von deiner Hand, und dann nicht mehr.
+:: k1_d_grab.brosche_wahl [D] {"position":"11125,11780","size":"100,100"}
+[[Die Brosche an dich nehmen #fliesst->k1_d_grab.brosche_wahl ✦ 1]]
+[[Sie ihr lassen und sie zudecken #fliesst->k1_d_grab.brosche_wahl ✦ 2]]
+
+:: k1_d_grab.brosche_wahl ✦ 1 [D folge] {"position":"10985,11950","size":"100,100"}
+Du nimmst die Brosche an dich und löst sie so behutsam von ihrem Kleid, als könne sie es noch spüren. In deiner Hand ist sie warm, und dann nicht mehr.
 <!-- Logik: brosche = true -->
 [[weiter->k1_d_grab.brosche_wahl.~1]]
 
@@ -1091,269 +1110,265 @@ Du löst die Brosche von ihrem Kleid, so behutsam, als könne sie es noch spüre
 Du lässt ihr die Brosche. Du nimmst den Mantel von den Schultern und legst ihn über sie, bis zum Kinn. Ohne ihn ist es kalt auf dem Dach.
 [[weiter->k1_d_grab.brosche_wahl.~1]]
 
-:: k1_d_grab.brosche_wahl.~1 [D] {"position":"11155,12120","size":"100,100"}
-[[(bedingt) weiter->k1_d_grab.eileen_danach]]
+:: k1_d_grab.brosche_wahl.~1 [D] {"position":"11125,12120","size":"100,100"}
+[[weiter->k1_d_grab.abstieg]]
+
+:: k1_d_grab.abstieg [D] {"position":"11125,12290","size":"100,100"}
+Auf dem Weg hinab kommst du wieder am Tor vorbei. Der Schlüssel schlägt dir bei jeder Stufe gegen das Bein, schwer und kalt durch den Stoff.
+[[(bedingt) weiter->k1_d_grab.eileen_spuren]]
 [[weiter->k1_d_rueckweg]]
 
-:: k1_d_grab.eileen_danach [D] {"position":"11590,12290","size":"100,100"}
-<!-- [ERWEITERT] Keine dritte Begegnung (Entscheidung des Nutzers: zwei in Kapitel 1). Eileen ist nur zu sehen; ihr Urteil steckt in einer Geste. -->
-Als du vom Dach herabsteigst, steht {eileen_genannt:Eileen|die Frau im Federmantel} zwischen den Gräbern, ein Stück entfernt, bei dem Toten. Sie hat die Schnabelmaske gesenkt, als neige sie den Kopf an einem Grab. Sie kommt nicht näher.
-{
-⟨bei gascoigne_verraten and gascoigne_gewarnt⟩
-Sie hebt den Kopf, sieht dich an, und dreht dir dann langsam den Rücken zu. So bleibt sie stehen, bis du gegangen bist.
-⟨bei gascoigne_gewarnt⟩
-Sie sieht dich an, lange, durch die gläsernen Augen der Maske. Dann geht sie, ohne Gruß. Auf dem Grabstein, an dem sie stand, liegt nichts.
-⟨bei gascoigne_verraten⟩
-Sie löst ein Abzeichen von ihrer Schnur, ein schlichtes aus Messing, und legt es zu dem Toten. Dann nickt sie dir zu, knapp, förmlich, und du weißt nicht, ob es Dank ist.
-⟨sonst⟩
-Sie löst ein Abzeichen von ihrer Schnur und legt es zu dem Toten. Dann nickt sie dir zu.
+:: k1_d_grab.eileen_spuren [D] {"position":"11590,12460","size":"100,100"}
+<!-- [ERWEITERT] Keine dritte Begegnung (G2, Entscheidung des Nutzers: zwei in Kapitel 1). Eileen war hier, während du auf dem Dach warst; zu sehen ist nur, was sie zurückgelassen hat, und der Spieler liest es selbst. -->
 ⟨wenn not gascoigne_gewarnt and eileen >= 2⟩
-Bevor sie geht, hebt sie den Schnabel in Richtung des verschlossenen Tores hinauf zum Kathedralenbezirk und tippt zweimal gegen die Maske. Dann ist sie fort.
+Im Holz des Tores sind zwei frische Kerben, in der Höhe eines Gesichts, eine dicht neben der anderen, schmal und spitz, wie ein Schnabel aus Stahl sie schlägt. Vorhin waren sie nicht da. Auf der Schwelle liegen noch die hellen Späne.
+{
+⟨bei gascoigne_gewarnt⟩
+Unten bei dem Toten liegt eine schwarze Feder auf seiner Brust. Sie ist in der Mitte geknickt, so dass die Spitze zur Seite hängt, und auf dem Weg hinauf lag sie nicht dort.
+⟨bei gascoigne_verraten⟩
+Unten bei dem Toten liegt ein schlichtes Abzeichen aus Messing an einem kurzen Stück Schnur, sauber abgeschnitten, und daneben eine schwarze Feder, glatt und unversehrt. Auf dem Weg hinauf lag beides nicht dort.
+⟨sonst⟩
+Zwischen den Gräbern liegt eine schwarze Feder im nassen Gras, glatt und unversehrt. Auf dem Weg hinauf lag sie nicht dort.
 <!-- Logik: eileen_partner = true -->
 [[weiter->k1_d_rueckweg]]
 
-:: k1_d_rueckweg [D] {"position":"11195,12460","size":"100,100"}
-<!-- [KANON · wahrscheinlich] Kapitel 1 spielt in der Abenddämmerung; der Blutmond kommt erst viel später (nicht hier verbrauchen). PRÜFEN: Tageszeit im Original. -->
+:: k1_d_rueckweg [D] {"position":"11165,12630","size":"100,100"}
+<!-- [ERWEITERT] Die Sonne, die nicht sinkt: nur Wahrnehmung, keine Gewissheit des Erzählers (G5, Übergreifend 9). -->
 ⟨wenn k1_d_rueckweg == 1⟩
-Der Weg zurück führt durch dieselben Straßen, und sie sind nicht mehr dieselben. Die Glocken schweigen.{k1_b_tueren: Das Lachen hinter der Tür in der Gasse mit den Räucherlampen hat aufgehört.}{ alte_frau: Der Hund der alten Frau liegt vor ihrer Tür und hebt nicht einmal den Kopf.}
-Über den Giebeln hängt die Sonne, tief und rot, genau dort, wo sie hing, als du aus der Klinik getreten bist. An der Brücke stand sie so. Über dem Friedhof stand sie so. Sie hat sich nicht bewegt. Sie wird nicht untergehen. Die Nacht der Jagd hat noch nicht einmal richtig angefangen.
-⟨wenn kleriker == "abgelenkt" or kleriker == "geflohen"⟩ Von der Brücke herüber kommt ein Kreischen. Sie ist noch da. Sie wartet. 
-⟨wenn einsicht >= 3⟩ An einer Hauswand hängt etwas, das sich bewegt und kein Schatten ist, lang und dünn wie gefaltete Finger. Du blinzelst, und es ist eine Dachrinne. 
+Der Rückweg führt durch dieselben Straßen, über dasselbe Pflaster und an denselben verriegelten Türen vorbei, und doch hat sich die Stadt verschoben, während du unten warst, so wie ein Zimmer, in dem jemand die Stühle gerückt hat, solange man schlief. Die Glocken schweigen.{k1_b_tueren: In der Gasse mit den Räucherlampen hat das Lachen hinter der Tür aufgehört.}{ alte_frau: Der Hund der alten Frau liegt vor ihrer Tür und hebt nicht einmal den Kopf.}
+Über den Giebeln hängt die Sonne, tief und rot. Sie hing dort, als du aus der Klinik tratst, sie hing dort über der Brücke und über dem Friedhof, und dein Schatten liegt noch so lang auf dem Pflaster wie zu Beginn. Du bleibst stehen und wartest, dass sie sinkt. Sie sinkt nicht. Die Nacht der Jagd hat noch nicht einmal richtig angefangen.
+⟨wenn kleriker == "abgelenkt" or kleriker == "geflohen"⟩ Von der Brücke herüber kommt ein Kreischen, lang und hoch, und reißt ab. Sie ist noch da. 
+⟨wenn einsicht >= 3⟩ An einer Hauswand hängen lange, dünne Glieder, gefaltet wie Finger, und sie bewegen sich. Du blinzelst, und es ist eine Dachrinne. 
 ⟨wenn schuetze_verschont⟩
-Hinter dir, in einer Gasse, scharrt etwas, schwer und schnell, und noch bevor du dich umdrehst, kracht oben auf einem Dach ein Schuss. Etwas Großes fällt dir vor die Füße, Fell und Klauen, und rührt sich nicht mehr. Oben hinter dem Schornstein sitzt der Alte mit der Schlafmütze. Er hat sich ein neues Gewehr besorgt. Er kichert und legt einen Kiesel zu den anderen.
+Hinter dir in einer Gasse scharrt es, schwer und schnell, und noch bevor du dich umdrehst, kracht oben auf einem Dach ein Schuss. Vor deine Füße fällt ein Leib aus Fell und Klauen und rührt sich nicht mehr. Hinter dem Schornstein sitzt der Alte mit der Schlafmütze, ein neues Gewehr über den Knien. Er kichert und legt einen Kiesel zu den anderen.
 [[weiter->k1_d_rueckweg.wohin]]
 
-:: k1_d_rueckweg.wohin [D] {"position":"10345,12630","size":"100,100"}
-[[Der Brunnenplatz, wo das Mädchen wartet (nur wenn maedchen_wo == "zuhause" and q_mutter < 3)->k1_d_maedchen]]
-[[Zu Gilbert (nur wenn q_gilbert == 1)->k1_d_gilbert]]
-[[Durch die Kanalisation zurück (nur wenn maedchen_wo == "fort" and not maedchen_tot)->k1_d_kanal]]
-[[Zur Laterne am Grab: in den Traum->k1_d_traum]]
+:: k1_d_rueckweg.wohin [D] {"position":"10315,12800","size":"100,100"}
+[[Zum Brunnenplatz, wo das Mädchen wartet #fliesst (nur wenn maedchen_wo == "zuhause" and q_mutter < 3)->k1_d_maedchen]]
+[[Zu Gilberts Fenster gehen #fliesst (nur wenn q_gilbert == 1)->k1_d_gilbert]]
+[[Durch die Kanalisation zurück #fliesst (nur wenn maedchen_wo == "fort" and not maedchen_tot)->k1_d_kanal]]
+[[Die Laterne am Grab berühren #fliesst->k1_d_traum]]
 
-:: k1_d_maedchen [D] {"position":"10345,12800","size":"100,100"}
-<!-- [KANON] Gibt man ihr die Brosche, weiß sie, dass die Mutter tot ist; sie verlässt später das Haus und stirbt in der Kanalisation durch das Schwein. -->
-<!-- [KANON] Behält man die Brosche, bleibt sie; ab Kapitel 2 kann man sie zur Kapelle oder zur Klinik schicken (beides endet schlimm). Kein Ausgang rettet sie. -->
+:: k1_d_maedchen [D] {"position":"10315,12970","size":"100,100"}
+<!-- [KANON] Behält man die Brosche, bleibt sie und sagt, der Morgen komme immer (eigene Worte). Ab Kapitel 2 kann man sie zur Kapelle oder zur Klinik schicken (beides endet schlimm). Kein Ausgang rettet sie. -->
 <!-- [ERWEITERT] Wer ihre Warnung („dann geh ich selber“) ernst nimmt, behält die Brosche und gewinnt Zeit. Die Wahrheit ohne Brosche glaubt sie nur halb. -->
 ⟨wenn maedchen_gesehen⟩
-Der Brunnenplatz liegt still. Das rote Band hängt noch am Riegel. Du stehst unter dem Fenster im ersten Stock, und bevor du klopfen kannst, sind die vier kleinen Finger schon zwischen den Läden. Sie hört an deinen Schritten, dass etwas anders ist.
+Der Brunnenplatz liegt still, und im Fenster ist das Räucherwerk fast heruntergebrannt. Das weiße Band hängt noch am Riegel. Du stehst unter dem Fenster im ersten Stock, und bevor du klopfen kannst, sind die vier kleinen Finger schon zwischen den Läden. Vielleicht hört sie es an deinen Schritten: Ihre Stimme ist leiser als beim ersten Mal.
 ⟨wenn q_mutter == 0⟩ „Hast du meine Mama gesehen?“ | „Hast du Mama gefunden?“ 
 ⟨sonst⟩
-Auf einem kleinen Platz mit einem versiegten Brunnen spielt eine Spieluhr, dünn und klar, ein Lied, das du heute Nacht schon einmal gehört hast: gesummt, zwischen Axthieben. An einem Fensterriegel im ersten Stock ist ein rotes Band festgeknotet. Du weißt, wessen Fenster das ist, bevor die Stimme fragt.
-„Bist du ein Jäger? Hast du meine Mama gesehen? Sie hat eine große rote Brosche. Und Papa? Papa ist auch Jäger.“
-<!-- Logik: maedchen_gesehen = true -->
+Hinter einem Tor liegt ein kleiner Platz mit einem versiegten Brunnen, und aus einem Fenster im ersten Stock spielt eine Spieluhr, dünn und klar, {k1_n1_kleriker.mit_gascoigne:ein Lied, das du heute Nacht schon einmal gehört hast, gesummt, zwischen Axthieben|ein Lied, das du nicht kennst und das dir doch den Hals eng macht}. Um den Fensterriegel ist ein weißes Band geknotet, eine große Schleife, wie kleine Mädchen sie im Haar tragen.
+Die Melodie bricht ab. Zwischen den Läden erscheinen vier kleine Finger, dann zwei sehr ernste Augen. „Du riechst nach Jagd. So wie Papa, wenn er heimkommt.“ Sie holt Luft. „Hast du meine Mama gesehen? Sie hat eine große rote Brosche, die sieht man von Weitem. Papa ist auf die Jagd gegangen und nicht wiedergekommen, und Mama ist ihn suchen gegangen, und ich hab die Tür zugemacht, so wie sie gesagt hat.“
+⟨wenn not spieluhr⟩
+Am Fensterbrett schabt Holz, und durch den Spalt schiebt sich eine kleine Spieluhr, kaum größer als deine Handfläche. „Die ist von Papa. Wenn du ihn findest, zieh sie auf. Dann weiß er wieder, wer er ist.“ Sie ist noch warm von ihren Fingern. Im Deckel stehen zwei Namen, Viola und Gascoigne, und das V macht einen kleinen Kringel nach links.
+<!-- Logik: maedchen_gesehen = true · spieluhr = true -->
 [[(bedingt) weiter->k1_d_maedchen.vater]]
 [[weiter->k1_d_maedchen.weiche]]
 
-:: k1_d_maedchen.vater [D] {"position":"10625,12970","size":"100,100"}
+:: k1_d_maedchen.vater [D] {"position":"10595,13140","size":"100,100"}
 <!-- [ERWEITERT] Nur, wenn Gascoigne im Moment der Klarheit um etwas gebeten hat. -->
 Und dann ist da das Versprechen, das du einem Mann gegeben hast, der für einen Atemzug wieder er selbst war.
-[[Ihr sagen, ihr Vater habe das Lied nicht vergessen->k1_d_maedchen.vater ✦ 1]]
-[[Es für dich behalten->k1_d_maedchen.vater ✦ 2]]
+[[Ihr sagen, ihr Vater wusste das Lied #fliesst->k1_d_maedchen.vater ✦ 1]]
+[[Es für dich behalten #fliesst->k1_d_maedchen.vater ✦ 2]]
 
-:: k1_d_maedchen.vater ✦ 1 [D folge] {"position":"10235,13140","size":"100,100"}
-Du sagst ihr, dass du ihren Vater getroffen hast. Dass er an sie gedacht hat. Dass er das Lied noch wusste. Hinter den Läden ist es still, so still, dass du glaubst, sie sei gegangen. Dann summt sie die Melodie, leise, Note für Note, und du stehst unter dem Fenster und hörst zu, bis sie fertig ist.
+:: k1_d_maedchen.vater ✦ 1 [D folge] {"position":"10205,13310","size":"100,100"}
+Du sagst ihr, dass ihr Vater das Lied noch wusste, als er sonst nichts mehr wusste, und dass er an sie gedacht hat. Hinter den Läden wird es so still, dass du glaubst, sie sei gegangen. Dann summt sie die Melodie, leise, Note für Note, und du stehst unter dem Fenster und hörst zu, bis sie fertig ist.
 <!-- Logik: maedchen = maedchen + 2 -->
 [[weiter->k1_d_maedchen.vater.~1]]
 
-:: k1_d_maedchen.vater ✦ 2 [D folge] {"position":"11225,13140","size":"100,100"}
+:: k1_d_maedchen.vater ✦ 2 [D folge] {"position":"11195,13310","size":"100,100"}
 Du behältst es für dich. Es ist zu schwer, um es durch einen Fensterspalt zu reichen.
 [[weiter->k1_d_maedchen.vater.~1]]
 
-:: k1_d_maedchen.vater.~1 [D] {"position":"11225,13310","size":"100,100"}
+:: k1_d_maedchen.vater.~1 [D] {"position":"11195,13480","size":"100,100"}
 [[weiter->k1_d_maedchen.weiche]]
 
-:: k1_d_maedchen.weiche [D] {"position":"11225,13480","size":"100,100"}
-[[Ihr die Brosche geben und die Wahrheit sagen (nur wenn brosche)->k1_d_maedchen.weiche ✦ 1]]
-[[Ihr die Wahrheit sagen, ohne Beweis (nur wenn not brosche)->k1_d_maedchen.weiche ✦ 2]]
-[[Lügen: Ihre Mutter kommt bald->k1_d_maedchen.weiche ✦ 3]]
-[[Schweigen->k1_d_maedchen.weiche ✦ 4]]
+:: k1_d_maedchen.weiche [D] {"position":"11195,13650","size":"100,100"}
+[[Ihr die Brosche geben #fliesst (nur wenn brosche)->k1_d_maedchen.weiche ✦ 1]]
+[[Ihr die Wahrheit sagen, ohne Beweis #fliesst (nur wenn not brosche)->k1_d_maedchen.weiche ✦ 2]]
+[[Ihr sagen, ihre Mutter komme bald #fliesst->k1_d_maedchen.weiche ✦ 3]]
+[[Unter dem Fenster stumm bleiben #fliesst->k1_d_maedchen.weiche ✦ 4]]
 
-:: k1_d_maedchen.weiche ✦ 1 [D folge] {"position":"10875,13650","size":"100,100"}
-Du schiebst die Brosche durch den Spalt zwischen den Läden. Eine kleine Hand nimmt sie. Lange ist es still. Dann weint sie, leise und gleichmäßig, ohne zu schluchzen. { gruss_ausgerichtet: „Ich habe es ihr noch gesagt“, sagst du. „Dass er bald kommt.“ Das Weinen hört nicht auf. }
-Sie sagt nichts mehr zu dir. Als du später noch einmal über den Platz gehst, steht die Haustür offen, und das Band ist nicht mehr am Riegel.
+:: k1_d_maedchen.weiche ✦ 1 [D folge] {"position":"10845,13820","size":"100,100"}
+Du gibst ihr die Brosche. Du schiebst sie durch den Spalt zwischen den Läden, eine kleine Hand nimmt sie, und lange ist es still. Dann fragt sie, so leise, dass du dich zum Fenster hinaufbeugen musst: „War das wirklich Mama?“ Du nickst, obwohl sie es durch die Läden nicht sehen kann. „Geh nicht weg“, sagt sie. „Bleib da unten stehen, ja? Nicht du auch noch.“
+Dann weint sie, leise und gleichmäßig, ohne zu schluchzen.{ gruss_ausgerichtet: „Ich habe es ihr noch gesagt“, sagst du. „Dass er bald kommt.“ Das Weinen hört nicht auf.} Als es endlich aufhört, antwortet sie nicht mehr, auch nicht, als du an die Läden klopfst. Du bist noch keine zwanzig Schritte über den Platz, da hörst du hinter dir einen Riegel gehen, dann einen zweiten.
 <!-- Logik: q_mutter = 3 · maedchen_wo = "fort" -->
 [[weiter->k1_d_maedchen.weiche.~1]]
 
-:: k1_d_maedchen.weiche ✦ 2 [D folge] {"position":"11015,13650","size":"100,100"}
-Du sagst ihr, dass ihre Mutter nicht wiederkommt. Du sagst es so einfach, wie es geht. „Das stimmt nicht“, sagt sie sofort. „Das sagst du nur.“ Dann, nach einer langen Weile, sehr leise: „Woher weißt du das?“ Du hast nichts in der Hand, das du ihr durch den Spalt reichen könntest. Sie zieht die Finger zurück. Aber die Haustür bleibt zu. Sie wartet weiter, halb im Glauben, halb im Trotz.
+:: k1_d_maedchen.weiche ✦ 2 [D folge] {"position":"10985,13820","size":"100,100"}
+Du sagst ihr die Wahrheit, ohne Beweis, so einfach, wie es geht: Ihre Mutter kommt nicht wieder. „Das stimmt nicht“, sagt sie sofort. „Das sagst du nur.“ Nach einer langen Weile, sehr leise: „Woher weißt du das?“ Du hast nichts in der Hand, das du ihr durch den Spalt reichen könntest. Die Finger ziehen sich zurück, aber die Haustür bleibt zu. Hinter den Läden schlägt sie Feuer, Stahl auf Stein, einmal und noch einmal, weil der Zunder nicht fängt, und bald riecht es wieder nach Räucherwerk.
 <!-- Logik: q_mutter = 7 -->
 [[weiter->k1_d_maedchen.weiche.~1]]
 
-:: k1_d_maedchen.weiche ✦ 3 [D folge] {"position":"11155,13650","size":"100,100"}
-Du sagst ihr, ihre Mutter komme bald. Sie habe nur noch etwas erledigen müssen. Sie glaubt dir. „Dann warte ich“, sagt sie. „Ich kann gut warten.“ {not spieluhr: Hinter den Läden fängt die Spieluhr wieder an zu spielen.}
+:: k1_d_maedchen.weiche ✦ 3 [D folge] {"position":"11125,13820","size":"100,100"}
+Du sagst ihr, ihre Mutter komme bald, sie habe unterwegs nur noch etwas erledigen müssen. Sie glaubt dir sofort. „Dann warte ich“, sagt sie. „Mama sagt, der Morgen kommt immer. Man muss nur lang genug wach bleiben.“ Über den Giebeln hängt die Sonne, rot und reglos.
 <!-- Logik: q_mutter = 4 -->
 [[weiter->k1_d_maedchen.weiche.~1]]
 
-:: k1_d_maedchen.weiche ✦ 4 [D folge] {"position":"11295,13650","size":"100,100"}
-Du sagst nichts. Du stehst nur da. Und sie fragt nicht weiter. Die Finger verschwinden aus dem Spalt, und hinter den Läden bleibt es still, keine Spieluhr, kein Summen, nichts.
+:: k1_d_maedchen.weiche ✦ 4 [D folge] {"position":"11265,13820","size":"100,100"}
+Du bleibst stumm unter dem Fenster stehen, und sie fragt nicht noch einmal. Die Finger verschwinden aus dem Spalt. Hinter den Läden bleibt es still, kein Summen, kein Schritt, nur das Räucherwerk, das im Fenster weiterraucht.
 <!-- Logik: q_mutter = 5 -->
 [[weiter->k1_d_maedchen.weiche.~1]]
 
-:: k1_d_maedchen.weiche.~1 [D] {"position":"11265,13820","size":"100,100"}
+:: k1_d_maedchen.weiche.~1 [D] {"position":"11235,13990","size":"100,100"}
 [[weiter->k1_d_rueckweg]]
 
-:: k1_d_kanal [D] {"position":"10205,12800","size":"100,100"}
-Du nimmst den Weg durch die Kanalisation, weil er kürzer ist.
-⟨wenn k1_c_kanal⟩ Das Schwein ist wieder da, wie alles in dieser Nacht wiederkommt.|Unten im Kanal wühlt ein Schwein, doppelt so groß wie ein Ochse.} Es wühlt im Wasser, und neben ihm liegt etwas Kleines, ein heller Stoff, ein Schuh. Aus seinem Maul, zwischen den gelben Hauern, hängt ein rotes Band. { maedchen_gesehen: Am Fensterriegel hat es geknotet gehangen, damit eine Mutter den Weg nach Hause findet. 
+:: k1_d_kanal [D] {"position":"10175,12970","size":"100,100"}
+Du nimmst den Weg durch die Kanalisation, weil er kürzer ist. Unten riecht das Wasser nach Eisen und nach Stall.
+⟨wenn k1_c_kanal⟩ Das Schwein ist wieder da, wie alles in dieser Nacht wiederkommt.|Im Kanal steht ein Schwein, doppelt so groß wie ein Ochse.} Es steht bis an die Knie im Wasser und frisst, und neben ihm treibt ein heller Stoff, ein kleiner Schuh. Aus seinem Maul hängt zwischen den gelben Hauern ein Band, rot und schwer bis auf den Knoten.{ maedchen_gesehen: Du hast es weiß gesehen, um einen Fensterriegel geknotet, damit eine Mutter den Weg nach Hause findet.
 ⟨wenn q_mutter == 3⟩
-Sie ist gegangen, ihre Mutter zu suchen. Mit der Brosche in der Hand. So, wie sie es gesagt hat.
+Du denkst an die kleine Hand, die die Brosche durch den Spalt genommen hat. Im Wasser suchst du nach dem Gold der Fassung und findest es nicht.
 ⟨sonst⟩
-Sie ist zur Klinik gelaufen, weil du es ihr gesagt hast, und dann die Treppe hinunter, der Mutter nach.
+Du denkst an die Treppe zu den Kanälen, an der ein kleiner Schatten stehen blieb.
 <!-- Logik: maedchen_tot = true -->
-[[Das Band an dich nehmen->k1_d_kanal ✦ 1]]
-[[Weitergehen->k1_d_kanal ✦ 2]]
+[[Das Band an dich nehmen #fliesst->k1_d_kanal ✦ 1]]
+[[Ohne das Band weitergehen #fliesst->k1_d_kanal ✦ 2]]
 
-:: k1_d_kanal ✦ 1 [D folge] {"position":"10255,12970","size":"100,100"}
-Du ziehst das Band aus dem Maul des Schweins, und es lässt es dir, satt und gleichgültig. Das Band ist nass und schwer und dunkler, als es vorhin gewesen sein kann. Du steckst es zu dem Schlüssel{spieluhr: und der Spieluhr}.
+:: k1_d_kanal ✦ 1 [D folge] {"position":"10225,13140","size":"100,100"}
+Du nimmst das Band an dich. Du ziehst es dem Schwein aus dem Maul, und es lässt es dir, satt und gleichgültig. Das Band ist nass und schwerer, als ein Band sein dürfte. Du steckst es zu dem Schlüssel{spieluhr: und der Spieluhr}.
 <!-- Logik: band = true -->
 [[weiter->k1_d_kanal.~1]]
 
-:: k1_d_kanal ✦ 2 [D folge] {"position":"10395,12970","size":"100,100"}
-Du gehst weiter, ohne dich umzudrehen. Das Schmatzen begleitet dich bis zur Leiter.
+:: k1_d_kanal ✦ 2 [D folge] {"position":"10365,13140","size":"100,100"}
+Du gehst ohne das Band weiter und drehst dich nicht um. Das Schmatzen begleitet dich bis zur Leiter.
 [[weiter->k1_d_kanal.~1]]
 
-:: k1_d_kanal.~1 [D] {"position":"10435,13140","size":"100,100"}
+:: k1_d_kanal.~1 [D] {"position":"10405,13310","size":"100,100"}
 [[weiter->k1_d_rueckweg]]
 
-:: k1_d_gilbert [D] {"position":"11045,12800","size":"100,100"}
+:: k1_d_gilbert [D] {"position":"11015,12970","size":"100,100"}
 <!-- [ERWEITERT] Sein Versprechen bereitet seinen Blutmond in einem späteren Kapitel vor. -->
-Gilbert ist am Fenster. Er hustet schlimmer als zuvor, ein tiefer, reißender Husten, nach dem er lange braucht, um wieder sprechen zu können. „Erzählen Sie“, sagt er. „Bitte. Was liegt dahinter?“
-Du erzählst ihm von den Treppen, der Unterstadt, in der das Wasser nie aufhört zu laufen{k1_c_graeber:, von den Gräbern und dem Namen über dem Tor}. Er hört zu, die Stirn ans Gitter gelehnt. „Und die Glocken?“, fragt er. „Klingen sie dort unten anders?“ Du sagst ihm, dass sie dort gar nicht klingen. Er nickt, als hätte er das geahnt.
+Gilbert steht schon am Gitter, als du in die Gasse biegst. Sein Husten ist schlimmer geworden, tiefer, ein Reißen, nach dem er lange braucht, bis er wieder sprechen kann. „Erzählen Sie“, sagt er. „Bitte. Was liegt dahinter?“
+Du erzählst ihm von dem Tor am Ende der Brücke, das jemand von der anderen Seite verriegelt hat, von den Treppen hinab und von der Unterstadt, in der das Wasser nie aufhört zu laufen{k1_c_graeber:, von den Gräbern und dem Namen über dem Tor}. Er hört zu, die Stirn ans Gitter gelehnt. „Von der anderen Seite“, wiederholt er. „Dann wollte dort oben jemand nicht, dass man hinaufkommt. Oder dass von dort etwas herunterkommt.“ Er hustet. „Und die Glocken? Klingen sie da unten anders?“ Du sagst ihm, dass man sie da unten gar nicht hört. Er nickt, als habe er es geahnt.
 <!-- Logik: q_gilbert = 2 · gilbert = gilbert + 1 -->
-[[Ihm von Gascoigne erzählen->k1_d_gilbert ✦ 1]]
-[[Ihn schonen->k1_d_gilbert ✦ 2]]
+[[Ihm vom Kampf am Grab erzählen #fliesst->k1_d_gilbert ✦ 1]]
+[[Ihm das Grab ersparen #fliesst->k1_d_gilbert ✦ 2]]
 
-:: k1_d_gilbert ✦ 1 [D folge] {"position":"10905,12970","size":"100,100"}
-Du erzählst ihm von dem Pater mit dem Verband und davon, was am Ende aus ihm geworden ist. Gilbert sagt lange nichts. Dann: „Und wenn es bei mir so weit ist?“ Er lächelt schief, so wie beim ersten Mal am Gitter. „Holen Sie mich dann? Ich hätte gern, dass es jemand ist, der meinen Namen weiß.“
-** [Es ihm versprechen]
-Du versprichst es. „Danke“, sagt er, und dann noch einmal: „Danke.“ Er hustet, und diesmal klingt es beinahe wie ein Lachen.
-** [Nichts versprechen]
-Du versprichst nichts. Er nickt. „Ehrlich. Das ist auch was.“
+:: k1_d_gilbert ✦ 1 [D folge] {"position":"10875,13140","size":"100,100"}
+Du erzählst ihm vom Kampf am Grab, von {kennt_gascoigne():Gascoigne, dem Pater mit dem Verband,|dem Mann mit dem Verband und dem Priesterschal} und davon, was am Ende aus ihm geworden ist. Gilbert sagt lange nichts. Dann: „Und wenn es bei mir so weit ist?“ Er lächelt schief, so wie beim ersten Mal am Gitter. „Holen Sie mich dann? Ich hätte gern, dass es jemand ist, der meinen Namen weiß.“
+** [Es ihm versprechen
+Du versprichst es ihm. „Danke“, sagt er, und dann noch einmal: „Danke.“ Er hustet, und diesmal klingt es beinahe wie ein Lachen.
+** [Ihm nichts versprechen
+Du versprichst ihm nichts. Er nickt. „Ehrlich. Das ist auch was.“
 <!-- Logik: versprechen_gilbert = true -->
 [[weiter->k1_d_gilbert.~1]]
 
-:: k1_d_gilbert ✦ 2 [D folge] {"position":"11045,12970","size":"100,100"}
-Von Gascoigne erzählst du nichts. Gilbert merkt, dass da eine Lücke ist, das siehst du an der Art, wie er den Kopf neigt. Er fragt nicht nach.
+:: k1_d_gilbert ✦ 2 [D folge] {"position":"11015,13140","size":"100,100"}
+Du ersparst ihm das Grab und erzählst nichts von dem, was dort geschehen ist. Gilbert merkt die Lücke; du siehst es daran, wie er den Kopf neigt. Er fragt nicht nach.
 [[weiter->k1_d_gilbert.~1]]
 
-:: k1_d_gilbert.~1 [D] {"position":"11085,13140","size":"100,100"}
-Dann bittet er dich, vorsichtig zu sein mit dem, was die Kirche da oben verspricht. „Ich habe ihr Blut auch genommen. Es hat mir Zeit geschenkt. Ich weiß nur nicht mehr, ob das ein Geschenk war.“
+:: k1_d_gilbert.~1 [D] {"position":"11055,13310","size":"100,100"}
+„Seien Sie vorsichtig mit dem, was die Kirche da oben verspricht“, sagt er zum Abschied. „Ich habe ihr Blut auch genommen. Es hat mir Zeit geschenkt. Ich weiß nur nicht mehr, ob das ein Geschenk war.“
 [[weiter->k1_d_rueckweg]]
 
-:: k1_d_traum [D] {"position":"10765,12800","size":"100,100"}
+:: k1_d_traum [D] {"position":"10735,12970","size":"100,100"}
 <!-- [KANON] Die Puppe ist mit der ersten Einsicht erwacht (spätestens jetzt). Ihr Gruß spricht sinngemäß von daheim (eigener Wortlaut). -->
-<!-- [ERWEITERT] Was du entschieden hast und was nachwirkt. Eine Zeile je Figur, nur für das, was auf diesem Weg geschah. -->
-Du berührst die Laterne, und die stehende Sonne weicht dem elfenbeinfarbenen Himmel des Traumes. Die weißen Blumen. Das Haus auf dem Hügel mit seinen erleuchteten Fenstern. Und eine Stille, so vollkommen, dass du erst jetzt merkst, wie laut die Stadt gewesen ist.
+<!-- [ERWEITERT] Was du entschieden hast, eine Zeile je Figur, nur für das, was auf diesem Weg geschah, und nur, was du gesehen hast. -->
+Du berührst die Laterne, und die rote Sonne über den Giebeln weicht dem elfenbeinfarbenen Himmel des Traumes. Weiße Blumen, so weit der Hang reicht. Das Haus auf dem Hügel mit seinen erleuchteten Fenstern. Und eine Stille, so vollkommen, dass du erst jetzt hörst, wie laut die Stadt gewesen ist.
 ⟨wenn not puppe_wach⟩
-Sie löst sich vom Fuß der Treppe und geht ein paar Schritte, vorsichtig, wie jemand, der das Gehen erst wieder lernt. Ihr Blick bleibt an deinen Händen hängen, an der braunen Tinte an deinen Fingerkuppen. „Daheim“, sagt sie leise, als probiere sie, wie das Wort schmeckt.
+Sie löst sich vom Fuß der Treppe und geht ein paar Schritte, vorsichtig, wie jemand, der das Gehen erst wieder lernt. Ihr Blick bleibt an deinen Händen hängen, an der braunen Tinte an deinen Fingerkuppen. „Daheim“, sagt sie leise und probiert, wie das Wort schmeckt.
 ⟨sonst⟩
-Die Puppe kommt dir entgegen. Sie geht langsam, mit kleinen, vorsichtigen Schritten, und als sie vor dir steht, neigt sie den Kopf und sieht dir ins Gesicht. In ihren gläsernen Augen spiegelt sich das Haus. „Daheim“, sagt sie, als sei das eine Antwort auf eine Frage, die du nicht gestellt hast. Sie fragt nicht, was geschehen ist. Ihr Blick bleibt an deinen Händen hängen, an der braunen Tinte an deinen Fingerkuppen, die nicht abgeht.
+Die Puppe kommt dir entgegen, mit kleinen, vorsichtigen Schritten, und als sie vor dir steht, neigt sie den Kopf und sieht dir ins Gesicht. In ihren gläsernen Augen spiegelt sich das Haus. „Daheim“, sagt sie, als sei das die Antwort auf eine Frage, die du nicht gestellt hast. Sie fragt nicht, was geschehen ist. Ihr Blick bleibt an deinen Händen hängen, an der braunen Tinte an deinen Fingerkuppen, die nicht abgeht.
 Das Wort bleibt zwischen euch liegen. Keiner von euch hebt es auf.
-Du setzt dich auf die Stufen vor dem Haus. Sie setzt sich neben dich, die Hände im Schoß gefaltet. Eine Weile sitzt ihr nur da, eine Puppe und ein Jäger, und seht über die Blumen. „Sei vorsichtig“, sagt sie nach einer langen Zeit, als hätte sie es sich lange überlegt. „Du kommst immer zurück. Aber jedes Mal ein wenig anders.“
-WAS DU JETZT WEISST
-Dass Yharnam mit Blut heilt{k1_b_scheiterhaufen or k1_b_gilbert: und dass die Stadt trotzdem Bestien verbrennt, die gestern noch Nachbarn waren}. Dass die Jagd ihre Jäger mitfrisst.
-⟨wenn kennt_gascoigne()⟩
-Dass selbst ein Pater, ein Vater{q_frau == 1:, ein Freund} nicht sicher ist vor dem, was in seinen Adern fließt.
-⟨wenn gedaechtnis_kleriker⟩
-Dass das Blut sich erinnert. Und du ahnst, nach dem, was du durch fremde Augen gesehen hast, warum es gerade die trifft, die der Kirche am nächsten sind. Beweisen kannst du es nicht.
-⟨wenn gascoigne_moment⟩
-Dass man einen Menschen in der Bestie noch einmal erreichen kann, für einen einzigen Atemzug, wenn man weiß, wonach man rufen muss.
-⟨wenn maedchen_tot⟩
-Dass manches nicht im Traum vergeht, wenn man erwacht.
-WAS OFFEN BLEIBT
-Was ist das bleiche Blut, das du suchen sollst? Wer war der alte Mann in der Klinik, und was hast du unterschrieben? Wer hält diesen Traum, und warum ausgerechnet dich?
-⟨wenn k1_c_graeber⟩ Wer oder was ist Oedon, dessen Name über einem Friedhof steht? }Wer hat Viola getötet?{kleriker != "": Warum werden ausgerechnet Kirchenleute zu Bestien?
-Und wann endet diese Nacht, deren Sonne nicht untergeht, und was wird aus dir, wenn sie endet?
-Aus den Aufzeichnungen, die man später fand:
-{
-⟨bei gascoigne_verraten⟩
-„Ich habe in dieser ersten Nacht einem Mann verraten, wo er zu finden ist, und dann habe ich ihn selbst gefunden. Man sagt mir, das sei die Jagd.
-⟨bei gascoigne_moment⟩
-„Ich habe in dieser ersten Nacht einen Freund gewonnen und ihn mit eigener Hand erschlagen. Für einen Atemzug war er wieder er selbst, und ich habe diesen Atemzug genommen und ihn trotzdem getötet. Man sagt mir, das sei die Jagd.
-⟨bei q_frau == 1 and gascoigne >= 2⟩
-„Ich habe in dieser ersten Nacht einen Freund gewonnen und ihn mit eigener Hand erschlagen. Er hat mir Branntwein gegeben, der nach Birne schmeckte. Man sagt mir, das sei die Jagd.
-⟨sonst⟩
-⟨wenn kennt_gascoigne()⟩
-„Ich habe in dieser ersten Nacht einen Pater getötet, der seinen eigenen Namen vergessen hatte. Er hieß Gascoigne. Man sagt mir, das sei die Jagd.
-⟨sonst⟩
-„Ich habe in dieser ersten Nacht einen Mann mit verbundenen Augen getötet, der einen Priesterschal trug. Seinen Namen weiß ich nicht. Seine Kappe liegt noch auf einem Grabstein. Man sagt mir, das sei die Jagd.
-⟨wenn im_lied_getroffen⟩
-Ich habe zugeschlagen, während er dem Lied seiner Tochter zuhörte. Ich weiß nicht, ob man mir das vergeben kann; ich weiß nur, wer es nicht mehr kann.
-⟨wenn maedchen_tot⟩
-Ein rotes Band. Ich schreibe nicht mehr darüber.
-⟨wenn q_mutter == 4⟩
-Einem Kind habe ich gesagt, seine Mutter komme bald. Es wartet.
-⟨wenn grund == "heilung_anderer"⟩
-Den Brief nach Hause, den ich versprochen habe, habe ich noch nicht geschrieben. Ich weiß nicht, was darin stehen soll.
-⟨wenn grund == "schuld"⟩
-Man sagt, Yharnam mache aus einem Menschen etwas Neues. Ich fange an zu verstehen, dass niemand gesagt hat, etwas Besseres.
-⟨wenn grund == "suche"⟩
-Weihrauch. Ich weiß jetzt, wo man ihn riecht: oben, bei der Kathedrale.
-Ich habe gelernt, dass man in Yharnam nicht stirbt. Man erwacht, immer wieder. Ich erinnere mich, unterschrieben zu haben. Ich erinnere mich nicht mehr, was. Die Tinte ist noch an meinen Fingern. Als Nächstes gehe ich hinauf, zur Kathedrale. Die Puppe sagt, ich solle vorsichtig sein.“
+Du setzt dich auf die Stufen vor dem Haus, und sie setzt sich neben dich, die Hände im Schoß gefaltet. Hier schließen sich die Wunden, die Ampulle ist wieder voll, und die Kälte des Daches geht dir aus den Fingern; nur der Schlüssel in deiner Tasche wird nicht leichter. Als du ihn herausnimmst, sieht die Puppe lange auf das Zeichen im Griff, den Kreis und die drei Striche, die sich nicht treffen. „Wohin führt er?“, fragt sie. „Erzählst du es mir, wenn du dort warst?“
+Eine Weile sitzt ihr nur da, eine Puppe und ein Jäger, und seht über die Blumen. „Sei vorsichtig“, sagt sie nach einer langen Zeit, als hätte sie es sich lange überlegt. „Du kommst immer zurück. Aber jedes Mal ein wenig anders.“
 CHRONIK DER NACHT
 {
 ⟨bei gascoigne_moment⟩
-Gascoigne. Für einen Atemzug war er wieder er selbst. Dann hast du ihn getötet, auf seine Bitte.
+Gascoigne. Für einen Atemzug war er wieder er selbst, und dann hast du ihn getötet, auf seine Bitte.
 ⟨bei im_lied_getroffen⟩
 Gascoigne. Du hast zugeschlagen, während er dem Lied seiner Tochter zuhörte.
 ⟨bei gascoigne_verraten⟩
-Gascoigne. Du hast der Krähe verraten, wo er war. Am Grab hast du ihn selbst gefunden.
+Gascoigne. Du hast {eileen_genannt:Eileen|der Frau im Federmantel} gesagt, wo er war. Am Grab hast du ihn selbst gefunden.
 ⟨bei q_frau == 1⟩
-Gascoigne. Er hat dir Branntwein gegeben und dich das Warten gelehrt. Am Grab hast du ihn getötet.
+Gascoigne. Er hat dir aus seiner Blechflasche zu trinken gegeben und dich das Warten gelehrt. Am Grab hast du ihn getötet.
 ⟨bei kennt_gascoigne()⟩
 Gascoigne. Ein Pater, den du erst kennengelernt hast, als er niemanden mehr kannte.
 ⟨sonst⟩
-Der Mann mit dem Verband. Du kennst seinen Namen nicht. Seine Kappe liegt auf einem Grabstein.
+Der Mann mit dem Verband. Seinen Namen kennst du nicht, und seine Kappe liegt noch auf einem Grabstein.
 {
 ⟨bei maedchen_tot⟩
-Das Mädchen. Ein rotes Band im Maul eines Schweins.{band: Du trägst es bei dir.}
+Das Mädchen. Ein Band im Maul eines Schweins, rot bis auf den Knoten.{band: Du trägst es bei dir.}
 ⟨bei q_mutter == 4⟩
-Das Mädchen. Du hast ihr gesagt, ihre Mutter komme bald. Sie wartet. Wirkt nach.
+Das Mädchen. Du hast ihr gesagt, ihre Mutter komme bald. Sie wartet auf den Morgen.
 ⟨bei q_mutter == 5⟩
-Das Mädchen. Du hast geschwiegen. Sie wartet und fragt nicht mehr. Wirkt nach.
+Das Mädchen. Du hast geschwiegen, und sie hat nicht noch einmal gefragt.
 ⟨bei q_mutter == 7⟩
-Das Mädchen. Du hast ihr die Wahrheit gesagt, ohne Beweis. Sie glaubt dir halb und bleibt. Wirkt nach.
+Das Mädchen. Du hast ihr die Wahrheit gesagt, mit leeren Händen. Hinter den Läden hat sie das Räucherwerk neu angezündet.
 ⟨bei q_mutter == 3⟩
-Das Mädchen. Sie ist losgegangen, die Brosche ihrer Mutter in der Hand. Wirkt nach.
+Das Mädchen. Sie hat die Brosche ihrer Mutter durch den Spalt genommen. Hinter dir gingen zwei Riegel.
 ⟨bei maedchen_wo == "fort"⟩
-Das Mädchen. Sie ist losgelaufen, zur Klinik, und dann die Treppe hinunter. Wirkt nach.
+Das Mädchen. Du hast sie zur Klinik geschickt. An der Ecke blieb sie stehen und sah die Treppe zu den Kanälen hinunter.
 ⟨bei maedchen_gesehen⟩
-Das Mädchen. Sie wartet hinter dem Fenster am Brunnenplatz, das Band am Riegel. Wirkt nach.
+Das Mädchen. Sie wartet hinter dem Fenster am Brunnenplatz, das weiße Band am Riegel.
 {
 ⟨bei eileen_partner⟩
-{eileen_genannt:Eileen|Die Frau im Federmantel}. Sie hat zum Kathedralenbezirk gezeigt und zweimal gegen die Maske getippt. Sie erwartet dich vor der Kapelle.
+{eileen_genannt:Eileen|Die Frau im Federmantel}. Am Tor über dem Grab waren zwei frische Kerben im Holz, eine dicht neben der anderen.
 ⟨bei eileen < 0⟩
-{eileen_genannt:Eileen|Die Frau im Federmantel}. Sie hat dich vom Dach über den Gräbern geschickt. Wirkt nach.
+{eileen_genannt:Eileen|Die Frau im Federmantel}. Sie hat dich vom Dach über den Gräbern geschickt.
 ⟨bei gascoigne_gewarnt and gascoigne_verraten⟩
-{eileen_genannt:Eileen|Die Frau im Federmantel}. Du hast ihr den Pater verraten und ihn dann vor ihr gewarnt. Sie hat dir den Rücken zugekehrt. Wirkt nach.
+{eileen_genannt:Eileen|Die Frau im Federmantel}. Du hast ihr den Pater verraten und ihn dann vor ihr gewarnt. Bei dem Toten lag eine geknickte Feder.
 ⟨bei gascoigne_gewarnt⟩
-{eileen_genannt:Eileen|Die Frau im Federmantel}. Du hast dich zwischen sie und den Pater gestellt. Sie ist ohne Gruß gegangen. Wirkt nach.
+{eileen_genannt:Eileen|Die Frau im Federmantel}. Du hast den Pater vor ihr gewarnt. Bei dem Toten lag eine geknickte Feder.
+⟨bei gascoigne_verraten⟩
+{eileen_genannt:Eileen|Die Frau im Federmantel}. Du hast ihr gesagt, wo der Pater war. Bei dem Toten lag ein Abzeichen aus Messing.
 ⟨bei eileen_stufe >= 1⟩
 {eileen_genannt:Eileen|Die Frau im Federmantel}. Ihr habt euch gesehen. Mehr nicht.
 {
 ⟨bei versprechen_gilbert⟩
-Gilbert. Du hast versprochen, ihn zu holen, wenn es bei ihm so weit ist. Wirkt nach.
+Gilbert. Du hast versprochen, ihn zu holen, wenn es bei ihm so weit ist.
 ⟨bei q_gilbert == 2⟩
 Gilbert. Du hast ihm erzählt, was hinter der Brücke liegt.
 ⟨bei gilbert < 0⟩
-Gilbert. Du hast dich von ihm abgewandt. Er hustet, wenn du vorbeigehst, und sieht nicht auf.
+Gilbert. Du hast dich von ihm abgewandt, und nun hustet er, wenn du vorbeigehst, und sieht nicht auf.
 ⟨bei k1_b_gilbert⟩
 Gilbert. Er wartet hinter seinem Gitter und sammelt Namen.
 ⟨wenn alte_frau_versprochen⟩
-Die alte Frau mit dem Hund. Du hast ihr einen sicheren Ort versprochen. Wirkt nach.
+Die alte Frau mit dem Hund. Du hast ihr einen sicheren Ort versprochen.
 {
 ⟨bei kleriker == "besiegt"⟩
-Die Bestie auf der Brücke. Tot. An der Brücke brennt eine Laterne.
+Die Bestie auf der Brücke. Sie ist tot, und wo sie lag, brennt jetzt eine Laterne.
 ⟨bei kleriker != ""⟩
-Die Bestie auf der Brücke. Sie lebt und wartet. Wirkt nach.
+Die Bestie auf der Brücke. Sie lebt, und auf dem Rückweg hast du sie noch kreischen hören.
 {
 ⟨bei schuetze_verschont⟩
 Der Alte mit den Kieseln. Du hast ihn leben lassen, und er hat dir den Rücken freigeschossen.
 ⟨bei schuetze == "erledigt"⟩
 Der Alte mit den Kieseln. Sein Haar war gekämmt wie für den Sonntag.
 ⟨wenn mob_verbrannt⟩
-Martha. Sie hat einem Jäger manchmal Brot gegeben. Du hast sie verbrannt.
+Martha. Sie hat einem Jäger manchmal Brot gegeben, wenn er spät kam, und du hast sie verbrannt.
 ⟨wenn iosefka != 0⟩
-Iosefka. {iosefka > 0:Sie hat sich notiert, dass du höflich warst.|Sie hat sich notiert, dass du gegen ihre Tür geschlagen hast.} Wirkt nach.
+Iosefka. {iosefka > 0:Sie hat sich notiert, dass du höflich warst.|Sie hat sich notiert, dass du gegen ihre Tür geschlagen hast.}
+Aus den Aufzeichnungen, die man später fand:
+{
+⟨bei gascoigne_verraten⟩
+„In dieser ersten Nacht habe ich einer Jägerin verraten, wo ein Mann zu finden war, und dann habe ich ihn selbst gefunden. Man sagte mir, das sei die Jagd.
+⟨bei gascoigne_moment⟩
+„In dieser ersten Nacht habe ich einen Freund gewonnen und ihn mit eigener Hand erschlagen. Für einen Atemzug war er wieder er selbst und sprach den Namen seiner Frau, und ich habe diesen Atemzug genommen und ihn trotzdem getötet, weil er mich darum bat. Man sagte mir, das sei die Jagd.
+⟨bei q_frau == 1 and gascoigne >= 2⟩
+„In dieser ersten Nacht habe ich einen Freund gewonnen und ihn mit eigener Hand erschlagen. Er hatte mir aus seiner Blechflasche zu trinken gegeben, einen Branntwein, der nach Torf und Rauch schmeckte, nach einem Land, das nicht dieses war. Man sagte mir, das sei die Jagd.
+⟨sonst⟩
+⟨wenn kennt_gascoigne()⟩
+„In dieser ersten Nacht habe ich einen Pater getötet, der seinen eigenen Namen vergessen hatte. Er hieß Gascoigne. Man sagte mir, das sei die Jagd.
+⟨sonst⟩
+„In dieser ersten Nacht habe ich einen Mann mit verbundenen Augen getötet, der einen Priesterschal trug. Seinen Namen weiß ich bis heute nicht. Seine Kappe lag noch auf einem Grabstein, als ich ging. Man sagte mir, das sei die Jagd.
+⟨wenn im_lied_getroffen⟩
+Ich habe zugeschlagen, während er dem Lied seiner Tochter zuhörte. Ich weiß nicht, ob man mir das vergeben kann; ich weiß nur, wer es nicht mehr kann.
+⟨wenn maedchen_tot⟩
+Ein rotes Band.{maedchen_gesehen: Es war weiß, als ich es zum ersten Mal sah.} Ich schreibe nicht mehr darüber.
+⟨wenn q_mutter == 3 and not maedchen_tot⟩
+Einem Kind habe ich die Brosche seiner Mutter gegeben. Es bat mich, nicht wegzugehen. Als ich ging, hörte ich hinter mir zwei Riegel.
+⟨wenn q_mutter == 4⟩
+Einem Kind habe ich gesagt, seine Mutter komme bald. Es glaubte mir. Es sagte, der Morgen komme immer, man müsse nur lange genug wach bleiben.
+⟨wenn grund == "heilung_selbst"⟩
+Das Fieber, mit dem ich gekommen war, war fort. Ich bemerkte es erst auf dem Friedhof, zwischen zwei Gräbern, und ich weiß noch, dass ich mich nicht freute.
+⟨wenn grund == "heilung_anderer"⟩
+Den Brief nach Hause, den ich versprochen hatte, schrieb ich in dieser Nacht nicht. Ich wusste nicht, was darin stehen sollte.
+⟨wenn grund == "schuld"⟩
+Man sagt, Yharnam mache aus einem Menschen etwas Neues. Ich fing an zu verstehen, dass dabei nie jemand das Wort besser gebraucht hatte.
+⟨wenn grund == "suche"⟩
+Weihrauch. Ich wusste jetzt, wo man ihn riecht: oben, bei der Kathedrale.
+Ich habe in dieser Nacht gelernt, dass ich in Yharnam nicht sterbe. Die anderen schon. Ich erinnere mich, unterschrieben zu haben, und nicht mehr, was; die Tinte ging nicht von den Fingern. Zwei Fragen schrieb ich mir damals an den Rand: Wann endet eine Nacht, in der die Sonne nicht sinkt? Und wer singt dort oben hinter der Mauer, und warum singt keiner die Zeile zu Ende?
+Ich trug einen Schlüssel bei mir, der zu schwer war für einen Schlüssel, und ich ging hinauf, dorthin, wo der Gesang herkam. Die Puppe hatte gesagt, ich solle vorsichtig sein. Ich war es nicht.“
 ENDE DES ERSTEN KAPITELS
 <!-- Logik: ort = "traum" · leben = LEBEN_MAX · ampulle = 1 -->
 [[weiter->ENDE]]
@@ -2283,7 +2298,7 @@ Zwei Boten ziehen ihn gemeinsam aus dem Wasser, einen langen Mantel aus geöltem
 :: boten_laden.wahl ✦ 6 [T folge] {"position":"8920,390","size":"100,100"}
 Die Boten sinken zurück ins Wasser, enttäuscht oder gleichgültig, du kannst es nicht sagen.
 
-:: ENDE [D] {"position":"10765,12970","size":"100,100"}
+:: ENDE [D] {"position":"10735,13140","size":"100,100"}
 
 :: LATERNE [T] {"position":"9010,6510","size":"100,100"}
 Rückkehr zur zuletzt entzündeten Laterne (Klinik, Zentral-Yharnam, Brücke oder Grab).
