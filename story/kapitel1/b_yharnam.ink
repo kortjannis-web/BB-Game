@@ -423,7 +423,7 @@ Mehr kommen. Der Riese hat aufgehört, gegen die Tür zu schlagen; er dreht sich
 -
 {
 - kleriker != "besiegt" and gascoigne >= 0 and mob == "zerstreut":
-    // [ERWEITERT] Gascoigne glaubt, die Bestie auf der Brücke gekannt zu haben. Wer sie war, ist im Kanon [OFFEN]; die Hochzeit nennt er erst auf der Brücke (n1_kleriker), nicht hier.
+    // [ERWEITERT] Gascoigne glaubt, die Bestie auf der Brücke gekannt zu haben. Wer sie war, ist im Kanon [OFFEN]; eine Hochzeit nennt er nirgends mehr (Faktencheck n1 Nr. 2: Gerücht statt Beweis).
     „Und wenn du zur großen Brücke gehst …“ Er dreht sich halb um. „Ruf mich. Da oben haust einer, den ich, glaub ich, kenne.“ Er geht in den Rauch. Neben Martha sind in der Asche zwei Abdrücke geblieben, wo er gekniet hat. # quest: gascoigne_bruecke
 - kleriker != "besiegt" and gascoigne >= 0:
     „Und noch was.“ Er stößt sich vom Laternenpfahl ab. „Wenn du zur großen Brücke gehst, ruf mich. Da oben haust einer, den ich, glaub ich, kenne. Ich will ihn mir ansehen.“ Er tippt gegen den Verband und grinst. „So gut das eben geht.“ Dann geht er in den Rauch, und eine Weile hörst du noch seine Stiefel. # quest: gascoigne_bruecke

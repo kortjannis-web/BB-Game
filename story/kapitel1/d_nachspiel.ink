@@ -9,7 +9,7 @@
 // [KANON lore:gegenstaende/heilende-kirche] Nach Gascoignes Tod: Laterne am Grab und der Schlüssel zum Tor, das die Gruft des Oedon versperrt; dahinter liegt der Kathedralenbezirk (Kapitel 2). Den Schlüssel trägt Gascoigne bei sich.
 // [KANON lore:figuren/maedchen-und-viola] Violas Leiche auf einem Absatz oberhalb der Kampfstelle, bei ihr die rote Brosche mit ihrem Namen.
 // [OFFEN] Wer Viola getötet hat, sagt das Spiel nicht. Der Text lässt beide Lesarten offen (die Wunden; ihr Blick hinab auf die Kampfstelle).
-// [ERWEITERT] Das Zeichen auf dem Schlüssel und am Schloss des Tores (zeigen statt sagen, wohin der Schlüssel führt); die Ketten über dem Tor (wie in k1_hub_c); die Treppe, die am Tor vorbei auf das Dach führt.
+// [ERWEITERT] Das Zeichen auf dem Schlüssel und am Schloss des Tores (zeigen statt sagen, wohin der Schlüssel führt); die Ketten über dem Tor (von unten in k1_hub_c nur als Bogen zu sehen); die Treppe, die am Tor vorbei auf das Dach führt.
 // [ERWEITERT] Ihr zweiter Handschuh: Ernte des Damenhandschuhs auf dem Grabstein in k1_c_graeber, ohne Deutung. Das Umschlagtuch, mit dem man sie zudeckt (statt des eigenen Mantels, Lektorat 1.1 f).
 ~ laterne = -> k1_d_rueckweg
 An der Friedhofsmauer brennt eine Laterne, die vorhin nicht brannte. Ihr Schein reicht bis zu dem, was von {kennt_gascoigne():Gascoigne|dem Mann mit dem Verband} übrig ist, und dort, wo der Mantel am Saum aufgerissen ist, liegt ein eiserner Schlüssel im nassen Gras, lang und grob geschmiedet, aus dem Futter gerutscht. In den Griff ist ein Zeichen geprägt: ein Kreis, durch den drei Striche laufen, die sich in der Mitte nicht treffen. Als du ihn aufhebst, zieht er dir den Arm nach unten. # lore: laternen # notiz: oedon_schluessel # bild: grab_oedon # stimmung: ruhig
