@@ -45,7 +45,7 @@
     if (ctx?.state === "suspended") ctx.resume();
   }, { once: false });
 
-  const jetzt = () => ctx.currentTime;
+  const jetzt = () => (ctx ? ctx.currentTime : 0);
   function rauschen(dauer = 2) {
     const n = Math.floor(ctx.sampleRate * dauer);
     const b = ctx.createBuffer(1, n, ctx.sampleRate);
@@ -126,11 +126,12 @@
         const f = [196, 174.6, 220][Math.floor(Math.random() * 3)];
         for (const [m, l] of [[1, 0.05], [2.76, 0.02], [5.4, 0.01]]) ton(f * m, t, 6, { laut: l, ziel: gain, angriff: 0.01 });
       };
-      timer.push(setInterval(() => Math.random() < 0.35 && glocke(), 9000));
+      timer.push(setInterval(() => ctx && an && Math.random() < 0.35 && glocke(), 9000));
     }
     // Im Kampf ein langsamer, dumpfer Puls
     if (art === "kampf") {
       timer.push(setInterval(() => {
+        if (!ctx || !an) return;
         const t = jetzt();
         const o = ton(70, t, 0.35, { laut: 0.12, ziel: gain });
         o.frequency.exponentialRampToValueAtTime(40, t + 0.3);
@@ -324,6 +325,7 @@
         /* nur für diese Sitzung */
       }
       if (!an && ctx) {
+        if (atmo) atmo.stopp();
         ctx.close();
         ctx = null;
         atmo = null;

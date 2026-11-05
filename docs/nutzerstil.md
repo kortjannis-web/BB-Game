@@ -19,6 +19,7 @@ Lebendes Profil, gepflegt von Claude aus den Vorschlägen der Werkstatt (`docs/v
 *(Wörter, die der Nutzer einsetzt oder streicht; Fremdwörter, Archaismen, Bildsprache)*
 
 ## Ton und Gefühl
+- Kein Füttern, aber wer Bloodborne nicht kennt, soll die Geschichte erleben und mitbekommen: ab und zu ein Detail, ein Fundstück, ein Satz einer Figur, der ein Stück der Welt aufschließt (2026-11-05).
 - Stimme gewählt nach Stimmproben (2026-11-04): A Chronik für Orte, Szenen und Vergangenheit, B fiebrig und nah als Standard, C kalt und amtlich für die Kirche (`docs/stimme.md`).
 - Kirche als ferne Macht: Glocken, Choral bei schlimmen Momenten, ein Anschlag; kein sichtbarer Kirchendiener (Abfrage 2026-11-04).
 - Ludwig nur als namenloses Gerücht (Abfrage 2026-11-04).

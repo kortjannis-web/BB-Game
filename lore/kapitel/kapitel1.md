@@ -68,3 +68,6 @@ Vor jeder Arbeit an Kapitel 1 lesen: `lore/kern.md`, dann dieses Paket, dann nur
 - [ERWEITERT, bewusst] Gascoigne kommt gegen die Kleriker-Bestie auf Zuruf; im Kanon über die Glocke der alten Jäger.
 - Jägermarke wie im Kanon: Sie bringt in den Traum und kostet alle Blutechos (seit 2026-11-05).
 - Das Band des Mädchens ist weiß wie im Kanon; rot ist es erst beim Schwein (seit 2026-11-05).
+- [ERWEITERT, bewusst] Die Unterstadt mit den Gräbern ist bei uns ein eigener Bereich zwischen Brücke, Kanalisation und dem Grab des Oedon.
+- [ERWEITERT] Gascoignes Hut liegt auf einem Grabstein (im Kanon gehört der Hut zu seinem Set).
+- [ERWEITERT] Das dunkle Haus mit der Notiz über die gesperrte Brücke ist bei uns ein eigener Ort in Zentral-Yharnam.

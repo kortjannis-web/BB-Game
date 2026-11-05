@@ -16,7 +16,7 @@ window.NOTIZBUCH = {
   ] },
   paleblood: { titel: "Bleiches Blut", stufen: [
     ["", "Der alte Mann in der Klinik hat es zu mir gesagt, als lese er es von meiner Stirn ab."],
-    ["k1_erwachen", "Auf einem Zettel an der Klinikwand stand, ich solle es suchen, um die Jagd zu überwinden."],
+    ["k1_erwachen", "Auf einem Zettel auf dem Stuhl neben dem Lager stand, ich solle es suchen, um über die Jagd hinauszukommen."],
     ["haltung_vertrag==wach", "In meinem Vertrag stand es auch, in der Zeile für den Grund meiner Reise. Die Schrift sah aus wie meine."],
     ["gilbert_bruecke", "Gilbert kennt das Wort nicht. Wenn es einer weiß, meint er, dann die Kirche."],
   ] },
@@ -95,7 +95,7 @@ window.NOTIZBUCH = {
   jaeger_der_jaeger: { titel: "Die Jägerin der Jäger", stufen: [
     ["", "Eine Frau mit Federmantel und Schnabelmaske. An einer Schnur um ihren Hals klappern Abzeichen, Messing, Silber, Eisen, jedes abgegriffen."],
     ["eileen_genannt", "Sie heißt Eileen. Die Abzeichen an ihrer Schnur gehörten Jägern."],
-    ["k1_b_eileen", "Sie hat mir zwei Marken aus Messing zugeworfen. Wer eine zerdrückt, wacht im Garten auf, ohne vorher zu sterben."],
+    ["k1_b_eileen", "Sie hat mir zwei Marken aus Messing zugeworfen. Wer eine zerdrückt, wacht im Garten auf, ohne vorher zu sterben. Was die Toten der Nacht an Echos in einen gegeben haben, bleibt dabei zurück."],
     ["marke_benutzt", "Ich habe eine zerdrückt. Ich bin im Garten erwacht, und was ich an Echos bei mir trug, war fort. Kein Fleck, nirgends."],
     ["eileen_name", "Sie hat mir ein Stück Dörrfleisch gegeben und nach meinem Namen gefragt."],
   ] },
@@ -169,12 +169,12 @@ window.PERSONEN = [
     ["maedchen_wo==fort", "Sie ist losgelaufen. Ich weiß nicht, wohin."],
     ["q_mutter==4", "Sie wartet. Ich habe ihr gesagt, ihre Mutter komme bald."],
     ["maedchen>=1", "Sie wartet hinter dem Fenster am Brunnenplatz. Sie kann gut warten, sagt sie."],
+    ["k1_d_maedchen && !maedchen_tot", "Der Morgen komme immer, hat sie gesagt, man müsse ihn nur abwarten."],
     ["", "Sie wartet hinter dem Fenster am Brunnenplatz, die weiße Schleife am Riegel."],
   ] },
   { name: "Die Frau im Federmantel", wenn: "eileen_stufe>=1", stufen: [
-    ["eileen_genannt && eileen_partner", "Eileen. Sie erwartet mich vor der Kapelle im Kathedralenbezirk."],
-    ["eileen_partner", "Sie erwartet mich vor der Kapelle im Kathedralenbezirk."],
-    ["gascoigne_gewarnt", "Sie hat mir den Rücken zugekehrt."],
+    ["eileen_partner", "Im Tor oben an der Treppe hinter dem Grab: zwei frische Kerben, wie ein Schnabel aus Stahl sie schlägt. Ich glaube, sie wartet dort oben."],
+    ["gascoigne_gewarnt", "Am Grab lag eine ihrer Federn, geknickt."],
     ["eileen>=2", "Sie hat mich neben sich sitzen lassen."],
     ["eileen>=0", "Sie beobachtet mich. Ich weiß nicht, wie lange schon."],
     ["", "Sie hält mich für jemanden, der nicht weiß, wann man den Mund hält."],

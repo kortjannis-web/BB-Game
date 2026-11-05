@@ -294,6 +294,7 @@ Sie packt dich. Beide Klauen schließen sich um deine Schultern, und sie hebt di
 Du zerdrückst die Marke in der Faust, und {g_phase < 3:der Friedhof, die Axt, sein lachender Mund|das Grab, das Heulen, die glühenden Augen} zerfallen, wie Asche zerfällt, wenn man hineinbläst. # klang: marke
 { echos > 0: Was an fremdem Blut in dir gesummt hat, seit du in dieser Stadt tötest, bleibt auf dem Friedhof zurück, und nichts wird zeigen, wo. }
 ~ echos = 0
+~ marke_eben = true
 -> traum_von_laterne
 
 = sieg

@@ -322,6 +322,7 @@ Du rappelst dich auf und rennst weiter, eine Treppe hinab, noch eine, bis der Bo
 In der Faust zerdrückst du die Marke. Das Messing wird warm, dann heiß, und dann zerfallen die Brücke, die Bestie und der Nebel, so wie ein Traum zerfällt, wenn man erwacht. # klang: marke
 { echos > 0: Im Fallen rinnt dir aus der Haut, was die Toten dieser Nacht in dich gegeben haben, ein warmer Schimmer, der nicht mitkommt. Er bleibt zurück, und kein Fleck wird zeigen, wo. }
 ~ echos = 0
+~ marke_eben = true
 -> traum_von_laterne
 
 = gedaechtnis

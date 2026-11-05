@@ -17,7 +17,7 @@ VAR kiesel = 0
 VAR feuer = false           // Gilberts Flammenwerfer
 VAR spieluhr = false
 VAR brosche = false
-VAR band = false            // das rote Band des Mädchens
+VAR band = false            // das Band des Mädchens (am Fenster weiß, beim Schwein rot getränkt)
 
 // --- Beziehungen (etwa -2 bis +4) ------------------------------------------------
 VAR gilbert = 0
@@ -65,7 +65,7 @@ VAR gilbert_geschenk = false
 VAR eileen_frage_offen = false  // Eileen wartet noch auf eine Antwort über den Pater
 VAR eileen_name = false         // Eileen kennt deinen Namen
 VAR schuetze_verschont = false
-VAR maedchen_gesehen = false    // das rote Band am Fenster gesehen
+VAR maedchen_gesehen = false    // die weiße Schleife am Fenster gesehen
 VAR bruecke_laterne = false
 VAR marke_benutzt = false
 VAR g_phase = 1               // Phase im Kampf gegen Gascoigne (überdauert keinen Tod, wird beim Betreten gesetzt)

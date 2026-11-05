@@ -196,7 +196,7 @@ CHRONIK DER NACHT # stil: zwischentitel
 - gascoigne_verraten: Gascoigne. Du hast {eileen_genannt:Eileen|der Frau im Federmantel} gesagt, wo er war. Am Grab hast du ihn selbst gefunden. # stil: chronik
 - q_frau == 1: Gascoigne. Er hat dir aus seiner Blechflasche zu trinken gegeben und dich das Warten gelehrt. Am Grab hast du ihn getötet. # stil: chronik
 - kennt_gascoigne(): Gascoigne. Ein Pater, den du erst kennengelernt hast, als er niemanden mehr kannte. # stil: chronik
-- else: Der Mann mit dem Verband. Seinen Namen kennst du nicht, und seine Kappe liegt noch auf einem Grabstein. # stil: chronik
+- else: Der Mann mit dem Verband. Seinen Namen kennst du nicht, und sein Hut liegt noch auf einem Grabstein. # stil: chronik
 }
 {
 - maedchen_tot: Das Mädchen. Ein Band im Maul eines Schweins, rot bis auf den Knoten.{band: Du trägst es bei dir.} # stil: chronik
@@ -251,7 +251,7 @@ Aus den Aufzeichnungen, die man später fand: # stil: tagebuch
     { kennt_gascoigne():
         „In dieser ersten Nacht habe ich einen Pater getötet, der seinen eigenen Namen vergessen hatte. Er hieß Gascoigne. Man sagte mir, das sei die Jagd. # stil: tagebuch
     - else:
-        „In dieser ersten Nacht habe ich einen Mann mit verbundenen Augen getötet, der einen Priesterschal trug. Seinen Namen weiß ich bis heute nicht. Seine Kappe lag noch auf einem Grabstein, als ich ging. Man sagte mir, das sei die Jagd. # stil: tagebuch
+        „In dieser ersten Nacht habe ich einen Mann mit verbundenen Augen getötet, der einen Priesterschal trug. Seinen Namen weiß ich bis heute nicht. Sein Hut lag noch auf einem Grabstein, als ich ging. Man sagte mir, das sei die Jagd. # stil: tagebuch
     }
 }
 { im_lied_getroffen:

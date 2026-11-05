@@ -1431,7 +1431,7 @@ Gascoigne. Er hat dir aus seiner Blechflasche zu trinken gegeben und dich das Wa
 ⟨bei kennt_gascoigne()⟩
 Gascoigne. Ein Pater, den du erst kennengelernt hast, als er niemanden mehr kannte.
 ⟨sonst⟩
-Der Mann mit dem Verband. Seinen Namen kennst du nicht, und seine Kappe liegt noch auf einem Grabstein.
+Der Mann mit dem Verband. Seinen Namen kennst du nicht, und sein Hut liegt noch auf einem Grabstein.
 {
 ⟨bei maedchen_tot⟩
 Das Mädchen. Ein Band im Maul eines Schweins, rot bis auf den Knoten.{band: Du trägst es bei dir.}
@@ -1497,7 +1497,7 @@ Aus den Aufzeichnungen, die man später fand:
 ⟨wenn kennt_gascoigne()⟩
 „In dieser ersten Nacht habe ich einen Pater getötet, der seinen eigenen Namen vergessen hatte. Er hieß Gascoigne. Man sagte mir, das sei die Jagd.
 ⟨sonst⟩
-„In dieser ersten Nacht habe ich einen Mann mit verbundenen Augen getötet, der einen Priesterschal trug. Seinen Namen weiß ich bis heute nicht. Seine Kappe lag noch auf einem Grabstein, als ich ging. Man sagte mir, das sei die Jagd.
+„In dieser ersten Nacht habe ich einen Mann mit verbundenen Augen getötet, der einen Priesterschal trug. Seinen Namen weiß ich bis heute nicht. Sein Hut lag noch auf einem Grabstein, als ich ging. Man sagte mir, das sei die Jagd.
 ⟨wenn im_lied_getroffen⟩
 Ich habe zugeschlagen, während er dem Lied seiner Tochter zuhörte. Ich weiß nicht, ob man mir das vergeben kann; ich weiß nur, wer es nicht mehr kann.
 ⟨wenn maedchen_tot⟩
@@ -1875,7 +1875,7 @@ Du rappelst dich auf und rennst weiter, eine Treppe hinab, noch eine, bis der Bo
 :: k1_n1_kleriker.marke [N1] {"position":"12110,8720","size":"100,100"}
 In der Faust zerdrückst du die Marke. Das Messing wird warm, dann heiß, und dann zerfallen die Brücke, die Bestie und der Nebel, so wie ein Traum zerfällt, wenn man erwacht.
 ⟨wenn echos > 0⟩ Im Fallen rinnt dir aus der Haut, was die Toten dieser Nacht in dich gegeben haben, ein warmer Schimmer, der nicht mitkommt. Er bleibt zurück, und kein Fleck wird zeigen, wo. 
-<!-- Logik: jaegermarken = jaegermarken - 1 · marke_benutzt = true · echos = 0 -->
+<!-- Logik: jaegermarken = jaegermarken - 1 · marke_benutzt = true · echos = 0 · marke_eben = true -->
 [[weiter->traum_von_laterne]]
 
 :: k1_n1_kleriker.gedaechtnis [N1] {"position":"9030,9740","size":"100,100"}
@@ -2239,7 +2239,7 @@ Du machst dich schwer und fällst nach unten aus ihrem Griff, rollst über den B
 :: k1_n2_gascoigne.marke [N2] {"position":"12210,9230","size":"100,100"}
 Du zerdrückst die Marke in der Faust, und {g_phase < 3:der Friedhof, die Axt, sein lachender Mund|das Grab, das Heulen, die glühenden Augen} zerfallen, wie Asche zerfällt, wenn man hineinbläst.
 ⟨wenn echos > 0⟩ Was an fremdem Blut in dir gesummt hat, seit du in dieser Stadt tötest, bleibt auf dem Friedhof zurück, und nichts wird zeigen, wo. 
-<!-- Logik: jaegermarken = jaegermarken - 1 · marke_benutzt = true · echos = 0 -->
+<!-- Logik: jaegermarken = jaegermarken - 1 · marke_benutzt = true · echos = 0 · marke_eben = true -->
 [[weiter->traum_von_laterne]]
 
 :: k1_n2_gascoigne.sieg [N2] {"position":"8330,9400","size":"100,100"}

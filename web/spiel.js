@@ -24,7 +24,7 @@
   // Ortskarten: Name des Ortes beim Betreten (Tag # bild: id), ein Zeichen, bis es echte Bilder gibt.
   const ORTE = {
     anreise: "Die Straße nach Yharnam", klinik_innen: "Iosefkas Klinik", traum: "Der Jägertraum", laterne: "Vor der Klinik",
-    zentral_yharnam: "Zentral-Yharnam", gilbert: "Gilberts Fenster", tueren: "Die Gasse der Räucherlampen",
+    zentral_yharnam: "Zentral-Yharnam", gilbert: "Gilberts Fenster", haus_dunkel: "Das dunkle Haus", tueren: "Die Gasse der Räucherlampen",
     scheiterhaufen: "Der Platz am Scheiterhaufen", brunnenplatz: "Der Brunnenplatz", gasse: "Die Gasse unter den Dächern",
     daecher_eileen: "Die Dachbalken", bruecke: "Die große Brücke", unterstadt: "Die Unterstadt", kanal: "Die Kanalisation",
     kanal_schwein: "Die Kanalisation", graeber: "Die Gräber", grab_oedon: "Das Grab des Oedon", werkstatt: "Gehrmans Werkstatt",

@@ -10,6 +10,8 @@ Stand 2026-11-04, nach Runde 1: drei unabhängige Prüfungen (Plot und Logik, Lo
 
 **Nacht 2026-11-04 (Freigabe des Nutzers):** Waffenwahl entfernt (Sägespalter); Stärkung bei der Puppe (zwei Stufen, je eine Zusatzmöglichkeit in Schwein, Kleriker, Gascoigne); Chronik der Nacht; Einsicht mit Kosten (falscher Schatten am Grab); Ton (erzeugte Atmosphäre je Stimmung, Herzschlag bei wenig Leben, eigene Spieluhr-Melodie, CC0-Geräusche, Schalter); Icons in der Leiste (Ampulle füllt sich, Auge öffnet sich mit Einsicht); pulsierende Anzeichen, „erkannt“ bei gelernten, Trefferrand, Schwarzblende beim Tod; Ortskarten; Notizbuch mit Reitern Aufzeichnungen, Personen, Fragen der Nacht und Neu-Markierung.
 
+**Faktencheck und Überarbeitung Kapitel 1 (2026-11-05):** Lore Teil B eingearbeitet (Archiv vollständig bis auf `lore/offen.md`). Unabhängiger Faktencheck mit 99 Befunden (`docs/faktencheck-kapitel1.md`), alle Dateien von Kapitel 1 nach den gemeinsamen Regeln (`docs/umsetzung-faktencheck.md`) überarbeitet: Kanonfehler behoben (weißes Band, Jägermarke kostet Echos, schwarze Kirchenjäger, Brücke gesperrt, Eileen nur zwei Begegnungen, Gerücht statt Beweis bei der Kleriker-Bestie), Kernsätze der Figuren ergänzt, Ziel der Nacht im Traum, Notizbuch ohne Vorwegnahme, alle Optionen fließen in den Satz, Text in Stimme A/B/C. Stilprüfer: 4 Warnungen (vorher rund 100). Ungeprüft: keine zweite unabhängige Lektüre der neuen Texte, nur ein Browserdurchlauf über 120 Wahlen, vom Nutzer nichts gelesen.
+
 **Lore-Archiv (2026-11-04):** Lore-Dokument des Nutzers (LK) in `lore/` als Wurzelsystem eingearbeitet: 97 Dateien nach Welt, Fraktionen, Orten, Figuren, Bossen, Gegenständen und Deutungen, dazu handgeschrieben Wurzel, Kern, Lesepakete Kapitel 1 und 2 mit Wissenssperre, Lückenliste. Stufe 1 (von Claude gebaut, nicht gegengeprüft). Bekannte Lücken: gewöhnliche Gegner, Bürgerstimmen, alle Notizen, Mädchen-Quest als Figur, frühe Dialoge Gehrman/Puppe, Feuerwaffen, Widerspruch zu Gascoignes Töchtern (`lore/offen.md`).
 
 **Kritik des Nutzers 2026-11-04 (nach der Abfragerunde):** Schreibstil schwach, eigenartige Wörter, unlogische Aussagen, Entscheidungsoptionen grauenhaft, keine Atmosphäre, Sätze, die rauswerfen. Gemessen: Ø Satzlänge 10,3 Wörter, „etwas“ 88-mal, rund 4 Vergleiche je 1.000 Wörter, 20 Ein-Wort-Optionen. Analyse und Plan in `docs/stil-und-lore-plan.md`. Bis zur Überarbeitung gilt für alle Texte: Prosa höchstens Stufe 2, Optionen Stufe 1.
@@ -40,35 +42,35 @@ Stand 2026-11-04, nach Runde 1: drei unabhängige Prüfungen (Plot und Logik, Lo
 ## Knoten
 | Knoten | Titel | Stufe | Schwächen |
 |---|---|---|---|
-| k1_prolog | Prolog: Wer du bist | 2 | Handgearbeitet 2026-11-05 (A, B, Optionen fließen); nicht abgenommen |
-| k1_klinik | Iosefkas Klinik: Transfusion | 2 | Handgearbeitet 2026-11-05 (Vertrag in Stimme C); Vision nur nach RK1 (wahrscheinlich); nicht abgenommen |
-| k1_erwachen | Erwachen und erster Tod | 2 | Handgearbeitet 2026-11-05; nicht abgenommen |
-| k1_traum_erst | Erster Besuch im Jägertraum | 2 | |
-| k1_klinik_kampf | Lernkampf in der Klinik | 1 | sehr kurz (81 Wörter) |
-| k1_iosefka | Iosefkas Tür | 2 | |
-| k1_laterne_zentral | Laterne Zentral-Yharnam | 2 | |
-| k1_hub_b | Zentral-Yharnam (frei) | 2 | |
-| schrei | Kreischen von der Brücke | 1 | |
-| k1_b_gilbert | Gilbert | 2 | **Erste handgearbeitete Szene** (2026-11-04): Ortsbild in Stimme A, Begegnung in B, Optionen fließen in den Satz (#fliesst), Lore aus `lore/`; vom Nutzer nicht gelesen. Offen: Gilberts Sätze nur sinngemäß gegen Kanon geprüft (RK1 §5), Ruß an der Düse als Deutungs-Detail |
-| k1_b_tueren | Türen mit Räucherlampen | 2 | |
-| k1_b_scheiterhaufen | Scheiterhaufen, erste Begegnung mit Gascoigne | 2 | |
-| k1_b_maedchen | Das Mädchen am Fenster | 2 | |
-| k1_b_daecher | Gasse unter den Dächern (Schütze) | 2 | |
-| k1_b_eileen | Eileen die Krähe (Dach) | 2 | |
-| k1_n1_kleriker | Nadelöhr 1: Kleriker-Bestie | 2 | 7 Takte (Abfrage); vom Nutzer nicht gespielt |
-| k1_b_anschlag | Der Anschlag an der Kapellentür | 1 | neu; Wortlaut der Kirche eigen |
-| k1_hub_c | Unterstadt (frei) | 2 | |
-| k1_c_kanal | Kanalisation (Schwein, Leiter) | 2 | |
-| k1_c_eileen | Eileen über den Gräbern | 2 | |
-| k1_c_graeber | Die Gräber, zweite Begegnung mit Gascoigne | 2 | |
-| k1_n2_gascoigne | Nadelöhr 2: Gascoigne | 2 | 8 Takte (Abfrage); neue Takte unabhängig geprüft, vom Nutzer nicht gespielt |
-| k1_d_grab | Viola und die Brosche | 2 | |
-| k1_d_rueckweg | Rückweg durch die Stadt | 2 | zeigt jetzt Veränderungen an bekannten Orten |
-| k1_d_maedchen | Weiche: Was sagst du dem Mädchen? | 2 | |
-| k1_d_kanal | Rückweg durch die Kanalisation | 2 | |
-| k1_d_gilbert | Gilbert hinter der Brücke | 2 | |
-| k1_d_traum | Kapitelende im Traum | 2 | |
-| traum_hub, gehrman, puppe_erwacht, puppe_gespraech, boten_laden, traum_erwachen | Jägertraum | 2 | Boten verkaufen jetzt Jagdnotizen, Kirchenbrief, Wendels Mantel; Preise geschätzt; Wendels Spur ist Saat für Kapitel 2 und dort noch nicht geerntet |
+| k1_prolog | Prolog: Wer du bist | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. Handgearbeitet 2026-11-05 (A, B, Optionen fließen); nicht abgenommen |
+| k1_klinik | Iosefkas Klinik: Transfusion | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. Handgearbeitet 2026-11-05 (Vertrag in Stimme C); Vision nur nach RK1 (wahrscheinlich); nicht abgenommen |
+| k1_erwachen | Erwachen und erster Tod | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. Handgearbeitet 2026-11-05; nicht abgenommen |
+| k1_traum_erst | Erster Besuch im Jägertraum | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
+| k1_klinik_kampf | Lernkampf in der Klinik | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. sehr kurz (81 Wörter) |
+| k1_iosefka | Iosefkas Tür | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
+| k1_laterne_zentral | Laterne Zentral-Yharnam | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
+| k1_hub_b | Zentral-Yharnam (frei) | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
+| schrei | Kreischen von der Brücke | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
+| k1_b_gilbert | Gilbert | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. **Erste handgearbeitete Szene** (2026-11-04): Ortsbild in Stimme A, Begegnung in B, Optionen fließen in den Satz (#fliesst), Lore aus `lore/`; vom Nutzer nicht gelesen. Offen: Gilberts Sätze nur sinngemäß gegen Kanon geprüft (RK1 §5), Ruß an der Düse als Deutungs-Detail |
+| k1_b_tueren | Türen mit Räucherlampen | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
+| k1_b_scheiterhaufen | Scheiterhaufen, erste Begegnung mit Gascoigne | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
+| k1_b_maedchen | Das Mädchen am Fenster | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
+| k1_b_daecher | Gasse unter den Dächern (Schütze) | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
+| k1_b_eileen | Eileen die Krähe (Dach) | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
+| k1_n1_kleriker | Nadelöhr 1: Kleriker-Bestie | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. 7 Takte (Abfrage); vom Nutzer nicht gespielt |
+| k1_b_anschlag | Der Anschlag an der Kapellentür | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. neu; Wortlaut der Kirche eigen |
+| k1_hub_c | Unterstadt (frei) | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
+| k1_c_kanal | Kanalisation (Schwein, Leiter) | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
+| k1_c_eileen | Eileen über den Gräbern | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
+| k1_c_graeber | Die Gräber, zweite Begegnung mit Gascoigne | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
+| k1_n2_gascoigne | Nadelöhr 2: Gascoigne | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. 8 Takte (Abfrage); neue Takte unabhängig geprüft, vom Nutzer nicht gespielt |
+| k1_d_grab | Viola und die Brosche | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
+| k1_d_rueckweg | Rückweg durch die Stadt | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. zeigt jetzt Veränderungen an bekannten Orten |
+| k1_d_maedchen | Weiche: Was sagst du dem Mädchen? | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
+| k1_d_kanal | Rückweg durch die Kanalisation | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
+| k1_d_gilbert | Gilbert hinter der Brücke | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
+| k1_d_traum | Kapitelende im Traum | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
+| traum_hub, gehrman, puppe_erwacht, puppe_gespraech, boten_laden, traum_erwachen | Jägertraum | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. Boten verkaufen jetzt Jagdnotizen, Kirchenbrief, Wendels Mantel; Preise geschätzt; Wendels Spur ist Saat für Kapitel 2 und dort noch nicht geerntet |
 
 ## Werkzeuge und Oberfläche
 | Stück | Stufe | Schwächen |
