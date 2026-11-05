@@ -85,8 +85,8 @@ const SZENARIEN = [
   },
   {
     name: "Wendels Mantel: Gascoigne angelogen",
-    wuensche: ["Gasse unter den Dächern", "Langsam, die Dächer", "Hinaufklettern", "An die Laterne treten", "Zum Bad der Boten", "Jägermantel kaufen", "Zurück zur Laterne", "die Hauptstraße hinauf", "In den Schatten", "Der lag in einer Gasse", "An der Laterne in den Traum", "Hauptstraße mit dem Scheiterhaufen", "Lügen: in einer Gasse"],
-    verbote: ["Molotow kaufen", "Kieselstein kaufen", "Jagdnotizen", "Brief mit Kirchensiegel", "gesiegelten Brief"],
+    wuensche: ["Gasse unter den Dächern", "Langsam, die Dächer", "Hinaufklettern", "An die Laterne treten", "Zum Bad der Boten", "Jägermantel gegen", "Zurück zur Laterne", "die Hauptstraße hinauf", "In den Schatten", "Der lag in einer Gasse", "An der Laterne in den Traum", "Hauptstraße mit dem Scheiterhaufen", "Lügen: in einer Gasse"],
+    verbote: ["Brandflasche gegen", "Kiesel gegen", "Jagdheft", "Brief mit Kirchensiegel", "gesiegelten Brief"],
     erwartet: { mantel: true, mantel_erkannt: true, mantel_gelogen: true },
   },
   {
