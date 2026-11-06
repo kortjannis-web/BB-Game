@@ -18,7 +18,7 @@ Im Westen hängt die Sonne tief, ein kleiner roter Fleck hinter dem Regen. Hinte
 Gesprochen hat der Fahrer seit dem letzten Dorf nicht. Jetzt blickt er sich zum ersten Mal nach dir um, und der Wagen schwankt, als habe er die Zügel vergessen. Er mustert dich einmal genau, von den Stiefeln bis zum Hut. „Aus was für Verhältnissen kommst du eigentlich, Fremder? Wo kommst du her?“
 * [Aus einem Haus mit großem Namen #fliesst]
     ~ herkunft = "adel"
-    Aus gutem Hause, sagst du, einem mit großem Namen und leeren Kellern darunter. Der Kutscher spuckt in den Regen hinaus. „Hier gilt ein Name so viel wie das Blut dahinter“, sagt er.
+    Aus gutem Hause, sagst du, einem mit großem Namen, aber Leichen im Keller. Der Kutscher spuckt an den Wegrand. „Hier gilt ein Name so viel wie das Blut seines Trägers“, sagt er.
 * [Ich bin Überlebender aus Schlachten und Kriegen #fliesst]
     ~ herkunft = "soldat"
     Aus dem Krieg. Mehr sagst du nicht, und dein Daumen sucht am Mantel nach dem Riemen, an dem drei Jahre lang die Patronentasche hing. Den Riemen gibt es längst nicht mehr. Der Daumen sucht trotzdem. Der Kutscher nickt langsam. „Dann kennst du das Warten auf den Morgen“, sagt er. „Das wirst du brauchen.“
