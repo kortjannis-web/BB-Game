@@ -45,6 +45,7 @@ Alle Szenen sind überarbeitet und geschliffen (Stufe 2: von Claude gebaut und z
 4. **Kapitel 2 (Kathedralbezirk):** zuerst ein Gerüst mit Ein-Satz-Platzhaltern nach `lore/kapitel/kapitel2.md`, dem Nutzer als Abfrage vorlegen.
 
 ## Offen beim Nutzer
+- **Struktur (2026-11-06):** Nutzer erwägt Umbau vom Level (Drehscheiben, Rückwege) zum Entscheidungsbuch (immer voran, Routen, Fäden, Nadelöhre, Chronik). Analyse und Skizze für Kapitel 1: `docs/struktur-entscheidungsbuch.md` (Entwurf, unabhängige Prüfung läuft). Nichts gebaut.
 - **Anweisung des Nutzers (2026-11-06): Noch keine Spieltexte erneuern.** Erst Skill und Wissen aufbauen (Prinzipien-Netz `.claude/skills/stil-1800/NETZ.md`, Analysen, Anthologie `musterstellen/` nach Momenten, Wortkammer). Vorher/Nachher in den Analysen sind nur Übungen.
 - **Schreibkunst (2026-11-06):** Leseliste (nur deutsche Werke) in `docs/schreibkunst-lektuere.md`, Methode aus der KI-Schreibforschung in `docs/ki-schreibmethode.md` (Vorbilder statt Verbote, Slop-Detektor, Bibel, drei Kritiker, Varianten); nächster Schritt Wort-für-Wort-Analyse. Nutzer findet die Prosa „Slop“. Analyse in `docs/schreibkunst-analyse.md` (Messung gegen sieben Klassiker, blinde Kritik, Regeln, die Formeln erzeugen, Plan Phase 2: Korpus, Skill `stil-1800`, Prüfer v2, Weltbild, Probe am Prolog). Wartet auf seine Entscheidungen (Probe-Ton, Regeln umbauen, Mond).
 - **Mond/Nacht:** Kanon Kapitel 1 = Abend (Sonnenuntergang nach Gascoigne); Nutzer erinnert ewige Nacht und großen, tiefen Mond. Entscheidung offen.
