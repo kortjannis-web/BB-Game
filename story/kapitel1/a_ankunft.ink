@@ -44,9 +44,6 @@ Gesprochen hat der Fahrer seit dem letzten Dorf nicht. Jetzt blickt er sich zum 
 * [Weil jemand zu Hause im Sterben liegt #fliesst]
     ~ grund = "heilung_anderer"
     Für jemanden, der zu Hause in einem abgedunkelten Zimmer liegt und auf einen Brief wartet, in dem steht, dass es Hoffnung gibt. Du hast versprochen, diesen Brief zu schreiben.
-* [Um eine Schuld abzutragen #fliesst]
-    ~ grund = "schuld"
-    Eine Schuld, sagst du, eine, die sich mit Geld nicht begleichen lässt und mit Reue auch nicht. Man erzählt sich, Yharnam mache aus einem Menschen etwas Neues. Vielleicht genügt das.
 - Der Kutscher schweigt so lange, dass du glaubst, der Regen habe deine Antwort verschluckt. „Bald ist Jagd“, sagt er dann, nur das, und die Pferde gehen schneller, ohne dass er nach der Peitsche greift.
 Die Kutsche hält in einer engen Straße vor einem hohen, schmalen Haus. Die Fenster sind von innen mit Tüchern verhängt, und über der Tür hat jemand mit roter Farbe ein einziges Wort auf ein Brett gemalt: Klinik. Der Kutscher wartet nicht, bis der Schlag zu ist. Hinter dir rollt der Wagen schon an, und das Rad schlägt gegen die Achse, leiser und leiser, bis der Regen es übertönt.
 -> k1_klinik
