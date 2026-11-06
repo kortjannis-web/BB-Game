@@ -29,7 +29,7 @@ flowchart TD
     k1_b_scheiterhaufen["Scheiterhaufen und Mob, erste Begegnung mit Gascoigne"]
     k1_b_maedchen["Das Mädchen am Fenster"]
     k1_b_daecher["Die Gasse unter den Dächern (Schütze)"]
-    k1_b_dachweg["Der Dachweg (neue Station, Platzhalter)"]
+    k1_b_dachweg["Der Dachweg"]
     k1_b_eileen["Eileen die Krähe (Dach)"]
   end
   subgraph kapitel1_n1_kleriker_ink["NADELÖHR 1 Kleriker-Bestie"]
