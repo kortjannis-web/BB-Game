@@ -368,49 +368,59 @@ Erst unten, als du nach der Haustür greifst, die noch immer offen steht, siehst
 
 === k1_b_scheiterhaufen ===
 // TITEL: Scheiterhaufen und Mob, erste Begegnung mit Gascoigne
-// [KANON lore:gegner/jagdmeute] Mob aus bewaffneten Bürgern, die den Fremden für den Überträger halten und rufen, er trage die Krankheit, er solle brennen (LK §20.1, §22.2; den Ruf mit Willem nicht verwenden).
+// [KANON lore:gegner/jagdmeute] Mob aus bewaffneten Bürgern, viele in Kleidung der Kirche, die den Fremden für den Überträger halten und rufen, er trage die Krankheit, er solle brennen; im Leerlauf murmeln sie von einem Fluch und einer Stadt, die erledigt sei (LK §20.1, §22.2; den Ruf mit Willem nicht verwenden). Alles sinngemäß, Wortlaut eigen.
 // [KANON lore:gegner/ziegel-troll] Der Riese mit dem Ziegel hämmert an eine Tür, murmelt von Kälte und einer Schwester und brüllt beim Schlag, alles sei deine Schuld. Unerklärt lassen.
-// [KANON lore:gegenstaende/jaeger-und-werkstatt] Gascoignes Kleidung ist von Bestiengestank durchdrungen, der an ihm zehrt; „Vater“ ist ein Titel aus einem fremden Land. Breitkrempiger Hut (Artbook, orte/zentral-yharnam).
+// [KANON lore:gegenstaende/jaeger-und-werkstatt] Gascoignes Kleidung ist von Bestiengestank durchdrungen, der an ihm zehrt; „Vater“ ist ein Titel aus einem fremden Land. Breitkrempiger Hut (Artbook, orte/zentral-yharnam). Jägeraxt und Donnerbüchse.
+// [KANON lore:figuren/henryk] Henryk ist wortkarg; hier ohne Namen („ein Dürrer mit Federn am Hut“, Artbook), der Name fällt erst bei Eileen.
 // [ERWEITERT] Gascoigne greift ein; Beginn der Freundschaft; er lehrt die Parade, fragt nach deinem Namen, teilt Branntwein aus seiner Heimat (Torf und Rauch, G8) und bittet um einen Gruß an seine Frau. Hat der Spieler Martha verbrannt, bleibt er kalt: keine Flasche, die Parade ohne Blick, die Bitte nur, weil er niemand anderen hat, die Einladung zur Brücke nur bei gascoigne >= 0.
 // [ERWEITERT] Lektorat 2026-11-05: Gascoigne tritt über den Ton auf (Schuss, dann die Namen); das Auge sieht zuerst nur den Verband, Mantel, Hut und Schal erst aus der Nähe. Sein Geruch am Platz nur einmal und leise, ohne „nasses Fell“ (die Steigerung folgt an den Gräbern, c_unterstadt). Martha mit Mehl an den Ärmeln in beiden Zweigen; die Frau mit der Fackel wie ein Kerzenleuchter.
+// Überarbeitung 2026-11-06 (docs/ueberarbeitung-kapitel1.md, Ü1 bis Ü12): Mob als Chor aus einzelnen Menschen (Martha schon in der Menge gesät); Gascoigne riecht nach Torf und Rauch (Ü11), der Branntwein erntet den Geruch; Henryk wortkarg; „morgen“ aus Gascoignes Mund gestrichen (Ü1: die Stadt spricht nicht vom Morgen).
+// [ERWEITERT] Spieluhr-Saat (Ü11): Beim Gruß summt Gascoigne ein paar Töne der Spieluhr vor, damit du sie erkennst; am Brunnenplatz erkennt man die ersten Töne wieder, und dort fehlt einer. Die Lücke erklärt keiner.
 // Stimme Gascoigne (gesund): tief, ruhig, kurze Sätze, warm und spaßig, nennt Leute beim Namen, sagt „Fremder“, bis er deinen Namen hat; beendet Dinge mit „So.“ Wärme, die zerbricht: der Geruch, das Spiel der Bestie, ein Blick zum Feuer.
 -> betreten("scheiterhaufen") ->
 ~ kampfanfang = -> k1_b_scheiterhaufen.kampf
 ~ fr_frei_machen(fr_menschen)
 { k1_b_scheiterhaufen == 1:
-    Die Hauptstraße öffnet sich zu einem Platz, und in seiner Mitte brennt ein Scheiterhaufen, höher als die Dachtraufen ringsum. Oben, an einen Pfahl gebunden, hängt etwas Großes, Behaartes, das sich nicht mehr regt; die Flammen haben ihm das Fell schwarz gefressen, und der Rauch, der von ihm aufsteigt, riecht süßlich und fett, nach einem Schlachttag, an dem keiner sein Handwerk verstand. # bild: scheiterhaufen # stimmung: spannung # lore: buergerjagd
-    Um das Feuer stehen Menschen, ein Dutzend oder mehr, Männer und Frauen in Mänteln und Schürzen, mit Fackeln, Mistgabeln und Beilen, einer mit einem alten Gewehr, dessen Kolben mit Draht geflickt ist. Eine Frau hält ihre Fackel wie einen Kerzenleuchter, mit abgespreiztem kleinem Finger. Sie murmeln, alle zugleich und doch nicht zusammen. Am Rand des Platzes steht ein Riese von einem Mann, nackt bis zur Hüfte, und schlägt mit einem Ziegelstein gegen eine Doppeltür, immer wieder, im Takt eines Herzens. Zwischen zwei Schlägen murmelt er, und was er murmelt, gilt nicht der Tür: „Kalt ist es, Schwesterchen. So kalt.“
-    Einer dreht sich zu dir um, dann drei, dann alle, und das Murmeln bricht ab, so wie ein Topf aufhört zu kochen, wenn man ihn vom Feuer zieht. „Der da“, sagt die Frau mit der Fackel, und ihr kleiner Finger spreizt sich noch immer ab. „Der trägt sie an sich, die Seuche, riecht ihr das nicht?“ Und ein Mann, heiser vom Rauch: „Brennen soll er! Brennen wie das da oben!“ # kampf: mob
+    Am oberen Ende der Hauptstraße treten die Häuser zurück und lassen einen Platz frei, und mitten darauf brennt ein Scheiterhaufen, höher als die Traufen ringsum. Oben am Pfahl hängt, mit Ketten festgezurrt, etwas Großes, Behaartes, das sich nicht mehr regt; das Feuer hat ihm das Fell bis auf die Haut geschwärzt, und was von ihm in die Glut tropft, zischt. Der Rauch riecht nach einem Schlachttag, an dem keiner sein Handwerk verstand, und die Hitze schlägt dir noch dreißig Schritte vor dem Feuer ins Gesicht. # bild: scheiterhaufen # stimmung: spannung # lore: buergerjagd
+    Um das Feuer stehen Menschen, ein Dutzend oder mehr, Männer und Frauen in Mänteln und Schürzen, mit Fackeln, Mistgabeln und Beilen. Einer trägt einen schwarzen Kirchenrock, der ihm um die Schultern schlottert, einer ein altes Gewehr, dessen Kolben mit Draht geflickt ist, und eine Frau hat noch Mehl an den Ärmeln und hält ein Brotmesser in der Faust. Die Frau neben ihr hält ihre Fackel wie einen Kerzenleuchter, mit abgespreiztem kleinem Finger.
+    Sie murmeln, alle zugleich und keiner mit dem anderen. Ein Fluch sei das, sagt einer, ein verdammter Fluch, und ein anderer, mit dieser Stadt sei es aus, und eine Dritte zählt Namen auf, leise, an den Fingern. Am Rand des Platzes steht ein Riese von einem Mann, nackt bis zur Hüfte, und schlägt mit einem Ziegelstein gegen eine Doppeltür, immer wieder, im Takt eines Herzens. Zwischen zwei Schlägen murmelt er, und was er murmelt, gilt nicht der Tür: „Kalt ist es, Schwesterchen. So kalt.“
+    Einer dreht sich zu dir um, dann drei, dann alle, und das Murmeln bricht ab, so wie ein Topf aufhört zu kochen, wenn man ihn vom Feuer zieht. Nur der Riese schlägt weiter gegen seine Tür. „Der da“, sagt die Frau mit der Fackel, und ihr kleiner Finger spreizt sich noch immer ab. „Der trägt sie an sich, die Seuche, riecht ihr das nicht?“ Und ein Mann, heiser vom Rauch: „Brennen soll er! Brennen wie das da oben!“ # kampf: mob
 }
+// WARUM: Der Spieler stellt sich der Menge; das öffnet den Kampf mit zwei Takten, in dem er Anzeichen lesen lernt und mit Gilberts Feuer die falsche, für Aufmerksame erkennbare Wahl treffen kann (es sind Menschen mit Mehl an den Ärmeln).
 + [Stehen bleiben und die Säge ausklappen #fliesst]
-    Die Säge klappt in deiner Hand auf, mit einem Schnappen, das lauter ist als das Feuer, und vorn in der Menge senken sich die ersten Gabeln auf dich.
+    Mit einem Schnappen, lauter als das Feuer, klappt die Säge in deiner Hand auf, und vorn in der Menge senken sich die ersten Gabeln.
     -> kampf
+// WARUM: Der vorsichtige Weg ohne Kampf; er kostet nichts, führt aber sofort zu Gascoigne und lässt die Menge unversehrt (mob = umgangen). Kein falscher Weg.
 + [In den Schatten um den Platz herum #fliesst]
     ~ mob = "umgangen"
-    In den Schatten, an den Hauswänden entlang, Schritt für Schritt, und dein Puls klopft dir bis in die Zähne. Fast liegt der Platz hinter dir, als ein Kind, das du nicht gesehen hast, mit dem Finger auf dich zeigt und schreit: „Da! Der Fremde! Da ist er!“
+    An den Hauswänden entlang, Schritt für Schritt, und dein Herz schlägt dir bis in den Hals. Fast liegt der Platz hinter dir, als auf einer Türschwelle ein Bündel, das du für Lumpen gehalten hast, den Kopf hebt. Es ist ein Kind, und es zeigt mit dem Finger auf dich und schreit: „Da! Der Fremde! Da ist er!“
     -> gascoigne_greift_ein
 
 = kampf
 - (t1)
-Sie kommen von zwei Seiten zugleich, aber nicht gleich schnell. Ein hagerer Mann mit einer Mistgabel löst sich als Erster aus der Menge, die Zinken tief und auf deinen Bauch gerichtet, und hinter dir öffnet sich die Gasse, aus der du gekommen bist, so eng, dass darin keine zwei Mann nebeneinander Platz haben. # anzeichen: mobhieb
+Sie kommen von zwei Seiten zugleich, aber nicht gleich schnell. Ein hagerer Mann mit einer Mistgabel löst sich als Erster aus der Menge, die Zinken tief und auf deinen Bauch gerichtet, und die anderen drängen hinter ihm her, so dicht, dass sie einander auf die Fersen treten. Hinter dir öffnet sich die Gasse, aus der du gekommen bist, so eng, dass darin keine zwei Mann nebeneinander Platz haben. # anzeichen: mobhieb
 { herkunft == "gesuchter": Eine Frau in der zweiten Reihe starrt dich an, als kenne sie dein Gesicht von einem Anschlag. Vielleicht tut sie das. }
-+ [Nach hinten in die enge Gasse #fliesst]
+// WARUM: Die richtige Richtung: Das Anzeichen nennt die enge Gasse, in der die Menge sich selbst im Weg steht. Kein Schaden.
++ [Nach hinten in die enge Gasse weichen #fliesst]
     Rückwärts in die enge Gasse, Schritt um Schritt, und die Menge drängt nach, bis sie sich selbst im Weg steht, Schulter an Schulter, die Gabeln ineinander verkeilt. Die Säge trifft den Ersten. Den Zweiten am Arm, der die Fackel hält.
     -> t2
-+ [Nach vorn mitten in die Menge #fliesst]
+// WARUM: Mut ohne Verstand; erkennbar falsch, weil das Anzeichen zeigt, dass die Menge dicht nachdrängt. Kostet zwei Leben.
++ [Nach vorn, mitten in die Menge hinein #fliesst]
     Mitten hinein, und für einen Herzschlag sieht es aus, als werde die Menge zurückweichen. Sie weicht nicht. Die Zinken fahren dir in die Seite, ein Beil streift deinen Arm.
     ~ zuletzt = mobhieb
     ~ treffer(2)
     { leben <= 0: -> tod }
     -> t2
+// WARUM: Die Versuchung der schnellen Lösung: Sie beendet den Kampf, tötet aber Martha. Für Aufmerksame falsch, denn die Menge besteht aus Bürgern (Mehl, Brotmesser, Schürzen), nicht aus Bestien; Gascoigne bleibt danach kalt.
 + {feuer} [Gilberts Feuer in die Menge halten #fliesst]
-    Aus der Düse fährt eine Zunge, gelb und brüllend, mitten in die Menge. Sie schreien, jeder für sich, erschrockene Menschen, die eben noch eine Menge waren, und stieben auseinander, in Gassen und Hauseingänge. Eine bleibt liegen. Ihre Schürze brennt weiter; an den Ärmeln, wohin das Feuer nicht kam, ist sie weiß von Mehl. Die Düse in deiner Hand ist warm.
+    Aus der Düse fährt eine Zunge, gelb und brüllend, mitten in die Menge. Sie schreien, jeder für sich, erschrockene Menschen, die eben noch eine Menge waren, und stieben auseinander, in Gassen und Hauseingänge. Eine bleibt liegen. Ihre Schürze brennt weiter; an den Ärmeln, wohin das Feuer nicht kam, ist sie weiß von Mehl. Neben ihrer Hand liegt das Brotmesser. Die Düse in deiner Hand ist warm.
     ~ mob = "zerstreut"
     ~ mob_verbrannt = true
     Die Frau am Boden rührt sich nicht. Von oben, von der Kathedrale her, setzt ein Choral ein, langsam und fern, in Stimmen, die jede Silbe sauber zu Ende singen. # klang: choral
     -> gascoigne_greift_ein
 - (t2)
-Mehr kommen. Der Riese hat aufgehört, gegen die Tür zu schlagen; er dreht sich um, den Ziegel in der Faust, und brüllt über den Platz, mit einer Stimme, die überschnappt wie die eines Jungen: „Du! Du bist schuld! An allem bist du schuld!“ Er rennt los, schwerfällig und unaufhaltsam, mitten durch die eigenen Leute. Links, zwischen einer Frau mit einem Beil und dem Pfahl einer Gaslaterne, steht der Kreis nur einen Mann tief. # anzeichen: riese_ansturm
+Von den Rändern des Platzes kommen mehr. Der Riese hat aufgehört, gegen die Tür zu schlagen; er dreht sich um, den Ziegel in der Faust, und brüllt über den Platz, mit einer Stimme, die überschnappt wie die eines Jungen: „Du! Du bist schuld! An allem bist du schuld!“ Er rennt los, schwerfällig und unaufhaltsam, mitten durch die eigenen Leute. Links, zwischen einer Frau mit einem Beil und dem Pfahl einer Gaslaterne, steht der Kreis nur einen Mann tief. # anzeichen: riese_ansturm
+// WARUM: Die Richtung steht im Anzeichen (links ist der Kreis nur einen Mann tief); der Weg kostet einen Stoß, bringt dich aber aus dem Kreis, und der Riese pflügt in die eigenen Leute.
 + [Links durch die Lücke im Kreis #fliesst]
     Links durch die Lücke, zwischen dem Beil und dem Laternenpfahl hindurch: Ein Ellbogen trifft dein Kinn, ein Stiefel dein Knie, aber du bist draußen, und hinter dir pflügt der Riese in die eigenen Leute.
     ~ zuletzt = riese_ansturm
@@ -418,6 +428,7 @@ Mehr kommen. Der Riese hat aufgehört, gegen die Tür zu schlagen; er dreht sich
     { leben <= 0: -> tod }
     ~ mob = "durchbrochen"
     -> gascoigne_greift_ein
+// WARUM: Sich dem Größten stellen; erkennbar falsch, weil der Riese „schwerfällig und unaufhaltsam“ läuft. Kostet zwei Leben.
 + [Dem Riesen von vorn entgegen #fliesst]
     Der Ziegel trifft dich an der Schulter, noch bevor deine Klinge ihn erreicht, und die Welt wird für einen Augenblick weiß.
     ~ zuletzt = riese_ansturm
@@ -425,65 +436,76 @@ Mehr kommen. Der Riese hat aufgehört, gegen die Tür zu schlagen; er dreht sich
     { leben <= 0: -> tod }
     ~ mob = "durchbrochen"
     -> gascoigne_greift_ein
+// WARUM: Heilen im falschen Moment: Mitten im Ansturm trifft der Gegner beim Trinken (Regel der Ampulle).
 + {ampulle > 0} [Die Ampulle in den Schenkel stoßen #fliesst]
     -> ampulle_gefahr(1) -> t2
 
 = gascoigne_greift_ein
 ~ q_frau = 1
 { mob == "zerstreut":
-    Über das Pflaster kommen Schritte aus dem Rauch, schwer und ohne Eile, und halten bei der Frau, die liegen geblieben ist. Von dem Mann siehst du zuerst nur den Verband, schmutziges Leinen, mehrmals um die Augen gewickelt, und doch ist er geradewegs zu ihr gegangen, ohne einmal den Kopf zu wenden. Er kniet sich neben sie und nimmt ihre Hand, obwohl sie schwarz ist. „Martha“, sagt er. Nur das. # stimmung: grauen # lore: gascoigne
-    Als er aufsteht, überragt er dich um einen Kopf, ein langer Jägermantel, ein Hut mit breiter Krempe, um den Hals der Schal eines Priesters. Sein Ärmel streift deinen Arm, und unter Teer und Rauch liegt ein anderer Geruch, schwach und warm, wie von einer Decke, auf der lange ein Tier geschlafen hat. Er wendet dir den Verband zu. „Gascoigne“, sagt er. „Ich jage hier, seit vielen Jahren. Sie hat mir Brot gegeben, wenn ich spät kam.“ Er schweigt. „So.“
+    Aus dem Rauch kommen Schritte über das Pflaster, schwer und ohne Eile, und halten bei der Frau, die liegen geblieben ist. Von dem Mann siehst du zuerst nur den Verband, schmutziges Leinen, mehrmals um die Augen gewickelt, und doch ist er geradewegs zu ihr gegangen, ohne einmal den Kopf zu wenden. Er kniet sich neben sie und nimmt ihre Hand, obwohl sie schwarz ist. „Martha“, sagt er. Nur das. # stimmung: grauen # lore: gascoigne
+    Als er aufsteht, überragt er dich um einen Kopf, ein langer Jägermantel, ein Hut mit breiter Krempe, um den Hals der Schal eines Priesters. Sein Ärmel streift deinen Arm. Er riecht nach Torf und Rauch, und darunter liegt, schwach und warm, ein anderer Geruch, wie von einer Decke, auf der lange ein Tier geschlafen hat. Er wendet dir den Verband zu. „Gascoigne“, sagt er. „Ich jag hier seit vielen Jahren. Wenn ich spät kam, hatte sie noch Brot für mich.“ Er schweigt. „So.“
     ~ gascoigne = gascoigne - 1
 - else:
     Ein Schuss kracht über den Platz{mob == "durchbrochen":, hinter dir}, so laut, dass die Scheiben in den Rahmen klirren. In das Klirren hinein spricht eine Stimme, ruhig und tief, mit einem Rollen, das nicht aus diesen Gassen stammt: „Martha. Hennings. Brack, du alter Esel, nimm die Gabel runter.“ # stimmung: ruhig # lore: gascoigne
     Zwischen dich und die Bürger tritt ein Mann, und von ihm siehst du zuerst nur den Verband, schmutziges Leinen, mehrmals um die Augen gewickelt. Trotzdem wendet er den Kopf von einem zum anderen, und wen der Verband trifft, der lässt die Fackel sinken. In der einen Hand hält er eine Axt, in der anderen eine Donnerbüchse, aus deren Trichter noch Rauch steigt. „Geht heim“, sagt er. „Geht heim zu euren Kindern.“
-    Und sie gehen, einer nach dem anderen; eine Frau mit Mehl an den Ärmeln nickt ihm im Vorbeigehen zu, beinahe verlegen, und selbst der Riese trottet davon und zieht den Ziegel hinter sich her über das Pflaster.
-    Erst dann wendet er sich dir zu und streckt dir die Hand hin, warm und trocken und sehr groß, und aus der Nähe siehst du auch den Rest: den langen Jägermantel, den Hut mit der breiten Krempe und um den Hals den Schal eines Priesters, grau vom Ruß. Unter Teer und Pulver liegt ein anderer Geruch, schwach und warm, wie von einer Decke, auf der lange ein Tier geschlafen hat. Er merkt, dass du es merkst, und tritt einen halben Schritt zurück, ohne deine Hand loszulassen. „Gascoigne. Pater, wenn man's genau nimmt. Aber hier nimmt's keiner genau.“ Er legt den Kopf schief. „Und du bist auch nicht von hier, Fremder. Man hört es an deinen Stiefeln.“ # notiz: gascoigne_pater
+    Und sie gehen, einer nach dem anderen. Die Frau mit dem Mehl an den Ärmeln nickt ihm im Vorbeigehen zu, beinahe verlegen, das Brotmesser hinter dem Rücken, und selbst der Riese trottet davon und zieht den Ziegel hinter sich her, dass er über das Pflaster schrammt.
+    Erst dann wendet er sich dir zu und streckt dir die Hand hin, warm und trocken und sehr groß, und aus der Nähe siehst du auch den Rest: den langen Jägermantel, den Hut mit der breiten Krempe und um den Hals den Schal eines Priesters, grau vom Ruß. Er riecht nach Torf und Rauch, und darunter liegt, schwach und warm, ein anderer Geruch, wie von einer Decke, auf der lange ein Tier geschlafen hat. Er merkt, dass du es merkst, und tritt einen halben Schritt zurück, ohne deine Hand loszulassen. „Gascoigne. Pater, wenn man's genau nimmt. Aber hier nimmt's keiner genau.“ Er legt den Kopf schief. „Und du bist auch nicht von hier, Fremder. Man hört es an deinen Stiefeln.“ # notiz: gascoigne_pater
     { herkunft == "soldat": „Und du gehst wie einer, der Gräben kennt“, fügt er hinzu. „Ich auch. Lange her.“ }
 }
 { mantel: -> mantel_frage }
 - (nach_mantel)
+// WARUM: Die Ausrede nach Marthas Tod; Gascoigne lässt sie nicht gelten, nimmt sie aber hin. Ohne Folge für die Freundschaft.
 * {mob == "zerstreut"} [„Ich hatte keine Wahl.“ #fliesst]
     „Ich hatte keine Wahl.“ Noch während du es sagst, hörst du, wie dünn es klingt. „Man hat immer eine“, sagt er. „Meistens eine schlechte.“ Er wischt die Hand, die ihre gehalten hat, am Mantel ab, Finger für Finger.
+// WARUM: Nach der Tat nach dem Menschen fragen; das ist die einzige Antwort, die ihn ein wenig zurückgewinnt (gascoigne + 1), und sie gibt Martha einen Namen und ein Leben.
 * {mob == "zerstreut"} [„Wer war sie?“ #fliesst]
     ~ gascoigne = gascoigne + 1
     „Wer war sie?“ Er wendet den Verband nicht von ihr ab. „Martha. Hat unten am Markt Brot gebacken, mit zu viel Kümmel, immer, und jeder hat's ihr gesagt, und sie hat's nie gelassen.“ Er hebt den Verband zum Pfahl hinauf. „Sie hatte Angst vor dir. Deshalb stand sie hier.“
+// WARUM: Schweigen statt Rechtfertigung; neutral, aber der Spieler sieht, wie Gascoigne die Tote aushält.
 * {mob == "zerstreut"} [Schweigend neben ihm stehen bleiben #fliesst]
     Keiner von euch sagt ein Wort. Das Feuer auf dem Scheiterhaufen knackt, und irgendwann fällt oben etwas vom Pfahl in die Glut, und er zuckt nicht.
-* {mob != "zerstreut"} [Ihm danken #fliesst]
+// WARUM: Dank für die Rettung; Wärme, die Gascoigne erwidert (gascoigne + 1). Ein Gruß der Freundschaft, kein Prüfstein.
+* {mob != "zerstreut"} [Ihm danken, die Hand noch in seiner #fliesst]
     ~ gascoigne = gascoigne + 1
-    Er winkt ab, als du ihm dankst, aber unter dem Verband ziehen sich seine Mundwinkel nach oben. „Bedankt wird sich selten bei einem Jäger. Meistens macht man nur die Tür zu.“ Er zeigt mit dem Daumen über die Schulter, dorthin, wo die Bürger verschwunden sind. „Die da danken mir morgen auch wieder nicht. Ist schon recht.“
+    „Danke.“ Er winkt mit der freien Hand ab, aber unter dem Verband ziehen sich seine Mundwinkel nach oben. „Bedankt wird sich selten bei einem Jäger. Meistens macht man nur die Tür zu.“ Er zeigt mit dem Daumen über die Schulter, dorthin, wo die Bürger verschwunden sind. „Die da danken mir beim nächsten Mal auch nicht. Ist schon recht.“
+// WARUM: Neugier auf den Mann; öffnet seine Vergangenheit als Fremder und sät Henryk (ohne Namen) für Eileen und Kapitel 2 (gascoigne + 1).
 * {mob != "zerstreut"} [„Warum hilfst du einem Fremden?“ #fliesst]
     // [ERWEITERT] Der Mann mit den Federn am Hut ist Henryk (Artbook: Federn am Hut), hier ohne Namen; der Name fällt erst bei Eileen.
     ~ gascoigne = gascoigne + 1
-    „Warum hilfst du einem Fremden?“ Er hebt die Axt auf die Schulter. „Weil ich selbst einer war. Und es manchmal vergesse. Damals hat mir auch einer geholfen, ein Dürrer mit Federn am Hut, der mich ausgelacht hat, weil ich die Axt verkehrt herum hielt.“ Unter dem Verband lächelt er, warm und ein wenig schief.
+    „Warum hilfst du einem Fremden?“ Er hebt die Axt auf die Schulter. „Weil ich selbst einer war. Und es manchmal vergess.“ Er schweigt einen Atemzug. „Damals hat mir auch einer geholfen. Ein Dürrer mit Federn am Hut. Hat kein Wort gesagt, nur mir die Axt in der Hand umgedreht, weil ich sie verkehrt herum hielt.“ Unter dem Verband lächelt er, warm und ein wenig schief.
+// WARUM: Stolz statt Dank; Gascoigne nimmt es mit Humor, die Freundschaft wächst nicht. Kein falscher Weg, nur ein kühlerer.
 * {mob != "zerstreut"} [„Das hätte ich auch allein geschafft.“ #fliesst]
-    „Das hätte ich auch allein geschafft.“ Er lacht, tief aus der Brust, und schlägt dir auf die Schulter, genau auf die Stelle, die wehtut. „Natürlich. Natürlich hättest du das.“
-- { mob == "zerstreut": „Und du“, sagt er, ohne dich anzusehen. „Wie heißt einer, der so was tut?“ | „Wie heißt du, Fremder?“ }
+    „Das hätte ich auch allein geschafft.“ Er lacht, tief aus der Brust, und schlägt dir auf die Schulter, so kräftig, dass du einen Schritt zur Seite machst. „Natürlich. Natürlich hättest du das.“
+- { mob == "zerstreut": „Und du“, sagt er, ohne dir den Verband zuzuwenden. „Wie heißt einer, der so was tut?“ | „Wie heißt du, Fremder?“ }
+// WARUM: Den Namen geben heißt Nähe zulassen; Gascoigne behält ihn (gascoigne_name), und am Ende hängt am Namen, ob man ihn im Zerfall noch erreicht.
 * [Ihm deinen Namen sagen #fliesst]
     ~ gascoigne_name = true
     ~ gascoigne = gascoigne + 1
     „{name}“, sagst du. { mob == "zerstreut": Er wiederholt ihn nicht. Er nickt nur, so wie man etwas annimmt, das man nicht bestellt hat, und es trotzdem nicht zurückgibt.| „{name}“, wiederholt er, und mit dem Rollen in seiner Stimme klingt der Name schwerer, als hätte er ihm ein Gewicht angehängt. „Gut. Den behalte ich.“}
+// WARUM: Distanz wahren; man bleibt „Fremder“. Später kann Gascoigne dich nicht beim Namen erkennen, was den Moment der Klarheit erschwert (für Aufmerksame: Er sagt, er behalte Namen).
 * [„Jäger. Das muss reichen.“ #fliesst]
     „Jäger. Das muss reichen.“ { mob == "zerstreut": „Reicht“, sagt er. „Für heute.“| Er nickt, als sei das eine ehrliche Antwort. „Dann eben Fremder. Bis du es dir anders überlegst.“}
 -
 ~ parade = true
 ~ parade_quelle = "gascoigne"
 { mob == "zerstreut":
-    Ohne zu fragen, nimmt er dir die Feuerwaffe aus der Hand und wiegt sie. „Damit tötest du keine Bestie. Damit bringst du sie ins Wanken.“ Er zeigt es dir, mitten auf dem Platz, ohne dich dabei anzusehen: das Warten, bis sie ausholt, bis das ganze Gewicht im Schlag liegt, und genau dann der Schuss. „Nicht davor. Nicht danach.“ Er gibt dir die Waffe zurück. „Damit du beim nächsten Mal kein Feuer brauchst.“ # lore: parade
+    Ohne zu fragen, nimmt er dir die Feuerwaffe aus der Hand und wiegt sie. „Damit tötest du keine Bestie. Damit bringst du sie ins Wanken.“ Er zeigt es dir, mitten auf dem Platz, das Gesicht dem Feuer zugewandt und nicht dir: das Warten, bis sie ausholt, bis das ganze Gewicht im Schlag liegt, und genau dann der Schuss. „Nicht davor. Nicht danach.“ Er gibt dir die Waffe zurück. „Damit du beim nächsten Mal kein Feuer brauchst.“ # lore: parade
 - else:
-    Er nimmt deine Feuerwaffe, wiegt sie in der Hand und gibt sie dir zurück. „Damit tötest du keine Bestie. Damit bringst du sie ins Wanken.“ Und dann zeigt er es dir, mitten auf dem Platz, mit dem Feuer im Rücken, und spielt dir die Bestie gleich mit, den Arm hoch über dem Kopf, das Knurren tief in der Kehle, so gut, dass über euch ein Fensterladen zuschlägt: das Warten, bis sie ausholt, bis das ganze Gewicht im Schlag liegt, und genau dann der Schuss. „Nicht davor. Nicht danach. Dann wankt sie, und dann gehört sie dir. So.“ # lore: parade
-    Er lehnt sich an einen Laternenpfahl und zieht eine flache Blechflasche aus dem Mantel. „Gegen die Kälte. Und gegen das andere.“ { mantel_gelogen: Er trinkt zuerst und reicht sie dir, ohne den Hals abzuwischen.| Er reicht sie dir zuerst, und als du getrunken hast, nimmt er sie zurück und wischt den Hals mit dem Ärmel ab, sorgfältig, wie ein Mann, der das zu Hause für jemanden tut.} Der Branntwein ist scharf und schmeckt nach Torf und Rauch, nach einem Land mit mehr Moor als Straßen. „Von daheim“, sagt er. „Das Letzte, was ich davon hab.“ # notiz: gascoigne_flasche
+    Er nimmt deine Feuerwaffe, wiegt sie in der Hand und gibt sie dir zurück. „Damit tötest du keine Bestie. Damit bringst du sie ins Wanken.“ Und dann zeigt er es dir, mitten auf dem Platz, mit dem Feuer im Rücken: das Warten, bis sie ausholt, bis das ganze Gewicht im Schlag liegt, und genau dann der Schuss. Die Bestie spielt er gleich mit, den Arm hoch über dem Kopf, das Knurren tief in der Kehle, so echt, dass über euch ein Fensterladen zuschlägt. „Nicht davor. Nicht danach. Dann wankt sie, und dann gehört sie dir. So.“ # lore: parade
+    Er lehnt sich an einen Laternenpfahl und zieht eine flache Blechflasche aus dem Mantel. „Gegen die Kälte. Und gegen das andere.“ { mantel_gelogen: Er trinkt zuerst und reicht sie dir, ohne den Hals abzuwischen.| Er wischt den Hals mit dem Ärmel ab, sorgfältig, wie ein Mann, der das zu Hause für jemanden tut, und reicht sie dir zuerst.} Der Branntwein ist scharf und schmeckt, wie Gascoigne riecht, nach Torf und Rauch, nach einem Land mit mehr Moor als Straßen. „Von daheim“, sagt er. „Das Letzte, was ich davon hab.“ # notiz: gascoigne_flasche
     Einmal, mitten im Trinken, dreht er den Kopf zum Scheiterhaufen und zieht die Luft ein, tief, und was dabei über sein Gesicht geht, ist kein Ekel. Er schraubt die Flasche zu, fester als nötig.
 }
 { mob == "zerstreut":
-    Er wendet sich zum Gehen und bleibt nach drei Schritten stehen. „Eins noch.“ Er sagt es zum Pflaster vor seinen Stiefeln. „Wenn du heute Nacht einer Frau begegnest, mit einer großen roten Brosche am Kleid, sag ihr, ich komm bald. Sie soll bei der Kleinen bleiben. Und wenn du irgendwo eine Spieluhr hörst: Das ist meine Kleine. Geh hin, wenn du kannst.“ Eine Pause. „Ich hab heute Nacht keinen, den ich sonst fragen könnte.“ # quest: gascoigne_frau
+    Er wendet sich zum Gehen und bleibt nach drei Schritten stehen. „Eins noch.“ Er sagt es zum Pflaster vor seinen Stiefeln. „Wenn du heute Nacht einer Frau begegnest, mit einer großen roten Brosche am Kleid, sag ihr, ich komm bald. Sie soll bei der Kleinen bleiben. Und wenn du irgendwo eine Spieluhr hörst …“ Er summt drei, vier Töne, hoch und so leise, dass das Feuer sie beinahe zudeckt, und bricht ab. „Das ist meine Kleine. Geh hin, wenn du kannst.“ Eine Pause. „Ich hab heute Nacht keinen, den ich sonst fragen könnte.“ # quest: gascoigne_frau
 - else:
-    Er dreht die Flasche in den Händen, bevor er sie einsteckt, und sagt, beinahe verlegen: „Wenn du heute Nacht einer Frau begegnest, mit einer großen roten Brosche am Kleid, sag ihr, ich komm bald. Sie macht sich immer Sorgen. Sie soll bei der Kleinen bleiben. Und wenn du irgendwo eine Spieluhr hörst: Das ist meine Kleine. Geh hin, wenn du kannst.“ # quest: gascoigne_frau
+    Er dreht die Flasche in den Händen, bevor er sie einsteckt, und sagt, beinahe verlegen: „Wenn du heute Nacht einer Frau begegnest, mit einer großen roten Brosche am Kleid, sag ihr, ich komm bald. Sie macht sich immer Sorgen. Sie soll bei der Kleinen bleiben.“ Er räuspert sich. „Und wenn du irgendwo eine Spieluhr hörst, so eine …“ Er summt dir ein paar Töne vor, hoch und vorsichtig, viel zu hoch für eine so tiefe Brust, und schüttelt über sich selbst den Kopf. „So ungefähr. Bei ihr klingt's schöner. Das ist meine Kleine. Geh hin, wenn du kannst.“ # quest: gascoigne_frau
 }
+// WARUM: Das Versprechen, den Gruß auszurichten; bindet den Spieler an Viola und das Mädchen (gascoigne + 1) und ist Saat für Brosche und Spieluhr.
 * [„Ich richte es ihr aus.“ #fliesst]
     ~ gascoigne = gascoigne + 1
     „Ich richte es ihr aus.“ Er nickt, und etwas in seinen Schultern löst sich{mob == "zerstreut":, nicht viel, eine Fingerbreite}.
+// WARUM: Zusage ohne Wort; die Bitte ist angenommen, aber nicht versprochen. Neutral.
 * [Ihm stumm zunicken #fliesst]
     Ein Nicken, ohne ein Wort, und er nickt zurück, trotz des Verbandes, im selben Augenblick wie du.
 -
@@ -496,18 +518,20 @@ Mehr kommen. Der Riese hat aufgehört, gegen die Tür zu schlagen; er dreht sich
 - mob == "zerstreut":
     Er geht in den Rauch, ohne sich umzudrehen. Neben Martha sind in der Asche zwei Abdrücke geblieben, wo er gekniet hat.
 - else:
-    „Pass auf dich auf, {gascoigne_name:{name}|Fremder}.“ Er tippt an die Krempe seines Hutes und geht in den Rauch.
+    „Pass auf dich auf, {gascoigne_name:{name}|Fremder}.“ Er tippt an die Krempe seines Hutes und geht in den Rauch, und der Geruch von Torf bleibt noch einen Atemzug länger als er.
 }
 -> k1_nach_scheiterhaufen
 
 = mantel_frage
-// [ERWEITERT] Wendels Mantel: Gascoigne kennt den Geruch. Er wird misstrauisch. Sein eigener Geruch ist dann schon gefallen (leise, ohne Namen); hier riecht er an dir, nicht umgekehrt.
+// [ERWEITERT] Wendels Mantel: Gascoigne kennt den Geruch. Er wird misstrauisch. Sein eigener Geruch ist dann schon gefallen (leise, ohne Namen); hier riecht er an dir, nicht umgekehrt. Teer und Pulver gehören dem Mantel (dunkles Haus), Torf und Rauch Gascoigne.
 { mob == "zerstreut": Er tritt einen Schritt näher, beugt sich vor, bis die Krempe seines Hutes fast deine Schulter berührt, und zieht die Luft ein, lange, durch die Nase. Sein Gesicht wird noch eine Spur härter, so wie Reif auf einer Scheibe dichter wird.| Noch hält er deine Hand. Er beugt sich vor, bis die Krempe seines Hutes fast deine Schulter berührt, und zieht die Luft ein, lange, durch die Nase. Als er sich aufrichtet, geht das Freundliche aus seinem Gesicht, nicht ganz, aber so, wie die Wärme aus einem Zimmer geht, wenn jemand die Tür offen lässt.}
 „Teer. Pulver. Und Wendel.“ Er sagt den Namen, als lege er ihn auf einen Tisch. „Wendel ist seit zwei Jagden nicht heimgekommen. Woher hast du seinen Mantel?“
 ~ mantel_erkannt = true
+// WARUM: Die Wahrheit über den Fund; Gascoigne glaubt sie, und sie tut ihm weh. Der ehrliche Weg, ohne Strafe.
 * [Ihm die Wahrheit über den Mantel sagen #fliesst]
     // [ERWEITERT] Umbau 2026-11-06: Der Mantel hing hinter der Tür im dunklen Haus (nicht mehr bei den Boten). Gascoigne glaubt dir, ohne zu sagen, warum.
     Die Wahrheit, so wie sie war: ein Haus mit offener Tür, ein Haken hinter der Tür, ein Name im Futter. Noch während du erzählst, hörst du, wie es klingt. Gascoigne schweigt lange. „Hinter der Tür“, sagt er endlich. „Dann ist er dort hineingegangen und nicht mehr heraus.“ Er reibt sich mit dem Daumen über den Verband, dort, wo die Augen sein müssten. „Das glaub ich dir. Das ist ja das Schlimme.“ # notiz: gascoigne_mantel
+// WARUM: Die Lüge; für Aufmerksame falsch, denn Gascoigne hat eben am Mantel gerochen und kennt Wendel. Folge: Misstrauen (gascoigne − 1), die Flasche ohne abgewischten Hals, später ein Echo im Nachbild.
 * [„Der lag in einer Gasse.“ #fliesst]
     ~ mantel_gelogen = true
     ~ gascoigne = gascoigne - 1
@@ -516,37 +540,42 @@ Mehr kommen. Der Riese hat aufgehört, gegen die Tür zu schlagen; er dreht sich
 
 === k1_b_maedchen ===
 // TITEL: Das Mädchen am Fenster
-// [KANON lore:figuren/maedchen-und-viola] Gascoignes Tochter; erkennt den Jäger am Geruch, nicht an der Stimme; die Mutter (Viola) ging den Vater suchen; Spieluhr mit dem Lied des Vaters, das ihn an die Familie erinnert, wenn er vergisst; Namen im Deckel; die Mutter sei schusselig; sie erwähnt einen Großvater. Sie trägt eine große weiße Schleife (G1); rot wird das Band erst beim Schwein.
+// [KANON lore:figuren/maedchen-und-viola] Gascoignes Tochter; erkennt den Jäger am Geruch, nicht an der Stimme; die Mutter (Viola) ging den Vater suchen; Spieluhr mit dem Lied des Vaters, das ihn an die Familie erinnert, wenn er vergisst; Namen im Deckel; die Mutter sei schusselig; sie erwähnt einen Großvater; der Morgen komme immer (im Kanon später, beim Warten; hier schon gesät, Ernte in d_nachspiel). Sie trägt eine große weiße Schleife (G1); rot wird das Band erst beim Schwein.
 // [ERWEITERT] Die Schleife am Riegel als Zeichen für die Mutter (nicht erklären; das sagt das Kind selbst). Man kann sie schon jetzt fortschicken: falsche Entscheidung, Folge in der Kanalisation (erkennbar: Sie will selbst suchen gehen, und Iosefka öffnet niemandem).
-// [ERWEITERT] Lektorat 1.3: Der Spieluhr fehlt ein Ton; an derselben Stelle jeder Runde stolpert die Melodie über eine Lücke. Wiedererkennung für Brücke und Grab (andere Dateien).
+// [ERWEITERT] Lektorat 1.3: Der Spieluhr fehlt ein Ton; an derselben Stelle jeder Runde stolpert die Melodie über eine Lücke. Überarbeitung 2026-11-06: Man sieht die Ursache, eine Lücke im Kamm; Gascoigne hat die ersten Töne am Scheiterhaufen vorgesummt (Wiedererkennung ohne Erklärung). Ernte an Brücke und Grab (andere Dateien).
+// [ERWEITERT] Die heruntergebrannte Räucherlampe vor ihrem Fenster: Sie ist schon lange allein.
 // Stimme: schnell, ernst, zählt auf, was sie alles richtig gemacht hat. Sie kennt den Vater am Geruch, nicht an den Augen (Verband).
 -> betreten("maedchen") ->
 ~ maedchen_gesehen = true
-Hinter dem Tor liegt ein kleiner Platz mit einem versiegten Brunnen, dessen Becken voller Laub und zerbrochener Ziegel ist, und ringsum stehen schmale Häuser, so dicht, dass ihre Fenster einander in die Läden sehen. Mitten in all dem Rauch und Räucherwerk spielt eine Spieluhr, ein Lied aus wenigen hohen Tönen, und an derselben Stelle jeder Runde fehlt einer, eine kleine Lücke, über die die Melodie hinwegstolpert. Du kennst das Lied nicht, und trotzdem wird dir davon der Hals eng, so wie es nur Lieder tun, die man als Kind gehört hat. # bild: brunnenplatz # stimmung: schoen
-Die Melodie kommt aus einem Fenster im ersten Stock. Durch die Ritzen der Läden hängt eine weiße Haarschleife, um den Riegel geknotet, das Band so lang, dass es im Zug gegen das Holz schlägt. # lore: familie_gascoigne
+Hinter dem Tor liegt ein kleiner Platz, so eng umbaut, dass die Fenster einander in die Läden sehen, und in seiner Mitte steht ein Brunnen, der lange kein Wasser mehr gegeben hat; sein Becken ist voll Laub und zerbrochener Ziegel. Von den Gassen her dringt der Lärm nur gedämpft herein. Mitten in diese Stille spielt eine Spieluhr, ein Lied aus wenigen hohen Tönen, und die ersten kennst du: So hat Gascoigne sie auf dem Platz am Feuer gesummt, nur tiefer. Hier aber fehlt an derselben Stelle jeder Runde ein Ton, und die Melodie stolpert über die Lücke und fängt sich wieder. Davon wird dir der Hals eng, so wie es nur Lieder tun, die man als Kind gehört hat. # bild: brunnenplatz # stimmung: schoen
+Die Melodie kommt aus einem Fenster im ersten Stock. Davor brennt eine einzige Räucherlampe, so weit herunter, dass ihr rotes Glas von innen schwarz beschlagen ist, und aus den Ritzen der Läden hängt eine weiße Haarschleife, um den Riegel geknotet; das Band ist so lang, dass es im Zug gegen das Holz schlägt. # lore: familie_gascoigne
 Als du näher kommst, bricht die Melodie mitten im Takt ab. Hinter den Läden zieht jemand die Luft ein, kurz und prüfend. „Du riechst wie Papa, wenn er spät heimkommt“, sagt eine dünne Stimme. „Bist du ein Jäger?“
-Zwischen den Läden erscheinen vier kleine Finger, dann zwei Augen, sehr ernst. „Papa ist auf die Jagd gegangen und nicht wiedergekommen. Und Mama ist gegangen, ihn zu suchen, und auch nicht wiedergekommen. Und Opa ist auch nicht da. Ich hab die Tür zugemacht, so wie Mama gesagt hat. Ich hab das Räucherwerk angezündet. Ich hab meine Schleife rausgehängt, damit Mama das Fenster findet. Ich hab alles richtig gemacht.“
-Mit einem Trotz, der größer ist als sie, setzt sie hinzu: „Wenn Mama nicht bald kommt, geh ich selber und such sie.“ # notiz: maedchen_warnung
+Zwischen den Läden erscheinen vier kleine Finger, dann zwei Augen, sehr ernst. „Papa ist auf die Jagd gegangen und nicht wiedergekommen. Und Mama ist gegangen, ihn zu suchen, und auch nicht wiedergekommen. Und Opa ist auch nicht da. Ich hab die Tür zugemacht, so wie Mama gesagt hat. Ich hab das Räucherwerk angezündet. Ich hab meine Schleife rausgehängt, damit Mama das Fenster findet. Ich hab alles richtig gemacht.“ Sie holt Luft. „Und ich bleib wach. Mama sagt, der Morgen kommt immer.“
+Dann, so bestimmt, wie Kinder Dinge sagen, die sie sich lange überlegt haben: „Wenn Mama nicht bald kommt, geh ich selber und such sie.“ # notiz: maedchen_warnung
+// WARUM: Das Versprechen an das Kind; öffnet die Suche nach der Mutter (q_mutter) und gibt die Spieluhr. Der richtige Weg, auch wenn das Versprechen schwer zu halten ist.
 * [„Ich finde deine Mama.“ #fliesst]
     ~ maedchen = maedchen + 1
     ~ q_mutter = 1
     „Ich finde deine Mama.“ Hinter den Läden kommt einen Atemzug lang nichts. Dann, kaum hörbar: „Versprochen?“ Und bevor du antworten kannst: „Danke.“
     -> spieluhr_geben
+// WARUM: Erst fragen, dann versprechen; öffnet die Suche ebenso, ohne das Kind an ein Versprechen zu binden, und nennt die rote Brosche (Wiedererkennung Violas).
 * [„Woran erkenne ich deine Mama?“ #fliesst]
     ~ q_mutter = 1
     „An der Brosche“, sagt sie, noch bevor du ausgesprochen hast. „Mama trägt immer die große rote Brosche. Die sieht man von Weitem, die ist schöner als alles.“
     -> spieluhr_geben
+// WARUM: Das Kind in Sicherheit schicken wollen; für Aufmerksame falsch, denn Iosefka öffnet niemandem (Klinik), und das Kind hat eben gesagt, es wolle selbst suchen gehen. Folge in der Kanalisation.
 * [„Lauf zu der Ärztin in der Klinik.“ #fliesst]
     -> fort
+// WARUM: Sich nicht binden; das Kind bleibt am Fenster, aber ohne Spieluhr und ohne Suche. Ein kalter, kein tödlicher Weg.
 * [Dich ohne ein Versprechen abwenden #fliesst]
-    „Kommst du wieder?“, fragt sie deinem Rücken nach. Es kommt keine Antwort, und die Finger verschwinden aus dem Spalt.
+    „Kommst du wieder?“, fragt sie deinem Rücken nach. Du antwortest nicht, und als du dich am Tor noch einmal umsiehst, sind die Finger aus dem Spalt verschwunden.
     -> k1_viertel2
 
 = spieluhr_geben
 // [KANON lore:figuren/maedchen-und-viola] Inhalt sinngemäß, Wortlaut eigen.
-Etwas schabt am Fensterbrett, und durch den Spalt zwischen den Läden schiebt sich eine kleine Spieluhr, kaum größer als deine Handfläche, aus Holz und abgegriffenem Messing. „Die ist von Papa. Papa riecht manchmal ganz fremd, und dann sagt er unsere Namen falsch. Dann zieh ich die auf, und er hört zu, und hinterher ist er wieder Papa.“ Sie schiebt sie noch ein Stück weiter. „Mama hätte sie mitnehmen müssen. Sie hat sie hier auf dem Tisch vergessen, Mama vergisst immer was. Bring sie ihr.“ # lore: spieluhr # stimmung: schoen
+Etwas schabt am Fensterbrett, und durch den Spalt zwischen den Läden schiebt sich eine kleine Spieluhr, kaum größer als deine Handfläche, aus Holz und abgegriffenem Messing. „Die ist von Papa. Das ist sein Lied. Papa riecht manchmal ganz fremd, und dann sagt er unsere Namen falsch. Dann zieh ich die auf, und er hört zu, und hinterher ist er wieder Papa.“ Sie schiebt sie noch ein Stück weiter. „Mama hätte sie mitnehmen müssen. Sie hat sie hier auf dem Tisch vergessen, Mama vergisst immer was. Bring sie ihr.“ # lore: spieluhr # stimmung: schoen
 ~ spieluhr = true
-Unter dem Deckel klebt ein vergilbter Zettel mit zwei Namen, in einer feinen Schrift, deren V einen kleinen Kringel nach links macht: Viola. Gascoigne. # lore: familie_gascoigne
+Der Deckel steht einen Spalt offen. Innen sitzt der stählerne Kamm, und in der Reihe seiner Zähne klafft eine Lücke, wie in einem Kindermund. Auf die Innenseite des Deckels ist ein vergilbter Zettel geklebt, zwei Namen in einer feinen Schrift, deren V einen kleinen Kringel nach links macht: Viola. Gascoigne. # lore: familie_gascoigne
 { q_frau == 1:
     Der Deckel bleibt offen in deiner Hand, eine ganze Weile. Dann klappst du ihn zu, und auf dem Platz verstummt etwas, von dem du nicht wusstest, dass es zu hören war.
 }
@@ -557,24 +586,27 @@ Unter dem Deckel klebt ein vergilbter Zettel mit zwei Namen, in einer feinen Sch
 ~ maedchen_wo = "fort"
 ~ maedchen = maedchen - 1
 „Lauf zu der Ärztin in der Klinik“, sagst du. „Dort bist du sicher.“ # quest: maedchen_fort
-„Wirklich?“ Sie zögert. Auf einer Treppe im Haus trappeln Schritte, ein Riegel geht, ein zweiter, eine Haustür knarrt. Ein kleiner Schatten huscht über den Platz und bleibt an der Ecke stehen, wo die Treppe zu den Kanälen hinabführt, in der Richtung, in die ihre Mutter gegangen ist. Dann ist er fort. Am Riegel hängt keine weiße Schleife mehr.
+„Wirklich?“ Ein Atemzug, dann noch einer. Auf einer Treppe im Haus trappeln Schritte, ein Riegel geht, ein zweiter, eine Haustür knarrt. Ein kleiner Schatten huscht über den Platz und bleibt an der Ecke stehen, wo eine Treppe zu den Kanälen hinabführt; dort sieht er hinunter, lange, und nicht in die Richtung der Klinik. Dann ist er fort. Am Riegel hängt keine weiße Schleife mehr, und hinter den Läden brennt die Räucherlampe allein weiter.
 -> k1_viertel2
 
 
 === k1_b_daecher ===
 // TITEL: Die Gasse unter den Dächern (Schütze)
-// [KANON lore:orte/zentral-yharnam] Bürger mit Gewehren auf erhöhten Stellen in Zentral-Yharnam. Der Schuss von hinten ist ein Gefühl aus dem Spiel.
-// [KANON lore:gegenstaende/jaeger-und-werkstatt] Feuerwaffen sind Vorderlader (LK §19): Pulver und Papier, keine Hülsen.
+// [KANON lore:orte/zentral-yharnam] Bürger mit Gewehren auf erhöhten Stellen in Zentral-Yharnam. Der Schuss von hinten ist ein Gefühl aus dem Spiel (Kernmoment, Entscheidung des Nutzers).
+// [KANON lore:gegenstaende/jaeger-und-werkstatt] Feuerwaffen sind Vorderlader (LK §19): Pulver und Papier, keine Hülsen. Die Brandflasche ist eines der ältesten Werkzeuge der Jäger.
 // [ERWEITERT] Der Alte zählt (Kiesel, fünf und fünf; beim Nachladen zählen die Lippen mit). Das Zählen gehört ihm (Lektorat 1.2).
+// Überarbeitung 2026-11-06: Der Schütze sitzt über dem Eingang der Gasse, also hinter dir; das Anzeichen (frisches Pulver, die schaukelnde Klammer an einer Leine, die zum Dach führt) steht vor der Wahl. Die Brandflasche liegt sichtbar neben ihm.
 -> betreten("daecher") ->
 ~ kampfanfang = -> k1_b_daecher
-Die Gasse ist so schmal, dass du die Hauswände zu beiden Seiten mit den Ellbogen streifst, und über dir kreuzen sich Dachrinnen, zerbrochene Fensterläden und Wäscheleinen, an denen nichts mehr hängt als eine einzelne hölzerne Klammer. Keine Taube, kein Tropfen. Es riecht nach Schießpulver, frisch, so wie es nur riecht, wenn eben erst jemand geladen hat. # bild: gasse # stimmung: spannung
+Die Gasse ist so schmal, dass du die Hauswände zu beiden Seiten mit den Ellbogen streifst, und über dir kreuzen sich Dachrinnen, zerbrochene Fensterläden und Wäscheleinen. An einer davon hängt nichts mehr als eine einzelne hölzerne Klammer, und die schaukelt, obwohl in dieser Gasse kein Wind geht. Keine Taube, kein Tropfen, nur der Geruch von Schießpulver, frisch, so wie es nur riecht, wenn eben erst jemand geladen hat. # bild: gasse # stimmung: spannung
+// WARUM: Die Zeichen ernst nehmen (frisches Pulver, die schaukelnde Klammer); der Aufmerksame entdeckt den Schützen, bevor er schießt. Kein Schaden.
 + {not schuetze_gesehen} [Langsam, die Dächer im Blick #fliesst]
-    Schritt für Schritt, den Blick auf den Dachkanten, und beim zehnten erstarrst du: Hinter einem Schornstein, kaum mehr als ein Umriss, hockt ein alter Mann, gebeugt, eine Schlafmütze auf dem Kopf und in den Händen ein Gewehr, das länger ist als er selbst. Er hat dich noch nicht gesehen. Der Lauf zielt auf eine Stelle der Gasse, zwanzig Schritte vor dir, über die du in drei Atemzügen gegangen wärst. # anzeichen: schuss
+    Schritt für Schritt, den Blick auf den Dachkanten, vor dir und hinter dir, und beim zehnten Schritt bleibst du stehen. Über dem Eingang der Gasse, durch den du eben gekommen bist, hockt hinter einem Schornstein, kaum mehr als ein Umriss, ein alter Mann, gebeugt, eine Schlafmütze auf dem Kopf und in den Händen ein Gewehr, das länger ist als er selbst. Er hat dich noch nicht gesehen. Sein Lauf zielt an dir vorbei auf eine Stelle der Gasse, zwanzig Schritte weiter, wo in drei Atemzügen dein Rücken gewesen wäre. # anzeichen: schuss
     ~ schuetze_gesehen = true
     -> oben
+// WARUM: Eile über die Zeichen hinweg; erkennbar falsch, denn die Gasse riecht nach frisch geladenem Pulver. Folge: der Schuss von hinten, ein Leben.
 + {not schuetze_gesehen} [Schnell geradeaus hindurch #fliesst]
-    Auf halbem Weg kracht hinter dir ein Schuss. Etwas Heißes fährt dir in die Schulter, bevor du begreifst, woher es kam, und das Pflaster springt dir entgegen; du fängst dich mit den Händen. Als du dich umdrehst, lädt auf dem Dach hinter dir, hinter einem Schornstein, ein alter Mann mit zitternden Händen nach, und seine Lippen zählen dabei mit. # klang: schuss
+    Auf halbem Weg kracht hinter dir ein Schuss, etwas Heißes fährt dir in die Schulter, das Pflaster springt dir entgegen, und deine Hände fangen dich auf, ehe du weißt, woher es kam. Als du dich umdrehst, hockt über dem Eingang der Gasse hinter einem Schornstein ein alter Mann mit einer Schlafmütze und lädt nach, mit zitternden Händen, und seine Lippen zählen dabei mit. # klang: schuss
     ~ zuletzt = schuss
     ~ treffer(1)
     { leben <= 0: -> tod }
@@ -582,20 +614,24 @@ Die Gasse ist so schmal, dass du die Hauswände zu beiden Seiten mit den Ellboge
     -> oben
 
 = oben
+// WARUM: Den Schützen stellen; öffnet die Begegnung mit dem Alten, die Wahl zwischen Gnade und Tod und den Fund (Kiesel, Brandflasche).
 + [Hinaufklettern und ihn stellen #fliesst]
-    Über eine Regenrinne hinauf, einen Fenstersims, einen Balken, und als du oben bist, versucht er nachzuladen, aber seine Finger sind zu alt und zu eilig, und das Pulver rieselt ihm neben den Lauf. Er sieht zu dir hoch und klatscht einmal in die Hände. Neben ihm auf dem Sims liegen Kieselsteine, sorgfältig in Reihen gelegt, immer fünf und fünf, so wie man Tage zählt. # stimmung: kampf
+    Über eine Regenrinne hinauf, einen Fenstersims, einen Balken, und als du oben bist, will er das Gewehr herumreißen, aber es ist zu lang für den schmalen Sims und schlägt gegen den Schornstein. Er sieht zu dir auf und klatscht einmal in die Hände. Neben ihm auf dem Sims liegen Kieselsteine, sorgfältig in Reihen gelegt, immer fünf und fünf, so wie man Tage zählt, und am Schornstein lehnt eine Flasche, in deren Hals ein ölgetränkter Lappen steckt. # stimmung: kampf
     -> schuetze_wahl
+// WARUM: Ausweichen statt stellen; sicher, aber ohne Fund und ohne den Alten. Kein falscher Weg, ein ärmerer.
 + [Im Hauseingang Deckung suchen #fliesst]
-    Im nächsten Hauseingang, den Rücken an der kalten Tür, wartest du, bis oben kein Lauf mehr über die Dachkante ragt. Zurück geht es dicht an der Wand, den Stein an der Schulter, bis die Gasse dich freigibt.
+    Im nächsten Hauseingang, den Rücken an der kalten Tür, wartest du, bis oben kein Lauf mehr über die Dachkante ragt. Dann weiter, dicht an der Wand, den Stein an der Schulter, bis die Gasse dich freigibt. Hinter dir, über den Dächern, zählt eine dünne Stimme bis fünf und fängt von vorn an.
     -> k1_viertel2
 
 = schuetze_wahl
+// WARUM: Gnade für einen, der nicht mehr weiß, was er tut; der Alte lebt, und später schießt er dir den Rücken frei (d_nachspiel).
 * [Ihm das Gewehr abnehmen und gehen #fliesst]
     ~ schuetze_verschont = true
-    Er lässt das Gewehr los wie ein Kind ein Spielzeug, das ihm ohnehin langweilig geworden ist, und fängt an, seine Kiesel neu zu zählen. Unten im Hof schlägt der Kolben auf das Pflaster. Zwei Kiesel nimmst du mit und eine Flasche, in deren Hals ein ölgetränkter Lappen steckt; er zählt weiter, um die Lücke herum. # notiz: kiesel
+    Er lässt das Gewehr los wie ein Kind ein Spielzeug, das ihm ohnehin langweilig geworden ist, und fängt an, seine Kiesel neu zu zählen. Unten in der Gasse schlägt der Kolben auf das Pflaster. Zwei Kiesel nimmst du mit und die Flasche mit dem Lappen im Hals; er zählt weiter, um die Lücke herum. # notiz: kiesel
     ~ kiesel = kiesel + 2
     ~ molotow = molotow + 1
     -> k1_viertel2
+// WARUM: Die Gefahr beenden; kein Spielfehler, aber ein Mord an einem Wehrlosen, den das Detail (das sonntäglich gekämmte Haar) hinterher spüren lässt.
 * [Es mit der Säge beenden #fliesst]
     Es geht schnell. Er macht dabei einen kleinen, überraschten Laut, mehr nicht. Unter der Schlafmütze ist sein Haar sorgfältig gekämmt und mit Wasser angelegt, wie man es für den Sonntag tut. Zwei von seinen Kieseln steckst du ein und die Flasche mit dem öligen Lappen im Hals; die übrigen liegen weiter in ihren Reihen, fünf und fünf. # notiz: kiesel
     ~ schuetze = "erledigt"
@@ -604,73 +640,91 @@ Die Gasse ist so schmal, dass du die Hauswände zu beiden Seiten mit den Ellboge
     -> k1_viertel2
 
 === k1_b_dachweg ===
-// TITEL: Der Dachweg (neue Station, Platzhalter)
-// [ERWEITERT] Neue Station des Umbaus 2026-11-06 (Kartenmodell, zweites Viertel). PLATZHALTER: knappe Sätze, die sagen, was da ist; neu geschrieben wird mit dem Skill stil-1800.
+// TITEL: Der Dachweg
+// [ERWEITERT] Station des Umbaus 2026-11-06 (Kartenmodell, zweites Viertel), ausgeschrieben in der Überarbeitung 2026-11-06 (Ü10).
 // Fundstücke (ersetzen den Handel im Bad der Boten): das Jagdheft eines Toten (aus dem Bestand von boten_laden), eine Brandflasche, zwei Kiesel. Von oben sind Spuren der anderen Wege zu sehen.
+// [ERWEITERT, Ü1] Der Mond, zweite Stufe: tiefer und größer als über den Giebeln der Klinik, an derselben Stelle; vor der Brücke (Türme als Scherenschnitte) und vor den Gräbern (Narben).
+// [KANON lore:gegenstaende/jaeger-und-werkstatt] Die Jäger der Jäger kleiden sich wie Krähen und deuten damit eine Himmelsbestattung an; der erste von ihnen gab den Toten ein würdiges Begräbnis nach seiner Heimat. Daraus [ERWEITERT]: Der Tote sitzt aufgebahrt unter dem Himmel, die Hände gefaltet, eine schwarze Feder zwischen den Fingern; Krähen warten. Wer ihn so hingesetzt hat, sagt niemand (Saat für Eileen, gleich danach; [Offen], ob sie ihn getötet hat).
+// [ERWEITERT] Das Heft zeichnet die drei Anzeichen, die es lehrt (wurf, ansturm, axt_wirbel), und die beiden Griffe, die es freischaltet (Knochenarm, Ansturm des Schweins).
 -> betreten("dachweg") ->
-Oben läuft ein Weg aus Balken, Ziegeln und gespannten Leinen von Dach zu Dach, und von hier sieht die Stadt anders aus: Die Gassen sind Risse, die Fackeln wandern wie Glühwürmchen, und die Räucherlampen sind rote Punkte in Reihen. # bild: daecher_eileen # stimmung: ruhig
-{ not k1_b_maedchen: Irgendwo zwischen den Giebeln, tief unten, spielt etwas, das fast eine Melodie ist. }
-{ not k1_b_daecher: Auf einem Dach in der Ferne sitzt ein Schatten mit einem langen Gewehr und rührt sich nicht. }
-Auf einem Sims, an einem Schornstein, lehnt ein toter Jäger, den Kopf auf der Brust, die Hände im Schoß, als schliefe er. In seiner Manteltasche steckt ein Heft. Neben ihm stehen eine Flasche mit einem ölgetränkten Lappen im Hals und zwei glatte Kiesel in einer Reihe.
+Oben läuft ein Weg, wie Jäger ihn sich legen, wenn ihnen die Gassen zu eng werden: Bretter von First zu First, Balken über den Lücken, gespannte Leinen, an denen man sich halten kann, wenn man der Leine traut. Hier oben geht ein Wind, den es unten nicht gibt, kalt und rein, und zum ersten Mal seit der Klinik riecht die Luft nicht nach Räucherwerk. Von hier sieht Yharnam anders aus. Die Gassen sind Risse zwischen den Dächern, in den Rissen wandern Fackeln, und an den Hauswänden hängen die Räucherlampen in roten Reihen übereinander, an manchen Häusern so viele, dass man die Angst darin abzählen könnte. Weit hinten glimmt der Platz, an dem das Feuer brennt. # bild: daecher_eileen # stimmung: ruhig
+Über allem steht der Mond, tiefer als über den Giebeln der Klinik und größer, bleich wie ausgekochter Knochen, und der Rauch legt ihm einen Hof um, der nicht weicht. Er steht noch an derselben Stelle. Die Schatten der Schornsteine liegen lang über den Ziegeln und zeigen alle in dieselbe Richtung, von ihm fort.
+{ not k1_b_maedchen: Tief unten, zwischen den Giebeln, spielt etwas, das fast eine Melodie ist, und hört an einer Stelle auf und fängt wieder an. }
+{ not k1_b_daecher: Auf einem Dach weiter hinten hockt ein Schatten hinter einem Schornstein, mit einem Gewehr, das länger ist als er selbst, und zielt in eine Gasse hinunter, in der niemand geht. }
+Am Fuß eines Schornsteins sitzt ein Jäger, den Rücken an den Ziegeln, den Kopf auf der Brust. Er ist tot. Jemand hat ihm die Hände in den Schoß gelegt, die eine über die andere, und zwischen die Finger eine schwarze Feder gesteckt. Auf dem First über ihm hocken drei Krähen nebeneinander und sehen zu, wie du näher kommst. Keine fliegt auf.
+Aus seiner Manteltasche ragt ein Heft, an den Ecken weich gegriffen. Neben seinem Stiefel stehen, sorgsam aufgereiht, eine Flasche mit einem ölgetränkten Lappen im Hals und zwei glatte Kiesel.
+// WARUM: Wissen nehmen, auch von einem Toten; das Heft lehrt drei Anzeichen im Voraus und öffnet an Brücke und Schwein je eine Möglichkeit mehr. Der nützlichere Weg, um den Preis, die Ruhe des Toten zu stören.
 * [Das Heft aus der Tasche ziehen #fliesst]
     ~ jagdnotizen = true
     ~ gelernt += (wurf, ansturm, axt_wirbel)
     ~ kiesel = kiesel + 2
     ~ molotow = molotow + 1
-    Die Seiten sind gewellt, einmal nass geworden und wieder getrocknet. Ein Jäger hat darin gezeichnet, was ihn beinahe umgebracht hat, mit Bleistift und mit Pfeilen: ein Arm, der eine Kutsche über die Schulter hebt. Ein Geweih, gesenkt, und daneben das Wort „spät“, dreimal unterstrichen. Ein Strich, gerade von oben nach unten, und darunter drei Kerben, die dritte tiefer als die anderen. Die letzte Seite ist leer bis auf einen braunen Daumenabdruck. Die Flasche und die Kiesel steckst du auch ein. # notiz: jagdnotizen
+    Die Seiten sind gewellt, einmal nass geworden und wieder getrocknet, und ein Jäger hat darin mit Bleistift gezeichnet, was ihn beinahe umgebracht hat, mit Pfeilen und wenigen Wörtern. Ein Arm, der eine Kutsche über die Schulter hebt, und ein Pfeil vom Kopf der Bestie dorthin, wohin sie wirft. Ein Geweih, gesenkt, daneben das Wort „spät“, dreimal unterstrichen. Ein Arm aus lauter Knochen, verzweigt wie Reisig, mit einem Kreis um das Ende, wo die Knochen zusammenlaufen, und darunter „fassen“. Ein Eber von vorn, und vor ihm eine Gestalt aus drei Strichen, die Füße gestemmt, die Schulter voraus: „nicht weichen“. Zuletzt ein Strich, gerade von oben nach unten, und darunter drei Kerben, die dritte tiefer als die anderen. # notiz: jagdnotizen
+    Die letzte Seite ist leer bis auf einen braunen Daumenabdruck. Die Flasche und die Kiesel steckst du auch ein, und als du dich aufrichtest, rücken die Krähen auf dem First ein Stück näher an den Toten heran.
+// WARUM: Den Toten in Ruhe lassen und nur nehmen, was neben ihm steht; achtungsvoll, aber ohne das Wissen des Hefts. Kein falscher Weg, ein ärmerer.
 * [Nur die Flasche und die Kiesel nehmen #fliesst]
     ~ kiesel = kiesel + 2
     ~ molotow = molotow + 1
-    Die Flasche und die Kiesel nimmst du an dich. Dem Toten lässt du sein Heft.
-- Der Weg führt dich hinab, zwischen zwei Giebeln hindurch, ohne dass du ein Dach verlassen hättest, das jemals ein Dach gewesen wäre.
+    Die Flasche und die Kiesel nimmst du an dich, und das Heft schiebst du ihm tiefer in die Tasche, damit der Wind es nicht holt. Über dir rücken die Krähen auf dem First zusammen.
+- Am Ende des Dachwegs führt eine zweite Leiter in einen Hinterhof hinab, und mit jeder Sprosse wird die Luft wieder dick vom Räucherwerk, bis der Wind von oben nur noch eine Erinnerung im Nacken ist.
 -> k1_viertel2
 
 === k1_b_eileen ===
 // TITEL: Eileen die Krähe (Dach)
 // [KANON lore:figuren/eileen] Eileen auf den Dachbalken über dem Kanaleingang (RK1 §7, §12), Jägerin der Jäger, gibt Jägermarken. Ihre Warnung: Menschen gebe es hier keine mehr, nur Bestien mit Hunger; ein Jäger jage Bestien, die Jäger überlasse er ihr. Sie kennt den Jägertraum (grüßt die kleine Puppe). Nächstes Treffen in Kapitel 1 auf dem Dach über den Gräbern (G2).
+// [KANON lore:gegenstaende/jaeger-und-werkstatt] Im Schnabel ihrer Maske steckt Weihrauch gegen den Geruch von Blut und Bestie; die Jäger der Jäger kleiden sich wie Krähen (Himmelsbestattung).
 // Die Jägermarken sind entfallen (Entscheidung des Nutzers 2026-11-06: Buchgefühl vor Videospiel).
 // [ERWEITERT] Tieferes Gespräch, sie kennt Gascoigne und Henryk. Die Partnerschaft beginnt erst in Kapitel 2. Die Abzeichen an der Schnur.
+// Überarbeitung 2026-11-06: Die zwei Formen der ersten Begegnung bekommen je ein eigenes Zeichen (Dachweg: die Feder wie beim Toten; Krampen: Weihrauch in der Luft), ohne neue Weiche. Sie erkennt den Traum an der Tinte an deinen Fingern und sagt es (statt des alten Rätselsatzes „gegrüßt, ohne das Wort“); die Puppe nennt sie, aber nicht mit den Worten des Spiels.
 // Stimme: heiser, sehr kurz, Sätze ohne Anlauf; beantwortet Fragen mit Gegenfragen oder gar nicht. Ihr Lachen ist ein Krächzen.
 -> betreten("eileen") ->
 // Zwei Formen der ersten Begegnung (Fassung 2): über den Dachweg oder von unten über die Krampen am Kanaleingang.
 { k1_b_dachweg:
-    Über dem Kanaleingang laufen Balken von Haus zu Haus, und hier hat jemand gewartet.
+    Über dem Kanaleingang laufen Balken von Haus zu Haus, so schwarz von Ruß wie die oben auf dem Dachweg, und eine Regenrinne führt zu ihnen hinauf. Auf halber Höhe hat sich im Rost eine schwarze Feder verfangen, eine wie die zwischen den Händen des Toten.
 - else:
-    Zu den Dachbalken über dem Kanaleingang führen eiserne Krampen in der Mauer hinauf, kalt und rau vom Rost.
+    Zu den Balken über dem Kanaleingang führen eiserne Krampen die Mauer hinauf, schuppig von Rost, und je höher du steigst, desto deutlicher riecht es nach Weihrauch, herb, wie aus einer Kapelle, obwohl hier oben keine Lampe hängt.
 }
 ~ eileen_stufe = 1
-Oben laufen alte Dachbalken von Haus zu Haus, schwarz von Ruß und Regen, und auf ihnen, halb hinter ein paar Fässern verborgen, sitzt jemand so still, dass du ihn für einen Haufen alter Kleider gehalten hättest, wenn er nicht den Kopf gedreht hätte. # bild: daecher_eileen # stimmung: ruhig
-Es ist eine Frau, in einem Mantel aus schwarzen Federn, die bei jeder Bewegung rascheln, und vor ihrem Gesicht sitzt ein langer, gebogener Schnabel, wie die Pestärzte ihn auf alten Holzschnitten tragen. An einer Schnur um ihren Hals hängen kleine Abzeichen, Messing, Silber, Eisen, jedes anders und jedes abgegriffen; sie klappern, als sie sich vorbeugt und dich lange ansieht. „Neu“, sagt sie, nicht als Frage. „Riecht man.“ Und nach einem Atemzug: „Menschen gibt's hier keine mehr. Nur Hunger mit Gesichtern.“
+Oben laufen die Balken von Dach zu Dach, schwarz von Ruß und Regen, und auf ihnen, halb hinter ein paar Fässern, sitzt jemand so still, dass du ihn für einen Haufen alter Kleider hältst, bis er den Kopf dreht. # bild: daecher_eileen # stimmung: ruhig
+Es ist eine Frau, in einem Mantel aus schwarzen Federn, die bei jeder Bewegung rascheln, und vor ihrem Gesicht sitzt ein langer, gebogener Schnabel, wie die Pestärzte ihn auf alten Holzschnitten tragen. An einer Schnur um ihren Hals hängen kleine Abzeichen, Messing, Silber, Eisen, jedes anders und jedes abgegriffen; sie klappern, als sie sich vorbeugt und dich lange ansieht. „Neu“, sagt sie, nicht als Frage. „Riecht man. Sogar hierdurch.“ Sie tippt mit einem Finger an den Schnabel, und aus ihm weht dir Weihrauch entgegen. Nach einem Atemzug: „Menschen gibt's hier keine mehr. Nur Hunger mit Gesichtern.“
 { mantel:
     ~ mantel_erkannt = true
-    Ihr Schnabel senkt sich zu deinem Mantel, zum Saum, wo das Stück fehlt. Sie streckt die Hand aus und fährt mit dem Daumen über die Schnittkante, glatt, wie mit einer Klinge gezogen. „Wendel“, sagt sie, und zieht die Hand zurück. „Steht dir nicht.“ Unter ihrem Federmantel, an der Schnur mit den Abzeichen, klappert etwas, als sie sich wieder zurücklehnt, und du kannst nicht sehen, welches. # notiz: eileen_mantel
+    Ihr Schnabel senkt sich zu deinem Mantel, zum Saum, wo das Stück fehlt. Sie streckt die Hand aus und fährt mit dem Daumen über die Schnittkante, glatt, wie mit einer Klinge gezogen. „Wendel“, sagt sie und zieht die Hand zurück. „Steht dir nicht.“ Als sie sich wieder zurücklehnt, klappert an ihrer Schnur eines der Abzeichen gegen die anderen, und du siehst nicht, welches. # notiz: eileen_mantel
 }
+// WARUM: Nach den Abzeichen fragen; öffnet, wer sie ist (Jägerin der Jäger) und ihren Namen (eileen + 1). Für Aufmerksame ein Zeichen, dass man ihr den Pater besser nicht zeigt.
 * [„Was sind das für Abzeichen?“ #fliesst]
     „Was sind das für Abzeichen?“ Sie fasst die Schnur mit zwei Fingern und lässt die Abzeichen durch die Hand laufen, eins nach dem anderen, und bei jedem hält ihr Daumen kurz an. „Jäger. Die nicht mehr wussten, was sie jagen.“ Sie lässt die Schnur fallen. „Irgendwer muss sie heimbringen. Eileen.“ Erst nach einem Atemzug merkst du, dass das ihr Name war. # lore: jaeger_der_jaeger # lore: blutrausch
     ~ eileen = eileen + 1
     ~ eileen_genannt = true
+// WARUM: Misstrauen zeigen; Eileen achtet es und nennt ihren Namen, ohne dass die Beziehung wächst.
 * [Die Hand am Griff der Säge lassen #fliesst]
-    Sie sieht die Hand am Griff der Säge und nickt, beinahe zufrieden. „Gut. Misstrauen hält länger als Mut.“ Sie klopft gegen die Abzeichen an ihrer Schnur. „Die hier waren mutig. Eileen.“ # lore: jaeger_der_jaeger # lore: blutrausch
+    Sie sieht die Hand am Griff der Säge und nickt, beinahe zufrieden. „Gut. Misstrauen hält länger als Mut.“ Sie klopft gegen die Abzeichen an ihrer Schnur. „Die hier waren mutig.“ Ihren Namen sagt sie, wie man einen Preis nennt, den man nicht verhandelt: „Eileen.“ # lore: jaeger_der_jaeger # lore: blutrausch
     ~ eileen_genannt = true
+// WARUM: Abweisung; Eileen lacht darüber, behält ihren Namen für sich und begegnet dir an den Gräbern kälter (eileen − 1).
 * [„Kümmer dich um deine Sachen.“ #fliesst]
     ~ eileen = eileen - 1
     „Kümmer dich um deine Sachen.“ Unter dem Schnabel krächzt es, kurz und rau; so lacht sie. „Tu ich. Genau das tu ich.“ Die Abzeichen klappern. Ihren Namen sagt sie dir nicht. # lore: jaeger_der_jaeger # lore: blutrausch
-- Sie sieht dich an, und ihr Schnabel bleibt an deiner Armbeuge hängen, an der Stelle, wo der Einstich pocht. # notiz: eileen_armbeuge
-// [KANON lore:figuren/eileen] Sie kennt den Jägertraum (LK 5.1: grüßt die kleine Puppe).
-Du hast niemandem von dem Garten erzählt, und sie hat ihn nicht erwähnt. Sie hat ihn gegrüßt, ohne das Wort.
+- Ihr Schnabel wandert an dir herunter und bleibt an deiner Armbeuge hängen, an der Stelle, wo der Einstich pocht, und dann an deinen Fingern, an der braunen Tinte, die seit der Klinik nicht abgeht. „Hast unterschrieben“, sagt sie. „Wachst also auch im Gras auf, da drüben. Bei der Puppe.“ # notiz: eileen_armbeuge
+// [KANON lore:figuren/eileen] Sie kennt den Jägertraum (LK 5.1: grüßt die kleine Puppe). Wortlaut eigen.
+Du hast niemandem von dem Garten erzählt.
+// WARUM: Nachfragen, woher sie den Traum kennt; sie antwortet nicht. Zeigt, dass Eileen mehr weiß, als sie sagt (Saat für Kapitel 2).
 * [„Woher kennst du den Garten?“ #fliesst]
     „Woher kennst du den Garten?“ Keine Antwort. Sie rückt nur die Maske zurecht, und die Abzeichen an ihrem Hals klappern einmal.
+// WARUM: Schweigen wie sie; ein stilles Einverständnis zwischen zwei, die denselben Traum kennen. Neutral.
 * [Schweigen, wie sie schweigt #fliesst]
     Du sagst nichts. Sie sieht, dass du es bemerkt hast, und sagt auch nichts.
 - Dann, während sie die Schnur ordnet: „Ein Pater. Groß, Verband über den Augen. Schon gesehen?“ # notiz: eileen_frage
+// WARUM: Für Gascoigne sprechen; Eileen hört zu und nennt Henryk (gascoigne + 1). Der richtige Weg, wenn man den Freund schützen will.
 * {q_frau == 1} [„Ja. Er hat mir geholfen.“ #fliesst]
     ~ gascoigne = gascoigne + 1
     „Ja. Er hat mir geholfen.“ Und du erzählst ihr{ mob == "zerstreut":, wie er neben einer Toten kniete und ihren Namen sagte und dir trotzdem zeigte, wie man wartet.|, wie er dich vor der Menge bewahrt und die Bürger beim Namen genannt hat, einen nach dem anderen.} Eileen unterbricht dich nicht. „Hoffentlich bleibt er so“, sagt sie dann. „Er und Henryk, sein alter Partner. Zu lange zusammen draußen. Zu viele Nächte.“ Ihr Daumen liegt auf einem der Abzeichen an der Schnur und bleibt dort. # notiz: henryk
+// WARUM: Den Pater der Jägerin der Jäger ausliefern; für Aufmerksame falsch, denn die Abzeichen an ihrer Schnur zeigen, was sie mit Jägern tut. Folge: Gascoigne kann auf der Brücke nicht gerufen werden, und die Nacht trägt es nach.
 * {q_frau == 1} [Ihr zeigen, wo du ihn gesehen hast #fliesst]
     ~ gascoigne_verraten = true
     ~ eileen = eileen + 1
     Mit ausgestrecktem Arm zeigst du über die Dächer, dorthin, wo du ihn gesehen hast, und in welche Richtung er gegangen ist. Sie nickt, langsam. Eine ihrer Hände findet die Schnur mit den Abzeichen und hält sie fest. „Danke“, sagt sie. „Ist richtig so.“ Ihre Stimme klingt nicht, als glaube sie es. # notiz: verrat_gascoigne
+// WARUM: Den Freund verleugnen, um ihn zu schützen; Eileen glaubt es nur halb. Neutral für beide.
 * {q_frau == 1} [„Nein. Nie gesehen.“ #fliesst]
     „Nein. Nie gesehen.“ Sie nickt, als habe sie diese Antwort erwartet, und der Schnabel bleibt so lange auf dich gerichtet, dass du weißt, wie viel sie dir glaubt und wie viel nicht.
-- Sie steht auf. „Bestien jagst du“, sagt sie. „Jäger jag ich.“ Sie breitet den Mantel aus wie Flügel und ist mit einem Sprung auf dem nächsten Dach, und von dort ruft sie, ohne sich umzudrehen: „Jäger sehen sich wieder. Meistens zu spät.“ # quest: eileen_treffen
+- Sie steht auf. „Bestien jagst du“, sagt sie. „Jäger jag ich.“ Sie breitet den Mantel aus wie Flügel und ist mit einem Sprung auf dem nächsten Dach, und von dort ruft sie, ohne sich umzudrehen: „Jäger sehen sich wieder. Meistens zu spät.“ Wo sie gesessen hat, riecht es noch eine Weile nach Weihrauch. # quest: eileen_treffen
 -> k1_vor_bruecke
