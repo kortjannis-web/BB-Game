@@ -236,6 +236,29 @@ function zerlege(k) {
     for (const z of spruenge) if (!["END", "DONE", "betreten"].includes(z)) hinein({ art: "sprung", ziel: aufloesen(z, k.name) });
   };
 
+  // Beginn eines Blocks: "{" allein, "{ bedingung:" oder "{ variable:" (Schalter) oder "{ stopping:" usw.
+  const oeffneBlock = (t) => {
+    const bl = t.match(/^\{\s*([^{}]*?)\s*:?\s*$/);
+    if (t.startsWith("{") && !t.includes("}") && bl) {
+      const kopf = bl[1].replace(/:$/, "").trim();
+      const block = { art: "block", label: "", zweige: [] };
+      hinein(block);
+      stapel.push(block);
+      if (["stopping", "cycle", "shuffle", "once"].includes(kopf)) {
+        block.folge = { stopping: "der Reihe nach", cycle: "wechselt bei jedem Mal", shuffle: "zufällig", once: "nur einmal" }[kopf];
+        block.zaehler = 0;
+      } else if (kopf && t.endsWith(":")) {
+        if (/^[a-z_]\w*$/.test(kopf) && !knoten.has(kopf)) block.schalter = kopf; // Schalter wie { ort: - "bruecke": … }
+        if (block.schalter === undefined || /\(|\s/.test(kopf)) {
+          const z = { art: "zweig", label: `wenn ${bedingungLesbar(kopf)}`, kinder: [] };
+          block.zweige.push(z);
+          stapel.push(z);
+        } else block.label = `wenn ${bedingungLesbar(kopf)}`;
+      }
+      return true;
+    }
+    return false;
+  };
   let zeile = 0;
   for (const [idx, roh] of k.zeilen.entries()) {
     zeile = k.nummern[idx];
@@ -286,26 +309,7 @@ function zerlege(k) {
       if (stapel.length > 1 && oben().art === "block") stapel.pop();
       continue;
     }
-    // Beginn eines Blocks: "{" allein, "{ bedingung:" oder "{ variable:" (Schalter) oder "{ stopping:" usw.
-    const bl = t.match(/^\{\s*([^{}]*?)\s*:?\s*$/);
-    if (t.startsWith("{") && !t.includes("}") && bl) {
-      const kopf = bl[1].replace(/:$/, "").trim();
-      const block = { art: "block", label: "", zweige: [] };
-      hinein(block);
-      stapel.push(block);
-      if (["stopping", "cycle", "shuffle", "once"].includes(kopf)) {
-        block.folge = { stopping: "der Reihe nach", cycle: "wechselt bei jedem Mal", shuffle: "zufällig", once: "nur einmal" }[kopf];
-        block.zaehler = 0;
-      } else if (kopf && t.endsWith(":")) {
-        if (/^[a-z_]\w*$/.test(kopf) && !knoten.has(kopf)) block.schalter = kopf; // Schalter wie { ort: - "bruecke": … }
-        if (block.schalter === undefined || /\(|\s/.test(kopf)) {
-          const z = { art: "zweig", label: `wenn ${bedingungLesbar(kopf)}`, kinder: [] };
-          block.zweige.push(z);
-          stapel.push(z);
-        } else block.label = `wenn ${bedingungLesbar(kopf)}`;
-      }
-      continue;
-    }
+    if (oeffneBlock(t)) continue;
     // Zweig in einem Block: "- else:", "- bedingung:", '- "wert":' oder Folge-Glied "- text"
     const offen = [...stapel].reverse().find((x) => x.art === "block") ?? null;
     const zw = t.match(/^-\s*(.+?)\s*:\s*(.*)$/);
@@ -330,7 +334,7 @@ function zerlege(k) {
         const z = { art: "zweig", label, kinder: [] };
         offen.zweige.push(z);
         stapel.push(z);
-        if (rest && rest.trim()) textZeile(rest);
+        if (rest && rest.trim() && !oeffneBlock(rest.trim())) textZeile(rest);
         continue;
       }
     }

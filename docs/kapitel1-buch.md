@@ -2206,15 +2206,14 @@ Am Fuß der Treppe steht die Puppe, wie sie beim ersten Mal stand, die Hände vo
 > 
 > _beim 4. Mal:_
 >
-> [wenn tode ≥ 3: ∅]
-> 
-> „Du liegst jedes Mal ein wenig anders im Gras, wenn du zurückkehrst“, sagt sie. „Ich merke es mir. Einmal lag deine Hand offen, einmal war sie geschlossen.“ Sie sieht nicht auf. „Wozu ich es mir merke, weiß ich nicht. Aber es wird mir jedes Mal schwerer.“
-> 
-> _beim 5. Mal:_
->
-> else:
-> 
-> „Wie ist die Jagd?“, fragt sie, und während du erzählst, regt sich an ihr nichts als die Lider. Als du fertig bist, wiederholt sie ein einziges Wort davon, behutsam, wie man eine fremde Münze zwischen den Fingern dreht: „[wenn k1_b_maedchen: Brunnenplatz | sonst: Räucherlampe].“
+> > _wenn tode ≥ 3:_
+> >
+> > „Du liegst jedes Mal ein wenig anders im Gras, wenn du zurückkehrst“, sagt sie. „Ich merke es mir. Einmal lag deine Hand offen, einmal war sie geschlossen.“ Sie sieht nicht auf. „Wozu ich es mir merke, weiß ich nicht. Aber es wird mir jedes Mal schwerer.“
+> > 
+> > _sonst:_
+> >
+> > „Wie ist die Jagd?“, fragt sie, und während du erzählst, regt sich an ihr nichts als die Lider. Als du fertig bist, wiederholt sie ein einziges Wort davon, behutsam, wie man eine fremde Münze zwischen den Fingern dreht: „[wenn k1_b_maedchen: Brunnenplatz | sonst: Räucherlampe].“
+> > 
 > 
 
 #### › frage
