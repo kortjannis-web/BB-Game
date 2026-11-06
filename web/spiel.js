@@ -48,6 +48,9 @@
     }
   };
   const wahlKennung = (c) => kennung(`${String(c.sourcePath ?? letzterPfad).split(".")[0]}|${c.text}`);
+  // Feste Absätze des Textes (ohne eingefügte Vorschläge, Kommentare und Werkzeuge), für Speichern und Zurück.
+  const fluechtig = (el) => el.classList.contains("eingefuegt") || el.classList.contains("kommentar") || el.classList.contains("ws-werkzeug") || el.tagName === "TEXTAREA";
+  const stabil = () => [...text.children].filter((el) => !fluechtig(el));
   function gelesenMarkieren() {
     for (const p of text.querySelectorAll("p[data-orig]")) if (gesehen.a.has(kennung(p.dataset.orig))) p.classList.add("gelesen");
   }
@@ -63,11 +66,10 @@
 
   const speichern = () => {
     try {
-      const absaetze = [...text.children]
-        .filter((el) => !el.classList.contains("eingefuegt") && !el.classList.contains("ws-werkzeug") && el.tagName !== "TEXTAREA")
+      const absaetze = stabil()
         .slice(-400)
         .map((el) => ({ tag: el.tagName, html: el.dataset.orig === undefined ? el.innerHTML : "", orig: el.dataset.orig, pfad: el.dataset.pfad, cls: el.className.replace(/\b(geaendert|gestrichen)\b/g, "").trim() }));
-      const versatz = text.children.length - absaetze.length;
+      const versatz = stabil().length - absaetze.length;
       const daten = { state: story.state.toJson(), notizen, gelesen, absaetze, versatz, stimmung: document.body.dataset.stimmung, pfad: letzterPfad, bild: letztesBild };
       try {
         localStorage.setItem(SPEICHER, JSON.stringify({ ...daten, verlauf: verlauf.slice(-12) }));
@@ -239,9 +241,40 @@
     return { T, weg, ein, wahlNeu, wahlWeg };
   }
 
+  // Kommentare an Claude und seine Antworten als Sprechblasen unter der Stelle (Absatz oder Entscheidung).
+  function kommentarBox(orig) {
+    if (!W || !orig) return null;
+    const eigene = W.liste().filter((a) => a.art === "notiz" && a.vorher === orig);
+    const passt = (x) => x && (orig === x || orig.startsWith(x));
+    const verlauf = (W.antworten?.() ?? []).filter((a) => passt(a.vorher) || passt(a.nachher));
+    if (!eigene.length && !verlauf.length) return null;
+    const box = document.createElement("div");
+    box.className = "kommentar";
+    const zeile = (wer, txt, cls) => {
+      const z = document.createElement("p");
+      z.className = cls;
+      const w = document.createElement("span");
+      w.className = "wer";
+      w.textContent = wer;
+      z.append(w, document.createTextNode(` ${txt}`));
+      box.appendChild(z);
+      return z;
+    };
+    for (const a of verlauf) {
+      zeile("Du:", a.frage ?? "", "frage");
+      zeile(`Claude${a.status ? ` (${a.status})` : ""}:`, a.antwort ?? "", "claude");
+    }
+    for (const a of eigene) {
+      const z = zeile("💬 Du:", a.nachher ?? "", "frage offen");
+      z.title = "Antippen zum Ändern oder Löschen";
+      z.onclick = () => W.notizOeffnen({ passage: a.passage, vorher: orig, kontext: a.kontext }, a);
+    }
+    return box;
+  }
+
   function ueberarbeitungAnwenden() {
     const { T, weg, ein } = vorschlaege();
-    for (const e of text.querySelectorAll("p.eingefuegt")) e.remove();
+    for (const e of text.querySelectorAll("p.eingefuegt, div.kommentar")) e.remove();
     for (const p of text.querySelectorAll("p[data-orig]")) {
       if (p.hidden) continue;
       const orig = p.dataset.orig;
@@ -259,6 +292,8 @@
         anker.after(n);
         anker = n;
       }
+      const k = kommentarBox(orig);
+      if (k) anker.after(k);
     }
   }
 
@@ -345,7 +380,7 @@
       }));
     }
     leiste.append(
-      knopf("Notiz", () => W.notizOeffnen({ passage, vorher: orig, kontext: kontext() })),
+      knopf("💬 Kommentar an Claude", () => W.notizOeffnen({ passage, vorher: orig, kontext: kontext() })),
       knopf("Quelltext", () => W.quelltextOeffnen(passage)),
       knopf("Abbrechen", werkzeugSchliessen, "ws-leise"),
     );
@@ -409,6 +444,8 @@
         zeile.appendChild(s);
       }
       wahl.appendChild(zeile);
+      const k = kommentarBox(c.text);
+      if (k) wahl.appendChild(k);
     });
     wahlWerkzeuge();
   }
@@ -444,7 +481,7 @@
           W.hinzufuegen({ art: "wahl-loeschen", passage, vorher: original, kontext: kontext() });
           fertig();
         }),
-      knopf("Notiz", () => W.notizOeffnen({ passage, vorher: original, kontext: kontext() })),
+      knopf("💬 Kommentar an Claude", () => W.notizOeffnen({ passage, vorher: original, kontext: kontext() })),
       knopf("Abbrechen", fertig, "ws-leise"),
     );
     input.addEventListener("keydown", (e) => {
@@ -471,7 +508,7 @@
     const leiste = el("div", "ws-werkzeug");
     leiste.append(
       knopf("+ Entscheidung vorschlagen", () => neueWahl()),
-      knopf("Notiz zu dieser Stelle", () => W.notizOeffnen({ passage, kontext: kontext() })),
+      knopf("💬 Kommentar zu dieser Passage", () => W.notizOeffnen({ passage, kontext: kontext() })),
       knopf("Quelltext dieser Stelle", () => W.quelltextOeffnen(passage)),
     );
     box.appendChild(leiste);
@@ -518,8 +555,8 @@
 
   function waehlen(i) {
     werkzeugSchliessen();
-    const kinder = [...text.children];
-    const neuAlt = [...text.querySelectorAll("p:not(.alt)")];
+    const kinder = stabil();
+    const neuAlt = kinder.filter((el) => el.tagName === "P" && !el.classList.contains("alt"));
     verlauf.push({
       state: story.state.toJson(),
       anzahl: kinder.length,
@@ -557,8 +594,9 @@
     if (!s) return;
     werkzeugSchliessen();
     story.state.LoadJson(s.state);
-    while (text.children.length > s.anzahl) text.lastElementChild.remove();
-    for (const i of s.alt) text.children[i]?.classList.remove("alt");
+    for (let k = stabil(); k.length > s.anzahl; k = stabil()) k.at(-1).remove();
+    const feste = stabil();
+    for (const i of s.alt) feste[i]?.classList.remove("alt");
     notizen = s.notizen;
     letzterPfad = s.pfad;
     letztesBild = s.bild;

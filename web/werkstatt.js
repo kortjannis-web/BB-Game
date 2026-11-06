@@ -21,7 +21,7 @@
     "passage-loeschen": "Passage gestrichen",
     "passage-titel": "Passage umbenannt",
     quelle: "Quelltext (Mechanik) geändert",
-    notiz: "Notiz",
+    notiz: "Kommentar an Claude",
     datei: "Datei angehängt",
   };
 
@@ -70,6 +70,19 @@
       .catch(() => {});
   } catch {
     /* ohne Netz oder im Artefakt: nichts zu tun */
+  }
+  // Antworten von Claude auf Kommentare (web/kommentare.json, von Claude gepflegt): erscheinen als Verlauf an der Stelle.
+  let antworten = [];
+  try {
+    fetch(new URL("kommentare.json", location.href), { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : []))
+      .then((a) => {
+        antworten = Array.isArray(a) ? a : [];
+        if (antworten.length) for (const f of hoerer) f(daten.aenderungen);
+      })
+      .catch(() => {});
+  } catch {
+    /* ohne Netz keine Antworten */
   }
   // Zwischen Spiel und Baum in zwei Tabs: Änderungen des anderen Tabs übernehmen.
   window.addEventListener("storage", (e) => {
@@ -329,22 +342,33 @@
   }
 
   // ------------------------------------------------------------ Notiz und Datei anhängen
-  function notizOeffnen(kontext = {}) {
-    const d = dialog("ws-notiz", "Notiz an Claude");
+  // Kommentar an Claude (Wunsch des Nutzers 2026-11-06): ein Auftrag an genau dieser Stelle, den Claude
+  // prüft und umsetzt (Text, Mechanik, Idee); er wird nie wörtlich übernommen. Er erscheint im Text als Sprechblase.
+  function notizOeffnen(kontext = {}, vorhanden = null) {
+    const d = dialog("ws-notiz", vorhanden ? "Kommentar ändern" : "Kommentar an Claude");
     const t = autoHoehe(el("textarea", "ws-text"));
     t.rows = 5;
+    if (vorhanden) t.value = vorhanden.nachher ?? "";
+    d.appendChild(el("p", "ws-info", "Ein Auftrag an Claude für genau diese Stelle: umschreiben, Mechanik ändern, eine Idee, eine Frage. Claude prüft ihn und setzt ihn um; er wird nicht wörtlich übernommen."));
     t.placeholder = kontext.passage
       ? "Was fällt dir an dieser Stelle auf? Was soll anders sein, auch Mechanik, Tempo, Gefühl …"
       : "Was soll anders sein? Ideen, Mechanik, ganze Bereiche …";
     if (kontext.passage) d.appendChild(el("p", "ws-info", `Zu: ${kontext.titel ?? kontext.passage}`));
     d.appendChild(t);
     d.appendChild(el("div", "ws-leiste")).append(
-      knopf("Notiz speichern", () => {
-        if (!t.value.trim()) return d.close();
-        hinzufuegen({ art: "notiz", ...kontext, nachher: t.value.trim() });
-        hinweis("Notiz gespeichert.");
+      knopf("Kommentar speichern", () => {
+        const wert = t.value.trim();
+        if (vorhanden) {
+          if (wert) aendern(vorhanden.id, { nachher: wert });
+          else entfernen(vorhanden.id);
+          return d.close();
+        }
+        if (!wert) return d.close();
+        hinzufuegen({ art: "notiz", ...kontext, nachher: wert });
+        hinweis(kontext.vorher ? "Kommentar gespeichert. Er steht jetzt an dieser Stelle im Text." : "Kommentar gespeichert.");
         d.close();
       }, "ws-haupt"),
+      ...(vorhanden ? [knopf("Löschen", () => { entfernen(vorhanden.id); d.close(); })] : []),
       knopf("Abbrechen", () => d.close()),
     );
     d.showModal();
@@ -687,6 +711,7 @@
   window.WERKSTATT = {
     ARTEN,
     liste: () => daten.aenderungen,
+    antworten: () => antworten,
     hinzufuegen,
     aendern,
     entfernen,

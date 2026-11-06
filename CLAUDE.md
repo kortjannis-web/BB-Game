@@ -54,6 +54,7 @@ Der Nutzer spielt im Browser und ändert dabei Texte, Entscheidungen, Passagen u
 - **Jede Änderung ein eigener Commit** (`Vorschlag v12: …`), Text des Nutzers möglichst wörtlich; Abweichungen begründen.
 - **Muster lernen:** nach jeder Einreichung `docs/nutzerstil.md` mit Regel und Beleg ergänzen; eindeutige Muster auf andere Stränge übertragen (eigene Commits `Übertragen aus v12: …`).
 - **Antworten** in `vorschlaege/antworten/<gleicher Name>.json` auf dem Zweig `vorschlaege` (übernommen/angepasst/abgelehnt/offen mit Begründung, übertragene Stellen). Format und Schritte: `docs/vorschlaege.md`.
+- **Kommentare an Claude** (Werkstatt-Art `notiz`, 2026-11-06): Aufträge an genau einer Stelle; prüfen und umsetzen, nie wörtlich übernehmen; Antwort in `web/kommentare.json`, das Spiel zeigt sie als Verlauf an der Stelle (`docs/vorschlaege.md`, 6a).
 - **Werkstatt aufräumen:** Nach jeder bearbeiteten Einreichung `web/uebernommen.json` (`bis` = Zeitpunkt der letzten bearbeiteten Änderung, nie später) nachziehen; die Werkstatt entfernt Älteres dann selbst aus dem Browser des Nutzers (Details `docs/vorschlaege.md`, 7a).
 - Die Werkstatt (`web/werkstatt.js`) liest `web/quelle.json` (Ink-Quellen und Knotenzeilen, erzeugt von `npm run bauen`). Neue Felder oder Arten im Vorschlagsformat immer in `docs/vorschlaege.md` und `tools/vorschlaege.mjs` nachziehen.
 

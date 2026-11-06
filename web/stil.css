@@ -211,3 +211,12 @@ body[data-ort="grab_oedon"], body[data-ort="graeber"] { --tint: rgba(110, 50, 40
 #text p.gelesen.alt { opacity: 0.72; }
 #wahl .wahlzeile > button.gelesen { color: #9fc8a4; border-color: rgba(127, 174, 134, 0.5); }
 #knopf-zurueck:disabled { opacity: 0.35; cursor: default; }
+
+/* Kommentare an Claude (Wunsch des Nutzers 2026-11-06): Sprechblasen genau an der Stelle, mit Claudes Antworten. */
+.kommentar { margin: -0.5rem 0 1.1rem; padding: 0.45rem 0.8rem; border-left: 3px solid var(--gold); background: rgba(179, 150, 98, 0.07); font-family: "EB Garamond", serif; font-size: 0.92rem; }
+.kommentar p { margin: 0.2rem 0; }
+.kommentar .wer { font-variant: small-caps; letter-spacing: 0.04em; color: var(--gold); }
+.kommentar .claude { color: #a9bfd8; }
+.kommentar .claude .wer { color: #a9bfd8; }
+.kommentar .offen { cursor: pointer; }
+#wahl .kommentar { margin: -0.2rem 0 0.4rem; }
