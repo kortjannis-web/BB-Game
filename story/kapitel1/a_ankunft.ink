@@ -41,7 +41,7 @@ Gesprochen hat der Fahrer seit dem letzten Dorf nicht. Jetzt blickt er sich zum 
 * [Weil ich seit Wochen schwer krank bin. Es ist meine letzte Hoffnung #fliesst]
     ~ grund = "heilung_selbst"
     Seit Wochen schwer krank, sagst du, und Yharnam ist die letzte Hoffnung, die dir geblieben ist. Das Fieber frisst dich sonst noch vor dem ersten Schnee, und du sagst es so ruhig, dass der Kutscher sich noch einmal halb nach dir umdreht.
-* [Für jemanden, der zu Hause stirbt #fliesst]
+* [Weil jemand zu Hause im Sterben liegt #fliesst]
     ~ grund = "heilung_anderer"
     Für jemanden, der zu Hause in einem abgedunkelten Zimmer liegt und auf einen Brief wartet, in dem steht, dass es Hoffnung gibt. Du hast versprochen, diesen Brief zu schreiben.
 * [Um jemanden zu finden, der vorausging #fliesst]
