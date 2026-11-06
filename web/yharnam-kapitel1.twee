@@ -1288,7 +1288,7 @@ Auf dem Brunnenplatz bewegt sich nichts als das weiße Band am Riegel, das im Zu
 Deine Hand legt sich flach auf den Ärmel.
 ⟨wenn q_mutter == 0⟩ „Hast du meine Mama gesehen?“ | „Hast du Mama gefunden?“ 
 ⟨sonst⟩
-Hinter einem Tor liegt ein kleiner Platz mit einem versiegten Brunnen, und aus einem der Fenster kommt die Melodie einer Spieluhr, {k1_n1_kleriker.mit_gascoigne:ein Lied, das du heute Nacht schon einmal gehört hast, gesummt, zwischen Axthieben|ein Lied, das du nicht kennst und das dir doch den Hals eng macht}; an derselben Stelle fehlt darin jedes Mal ein Ton. Um den Fensterriegel ist ein weißes Band geknotet, eine große Schleife, wie kleine Mädchen sie im Haar tragen.
+Hinter einem Tor liegt ein kleiner Platz mit einem versiegten Brunnen, und aus einem der Fenster kommt die Melodie einer Spieluhr, {k1_n1_kleriker.mit_gascoigne:ein Lied, das du heute Nacht schon einmal gehört hast, gesummt, zwischen Axthieben|ein Lied, dessen erste Töne Gascoigne dir am Scheiterhaufen vorgesummt hat, und es macht dir den Hals eng}; an derselben Stelle fehlt darin jedes Mal ein Ton. Um den Fensterriegel ist ein weißes Band geknotet, eine große Schleife, wie kleine Mädchen sie im Haar tragen.
 Die Melodie bricht ab. Hinter den Läden zieht jemand die Luft ein, kurz und prüfend, und im Spalt erscheinen vier kleine Finger, dann zwei sehr ernste Augen. „Du riechst nach Papa.“
 Deine Hand legt sich flach auf den Ärmel.
 Sie holt Luft. „Hast du meine Mama gesehen? Sie hat eine große rote Brosche, die sieht man von Weitem. Papa ist auf die Jagd gegangen und nicht wiedergekommen, und Mama ist ihn suchen gegangen, und ich hab die Tür zugemacht, so wie sie gesagt hat.“
@@ -1926,24 +1926,24 @@ Am Ende der Brücke, wo der Weg zur Kathedrale hinaufführen müsste, schließt 
 ⟨wenn k1_n2_gascoigne == 1⟩
 ⟨sonst⟩
 ⟨wenn k1_n2_gascoigne == 1⟩
-Hinter dem Tor hört das Wasser auf. Den ganzen Weg durch die Unterstadt ist es neben dir hergelaufen, in den Rinnen, über die Stufen, aus den Fugen der Mauern, und erst jetzt, da es fehlt, merkst du, wie laut es war. Hier riecht es nach umgegrabener Erde und kaltem Eisen. Der Friedhof steigt in breiten Stufen an, Grab über Grab, und der Nebel liegt so flach zwischen den Steinen, dass nur ihre Köpfe herausragen, Reihe um Reihe, eine Gemeinde, die auf den Beginn der Predigt wartet. Über der obersten Mauer hängt die Sonne, tief und rot, und du kannst in sie hineinsehen, ohne dass dir die Augen tränen.{not k1_c_graeber: Über dem Tor, durch das du gekommen bist, steht ein einziges Wort im Stein: Oedon.}
+Hinter dem Tor hört das Wasser auf. Den ganzen Weg durch die Unterstadt ist es neben dir hergelaufen, in den Rinnen, über die Stufen, aus den Fugen der Mauern, und erst jetzt, da es fehlt, merkst du, wie laut es war. Hier riecht es nach umgegrabener Erde und kaltem Eisen. Der Friedhof steigt in breiten Stufen an, Grab über Grab, und der Nebel liegt so flach zwischen den Steinen, dass nur ihre Köpfe herausragen, Reihe um Reihe, eine Gemeinde, die auf den Beginn der Predigt wartet. Über der obersten Mauer steht der Mond, knochenbleich und so nah herangekommen, dass die Mauerkrone ihm den unteren Rand abschneidet. Sein Licht ist so hell, dass sich auf den nächsten Steinen die Namen lesen lassen, Buchstabe für Buchstabe, bis in das Moos in den Kerben.{not k1_c_graeber: Über dem Tor, durch das du gekommen bist, steht ein einziges Wort im Stein: Oedon.}
 Weiter oben schlägt es. Schwer und ohne Eile kommt es herunter, im Takt eines Dreschflegels auf der Tenne, und zwischen zwei Schlägen schmatzt es jedes Mal leise und nass. Ab und zu fährt die Klinge ganz hindurch und trifft auf Stein; dann klingt es hell und kurz, und der Ton läuft über die Gräber davon, bis der Nebel ihn schluckt.
 Er steht auf der obersten Stufe, mit dem Rücken zu dir, der lange Mantel nass bis an die Knie, und die Axt hebt sich und fällt. Seinen Hut hat er auf einen Grabstein gelegt, die breite Krempe nach oben, so ordentlich, wie man ihn vor der Andacht auf die Bank legt. Was zu seinen Füßen liegt, trägt noch einen Stiefel, und die Schnalle daran ist blank geputzt. Der Wind kommt von oben herab, und du atmest schon durch den Mund. Der Griff deiner Feuerwaffe ist warm in deiner Hand; wann du ihn gepackt hast, weißt du nicht.
-Sein Schatten liegt auf dem Nebel, und er liegt falsch. Er fällt der tiefen Sonne entgegen, als käme das Licht von woanders.
+Sein Schatten liegt auf dem Nebel, und er liegt falsch. Statt die Stufen herab zu dir fällt er hinauf, dem Mond entgegen. Hinter dir, woher das Licht dann kommen müsste, ist nur das Tor und das Dunkel der Unterstadt.
 ⟨sonst⟩
-Hinter dem Tor verstummt das Wasser wieder. Oben auf der letzten Stufe hebt sich die Axt und fällt, im selben Takt wie beim ersten Mal, und kein Schlag kommt früher, weil du zurück bist. Der Hut liegt auf seinem Grabstein, die Krempe nach oben.
+Hinter dem Tor verstummt das Wasser wieder. Oben auf der letzten Stufe hebt sich die Axt und fällt, im selben Takt wie beim ersten Mal; kein Schlag kommt früher, weil du zurück bist. Der Hut liegt auf seinem Grabstein, die Krempe nach oben, und der Mond sitzt auf der Mauerkrone, um nichts gewandert.
 ⟨wenn k1_n2_gascoigne > 1⟩
-Die Axt bleibt oben stehen. Er dreht sich um, die Schulter zuerst, dann die Hüfte, genau wie beim ersten Mal, und zieht die Luft ein, lange, durch die Nase. Nichts in seinem Gesicht verrät, dass ihr euch schon begegnet seid. { q_frau == 1 or gascoigne2: „{gascoigne_name:{name}|Fremder}“, sagt er, freundlich, als käme er dich an der Tür abholen. „Dann siehst du's auch.“ | „Noch einer“, sagt er. „Immer noch einer.“ }
+Die Axt bleibt oben stehen. Er dreht sich um, die Schulter zuerst, dann die Hüfte, genau wie beim ersten Mal, und zieht die Luft ein, lange, durch die Nase. Nichts in seinem Gesicht weiß davon, dass er dich hier schon einmal ins Gras gelegt hat. { q_frau == 1 or gascoigne2: „{gascoigne_name:{name}|Fremder}“, sagt er, und es ist derselbe Gruß, Wort für Wort. „Dann siehst du's auch.“ | „Noch einer“, sagt er. „Immer noch einer.“ }
 ⟨wenn q_frau == 1 or gascoigne2⟩
 Die Axt bleibt oben stehen. Er dreht sich um, die Schulter zuerst, dann die Hüfte. Der Verband über seinen Augen ist steif geworden und dunkel bis zum Knoten, und trotzdem findet sein Gesicht dich sofort.{ gascoigne2 and q_frau == 1: An den Gräbern hat er einen Atemzug zu lang gebraucht. Jetzt lächelt er, bevor du stehst.| Er lächelt.}
-„{gascoigne_name:{name}|Fremder}.“ Es klingt wie ein Gruß an der Haustür{ q_frau == 1:, mit dem Rollen in der Stimme, das du vom Scheiterhaufen kennst}. „Gut. Gut, dass du kommst. Dann siehst du's auch.“
+„{gascoigne_name:{name}|Fremder}.“ Es klingt wie ein Gruß an der Haustür{ q_frau == 1:, mit dem Rollen in der Stimme, das du vom Scheiterhaufen kennst}. „Gut. Gut, dass du kommst. Dann siehst du's auch.“{ gascoigne_verraten: Er hebt das Gesicht zu den Dächern über der Mauer und zieht die Luft ein, lange. „Allein?“, fragt er. „Keine Federn diesmal?“ Auf die Antwort wartet er nicht.}
 ⟨wenn q_frau == 1⟩
 Er deutet mit der Axt hinab auf die Dächer, und von der Schneide fällt Tropfen um Tropfen in den Nebel. { mob_verbrannt: „Martha. Die hast du mir abgenommen. Hennings. Der alte Brack. Der Bäckerjunge.“ Er wartet, als müsse er nachzählen. „Alle.|„Martha. Hennings. Der alte Brack. Der Bäckerjunge. Alle.} Hinter jeder Tür, unter jedem Hut. Ich riech's durch das Räucherwerk.“
 ⟨sonst⟩
 Er deutet mit der Axt hinab auf die Dächer, und von der Schneide fällt Tropfen um Tropfen in den Nebel. „Alle da unten. Der Bäckerjunge. Hinter jeder Tür, unter jedem Hut. Ich riech's durch das Räucherwerk.“
-Er hebt das Kinn und zieht die Luft ein, einmal, zweimal, wie ein Hund an einer fremden Schwelle. „An dir noch nicht.“ Das Lächeln wird breiter. „Noch nicht, {gascoigne_name:{name}|Fremder}. Ist nur eine Frage der Nächte.“
+Er hebt das Kinn und zieht die Luft ein, einmal, zweimal, in kurzen, prüfenden Zügen, und sein Kopf folgt dabei deinem Atem. „An dir noch nicht.“ Es klingt, als gratuliere er dir. „Noch nicht, {gascoigne_name:{name}|Fremder}. Ist nur eine Frage der Nächte.“
 ⟨sonst⟩
-Die Axt bleibt oben stehen. Er hebt den Kopf und nimmt Witterung auf, mit kleinen Rucken, wie ein Jagdhund im Wind, und dreht sich um. Die Augen sind verbunden, der Verband ist schwarz und steif, und das Gesicht darunter ist das eines Mannes, der seit Nächten nicht geschlafen hat.
+Die Axt bleibt oben stehen. Er hebt den Kopf und nimmt Witterung auf, in kleinen Rucken, und dreht sich um. Die Augen sind verbunden, der Verband ist schwarz und steif, und das Gesicht darunter ist das eines Mannes, der seit Nächten nicht geschlafen hat.
 „Noch einer“, sagt er. Seine Stimme kommt tief und ruhig, mit einem Rollen darin, das nicht aus diesen Gassen stammt. Er deutet mit der Axt über die Gräber hinab auf die Stadt. „Da unten. Hinter jeder Tür, in jedem Bett, in jeder Kirchenbank. Die tragen ihre Gesichter nur noch wie Mäntel.“ Er zieht die Luft ein und legt den Kopf schief. „Du auch. Nicht heute vielleicht. Aber du auch.“
 <!-- Logik: kampfanfang = -> k1_n2_gascoigne · n2_gascoigne = gascoigne · n2_molotow = molotow · gascoigne = n2_gascoigne · molotow = n2_molotow · gascoigne_moment = false · versprechen_gascoigne = false · im_lied_getroffen = false · spieluhr_mal = 0 · uhr_bestie = false · g_phase = 1 · moment_moeglich = gascoigne >= 3 and spieluhr and gedaechtnis_kleriker · einsicht = einsicht + 1 -->
 [[(bedingt) weiter->k1_n2_gascoigne.p1]]
@@ -1954,9 +1954,9 @@ Die Axt bleibt oben stehen. Er hebt den Kopf und nimmt Witterung auf, mit kleine
 
 :: k1_n2_gascoigne.p1.t1 [N2] {"position":"5350,19430","size":"100,100"}
 ⟨wenn t1 == 1⟩
-Ohne Hast hebt er die Donnerbüchse. Der trichterförmige Lauf schwenkt über die Steine, findet dich und bleibt ruhig, das Gewicht liegt auf seinem hinteren Fuß, und die Axt hängt locker an seiner Seite. Links von dir steht ein Grabstein, breit genug für zwei.{ parade_quelle == "gascoigne": Diese Haltung kennst du. Auf dem Platz am Scheiterhaufen hat er sie dir vorgemacht, für den Augenblick, in dem eine Bestie ausholt. Jetzt wartet er darauf, dass du ausholst.| Er wartet darauf, dass du dich rührst.}
+Ohne Hast hebt er die Donnerbüchse. Der Trichter des Laufs schwenkt über die Steine, findet dich und bleibt stehen; das Gewicht liegt auf seinem hinteren Fuß, und die Axt hängt locker an seiner Seite. Links von dir steht ein Grabstein, breit genug für zwei.{ parade_quelle == "gascoigne": Diese Haltung kennst du. Auf dem Platz am Scheiterhaufen hat er sie dir vorgemacht, für den Augenblick, in dem eine Bestie ausholt. Nicht davor, nicht danach. Jetzt wartet er darauf, dass du ausholst.| Er wartet darauf, dass du dich rührst.}
 ⟨sonst⟩
-Er reißt die Donnerbüchse hoch. Der Trichter schwenkt herum und sucht dich, sein Finger liegt schon am Abzug, und links von dir wartet derselbe breite Grabstein.
+Wieder hebt er die Donnerbüchse, ohne Hast. Der Trichter findet dich und bleibt stehen, sein Finger liegt am Abzug, und links von dir wartet derselbe breite Grabstein.
 ⟨wenn gelernt ? gascoigne_schuss⟩ Unter deinem Brustbein brennen die Körner der letzten Ladung noch einmal auf, und deine Augen gehen von selbst zu dem Stein zur Linken. 
 [[Geradeaus auf ihn zustürmen #fliesst->k1_n2_gascoigne.p1.t1 ✦ 1]]
 [[Unter der Ladung weg, dann schießen #fliesst (nur wenn parade)->k1_n2_gascoigne.p1.t1 ✦ 2]]
@@ -1964,12 +1964,12 @@ Er reißt die Donnerbüchse hoch. Der Trichter schwenkt herum und sucht dich, se
 [[Die Spieluhr aufziehen und hochhalten #fliesst (nur wenn spieluhr and spieluhr_mal < 3)->k1_n2_gascoigne.uhr]]
 
 :: k1_n2_gascoigne.p1.t1 ✦ 1 [N2 folge] {"position":"5150,19600","size":"100,100"}
-Der Trichter spuckt Feuer, bevor du die zweite Reihe der Gräber erreichst. Die Ladung schlägt dir in die Brust, eine Handvoll glühender Körner, und wirft dich rückwärts über einen Stein.
+Zwei Reihen Gräber weit kommst du. Dann spuckt der Trichter Feuer, eine Handvoll glühender Körner schlägt dir in die Brust und wirft dich rückwärts über einen Stein.
 <!-- Logik: zuletzt = gascoigne_schuss · treffer(2) -->
 [[weiter->k1_n2_gascoigne.p1.t2]]
 
 :: k1_n2_gascoigne.p1.t1 ✦ 2 [N2 folge] {"position":"6090,19600","size":"100,100"}
-Bis der Trichter Feuer spuckt, hältst du still; dann wirfst du dich flach, und die Ladung pfeift über dich hinweg. Er setzt mit der Axt nach, das ganze Gewicht im Schlag, und in diesen Schlag hinein drückst du ab. { parade_quelle == "gascoigne": Er wankt, genau so, wie er es dir auf dem Platz vorgemacht hat, und für einen Herzschlag zieht sich sein Mund zu etwas zusammen, das Stolz sein könnte. Die Säge ist in ihm, bevor er sich fängt. | Er wankt, und die Säge ist in ihm, bevor er sich fängt. }
+Still hältst du, bis der Trichter Feuer spuckt; dann wirfst du dich flach, und die Ladung fährt über dich hinweg. Er setzt mit der Axt nach, das ganze Gewicht im Schlag, und in diesen Schlag hinein drückst du ab. { parade_quelle == "gascoigne": Er wankt, genau so, wie er es dir auf dem Platz vorgemacht hat, und für einen Herzschlag zieht sich sein Mund zu etwas zusammen, das Stolz sein könnte. Die Säge ist in ihm, bevor er sich fängt. | Er wankt, und die Säge ist in ihm, bevor er sich fängt. }
 [[weiter->k1_n2_gascoigne.p1.t2b]]
 
 :: k1_n2_gascoigne.p1.t1 ✦ 3 [N2 folge] {"position":"6230,19600","size":"100,100"}
@@ -1977,7 +1977,7 @@ Der Stein nimmt die Ladung für dich. Splitter regnen dir in den Nacken, Bruchst
 [[weiter->k1_n2_gascoigne.p1.t2]]
 
 :: k1_n2_gascoigne.p1.t2 [N2] {"position":"5150,19770","size":"100,100"}
-Er lässt die Donnerbüchse sinken und kommt in langen Schritten über die Gräber. Die Axt nimmt er tief hinter die Hüfte, die Schneide flach, genau auf der Höhe der Grabsteinköpfe, und zwei Schritte vor dir dreht sich seine Schulter ein.
+Er lässt die Donnerbüchse sinken und kommt über die Gräber, in Schritten, die länger sind als deine. Die Axt nimmt er tief hinter die Hüfte, die Schneide flach, genau auf der Höhe der Grabsteinköpfe; nur das Handgelenk hält sie, locker, als prüfe er ihr Gewicht. Zwei Schritte vor dir dreht sich seine Schulter ein.
 ⟨wenn gelernt ? gascoigne_bogen⟩ Deine Knie geben schon nach, bevor seine Schulter sich eindreht; sie wissen noch, auf welcher Höhe die Schneide kommt. 
 [[Rückwärts zwischen die Gräber weichen #fliesst->k1_n2_gascoigne.p1.t2 ✦ 1]]
 [[Über die flache Axt springen #fliesst->k1_n2_gascoigne.p1.t2 ✦ 2]]
@@ -1985,7 +1985,7 @@ Er lässt die Donnerbüchse sinken und kommt in langen Schritten über die Gräb
 [[Zurückspringen und die Ampulle stoßen #fliesst (nur wenn ampulle > 0)->k1_n2_gascoigne.p1.t2 ✦ 4]]
 
 :: k1_n2_gascoigne.p1.t2 ✦ 1 [N2 folge] {"position":"4090,19940","size":"100,100"}
-Er folgt, Schritt für Schritt, und seine Schritte sind länger als deine. Zwischen zwei Steinen holt die Axt dich ein und beißt dir in die Schulter.
+Er folgt dir, und zwischen zwei Steinen geht dir der Platz aus. Die Axt holt dich ein und beißt dir in die Schulter.
 <!-- Logik: zuletzt = gascoigne_bogen · treffer(1) -->
 [[weiter->k1_n2_gascoigne.p1.t2b]]
 
@@ -2004,7 +2004,7 @@ Zwei Sätze zurück, die Ampulle schon in der Faust.
 
 :: k1_n2_gascoigne.p1.t2b [N2] {"position":"5210,20110","size":"100,100"}
 <!-- [ERWEITERT] Der Schuss aus nächster Nähe: Er lässt dich herankommen. -->
-Er tritt nicht zurück. Er lässt die Axt in der Rechten sinken, ganz, bis die Schneide im Gras liegt, und dreht dir die linke Schulter zu, als wolle er dich umarmen. Die Donnerbüchse hängt an seiner linken Hüfte, der Trichter zeigt zu Boden. Nur sein Daumen bewegt sich. Er spannt den Hahn, und das Klicken ist das lauteste Geräusch auf dem Friedhof.
+Er weicht nicht. Er lässt die Axt in der Rechten sinken, ganz, bis die Schneide im Gras liegt, und dreht dir die linke Schulter zu, als wolle er dich umarmen. Die Donnerbüchse hängt an seiner linken Hüfte, der Trichter zeigt zu Boden. Nur sein Daumen bewegt sich. Er spannt den Hahn, und das Klicken ist das lauteste Geräusch auf dem Friedhof.
 ⟨wenn gelernt ? donner_nah⟩ Beim Klicken brennt dir die Haut im Gesicht, wo vorhin die Glut saß, und deine Füße ziehen nach rechts, dorthin, wo die Axt im Gras liegt. 
 [[Von vorn in die offene Brust #fliesst->k1_n2_gascoigne.p1.t2b ✦ 1]]
 [[Rechts um ihn herum, hinter ihn #fliesst->k1_n2_gascoigne.p1.t2b ✦ 2]]
@@ -2020,14 +2020,14 @@ Um seine Schulter herum, zwei Schritte, drei, und der Schuss fährt dorthin, wo 
 [[weiter->k1_n2_gascoigne.p2]]
 
 :: k1_n2_gascoigne.p2 [N2] {"position":"4610,20450","size":"100,100"}
-Er tritt zurück, und mit einem Ruck der Handgelenke klappt er die Axt aus: Der Stiel fährt heraus, doppelt so lang wie zuvor, und er packt ihn mit beiden Händen. Die Donnerbüchse wirft er weg, achtlos, zwischen die Gräber. Er lacht dabei, tief in der Kehle, und er lacht auch beim Einatmen, nach innen, mit einem Geräusch wie ein Blasebalg mit einem Riss.
-Mitten darin hält er inne. Er hebt das Gesicht und zieht die Luft ein, lange, durch die Nase, und das Lachen bricht ab. „Riechst du's? Das Blut.“ Seine Stimme ist ganz weich geworden. „Wie Kandis in der Pfanne, kurz bevor er schwarz wird. Und es summt mir was vor. Ich kenn das Lied. Ich kenn's doch …“ Er krümmt sich über den langen Stiel, eine Hand vor dem Mund, und würgt, und durch die Finger hindurch lacht er weiter.
+Er tritt zurück, und mit einem Ruck der Handgelenke klappt er die Axt aus: Der Stiel fährt heraus, doppelt so lang wie zuvor, und er packt ihn mit beiden Händen. Die Donnerbüchse wirft er weg, achtlos, zwischen die Gräber, und sieht ihr nicht nach. Er lacht dabei, tief in der Kehle, und er lacht auch beim Einatmen, nach innen, mit dem Geräusch eines Blasebalgs, der einen Riss hat.
+Mitten darin hält er inne. Er hebt das Gesicht und zieht die Luft ein, lange, durch die Nase, und das Lachen bricht ab. „Riechst du's{gascoigne_name:, {name}}? Das Blut.“ Seine Stimme ist ganz weich geworden. „Wie Kandis in der Pfanne, kurz bevor er schwarz wird. Und es summt mir was vor. Ich kenn das Lied. Ich kenn's doch …“ Er krümmt sich über den langen Stiel, eine Hand vor dem Mund, und würgt, und durch die Finger hindurch lacht er weiter.
 <!-- Logik: g_phase = 2 -->
 [[weiter->k1_n2_gascoigne.p2.t3]]
 
 :: k1_n2_gascoigne.p2.t3 [N2] {"position":"4610,20620","size":"100,100"}
-Er fasst den Stiel ganz am Ende und beginnt sich zu drehen. Die Schneide zieht einen Kreis, weiter, als seine Arme reichen, und wo sie einen Grabstein streift, fliegt der Kopf des Steins davon; nur innen, dicht an seinem Körper, schwingt der Stiel leer durch die Luft.
-⟨wenn gelernt ? axt_lang⟩ Deine Rippen erinnern sich an die Schneide, die durch den Stein kam, und zum ersten Mal in diesem Kampf ziehen dich deine Füße nach vorn. 
+Er fasst den Stiel ganz am Ende und beginnt sich zu drehen. Die Schneide zieht einen Kreis, weiter, als seine Arme reichen, und wo sie einen Grabstein streift, fliegt der Kopf des Steins davon. Nur innen, dicht an seinem Körper, schwingt der Stiel leer durch die Luft.
+⟨wenn gelernt ? axt_lang⟩ Deine Rippen erinnern sich an die Schneide, die durch den Stein kam, und diesmal ziehen dich deine Füße nach vorn, ihm entgegen. 
 [[Zurück hinter einen hohen Stein #fliesst->k1_n2_gascoigne.p2.t3 ✦ 1]]
 [[Die lange Axt vorn abfangen #fliesst (nur wenn geuebt)->k1_n2_gascoigne.p2.t3 ✦ 2]]
 [[Vorwärts, ganz nah an ihn heran #fliesst->k1_n2_gascoigne.p2.t3 ✦ 3]]
@@ -2040,7 +2040,7 @@ Hinter dem Stein ist es einen Atemzug lang ruhig. Dann geht die Axt durch ihn hi
 [[weiter->k1_n2_gascoigne.p2.t3b]]
 
 :: k1_n2_gascoigne.p2.t3 ✦ 2 [N2 folge] {"position":"4140,20790","size":"100,100"}
-Stahl schlägt auf Stahl, mitten in ihrem Kreis, und der Schlag fährt dir bis in die Zähne. Deine Arme halten, geübt an einem Pfahl im Hof, der für dich ausholen musste. Einen Atemzug lang steht ihr so, Klinge an Klinge, und er neigt den Kopf, als erkenne er an dir etwas wieder. Dann reißt er sich los.
+Stahl schlägt auf Stahl, mitten in ihrem Kreis, und der Schlag fährt dir bis in die Zähne. Deine Arme halten; im Hof des Traumes haben sie gelernt, Schwereres abzufangen, als sie tragen können. Einen Atemzug lang steht ihr so, Klinge an Klinge, und er neigt den Kopf, als erkenne er an dir etwas wieder. Dann reißt er sich los.
 [[weiter->k1_n2_gascoigne.p2.t3b]]
 
 :: k1_n2_gascoigne.p2.t3 ✦ 3 [N2 folge] {"position":"4420,20790","size":"100,100"}
@@ -2052,8 +2052,8 @@ Rückwärts, Schritt um Schritt, die Ampulle schon in der Hand, und der Kreis de
 [[weiter->k1_n2_gascoigne.p2.t3]]
 
 :: k1_n2_gascoigne.p2.t3b [N2] {"position":"4280,20960","size":"100,100"}
-<!-- [ERWEITERT] Der Hieb von oben: Er stemmt die lange Axt in die Höhe und zählt stumm bis drei. -->
-Er stößt dich mit dem Stiel von sich, nicht fest, nur weit genug, und hebt die lange Axt über den Kopf, beide Hände am Ende des Stiels, und hält sie dort, und hoch über ihm zittert die Schneide vor dem roten Himmel. Er lacht nicht mehr. Wohin du auch trittst, sein Kopf wandert mit dir, gleichmäßig und genau.
+<!-- [ERWEITERT] Der Hieb von oben: Er stemmt die lange Axt in die Höhe und zählt stumm bis drei. Ü1: Die Schneide steht vor dem Mond. -->
+Mit dem Stiel stößt er dich von sich, nicht fest, nur so weit, wie der Stiel lang ist. Dann hebt er die lange Axt über den Kopf, beide Hände am Ende des Stiels, und hält sie dort, und hoch über ihm steht die Schneide vor dem Mond, schwarz auf der bleichen Scheibe, und zittert. Er lacht nicht mehr. Wohin du auch trittst, sein Kopf wandert mit dir, gleichmäßig und genau.
 Stumm zählen seine Lippen. Eins.
 ⟨wenn gelernt ? axt_wirbel⟩ Die Stelle, an der dich diese Axt zuletzt gefunden hat, beginnt zu pochen, und sie pocht in seinem Takt. 
 [[Sofort nach hinten weglaufen #fliesst->k1_n2_gascoigne.p2.t3b ✦ 1]]
@@ -2078,7 +2078,7 @@ Unter den erhobenen Armen ist er offen, und die Säge geht tief. Er zählt nicht
 :: k1_n2_gascoigne.uhr [N2] {"position":"5240,21130","size":"100,100"}
 ⟨wenn spieluhr_mal⟩
 ⟨bei 1⟩
-Die Feder knirscht unter deinem Daumen, eine Umdrehung, zwei, und das Lied steigt über die Gräber, ein Kinderlied an einem Ort, an dem keine Kinder sind. Gascoigne erstarrt mitten in der Bewegung. In der dritten Zeile, wo dem Kamm ein Zahn fehlt, fällt ein Ton aus, und in diese Lücke hinein lässt er die Axt sinken und presst die Hände an den Kopf, um darin festzuhalten, was ihm entgleitet. Aus seiner Kehle kommt der Laut eines Mannes, der im Schlaf etwas Schweres hebt.
+Die Feder knirscht unter deinem Daumen, eine Umdrehung, zwei, und das Lied steigt über die Gräber, ein Kinderlied an einem Ort, an dem keine Kinder mehr sind. Gascoigne erstarrt mitten in der Bewegung. In der dritten Zeile, wo dem Kamm ein Zahn fehlt, fällt ein Ton aus, und in diese Lücke hinein lässt er los, was er in den Händen hält, und presst beide Hände an den Kopf, fest, mit gespreizten Fingern.{ gascoigne_lied: Seine Lippen formen zwei Wörter, „Sie heißt“, und weiter kommen sie nicht, wie auf der Brücke.} Aus seiner Kehle kommt der Laut eines Mannes, der im Schlaf etwas Schweres hebt.
 ⟨bei 2⟩
 Noch einmal die Feder, noch einmal das Lied, und zwischen den Steinen klingt es jetzt blechern; die Mauer gibt es einen halben Takt zu spät zurück, so dass zwei Lieder über die Gräber laufen und eines davon falsch. Er dreht den Kopf, suchend, nach links, nach rechts. „Viola?“, sagt er. „Viola, wo …“ Er findet sie nicht, und die Hände an seinem Kopf zittern.
 ⟨sonst⟩
@@ -2091,7 +2091,7 @@ Beim dritten Aufziehen hakt die Feder, ehe sie das Lied freigibt, und es kommt n
 [[(bedingt) weiter->k1_n2_gascoigne.p3]]
 
 :: k1_n2_gascoigne.uhr ✦ 1 [N2 folge] {"position":"4890,21300","size":"100,100"}
-Er wehrt sich nicht. Gekrümmt steht er da, die Hände am Kopf, und nimmt den Hieb, ohne die Arme zu senken, weil die Hände an seinem Kopf wichtiger sind. Das Lied spielt weiter, bis die Feder abgelaufen ist.
+Er wehrt sich nicht. Gekrümmt steht er da und nimmt den Hieb, und die Hände bleiben, wo sie sind, an seinem Kopf. Das Lied spielt weiter, bis die Feder abgelaufen ist.
 <!-- Logik: im_lied_getroffen = true -->
 [[weiter->k1_n2_gascoigne.weiter_nach_lied]]
 
@@ -2100,7 +2100,7 @@ Hinter dem nächsten Stein gehst du in die Knie. Er hört nur das Lied, und du h
 [[weiter->k1_n2_gascoigne.weiter_nach_lied]]
 
 :: k1_n2_gascoigne.uhr ✦ 3 [N2 folge] {"position":"5170,21300","size":"100,100"}
-Note um Note läuft das Lied aus, und mit der letzten lässt er die Hände sinken und greift wieder nach der Axt, zögernder als vorher, wie ein Mann, der aus dem Schlaf hochfährt und nicht weiß, wo er ist.
+Ton um Ton läuft das Lied aus, und mit dem letzten lässt er die Hände sinken und greift wieder nach der Axt, zögernder als vorher, wie ein Mann, der aus dem Schlaf hochfährt und nicht weiß, wo er ist.
 [[weiter->k1_n2_gascoigne.weiter_nach_lied]]
 
 :: k1_n2_gascoigne.uhr ✦ 4 [N2 folge] {"position":"5310,21300","size":"100,100"}
@@ -2114,26 +2114,26 @@ Bei deiner Stimme hebt sich sein Kopf, und einen halben Atemzug lang sucht etwas
 [[(bedingt) weiter->k1_n2_gascoigne.p1.t2]]
 
 :: k1_n2_gascoigne.moment [N2] {"position":"5610,21300","size":"100,100"}
-Das Lied läuft wieder auf die Lücke zu. Seine Lippen gehen mit, Ton um Ton, und kurz davor kippt ihm die Stimme, mitten im Summen, an derselben Stelle, an der auf der Brücke einem anderen das Lied gekippt ist. In die Lücke, wo der Ton fehlt, sagst du seinen Namen, leise, so wie er im Deckel steht.
+Das Lied läuft wieder auf die Lücke zu. Seine Lippen gehen mit, Ton um Ton, und kurz davor kippt ihm die Stimme, mitten im Summen, so wie auf der Brücke ein anderes Lied in einer anderen Kehle gekippt ist. In die Lücke, wo der Ton fehlt, sagst du seinen Namen, leise, so wie er im Deckel steht.
 Gascoigne hebt den Kopf. Für einen Atemzug, einen einzigen, ist er da. Er steht gerade, die Axt hängt ihm locker in der Hand wie ein Werkzeug nach Feierabend, und er neigt den Kopf zur Seite.
 „Viola“, sagt er. Nicht zu dir.
-Seine alte Stimme kommt zurück, die warme, tiefe, aber in Stücken: „Ich weiß. Was ich bin. Lang schon.“ Er atmet. „Mach's. Bevor ich wieder geh.“ Er atmet noch einmal, und es klingt schon nicht mehr ganz nach ihm. „So.“
+Dann spricht er, und es ist die Stimme vom Platz am Scheiterhaufen, tief, mit dem Rollen darin, nur in Stücken: „Ich weiß. Was ich bin. Lang schon.“ Er atmet. „Mach's. Bevor ich wieder geh.“ Er atmet noch einmal, und es klingt schon nicht mehr ganz nach ihm. „So.“
 <!-- Logik: gascoigne_moment = true -->
 [[Ihm versprechen, nach der Kleinen zu sehen #fliesst->k1_n2_gascoigne.moment ✦ 1]]
 [[Ihn nach Viola fragen #fliesst->k1_n2_gascoigne.moment ✦ 2]]
 [[Schweigend die Säge heben #fliesst->k1_n2_gascoigne.moment ✦ 3]]
 
 :: k1_n2_gascoigne.moment ✦ 1 [N2 folge] {"position":"5470,21470","size":"100,100"}
-Noch bevor du ausgesprochen hast, nickt er, und unter dem Verband laufen Tränen hervor, und er lässt sie laufen. „Sag ihr …“ Er sucht. „Das Lied. Sag ihr, das Lied weiß ich noch. Nur alles andere nicht.“
+„Ich sehe nach der Kleinen. Das verspreche ich dir.“ Schon beim ersten Wort nickt er, und unter dem Verband laufen Tränen hervor, und er lässt sie laufen. „Sag ihr …“ Er sucht. „Das Lied. Sag ihr, das Lied weiß ich noch. Nur alles andere nicht.“
 <!-- Logik: versprechen_gascoigne = true -->
 [[weiter->k1_n2_gascoigne.moment.~1]]
 
 :: k1_n2_gascoigne.moment ✦ 2 [N2 folge] {"position":"5610,21470","size":"100,100"}
-Bei ihrem Namen öffnet sich sein Mund und schließt sich wieder. „Weiß nicht“, sagt er. „Weiß es nicht mehr.“ Seine Hände suchen an seinem Mantel nach einer Tasche, einem Knopf, und finden nichts.
+„Wo ist Viola?“ Bei ihrem Namen öffnet sich sein Mund und schließt sich wieder. „Weiß nicht“, sagt er. „Weiß es nicht mehr.“ Seine Hände suchen an seinem Mantel nach einer Tasche, einem Knopf, und finden nichts.
 [[weiter->k1_n2_gascoigne.moment.~1]]
 
 :: k1_n2_gascoigne.moment ✦ 3 [N2 folge] {"position":"5750,21470","size":"100,100"}
-Die Säge steht zwischen euch, und er versteht. Er breitet die Arme aus, nur ein wenig, die Handflächen nach vorn, so wie am Ende einer Andacht die Gemeinde entlassen wird.
+Die Säge steht zwischen euch. Er kann sie nicht sehen, und doch breitet er die Arme aus, nur ein wenig, die Handflächen nach vorn, wie ein Pater am Ende der Andacht seine Gemeinde entlässt.
 [[weiter->k1_n2_gascoigne.moment.~1]]
 
 :: k1_n2_gascoigne.moment.~1 [N2] {"position":"5610,21640","size":"100,100"}
@@ -2142,31 +2142,31 @@ Dann kippt er.
 
 :: k1_n2_gascoigne.p3 [N2] {"position":"4140,21810","size":"100,100"}
 Zuerst sind es die Hände. Er hält sie vor sich, die Finger gespreizt, und senkt den verbundenen Kopf über sie, wie einer, der vor dem Essen nachsieht, ob sie sauber sind. Sie werden länger, Glied um Glied, und jedes Glied knackt, bevor es nachgibt. Aus den Fingerkuppen schieben sich Nägel, schwarz und dick, und die Haut darüber reißt nicht; sie weicht nur zurück.
-An den Schultern platzen die Nähte seines Mantels, eine nach der anderen, mit kleinen trockenen Lauten, und durch die Risse drängt Haar, grob und schwarz wie die Borsten eines Ebers. Sein Rücken krümmt sich unter dem, was da wächst, und richtet sich nicht wieder ganz auf. Gebückt, wie er jetzt steht, reicht sein Schatten über drei Gräber, und er fällt noch immer der Sonne entgegen.
-Er will noch etwas sagen. {gascoigne_name:Die erste Silbe ist noch dein Name|Es fängt an wie „Fremder“}, die zweite gehört schon dem Kiefer, der sich dabei nach vorn schiebt, Zahn um Zahn, bis der Mund nicht mehr in das Gesicht passt, aus dem er spricht. Der Verband reißt über der Nasenwurzel. Was darunter ist, hältst du keinen Atemzug lang aus, und dein Blick flieht von selbst nach unten, zu seinem Hals.
+An den Schultern platzen die Nähte seines Mantels, eine nach der anderen, mit kleinen trockenen Lauten, und durch die Risse drängt Haar, grob und schwarz wie die Borsten eines Ebers. Sein Rücken krümmt sich unter dem, was da wächst, und richtet sich nicht wieder ganz auf. Gebückt, wie er jetzt steht, reicht sein Schatten über drei Gräber, und noch immer fällt er dem Mond entgegen.
+Er will noch etwas sagen. {gascoigne_name:Die erste Silbe ist noch dein Name|Die erste Silbe ist noch die von „Fremder“}, die zweite gehört schon dem Kiefer, der sich dabei nach vorn schiebt, Zahn um Zahn, bis der Mund nicht mehr in das Gesicht passt, aus dem er spricht. Der Verband reißt über der Nasenwurzel. Was darunter ist, hältst du keinen Atemzug lang aus, und dein Blick flieht von selbst nach unten, zu seinem Hals.
 Dort sitzt der Schal, wie er immer saß, ordentlich geknotet, an einem Hals, der zu dick für ihn geworden ist.
 Der Knoten hält.
 <!-- Logik: g_phase = 3 -->
 [[weiter->k1_n2_gascoigne.p3.t4]]
 
 :: k1_n2_gascoigne.p3.t4 [N2] {"position":"4140,21980","size":"100,100"}
-<!-- [ERWEITERT] Einsicht kostet: Wer zu viel sieht, sieht auch den falschen Schatten (angekündigt bei der Ankunft). Der Schatten springt nach links; wer ihm nach rechts ausweicht, läuft der Bestie entgegen. Der richtige Weg bleibt links, für alle. -->
-Mit einem Satz ist er rechts von dir auf einem Grabstein und kauert dort, Hände und Füße dicht beisammen auf dem schmalen Kopf des Steins, und unter dem Haar ziehen sich die Hinterläufe zusammen. Sein Kopf zielt auf die Stelle, an der du jetzt stehst, und bleibt dort, auch als du das Gewicht verlagerst. Er springt von rechts, über drei Gräber hinweg, die Klauen voran, und sein Heulen klettert an den Grabsteinen hoch und kommt oben von der Mauer zurück.
+<!-- [ERWEITERT] Einsicht kostet: Wer zu viel sieht, sieht auch den falschen Schatten (angekündigt bei der Ankunft). Der Schatten springt nach links, dem Mond entgegen; wer ihm nach rechts ausweicht, läuft der Bestie entgegen. Der richtige Weg bleibt links, für alle. -->
+Mit einem Satz ist er rechts von dir auf einem Grabstein und kauert dort, Hände und Füße dicht beisammen auf dem schmalen Kopf des Steins, und unter dem Haar ziehen sich die Hinterläufe zusammen. Sein Kopf zielt auf die Stelle, an der du jetzt stehst, und bleibt dort, auch als du das Gewicht verlagerst. Dann springt er, von rechts, über drei Gräber hinweg, die Klauen voran, und sein Heulen klettert an den Grabsteinen hoch und kommt oben von der Mauer zurück.
 ⟨wenn gelernt ? bestie_sprung⟩ Deine linke Schulter senkt sich schon, ehe er abspringt; die rechte erinnert sich an seine Klauen. 
-⟨wenn einsicht >= 3⟩ Sein Schatten springt ihm voraus über die Gräber, und er springt nach links. Er selbst ist noch in der Luft. 
+⟨wenn einsicht >= 3⟩ Sein Schatten springt ihm voraus über die Gräber, nach links, dem Mond entgegen, und er selbst ist noch in der Luft. 
 [[Gilberts Flamme hoch in den Sprung halten #fliesst (nur wenn feuer)->k1_n2_gascoigne.p3.t4 ✦ 1]]
 [[Die Brandflasche hoch gegen ihn werfen #fliesst (nur wenn molotow > 0)->k1_n2_gascoigne.p3.t4 ✦ 2]]
 [[Vor dem Schatten nach rechts weichen #fliesst (nur wenn einsicht >= 3)->k1_n2_gascoigne.p3.t4 ✦ 3]]
 [[{einsicht >= 3:Nach links, dem Schatten nach|Nach links aus seiner Bahn} #fliesst->k1_n2_gascoigne.p3.t4 ✦ 4]]
 [[Den Sprung von vorn abfangen #fliesst->k1_n2_gascoigne.p3.t4 ✦ 5]]
-[[Zurückspringen und die Ampulle stoßen #fliesst (nur wenn ampulle > 0)->k1_n2_gascoigne.p3.t4 ✦ 6]]
+[[Über ein Grab zurück, die Ampulle stoßen #fliesst (nur wenn ampulle > 0)->k1_n2_gascoigne.p3.t4 ✦ 6]]
 
 :: k1_n2_gascoigne.p3.t4 ✦ 1 [N2 folge] {"position":"3650,22150","size":"100,100"}
 Mitten im Sprung fährt ihm Gilberts Flamme entgegen, und das Haar auf seiner Brust fängt Feuer. Er heult und wälzt sich zwischen den Gräbern, und es riecht nach versengtem Haar und nach Fett.
 [[weiter->k1_n2_gascoigne.p3.t4b]]
 
 :: k1_n2_gascoigne.p3.t4 ✦ 2 [N2 folge] {"position":"3790,22150","size":"100,100"}
-Das Glas zerspringt an seiner Brust, und das Feuer läuft ihm über das Haar wie Wasser über einen Stein.
+Das Glas zerspringt an seiner Brust, und das Feuer läuft ihm über das Haar wie Wasser über einen Stein. Brennend kommt er auf, eine Armlänge neben dir, und wälzt sich im nassen Gras.
 <!-- Logik: molotow = molotow - 1 -->
 [[weiter->k1_n2_gascoigne.p3.t4b]]
 
@@ -2185,17 +2185,17 @@ Säge gegen Klauen, und die Klauen sind schwerer. Er reißt dich um wie ein Fuhr
 [[weiter->k1_n2_gascoigne.p3.t4b]]
 
 :: k1_n2_gascoigne.p3.t4 ✦ 6 [N2 folge] {"position":"4450,22150","size":"100,100"}
-Rückwärts über ein Grab, die Ampulle schon zwischen den Fingern.
+Ein Satz zurück über den Hügel eines Grabes, die Ampulle schon zwischen den Fingern.
 [[weiter->k1_n2_gascoigne.p3.t4]]
 
 :: k1_n2_gascoigne.p3.t4b [N2] {"position":"3930,22320","size":"100,100"}
 <!-- [ERWEITERT] Kreis und Stille in einem Takt (Festlegung G9): Er umkreist dich heulend; wenn das Heulen aussetzt, springt er von dort, wo die Stille anfing. -->
 <!-- [ERWEITERT] Einsicht kostet: Wer zu viel hört, hört das Heulen weiter, auch als es schon aufgehört hat. -->
 Er greift nicht gleich wieder an. Auf allen vieren läuft er im Kreis um dich herum über die Gräber, und wo seine Klauen aufsetzen, reißt die Erde in Furchen auf. Dabei heult er ohne Pause, ein langer Ton, den die Mauer zurückgibt, so dass er von zwei Seiten zugleich kommt: links, dann hinten, dann rechts, dann wieder hinten.
-Hinter dir, mitten im Kreis, setzt das Heulen aus.
+Hinter dir bricht das Heulen ab, mitten im Atem.
 ⟨wenn gelernt ? bestie_kreis⟩ In deinem Nacken stellen sich die Haare auf, genau dort, wo das Heulen aufgehört hat. 
 ⟨wenn einsicht >= 3⟩ In deinem Kopf aber hört es nicht auf. Es läuft weiter, rund um dich, und jetzt kommt es von vorn. 
-[[Mit der Spieluhr nach hinten herumfahren #fliesst (nur wenn spieluhr and not uhr_bestie)->k1_n2_gascoigne.p3.t4b ✦ 1]]
+[[Mit der Spieluhr nach hinten herumfahren, dann zuschlagen #fliesst (nur wenn spieluhr and not uhr_bestie)->k1_n2_gascoigne.p3.t4b ✦ 1]]
 [[Vor dem Heulen nach hinten weichen #fliesst (nur wenn einsicht >= 3)->k1_n2_gascoigne.p3.t4b ✦ 2]]
 [[Nach vorn davonlaufen #fliesst->k1_n2_gascoigne.p3.t4b ✦ 3]]
 [[Nach hinten herumfahren, unter ihn #fliesst->k1_n2_gascoigne.p3.t4b ✦ 4]]
@@ -2218,7 +2218,7 @@ Drei Schritte, vier, und sein Gewicht landet dir im Rücken und drückt dich mit
 [[weiter->k1_n2_gascoigne.p3.t5]]
 
 :: k1_n2_gascoigne.p3.t4b ✦ 4 [N2 folge] {"position":"3860,22490","size":"100,100"}
-Er ist schon in der Luft, als du herumkommst, ein Leib, der den halben Himmel deckt. Tief in die Knie, die Säge hoch, und er reißt sich selbst den Bauch daran auf.
+Er ist schon in der Luft, als du herumkommst, und sein Leib löscht den Mond aus. Tief in die Knie, die Säge hoch, und er reißt sich selbst den Bauch daran auf.
 [[weiter->k1_n2_gascoigne.p3.t5]]
 
 :: k1_n2_gascoigne.p3.t4b ✦ 5 [N2 folge] {"position":"4290,22490","size":"100,100"}
@@ -2231,14 +2231,14 @@ Der Stein zur Rechten ist breit genug für deine Schultern und für nichts sonst
 [[weiter->k1_n2_gascoigne.p3.t4b]]
 
 :: k1_n2_gascoigne.p3.t5 [N2] {"position":"3720,22660","size":"100,100"}
-Er packt dich. Beide Klauen schließen sich um deine Schultern, und er hebt dich hoch, bis sein Gesicht vor deinem ist und dir sein Atem entgegenschlägt, Blut und Eisen und nasses Fell. Der Schal an seinem Hals schwingt dicht vor deinen Augen, noch immer geknotet, und aus dem schmutzigen Stoff steigt, ganz schwach, ein herber, harziger Geruch, der nicht hierher gehört: Weihrauch. Die Klauen haben sich in deinen Mantel gekrallt, nicht in dich, und das Leder knarrt an den Nähten.
+Er packt dich. Beide Klauen schließen sich um deine Schultern, und er hebt dich hoch, bis sein Gesicht vor deinem ist und dir sein Atem entgegenschlägt, Blut und Eisen und nasses Fell. Der Schal an seinem Hals schwingt dicht vor deinen Augen, noch immer geknotet, und aus dem schmutzigen Stoff steigt, ganz schwach, ein herber, harziger Geruch, der nicht hierher gehört: Weihrauch. Die Klauen haben sich in {mantel_erkannt:Wendels|deinen} Mantel gekrallt, nicht in dich, und das Leder knarrt an den Nähten.
 ⟨wenn gelernt ? griff⟩ Deine Schultern erinnern sich, wie das Leder an den Nähten nachgab, und werden schwer, von selbst. 
 [[Von vorn in seinen Griff stechen #fliesst->k1_n2_gascoigne.p3.t5 ✦ 1]]
 [[Seine Klauen nach beiden Seiten aufbrechen #fliesst (nur wenn geuebt and kleriker == "besiegt")->k1_n2_gascoigne.p3.t5 ✦ 2]]
 [[Nach unten aus seinem Griff fallen #fliesst->k1_n2_gascoigne.p3.t5 ✦ 3]]
 
 :: k1_n2_gascoigne.p3.t5 ✦ 1 [N2 folge] {"position":"1270,22830","size":"100,100"}
-Seine Klauen graben sich in dein Fleisch und deine Säge in seines, und einen langen Moment haltet ihr einander fest wie zwei Tänzer, die nicht loslassen können. Dann gibt er nach.
+Seine Klauen graben sich in dein Fleisch und deine Säge in seines, und einen langen Augenblick haltet ihr einander fest wie zwei Tänzer, die nicht loslassen können. Dann gibt er nach.
 <!-- Logik: zuletzt = griff · treffer(1) -->
 [[weiter->k1_n2_gascoigne.sieg]]
 
@@ -2247,60 +2247,121 @@ Finger um Finger biegst du sie auf, mit einer Kraft, die nicht ganz deine ist. E
 [[weiter->k1_n2_gascoigne.sieg]]
 
 :: k1_n2_gascoigne.p3.t5 ✦ 3 [N2 folge] {"position":"1870,22830","size":"100,100"}
-Schwer wie ein Sack Korn rutschst du nach unten weg, und seine Klauen schließen sich um Leder und Luft. Über den Boden, hoch, und während er sich umdreht, liegt seine Brust offen. Die Säge geht hinein, so tief sie geht, und du lässt nicht los.
+Schwer wie ein Sack Korn rutschst du nach unten weg, und seine Klauen schließen sich um Leder und Luft. Abrollen, hoch, und während er sich nach dir umdreht, liegt seine Brust offen. Die Säge geht hinein, so tief sie geht, und du lässt nicht los.
 [[weiter->k1_n2_gascoigne.sieg]]
 
 :: k1_n2_gascoigne.sieg [N2] {"position":"1580,23000","size":"100,100"}
 ⟨wenn gascoigne_moment⟩
-Er sinkt zwischen den Gräbern zusammen, und als er stirbt, weicht das Haar ein Stück zurück, bis an den Hals, und das Gesicht darunter ist beinahe wieder seines. Seine Lippen bewegen sich. Es sind die ersten Töne des Liedes, und an der Stelle, wo der Ton fehlt, hören sie auf.
+Er sinkt zwischen den Gräbern zusammen, und als er stirbt, weicht das Haar ein Stück zurück, bis an den Hals, und das Gesicht darunter ist beinahe wieder seines. Seine Lippen bewegen sich. Es sind die ersten Töne des Liedes, ohne Stimme, und an der Stelle, wo der Ton fehlt, hören sie auf.
 ⟨sonst⟩
 Er fällt zwischen die Gräber und rührt sich nicht mehr. Der Schal sitzt noch, geknotet, und eine Hand liegt offen auf der Erde, halb Klaue, halb Hand; an einem der Finger steckt ein schmaler Ring, so tief eingewachsen, dass das Fleisch darüber zusammengeschlagen ist.
-Was aus ihm aufsteigt, geht in dich über, warm, und du findest nichts in dir, das es aufhalten könnte. Eine Weile wartest du, dass etwas geschieht. Es geschieht nichts. Er ist tot. Er bleibt tot. Er wacht nicht zwischen weißen Blumen auf.
+Eine Weile wartest du, dass etwas geschieht. Es geschieht nichts. Er ist tot. Er bleibt tot. Er wacht nicht zwischen weißen Blumen auf.
+Neben seiner Schulter liegt eine flache Blechflasche im Gras, verbeult, der Verschluss aufgesprungen, und was ausläuft, riecht nach Torf und Rauch. Darüber aber, aus seinen Wunden, steigt ein Dunst in die kalte Luft, und der riecht süß, nach Kandis in der Pfanne. Du atmest ihn ein. Du atmest ihn noch einmal ein, tiefer.
 Deine Hand liegt an deiner Armbeuge, dort, wo der Einstich pocht, und sie bleibt lange dort.
-Hinter der Mauer, oben im Bezirk der Kathedrale, singen sie wieder, gemessen und rein.{ gedaechtnis_kleriker: Mitten in der dritten Zeile reißt der Gesang ab, an einer Stelle, die du kennst, und niemand singt sie zu Ende.| Mitten in einer Zeile reißt der Gesang ab, und niemand singt sie zu Ende.}
+Hinter der Mauer, oben im Bezirk der Kathedrale, setzt der Gesang wieder ein, viele Stimmen, gemessen und rein. Drei Zeilen singen sie zu Ende. Dann bricht er ab, mitten im Atemholen für die vierte, und niemand nimmt sie auf.{ gedaechtnis_kleriker: Wie die vierte klingt, weißt du. Du hast sie schon einmal brechen hören.}
 Auf dem Grabstein liegt noch sein Hut, die Krempe nach oben, und es regnet hinein.
 <!-- Logik: gascoigne_tot = true · einsicht = einsicht + 1 -->
 [[weiter->k1_d_grab]]
 
 :: nachbild [T] {"position":"1970,23000","size":"100,100"}
+<!-- [ERWEITERT] Der Grabstein „breit genug für zwei“: leise Saat für Viola (d_nachspiel), ohne Deutung. -->
+<!-- [ERWEITERT] Gascoigne summt zwischen den Gräbern den Ton, der der Spieluhr fehlt (c_unterstadt); hier als Erinnerung, nur solange die Uhr in diesem Versuch noch nicht gespielt hat. -->
 ⟨wenn tode⟩
 ⟨bei 2⟩
-Weiße Blumen, dicht vor deinem Gesicht, so genau, dass du an jedem Blatt die feinen Adern siehst. Du warst tot. Dein Körper weiß es, so wie er einen Sturz noch kennt, wenn der Boden längst stillhält.
+Weiße Blumen, dicht vor deinem Gesicht, so nah, dass du an jedem Blütenblatt die feinen Adern siehst. Du warst tot. Dein Körper weiß es, so wie er einen Sturz noch kennt, wenn der Boden längst stillhält.
 ⟨wenn gehrman == 0⟩
-Am Weg sitzt ein alter Mann im Rollstuhl und sieht dir beim Aufstehen zu, ohne sich zu wundern. „Sterben kannst du hier nicht“, sagt er. „Nur aufwachen. Daran gewöhnt man sich. Mehr oder weniger.“
+Am Weg sitzt ein alter Mann im Rollstuhl, eine Decke über den Knien, und sieht dir beim Aufstehen zu, ohne sich zu wundern. „Hier stirbt man nicht“, sagt er. „Hier wacht man auf.“ Er streicht die Decke glatt, an einer Stelle, die schon glatt ist. „Daran gewöhnt man sich. An das meiste.“
 ⟨bei 3⟩
 Wieder die Blumen, wieder das Gras im Nacken. Diesmal zittern deine Hände nicht einmal mehr. Die braune Tinte an deinen Fingerkuppen ist noch da. Du bist gestorben, und sie ist noch da.
 ⟨wenn puppe_wach⟩
-Die Puppe kniet neben dir im Gras und hält deine Hand. „Hier geschieht dir nichts“, sagt sie. „Hier bist du … daheim.“
+Die Puppe kniet neben dir im Gras und hält deine Hand, mit Fingern, die kühl sind und sehr glatt und nicht drücken. „Hier geschieht dir nichts“, sagt sie. „Du bist daheim.“
 ⟨sonst⟩
-⟨zufällig eine von⟩ Die Blumen kennen dich inzwischen. Wo du liegst, sind sie schon niedergedrückt, eine Mulde in deiner Form. ／ Diesmal erwachst du mitten in einem Wort, das du in der Stadt nicht mehr zu Ende gebracht hast. Hier hört es niemand. ／ Über dir liegt der Himmel des Traumes, elfenbeinfarben, und er hat sich nicht verändert, seit du zum ersten Mal hier lagst. ／ Gras im Nacken, Blumen unter den Händen, und an deinem Gürtel das vertraute Gewicht.
+⟨zufällig eine von⟩ Die Blumen kennen dich inzwischen. Wo du liegst, sind sie schon niedergedrückt, eine Mulde in deiner Form. ／ Diesmal erwachst du mitten in einem Wort, das du in der Stadt nicht mehr zu Ende gebracht hast. Hier hört es niemand. ／ Über dir steht der Himmel des Traumes, alt wie Elfenbein und leer. Deine Augen suchen darin nach dem Mond der Stadt, lange, und finden nichts, woran sie sich halten könnten. ／ Gras im Nacken, Blumen unter den Händen. Du tastest nach der Wunde und findest den Mantel heil und darunter glatte Haut, auf der nichts mehr zu lesen ist. ／ Neben deinem Kopf hockt ein Bote im Gras, den Kopf schief, und sieht dir zu, so geduldig, wie man an einem Bett wacht, in dem einer schläft, den man nicht wecken darf.
 ⟨wenn altar_blatt and not blatt_erinnert⟩
 Zwischen den Blumen kehrt das Blatt vom Altar zu dir zurück, nicht als Bild, nur als ein Satz, so fest in dich eingedrückt wie die Buchstaben in sein Papier: Bleibt die Quelle offen, bleibt die Nacht.
 ⟨wenn ort⟩
 ⟨bei "klinik"⟩
+⟨wenn cycle⟩
+- Es hat sich geduckt, bevor es kam, tief, das ganze Gewicht nach hinten auf die Hinterläufe, bis die Dielen ächzten. Das hast du gesehen und bist trotzdem stehen geblieben, genau dort, wo sein Blick hing. Links, zwischen zwei Liegen, war eine Lücke frei. Daran denkst du jetzt, und deine Schulter denkt mit.
+- An seiner Brust glänzte ein Hornknopf, und an dem Knopf hingen noch zwei Fäden. Irgendwer hat ihn angenäht, an einem gewöhnlichen Abend, die Nadel zwischen den Lippen, das Licht schräg über dem Tisch. Daran denkst du zuerst. Erst danach kommen die Krallen.
+- Zwei Schritte bist du zurückgewichen, so wie man vor einem Hund zurückweicht, und die Arme haben trotzdem gereicht. Über deiner Brust brennen drei Linien, die nicht mehr da sind. Unter den erhobenen Armen war Platz für einen Menschen, und du hast ihn leer gelassen.
 ⟨bei "scheiterhaufen"⟩
-⟨wenn feuer⟩ Das Feuer in deiner Hand hast du vergessen. Oder du wolltest es vergessen. 
-⟨wenn mob_verbrannt⟩ Eine Frau mit Mehl an den Ärmeln. Du siehst sie noch. 
+⟨wenn cycle⟩
+- Eine Gabel mit drei Zinken, und an der mittleren hing noch ein Halm Stroh. Der Mann dahinter trug eine Schürze, wie man sie im Stall trägt, und seine Hände waren rissig von der Arbeit. Ihr seid euch nie zuvor begegnet. Er hat gerufen, du sollst brennen, und er hat jedes Wort geglaubt.
+- Hinter dir lag die Gasse, aus der du gekommen warst, so eng, dass zwei Mann darin nicht nebeneinander gehen. Dort hätten sie nur einzeln zu dir gekonnt, einer nach dem anderen, und die Hinteren hätten den Vorderen im Weg gestanden. Du bist stattdessen vorgegangen, mitten unter sie, als ließe sich eine Menge überreden.
+- Der Riese hat geweint, als er lief. Vorher hat er gegen eine Tür geschlagen und von einer Schwester gemurmelt, der kalt ist, und dann hat er dir die Schuld an allem gegeben, mit der Stimme eines Jungen. Links, beim Laternenpfahl, stand der Kreis nur einen Mann tief. Ein Ellbogen hätte dich dort getroffen, ein Stiefel vielleicht. Kein Ziegel.
+⟨bei Als du lagst, haben sie weitergemacht, eine Weile noch, gründlich, so wie man eine Glut austritt, damit sie nicht wieder aufflammt. Gerufen hat dabei keiner mehr. Von allem bleibt dir das am längsten⟩
+diese Stille bei der Arbeit.
+⟨wenn feuer⟩ {&Auf deinem Rücken hing die ganze Zeit Gilberts Tank, schwer und kalt, und deine Hand ist nicht zur Düse gegangen. Vielleicht wollte sie nicht, bei so vielen Gesichtern.|} 
+⟨wenn herkunft == "gesuchter"⟩ {&|Die Frau in der zweiten Reihe hat dich angesehen wie ein Gesicht auf einem Anschlag. Diesen Blick kennst du. Du bist ihm bis in diese Stadt davongefahren.} 
 ⟨bei "haus"⟩
+⟨wenn cycle⟩
+- Rechts stand ein Schrank, die Tür aus Eiche, dick wie dein Handgelenk. Hinter so einer Tür hält das Holz, was eine Kugel will. Du hast ihn gesehen, gleich beim Hereinkommen, und bist an ihm vorbeigegangen.
+- Sein Lauf hat gezittert, und dann nicht mehr. Erst zittert die Hand, dann liegt sie ruhig wie die eines Uhrmachers über seiner Arbeit. Zwischen beidem lag ein Atemzug, und du hast ihn mit Gehen verbracht, geradeaus, auf ihn zu.
+- Jemand hat ihn die Treppe hinaufgezogen, Stufe um Stufe, am Seil, bis das Seil an einer Stelle blank war. Jemand hat ihm die Decke über die Knie gelegt und die Pistole darunter. Wer, weißt du nicht. Die Räder seines Stuhls knarren dir im Ohr nach, und irgendwo hast du solche Räder schon einmal knarren hören.
 ⟨bei "daecher"⟩
+⟨wenn cycle⟩
+- Der Schuss kam von hinten. Du hast in die Gasse gesehen, geradeaus, wie man durch Gassen geht, und nicht hinauf zu den Dächern. Dabei roch es nach Pulver, frisch, so wie es nur riecht, wenn eben erst jemand geladen hat. Deine Nase hat es gewusst. Gehört hast du nicht auf sie.
+- Ein alter Mann hinter einem Schornstein. Beim Nachladen haben seine Hände gezittert, und seine Lippen haben dabei gezählt, Zahl um Zahl, so wie Kinder beim Versteckspiel zählen. Was er zählt, kannst du nicht sagen. Bei welcher Zahl er jetzt angekommen ist, willst du nicht wissen.
+⟨bei So still war die Gasse⟩
+keine Taube, kein Tropfen aus den Rinnen, an der Leine nur die eine hölzerne Klammer. Eine solche Stille hat einen Grund, und du hast ihn nicht gesucht. Er hockte über dir und wartete, bis du an der Stelle warst, auf die sein Lauf schon lange zeigte.
 ⟨bei "bruecke"⟩
-⟨wenn parade_quelle == "gascoigne"⟩ Warten, bis sie ausholt, hat er dir beigebracht. Du hast nicht gewartet. 
-⟨wenn feuer⟩ Das Feuer ist in der Tasche geblieben. Dumm. 
-⟨wenn kleriker == "abgelenkt" or kleriker == "geflohen"⟩ Beim ersten Mal bist du gerannt. Sie hat es nicht vergessen. 
-⟨wenn haus_zettel⟩ Die Kirche hat diese Brücke gesperrt und das da oben gelassen. Das behältst du. 
+⟨wenn cycle⟩
+⟨bei Der lange Arm kam von rechts, flach und weiter, als ein Sprung trägt. Fort von ihm wolltest du, so wie man vor einem Feuer zurückweicht. Unter ihm aber, zwischen Ellbogen und Pflaster, blieb ein Spalt, eine Schulter hoch. Dein Nacken weiß noch, wie flach er war.{ feuer⟩
+Und an deinem Rücken hing Gilberts Tank, und ihre schnüffelnde Schnauze war so nah.}
+- Vor dem Schrei wurde es still. Die Kutschen hörten auf zu knarren, der Wind in den Nüstern der toten Pferde schwieg, und nur das Tropfen vom Geweih blieb übrig. Diese Stille hast du für eine Pause gehalten. Sie war das Luftholen.
+- Sie hat die Kutsche gehoben, beinahe andächtig, und ihr Kopf hat dabei die ganze Zeit auf dich gezeigt. Dorthin flog das Holz, genau dorthin. Eine Kutsche hält keine zweite auf; dein Rücken hat es gelernt, als die Splitter kamen.
+⟨bei Bevor sie sprang, sackte ihr ganzes Gewicht nach hinten, bis die Läufe darunter zitterten, und ihr Kopf hielt still, genau auf dich. { parade⟩
+„Nicht davor“, hat Gascoigne am Feuer gesagt. „Nicht danach.“ Seine Stimme ist so nah, dass du dich im Gras nach ihm umsiehst.| Wo dein Blick hing, dort ist sie gelandet.}
+⟨bei Du hast die Gelenke ihres Arms gezählt, zweimal, und zweimal kam eine andere Zahl heraus. Seither zählst du nicht mehr. Dein Kopf aber zählt weiter, für sich, wie eine Uhr in einem Haus, aus dem alle fort sind.{ haus_zettel⟩
+Über ihre Brücke wachen sie, hat einer auf den Zettel im dunklen Haus geschrieben. Jetzt weißt du, was hier wacht.}
+⟨bei Sooft du gewichen bist, hat sie gescharrt und ist nachgerückt. Erst als das Horn so nah war, dass du das alte Blut in seinen Gabeln sahst, hätte sie nicht mehr lenken können. So nah. Dein Körper glaubt es nicht, und behalten hat er es trotzdem.{ jagdnotizen⟩
+Spät, steht im Heft des Toten neben dem gesenkten Geweih, dreimal unterstrichen.}
+- Zuletzt lag sie still, bis auf die kleine Hand, die sich öffnete und schloss, auf und zu, wie die Hand eines Kindes im Schlaf. Du hast geglaubt, sie träume. Sie hat gewartet, dass sich einer über sie beugt.
 ⟨bei "kanal"⟩
-⟨wenn maedchen_wo == "fort"⟩ Das Band in ihrem Maul. Du hast sie fortgeschickt. Das ist dein Teil daran. 
+⟨wenn cycle⟩
+- Das Wasser hat deine Knie festgehalten wie Hände, die nicht loslassen wollen. Das Schwein stand im selben Wasser und hat es nicht gespürt. Seine kleinen roten Augen sind dir gefolgt, wohin du auch tratst, bis sie losrannte. Sie haben gewartet, dass du dich zuerst bewegst.
+- Sein Kopf kam herum, schnell genug, nach vorn und zur Seite. Über den Nacken aber, wo die Borsten am dichtesten stehen und der Rücken breit aus dem Wasser ragt, reichte er nicht hin. Kein Tier kommt sich selbst zwischen die Schulterblätter. Deine Hände erinnern sich an diese Borsten, obwohl sie sie nie gefasst haben.
+⟨bei Zwischen den Toten im Becken hat es geschmatzt, schwer und nass, und an der Wand war Platz, glitschig und schmal, eine Schulter breit. Du hättest dich vorbeischieben können. { maedchen_tot⟩
+Nach dem Band hast du es nicht mehr gewollt.| Warum du es nicht getan hast, weißt du nicht mehr genau.}
+- Um ein Handgelenk im Becken war ein Streifen Leinen geknotet, darauf eine Nummer in sauberer Tinte. Jemand hat sie gezählt, ehe man sie hier hinunterließ, ordentlich, einen nach dem anderen. Wer die Tinte hält, fragst du dich, und ob er dich schon gezählt hat.
+⟨wenn maedchen_wo == "fort" and k1_c_kanal.kampf == 1⟩ Lauf zu der Ärztin, hast du ihr gesagt, dort bist du sicher. Die Ärztin öffnet in dieser Nacht niemandem. Durch ihre eigene Tür hat sie es dir gesagt. 
 ⟨bei "grab"⟩
-⟨wenn spieluhr⟩ Die Spieluhr in deiner Tasche. Er hört ihr zu. Das ist die Lücke. 
-⟨wenn gascoigne >= 2⟩ Das Warten hat er dir beigebracht. Jetzt wartet er auf dich. 
-⟨wenn gascoigne_verraten⟩ Die Frau im Federmantel wartet auf dem Dach. Du hast ihr den Weg gezeigt. 
-⟨wenn feuerwaffe == "donnerbuechse"⟩ Dein Trichter und seiner. Ihr tragt dieselbe Waffe, und er kann besser damit umgehen. 
-⟨wenn mantel_gelogen⟩ Du hast ihn wegen des Mantels belogen. Er hat nichts gesagt. Er hat es gerochen. 
+⟨wenn cycle⟩
+⟨bei Den Trichter seiner Büchse hast du von vorn gesehen und dahinter sein Gesicht, so ruhig, wie er auf dem Platz {mob == "zerstreut"⟩
+neben der Toten gekniet hat|die Leute nach Hause geschickt hat}. Links stand ein Grabstein, breit genug für zwei. Für zwei, denkst du, und der Gedanke bleibt dir im Hals stecken, ohne dass du weißt, warum.{ feuerwaffe == "donnerbuechse": Ihr tragt dieselbe Waffe, er und du. Er trägt sie schon länger.}
+- Die Axt kam tief und flach, genau auf der Höhe der Grabsteinköpfe, und seine Schulter hatte sich schon zwei Schritte vorher eingedreht. So dreht sich ein Holzfäller ein, ehe er in den Stamm schlägt. Auf dem Platz hast du ihn nur stehen sehen. Jetzt weißt du, wie er arbeitet.
+⟨bei Er hat gelacht, bevor die Axt kam, tief in der Kehle, und dann auch beim Einatmen, nach innen. Am Feuer hat er anders gelacht. Du versuchst, dich an jenes Lachen zu erinnern, und bekommst es nur noch halb zusammen.{ gascoigne_name⟩
+Deinen Namen hat er zwischen den Gräbern einen Atemzug zu spät gefunden. Ob er ihn jetzt noch wüsste, fragst du lieber nicht.}
+- Die lange Axt zog einen Kreis, weiter, als seine Arme reichen, und köpfte die Grabsteine, die ihr im Weg standen. Nur innen, dicht an ihm, schwang der Stiel leer. Neben ihm war es sicherer als fern von ihm. So war es schon am Feuer, denkst du, und es tut weh, dass es noch immer stimmt.
+⟨bei Hoch über ihm hat die Schneide gezittert, und sein Kopf ist mit dir gewandert, wohin du auch tratst, gleichmäßig wie ein Pendel.{ jagdnotizen⟩
+Ein Strich von oben nach unten, drei Kerben, die dritte tiefer: So hat es der Tote in sein Heft gezeichnet, und erst jetzt verstehst du das Bild.| Von oben ist sie gekommen, gerade, mehr als einmal, und jedes Mal tiefer ins Gras.}
+⟨bei Zuerst waren es die Hände. Er hat sie vor sich gehalten und angesehen, und dann sind sie gewachsen, Glied um Glied, und jedes Glied hat geknackt, bevor es nachgab. Du hast zugesehen, so wie man {gascoigne >= 2⟩
+einem Freund|einem Mann} zusieht, der einem etwas zeigen will. Erst als die Nägel kamen, hast du verstanden, was.
+- Über den Gräbern hing der Mond so nah, dass du die Narben auf seiner Scheibe hättest zählen können. Du hast es nicht getan. Unter ihm habt ihr gekämpft, ein Jäger und ein Pater, und er hat sich dabei nicht gerührt, so wenig wie die Leute hinter ihren Läden in der Stadt.
+⟨wenn spieluhr and spieluhr_mal == 0⟩ {&In deiner Tasche liegt die Spieluhr. Einer der zwei Töne, die er zwischen den Gräbern gesummt hat, ist der, der ihr fehlt.||Die Spieluhr in deiner Tasche hat keinen Laut gegeben, die ganze Zeit.} 
+⟨wenn k1_n2_gascoigne == 1⟩
+{
+⟨bei gascoigne_verraten⟩
+Den Weg zu ihm hast du der Frau im Federmantel gezeigt, mit ausgestrecktem Arm, über die Dächer. Ob sie ihn vor dir gefunden hat, weißt du nicht.
+⟨bei mantel_gelogen⟩
+Wendel lag nie irgendwo, hat er gesagt, als du ihn wegen des Mantels belogen hast. Den Rücken hat er dir trotzdem zugewandt, nur einen halben Schritt später.
+⟨bei band⟩
+In deiner Tasche liegt das rote Band aus dem Kanal. Er hat es nicht gerochen, oder er hat es gerochen und nichts gesagt.
+⟨bei mob_verbrannt⟩
+Er hat Marthas Hand genommen, obwohl sie schwarz war. Daran denkst du, als läge die Hand noch zwischen euch.
+⟨bei gascoigne >= 2⟩
+Das Warten hat er dir beigebracht, am Feuer. Jetzt wartet er auf dich.
 ⟨sonst⟩
-⟨wenn tode >= 6⟩ Wie oft noch. Du fragst nicht, wer zählt. 
+⟨wenn cycle⟩
+- Über die Dächer ist sie dir nachgekommen, von First zu First, und wo sie aufsetzte, regneten Ziegel in die Gasse. Du hast geglaubt, wer flieht, sei schneller als das, wovor er flieht. In dieser Stadt nicht.
+- Du liegst, wo du gelaufen bist, an einer Ecke, deren Namen du nicht kennst. Hinter den Läden ringsum hat man den Fall gehört und die Riegel noch einmal geprüft. Ein Licht hat dort keiner angezündet.
+- Zuletzt hast du gedacht, dass niemand weiß, wo du liegst. Gilbert vielleicht, wenn der Wind ihm den Fall bis an sein Gitter getragen hat. Er hört viel, hinter seinem Gitter.
+⟨wenn ampulle > 0⟩ {&An deinem Gürtel hängt die Ampulle, noch voll. Bis zuletzt hast du sie nicht angerührt.||Die Ampulle am Gürtel ist voll. Mit ihr bist du gestorben wie mit einem Groschen in der Tasche, den man sich für später aufhebt.|} 
+⟨wenn tode >= 6⟩ {&Wie oft noch. Die Frage kommt ohne Schrecken, so beiläufig wie die nach der Uhrzeit, und das ist das Schlimmste an ihr.|Wie oft noch, denkst du, und irgendwo im Garten merkt es sich einer für dich.} 
 ⟨wenn fr_offen()⟩
-⟨wenn ampulle == 0⟩ An deinem Gürtel hängt die Ampulle wieder. 
-Dann zupft etwas an deinem Ärmel, und die Stadt kehrt zurück: der Geruch zuerst, dann die Geräusche, zuletzt die Kälte.
+⟨wenn ampulle == 0⟩ {&Am Gürtel hängt die Ampulle wieder, voll und dunkel.|An deinem Gürtel stößt die Ampulle gegen die Schnalle, und sie ist wieder voll.} 
+⟨wenn &Dann wird das Gras unter deinen Händen zu Stein, Halm um Halm, und die Stadt kehrt zurück⟩ der Geruch zuerst, dann die Geräusche, zuletzt die Kälte.|Die weißen Blumen verblassen, eine nach der anderen, wie Farbe in Wasser, und durch sie hindurch drückt sich die Stadt, ihr Geruch nach Eisen und nassem Stein zuerst, dann ihr Lärm, zuletzt ihre Kälte.|Du schließt die Augen im Garten und öffnest sie in der Stadt, und dazwischen ist kein Weg gewesen, kein Schritt. Nur der Einstich in deiner Armbeuge ist wieder frisch.
 <!-- Logik: gehrman_gesehen = true · puppe_daheim = true · blatt_erinnert = true · ampulle = 1 · leben = LEBEN_MAX -->
 [[weiter->KAMPFANFANG]]
 
@@ -2315,76 +2376,78 @@ Dann zupft etwas an deinem Ärmel, und die Stadt kehrt zurück: der Geruch zuers
 <!-- Logik: temp f = LIST_MIN(fr_frei - fr_gespielt) · fr_gespielt += f -->
 
 :: traum_fragmente [T] {"position":"5290,50","size":"100,100"}
-Beim Einschlafen setzt du zusammen, was du in dieser Nacht gesehen hast, wie man Scherben auf einen Tisch legt.
+Was diese Nacht dir in die Hände gegeben hat, legst du dir zurecht, Stück neben Stück, so wie man Scherben auf einem Tisch ordnet, ehe man weiß, zu welchem Gefäß sie gehören.
 [[weiter->traum_fragmente.schleife]]
 
 :: traum_fragmente.schleife [T] {"position":"5290,220","size":"100,100"}
 [[(bedingt) weiter->traum_fragmente.schleife]]
 
 :: frag_blut [T] {"position":"5430,50","size":"100,100"}
-Das Blut der Klinik hat dir das Fieber genommen, von einem Tag auf den anderen. Hinter dem Gitter hustet ein Mann, der dasselbe Blut genommen hat. Was hat es dafür bekommen?
+<!-- [KANON lore:gegenstaende/yharnam-und-blut] Wer Blut empfing, verlangt nach mehr (hier: der Hunger unter der Klarheit, wie in k1_erwachen). [KANON lore:figuren/gilbert] Das Blut hat ihm Zeit gekauft (bei uns früher: [ERWEITERT]). -->
+Seit der Klinik ist das Fieber fort. Wochen hat es in dir gewohnt, und eine einzige Flasche hat es ausgetrieben, über Nacht, so wie man einen Mieter auf die Straße setzt. Seither stehen die Kanten der Dinge schärfer, und unter der Klarheit liegt ein Hunger, den kein Brot berührt. { gilbert_geschenk: Gilbert hat dasselbe Blut genommen, lange vor dir. Aufschub habe es ihm gekauft, sagt er, nur Aufschub, und dann hat ihm der Husten den Satz abgeschnitten.| Hinter seinem Gitter hustet Gilbert, nass und tief, und dein Einstich hat im Takt dieses Hustens gepocht, so genau, dass du die Hand darauflegen musstest.} Was gekauft ist, wird bezahlt, denkst du. Du weißt nur noch nicht, in welcher Münze.
 
 :: frag_menschen [T] {"position":"5570,50","size":"100,100"}
-Wenn die Bestien einmal Menschen waren, ist jede Jagd ein Mord an Nachbarn. Und die Nachbarn tragen Fackeln, und sie trauen dir nicht.
+<!-- [KANON lore:kern] Die Seuche macht aus Menschen Bestien; die Bürger jagen selbst und halten Fremde für die Überträger. Der Hornknopf (a_ankunft) und die Bäckerei (b_yharnam, k1_nach_scheiterhaufen) sind [ERWEITERT]. -->
+An der Brust der Bestie in der Klinik glänzte ein Hornknopf, und an dem Knopf hingen noch zwei Fäden. Ein Tier trägt keine Knöpfe. { gilbert_jagd: Was sie da draußen jagen, sagt Gilbert, haben sie gestern meist noch gegrüßt.} Dann ist jede Bestie einmal durch eine Tür gegangen, die heute verriegelt ist, und hinter der Tür sitzt einer und wartet auf sie. { k1_b_scheiterhaufen: Die mit den Fackeln wissen es so wenig wie du. Am Feuer haben sie in dir gesehen, was du in der Klinik gesehen hast, und sie haben es geglaubt.| Wer das Warten nicht mehr aushält, nimmt Fackel und Mistgabel, so erzählt er, und geht selbst hinaus. Was so einer für eine Bestie hält, wird er nicht lange fragen.} { mob_verbrannt: Martha hatte Mehl an den Ärmeln. An der Bäckerei bei der Ecke zum Markt hängt jetzt ein schwarzes Tuch um die Klinke.} Jede Jagd ist dann eine Jagd auf Nachbarn. Und woran würdest du es an dir selbst erkennen, wenn es so weit ist?
 
 :: frag_kirche [T] {"position":"5710,50","size":"100,100"}
-Die Kirche gibt das Blut aus. Die Kirche hängt Anschläge an die Türen. Die Kirche sperrt die Brücke. Sie weiß mehr, als sie schreibt, und was hat sie getan, dass sie es so weit hat kommen lassen?
+{ k1_b_anschlag: An der Kapellentür klebt ein Datum über dem anderen, Streifen auf Streifen, jeder ein wenig gelber als der darüber. Wer so sorgfältig nachklebt, ist von der Jagd nicht überrascht worden. Fürchtet nicht das Blut, steht darüber, fürchtet, was ohne das Blut aus euch würde.} { haus_zettel: Im dunklen Haus hat einer aufgeschrieben, die Kirche habe ihre Brücke gesperrt, als es unten im Tal brannte. Sie wachen über euch, steht an den Türen. Über ihre Brücke wachen sie.} Die Kirche gibt das Blut aus, und die Kirche sagt, wovor man sich fürchten soll. { gilbert_bruecke: Ihr Blut kommt aus der Kathedrale, sagt Gilbert, so wie Wasser aus einer Quelle.}{ altar_blatt and gilbert_bruecke: Quelle steht auch auf dem Blatt am Altar. Zweimal hast du das Wort in dieser Nacht gehört, und nun legst du die beiden Stellen nebeneinander und siehst lange darauf.} Du glaubst, dass sie mehr weiß, als auf ihren Anschlägen steht.
 
 :: frag_ich [T] {"position":"5850,50","size":"100,100"}
-In der Haut der Bestie sitzen Nadelnarben, Reihe an Reihe. Du reibst dir die Armbeuge. Was passiert mit dir, wenn du genug davon hast?
+In der Haut der Bestie saßen Narben von Nadeln, klein und rund und in ordentlichen Reihen, wie die Stiche in einem Mustertuch. So ordentlich sticht nur, wer es oft tut und auf Anweisung. In deiner Armbeuge sitzt ein einzelner Stich, und du spürst ihn bei jedem Herzschlag. { gedaechtnis_kleriker: In ihrem Blut hast du einen Mann mit weißem Kragen gesehen, dem man vor dem Altar die Nadel in den Arm setzte, und er hat dafür gedankt.} { gilbert_kleriker: Aus Kirchenleuten, sagt man, werden die schlimmsten.} Bei dir ist es ein Stich, bei ihr waren es Hunderte. Irgendwo dazwischen liegt eine Zahl, bei der es anfängt. Du möchtest sie nicht wissen, und dein Kopf zählt trotzdem.
 
 :: frag_nacht [T] {"position":"5990,50","size":"100,100"}
-Die Sonne hängt dort, wo sie hing. Niemand in dieser Stadt spricht von einem Morgen. Du kannst nicht sagen, wie lange die Nacht schon dauert. Gibt es hier jemals einen Tag?
+Als du aus der Klinik tratst, stand der Mond über den Giebeln, bleich wie altes Wachs, mit einem Hof im Dunst. Seither hast du ihn an Schornsteinen gemessen, an Dachfirsten, an der Spitze eines Laternenpfahls, und er ist nicht von der Stelle gerückt. Nur größer ist er geworden, und näher, so allmählich, dass man es bloß merkt, wenn man eine Weile nicht hingesehen hat. Von einem Morgen hat in dieser Stadt keiner gesprochen, außer dem alten Mann in der Klinik, und der hat dabei mit der Zunge geschnalzt. Kein Wächter ruft die Stunden aus, keine Uhr schlägt sie; nur die Glocken läuten, und sie läuten, wann sie wollen. Wie lange dauert eine Nacht, in der der Mond nicht untergeht? Seit einer Weile stellst du die Frage nicht mehr, und das bemerkst du erst jetzt.
 
 :: frag_kippen [T] {"position":"6130,50","size":"100,100"}
-Gascoigne lacht an den falschen Stellen und weiß seinen eigenen Namen nicht mehr. In deiner Armbeuge pocht es im Takt von Gilberts Husten. Wie lange noch, bis du lachst?
+Zwischen den Gräbern hat Gascoigne mit bloßen Händen in frischer Erde gewühlt, beinahe zärtlich, und dabei zwei Töne gesummt, immer dieselben zwei. { gascoigne_name: Deinen Namen hat er gefunden, einen Atemzug zu spät, und vorher einen anderen gesagt.| Dich hat er den Fremden vom Feuer genannt, zweimal hintereinander, und dann noch einmal.} { mob == "zerstreut": Am Feuer wusste er noch, wie die Tote hieß.| Am Feuer kannte er noch jeden beim Namen, Martha, Hennings, Brack.} Es geht also nicht auf einmal. Es geht wie in einem Haus, in dem man abends ein Zimmer nach dem anderen zusperrt, bis nur noch eines warm ist. { eileen_genannt: An Eileens Schnur klappern die Abzeichen von Jägern, die nicht mehr wussten, was sie jagten.} Ob man es selbst merkt, fragst du dich, wenn man an den falschen Stellen zu lachen beginnt, oder ob es einem erst ein anderer sagen muss.
 
 :: betreten [S baustein] {"position":"6270,50","size":"100,100"}
 <!-- Logik: ort = hier -->
 
 :: ampulle_ruhig [S baustein] {"position":"6410,50","size":"100,100"}
-⟨zufällig eine von⟩ Kaum sitzt die Ampulle im Schenkel, kommt mit der Wärme für einen Herzschlag die Klinik zurück, die Riemen über deinen Handgelenken, die zwei Flaschen über dir, eine leer, eine dunkel, und hinter der Wärme ein Durst nach mehr, den kein Wasser stillen würde. ／ Die Nadel der Ampulle geht durch den Stoff in den Schenkel. Einen Herzschlag lang nichts, dann eine Hitze, die vom Bein aufsteigt wie Branntwein in die Kehle. ／ Du drückst die Ampulle in den Schenkel und lehnst dich an das Nächste, das hält, bis das Zittern in deinen Händen aufhört. Es hört auf. Es hört jedes Mal auf.
+⟨zufällig eine von⟩ Kaum sitzt die Ampulle im Schenkel, kommt mit der Wärme für einen Herzschlag die Klinik zurück, die Riemen über deinen Handgelenken, die zwei Flaschen über dir, eine leer, eine dunkel, und hinter der Wärme ein Durst nach mehr, den kein Wasser stillen würde. ／ Die Nadel geht durch den Stoff in den Schenkel. Einen Herzschlag lang nichts; dann steigt eine Hitze aus dem Bein herauf in den Leib, wie Branntwein, der den falschen Weg nimmt, und der Einstich in deiner Armbeuge pocht mit, als erinnere er sich. ／ Du drückst die Ampulle in den Schenkel und lehnst dich an das Nächste, das hält, eine Mauer, einen Pfahl, bis das Zittern in deinen Händen aufhört. Es hört auf. Es hört jedes Mal auf.
 <!-- Logik: ampulle = ampulle - 1 · heile(AMPULLE_HEILT) -->
 
 :: ampulle_gefahr [S baustein] {"position":"6550,50","size":"100,100"}
-⟨zufällig eine von⟩ Den Schlag hast du kommen sehen, und die Nadel ist trotzdem schon im Schenkel. Er trifft dich, während das Blut noch in dich hineinläuft, und einen Augenblick lang weiß dein Körper nicht, ob er heilt oder bricht. ／ Du hast die Ampulle gerade im Bein, als der Hieb kommt. Das Blut wärmt dich von innen, und von außen wird es kalt, dort, wo er dich getroffen hat. ／ Die Nadel ist erst halb im Schenkel, als der Schlag kommt, und das Glas schlägt dir gegen die Hüfte und hält. Wärme und Schmerz kommen im selben Atemzug, und keines von beiden gewinnt.
+⟨zufällig eine von⟩ Den Schlag hast du kommen sehen, und die Nadel ist trotzdem schon im Schenkel. Er trifft dich, während das Blut noch in dich hineinläuft, und einen Augenblick lang weiß dein Körper nicht, ob er heilt oder bricht. ／ Die Ampulle steckt gerade im Bein, da trifft es dich. Das Blut wärmt dich von innen, und von außen wird es kalt, genau dort, wo du getroffen bist, und die beiden treffen sich irgendwo unter den Rippen. ／ Die Nadel ist erst halb im Schenkel, als der Schlag kommt; das Glas prallt dir gegen die Hüfte und bleibt heil. Wärme und Schmerz kommen im selben Atemzug, und keines von beiden gewinnt.
 <!-- Logik: ampulle = ampulle - 1 · heile(AMPULLE_HEILT) · treffer(schaden) -->
 
 :: tod [S baustein] {"position":"2960,22830","size":"100,100"}
-<!-- [ERWEITERT] Die zweite Fassung: Er erkennt dich nicht mehr; die zwei gesummten Töne sind ein Faden zur Spieluhr. -->
+<!-- [ERWEITERT] Die zweite Fassung: Er erkennt dich nicht mehr; er riecht an dir, statt zu sehen (Verband), und die zwei gesummten Töne sind ein Faden zur Spieluhr. -->
 ⟨wenn ort⟩
 ⟨bei "bruecke"⟩
-{&Das Letzte, was du siehst, ist das Geweih über dir, schwarz gegen den Himmel, und eine Kutsche, die sich langsam dreht, als läge sie auf Wasser.|Der Schlag hebt dich vom Pflaster und legt dich zwischen die Räder einer umgestürzten Kutsche, zu denen, die man nicht fortgeräumt hat. Einer von ihnen hat die Augen offen. Du siehst ihn an, und er sieht zurück, bis einer von euch beiden aufhört.|Über dir hebt sich der lange Arm noch einmal, Gelenk um Gelenk, und eines davon war vorhin nicht da. Weiter kommst du mit dem Zählen nicht.}
+{&Das Letzte, was du siehst, ist das Geweih über dir, schwarz vor der bleichen Scheibe des Mondes, und eine Kutsche, die sich langsam dreht, als läge sie auf Wasser.|Der Schlag hebt dich vom Pflaster und legt dich zwischen die Räder einer umgestürzten Kutsche, zu den Toten, die man nicht fortgeräumt hat. Einer von ihnen hat die Augen offen. Du siehst ihn an, und er sieht zurück, bis einer von euch beiden aufhört.|Über dir hebt sich der lange Arm noch einmal, Gelenk um Gelenk, und eines davon war vorhin nicht da. Weiter kommst du mit dem Zählen nicht.}
 ⟨bei "kanal"⟩
-{&Das Wasser schlägt über dir zusammen, kalt, mit einem Geschmack nach Eisen, und von oben, sehr weit weg, hörst du die Ratten.|Gegen die Beckenwand gedrückt, unter einem Gewicht, das warm ist und schnauft, hörst du etwas knirschen, die Mauer oder deine Rippen. Über dir riecht der Atem nach dem, was es zuletzt gefressen hat, und das Schmatzen hört nicht auf, als du still wirst.}
+{&Das Wasser schlägt über dir zusammen, kalt, mit einem Geschmack nach Eisen, und von oben, sehr weit weg, hörst du die Ratten.|Gegen die Beckenwand gedrückt, unter einem Gewicht, das warm ist und schnauft, hörst du es knirschen, die Mauer oder deine Rippen. Der Atem über dir riecht nach dem, was es zuletzt gefressen hat, und das Schmatzen hört nicht auf, als du still wirst.}
 ⟨bei "grab"⟩
 {
 ⟨bei gascoigne_tot⟩
-Zwischen zwei Grabsteinen liegst du auf dem Rücken, und über dir hängt die rote Sonne. Du kannst in sie hineinsehen, ohne zu blinzeln, und deine Augen tränen nicht. Sie ist das Letzte, was sich nicht bewegt.
+Zwischen zwei Grabsteinen liegst du auf dem Rücken, und über dir hängt der Mond, so tief, dass du die Narben auf seinem bleichen Gesicht erkennst, helle Ränder um dunkle Mulden. Deine Augen schließen sich nicht mehr, und so bleibt er in ihnen stehen. Er ist das Letzte, was sich nicht bewegt.
 ⟨bei als_bestie⟩
 ⟨bei durch_schuss⟩
 Nach dem Schuss hörst du nichts mehr, nur ein Pfeifen, hoch und rein, wie von einer Glocke, die nicht aufhört. Durch das Pfeifen hindurch siehst du über dir seinen Mund, und der Mund ist freundlich. Zwei Wörter liest du ihm von den Lippen: Gute Jagd.
 ⟨sonst⟩
 ⟨bei "scheiterhaufen"⟩
 ⟨wenn durch_riese⟩
-Zuletzt hörst du nur noch den Riesen. Er weint, mit der Stimme eines Jungen, und sagt dir immer wieder, dass du an allem schuld bist.
+Zuletzt hörst du nur noch den Riesen. Er weint über dir, mit der Stimme eines Jungen, und sagt dir immer wieder, dass du an allem schuld bist. Dann, leiser, zu jemandem, der nicht da ist: dass es kalt ist, Schwesterchen, so kalt.
 ⟨sonst⟩
 ⟨bei "klinik"⟩
-Unter deiner Wange sind die Dielen kalt und klebrig, dieselben, auf denen du vorhin schon gelegen hast, und sie riechen nach Karbol. Über dir schnauft es, ohne Hast.
+Unter deiner Wange sind die Dielen kalt und klebrig, dieselben, auf denen du vorhin schon gelegen hast, und sie riechen nach Karbol und nach dem, was das Karbol überdecken soll. Über dir schnauft es, ohne Hast.
 ⟨bei "haus"⟩
-Die Kugel setzt dich auf den Boden, den Rücken an der Wand. Der Mann im Rollstuhl lädt nach, mit Fingern, die zittern und trotzdem treffen, und du siehst ihm dabei zu, und es kommt dir nicht mehr wichtig vor.
+Die Kugel setzt dich auf den Boden, den Rücken an der Wand. Der Mann im Rollstuhl lädt nach und lacht dabei, ein hoher, pfeifender Ton bei jedem Einziehen des Atems; seine Finger zittern, und die Kugel findet den Lauf trotzdem beim ersten Mal. Du siehst ihm dabei zu, und es kommt dir nicht mehr wichtig vor.
 ⟨bei "daecher"⟩
-Der zweite Schuss trifft dich, als du dich nach dem ersten umdrehst. Zwischen Hauswänden, so eng, dass deine Schultern beide streifen, rutschst du zu Boden, und über dir an der Leine schaukelt die einzelne hölzerne Klammer.
+Der zweite Schuss trifft dich, als du dich nach dem ersten umdrehst. Zwischen Hauswänden, so eng, dass deine Schultern beide streifen, rutschst du zu Boden, und hoch über dir an der leeren Leine schaukelt die einzelne hölzerne Klammer, hin und her, und kommt nicht zur Ruhe.
 ⟨sonst⟩
 {&Der Boden kommt dir entgegen, langsam, und du hast Zeit, eine Fuge zwischen zwei Steinen zu sehen, in der Moos wächst. Das Letzte, was du hörst, ist dein eigener Atem, der an einer Stelle hängen bleibt und nicht weitergeht.|Die Knie geben nach, eines nach dem anderen, und du sitzt, als hätte dich jemand behutsam dorthin gesetzt. Das Licht geht zuerst an den Rändern, zuletzt in der Mitte.|Von den Füßen her wird es kalt, Stufe um Stufe, so wie Wasser in einem Keller steigt. Als es das Herz erreicht, schlägt das Herz ihm nicht mehr entgegen.}
 <!-- Logik: tode = tode + 1 · neu_gelernt = zuletzt != () and not (gelernt ? zuletzt) · temp als_bestie = (zuletzt ? bestie_sprung) or (zuletzt ? bestie_kreis) or (zuletzt ? griff) · temp durch_schuss = (zuletzt ? schuss) or (zuletzt ? gascoigne_schuss) or (zuletzt ? donner_nah) · temp durch_riese = zuletzt ? riese_ansturm · gelernt += zuletzt · zuletzt = () · leben = LEBEN_MAX -->
 [[weiter->nachbild]]
 
 :: k1_traum_zwei [T] {"position":"4090,16880","size":"100,100"}
-Unter deiner Hand wird das Glas der Laterne warm, und die Stadt bleicht aus wie ein Kupferstich im Fenster eines Ladens, der seit Jahren nicht mehr öffnet: zuerst die Giebel, dann die Gasse, zuletzt das Pflaster unter deinen Stiefeln. Unter den Sohlen ist Gras.
+Unter deiner Hand wird das Glas der Laterne warm, und die Unterstadt bleicht aus wie ein Kupferstich im Fenster eines Ladens, der seit Jahren nicht mehr öffnet: zuerst die Giebel, dann die Gasse, zuletzt das Pflaster unter deinen Stiefeln. Unter den Sohlen ist Gras. Den Mond hat die Stadt behalten; über dem Garten ist der Himmel leer, und doch liegt auf jedem Blütenblatt Licht.
 ⟨wenn einsicht >= 1 and not puppe_wach⟩
-⟨zufällig eine von⟩ Zwischen den Grabsteinen, deren Inschriften der Regen ausgewaschen hat, obwohl es hier nie regnet, wühlen die Boten in der Erde, als suchten sie dort, was ihnen einmal gehört hat. ／ Durch die weißen Blumen geht ein Wind, den du auf der Haut nicht spürst, und legt sie alle in dieselbe Richtung, und oben auf dem Hügel brennt im Haus das Licht, das dort immer brennt.
-⟨wenn einsicht >= 2⟩ Auf den Grabsteinen am Rand des Gartens sitzt etwas, das nicht weggeht, wenn du blinzelst. Ansehen lässt es sich nicht; dein Blick gleitet daran ab und landet jedes Mal im Gras daneben. Um den Stein aber sind die weißen Blumen braun geworden, in einem Kreis, so rund, als hätte ihn jemand mit dem Zirkel gezogen. 
+⟨zufällig eine von⟩ Zwischen den Grabsteinen, deren Inschriften der Regen ausgewaschen hat, obwohl es hier nie regnet, wühlen die Boten mit beiden Händen in der Erde, ohne Eile, als suchten sie dort, was ihnen einmal gehört hat. ／ Durch die weißen Blumen geht ein Wind, den du auf der Haut nicht spürst, und legt sie alle zur selben Seite, und oben auf dem Hügel brennt im Haus das Licht, das dort immer brennt.
+⟨wenn einsicht >= 2⟩ Auf einem Grabstein am Rand des Gartens sitzt etwas, das nicht weggeht, wenn du blinzelst. Ansehen lässt es sich nicht; dein Blick gleitet daran ab und landet jedes Mal im Gras daneben. Um den Stein aber sind die weißen Blumen braun geworden, in einem Kreis, so rund, als hätte ihn jemand mit dem Zirkel gezogen. 
 <!-- Logik: ort = "traum" · leben = LEBEN_MAX · ampulle = 1 -->
 [[weiter->k1_traum_zwei.wahl]]
 
@@ -2394,67 +2457,67 @@ Unter deiner Hand wird das Glas der Laterne warm, und die Stadt bleicht aus wie 
 
 :: k1_traum_zwei.wahl ✦ 2 [T folge] {"position":"4090,17220","size":"100,100"}
 ⟨wenn gehrman == 0⟩
-Oben, zwischen den letzten Grabsteinen, gibt die Tür diesmal unter deiner Hand nach. Einen Riegel hast du nicht gehört.
+Den Pfad hinauf, an den letzten Grabsteinen vorbei, und oben gibt die Tür diesmal nach, kaum dass deine Hand sie berührt. Einen Riegel hast du nicht gehört.
 ⟨sonst⟩
-Oben steht die Tür der Werkstatt einen Spalt offen, und aus dem Spalt fällt Feuerschein auf die Stufe.
+Den Pfad hinauf; oben steht die Tür der Werkstatt einen Spalt offen, und aus dem Spalt fällt Feuerschein auf die Stufe.
 [[weiter->k1_traum_zwei.~1]]
 
 :: k1_traum_zwei.~1 [T] {"position":"4090,17390","size":"100,100"}
-Unter deiner Hand ist der Grabstein ohne Namen kalt, und während du an die Stadt denkst, kehrt sie zurück: der Geruch zuerst, dann die Geräusche, zuletzt die Kälte.
+Den Hügel hinab, bis zum Grabstein ohne Namen. Unter deiner Hand ist er kalt, und während du an die Stadt denkst, kehrt sie zurück, zuerst als Rauschen, das Wasser in den Rinnen der Unterstadt, dann als Geruch nach nassem Stein, zuletzt als Kälte im Nacken.
 [[weiter->k1_c_graeber]]
 
 :: puppe_erwacht [T] {"position":"6690,50","size":"100,100"}
-Am Fuß der Treppe steht die Puppe, wie sie immer stand, die Hände vor dem Kleid gefaltet. Als du an ihr vorbeigehst, hebt sich ein Lid, nur eines. Dann knirscht es in ihrer Halsfuge, Holz an Holz, und der Kopf wendet sich dir nach, so langsam, dass du die Bewegung erst bemerkst, als sie vorbei ist. Die gemalten Augen bleiben auf dir liegen. Diesmal sehen sie dich.
-„Oh“, sagt sie. „Da bist du ja.“ Ihre Stimme ist sanft und klar, und zwischen den Sätzen atmet sie nicht; die Sätze stehen nur da, einer neben dem anderen, wie Gedecke auf einem Tisch, an dem niemand sitzt. „Man hat mich in diesen Garten gestellt, damit ich dich behüte. Es ist lange her, dass einer kam, den man behüten konnte.“ Sie neigt den Kopf und lässt ihn so. „Bring mir, was aus ihnen aufsteigt, wenn sie fallen. Ich mache dir etwas daraus, das bleibt.“
-Hinter ihr, auf drei Grabsteinen, sitzt etwas, das vorher nicht dort saß. Als du wieder hinsiehst, sind es nur zwei, und vor dem dritten Stein liegen die Blumen flach, wie unter einem Gewicht, das sich eben erst erhoben hat.
+Am Fuß der Treppe steht die Puppe, wie sie beim ersten Mal stand, die Hände vor dem Kleid gefaltet. Als du an ihr vorbeigehst, hebt sich ein Lid, nur eines. Dann knirscht es in ihrer Halsfuge, Holz an Holz, und der Kopf wendet sich dir nach, so langsam, dass du die Bewegung erst bemerkst, als sie vorbei ist. Die gemalten Augen bleiben auf dir liegen. Diesmal sehen sie dich.
+„Oh“, sagt sie. „Da bist du ja.“ Ihre Stimme ist sanft und klar, und zwischen den Sätzen atmet sie nicht; die Sätze stehen nur da, einer neben dem anderen, wie Gedecke auf einem Tisch, an dem niemand sitzt. „Man hat mich in diesen Garten gestellt, damit ich dich behüte. Es ist lange her, dass einer kam, den man behüten konnte.“ Sie neigt den Kopf und lässt ihn so. „Was draußen in dir krank wird, das bring mir. Ich gehe nirgendwohin.“
+Über ihre Schulter hinweg siehst du die Grabsteine am Hang, und auf dreien sitzt etwas, das vorher nicht dort saß. Du blinzelst. Auf zweien. Vor dem dritten Stein liegen die Blumen flach, wie unter einem Gewicht, das sich eben erst erhoben hat.
 <!-- Logik: puppe_wach = true -->
 
 :: puppe_gespraech [T] {"position":"6830,50","size":"100,100"}
-<!-- [KANON lore:figuren/puppe] Die Kleinen (Boten) finden Jäger und dienen ihnen; die Gräber stehen für unzählige frühere Jäger, alles scheint lange her; Gehrman war vor langer Zeit selbst Jäger und gibt nur noch Rat. [ERWEITERT] Ihre Fragen nach der Stadt, ihr Gedächtnis für deine Rückkehren (Lektorat: das Zählen gehört dem Zwang und der Ansteckung, hier ein Merken). -->
+<!-- [KANON lore:figuren/puppe] Die Kleinen (Boten) reden nicht, hängen aber an den Jägern und dienen ihnen, und die Puppe hat sie gern; die Gräber stehen für unzählige frühere Jäger, alles scheint lange her; Gehrman war vor langer Zeit selbst Jäger und gibt nur noch Rat. [ERWEITERT] Ihre Fragen nach der Stadt, ihr Gedächtnis für deine Rückkehren (Lektorat: das Zählen gehört dem Zwang und der Ansteckung, hier ein Merken). -->
 ⟨wenn stopping⟩
-⟨bei Die Puppe sieht zu den Boten hinüber, die zwischen den Blumen wühlen. „Die Kleinen“, sagt sie, und ihre gefalteten Hände lösen sich und finden wieder zueinander. „Sie haben dich zuerst gesehen, lange vor mir. Sie graben nach Leuten wie dir, so wie andere nach Wurzeln graben. Dich haben sie ausgegraben.“ Der Kopf neigt sich, bis das Knirschen in der Fuge aufhört. „Du kanntest sie schon, nicht wahr? Von vorher?“ # lore⟩
+⟨bei Die Puppe sieht zu den Boten hinüber, die zwischen den Blumen wühlen. „Die Kleinen“, sagt sie, und ihre gefalteten Hände lösen sich und finden wieder zueinander. „Sie haben dich zuerst gesehen, lange vor mir. Sie graben nach Leuten wie dir, so wie andere nach Wurzeln graben. Dich haben sie ausgegraben.“ Der Kopf neigt sich, bis das Knirschen in der Fuge aufhört. „Sprechen können sie nicht. Ich habe sie trotzdem gern. Du kanntest sie schon, nicht wahr? Von vorher?“ # lore⟩
 boten
 ⟨bei Die Puppe sieht an dir vorbei zu den Grabsteinen, die schief im Gras stehen, Reihe hinter Reihe, bis die hintersten nur noch Striche sind, und hinter den Strichen stehen weitere. „Für jeden dieser Steine ist einmal einer gekommen wie du“, sagt sie. „Er stand hier, wo du stehst, und hat mit mir gesprochen.“ Ihre Hände bleiben gefaltet. „Es ist alles so lange her, dass ich die Gesichter verwechsle. Verzeih. Deines will ich mir merken.“ # lore⟩
 jaegertraum
 ⟨wenn gehrman_gesehen or gehrman⟩
 Sie wendet den Kopf zum Haus auf dem Hügel. „Auch Gehrman war einmal einer von ihnen, vor sehr langer Zeit. Jetzt gibt er nur noch Rat. Hinaus geht er nicht mehr.“
 ⟨bei { tode >= 3⟩
-„Du liegst jedes Mal ein wenig anders im Gras, wenn du zurückkehrst“, sagt sie. „Ich merke es mir. Einmal lag deine Hand offen, einmal war sie geschlossen.“ Sie sieht nicht auf. „Ich weiß nicht, wozu ich es mir merke. Aber jedes Mal wird es mir schwerer.“
+„Du liegst jedes Mal ein wenig anders im Gras, wenn du zurückkehrst“, sagt sie. „Ich merke es mir. Einmal lag deine Hand offen, einmal war sie geschlossen.“ Sie sieht nicht auf. „Wozu ich es mir merke, weiß ich nicht. Aber es wird mir jedes Mal schwerer.“
 ⟨sonst⟩
 „Wie ist die Jagd?“, fragt sie, und während du erzählst, regt sich an ihr nichts als die Lider. Als du fertig bist, wiederholt sie ein einziges Wort davon, behutsam, wie man eine fremde Münze zwischen den Fingern dreht: „{k1_b_maedchen:Brunnenplatz|Räucherlampe}.“
 [[(bedingt) weiter->puppe_gespraech.frage]]
 
 :: puppe_gespraech.frage [T] {"position":"6830,220","size":"100,100"}
-„Darf ich dich etwas fragen? Wie riecht es draußen? Ich habe nur Blumen.“
+„Darf ich dich etwas fragen? Wie riecht es draußen? Hier riecht alles nur nach Blumen.“
 [[„Nach Rauch. Nach Blut.“ #fliesst->puppe_gespraech.frage ✦ 1]]
-[[Ihr vom Räucherwerk erzählen #fliesst->puppe_gespraech.frage ✦ 2]]
+[[„Nach den roten Lampen vor den Fenstern.“ #fliesst->puppe_gespraech.frage ✦ 2]]
 
 :: puppe_gespraech.frage ✦ 1 [T folge] {"position":"5790,390","size":"100,100"}
-„Und nach nassem Stein“, setzt du hinzu. Ihr Gesicht verzieht sich nicht; es kann es nicht. „Rauch“, wiederholt sie. „Und Blut. Danke. Ich wollte wissen, wie es ist, nicht, wie es sein soll.“
+„Nach Rauch. Nach Blut. Und nach nassem Stein.“ Ihr Gesicht verzieht sich nicht; es kann es nicht. „Rauch“, wiederholt sie, und dann, als lege sie es behutsam neben die Blumen:„Und Blut. Danke. Die meisten haben mir etwas Schönes erzählt.“
 [[weiter->puppe_gespraech.frage.~1]]
 
 :: puppe_gespraech.frage ✦ 2 [T folge] {"position":"6830,390","size":"100,100"}
-Von den roten Lampen vor den Fenstern und dem Rauch, der aus ihnen in die Gassen sinkt und sich in die Kleider setzt, bis man ihn nicht mehr bemerkt. Als sie fragt, wonach er riecht, suchst du lange und sagst dann: „Süß.“ Sie schließt die Augen, als könne sie es so riechen. „Süß“, wiederholt sie. „Dann ist es draußen nicht nur schlimm.“
+„Nach den roten Lampen vor den Fenstern.“ Sie will wissen, was das für Lampen sind, und du erzählst ihr vom Räucherwerk, das hinter dem roten Glas glimmt, damit die Bestien an den Häusern vorbeigehen, und vom Rauch, der in die Gassen sinkt und sich in die Kleider setzt, bis man ihn nicht mehr bemerkt. Als sie fragt, wonach er riecht, suchst du lange und sagst dann: „Süß.“ Sie schließt die Augen, als könne sie es so riechen. „Süß“, wiederholt sie. „Dann ist es draußen nicht nur schlimm.“
 [[weiter->puppe_gespraech.frage.~1]]
 
 :: puppe_gespraech.frage.~1 [T] {"position":"6830,560","size":"100,100"}
 
 :: gehrman [T] {"position":"7470,50","size":"100,100"}
-<!-- [ERWEITERT] Gesprächsthemen als Lore-Quelle; der Vertrag und das Verlassen des Traums. Schlafreden nur als Laut und Frage, ohne die Gefangenschaft auszusprechen. -->
+<!-- [ERWEITERT] Das Feuer ohne Holz (einmal, mit Folge statt „von selbst“, Lektorat traum_hub 4); Gesprächsthemen als Lore-Quelle; der Vertrag und das Verlassen des Traums. Schlafreden nur als Laut und Frage, ohne die Gefangenschaft auszusprechen. -->
 {
 ⟨bei gehrman == 1 and gehrman_gesehen⟩
-In der Werkstatt riecht es nach Lampenöl, nach Leder und nach Papier, das zu lange in der Nähe eines Feuers gelegen hat; an den Wänden hängen Werkzeuge an Haken, und auf einem Bord kauert in einem Tontopf eine kleine Gestalt aus Knochen. Am Kamin sitzt der alte Mann vom Weg in seinem Rollstuhl, die Decke über den Knien, als hätte er sich seit dem Garten nicht gerührt.
-„Du schon wieder.“ Er sagt es zum Feuer hin. „Gehrman. Ich hätte mich draußen … vorstellen sollen. Aber wer gerade aufwacht, will keine Namen hören.“ Seine Hand beschreibt einen kleinen Bogen, der die Werkstatt umfasst, die Borde, die Bank, die Töpfe. „Bedien dich. Frag nicht lange. Das hier war einmal für Leute wie dich gedacht.“
+In der Werkstatt riecht es nach Lampenöl, nach altem Leder und nach Papier, das zu lange am Feuer gelegen hat. An Haken hängen Werkzeuge, deren Namen du nicht kennst, auf einem Bord kauert in einem Tontopf eine kleine Gestalt aus Knochen, und im Kamin brennen zwei Scheite, obwohl du nirgends Holz liegen siehst. Davor sitzt der alte Mann vom Weg in seinem Rollstuhl, die Decke über den Knien, als hätte er sich seit dem Garten nicht gerührt.
+„Du schon wieder.“ Er sagt es zum Feuer hin. „Gehrman. Ich hätte mich draußen schon … vorstellen sollen. Aber wer gerade erst aufwacht, will keine Namen hören.“ Seine Hand beschreibt einen kleinen Bogen über die Borde, die Bank, die Töpfe. „Bedien dich. Frag nicht lange. Das hier war einmal für Leute wie dich gedacht.“
 ⟨bei gehrman == 1⟩
-In der Werkstatt riecht es nach Lampenöl, nach Leder und nach Papier, das zu lange in der Nähe eines Feuers gelegen hat. An den Wänden hängen Werkzeuge und Pläne, auf den Borden stehen Flaschen und Tontöpfe, und in einem der Töpfe kauert eine kleine Gestalt aus Knochen, die jemand mit großer Geduld zusammengesetzt hat. Vor dem Kamin steht ein Rollstuhl, und darin sitzt ein alter Mann mit grauem Haar unter einem breitkrempigen Hut, eine Decke über den Knien. Er dreht sich nicht um.
+In der Werkstatt riecht es nach Lampenöl, nach altem Leder und nach Papier, das zu lange am Feuer gelegen hat. An den Wänden hängen Werkzeuge und Pläne, auf den Borden stehen Flaschen und Tontöpfe, und in einem der Töpfe kauert eine kleine Gestalt aus Knochen, die jemand mit großer Geduld zusammengesetzt hat. Durch das einzige Fenster fällt ein Streifen Licht schräg auf die Dielen, obwohl draußen nichts steht, von dem er kommen könnte. Vor dem Kamin, in dem zwei Scheite brennen und nirgends ein drittes bereitliegt, steht ein Rollstuhl, und darin sitzt ein alter Mann mit grauem Haar unter einem breitkrempigen Hut, einen Schal um den Hals und eine Decke über den Knien. Er dreht sich nicht um.
 „Da kommt jemand.“ Er sagt es zum Feuer, nicht zu dir. „Setz dich, wenn du magst. Oder bleib stehen, das tun die meisten. Gehrman. Ich helfe euch, so gut ich …“ Das Ende des Satzes sucht er eine Weile in der Glut. „… noch kann. Bedien dich. Frag nicht lange. Das hier war einmal für Leute wie dich gedacht.“
 ⟨sonst⟩
 ⟨wenn gehrman >= 4 and gehrman % 4 == 0⟩
 Gehrman schläft. Der Kopf ist ihm auf die Brust gesunken, der Hut sitzt schief, und seine Lippen bewegen sich. Ein Name kommt darüber, zwei Silben, vielleicht drei, zu leise, um ihn festzuhalten. Dann, deutlicher, ohne dass er die Augen öffnet: „Wird es draußen schon hell?“ Du wartest. Er wacht nicht auf. Nur seine Hand auf der Decke öffnet sich, als ließe sie einen Griff los, und schließt sich wieder.
 Gehrman hebt den Kopf, als du eintrittst, und nickt dir zu wie einem alten Bekannten.
 ⟨wenn gehrman == 1⟩
-„Früher hat man hier Blut in den Stahl gegeben“, sagt er, „und in sich selbst. Ins eigene Fleisch.“ Er lässt das stehen, so lange, dass du das Feuer knacken hörst. „Heute ist weniger da. Es reicht.“ Dann senkt er die Stimme, obwohl außer dir niemand da ist: „Die Puppe draußen … die steht dir auch zu. Wenn dir danach ist.“ Seine Augen bleiben dabei in den Flammen.
-Im hinteren Teil des Hauses, wo das Licht des Kamins nicht mehr hinreicht, steht ein Altar aus dunklem Holz, und darauf liegt unter einem Kerzenstumpf ein Blatt. Wer es beschrieb, drückte die Feder so fest auf, dass die Buchstaben auf der Rückseite erhaben stehen, und jeder kippt nach rechts, dem nächsten entgegen, als hätte die Hand nicht viel Zeit gehabt.
+„Früher hat man hier Blut in den Stahl gegeben“, sagt er, „und in sich selbst. Ins eigene Fleisch.“ Er lässt das stehen. Im Kamin sinkt ein Scheit in die Glut und wird nicht kleiner. „Heute ist weniger da. Es reicht.“ Dann senkt er die Stimme, obwohl außer dir niemand da ist: „Die Puppe draußen … die steht dir auch zu. Wenn dir danach ist.“ Seine Augen bleiben dabei in den Flammen.
+Im hinteren Teil des Hauses, wo das Licht des Kamins nicht mehr hinreicht, steht ein Altar aus dunklem Holz, und darauf liegt unter einem Kerzenstumpf ein Blatt. Wer es beschrieb, drückte die Feder so fest auf, dass sich die Buchstaben durch das Papier drücken, und jeder kippt nach rechts, dem nächsten entgegen, als hätte die Hand nicht viel Zeit gehabt.
 „Aus diesem Traum kommt nur hinaus, wer der Seuche ihre Quelle verschließt. Bleibt die Quelle offen, bleibt die Nacht.“
 Ein Name steht nicht darunter.
 <!-- Logik: altar_blatt = true -->
@@ -2473,57 +2536,63 @@ Ein Name steht nicht darunter.
 [[Dich zur Tür wenden #fliesst->gehrman.thema ✦ 8]]
 
 :: gehrman.thema ✦ 1 [T folge] {"position":"6990,390","size":"100,100"}
-Er lässt sich Zeit. „Ein Traum.“ Danach wartet er, als prüfe er, ob das Wort hält. „Ein Ort, an dem Jäger ruhen, solange die Jagd dauert. Sich rüsten. Sich erinnern.“ Er streicht die Decke über seinen Knien glatt, einmal, zweimal, an derselben Stelle. „Man kommt hierher zurück. Ob man will oder nicht.“
+„Was ist das für ein Ort?“ Er lässt sich Zeit. „Ein Traum.“ Danach wartet er, als prüfe er, ob das Wort hält. „Früher eine Zuflucht. Hier haben Jäger geruht, solange die Jagd dauerte. Sich gerüstet. Sich erinnert.“ Er streicht die Decke über seinen Knien glatt, immer an derselben Stelle, wo der Stoff schon dünn geworden ist. „Man kommt hierher zurück. Ob man will oder nicht.“
 [[weiter->gehrman.thema]]
 
 :: gehrman.thema ✦ 2 [T folge] {"position":"7130,390","size":"100,100"}
-„Wenn die Nacht vorbei ist.“ Es kommt schnell, schneller als alles, was er bisher gesagt hat, wie etwas Auswendiggelerntes. „So hat man es mir gesagt.“
+„Wie kommt man hier wieder hinaus?“ Die Antwort kommt schnell, schneller als alles, was er bisher gesagt hat, und sie klingt wie auswendig gelernt: „Wenn die Nacht vorbei ist.“ Nach einer Weile setzt er hinzu: „So hat man es mir gesagt.“
 ** [„Und wann ist sie vorbei?“
-Er sieht ins Feuer, dann auf die Decke über seinen Knien, dann wieder ins Feuer. Er antwortet nicht. Nach einer Weile nimmt er ein Werkzeug von der Bank und beginnt, es zu putzen, sorgfältig, obwohl es sauber ist. { altar_blatt: Hinter ihm, im dunklen Teil des Hauses, liegt das Blatt auf dem Altar, und er dreht sich nicht danach um. }
-** [Es dabei bewenden lassen
-Er nickt, ein wenig zu schnell, und die Hand, die eben noch die Lehne gehalten hat, lässt sie los.
+„Und wann ist sie vorbei?“ Er sieht ins Feuer, dann auf die Decke über seinen Knien, dann wieder ins Feuer. Er antwortet nicht. Nach einer Weile nimmt er ein Werkzeug von der Bank, eine kleine Zange, und putzt sie mit einem Zipfel der Decke, sorgfältig, obwohl sie sauber ist. { altar_blatt: Hinter ihm, im dunklen Teil des Hauses, liegt das Blatt auf dem Altar, und er dreht sich nicht danach um. }
+** [Nicken und nicht weiterfragen
+Ein Nicken, mehr nicht, und er nickt zurück, ein wenig zu schnell, und die Hand, die eben noch die Lehne gehalten hat, lässt sie los.
 <!-- Logik: gehrman_nacht = true · gehrman_wann = true -->
 [[weiter->gehrman.thema]]
 
 :: gehrman.thema ✦ 3 [T folge] {"position":"7270,390","size":"100,100"}
-Er fragt nicht, was darin stand. Er sieht auf deine Hände, auf die braune Tinte an deinen Fingerkuppen, und für einen Augenblick wird sein Mund schmal. „Jeder hier hat irgendwann irgendwas versprochen“, sagt er. „Ich auch. Einem Freund.“ Er wartet, bis im Kamin ein Scheit gebrochen ist. „Ich weiß noch, dass ich es versprochen habe.“
+„In der Klinik habe ich unterschrieben.“ Er fragt nicht, was darin stand. Er sieht auf deine Hände, auf die braune Tinte an deinen Fingerkuppen, und für einen Augenblick wird sein Mund schmal. „Jeder hier hat einmal etwas versprochen“, sagt er. „Ich auch. Einem Freund.“ Er sieht lange in die Glut. „Ich weiß noch, dass ich es versprochen habe.“
 <!-- Logik: gehrman_versprochen = true -->
 [[weiter->gehrman.thema]]
 
 :: gehrman.thema ✦ 4 [T folge] {"position":"7410,390","size":"100,100"}
-„Ich war selbst einmal einer.“ Für einen Atemzug ist er nicht alt. Seine rechte Hand schließt sich um einen Griff, den es nicht gibt. „Damals gab es nicht viele von uns. Ein paar habe ich angelernt, hier, an dieser Bank.“ Die Hand öffnet sich wieder. „Später hatte die Kirche ihre eigenen, mit schwarzen Mänteln und schönen Hämmern.“ Er schnaubt, und es ist beinahe ein Lachen. „Wir hatten Sägen. Die taten, was sie sollten.“
+„Woher kommen die Jäger?“ Für einen Atemzug ist er nicht alt. Seine rechte Hand schließt sich um einen Griff, den es nicht gibt. „Ich war selbst einmal einer. Damals gab es nicht viele von uns. Ein paar habe ich angelernt, hier, an dieser Bank.“ Die Hand öffnet sich wieder. „Später hatte die Kirche ihre eigenen, in schwarzen Mänteln, mit schönen Hämmern.“ Er schnaubt, und es ist beinahe ein Lachen. „Wir hatten Sägen. Die taten, was sie sollten.“
 <!-- Logik: gehrman_jaeger = true -->
 [[weiter->gehrman.thema]]
 
 :: gehrman.thema ✦ 5 [T folge] {"position":"7690,390","size":"100,100"}
 ⟨wenn parade⟩
-Er nimmt sie nicht. Er sieht nur, wie du sie hältst, den Daumen am Hahn, den Lauf zum Boden. „Das weißt du schon. Dann hat es dir einer gezeigt, der es kann.“ Er nickt, zweimal. „Gut. Mehr könnte ich dir auch nicht sagen.“
+Die Feuerwaffe hältst du ihm hin, den Kolben voran, aber er nimmt sie nicht. Er sieht auf deine Fingerkuppe, auf den kleinen Stich, den dir der Bote gesetzt hat. „Die haben dein Blut in die Kugeln gegeben“, sagt er. „Dann geh sparsam damit um.“ Er wendet sich wieder dem Feuer zu. „Mit beidem.“
 ⟨sonst⟩
-„Nicht zum Töten.“ Er beugt sich vor, und für drei Sätze ist seine Stimme eine für Höfe und Übungsplätze. „Wenn sie ausholt. Wenn ihr ganzes Gewicht im Schlag liegt. Dann schießt du, und sie wankt.“ Er lehnt sich zurück, und die Stimme ist wieder alt. „Den Rest macht die Säge.“
+Die Feuerwaffe hältst du ihm hin, und er schiebt sie mit zwei Fingern zur Seite. „Nicht zum Töten.“ Er beugt sich vor, und für drei Sätze ist seine Stimme eine für Höfe und Übungsplätze. „Wenn sie ausholt. Wenn ihr ganzes Gewicht im Schlag liegt. Dann schießt du, und sie wankt.“ Er lehnt sich zurück, und die Stimme ist wieder alt. „Den Rest macht die Säge.“
 <!-- Logik: parade = true · parade_quelle = "gehrman" -->
 [[weiter->gehrman.thema]]
 
 :: gehrman.thema ✦ 6 [T folge] {"position":"7830,390","size":"100,100"}
-Lange kommt keine Antwort, und als sie kommt, spricht er sie in seine gefalteten Hände hinein: „Man sagt, das Blut erinnert sich. Das haben Leute gesagt, die zu viel davon gesehen haben. Ob es stimmt …“ Er hebt die Schultern. „Ich habe es nie wissen wollen.“
+„Ich sehe Dinge, die nicht meine sind.“ Lange kommt keine Antwort, und als sie kommt, spricht er sie in seine gefalteten Hände hinein: „Man sagt, das Blut erinnert sich. Das haben Leute gesagt, die zu viel davon gesehen haben. Ob es stimmt …“ Er hebt die Schultern. „Ich habe es nie wissen wollen.“
 <!-- Logik: gehrman_blut = true -->
 [[weiter->gehrman.thema]]
 
 :: gehrman.thema ✦ 7 [T folge] {"position":"7970,390","size":"100,100"}
-Er antwortet nicht gleich. Seine Hände legen sich um die Lehnen des Rollstuhls und schließen sich, bis das Holz unter ihnen knackt. „Jag sie“, sagt er dann. „Wer zu lange fragt, woher sie kommen, fängt irgendwann an, es zu wissen.“ Er wendet sich dem Kamin zu, und die Hände bleiben, wo sie sind.
+„Woher kommen die Bestien?“ Er antwortet nicht gleich. Seine Hände legen sich um die Lehnen des Rollstuhls und schließen sich, bis das Holz unter ihnen knackt. „Jag sie“, sagt er dann. „Wer zu lange fragt, woher sie kommen, fängt irgendwann an, es zu wissen.“ Er wendet sich dem Kamin zu, und die Hände bleiben, wo sie sind.
 <!-- Logik: gehrman_bestien = true -->
 [[weiter->gehrman.thema]]
 
 :: gehrman.thema ✦ 8 [T folge] {"position":"7550,390","size":"100,100"}
-„Gute Jagd“, sagt Gehrman hinter dir. Er sagt es zum Feuer und dreht sich nicht um.
+Zur Tür. Hinter dir sagt Gehrman: „Gute Jagd.“ Er sagt es zum Feuer hin und dreht sich nicht um.
 
 :: training [T] {"position":"7610,50","size":"100,100"}
-<!-- [KANON lore:figuren/gehrman, lore:figuren/gascoigne] Die Parade lernt man von Gehrman wie von Gascoigne. [ERWEITERT] Die Übung im Hof ist eine Szene, kein Menü: Sie öffnet gegen Gascoigne je eine Möglichkeit (`geuebt`). PLATZHALTER, knapp. -->
-Gehrman rollt zur Hintertür und stößt sie mit dem Stuhl auf. „Komm. Einmal noch üben, bevor es weitergeht.“ Im Hof steht ein Pfahl, mit Leder umwickelt und an vielen Stellen zerhauen. Er lässt dich schwere Hiebe abfangen, die für deinen Arm zu schwer sind, und Schüsse setzen, wenn der Pfahl ausholt, den man sich dazudenken muss.
+<!-- [KANON lore:figuren/gehrman, lore:figuren/gascoigne] Die Parade lernt man von Gehrman wie von Gascoigne. [ERWEITERT] Die Übung im Hof ist eine Szene, kein Menü: Sie öffnet gegen Gascoigne je eine Möglichkeit (`geuebt`). -->
+<!-- Ausgeschrieben 2026-11-06 aus dem Platzhalter (Ü10). Saat für n2_gascoigne, ohne die Optionen zu verraten: der Schwenkbalken am Pfahl (Ernte: „Die lange Axt vorn abfangen“, „geübt an einem Pfahl im Hof, der für dich ausholen musste“) und der Griff um die Handgelenke, den man zum Daumen hin bricht (Ernte: „Seine Klauen nach beiden Seiten aufbrechen“). [ERWEITERT] Hof, Pfahl mit Schwenkbalken und Sandsack (nach Art einer Quintane), die Kerben früherer Jäger, die Rinnen seiner Räder in den Dielen. -->
+Gehrman rollt am Altar vorbei zur Hintertür, ohne den Kopf nach dem Blatt zu wenden, und stößt sie mit der Fußstütze seines Stuhls auf. „Komm“, sagt er. „Bevor du wieder hinausgehst, will ich sehen, wie du stehst.“
+Hinter dem Haus liegt ein Hof aus gestampfter Erde, nicht größer als eine Bauernstube; die weißen Blumen wachsen bis an seinen Rand und keinen Halm weiter. In der Mitte steht ein Pfahl, mannshoch und mit Leder umwickelt, und das Leder ist zerhauen, Kerbe über Kerbe, die alten schwarz, die jüngsten noch hell. Oben dreht sich auf einem Eisenzapfen ein Querbalken, und an seinem einen Ende hängt ein Sack voll Sand.
+Gehrman hakt eine Stange hinter den Sack und zieht. Der Balken schwingt herum, schwerer, als er aussieht, und dein Körper tut, was jeder Körper tut: Er weicht zurück. Am Ende seines Weges holt der Sack dich ein und nimmt dir die Luft. „Zurück entkommst du ihm nicht“, sagt Gehrman, ohne die Stimme zu heben. „Er ist länger als dein Schritt. Stell dich davor. Die Säge quer, beide Hände, die Füße in den Boden.“
+Er zieht wieder und wieder. Einmal schlägt dir der Balken die eigene Klinge gegen die Brust, einmal reißt er dich von den Füßen, und du liegst in der gestampften Erde und siehst über dir den leeren Himmel. Dann hält es. Der Stoß fährt dir durch die Unterarme bis in die Zähne, der Sand im Sack knirscht, und der Balken steht still, quer vor dir, auf deiner Klinge.
 ⟨wenn not parade⟩
-„Wenn sie ausholt“, sagt er. „Wenn ihr ganzes Gewicht im Schlag liegt. Dann schießt du, und sie wankt.“
+Danach zieht er den Balken weit zurück und hält ihn dort, zum Schlag gespannt. „Wenn sie ausholen“, sagt er, „und ihr ganzes Gewicht im Schlag liegt, dann schießt du. Dann wanken sie, so wie der hier.“ Er lässt los, und dein Schuss trifft den Sack mitten im Schwung.
 ⟨sonst⟩
-Er sieht dir eine Weile zu und sagt nichts. Dann nickt er. „Du hast es schon von einem, der es kann.“
-Danach sind deine Schultern müde und deine Hände ruhig.
+Danach zieht er den Balken weit zurück und hält ihn dort, zum Schlag gespannt, und kaum lässt er los, hast du die Feuerwaffe schon in der Hand und den Schuss im Sack, genau in dem Augenblick, in dem er ausholt. Sand rinnt aus dem Loch. Gehrman sieht eine Weile auf den Sand und sagt nichts; dann nickt er. „Das hat dir schon einer beigebracht. Einer, der es kann.“
+Zuletzt winkt er dich zu sich, bis du vor seinem Stuhl stehst, und nimmt deine Handgelenke. Die Haut seiner Hände ist dünn über den Knöcheln, fleckig vom Alter, und die Finger schließen sich um deine Gelenke wie geschmiedete Ringe. Du ziehst, und er hält. Du ziehst stärker, und er hält, ohne dass sich in seinem Gesicht etwas regt. „Nicht ziehen“, sagt er. „Wer packt, ist zum Daumen hin offen. Nach außen. Beide zugleich.“ Du drehst die Unterarme gegen seine Daumen, nach außen, mit einem Ruck, und seine Finger springen auf, und deine Hände sind frei.
+Er reibt sich die Daumen. „Das behältst du“, sagt er. „Die Hände behalten so etwas länger als der Kopf.“
+Danach sind deine Schultern müde und deine Hände ruhig. Drinnen rollt Gehrman an seinen Platz vor dem Kamin zurück, und die Räder finden in den Dielen zwei helle Rinnen, die sie in langen Jahren selbst gefahren haben.
 <!-- Logik: geuebt = true · parade = true · parade_quelle = "gehrman" -->
 
 :: ENDE [D] {"position":"2450,27760","size":"100,100"}
