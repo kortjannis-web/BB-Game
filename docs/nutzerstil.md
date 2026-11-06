@@ -72,3 +72,13 @@ Quelle: Vorschlag v1 bis v5b, Screenshots, **ein Strang, keine Begründungen des
 
 **Spannungen mit den Skills (der Nutzer gewinnt, aber beobachten):** „rustikales, abgenutztes Schild“ und „gotischen Baustil“ sind Wertwort und Oberbegriff, wo die Skills ein Detail verlangen. Die Regeln 5 bis 7 stützen sich darauf, dass der Nutzer Orientierung höher wertet als Atmosphäre aus Andeutung. **Offen:** Mit „sie hing schon dort …“ fiel die Saat für das Motiv der stehenden Sonne; ist das gewollt (zu rätselhaft am Anfang) oder soll das Motiv später anders gesät werden? Der Nutzer hat nicht begründet; Claude fragt nicht nach, sondern achtet auf weitere Änderungen.
 - Tippfehler im eingegebenen Text („Baustiel“, „Yahrnam“, „dirchdrückt“, „auf einem Schlaglöcher“) werden still korrigiert; der Wortlaut sonst wörtlich.
+
+## Zweite Einreichung (Werkstatt, 2026-11-06, v1 bis v13, Prolog: Herkunft und Grund)
+Belege zu den neun Hypothesen und neue Muster, wieder ohne Begründungen des Nutzers (Hypothesen):
+- **Vergleiche streichen** (Regel 8 bestätigt): „wie ein Pfandleiher einen Ring wiegt“ fällt, es bleibt „von den Stiefeln bis zum Hut“ (v1). Auch „Stirn“ → „Hut“: das Dingliche statt des Körperteils.
+- **Redewendungen und Weltbilder statt Eigenbilder** (Regel 5 bestätigt): „Leichen im Keller“ statt „leere Keller“, „Blut seines Trägers“ statt „Blut dahinter“ (v6). Der Adel hat nicht nur Armut, er hat Schuld.
+- **Direkte Rede statt berichteter** (Regel 9 bestätigt, deckt sich mit der Abfrage 2026-11-04): „Und warum“, fragt er weiter, „…?“ statt „will er wissen“ (v7).
+- **Antworten als vollständige Ich-Aussagen mit Lebensumständen** statt Schlagwörtern, auch länger als sieben Wörter: „Ich komme vom Krankenbett, in dem ich seit Wochen liege“, „Ich bin Lehrer einer Universität“, „Ich bin der Letzte aus einem zerstörten Dorf“ (v2 bis v5, v8, v12). Er hält die Regel „2 bis 7 Wörter“ nicht ein, wenn der Satz mehr Lage trägt.
+- **Mehr Abstufung im Grund, weniger Kategorien:** Heilung als „etwas krank“ und als „schwer krank, letzte Hoffnung“ (v8, v12); „Suche“ und „Schuld“ gestrichen (v10, v11). Vermutung: Er will Gründe, die ein Mensch aus seiner Lage ehrlich oder nicht sagt, keine Romanmotive mit eigener Handlung. Offen, ob ihm die Fäden (Weihrauch, Schuld) zu groß oder zu fremd waren.
+- **Ein Weg zum Schweigen** (v13): Der Spieler darf Auskunft verweigern. Gilt vermutlich auch an anderen Stellen, wo eine Figur fragt.
+- **„Unaufrichtig“** (v9): Er will offenbar, dass der Spieler auch lügen kann. **Offen:** Meint „sagst du unaufrichtig“ eine Lüge? Wenn ja, Vorschlag: Der Vertrag in der Klinik verlangt, den Grund „wahrheitsgemäß“ anzugeben; eine Lüge hätte dort eine Folge.

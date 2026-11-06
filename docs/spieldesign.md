@@ -153,7 +153,7 @@ Du willst, dass Dinge erklärt werden. Bloodborne lebt davon, dass vieles offen 
 
 1. **Name** (frei eingegeben).
 2. **Herkunft** (5 bis 6, eigene Fassung statt der Originalbezeichnungen, etwa: verarmter Adel, Soldat, Gelehrter, einziger Überlebender, Kranker, Gesuchter). **Entscheidung des Nutzers (2026-11-06): Die Herkunft wirkt nur über Dialog und Text** (Figuren reagieren, Sätze färben sich), **keine eigenen Optionen oder Weichen.** Sie färbt, wie Figuren dich sehen.
-3. **Grund für Yharnam** (Heilung für dich, Heilung für jemanden, eine Suche, eine Schuld). Das ist dein persönlicher Faden, der in einem späteren Kapitel eingelöst wird.
+3. **Grund für Yharnam** (Stand 2026-11-06, vom Nutzer umgebaut: Heilung für dich in zwei Stärken, Heilung für jemanden, Schweigen; „Suche“ und „Schuld“ gestrichen). Das ist dein persönlicher Faden, der in einem späteren Kapitel eingelöst wird.
 4. **Wandelwaffe und Feuerwaffe** wählst du nach dem ersten Tod im Traum, wie im Original.
 
 ---
