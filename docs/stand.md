@@ -47,7 +47,7 @@ Alle Szenen sind überarbeitet und geschliffen (Stufe 2: von Claude gebaut und z
 ## Offen beim Nutzer
 - **Hosting (2026-11-06):** Umstellung auf GitHub Pages ist vorbereitet. Nutzer muss: Repo öffentlich machen (https://github.com/kortjannis-web/BB-Game/settings, unten Danger Zone), dann `/settings/pages` Source „GitHub Actions“, dann Workflow „Spiel veröffentlichen“ starten. `quellen/lore-komplett.md` ist aus Repo und Geschichte entfernt (Kopie hat der Nutzer). Netlify erst trennen, wenn die Werkstatt-Vorschläge gesichert sind.
 - **Prolog (2026-11-06):** Änderungen des Nutzers (Screenshots) als Vorschlag v1 bis v5b übernommen, einzelne Commits, Tippfehler korrigiert; Muster in `docs/nutzerstil.md`. Herkunftsfrage neu gebaut (Fahrer blickt sich zum ersten Mal um, „Aus was für Verhältnissen …“), Wortlaut der Antworten ist **Entwurf**. Weitere Änderungen des Nutzers ab dort folgen noch.
-- **Herkunft Einfluss:** heute nur sechs Nebenzeilen. Vorschlag: je Herkunft eine eigene Möglichkeit pro Kapitel (Gelehrter deutet den Anschlag, Soldat liest ein Anzeichen früher, Gesuchter schleicht, Überlebender spart Einsicht). Nutzer hat noch nicht geantwortet.
+- **Herkunft Einfluss:** Entscheidung des Nutzers 2026-11-06: nur Dialog und Text, keine eigenen Optionen. Nebenzeilen dürfen in weiteren Szenen dazukommen (Figuren reagieren auf die Herkunft), aber ohne Weichen.
 - Abnahme von Kapitel 1 (siehe oben).
 - Entscheidung: Soll ein sofortiger Gegenangriff nach einem Treffer Blut zurückbringen (Kanon: „Rally“)?
 - Lore: Der Nutzer hat geliefert, was er hat. Restlücken in `lore/offen.md` (Bewegungen der Bosse für Anzeichen, einige Werkzeuge, welches Fenster welche Bürgerstimme spricht).
