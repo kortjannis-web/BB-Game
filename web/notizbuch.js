@@ -1,6 +1,6 @@
 // Notizbuch des Jägers: Einträge zu den Lore-Tags der Geschichte (# lore: id).
 // Geschrieben in der Stimme des Jägers: Ich, rückblickend im Präteritum, Stimme A (docs/stimme.md); Kanon sinngemäß, Offenes bleibt offen.
-// Lektorat 2026-11-05: keine Spielsprache (Echos, kaufen), keine Formeln aus dem Erzähltext (süß und schwer, nasses Fell), keine Sätze aus
+// Lektorat 2026-11-05: keine Spielsprache (Echos, kaufen; Blutechos, Stärkung und Handel sind seit 2026-11-06 ganz entfallen), keine Formeln aus dem Erzähltext (süß und schwer, nasses Fell), keine Sätze aus
 // Lore-Dateien. Die Fragen der Nacht bleiben im Präsens: Sie sind noch offen.
 // Jeder Eintrag hat Stufen: [Bedingung, Text]. Gezeigt werden alle Stufen, deren Bedingung im Spielstand gilt,
 // damit das Notizbuch nur weiß, was der Spieler auf seinem Weg erlebt hat (CLAUDE.md: nichts vorwegnehmen).
@@ -42,12 +42,10 @@ window.NOTIZBUCH = {
   boten: { titel: "Die Boten", stufen: [
     ["", "Kleine graue Wesen, nicht größer als ein Kind, mit Gesichtern aus nassem Ton. Zuerst sah ich sie im Fieber der Klinik, wie sie mir über die Riemen auf die Brust krochen. Im Garten kamen sie aus der Erde und reichten mir Waffen."],
     ["k1_laterne_zentral", "Wo ich eine Laterne entzündete, brachen sie aus dem Boden und drängten sich an das Eisen, wo es warm war."],
-    ["boten_laden", "Im Garten hockten sie in einem steinernen Becken voll trüben Wassers und gaben mir Dinge heraus, gegen das, was aus den Bestien in mich aufgestiegen war. Woher sie die Dinge hatten, fragte ich nicht."],
-    ["brief_gezeigt", "Als sie das silberne Abzeichen von der Brücke sahen, tippte einer mit nassem Finger auf das Schwert darauf, tauchte unter und kam mit einem Brief wieder hoch. Das Papier war trocken."],
     ["puppe_gespraech", "Die Puppe nannte sie die Kleinen. Sie gruben nach Leuten wie mir, sagte sie, und mich hätten sie ausgegraben."],
   ] },
   laternen: { titel: "Die Laternen", stufen: [
-    ["", "Von jeder Laterne, die ich entzündete, führte ein Weg in den Garten und von dort zurück, als wäre an ihr ein Faden festgeknotet. Verloren gehen konnte ich so nicht mehr. Davonlaufen auch nicht."],
+    ["", "Manche Laternen brannten mit einem kalten, weißen Licht, das mich an den Himmel über dem Garten erinnerte. An einer von ihnen sammelte ich mich, und der Garten nahm mich auf."],
   ] },
   jagdnacht: { titel: "Die Jagdnacht", stufen: [
     ["", "In manchen Nächten jagte Yharnam. Dann schoben die Bürger die Riegel vor, hängten Räucherwerk in die Fenster, und hinaus gingen die Jäger."],
@@ -97,8 +95,7 @@ window.NOTIZBUCH = {
   jaeger_der_jaeger: { titel: "Die Jägerin der Jäger", stufen: [
     ["", "Eine Frau mit Federmantel und Schnabelmaske. An einer Schnur um ihren Hals klapperten Abzeichen, Messing, Silber, Eisen, jedes abgegriffen."],
     ["eileen_genannt", "Sie hieß Eileen. Die Abzeichen an ihrer Schnur hatten Jägern gehört."],
-    ["k1_b_eileen", "Sie warf mir zwei Marken aus Messing zu, mit einem Zeichen, das auf dem Kopf stand, wie man sie auch drehte. Wer eine zerdrücke, erwache im Garten, ohne vorher zu sterben; was er an Blut bei sich trage, bleibe zurück."],
-    ["marke_benutzt", "Ich zerdrückte eine. Ich erwachte im Garten, und was die Toten der Nacht in mich gegeben hatten, war fort. Kein Fleck, nirgends."],
+    ["k1_b_eileen", "Sie sah mir lange auf die Armbeuge, dorthin, wo der Einstich pochte, und sagte nichts. Dass ich niemandem vom Garten erzählt hatte, schien ihr gleich."],
     ["eileen_name", "Sie gab mir ein Stück Dörrfleisch und fragte nach meinem Namen."],
   ] },
   parade: { titel: "Die Parade", stufen: [
@@ -191,7 +188,6 @@ window.PERSONEN = [
     ["", "Ein alter Mann im Rollstuhl am Weg im Garten. Sterben könne ich dort nicht, sagte er, nur aufwachen."],
   ] },
   { name: "Die Puppe", wenn: "puppe_wach", stufen: [
-    ["staerke>=1", "Sie legte mir die Hand auf die Brust, und was aus mir in ihre Finger zog, kam schwerer zurück."],
     ["puppe_daheim || k1_d_traum", "Sie sprach sanft und atmete nicht. Den Traum nannte sie daheim."],
     ["puppe_gespraech.frage", "Sie sprach sanft und atmete nicht. Sie wollte wissen, wie es draußen riecht."],
     ["", "Sie sprach sanft, und zwischen den Sätzen atmete sie nicht."],

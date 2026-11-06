@@ -144,3 +144,7 @@ Neue Leitlinie: **Das Spiel soll sich wie eine Geschichte anfühlen, voll wie ei
 - Fragmente, die kein Tod abgerufen hat, kommen als Gedanken beim Einschlafen in der nächsten festen Traumszene. So geht keine Lore verloren (Prüfer: Lore auf jeder Route).
 - Fragmente sind Deutungen des Jägers, nie Tatsachen des Erzählers.
 - Texte erst mit dem Skill `stil-1800`; jetzt entsteht nur das Gerüst mit Platzhaltern.
+
+## 10 Umsetzung (2026-11-06)
+
+Gebaut nach Abschnitt 8 und 9 (Details und Abweichungen: `docs/kapitel1-struktur.md`). Mit der Entscheidung des Nutzers entfielen Blutechos, Stärkung, Bad der Boten, Jägermarken und Laternen als Speicherpunkte; die Laterne ist nur noch eine Schwelle zu den festen Traumszenen. Der Tod bringt ein Nachbild mit Monolog und Story-Fragment und führt an den Anfang des Kampfes zurück. Prüfer erzwingt: alle festen Stationen in jedem Lauf, Lore auf jeder der neun Routen, Echo-Regel.

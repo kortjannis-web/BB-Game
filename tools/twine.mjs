@@ -12,12 +12,13 @@ const dagre = createRequire(import.meta.url)("dagre");
 const START = "k1_prolog";
 const TEILE = {
   "kapitel1/a_ankunft.ink": ["A", "Ankunft"],
-  "kapitel1/b_yharnam.ink": ["B", "Zentral-Yharnam"],
+  "kapitel1/b_yharnam.ink": ["B", "Akt II: Zentral-Yharnam"],
   "kapitel1/n1_kleriker.ink": ["N1", "Nadelöhr 1: Kleriker-Bestie"],
-  "kapitel1/c_unterstadt.ink": ["C", "Unterstadt"],
+  "kapitel1/c_unterstadt.ink": ["C", "Akt III: Unterstadt"],
   "kapitel1/n2_gascoigne.ink": ["N2", "Nadelöhr 2: Gascoigne"],
-  "kapitel1/d_nachspiel.ink": ["D", "Nachspiel"],
+  "kapitel1/d_nachspiel.ink": ["D", "Akt IV: Heimweg"],
   "traum.ink": ["T", "Jägertraum"],
+  "nachbild.ink": ["T", "Jägertraum"],
   "system.ink": ["S", "Bausteine"],
 };
 // Bausteine, die von überall angesprungen werden; in der Story-Ansicht ausgeblendet.
@@ -26,7 +27,7 @@ const BAUSTEINE = new Set(["tod", "betreten", "ampulle_ruhig", "ampulle_gefahr"]
 // ---------------------------------------------------------------- Zerlegen
 const passages = new Map();
 const order = [];
-const ids = new Set(["END", "LATERNE"]);
+const ids = new Set(["END", "KAMPFANFANG"]);
 
 function stripTags(s) {
   // Alles ab dem ersten "#" (am Zeilenanfang oder nach Leerraum) sind Tags, durch "#" getrennt.
@@ -38,7 +39,7 @@ function stripTags(s) {
 
 /** Diverts einer Zeile: Ziel (oder null), Tunnelaufrufe, bedingte Ziele, Rücksprung. */
 function diverts(line) {
-  // Zuweisungen (~ laterne = -> knoten) speichern nur ein Sprungziel, sie springen nicht
+  // Zuweisungen (~ kampfanfang = -> knoten) speichern nur ein Sprungziel, sie springen nicht
   if (line.trim().startsWith("~")) return { ziel: null, tunnel: [], bedingt: [], rueck: false };
   const bedingt = [];
   const ohneBedingung = line.replace(/\{[^{}]*\}/g, (block) => {
@@ -230,7 +231,7 @@ for (const [file, src] of Object.entries(inkFiles())) {
 function aufloesen({ name, ctx, direkt }) {
   if (direkt) return name;
   if (name === "END" || name === "DONE") return "END";
-  if (name === "laterne") return "LATERNE";
+  if (name === "kampfanfang") return "KAMPFANFANG";
   const kandidaten = [];
   if (name.includes(".")) kandidaten.push(name);
   if (ctx.stitch) kandidaten.push(`${ctx.knot}.${ctx.stitch}.${name}`);
@@ -271,8 +272,10 @@ if (offen.length) {
 }
 
 passages.set("END", { id: "END", titel: "ENDE DES KAPITELS", gruppe: "D", knot: "END", art: "ende", zeilen: [], logik: [], tags: [], herkunft: [], choices: [], weiter: [] });
-passages.set("LATERNE", { id: "LATERNE", titel: "Zur letzten Laterne", gruppe: "T", knot: "LATERNE", art: "virtuell", zeilen: ["Rückkehr zur zuletzt entzündeten Laterne (Klinik, Zentral-Yharnam, Brücke oder Grab)."], logik: [], tags: [], herkunft: [], choices: [], weiter: [] });
-kanten.push({ von: "LATERNE", nach: "k1_klinik_kampf", art: "bedingt" }, { von: "LATERNE", nach: "k1_hub_b", art: "bedingt" }, { von: "LATERNE", nach: "k1_hub_c", art: "bedingt" }, { von: "LATERNE", nach: "k1_d_rueckweg", art: "bedingt" });
+passages.set("KAMPFANFANG", { id: "KAMPFANFANG", titel: "Zurück an den Anfang des Kampfes", gruppe: "T", knot: "KAMPFANFANG", art: "virtuell", zeilen: ["Nach dem Nachbild (Tod, Monolog, Fragment) geht es an den Anfang des Kampfes oder Moments zurück, in dem man starb. Es gibt keine Laterne als Speicherpunkt."], logik: [], tags: [], herkunft: [], choices: [], weiter: [] });
+for (const ziel of ["k1_klinik_kampf", "k1_b_haus", "k1_b_scheiterhaufen.kampf", "k1_b_daecher", "k1_c_kanal.kampf", "k1_n1_kleriker", "k1_n2_gascoigne"]) {
+  if (ids.has(ziel)) kanten.push({ von: "KAMPFANFANG", nach: ziel, art: "bedingt" });
+}
 
 // Doppelte Kanten zusammenfassen (gleiches Paar, gleiche Art)
 const kantenEindeutig = [...new Map(kanten.map((k) => [`${k.von}|${k.nach}|${k.art}`, k])).values()];
@@ -288,7 +291,7 @@ function layout(mitBausteinen) {
   kantenEindeutig.forEach((k, i) => {
     if (!g.hasNode(k.von) || !g.hasNode(k.nach)) return;
     if (!mitBausteinen && k.art === "tod") return;
-    // Rücksprünge (zum Hub, zur Laterne) sollen das Layout nicht nach oben ziehen
+    // Rücksprünge (zurück an den Anfang des Kampfes) sollen das Layout nicht nach oben ziehen
     const gewicht = k.art === "wahl" || k.art === "weiter" ? 2 : 1;
     g.setEdge(k.von, k.nach, { weight: gewicht, minlen: 1 }, String(i));
   });

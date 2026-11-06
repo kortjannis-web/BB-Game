@@ -152,7 +152,7 @@ Nur vor einem Grabstein am Fuß des Hügels, einem ohne Namen, sind die Blumen n
 // Handgearbeitet 2026-11-05 (Faktencheck): Anzeichen ruhig und genau, Folge kurz und hart; Optionen fließen in den Satz und nennen die Richtung.
 // Feinschliff 2026-11-05 nach docs/lektorat-kapitel1.md (k1_klinik_kampf 1 bis 4, L1, L3): keine Warte-Formel, kein Feder-Bild (gehört der Kleriker-Bestie), Heulen endet im Husten, Lernsatz als Erinnerung der Schulter.
 // [KANON lore:orte/iosefkas-klinik] Die Bestie im Krankensaal frisst an einer Leiche (RK1 §1). Erster Kampf, lehrt das Lesen der Anzeichen. Kronleuchter und Flaschenregale aus dem Artbook (LK §25.3).
-~ laterne = -> k1_klinik_kampf
+~ kampfanfang = -> k1_klinik_kampf
 -> betreten("klinik") ->
 { k1_klinik_kampf == 1:
     Die Klinik hat dich wieder, und unter deinen Stiefeln liegt genau die Diele, auf der du gestorben bist. Das Holz ist noch dunkel und klebt. Deine Hand liegt um den Griff des Sägespalters, und der Daumen findet von selbst die fremde Kuhle im Leder. # stimmung: kampf
@@ -200,8 +200,7 @@ Sie taumelt. Blut läuft ihr aus der Seite, und der Kopf sinkt auf deine Höhe h
     { leben <= 0: -> tod }
     -> sieg
 - (sieg)
-~ echos = echos + 2
-Die Bestie liegt auf der Seite, und ihr Atem kommt nicht wieder. Aus ihrem Körper steigt ein Schimmer, dünner als Rauch, und fließt dir über die Hände in die Ärmel, und für einen Augenblick bist du warm bis in die Fingerspitzen und satt wie nach einer Mahlzeit, die du nicht gegessen hast. # notiz: blutechos
+Die Bestie liegt auf der Seite, und ihr Atem kommt nicht wieder.
 Lange stehst du da und siehst sie an. Im Fell an ihrer Brust glänzt der Hornknopf, und an ihm hängen noch zwei Fäden.
 Irgendjemand hat ihn einmal angenäht.
 Am Ende des Ganges ruft hinter einer Tür eine Frau, gedämpft durch das Holz, ob da draußen noch jemand atme.
@@ -235,12 +234,11 @@ Schritte entfernen sich, und gedämpft durch eine zweite Tür stöhnt jemand, de
 -> k1_laterne_zentral
 
 === k1_laterne_zentral ===
-// TITEL: Laterne Zentral-Yharnam
+// TITEL: Laterne vor der Klinik (Ende von Akt I)
 // Handgearbeitet 2026-11-05 (Faktencheck): Gasse in A, Laterne und Boten in B. Sonne nur als Wahrnehmung (G5).
 // Feinschliff 2026-11-05 nach docs/lektorat-kapitel1.md (k1_laterne_zentral 1 bis 3, L6): Sonne nur als Bild, ohne das Warten; die Regel der Laterne als Körpergedächtnis; der Garten riecht nach Leinen wie im ersten Traum.
 // [KANON lore:orte/zentral-yharnam] Erste Laterne gleich vor der Klinik, neben Gilberts Fenster (Gilbert hier nur als Husten hinter dem Gitter; Begegnung in b_yharnam).
 Vor der Klinik schlägt dir kalte Luft entgegen, die nach Rauch riecht, nach nassem Stein und nach einem Brand, in dem kein Holz gebrannt hat. Die Gasse fällt steil ab und ist leer. Zwischen zwei Giebeln hängt die Sonne, tief und rot, und ihr Licht liegt nur noch auf den obersten Fenstern.
 Neben der Tür steht auf einem eisernen Pfahl eine Laterne, erloschen, das Glas von innen verrußt. Als du sie berührst, flammt sie auf, ohne dass du Feuer gemacht hättest, und um ihren Fuß hebt sich die Erde: Die Boten kriechen heraus, drei, vier, und drängen sich an das Eisen, wo es warm ist. Über dir, hinter einem vergitterten Fenster, bricht ein Husten ab, mitten im Anfall. # bild: laterne # lore: laternen
-Im Flackern hinter dem Glas liegt für einen Lidschlag der Garten, weiß und reglos, und mitten im Rauch der Gasse riecht es nach Leinen von der Bleiche. Dorthin führt von hier ein Weg zurück; das weiß dein Körper, bevor du es denkst. Deine Hand bleibt am warmen Eisen, so wie sie als Kind am Treppengeländer blieb, wenn oben das Licht schon gelöscht war und die Füße die Stufen trotzdem fanden. Ein zweiter Gedanke folgt dem ersten so leise, dass du nicht weißt, ob er deiner ist: Wer nicht verloren gehen kann, kann auch nicht davonlaufen.
-~ laterne = -> k1_hub_b
--> k1_hub_b
+Im Flackern hinter dem Glas liegt für einen Lidschlag der Garten, weiß und reglos, und mitten im Rauch der Gasse riecht es nach Leinen von der Bleiche. Dann ist die Flamme wieder nur eine Flamme. Deine Hand bleibt am warmen Eisen, so wie sie als Kind am Treppengeländer blieb, wenn oben das Licht schon gelöscht war und die Füße die Stufen trotzdem fanden. Ein Gedanke folgt dem ersten so leise, dass du nicht weißt, ob er deiner ist: Es gibt Laternen in dieser Stadt, an denen du dich sammeln kannst. Diese gehört nicht dazu. Noch nicht.
+-> k1_b_gilbert

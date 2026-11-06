@@ -1,4 +1,4 @@
-# Übergabe: Umbau von Kapitel 1 zum Entscheidungsbuch (für einen neuen Chat)
+# Übergabe: Umbau von Kapitel 1 zum Entscheidungsbuch (ERLEDIGT am 2026-11-06, siehe `docs/stand.md` und `docs/kapitel1-struktur.md`)
 
 Stand 2026-11-06. Dieser Auftrag wird in einem **eigenen Chat** erledigt. Der alte Chat war sehr lang. Was ein neuer Chat braucht, steht im Repository, nicht im Gedächtnis eines Chats.
 

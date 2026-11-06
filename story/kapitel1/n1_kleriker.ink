@@ -1,6 +1,6 @@
 // KAPITEL 1, NADELÖHR 1: DIE KLERIKER-BESTIE AUF DER GROSSEN BRÜCKE.
 // Jeder Weg in die Unterstadt führt hier vorbei (bis die Leiter in der Kanalisation offen ist).
-// Wege: allein kämpfen, mit Gascoigne kämpfen, ablenken, fliehen, Jägermarke. Nur wer sie besiegt, bekommt die Laterne an der Brücke
+// Wege: allein kämpfen, mit Gascoigne kämpfen, ablenken, fliehen. Alle Wege führen danach durch die Kanalisation-Mündung in die Unterstadt (Umbau 2026-11-06: keine Laterne an der Brücke)
 // und das Blutgedächtnis, das bei Gascoigne eine bessere Entscheidung möglich macht.
 // Handgearbeitet 2026-11-05 nach docs/stimme.md und dem Faktencheck (docs/faktencheck-kapitel1.md, Abschnitt n1_kleriker.ink):
 // Ortsbilder in A, Geschehen in B, der Choral in C. Optionen fließen in den Satz (#fliesst); Kampfoptionen nennen Richtung und Handlung.
@@ -13,16 +13,16 @@
 // [KANON lore:gegenstaende/heilende-kirche] Beute: das Abzeichen der Schwertjäger (Kirchenjäger); es schaltet bei den Boten Waren frei (RK1 §8).
 // [KANON lore:welt/notizen Nr. 2] Die Kirche hat beim Beginn der Jagd die Große Brücke gesperrt. [ERWEITERT, bewusst] Bei uns führen von der
 //   Brücke Treppen hinab in die Unterstadt; am Brückenende ein von drüben verriegeltes Tor.
-// [KANON lore:gegenstaende/jaeger-und-werkstatt] Die Jägermarke bringt in den Traum und kostet alle Blutechos, ohne Fleck (G3).
 // [ERWEITERT] Ablenken, Fliehen, das Blutgedächtnis, das Lied auf der Brücke, der Wurf mit der Kutsche, der Ansturm, die falsche Ruhe.
 // [ERWEITERT] Die vierte Zeile: Im Gedächtnis kippt seine Stimme in der vierten Zeile; der Choral nach dem Sieg endet nach der dritten.
 //   Der Leser verbindet es selbst; am Grab (n2_gascoigne) reißt die Zeile an derselben Stelle.
 
-VAR abzeichen_schwert = false   // Abzeichen der Schwertjäger aus der Beute der Bestie; schaltet bei den Boten Waren frei (traum.ink)
+VAR abzeichen_schwert = false   // Abzeichen der Schwertjäger aus der Beute der Bestie
 
 === k1_n1_kleriker ===
 // TITEL: NADELÖHR 1: Kleriker-Bestie
 -> betreten("bruecke") ->
+~ kampfanfang = -> k1_n1_kleriker
 { kleriker == "besiegt": -> uebergang }
 { k1_n1_kleriker == 1:
     Die Große Brücke trägt den Weg aus der unteren Stadt hinauf zur Kathedrale, auf Bögen aus grauem Stein, die so tief in den Nebel hinabreichen, dass keiner, den man fragt, ihren Fuß je gesehen haben will. Breit genug ist sie für vier Kutschen nebeneinander, und als die Jagd ausgerufen wurde, wollten alle zugleich hinüber; drüben, sagt man in den Gassen, habe ihnen niemand aufgemacht. Die Kutschen stehen noch da, umgestürzt und ineinander verkeilt, die Pferde im Geschirr, aufgedunsen und starr, und zwischen den Rädern liegen die Menschen, die hinüberwollten. Fortgeräumt hat man sie nicht. Am anderen Ende ragt ein Turm über das schmiedeeiserne Geländer, und hinter ihm steht schwarz die Kathedrale. Die Sonne hängt am Turm, so tief wie vor der Klinik, keinen Fingerbreit tiefer. # bild: bruecke # stimmung: grauen
@@ -35,6 +35,7 @@ Selbst gekauert überragt es die umgestürzten Kutschen um zwei Mannslängen, un
 In den Hinterläufen stecken Nägel, rostige, Dutzende, und um jeden Nagel ist das Fell weißlich aufgeworfen und weich, Schimmel auf altem Brot. Um den Hals, ins Fell eingewachsen, hängt ein Streifen Stoff, der einmal weiß war. Kragen oder Verband, du kannst es von hier aus nicht sagen.
 { k1_n1_kleriker == 1:
     ~ einsicht = einsicht + 1
+    ~ fr_frei_machen(fr_ich)
     Dein Blick bleibt an dem langen Arm hängen und will nicht los. Ohne es zu wollen, zählst du die Gelenke: Schulter, Ellbogen, noch ein Ellbogen, noch einer. Beim zweiten Zählen kommst du auf eine andere Zahl. Hinter deiner Stirn tut sich ein Spalt auf, so schmal wie der unter einer Tür, und durch ihn siehst du, dass der Arm noch wächst, jetzt, während du hinsiehst. # notiz: erste_einsicht # lore: einsicht # stimmung: grauen
 }
 { schreie >= 1: Es reißt das Maul auf und kreischt, hoch und lang, und deine Schultern kennen den Ton von den Dächern her, bevor du ihn erkennst. Jetzt hat er einen Körper. }
@@ -45,7 +46,6 @@ In den Hinterläufen stecken Nägel, rostige, Dutzende, und um jeden Nagel ist d
     -> kampf
 + {kiesel > 0 or molotow > 0} [Sie mit einem Wurf ablenken und vorbeischleichen #fliesst] -> ablenken
 + [Über das Geländer springen und fliehen #fliesst] -> fliehen
-+ {jaegermarken > 0} [Die Jägermarke in der Faust zerdrücken #fliesst] -> marke
 
 = rufen
 „Gascoigne!“ Der Name kratzt dir im Hals und läuft über die Brücke, zwischen den Kutschen hindurch, bis hinüber zum Turm.
@@ -150,8 +150,8 @@ Links, rechts, links: Der verzweigte Arm schlägt um sich, und jeder Schlag trä
     { leben <= 0: -> tod }
     Als du wieder stehst, ist sie dir nachgekommen, bis ans Geländer.
     -> t6
-+ {staerke >= 1} [Den Knochenarm von vorn umklammern #fliesst]
-    Einen Arm um den Knochen, die Brust dagegen, und du hältst. In deinen Schultern sitzt die Wärme, die dir die Puppe gegeben hat, und sie hält mit. Die Bestie zerrt, einmal, zweimal. Lange genug: Mit der freien Hand treibst du ihr die Säge in die Achsel, bis zum Anschlag. Sie reißt sich los und taumelt rückwärts gegen das Geländer, und der Knochenarm hängt schlaff. # notiz: staerke_genutzt
++ {jagdnotizen} [Den Knochenarm von vorn umklammern #fliesst]
+    Einen Arm um den Knochen, die Brust dagegen, und du hältst. Das Heft des Toten hat dir gezeigt, wo dieser Arm am Ende zu fassen ist, und deine Hände wissen es vor dir. Die Bestie zerrt, einmal, zweimal. Lange genug: Mit der freien Hand treibst du ihr die Säge in die Achsel, bis zum Anschlag. Sie reißt sich los und taumelt rückwärts gegen das Geländer, und der Knochenarm hängt schlaff. # notiz: jagdnotizen_genutzt
     -> t6
 + [Zwischen den Hieben nach vorn, an ihre Brust #fliesst]
     In den einen Atemzug hinein, an ihre Brust, so nah, dass du ihr Herz durch das Fell schlagen spürst, schwer und mit zu langen Pausen. Hinter deinem Rücken schlägt der Arm ins Leere. Die Säge geht hinein, wieder und wieder, bis sie rückwärts gegen das Geländer taumelt.
@@ -159,9 +159,6 @@ Links, rechts, links: Der verzweigte Arm schlägt um sich, und jeder Schlag trä
 + {ampulle > 0} [Nach hinten weichen, die Ampulle setzen #fliesst]
     Mitten im Sturm zurück, die Hand schon an der Tasche.
     -> ampulle_gefahr(2) -> t5
-+ {jaegermarken > 0} [Hinter die Kutsche, die Jägermarke zerdrücken #fliesst]
-    Hinter der nächsten Kutsche findet deine Hand die Tasche und darin das Messing.
-    -> marke
 - (t6)
 // [ERWEITERT] Der Ansturm mit dem Geweih.
 Am Geländer senkt sie den Kopf, bis das verknotete Geweih auf der Höhe deiner Brust steht. Die Hinterläufe scharren über das Pflaster, einmal, zweimal, und mit jedem Scharren rückt sie ein Stück zur Seite, bis sie dich genau vor den Hörnern hat. Ihre Augen sind halb geschlossen, als ziele sie mit etwas anderem als mit ihnen. Machst du einen halben Schritt nach links, scharrt sie und rückt nach. # anzeichen: ansturm
@@ -217,12 +214,18 @@ Die Zähne deiner Klinge haben sich in ihrem Fell festgefressen. Um sie herauszu
 = beute
 ~ kleriker = "besiegt"
 ~ einsicht = einsicht + 1
-~ echos = echos + 6
 ~ abzeichen_schwert = true
-Aus ihrem Leib steigt der rote Schimmer, dicht wie Rauch aus nassem Holz, und als er dir in die Brust fließt, stützt du dich auf die Säge, bis die Knie wieder tragen.
+Aus ihrem Leib steigt ein roter Dunst, dicht wie Rauch aus nassem Holz, und als du ihn einatmest, stützt du dich auf die Säge, bis die Knie wieder tragen.
 Unter dem Fell, über der Brust, wo es dünn wird, sitzen Narben, klein und rund und in ordentlichen Reihen, Dutzende, Hunderte, Stich neben Stich. Du reibst dir die Armbeuge, ohne es zu merken. # notiz: nadelnarben
 // [ERWEITERT] Das zerkratzte Schwert: Indiz, das sich auf Gilberts abgekratzte Haustüren reimt, ohne zu beweisen, wem das Abzeichen gehörte.
 In den Fellsträhnen hat sich Silber verfangen, ein Abzeichen, ein Schwert auf einem Wappen, wie es in Yharnam die Jäger der Kirche tragen. Unter dem Daumen löst sich das Blut vom Silber. Darunter ist das Schwert zerkratzt, kreuz und quer, Strich um Strich, bis nur noch die Spitze klar zu erkennen ist.{gilbert_kleriker: Aus Kirchenleuten, hat Gilbert gesagt, werden die schlimmsten.} Du steckst es ein und wischst den Daumen lange am Mantel ab. # lore: kleriker_bestien # notiz: jaegerabzeichen
+// Fundstück (ersetzt den Kauf bei den Boten): der gesiegelte Brief im Fell. PLATZHALTER-Einbettung, Briefwortlaut unverändert.
+Unter dem Streifen Stoff am Hals der Bestie steckt etwas Festes im Fell, ein Brief, mehrfach gefaltet und mit dem Blut getränkt. Das Siegel ist schon gebrochen; gelesen hat ihn jemand vor dir.
+~ kirchenbrief = true
+// [KANON lore:figuren/amelia] Die Vikarin betet in der Großen Kathedrale. [KANON] Die Oedon-Kapelle im Kathedralbezirk nimmt Überlebende auf (erst Kapitel 2). [ERWEITERT] Der Brief, der Schreiber, die Glocken, der ausgestrichene Satz. Stimme C: Vorgang statt Gefühl; der Riss in der Ordnung ist der letzte Satz.
+Die Hand darin ist klein und sorgfältig, jede Zeile gleich weit von der nächsten.
+„Liebe Schwester, ich darf dir mitteilen, dass die Kapelle oben im Bezirk auf Weisung nunmehr jeden aufnimmt, der an die Tür klopft und noch sprechen kann. Wer nicht mehr sprechen kann, wird an die nächste Stelle des Blutes verwiesen. Die Vikarin betet in der großen Kathedrale jede Nacht am längsten von uns allen; wo sie kniet, sind die Steine danach nass, und es wird gewischt. Mir ist aufgetragen, die Glocken zu läuten, auch wenn niemand mehr kommt. Ich läute sie.“ # stil: anschlag # notiz: kirchenbrief
+Darunter steht ein letzter Satz, so fest ausgestrichen, dass die Feder das Papier zerrissen hat. Lesbar sind davon nur die ersten beiden Wörter: Komm nicht.
 -> gedaechtnis
 
 = mit_gascoigne
@@ -323,16 +326,6 @@ Du rappelst dich auf und rennst weiter, eine Treppe hinab, noch eine, bis der Bo
 ~ kleriker = "geflohen"
 -> k1_c_kanal
 
-= marke
-// [KANON lore:gegenstaende/jaeger-und-werkstatt] Hunter's Mark: zurück in den Traum, alle Blutechos verloren, kein Fleck (G3).
-~ jaegermarken = jaegermarken - 1
-~ marke_benutzt = true
-Die Marke knackt in deiner Faust. Das Messing wird warm, dann heiß, und die Brücke zerfällt mitsamt der Bestie, so wie ein Traum zerfällt, wenn man erwacht. # klang: marke
-{ echos > 0: Im Fallen rinnt dir aus der Haut, was die Toten dieser Nacht in dich gegeben haben, ein warmer Schimmer, der nicht mitkommt. Er bleibt zurück, und kein Fleck wird zeigen, wo. }
-~ echos = 0
-~ marke_eben = true
--> traum_von_laterne
-
 = gedaechtnis
 // [ERWEITERT] BLUTGEDÄCHTNIS: die Mechanik, über die das Spiel Vorgeschichte und Vorteile verschenkt.
 // Wissenssperre: Das Gedächtnis darf den Kragen zeigen; es ist ein fremder Blick, und der Jäger kann ihm nicht trauen.
@@ -350,18 +343,10 @@ Ihr Kopf reicht dir, wie er da auf dem Pflaster liegt, bis an die Brust. Aus dem
     -> uebergang
 
 = uebergang
-{ kleriker == "besiegt" and not bruecke_laterne:
-    ~ bruecke_laterne = true
-    Wo der Turm in den Fels übergeht, steht eine Laterne. Kaum berührt deine Hand das kalte Glas, flammt sie auf, und die Boten kriechen aus dem Boden und neigen die Köpfe, als grüßten sie dich. # lore: laternen
-}
-{ bruecke_von == "unten":
-    ~ bruecke_von = "oben"
-    Am Ende der Brücke führen die Treppen hinauf, zurück nach Zentral-Yharnam, zum Räucherwerk und zu den Glocken.
-    -> k1_hub_b
-}
+// Sieg und Ablenkung führen über die Treppen hinab; es gibt keine Laterne und keinen Rückweg mehr (Entscheidung des Nutzers 2026-11-06).
 { not bruecken_tor: -> bruecken_tor -> }
-Neben dem Tor bleiben nur die Treppen, breit und so steil, dass du die unteren erst siehst, wenn du auf den oberen stehst, und sie führen hinab in einen tieferen, älteren Teil der Stadt, wo die Häuser enger stehen und die Luft nach Wasser und Moder riecht. Weiter unten, zwischen den Dächern, stehen die grauen Köpfe von Grabsteinen, dicht an dicht, wie Leute, die über eine Mauer sehen.
--> k1_hub_c
+Neben dem Tor bleiben nur die Treppen, breit und so steil, dass du die unteren erst siehst, wenn du auf den oberen stehst, und sie führen hinab in einen tieferen, älteren Teil der Stadt, wo die Häuser enger stehen und die Luft nach Wasser und Moder riecht. Weiter unten, zwischen den Dächern, stehen die grauen Köpfe von Grabsteinen, dicht an dicht, wie Leute, die über eine Mauer sehen. Am Fuß der Treppen mündet ein Kanal in die Straße, und das Wasser zieht dich hinein.
+-> k1_c_kanal
 
 = bruecken_tor
 // [KANON lore:welt/notizen Nr. 2] Die Kirche hat die Große Brücke gesperrt. [ERWEITERT] Das Tor, die Kette, die Ritzung (Übergreifend Nr. 2a).

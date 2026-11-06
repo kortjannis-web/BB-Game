@@ -15,6 +15,7 @@
 
 INCLUDE system.ink
 INCLUDE traum.ink
+INCLUDE nachbild.ink
 INCLUDE kapitel1/zustand.ink
 INCLUDE kapitel1/a_ankunft.ink
 INCLUDE kapitel1/b_yharnam.ink

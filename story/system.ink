@@ -10,19 +10,15 @@ VAR leben = 5
 // Eine Blutampulle, nie mehr. Wird im Traum aufgefüllt (und anfangs von Iosefka gegeben).
 VAR ampulle = 0
 
-// --- Blutechos (Währung) und der Fleck am Todesort ------------------------
-VAR echos = 0
-VAR fleck_ort = ""
-VAR fleck_echos = 0
-
 // --- Fortschritt ------------------------------------------------------------
 VAR einsicht = 0
 VAR tode = 0
 VAR ort = ""
 VAR puppe_wach = false
 VAR parade = false
-// Wohin man nach dem Traum zurückkehrt (die zuletzt entzündete Laterne).
-VAR laterne = -> k1_klinik_kampf
+// Wohin man nach dem Tod zurückkehrt: an den Anfang des Kampfes oder Moments (2026-11-06, Entscheidung des Nutzers:
+// kein Speicherpunkt, keine Laterne als Ort; jeder Kampf setzt sein Ziel selbst, siehe `kampf_ab`).
+VAR kampfanfang = -> k1_klinik_kampf
 
 // --- Lernen durch Sterben ---------------------------------------------------
 // Vor jedem Treffer wird das Anzeichen gemerkt; wer daran stirbt, erkennt es beim nächsten Mal.
@@ -36,15 +32,9 @@ VAR gelernt = ()
 === function heile(n)
 ~ leben = MIN(leben + n, LEBEN_MAX)
 
-// Beim Betreten eines Ortes: Ort merken und ein liegengebliebenes Blutecho aufheben.
+// Beim Betreten eines Ortes: Ort merken (der Tod erzählt je nach Ort).
 === betreten(hier) ===
 ~ ort = hier
-{ fleck_ort == hier and fleck_echos > 0:
-    ~ echos = echos + fleck_echos
-    ~ fleck_echos = 0
-    ~ fleck_ort = ""
-    Auf den Steinen liegt noch dein eigenes Blut, eine dunkle, glänzende Lache an der Stelle, an der du gestorben bist. Als du dich darüber beugst, steigt ein Schimmer daraus auf und kehrt zu dir zurück, wie Tauben in den Schlag. # klang: echos
-}
 ->->
 
 // Ampulle in ruhiger Lage: kein Risiko.
@@ -64,7 +54,8 @@ VAR gelernt = ()
 {~Den Schlag hast du kommen sehen, und die Nadel ist trotzdem schon im Schenkel. Er trifft dich, während das Blut noch in dich hineinläuft, und einen Augenblick lang weiß dein Körper nicht, ob er heilt oder bricht.|Du hast die Ampulle gerade im Bein, als der Hieb kommt. Das Blut wärmt dich von innen, und von außen wird es kalt, dort, wo er dich getroffen hat.|Die Nadel ist erst halb im Schenkel, als der Schlag kommt, und das Glas schlägt dir gegen die Hüfte und hält. Wärme und Schmerz kommen im selben Atemzug, und keines von beiden gewinnt.} # klang: ampulle
 ->->
 
-// Tod: Erwachen im Traum. Die Echos bleiben am Todesort liegen; ein zweiter Tod vorher löscht sie.
+// Tod: Erwachen im Traum, als Nachbild (story/nachbild.ink): Körper, innerer Monolog, ein Story-Fragment, dann zurück an den Anfang des Kampfes.
+// Es gibt keine Blutechos mehr (Entscheidung des Nutzers 2026-11-06: Buchgefühl vor Videospiel).
 // Ort "grab": [KANON lore:figuren/gascoigne] Tötet Gascoigne den Jäger, spottet er, dass der sich nur hinter einer Maske zeige, und lobt die Jagd als sportlich (eigene Worte). In Bestienform spricht er nicht.
 // Die Sonne nur als Wahrnehmung, keine Gewissheit des Erzählers (G5). L6: jedes Mal ein anderes Zeichen, dass sie nicht sinkt.
 // Lektorat 2026-11-05: Jeder Tod hautnah und anders. Die Texte wechseln je Ort und Ursache und wiederholen sich bei mehreren Toden am selben Ort nicht gleich ({&…}); die temp-Werte dienen nur der Wahl des Textes.
@@ -77,9 +68,6 @@ VAR gelernt = ()
 ~ temp durch_riese = zuletzt ? riese_ansturm
 ~ gelernt += zuletzt
 ~ zuletzt = ()
-~ fleck_ort = ort
-~ fleck_echos = echos
-~ echos = 0
 ~ leben = LEBEN_MAX
 { ort:
 - "bruecke": {&Das Letzte, was du siehst, ist das Geweih über dir, schwarz gegen den Himmel, und eine Kutsche, die sich langsam dreht, als läge sie auf Wasser.|Der Schlag hebt dich vom Pflaster und legt dich zwischen die Räder einer umgestürzten Kutsche, zu denen, die man nicht fortgeräumt hat. Einer von ihnen hat die Augen offen. Du siehst ihn an, und er sieht zurück, bis einer von euch beiden aufhört.|Über dir hebt sich der lange Arm noch einmal, Gelenk um Gelenk, und eines davon war vorhin nicht da. Weiter kommst du mit dem Zählen nicht.} # tod: {ort} # stimmung: grauen
@@ -108,25 +96,4 @@ VAR gelernt = ()
 - else: {&Der Boden kommt dir entgegen, langsam, und du hast Zeit, eine Fuge zwischen zwei Steinen zu sehen, in der Moos wächst. Das Letzte, was du hörst, ist dein eigener Atem, der an einer Stelle hängen bleibt und nicht weitergeht.|Die Knie geben nach, eines nach dem anderen, und du sitzt, als hätte dich jemand behutsam dorthin gesetzt. Das Licht geht zuerst an den Rändern, zuletzt in der Mitte.|Von den Füßen her wird es kalt, Stufe um Stufe, so wie Wasser in einem Keller steigt. Als es das Herz erreicht, schlägt das Herz ihm nicht mehr entgegen.} # tod: {ort} # stimmung: grauen
 }
 {&Es wird dunkel, und in der Dunkelheit bewegen sich kleine graue Hände.|Das Dunkel kommt nicht von außen; es steigt in dir auf wie Wasser in einem Brunnen, und auf seinem Grund regen sich kleine graue Hände.|Dunkel. Irgendwo darin zupft dich etwas am Ärmel, behutsam, so wie man einen Schlafenden weckt, und es sind viele kleine Hände.}
--> traum_erwachen
-
-// --- Jägermarke ----------------------------------------------------------------
-// [KANON lore:gegenstaende/jaeger-und-werkstatt] Wer die Marke zerdrückt, erwacht im Traum, als wäre alles nur ein böser Traum gewesen, und verliert alle Blutechos; sie bleiben auch nicht als Fleck liegen (G3). Ein früherer Fleck bleibt, wo er ist.
-// Gemeinsamer Baustein für die Kämpfe statt einer Fassung je Kampf (noch von keinem Kampf benutzt; die Bosskämpfe haben eigene Stellen). Der Text setzt die Option „… zerdrücken“ fort (L1). Aufruf aus einem Kampf:
-//   ~ marke_zerdruecken()
-//   -> traum_von_laterne
-// Als Funktion, damit der Prüfer sie nicht als unerreichten Knoten meldet; Tags (etwa # klang: marke) gehören an die aufrufende Zeile.
-VAR marke_eben = false   // eben eine Marke zerdrückt: traum_von_laterne beginnt dann ohne Laterne
-=== function marke_zerdruecken()
-~ jaegermarken = jaegermarken - 1
-~ marke_eben = true
-{ ort:
-- "bruecke": Das Messing wird in der Faust warm, dann heiß, und die Brücke zerfällt, die Bestie, die Kutschen, so wie ein Traum zerfällt, wenn man erwacht.
-- "grab": Unter den Fingern bricht das Messing, und das Grab, das Heulen, die Gestalt auf der obersten Stufe zerfallen wie Asche, in die einer hineinbläst.
-- else: Das Messing wird in der Faust heiß, und um dich her zerfällt die Stadt wie ein Traum beim Erwachen.
-}
-{ echos > 0:
-    Was die Toten dieser Nacht in dich gegeben haben, bleibt dort zurück, und kein Fleck wird zeigen, wo.
-}
-~ echos = 0
-~ marke_benutzt = true
+-> nachbild

@@ -8,6 +8,8 @@ Grundsatz (CLAUDE.md, „Rolle“): **Nichts ist gut, bis der Nutzer es bestäti
 
 Stand 2026-11-04, nach Runde 1: drei unabhängige Prüfungen (Plot und Logik, Lore und Tiefe, Figuren und Prosa, zusammen rund 75 Befunde), danach Überarbeitung des ganzen Kapitels. Die Berichte liegen nicht im Repository; ihre Punkte sind unten als „behoben“ oder „offen“ eingearbeitet. Danach eine zweite, unabhängige Gegenprüfung (30 Befunde, darunter Phasenfehler im Gascoigne-Kampf nach einem Tod, doppelte Begrüßung der Puppe, Wissenslecks, Zeilen zu nah am Original); alle eingearbeitet und die schwersten nachgespielt.
 
+**Umbau zum Entscheidungsbuch (2026-11-06):** Kapitel 1 ist nach Fassung 2 umgebaut (`docs/kapitel1-struktur.md`): vier Akte, jede Station einmal, zwei Viertel mit Kartenmodell (zwei von drei), Kreuzung Scheiterhaufen, Eileen fest, drei feste Traumszenen, Tod als Nachbild mit Monolog und Story-Fragment, Rückkehr an den Anfang des Kampfes. Entfallen: Blutechos, Stärkung, Bad der Boten, Jägermarken, Laternen als Speicherpunkte, Leiter und alle Rückwege. **Alle Texte bleiben Stufe 2 (vorheriger Stand), neue Stationen, Nachbilder und Fragmente sind Platzhalter (Stufe 0 bis 1).** Offene Schwächen: Gilbert kommt vor der Ankunft in Yharnam (Reihenfolge der Orte), Eileens zweite Form ist nur ein Satz, die Kämpfe hängen nicht mehr am Vorbereiten im Traum (Balance ungetestet; Zufallsspieler 5 Tode je Lauf, vorher rund 8), Revisit-Zweige in einzelnen Szenen sind teils noch als tote Zweige im Quelltext.
+
 **Nacht 2026-11-04 (Freigabe des Nutzers):** Waffenwahl entfernt (Sägespalter); Stärkung bei der Puppe (zwei Stufen, je eine Zusatzmöglichkeit in Schwein, Kleriker, Gascoigne); Chronik der Nacht; Einsicht mit Kosten (falscher Schatten am Grab); Ton (erzeugte Atmosphäre je Stimmung, Herzschlag bei wenig Leben, eigene Spieluhr-Melodie, CC0-Geräusche, Schalter); Icons in der Leiste (Ampulle füllt sich, Auge öffnet sich mit Einsicht); pulsierende Anzeichen, „erkannt“ bei gelernten, Trefferrand, Schwarzblende beim Tod; Ortskarten; Notizbuch mit Reitern Aufzeichnungen, Personen, Fragen der Nacht und Neu-Markierung.
 
 **Feinschliff Kapitel 1 nach Lektorat (2026-11-05):** Ein Lektor hat das Kapitel als Ganzes gelesen (`docs/lektorat-kapitel1.md`: Tonbrüche, gezählte Wiederholungen, Leitmotive, drei bis acht schwächste Stellen je Knoten). Danach jede Datei Absatz für Absatz geschliffen nach `docs/umsetzung-lektorat.md` (L1 Fortsetzungen nach der Wahl ohne „Du“-Protokoll und ohne Umstellungstick, L2 keine Spielsprache, Brandflasche statt Molotow, L3 Lernsätze als Körpererinnerung, L4 keine christlichen Formeln, L5 Wiederholungen gekappt, L6 Leitmotive: Sonne als wachsendes Zeichen, Choral ohne Kommentar, Spieluhr mit fehlendem Ton als durchgehendes Motiv). Stilprüfer: 1 Warnung. Ungeprüft: zweite Lektüre nach dem Feinschliff, Abnahme durch den Nutzer (er testet am Ende selbst).
@@ -50,8 +52,7 @@ Stand 2026-11-04, nach Runde 1: drei unabhängige Prüfungen (Plot und Logik, Lo
 | k1_traum_erst | Erster Besuch im Jägertraum | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
 | k1_klinik_kampf | Lernkampf in der Klinik | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. sehr kurz (81 Wörter) |
 | k1_iosefka | Iosefkas Tür | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
-| k1_laterne_zentral | Laterne Zentral-Yharnam | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
-| k1_hub_b | Zentral-Yharnam (frei) | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
+| k1_laterne_zentral | Laterne vor der Klinik (nur Licht) | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. | Umbau 2026-11-06: Laterne ist kein Weg mehr in den Garten.
 | schrei | Kreischen von der Brücke | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
 | k1_b_gilbert | Gilbert | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. **Erste handgearbeitete Szene** (2026-11-04): Ortsbild in Stimme A, Begegnung in B, Optionen fließen in den Satz (#fliesst), Lore aus `lore/`; vom Nutzer nicht gelesen. Offen: Gilberts Sätze nur sinngemäß gegen Kanon geprüft (RK1 §5), Ruß an der Düse als Deutungs-Detail |
 | k1_b_tueren | Türen mit Räucherlampen | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
@@ -61,25 +62,29 @@ Stand 2026-11-04, nach Runde 1: drei unabhängige Prüfungen (Plot und Logik, Lo
 | k1_b_eileen | Eileen die Krähe (Dach) | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
 | k1_n1_kleriker | Nadelöhr 1: Kleriker-Bestie | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. 7 Takte (Abfrage); vom Nutzer nicht gespielt |
 | k1_b_anschlag | Der Anschlag an der Kapellentür | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. neu; Wortlaut der Kirche eigen |
-| k1_hub_c | Unterstadt (frei) | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
 | k1_c_kanal | Kanalisation (Schwein, Leiter) | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
 | k1_c_eileen | Eileen über den Gräbern | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
 | k1_c_graeber | Die Gräber, zweite Begegnung mit Gascoigne | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
 | k1_n2_gascoigne | Nadelöhr 2: Gascoigne | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. 8 Takte (Abfrage); neue Takte unabhängig geprüft, vom Nutzer nicht gespielt |
 | k1_d_grab | Viola und die Brosche | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
-| k1_d_rueckweg | Rückweg durch die Stadt | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. zeigt jetzt Veränderungen an bekannten Orten |
 | k1_d_maedchen | Weiche: Was sagst du dem Mädchen? | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
 | k1_d_kanal | Rückweg durch die Kanalisation | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
 | k1_d_gilbert | Gilbert hinter der Brücke | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
 | k1_d_traum | Kapitelende im Traum | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. |
-| traum_hub, gehrman, puppe_erwacht, puppe_gespraech, boten_laden, traum_erwachen | Jägertraum | 2 | Faktencheck 2026-11-05 umgesetzt, in neuer Stimme, Optionen fließen; nicht abgenommen. Boten verkaufen jetzt Jagdnotizen, Kirchenbrief, Wendels Mantel; Preise geschätzt; Wendels Spur ist Saat für Kapitel 2 und dort noch nicht geerntet |
+| k1_b_ankunft, k1_viertel1, k1_nach_viertel1, k1_nach_scheiterhaufen, k1_viertel2, k1_nach_viertel2, k1_vor_bruecke | Akt II: Ankunft, Viertel (zwei von drei), Übergänge mit Spuren des Nichtgewählten | 1 | Umbau 2026-11-06, Entwurf von Claude. Texte der Spuren und Übergänge sind knappe Platzhalter; die Wahloptionen sind von Spuren angekündigt, aber ungeprüft, ob die Wahl „nicht blind“ wirkt. |
+| k1_b_dachweg | Der Dachweg (neu) | 0 | Platzhalter-Station, knappe Sätze; Jagdheft-Text aus dem alten Handel übernommen. |
+| k1_c_unterstadt, k1_c_tor | Unterstadt (Ankunft mit Laterne), Tor des Oedon | 1 | Umbau 2026-11-06; Ankunft aus dem alten Hub übernommen, Laterne neu (Text knapp). |
+| k1_traum_zwei, training | Traum 2: Laterne, Gehrman, Puppe, Übung im Hof | 1 | Neu 2026-11-06; Übung im Hof ist Platzhalter (kurz); öffnet gegen Gascoigne je eine Möglichkeit. |
+| nachbild, Monologe (ca. 30), Fragmente (6) | Tod: Nachbild, innerer Monolog, Story-Fragment | 0 | Platzhalter. Monologe sind kurz und klar, aber unausgefeilt; „sehr viele“ (Nutzer) sind noch zu schreiben (zwei bis drei je Todesszene und Entscheidung). Fragmente sind knappe Deutungen des Jägers. |
+| k1_d_heimweg, _a bis _d | Heimweg (linear) | 1 | Umbau 2026-11-06: kein Hub; Reihenfolge Mädchen, Kanalisation (nur nach der Brosche), Gilbert, Laterne am Grab. |
+| traum (gehrman, puppe_erwacht, puppe_gespraech) | Jägertraum | 2 | Faktencheck 2026-11-05 umgesetzt; hier nur noch in festen Szenen. Entfallen: Hub, Bad der Boten (Handel), Stärkung der Puppe. |
 
 ## Werkzeuge und Oberfläche
 | Stück | Stufe | Schwächen |
 |---|---|---|
 | Spieloberfläche (Lesen, Leiste, Vignette, Notizbuch) | 2 | Icons, Kampfdarstellung, Ortskarten, Notizbuch als Buch neu; im Browser getestet, Geschmack ungeprüft |
 | Ton | 1 | erzeugt, nur technisch getestet (kein Hörtest möglich); Lautstärke und Stimmung ungeprüft; Choral und Glocke neu; Wahl beim Start |
-| Mechaniken der Nacht (Stärkung, Chronik, Einsicht kostet) | 1 | Einsicht kostet jetzt an fünf Stellen leise; Balance ungetestet |
+| Mechaniken der Nacht (Chronik, Einsicht kostet leise, Nachbild, Fragmente) | 1 | Stärkung, Blutechos, Marken und Handel entfallen (2026-11-06). Einsicht kostet an fünf Stellen leise; Balance ungetestet. |
 | Werkstatt im Spiel und im Erzählbaum | 2 | getestet nur gegen nachgebildetes GitHub; erster echter Versand steht aus; Vorschläge liegen nur im jeweiligen Browser |
 | Erzählbaum (Karte) | 1 | |
 | Hosting | 1 | Umstellung 2026-11-05 von Netlify (Credits aufgebraucht, Production-Deploys pausiert) auf GitHub Pages: https://kortjannis-web.github.io/BB-Game/. Workflow vorhanden, erster Lauf und Erreichbarkeit noch nicht geprüft (von hier aus nicht erreichbar) |

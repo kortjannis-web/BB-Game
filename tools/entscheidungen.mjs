@@ -67,6 +67,8 @@ const lesbar = (l) =>
     .replace(/^(\w+)\s*=\s*"([^"]*)"$/, "$1 = „$2“")
     .replace(/^(\w+)\s*=\s*->\s*(\w+)$/, "$1 → $2");
 
+// Zähler und Bausteine sind keine Entscheidungen und brauchen kein Echo (Umbau 2026-11-06, Echo-Regel).
+const ZAEHLER = new Set(["v1_zahl", "v2_zahl", "tuer_stimme", "uhr_bestie", "puppe_besucht"]);
 const eintraege = [];
 for (const p of twine.passagen) {
   const knoten = p.id.split(".")[0];
@@ -90,7 +92,7 @@ for (const p of twine.passagen) {
       bedingung: c.bedingung ?? null,
       wiederholbar: !!c.wiederholbar,
       spaeter: spaeter.filter((x) => x.orte.length),
-      ohneEcho: spaeter.filter((x) => !x.orte.length).map((x) => x.variable),
+      ohneEcho: spaeter.filter((x) => !x.orte.length && !ZAEHLER.has(x.variable.split(" ")[0])).map((x) => x.variable),
       warum: warum.get(`${knoten}|${text}`) ?? null,
     });
   }
@@ -99,3 +101,10 @@ writeFileSync(join(wurzel, "web/entscheidungen.json"), JSON.stringify(eintraege)
 const mitWarum = eintraege.filter((e) => e.warum).length;
 const ohneEcho = eintraege.filter((e) => e.ohneEcho.length).length;
 console.log(`Gebaut: web/entscheidungen.json (${eintraege.length} Entscheidungen, ${mitWarum} mit Begründung, ${ohneEcho} setzen etwas ohne späteres Echo)`);
+
+// Echo-Regel (Umbau 2026-11-06): Mit --streng bricht der Aufruf ab, wenn eine Entscheidung etwas setzt, das nie wieder gelesen wird.
+if (process.argv.includes("--streng") && ohneEcho) {
+  for (const e of eintraege.filter((x) => x.ohneEcho.length)) console.log(`  OHNE ECHO: ${e.passage}: „${e.text}“ setzt ${e.ohneEcho.join(", ")}`);
+  console.log(`\nNICHT BESTANDEN: ${ohneEcho} Entscheidung(en) ohne späteres Echo.`);
+  process.exit(1);
+}

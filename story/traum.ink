@@ -1,4 +1,4 @@
-// DER JÄGERTRAUM: Hub zwischen den Jagden. Gehrman, die Puppe, die Boten.
+// DER JÄGERTRAUM: feste Szenen der Geschichte (erster Tod, Laterne am Eingang der Unterstadt, Kapitelende), kein Hub zwischen den Jagden (Entscheidung des Nutzers 2026-11-06). Gehrman, die Puppe, die Boten als stumme Gesellschaft. Der Tod führt nicht hierher, sondern in das Nachbild (story/nachbild.ink).
 // [KANON lore:orte/jaegertraum] Traum als Zuflucht, Rückkehr über Laternen und Grabsteine, das Blatt beim Altar (Notiz Nr. 3), Puppe erwacht mit Einsicht, Gehrman bietet alles hier an, auch die Puppe.
 // [DEUTUNG] Dass der Vertrag an den Traum bindet und Gehrman selbst gefangen ist: nur gezeigt (Tinte, Nadelstich, daheim, seine Hände, die Frage nach dem Hellwerden), nie gesagt.
 // Stimmen: Gehrman müde und warm, mit Pausen, ganz anders als der glatte Mann in der Klinik; er spricht oft zum Feuer hin statt zu dir. Die Puppe förmlich, sanft, ohne Atem zwischen den Sätzen, fragt nach der Welt draußen.
@@ -12,95 +12,37 @@ VAR gehrman_bestien = false      // Gehrman nach den Bestien gefragt (seine Hän
 VAR gehrman_wann = false         // gefragt, wann die Nacht vorbei ist (er antwortet nicht)
 VAR gehrman_versprochen = false  // Gehrman hat von seinem Versprechen an einen Freund gesprochen
 VAR puppe_daheim = false         // die Puppe hat den Traum beim Erwachen daheim genannt
-VAR brief_gezeigt = false        // ein Bote hat für das Abzeichen den Brief mit Kirchensiegel hervorgeholt
+VAR puppe_besucht = false        // in der zweiten Traumszene mit der Puppe gesprochen
+VAR geuebt = false               // Gehrmans Übung im Hof (zweite Traumszene): öffnet je eine Möglichkeit gegen Gascoigne
 
-=== traum_von_laterne ===
-// TITEL: Laterne: in den Traum
-~ leben = LEBEN_MAX
-{ marke_eben:
-    ~ marke_eben = false
-    Weiße Blumen unter deinen Knien, und nichts von dem Lärm, in dem du eben noch standest, ist mit dir herübergekommen. Deine Faust ist noch geschlossen, so fest, dass die Nägel dir Halbmonde in den Handballen gedrückt haben. Als du sie öffnest, liegt darin nur ein wenig Staub aus Messing und klebt an der feuchten Haut. # bild: traum # stimmung: ruhig
-- else:
-    Unter deiner Hand wird das Glas der Laterne warm, und die Stadt bleicht aus wie ein Kupferstich im Fenster eines Ladens, der seit Jahren nicht mehr öffnet: zuerst die Giebel, dann die Gasse, zuletzt das Pflaster unter deinen Stiefeln. Unter den Sohlen ist Gras. # bild: traum # stimmung: ruhig
-}
--> traum_hub
-
-=== traum_erwachen ===
-// TITEL: Erwachen nach dem Tod
-// tode zählt den unausweichlichen ersten Tod in der Klinik mit (k1_erwachen setzt 1).
-# bild: traum # stimmung: ruhig
-{ tode:
-- 2:
-    Weiße Blumen, dicht vor deinem Gesicht, so genau, dass du an jedem Blatt die feinen Adern siehst, und an jedem verlaufen sie gleich. Es dauert, bis deine Hände glauben, was deine Augen sehen; sie tasten noch nach dem Pflaster und nach der Stelle, an der es aufgehört hat. Du warst tot. Dein Körper weiß es, so wie er einen Sturz noch kennt, wenn der Boden längst stillhält. In der Armbeuge sitzt ein frischer Einstich mit einem roten Hof darum, und auf der Zunge liegt Eisen. # lore: jaegertraum
-    { gehrman:
-        // [ERWEITERT] Im Kanon sitzt Gehrman im ersten Teil des Spiels in der Werkstatt, nicht am Weg im Garten.
-        Am Weg sitzt Gehrman in seinem Rollstuhl und nickt dir zu, ohne Überraschung, wie man jemandem zunickt, der vom Brunnen zurückkommt.
-    - else:
-        // [ERWEITERT] Gehrman im Garten und seine Regel (nicht sterben, nur aufwachen): im Kanon nicht an dieser Stelle; für Neulinge behalten. „Daran gewöhnt man sich“ steht nur hier, nicht noch einmal bei den Bestien.
-        ~ gehrman_gesehen = true
-        Am Weg steht ein Rollstuhl, und darin sitzt ein alter Mann unter einem breitkrempigen Hut, eine Decke über den Knien, und sieht dir beim Aufstehen zu, ohne sich zu wundern. „Sterben“, sagt er. Danach kommt so lange nichts, dass du glaubst, mehr komme nicht. „Sterben kannst du hier nicht. Nur aufwachen.“ Er zieht die Decke zurecht, an einer Ecke, dann an der anderen. „Daran gewöhnt man sich. Mehr oder weniger.“ # lore: gehrman
-    }
-- 3:
-    Wieder die Blumen, wieder das Gras im Nacken. Diesmal zittern deine Hände nicht einmal mehr, und du siehst lange auf sie hinunter. Die braune Tinte an deinen Fingerkuppen ist noch da. Du bist gestorben, und sie ist noch da.
-    { puppe_wach:
-        ~ puppe_daheim = true
-        Die Puppe kniet neben dir im Gras und hält deine Hand. Ihre Finger sind kühl und vollkommen glatt, ohne Linien, ohne Nägel, und sie drücken nicht, sie halten nur. „Hier geschieht dir nichts“, sagt sie. „Hier bist du …“ Das Wort fehlt ihr, und solange es fehlt, regt sich an ihr nichts, nicht einmal die Brust. „Daheim.“ Unter deinem Brustbein wird es eng.
-    }
-- else:
-    {~Die Blumen kennen dich inzwischen. Wo du liegst, sind sie schon niedergedrückt, eine Mulde in deiner Form, und als du aufstehst, richten sie sich nicht wieder auf.|Diesmal erwachst du mitten in einem Wort, das du in der Stadt nicht mehr zu Ende gebracht hast. Hier hört es niemand. Du schluckst es hinunter, und es schmeckt nach Eisen.|Über dir liegt der Himmel des Traumes, elfenbeinfarben, und er hat sich nicht verändert, seit du zum ersten Mal hier lagst, um keinen Ton, um keine Wolke. Du stehst auf. Natürlich stehst du auf.}
-    { gehrman: {~Gehrman sieht dich kommen und sagt nichts. Seine Finger trommeln einmal auf die Lehne.|„Wieder da“, sagt Gehrman, und er sieht dabei nicht von seinen Händen auf.|Gehrman hebt die Hand, als wolle er etwas sagen, und lässt sie wieder sinken.} }
-}
-// Zweite Stelle des Blattes am Altar: Es kommt beim nächsten Erwachen zurück.
-{ altar_blatt and not blatt_erinnert:
-    ~ blatt_erinnert = true
-    Zwischen den Blumen kehrt das Blatt vom Altar zu dir zurück, nicht als Bild, nur als ein Satz, so fest in dich eingedrückt wie die Buchstaben in sein Papier: Bleibt die Quelle offen, bleibt die Nacht. # lore: ende_der_nacht
-}
-{ neu_gelernt: Im Halbschlaf zuckt dein Körper, ein einziges Mal, genau so, wie er vorhin hätte zucken sollen. # notiz: gelernt }
--> traum_hub
-
-=== traum_hub ===
-// TITEL: Jägertraum
+=== k1_traum_zwei ===
+// TITEL: Zweite Traumszene: die Laterne am Eingang der Unterstadt
+// Feste Szene der Geschichte (3 Traumszenen in Kapitel 1: erster Tod, hier, Kapitelende). Pflicht für alle Routen: Gehrman und die Übung im Hof (Parade) kann niemand verpassen.
 ~ ort = "traum"
+~ leben = LEBEN_MAX
+~ ampulle = 1
+Unter deiner Hand wird das Glas der Laterne warm, und die Stadt bleicht aus wie ein Kupferstich im Fenster eines Ladens, der seit Jahren nicht mehr öffnet: zuerst die Giebel, dann die Gasse, zuletzt das Pflaster unter deinen Stiefeln. Unter den Sohlen ist Gras. # bild: traum # stimmung: ruhig
+-> traum_fragmente ->
 { einsicht >= 1 and not puppe_wach:
     -> puppe_erwacht ->
 }
-{~Zwischen den Grabsteinen, deren Inschriften der Regen ausgewaschen hat, obwohl es hier nie regnet, wühlen die Boten in der Erde, als suchten sie dort, was ihnen einmal gehört hat.|Durch die weißen Blumen geht ein Wind, den du auf der Haut nicht spürst, und legt sie alle in dieselbe Richtung, und oben auf dem Hügel brennt im Haus das Licht, das dort immer brennt.|Irgendwo jenseits der Grabsteine läutet eine Glocke, ein einziges Mal und so leise, dass du hinterher nicht sagen könntest, ob sie im Garten geläutet hat oder in dir.}
-// Einsicht 2: das Ding auf dem Stein nie beschrieben, nur seine Wirkung (Lektorat 1.3). Der Kreis wächst beim zweiten Mal.
-{ einsicht >= 2: {Auf den Grabsteinen am Rand des Gartens sitzt etwas, das nicht weggeht, wenn du blinzelst. Ansehen lässt es sich nicht; dein Blick gleitet daran ab und landet jedes Mal im Gras daneben. Um den Stein aber sind die weißen Blumen braun geworden, in einem Kreis, so rund, als hätte ihn jemand mit dem Zirkel gezogen.|Der braune Kreis um den Stein ist um eine Handbreit gewachsen, und die Blüten an seinem Rand liegen mit den Köpfen nach außen.|} }
-{ ampulle == 0: An deinem Gürtel hängt die Ampulle wieder, voll und so warm, als hätte sie eben noch jemand in der Hand gehalten. }
-~ ampulle = 1
+{~Zwischen den Grabsteinen, deren Inschriften der Regen ausgewaschen hat, obwohl es hier nie regnet, wühlen die Boten in der Erde, als suchten sie dort, was ihnen einmal gehört hat.|Durch die weißen Blumen geht ein Wind, den du auf der Haut nicht spürst, und legt sie alle in dieselbe Richtung, und oben auf dem Hügel brennt im Haus das Licht, das dort immer brennt.}
+// Einsicht 2: das Ding auf dem Stein nie beschrieben, nur seine Wirkung (Lektorat 1.3).
+{ einsicht >= 2: Auf den Grabsteinen am Rand des Gartens sitzt etwas, das nicht weggeht, wenn du blinzelst. Ansehen lässt es sich nicht; dein Blick gleitet daran ab und landet jedes Mal im Gras daneben. Um den Stein aber sind die weißen Blumen braun geworden, in einem Kreis, so rund, als hätte ihn jemand mit dem Zirkel gezogen. }
 - (wahl)
-+ {puppe_wach} [Zur Puppe an die Treppe gehen #fliesst]
-    {~Sie hebt den Kopf, bevor du die Treppe erreichst, mit dem leisen Knirschen in der Halsfuge.|An der Treppe wartet sie schon, die Hände vor dem Kleid gefaltet, und hat dich kommen sehen, lange bevor du losgingst.|Zwischen dir und der Treppe ist das Gras zu einem Pfad niedergedrückt, den nur deine Stiefel getreten haben können, und an seinem Ende wendet sie dir das Gesicht zu.}
++ {puppe_wach and not puppe_besucht} [Zur Puppe an die Treppe gehen #fliesst]
+    ~ puppe_besucht = true
+    {~Sie hebt den Kopf, bevor du die Treppe erreichst, mit dem leisen Knirschen in der Halsfuge.|An der Treppe wartet sie schon, die Hände vor dem Kleid gefaltet, und hat dich kommen sehen, lange bevor du losgingst.}
     -> puppe_gespraech -> wahl
-+ {k1_laterne_zentral} [Den Pfad zur Werkstatt hinaufgehen #fliesst]
++ [Den Pfad zur Werkstatt hinaufgehen #fliesst]
     { gehrman == 0:
         Oben, zwischen den letzten Grabsteinen, gibt die Tür diesmal unter deiner Hand nach. Einen Riegel hast du nicht gehört.
     - else:
         Oben steht die Tür der Werkstatt einen Spalt offen, und aus dem Spalt fällt Feuerschein auf die Stufe.
     }
-    -> gehrman -> wahl
-+ {not k1_laterne_zentral} [Den Pfad zum Haus hinaufgehen #fliesst]
-    // Die einzige Stelle im Traum mit dem Feuer, das niemand nährt (Lektorat traum_hub 4), und dann mit Folge.
-    Oben ist die Tür verschlossen. Durch das Fenster siehst du einen Kamin, und im Kamin brennt ein Scheit, das nicht kleiner wird, solange du davorstehst.
-    -> wahl
-+ {puppe_wach and staerke < 2} [Für {staerke == 0:fünf|acht} Echos vor die Puppe treten #fliesst]
-    So dicht trittst du vor sie hin, dass du das Holz unter ihrem Lack riechst, Harz und Leim und darunter nichts, was atmet.
-    -> puppe_staerken -> wahl
-+ [Zum Bad der Boten am Weg #fliesst]
-    Der Weg fällt ab, und mit jedem Schritt riecht es weniger nach Blumen und mehr nach stehendem Wasser.
-    -> boten_laden -> wahl
-+ [Zurück zur Laterne, an der du warst #fliesst]
-    Unter deiner Hand ist der Grabstein ohne Namen kalt, und während du an die letzte Laterne denkst, kehrt die Stadt zurück: der Geruch zuerst, dann die Geräusche, zuletzt die Kälte.
-    -> laterne
-+ {k1_laterne_zentral and laterne != -> k1_hub_b} [Zur Laterne vor der Klinik #fliesst]
-    ~ laterne = -> k1_hub_b
-    Kaum liegt deine Hand auf dem Stein, hast du Räucherwerk in der Nase, und der Garten ist fort.
-    -> k1_hub_b
-+ {bruecke_laterne and laterne != -> k1_hub_c} [Zur Laterne an der Brücke #fliesst]
-    ~ laterne = -> k1_hub_c
-    Der Stein ist noch unter deiner Hand, da zerrt schon der Wind der Brücke an deinem Mantel.
-    -> k1_hub_c
+    -> gehrman ->
+- Unter deiner Hand ist der Grabstein ohne Namen kalt, und während du an die Stadt denkst, kehrt sie zurück: der Geruch zuerst, dann die Geräusche, zuletzt die Kälte. # bild: unterstadt
+-> k1_c_graeber
 
 === puppe_erwacht ===
 // TITEL: Die Puppe erwacht
@@ -138,25 +80,6 @@ Hinter ihr, auf drei Grabsteinen, sitzt etwas, das vorher nicht dort saß. Als d
     Von den roten Lampen vor den Fenstern und dem Rauch, der aus ihnen in die Gassen sinkt und sich in die Kleider setzt, bis man ihn nicht mehr bemerkt. Als sie fragt, wonach er riecht, suchst du lange und sagst dann: „Süß.“ Sie schließt die Augen, als könne sie es so riechen. „Süß“, wiederholt sie. „Dann ist es draußen nicht nur schlimm.“
 - ->->
 
-=== puppe_staerken ===
-// TITEL: Die Puppe stärkt dich
-// [KANON lore:figuren/puppe] Die Puppe verwandelt Blutechos in Stärke; man soll nahe stehen und die Augen schließen. [ERWEITERT] Hier erzählt statt in Zahlen: jede Stärkung öffnet in bestimmten Kämpfen eine Möglichkeit. Der Text verrät nicht, welche (Lektorat puppe_staerken 1, 2).
-~ temp preis = 5
-{ staerke == 1:
-    ~ preis = 8
-}
-{ echos < preis:
-    Ihre Hand hebt sich zu deiner Brust und hält eine Fingerbreite davor inne. „Es ist noch zu wenig“, sagt sie, und die Hand sinkt zurück an das Kleid. „Ich warte hier.“
-    ->->
-}
-~ echos = echos - preis
-~ staerke = staerke + 1
-„Schließ die Augen“, sagt sie. Hinter den Lidern spürst du ihre Hand auf der Brust, kühl und ohne Gewicht. Etwas zieht aus deiner Haut in ihre Finger, und was zurückkommt, ist schwerer und wärmer und sinkt dir in die Arme, wie Blei in eine Form sinkt und darin erkaltet. # klang: echos # notiz: staerke
-{ staerke == 1: Als du die Augen öffnest, sind deine Hände ruhiger als seit Wochen. Die umgekippte Gießkanne im Gras hebst du mit zwei Fingern auf, und erst als sie wieder steht, fällt dir ein, dass sie aus Eisen ist. }
-{ staerke == 2: Diesmal bleibt die Wärme in den Schultern und will nicht hinunter in die Hände. Ihre Hand liegt noch auf deiner Brust; als deine Finger sich darum schließen, knirscht in ihrem Gelenk das Holz, und du lässt los. }
-„Noch nicht“, sagt sie, und ihre Hände finden vor dem Kleid wieder zueinander.
-->->
-
 === gehrman ===
 // TITEL: Gehrman
 // [KANON lore:figuren/gehrman] Früher Dialog (LK §18.1): einst Zuflucht und Werkstatt, in der Jäger Blut für ihre Waffen und ihr eigenes Fleisch nahmen; weniger Werkzeug als früher; alles darf man benutzen, geflüstert auch die Puppe; nicht zu viel nachdenken, jagen, man gewöhnt sich. Einst selbst Jäger. Dass er der erste war, ist in Kapitel 1 gesperrt (G4).
@@ -184,6 +107,7 @@ Hinter ihr, auf drei Grabsteinen, sitzt etwas, das vorher nicht dort saß. Als d
     „Aus diesem Traum kommt nur hinaus, wer der Seuche ihre Quelle verschließt. Bleibt die Quelle offen, bleibt die Nacht.“ # stil: tagebuch
     Ein Name steht nicht darunter.
 }
+-> training ->
 - (thema)
 * [„Was ist das für ein Ort?“ #fliesst]
     Er lässt sich Zeit. „Ein Traum.“ Danach wartet er, als prüfe er, ob das Wort hält. „Ein Ort, an dem Jäger ruhen, solange die Jagd dauert. Sich rüsten. Sich erinnern.“ Er streicht die Decke über seinen Knien glatt, einmal, zweimal, an derselben Stelle. „Man kommt hierher zurück. Ob man will oder nicht.“ # lore: jaegertraum
@@ -230,51 +154,17 @@ Hinter ihr, auf drei Grabsteinen, sitzt etwas, das vorher nicht dort saß. Als d
     „Gute Jagd“, sagt Gehrman hinter dir. Er sagt es zum Feuer und dreht sich nicht um.
     ->->
 
-=== boten_laden ===
-// TITEL: Bad der Boten
-// [KANON lore:figuren/boten] Die Boten verkaufen gegen Blutechos; ihr Sortiment wächst mit Abzeichen (das Abzeichen der Schwertjäger stammt aus der Beute der Kleriker-Bestie, kleriker == "besiegt"). PRÜFEN: welche Waren im ersten Abschnitt.
-// Tausch fließt in den Satz (Lektorat L2): Der Preis steht knapp in der Option („gegen drei Echos tauschen“), im Folgetext nur die Ware, kein „kaufen“. Der Molotow heißt Brandflasche (Variable molotow bleibt).
-{ boten_laden == 1:
-    Neben dem Weg steht ein steinernes Becken, halb voll mit einem Wasser, das sich nie klärt, und darin hocken die Boten, Schulter an Schulter, grau in grauem Wasser, sodass erst eine Bewegung verrät, wo einer anfängt. Einer trägt einen winzigen, zerbeulten Hut. Als du dich über den Rand beugst, heben sie die Hände aus dem Wasser, und die Gesichter aus nassem Ton wenden sich dir alle zugleich zu. # lore: boten
+=== training ===
+// TITEL: Übung im Hof
+// [KANON lore:figuren/gehrman, lore:figuren/gascoigne] Die Parade lernt man von Gehrman wie von Gascoigne. [ERWEITERT] Die Übung im Hof ist eine Szene, kein Menü: Sie öffnet gegen Gascoigne je eine Möglichkeit (`geuebt`). PLATZHALTER, knapp.
+~ geuebt = true
+Gehrman rollt zur Hintertür und stößt sie mit dem Stuhl auf. „Komm. Einmal noch üben, bevor es weitergeht.“ Im Hof steht ein Pfahl, mit Leder umwickelt und an vielen Stellen zerhauen. Er lässt dich schwere Hiebe abfangen, die für deinen Arm zu schwer sind, und Schüsse setzen, wenn der Pfahl ausholt, den man sich dazudenken muss. # lore: gehrman
+{ not parade:
+    ~ parade = true
+    ~ parade_quelle = "gehrman"
+    „Wenn sie ausholt“, sagt er. „Wenn ihr ganzes Gewicht im Schlag liegt. Dann schießt du, und sie wankt.“ # lore: parade
 - else:
-    {~Im Becken regt sich das trübe Wasser, und graue Hände tauchen auf, alle zugleich.|Der Bote mit dem zerbeulten Hut ist bis an den Rand gekrochen und hält sich mit beiden Händen am Stein fest.|Die Boten heben die Gesichter aus dem Wasser, und von ihren Kinnen tropft es ins Becken zurück, alle im selben Takt.}
+    Er sieht dir eine Weile zu und sagt nichts. Dann nickt er. „Du hast es schon von einem, der es kann.“
 }
-{ kleriker == "besiegt" and not kirchenbrief and not brief_gezeigt:
-    ~ brief_gezeigt = true
-    Einer der Boten streckt den Arm aus und tippt mit einem nassen Finger auf das silberne Abzeichen, das du von der Brücke mitgebracht hast, genau auf das Schwert. Er taucht unter und kommt mit einem Brief wieder hoch, das rote Siegel voran, und das Papier ist trocken.
-}
-- (wahl)
-+ {echos >= 3 and molotow < 3} [Die Brandflasche gegen drei Echos tauschen #fliesst]
-    ~ echos = echos - 3
-    ~ molotow = molotow + 1
-    Öl schwappt darin, und aus dem Hals hängt ein Lappen, der nach Lampe riecht. Der Bote, der sie dir reicht, hält sie einen Atemzug zu lange fest, bevor er loslässt.
-    -> wahl
-+ {echos >= 1 and kiesel < 3} [Einen Kiesel gegen ein Echo tauschen #fliesst]
-    ~ echos = echos - 1
-    ~ kiesel = kiesel + 1
-    Grau ist er und kühl und auf einer Seite so glatt geschliffen, als hätte ihn jemand lange in der Tasche getragen und mit dem Daumen gerieben, wenn er nicht schlafen konnte.
-    -> wahl
-// [ERWEITERT] Wissen und Kleidung (Entscheidung des Nutzers 2026-11-04): Was die Boten anbieten, haben sie Toten abgenommen.
-+ {echos >= 6 and not jagdnotizen} [Das Jagdheft eines Toten gegen sechs Echos tauschen #fliesst]
-    ~ echos = echos - 6
-    ~ jagdnotizen = true
-    ~ gelernt += (wurf, ansturm, axt_wirbel)
-    Die Seiten sind gewellt, einmal nass geworden und wieder getrocknet. Ein Jäger hat darin gezeichnet, was ihn beinahe umgebracht hat, mit Bleistift und mit Pfeilen: ein Arm, der eine Kutsche über die Schulter hebt. Ein Geweih, gesenkt, und daneben das Wort „spät“, dreimal unterstrichen. Ein Strich, gerade von oben nach unten, und darunter drei Kerben, die dritte tiefer als die anderen. Die letzte Seite ist leer bis auf einen braunen Daumenabdruck. # notiz: jagdnotizen
-    -> wahl
-+ {kleriker == "besiegt" and echos >= 2 and not kirchenbrief} [Den gesiegelten Brief gegen zwei Echos tauschen #fliesst]
-    ~ echos = echos - 2
-    ~ kirchenbrief = true
-    // [KANON lore:figuren/amelia] Die Vikarin betet in der Großen Kathedrale. [KANON] Die Oedon-Kapelle im Kathedralbezirk nimmt Überlebende auf (erst Kapitel 2). [ERWEITERT] Der Brief, der Schreiber, die Glocken, der ausgestrichene Satz. Stimme C: Vorgang statt Gefühl; der Riss in der Ordnung ist der letzte Satz.
-    Das Siegel ist schon gebrochen; gelesen hat ihn jemand vor dir. Die Hand darin ist klein und sorgfältig, jede Zeile gleich weit von der nächsten.
-    „Liebe Schwester, ich darf dir mitteilen, dass die Kapelle oben im Bezirk auf Weisung nunmehr jeden aufnimmt, der an die Tür klopft und noch sprechen kann. Wer nicht mehr sprechen kann, wird an die nächste Stelle des Blutes verwiesen. Die Vikarin betet in der großen Kathedrale jede Nacht am längsten von uns allen; wo sie kniet, sind die Steine danach nass, und es wird gewischt. Mir ist aufgetragen, die Glocken zu läuten, auch wenn niemand mehr kommt. Ich läute sie.“ # stil: anschlag # notiz: kirchenbrief
-    Darunter steht ein letzter Satz, so fest ausgestrichen, dass die Feder das Papier zerrissen hat. Lesbar sind davon nur die ersten beiden Wörter: Komm nicht.
-    -> wahl
-+ {echos >= 3 and not mantel} [Den Jägermantel gegen drei Echos tauschen #fliesst]
-    ~ echos = echos - 3
-    ~ mantel = true
-    // [ERWEITERT] Wendel, ein erfundener Jäger. Saat für Kapitel 2: Wer ihn zuletzt gesehen hat.
-    Zwei Boten ziehen ihn gemeinsam aus dem Wasser, langes, geöltes Leder, schwer wie ein Zelt nach dem Regen. Er riecht nach Teer, nach Pulver und nach einem Menschen, der nicht du bist. Am Saum fehlt ein Stück, glatt abgetrennt. Innen, ins Futter gestickt, mit rotem Garn und ungeschickten Stichen, steht ein Name: Wendel. # notiz: mantel_wendel
-    -> wahl
-+ [Den Boten den Rücken kehren #fliesst]
-    Hinter dir sinken sie zurück ins trübe Wasser, und der mit dem zerbeulten Hut taucht als Letzter unter.
-    ->->
+Danach sind deine Schultern müde und deine Hände ruhig.
+->->

@@ -1,55 +1,27 @@
-// KAPITEL 1, TEIL C: UNTERSTADT UND KANALISATION. Freie Reihenfolge. Führt zu NADELÖHR 2 (Grab des Oedon).
+// KAPITEL 1, AKT III: UNTERSTADT. Entscheidungsbuch (Umbau 2026-11-06): linear. Kanalisation-Mündung (Schwein, auf allen Wegen) → Ankunft und Laterne → zweite Traumszene → Gräber (Gascoigne kippt) → Eileen über den Gräbern → Tor → NADELÖHR 2 (Grab des Oedon).
 // Handgearbeitet 2026-11-05 nach docs/stimme.md und docs/faktencheck-kapitel1.md: Ortsbilder in Stimme A, Geschehen in B. Optionen fließen in den Satz (#fliesst).
 // Feinschliff 2026-11-05 nach docs/lektorat-kapitel1.md und docs/umsetzung-lektorat.md (L1 bis L6): Fortsetzungen ohne „Du“-Protokoll, Lernsätze als Erinnerung des Körpers, keine Ketten am Tor, Krähe statt Rabe, Totenbretter statt Holzkreuze (L4).
 // [ERWEITERT] „Die Unterstadt“ als eigener Bereich mit Gassen, Friedhof und eigenem Knotenpunkt ist unsere Erfindung; im Original führen Kanalisation und Treppen von Zentral-Yharnam hinab zum Grab des Oedon (lore:orte/zentral-yharnam, RK1 §7, §9).
 // [KANON lore:orte/zentral-yharnam] Zu Gascoigne kommt man über die Kanalisation; dort Ratten, Krähen, das Leichenbecken und das Riesenschwein; eine Leiter führt zurück nach oben.
 // [KANON lore:gegenstaende/heilende-kirche] Das Tor zum Kathedralenbezirk öffnet erst der Schlüssel vom Grab des Oedon; es liegt oben an der Treppe hinter dem Friedhof, nicht mitten in der Unterstadt. Von hier unten sieht man nur den Bogen (k1_d_grab beschreibt das Tor aus der Nähe).
 // [ERWEITERT] Der rote Lichtstreifen an der Hauswand, der nicht wandert (Leitmotiv Sonne, L6).
-// Keine Laterne hier, außer an der Brücke (nur wenn die Kleriker-Bestie besiegt ist). Wer stirbt, läuft weit zurück.
+// Die Laterne am Eingang der Unterstadt führt in die zweite feste Traumszene (story/traum.ink). Wer stirbt, kehrt an den Anfang des Kampfes zurück (story/nachbild.ink).
 
-=== k1_hub_c ===
-// TITEL: Unterstadt (frei)
+=== k1_c_unterstadt ===
+// TITEL: Unterstadt: Ankunft und Laterne
+// Früher der Hub der Unterstadt; jetzt die einmalige Ankunft nach der Kanalisation, mit der Laterne, die in die zweite Traumszene führt.
 -> betreten("unterstadt") ->
-{ k1_hub_c == 1:
-    Am Fuß der Treppen stehen die Häuser aus einem dunkleren Stein, den der Regen vieler Generationen glatt geschliffen hat, und sie rücken so dicht zusammen, dass sich ihre Traufen über den Gassen berühren und es darunter niemals ganz Tag wird. Wasser läuft hier überall, in Rinnen, über die Stufen, aus den Fugen der Mauern, und sein Geräusch hört nicht auf, auch dann nicht, wenn du stehen bleibst und den Atem anhältst. An einer Treppe wächst ein einzelner Baum, verkrüppelt und schwarz, mit drei Blättern daran. # bild: unterstadt # stimmung: spannung
-    Hinter den letzten Dächern beginnt ein Friedhof, und jenseits davon, hoch über den Gräbern, steigt eine schmale Treppe an der Felswand empor bis zu einem Tor, von dem man hier unten nur den dunklen Bogen erkennt. Dahinter, sagt man in Yharnam, liege der Bezirk der Kathedrale, in dem die Heilende Kirche wohnt, und wer in der Unterstadt geboren ist, kennt diese Treppe sein Leben lang nur von unten. # lore: heilende_kirche
-- else:
-    { gascoigne2 and not gascoigne_tot:
-        Hinter dem Friedhof, jenseits des Tors mit dem Namen, schlägt es, dumpf und gleichmäßig, und zwischen zwei Schlägen ist es jedes Mal still genug, dass du das Wasser wieder hörst.
-    - else:
-        {~Das Wasser in den Rinnen rauscht, und irgendwo tropft es in einen Eimer, der längst übergelaufen ist.|Zwischen zwei Traufen fällt ein einziger roter Streifen Licht auf eine Hauswand, quer über die dritte Steinreihe von oben, und dort lag er schon, als du zum ersten Mal hier unten standest.|Ein Fenster schlägt, auf, zu, auf, zu, und niemand schließt es.}
-    }
-}
+Am Fuß der Treppen stehen die Häuser aus einem dunkleren Stein, den der Regen vieler Generationen glatt geschliffen hat, und sie rücken so dicht zusammen, dass sich ihre Traufen über den Gassen berühren und es darunter niemals ganz Tag wird. Wasser läuft hier überall, in Rinnen, über die Stufen, aus den Fugen der Mauern, und sein Geräusch hört nicht auf, auch dann nicht, wenn du stehen bleibst und den Atem anhältst. An einer Treppe wächst ein einzelner Baum, verkrüppelt und schwarz, mit drei Blättern daran. # bild: unterstadt # stimmung: spannung
+Hinter den letzten Dächern beginnt ein Friedhof, und jenseits davon, hoch über den Gräbern, steigt eine schmale Treppe an der Felswand empor bis zu einem Tor, von dem man hier unten nur den dunklen Bogen erkennt. Dahinter, sagt man in Yharnam, liege der Bezirk der Kathedrale, in dem die Heilende Kirche wohnt, und wer in der Unterstadt geboren ist, kennt diese Treppe sein Leben lang nur von unten. # lore: heilende_kirche
 // [ERWEITERT] Einsicht kostet leise: Ab 2 hört man, was nicht da ist (einmal).
-{ k1_hub_c > 1 and einsicht >= 2: {Hinter einem Fenster ruft jemand deinen Namen, {name}, zweimal, leise und freundlich, so wie man zum Essen ruft. Das Fenster ist von außen zugenagelt, und die Nägel sind alt.|} }
-{ eileen_stufe == 1: Über den Gräbern, auf dem First einer niedrigen Hütte, sitzt ein Bündel schwarzer Federn, das sich nicht putzt, und die Krähen auf den Grabsteinen darunter halten Abstand zu ihm. }
-- (wohin)
-+ [Hinab in die Kanalisation steigen #fliesst]
-    Das Wasser läuft dir {k1_c_kanal:wieder} die Treppe hinab voraus, Stufe um Stufe, bis es unten in der Dunkelheit zu rauschen beginnt.
-    -> k1_c_kanal
-+ {eileen_stufe == 1} [Zu den Federn auf dem Dach klettern #fliesst]
-    Ein Fass, eine Regenrinne, dann die Ziegel, nass und kalt unter den Händen, und sie geben unter deinen Stiefeln kaum nach.
-    -> k1_c_eileen
-+ [Zu den Gräbern hinübergehen #fliesst]
-    Die Gasse führt dich {k1_c_graeber:wieder} hinaus, bis die Mauern aufhören und die Grabsteine anfangen.
-    -> k1_c_graeber
-+ {kanal_leiter} [Über die Kanalleiter hinaufsteigen #fliesst]
-    Knietief durch den Kanal bis zur eisernen Leiter, Sprosse um Sprosse hinauf, bis über dir das Gitter aufschwingt und dir der Rauch der oberen Gassen ins Gesicht schlägt.
-    -> k1_hub_b
-+ {ampulle > 0 and leben < LEBEN_MAX} [Die Ampulle in den Schenkel stoßen #fliesst] -> ampulle_ruhig -> wohin
-+ {kleriker == "besiegt"} [Die Laterne an der Brücke berühren #fliesst]
-    ~ laterne = -> k1_hub_c
-    -> traum_von_laterne
-+ {kleriker == "besiegt"} [Die Treppen zur Brücke hinaufsteigen #fliesst]
-    Oben liegt die Bestie noch, wo sie gefallen ist. Die Ratten haben angefangen, und das Geweih ragt über die Kutschen wie die Krone eines umgestürzten Baumes. An ihr vorbei, ohne stehen zu bleiben, bis dorthin, wo du die Brücke betreten hast.
-    -> k1_hub_b
-+ {kleriker != "besiegt"} [Die Treppen zur Brücke hinaufsteigen #fliesst]
-    ~ bruecke_von = "unten"
-    Mit jeder Stufe wird das Wasser leiser und der Wind lauter, bis die Brücke wieder vor dir liegt.
-    -> k1_n1_kleriker
-+ [{k1_c_graeber:Durch das Tor mit dem Namen gehen|Durch das Tor hinter dem Friedhof gehen} #fliesst]
-    Das Tor{k1_c_graeber: mit dem Namen darüber|, das hinter dem Friedhof in einem Bogen aus schwarzem Stein steht,} gibt unter deiner Hand nach, ohne zu knarren, als habe es eben erst jemand geölt.
-    -> k1_n2_gascoigne
+{ einsicht >= 2: Hinter einem Fenster ruft jemand deinen Namen, {name}, zweimal, leise und freundlich, so wie man zum Essen ruft. Das Fenster ist von außen zugenagelt, und die Nägel sind alt. }
+// Die Laterne (feste Schwelle zum Traum, kein Speicherpunkt): Ihr kaltes Licht erinnert an den blassen Himmel des Traumes.
+An einem eisernen Pfahl neben der Treppe steht eine Laterne, erloschen, das Glas von innen verrußt. Kaum berührt deine Hand das kalte Glas, flammt sie auf, und die Boten kriechen aus dem Boden und neigen die Köpfe, als grüßten sie dich. Ihr Licht ist kalt und weiß, und es erinnert dich an den elfenbeinfarbenen Himmel über dem Garten, so deutlich, dass du die Augen schließt. # lore: laternen
+- (wahl)
++ {ampulle > 0 and leben < LEBEN_MAX} [Die Ampulle in den Schenkel stoßen #fliesst] -> ampulle_ruhig -> wahl
++ [Dich auf den Traum konzentrieren #fliesst]
+    Du legst die Hand an das Glas und sammelst dich auf den Garten, auf das Gras im Nacken, auf den Geruch von Leinen. Das Licht trägt dich hinüber.
+    -> k1_traum_zwei
 
 === k1_c_kanal ===
 // TITEL: Kanalisation (Schwein, Leiter)
@@ -63,17 +35,10 @@
 }
 { maedchen_wo == "fort" and not maedchen_tot:
     ~ maedchen_tot = true
-    { schwein == "tot":
-        Das Schwein steht wieder im Wasser. Du hast es getötet, und es steht da, als hätte die Nacht es neu geboren, so wie sie dich neu gebiert, jedes Mal.
-    }
     ~ schwein = ""
     Weiter hinten im Halbdunkel schmatzt es, schwer und nass, und das Wasser schlägt in kleinen Wellen gegen deine Knie. Ein Schwein, oder es war einmal eines: doppelt so groß wie ein Ochse, das Fell voller Geschwüre, die Hauer gelb und rissig. Es frisst. # bild: kanal_schwein # stimmung: grauen
     Neben ihm im Wasser treibt ein Kleid, das einmal hell war, und ein Schuh, nicht länger als deine Hand. Aus dem Maul, zwischen den Hauern, hängt ein Band. Es war einmal weiß. Jetzt ist es rot und schwer bis an den Knoten, und nur dort, wo es geknotet ist, hat sich ein Fingerbreit Weiß gehalten. # quest: maedchen_tot
     Deine Hand ist schon auf dem Weg zur Säge, bevor du sie losschickst.
-}
-{ schwein == "tot": -> danach }
-{ schwein == "umgangen":
-    Das Schwein wühlt noch immer im Wasser, dort, wo du dich an ihm vorbeigeschoben hast. Als du kommst, hebt es den Kopf und lässt ihn wieder sinken. # bild: kanal_schwein
 }
 { schwein == "" and not maedchen_tot:
     Weiter hinten im Halbdunkel schmatzt es, schwer und nass. Ein Schwein, doppelt so groß wie ein Ochse, die Hauer gelb und rissig, wühlt im Becken der Toten, und einmal kommt dabei ein Unterkiefer mit hoch; es kaut weiter, ohne den Kopf zu heben. # bild: kanal_schwein
@@ -81,18 +46,13 @@
 + [Dem Schwein entgegenwaten #fliesst]
     Das kalte Wasser schiebt sich gegen deine Knie, als wolle es dich zurückhalten, und die Säge liegt dir schwer in der Hand.
     -> kampf
-+ {schwein != "umgangen"} [Dich an der Wand vorbeischleichen #fliesst]
++ [Dich an der Wand vorbeischleichen #fliesst]
     ~ schwein = "umgangen"
     Den Rücken am Schleim der Steine, fingerbreit um fingerbreit. Einmal hebt das Schwein den Kopf und schnüffelt in deine Richtung, und der Atem bleibt dir in der Brust stehen, bis es weiterfrisst.
     -> leiter
-+ {schwein == "umgangen"} [Noch einmal an ihm vorbei #fliesst]
-    Dieselbe Wand, derselbe Schleim, und diesmal hebt es nicht einmal den Kopf.
-    -> leiter
-+ [Die Treppe wieder hinaufsteigen #fliesst]
-    Das Rauschen bleibt hinter dir zurück, Stufe um Stufe, bis es nur noch in den Rinnen der Gassen weiterläuft.
-    -> k1_hub_c
 
 = kampf
+~ kampfanfang = -> k1_c_kanal.kampf
 # stimmung: kampf
 - (t1)
 Das Schwein hebt den Kopf aus dem Wasser und sieht dich an. Es senkt den Schädel, bis die Hauer die Oberfläche furchen, scharrt mit den Vorderhufen, dass es spritzt, und seine kleinen roten Augen folgen dir, wohin du auch trittst, genau so lange, bis es losrennt. # anzeichen: schwein_ansturm
@@ -106,8 +66,8 @@ Das Schwein hebt den Kopf aus dem Wasser und sieht dich an. Es senkt den Schäde
     ~ treffer(1)
     { leben <= 0: -> tod }
     -> t2
-+ {staerke >= 1} [Den Ansturm vorn mit der Schulter fangen #fliesst]
-    Die Füße in den Schlamm unter dem Wasser gestemmt, so wie man ein Tor gegen den Sturm hält, nimmst du den Ansturm mit der Schulter. Die Wärme der Puppe sitzt in deinen Armen, und du hältst. Das Schwein schiebt und quiekt, und als es zurückweicht, um neu anzulaufen, liegt seine Flanke offen. # notiz: staerke_genutzt
++ {jagdnotizen} [Den Ansturm vorn mit der Schulter fangen #fliesst]
+    Die Füße in den Schlamm unter dem Wasser gestemmt, so wie man ein Tor gegen den Sturm hält, nimmst du den Ansturm mit der Schulter. Das Heft des Toten sitzt in deinen Armen, und du hältst. Das Schwein schiebt und quiekt, und als es zurückweicht, um neu anzulaufen, liegt seine Flanke offen. # notiz: staerke_genutzt
     -> t2
 + [Stehen bleiben und nach vorn stechen #fliesst]
     Die Säge trifft den Schädel und gleitet ab, als hätte sie Stein getroffen. Die Hauer reißen dir den Schenkel auf, und du fliegst rückwärts ins Wasser.
@@ -132,7 +92,6 @@ Es wendet sich schwerfällig im Wasser und reißt das Maul auf, und zwischen den
     -> ampulle_gefahr(1) -> t2
 - (sieg)
 ~ schwein = "tot"
-~ echos = echos + 3
 Das Schwein sinkt, und um seinen Leib wird der Kanal dunkel, so wie sich Tinte in einem Glas ausbreitet. Was aus ihm aufsteigt, bleibt dir als Summen in den Fingerspitzen.
 { maedchen_tot and not band:
     ~ band = true
@@ -141,15 +100,9 @@ Das Schwein sinkt, und um seinen Leib wird der Kanal dunkel, so wie sich Tinte i
 -> leiter
 
 = leiter
-{ not kanal_leiter:
-    ~ kanal_leiter = true
-    Am Ende des Kanals führt eine eiserne Leiter hinauf zu einem Gitter, das von unten verriegelt ist. Erst beim dritten Ruck gleitet der rostige Riegel zurück, das Gitter schwingt auf, und durch die Öffnung fällt ein Stück Himmel, das du kennst, über den Dächern von Zentral-Yharnam. Von oben riecht es nach dem Räucherwerk der Gassen bei der Laterne. Das Gitter lässt du offen. # notiz: abkuerzung
-}
--> k1_hub_c
-
-= danach
-Das Wasser riecht nach Eisen. Das Schwein liegt, wo es gefallen ist, halb unter der Oberfläche, und auf seinem Rücken sitzen schon die Krähen. Am Ende des Kanals steht das Gitter über der Leiter offen, und ein grauer Streifen Licht fällt herab.
--> k1_hub_c
+// Am Ende des Kanals: der Weg führt in die Unterstadt (die Leiter nach oben ist entfallen, es gibt keinen Rückweg).
+Am Ende des Kanals führen Stufen aus dem Wasser, schief und glitschig, in eine Gasse, in der das Licht eine Spur heller ist. Hinter dir rauscht das Wasser weiter, als wäre nichts gewesen.
+-> k1_c_unterstadt
 
 === k1_c_eileen ===
 // TITEL: Eileen über den Gräbern
@@ -161,7 +114,7 @@ Das Wasser riecht nach Eisen. Das Schwein liegt, wo es gefallen ist, halb unter 
 Auf dem Dach einer alten Totengräberhütte, zwischen moosigen Ziegeln und einem Schornstein, aus dem seit Jahren kein Rauch mehr steigt, sitzt {eileen_genannt:Eileen|die Frau im Federmantel} so reglos wie die Krähen, die unten auf den Grabsteinen hocken. Als du die letzten Ziegel hinaufkommst, rückt sie ein Stück zur Seite, ohne den Blick vom Friedhof zu nehmen. # bild: daecher_eileen # stimmung: ruhig
 { eileen < 0:
     Sie sagt lange nichts. Dann, ohne dich anzusehen: „Geh. Das hier ist nichts für einen, der nicht weiß, wann man den Mund hält.“ # notiz: eileen_kalt
-    -> k1_hub_c
+    -> k1_c_tor
 }
 // [ERWEITERT] Einsicht kostet leise: Eileen merkt es.
 { einsicht >= 2:
@@ -193,7 +146,7 @@ Sie greift nach der Schnur an ihrem Hals und dreht eines der Abzeichen ans Licht
     ~ eileen_name = true
     Unten tropft Wasser in ein offenes Grab, und eine Weile ist das alles. Dann bricht Eileen ein Stück Dörrfleisch in zwei Hälften und reicht dir eine, ohne hinzusehen. Der Handschuh an ihrer Hand hat keine Fingerkuppen mehr, und die Finger, die daraus hervorsehen, sind schmal und voller alter Narben. „Name?“, fragt sie, kauend. Du sagst ihn ihr. Sie wiederholt ihn nicht, aber sie nickt, als lege sie ihn irgendwo ab, wo sie ihn wiederfindet.
 - Sie steht auf, in einem Rascheln von Federn, und ist über den First verschwunden, ohne dass sich ein Ziegel rührt. # stimmung: ruhig
--> k1_hub_c
+-> k1_c_tor
 
 === k1_c_graeber ===
 // TITEL: Die Gräber (zweite Begegnung mit Gascoigne)
@@ -209,9 +162,8 @@ Sie greift nach der Schnur an ihrem Hals und dreht eines der Abzeichen ans Licht
     Am Ende des Friedhofs steht ein schmiedeeisernes Tor in einem Bogen aus schwarzem Stein, und über dem Bogen ist ein einziges Wort gemeißelt: Oedon. Kein Vorname, keine Jahreszahl, kein Gebet.{ herkunft == "gelehrter": In keinem der Bücher über diese Stadt stand dieser Name, und du hast alle gelesen, die man draußen bekommt.} Deine Lippen formen ihn, ehe du es willst. # lore: oedon
     { einsicht >= 1: Für einen Atemzug antwortet etwas. Keine Stimme, nur ein Druck hinter den Ohren wie vor einem Gewitter, das nicht vom Himmel kommt. }
 }
-// Wer Gascoigne schon am Grab gegenübergestanden hat, findet ihn hier nicht mehr.
-{ gascoigne2 or k1_n2_gascoigne: -> still }
 ~ gascoigne2 = true
+~ fr_frei_machen(fr_kippen)
 Zwischen den Gräbern kniet ein Mann, und er kniet nicht zum Beten. Vor ihm steckt ein helles, neues Totenbrett in aufgeworfener Erde, mit Kreide beschriftet: Jonas, Bäckerlehrling. Er hat beide Hände in diese Erde gegraben und wühlt darin, beinahe zärtlich, die Unterarme dunkel bis an die Ellbogen von Erde und Blut, und dabei summt er, zwei Töne, immer dieselben zwei.{q_frau == 1: Es ist Gascoigne.} # lore: blutrausch # stimmung: grauen
 Der Wind dreht, und sein Geruch kommt herüber, stärker als die Gräber: nasses Fell in einem verschlossenen Flur, Tage nach dem Regen.
 { q_frau == 1:
@@ -241,7 +193,7 @@ Der Wind dreht, und sein Geruch kommt herüber, stärker als die Gräber: nasses
 * [Leise zurückweichen #fliesst]
     ~ gascoigne = gascoigne - 1
     Schritt um Schritt, ohne ihn aus den Augen zu lassen. Er sieht dir nach, mit dem verbundenen Gesicht, und folgt dir nicht.
-    -> k1_hub_c
+    -> k1_c_eileen
 
 = tochter
 {
@@ -258,12 +210,13 @@ Der Wind dreht, und sein Geruch kommt herüber, stärker als die Gräber: nasses
 = warnung
 Er steht auf, und er ist sehr groß, so nah, und von ihm geht eine Hitze aus, die du durch den Mantel spürst. Mit der Axt deutet er auf das Tor mit dem Namen darüber. „Bleib weg vom Grab. Da drin ist meine. Meine Bestie. Ich jag sie schon so lange. So lange.“ Er wiegt den Kopf hin und her. „Gehen alle als Jäger los, weißt du. Alle. Und was dann heimkommt, klopft anders an die Tür.“ Dann legt er den Kopf schief, als lausche er einer Frage, die niemand gestellt hat. „Ich weiß nur nicht mehr, wie sie aussieht.“ # notiz: gascoigne_warnung
 Er geht durch das Tor, und es schwingt hinter ihm zu und bleibt einen Spalt offen. Erst jetzt merkst du, dass du die ganze Zeit durch den Mund geatmet hast.
--> k1_hub_c
+-> k1_c_eileen
 
-= still
-{ gascoigne2:
-    Am Totenbrett des Bäckerlehrlings kniet niemand mehr. Die Erde ist aufgewühlt, und von dort führen Abdrücke durch den Schlamm bis zum Tor, tief und breit, und es sind die Abdrücke von Händen.
-- else:
-    Zwischen den Steinen steckt ein helles, neues Totenbrett, mit Kreide beschriftet: Jonas, Bäckerlehrling. Die Erde davor ist von Händen durchwühlt, tief hinab, und von dort führen breite Abdrücke durch den Schlamm bis zum Tor.
-}
--> k1_hub_c
+=== k1_c_tor ===
+// TITEL: Das Tor des Oedon
+// Früher eine Option im Hub der Unterstadt; jetzt der feste Weg zum Nadelöhr. Letzte Gelegenheit, die Ampulle zu nutzen.
+- (wahl)
++ {ampulle > 0 and leben < LEBEN_MAX} [Die Ampulle in den Schenkel stoßen #fliesst] -> ampulle_ruhig -> wahl
++ [Durch das Tor mit dem Namen gehen #fliesst]
+    Das Tor mit dem Namen darüber gibt unter deiner Hand nach, ohne zu knarren, als habe es eben erst jemand geölt.
+    -> k1_n2_gascoigne

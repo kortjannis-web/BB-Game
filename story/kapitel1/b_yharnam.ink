@@ -1,4 +1,4 @@
-// KAPITEL 1, TEIL B: ZENTRAL-YHARNAM. Freie Reihenfolge. Führt zu NADELÖHR 1 (Brücke).
+// KAPITEL 1, AKT II: ZENTRAL-YHARNAM. Entscheidungsbuch (Umbau 2026-11-06): jede Station einmal, vorwärts, kein Hub. Erstes Viertel: zwei von drei Stationen; Kreuzung: Scheiterhaufen (fest); zweites Viertel: zwei von drei; Eileen (fest); dann NADELÖHR 1 (Brücke).
 // Handgearbeitet 2026-11-05 nach docs/stimme.md und dem Faktencheck (docs/faktencheck-kapitel1.md, Abschnitt b_yharnam und Übergreifend 2b, 4, 10):
 // Ortsbilder in Stimme A, Geschehen in B, alles von der Kirche in C. Alle Optionen fließen in den Satz (#fliesst).
 // Feinschliff 2026-11-05 nach docs/lektorat-kapitel1.md und docs/umsetzung-lektorat.md (L1 bis L6): Fortsetzungen nach der Wahl beginnen mit dem, was geschieht;
@@ -12,89 +12,102 @@ VAR gilbert_kleriker = false  // Gilbert hat das Gerücht erzählt, aus Kirchenl
 VAR frau_betet = false        // an der Tür der Betenden gelauscht (Violas Spur)
 VAR haus_zettel = false       // im dunklen Haus den Zettel über die gesperrte Brücke gefunden
 VAR tuer_stimme = 0           // wie viele weitere Stimmen hinter den Türen gehört (0 bis 3)
-VAR hb_fackel = false         // Wiederkehrtext nach Marthas Tod gezeigt
-VAR hb_glocke = false         // Wiederkehrtext nach den Gräbern gezeigt
-VAR hb_uhr = false            // Wiederkehrtext mit der Spieluhr in der Tasche gezeigt
-VAR hb_schrei = false         // Wiederkehrtext nach dem zweiten Kreischen gezeigt
-VAR hb_bruecke = false        // Wiederkehrtext mit dem Blick auf die dunkle Brücke gezeigt
 
-=== k1_hub_b ===
-// TITEL: Zentral-Yharnam (frei)
+=== k1_b_ankunft ===
+// TITEL: Zentral-Yharnam: Ankunft (Akt II)
 // [KANON lore:orte/zentral-yharnam] Särge in den Gassen, Gaslaternen, Hunde in Käfigen (Artbook, LK §25.1, §25.4; gegner/hunde.md).
-// Wiederkehr (Faktencheck Übergreifend 4): je Besuch höchstens ein Satz, der zeigt, was sich seit dem letzten Mal verändert hat; Zufallssätze nur als Rest.
-// [ERWEITERT] Die Sonne, die nicht sinkt (L6): hier als Schatten des Laternenpfahls, der nicht wandert.
+// Früher der erste Besuch des Hubs; jetzt die Ankunft nach Gilbert, einmal.
 -> betreten("zentral") ->
-{ k1_hub_b == 1:
-    Yharnam ist eine Stadt aus Treppen. Sie steigen und fallen zwischen Häusern, deren Giebel sich so weit über die Gassen neigen, dass zwischen ihnen nur ein Streifen Himmel bleibt, und über den Dächern steht ein Rauch, der sich nicht verzieht. Irgendwo läuten Glocken, unregelmäßig, als zöge niemand an den Seilen. Unten in den Straßen wandern Fackeln. # bild: zentral_yharnam # stimmung: spannung # lore: jagdnacht # klang: glocke
-    An den Hauswänden lehnen Särge, aufrecht, mit Ketten an die eisernen Ringe geschlossen, an denen man sonst die Pferde festmacht, als sollte aus ihnen nichts mehr herauskommen. Gleich neben deiner Laterne steht eine Haustür offen, die einzige in der ganzen Straße, und gleich hinter ihrer Schwelle fängt das Dunkel an.
-    Vor vielen Fenstern hängen kleine Laternen mit rotem Glas, in denen Räucherwerk schwelt, an manchen Häusern drei oder vier übereinander, an einem ein ganzes Dutzend, so dicht, dass das Fenster dahinter verschwindet. Der Geruch ist süß und schwer und legt sich dir auf die Zunge wie ein Tuch auf ein Gesicht. # lore: raeucherwerk
-    Hinter den Fenstern brennt kein Licht als das rote, die Riegel sind vorgeschoben, und auf der ganzen Straße bist du der Einzige, der nicht weiß, worauf alle warten.
+Yharnam ist eine Stadt aus Treppen. Sie steigen und fallen zwischen Häusern, deren Giebel sich so weit über die Gassen neigen, dass zwischen ihnen nur ein Streifen Himmel bleibt, und über den Dächern steht ein Rauch, der sich nicht verzieht. Irgendwo läuten Glocken, unregelmäßig, als zöge niemand an den Seilen. Unten in den Straßen wandern Fackeln. # bild: zentral_yharnam # stimmung: spannung # lore: jagdnacht # klang: glocke
+An den Hauswänden lehnen Särge, aufrecht, mit Ketten an die eisernen Ringe geschlossen, an denen man sonst die Pferde festmacht, als sollte aus ihnen nichts mehr herauskommen. Gleich neben deiner Laterne steht eine Haustür offen, die einzige in der ganzen Straße, und gleich hinter ihrer Schwelle fängt das Dunkel an.
+Vor vielen Fenstern hängen kleine Laternen mit rotem Glas, in denen Räucherwerk schwelt, an manchen Häusern drei oder vier übereinander, an einem ein ganzes Dutzend, so dicht, dass das Fenster dahinter verschwindet. Der Geruch ist süß und schwer und legt sich dir auf die Zunge wie ein Tuch auf ein Gesicht. # lore: raeucherwerk
+Hinter den Fenstern brennt kein Licht als das rote, die Riegel sind vorgeschoben, und auf der ganzen Straße bist du der Einzige, der nicht weiß, worauf alle warten.
+-> k1_viertel1
+
+=== k1_viertel1 ===
+// TITEL: Erstes Viertel (zwei von drei)
+// Kartenmodell (Sorcery!): Von drei Stationen besucht man zwei, in beliebiger Reihenfolge; die dritte bleibt verloren. Die Wahl ist nicht blind: jede Station kündigt sich durch eine Spur an (Hund, Glocke, offene Tür).
+{ v1_zahl >= 2: -> k1_nach_viertel1 }
+{ v1_zahl == 0:
+    Drei Spuren ziehen dich in verschiedene Richtungen: ein Hund, der weit unten bellt, eine Glocke aus der Tiefe einer Gasse, und die offene Tür, hinter der das Dunkel anfängt. Zwei davon kannst du folgen. Die dritte bleibt hinter dir.
 - else:
-    {
-    - mob_verbrannt and not hb_fackel:
-        ~ hb_fackel = true
-        Vor einer Tür an der Ecke zum Markt liegt eine verkohlte Fackel, sorgsam quer über die Schwelle gelegt. Die Läden der Bäckerei daneben sind geschlossen, um die Klinke hat jemand ein schwarzes Tuch gebunden, und aus der Ritze unter der Tür riecht es nach kaltem Ofen und nach Kümmel.
-    - gascoigne2 and not hb_glocke:
-        ~ hb_glocke = true
-        Irgendwo im Osten schlägt eine Glocke an und hört nicht wieder auf, ein einzelner Ton, immer derselbe, in einem Abstand, in dem man einatmen könnte. Deine Lippen zählen die Schläge mit, das tun sie seit den Gräbern, und du merkst es erst beim elften.
-    - spieluhr and not hb_uhr:
-        ~ hb_uhr = true
-        Die Spieluhr in deiner Tasche klickt bei jedem Schritt gegen einen Knopf deines Mantels, und du legst die Hand darauf, damit sie still ist, und lässt sie dort.
-    - haus_zettel and not hb_bruecke:
-        ~ hb_bruecke = true
-        Von der Ecke an der Laterne sieht man zwischen zwei Giebeln ein Stück der großen Brücke, einen schwarzen Bogen gegen den Rauch, und auf ihrer ganzen Länge brennt nicht ein Licht. Der Zettel aus dem dunklen Haus knistert in deiner Tasche. # lore: kirche_sperrt_bruecke
-    - schreie == 2 and not hb_schrei:
-        ~ hb_schrei = true
-        Die alte Stimme, die vorhin hinter einer Tür zu beten begann, betet noch immer. Sie ist heiser geworden, aber den Faden hat sie nicht verloren.
-    - else:
-        {~Die Straßen glänzen nass im Licht der Laterne, und der Rauch über den Dächern hängt dort, wo er vorhin hing.|In einem Käfig an der Ecke wirft sich ein Hund gegen die Stäbe, einmal, zweimal, und hört mitten im Bellen auf. Warum, hast du nicht gesehen.|Eine Glocke schlägt, dann eine zweite, und danach hörst du nur noch dein eigenes Blut in den Ohren.|In einer fernen Straße ziehen Fackeln vorbei, und jemand singt dazu ein Lied, das wie ein Kinderlied klingt und keines ist.|Der Schatten des Laternenpfahls liegt über derselben Fuge im Pflaster wie bei deiner Ankunft, auf den Fingerbreit genau, und über den Giebeln ist die rote Sonne nicht von der Stelle gerückt.}
-    }
+    Zwei Spuren sind noch da. Eine davon darfst du noch gehen, dann ist der Weg weiter vorn.
 }
-// Das Kreischen der Kleriker-Bestie, zweimal, bevor man ihr begegnet: beim ersten Zurückkommen und beim vierten Mal.
-{ kleriker == "" and ((schreie == 0 and k1_hub_b >= 2) or (schreie == 1 and k1_hub_b >= 4)):
-    -> schrei ->
-}
-- (wohin)
-+ [{not k1_b_gilbert:Hinüber zu dem vergitterten Fenster|Zu Gilbert ans Gitter} #fliesst]
-    {not k1_b_gilbert:Hinüber zum Fenster sind es nur ein paar Schritte über nasses Pflaster.|Zu Gilbert ans Gitter, und schon von Weitem hörst du ihn husten.}
-    -> k1_b_gilbert
-+ [In die Gasse mit den Räucherlampen #fliesst]
-    {not k1_b_tueren:In die Gasse mit den Räucherlampen führen sieben Stufen hinab, in der Mitte zu Mulden ausgetreten.|In die Gasse mit den Räucherlampen, die sieben ausgetretenen Stufen hinab, und unten schlägt dir der rote Rauch entgegen.}
+- (wahl)
++ {not k1_b_tueren and v1_zahl < 2} [Dem Hund folgen, in die Gasse mit den Räucherlampen hinab #fliesst]
+    ~ v1_zahl = v1_zahl + 1
+    In die Gasse mit den Räucherlampen führen sieben Stufen hinab, in der Mitte zu Mulden ausgetreten.
     -> k1_b_tueren
-+ {not k1_b_anschlag} [Zu der schmalen Kapelle hinab #fliesst]
++ {not k1_b_anschlag and v1_zahl < 2} [Den Glocken folgen, zu der schmalen Kapelle hinab #fliesst]
+    ~ v1_zahl = v1_zahl + 1
     Zu der schmalen Kapelle führen drei Stufen hinab, glatt getreten von vielen Füßen, die nicht mehr kommen.
     -> k1_b_anschlag
-+ [Dem Rauch nach die Hauptstraße hinauf #fliesst]
-    {not k1_b_scheiterhaufen:Dem Rauch nach die Hauptstraße hinauf, und mit jedem Schritt wird der Geruch fetter.|Dem Rauch nach die Hauptstraße hinauf, zurück zu dem Platz, und der Geruch erwartet dich schon an der ersten Ecke.}
-    -> k1_b_scheiterhaufen
-+ [{spieluhr or maedchen_wo == "fort":Zum Brunnenplatz hinter dem Tor|Zum Brunnenplatz, der Spieluhr nach} #fliesst]
-    {spieluhr or maedchen_wo == "fort":Zum Brunnenplatz, durch das Tor in der Mauer. Diesmal spielt dort keine Melodie.|Zum Brunnenplatz führt dich eine Melodie, so leise, dass du zweimal stehen bleibst, um sicher zu sein, und dann durch ein Tor in der Mauer.}
-    -> k1_b_maedchen
-+ [In die Gasse unter den Dächern #fliesst]
-    {not k1_b_daecher:In die Gasse unter den Dächern, und mit dem ersten Schritt wird es eng.|In die Gasse unter den Dächern noch einmal, den Blick schon oben an den Kanten.}
-    -> k1_b_daecher
-+ [Zu den Dachbalken über dem Kanaleingang #fliesst]
-    {eileen_stufe == 0:Zu den Dachbalken über dem Kanaleingang führen eiserne Krampen in der Mauer hinauf, kalt und rau vom Rost.|Zu den Dachbalken über dem Kanaleingang noch einmal die rostigen Krampen hinauf.}
-    -> k1_b_eileen
-+ {not haus_zettel} [In das dunkle Haus mit der offenen Tür #fliesst]
-    {not k1_b_haus:In das dunkle Haus mit der offenen Tür, und unter dem ersten Schritt knarrt die Schwelle so laut, dass du stehen bleibst und horchst.|In das dunkle Haus noch einmal, und die Schwelle knarrt wie beim ersten Mal.}
++ {not k1_b_haus and v1_zahl < 2} [Der offenen Tür folgen, in das dunkle Haus #fliesst]
+    ~ v1_zahl = v1_zahl + 1
+    In das dunkle Haus mit der offenen Tür, und unter dem ersten Schritt knarrt die Schwelle so laut, dass du stehen bleibst und horchst.
     -> k1_b_haus
-+ {kanal_leiter} [Durch die Kanäle hinab in die Unterstadt #fliesst]
-    Durch die Kanäle hinab, Sprosse um Sprosse die Leiter entlang, die du schon kennst, bis unten das Rauschen dich wieder aufnimmt.
-    -> k1_hub_c
-+ {ampulle > 0 and leben < LEBEN_MAX} [Die Ampulle in den Schenkel stoßen #fliesst] -> ampulle_ruhig -> wohin
-+ [An die Laterne treten #fliesst]
-    An die Laterne, an das kleine, schiefe Licht vor der Klinik, und die Flamme darin beugt sich zu dir hin, als du näher kommst.
-    ~ laterne = -> k1_hub_b
-    -> traum_von_laterne
-+ {kleriker != "besiegt"} [Hinauf zur großen Brücke #fliesst]
-    {not k1_n1_kleriker:Hinauf zur großen Brücke führt eine Straße, die mit jedem Schritt breiter und leerer wird, bis an den Fenstern keine Räucherlampe mehr hängt.|Hinauf zur großen Brücke noch einmal. Die letzte Räucherlampe bleibt hinter dir zurück, und dann ist nur noch Wind.}
-    ~ bruecke_von = "oben"
-    -> k1_n1_kleriker
-+ {kleriker == "besiegt"} [Über die große Brücke hinab #fliesst]
-    Über die große Brücke, vorbei an dem, was auf ihr liegt. Fortgeräumt hat es niemand.
-    ~ bruecke_von = "oben"
-    -> k1_n1_kleriker
++ {ampulle > 0 and leben < LEBEN_MAX} [Die Ampulle in den Schenkel stoßen #fliesst] -> ampulle_ruhig -> wahl
+
+=== k1_nach_viertel1 ===
+// Spuren des Nichtgewählten: ein Satz je ausgelassener Station. Dann das erste Kreischen, dann der Rauch.
+{ not k1_b_tueren: Weit hinter dir bellt noch der Hund, und du gehst nicht hin. }
+{ not k1_b_anschlag: Die Glocke in der Tiefe der Gasse schlägt noch einmal, und du gehst nicht hin. }
+{ not k1_b_haus: Die offene Tür steht hinter dir im Dunkel, und du gehst nicht hinein. }
+{ haus_zettel:
+    Von der Ecke an der Laterne sieht man zwischen zwei Giebeln ein Stück der großen Brücke, einen schwarzen Bogen gegen den Rauch, und auf ihrer ganzen Länge brennt nicht ein Licht. Der Zettel aus dem dunklen Haus knistert in deiner Tasche. # lore: kirche_sperrt_bruecke
+}
+-> schrei ->
+Dem Rauch nach die Hauptstraße hinauf, und mit jedem Schritt wird der Geruch fetter.
+-> k1_b_scheiterhaufen
+
+=== k1_nach_scheiterhaufen ===
+// Nach der Kreuzung: Wiederkehrsatz aus dem alten Hub, einmal, an fester Stelle.
+{ mob_verbrannt:
+    Vor einer Tür an der Ecke zum Markt liegt eine verkohlte Fackel, sorgsam quer über die Schwelle gelegt. Die Läden der Bäckerei daneben sind geschlossen, um die Klinke hat jemand ein schwarzes Tuch gebunden, und aus der Ritze unter der Tür riecht es nach kaltem Ofen und nach Kümmel.
+- else:
+    Hinter dir bleibt der Platz zurück. Das Feuer ist heruntergebrannt, und am Fuß des Pfahls liegt frisches Reisig, sorgfältig geschichtet, für das nächste.
+}
+-> k1_viertel2
+
+=== k1_viertel2 ===
+// TITEL: Zweites Viertel (zwei von drei)
+{ v2_zahl >= 2: -> k1_nach_viertel2 }
+{ v2_zahl == 0:
+    Wieder drei Spuren: eine Melodie, so leise, dass du zweimal stehen bleibst, um sicher zu sein; ein Schuss, weit weg, und danach Stille; und eine Leiter, die an einer Hauswand hinauf zu den Dächern führt. Zwei davon kannst du folgen.
+- else:
+    Zwei Spuren sind noch da. Eine darfst du noch gehen.
+}
+- (wahl)
++ {not k1_b_maedchen and v2_zahl < 2} [Der Melodie folgen, zum Brunnenplatz #fliesst]
+    ~ v2_zahl = v2_zahl + 1
+    Zum Brunnenplatz führt dich eine Melodie, so leise, dass du zweimal stehen bleibst, um sicher zu sein, und dann durch ein Tor in der Mauer.
+    -> k1_b_maedchen
++ {not k1_b_daecher and v2_zahl < 2} [Dem Schuss folgen, in die Gasse unter den Dächern #fliesst]
+    ~ v2_zahl = v2_zahl + 1
+    In die Gasse unter den Dächern, und mit dem ersten Schritt wird es eng.
+    -> k1_b_daecher
++ {not k1_b_dachweg and v2_zahl < 2} [Die Leiter hinaufsteigen, auf die Dächer #fliesst]
+    ~ v2_zahl = v2_zahl + 1
+    Eine Leiter an der Hauswand, die Sprossen kalt und rau vom Rost, und über dir wird der Rauch dünner.
+    -> k1_b_dachweg
++ {ampulle > 0 and leben < LEBEN_MAX} [Die Ampulle in den Schenkel stoßen #fliesst] -> ampulle_ruhig -> wahl
+
+=== k1_nach_viertel2 ===
+// Spuren des Nichtgewählten, das zweite Kreischen, die Sonne; dann Eileen (fest).
+{ not k1_b_maedchen: Von irgendwo hinter den Mauern weht eine Melodie herüber, so leise, dass du sie nicht erkennst, und bricht ab. }
+{ not k1_b_daecher: Irgendwo über den Dächern kracht noch einmal ein Schuss. Niemand hat auf dich gezielt. }
+{ not k1_b_dachweg: An einer Hauswand lehnt eine Leiter, und du bist nicht hinaufgestiegen. }
+{ spieluhr: Die Spieluhr in deiner Tasche klickt bei jedem Schritt gegen einen Knopf deines Mantels, und du legst die Hand darauf, damit sie still ist, und lässt sie dort. }
+-> schrei ->
+{ schreie == 2: Die alte Stimme, die vorhin hinter einer Tür zu beten begann, betet noch immer. Sie ist heiser geworden, aber den Faden hat sie nicht verloren. }
+~ fr_frei_machen(fr_nacht)
+Der Schatten des Laternenpfahls liegt über derselben Fuge im Pflaster wie bei deiner Ankunft, auf den Fingerbreit genau, und über den Giebeln ist die rote Sonne nicht von der Stelle gerückt.
+-> k1_b_eileen
+
+=== k1_vor_bruecke ===
+// Nach Eileen: der Weg zur Brücke.
+Hinauf zur großen Brücke führt eine Straße, die mit jedem Schritt breiter und leerer wird, bis an den Fenstern keine Räucherlampe mehr hängt und nur noch Wind ist.
+-> k1_n1_kleriker
 
 === schrei ===
 // TITEL: Kreischen von der Brücke
@@ -124,14 +137,6 @@ VAR hb_bruecke = false        // Wiederkehrtext mit dem Blick auf die dunkle Br�
         Da hustest du selbst, und er hört auf zu lächeln. „Oh“, sagt er leise. „Das kenne ich. Das kenne ich sehr gut.“
     }
     -> haltung
-- else:
-    // [KANON lore:figuren/gilbert] Er kann nicht aufstehen (LK §24.12).
-    Gilbert sitzt schon am Gitter, den Stuhl dicht ans Fenster gerückt, bevor du anklopfst. „Ich habe Sie kommen hören“, sagt er. „Viel anderes als Hören bleibt einem hier nicht.“
-    // [ERWEITERT] Einsicht kostet leise: Figuren merken, dass du anders bist.
-    { einsicht >= 2:
-        Er sieht dich an, dann an dir vorbei auf die Wand hinter dir, und wieder zurück. „Verzeihung“, sagt er. „Sie sehen auf Dinge, die nicht da sind. Oder ich sehe nicht, was da ist. Das zweite wäre mir lieber.“ # notiz: einsicht_gilbert
-    }
-    -> themen
 }
 
 = haltung
@@ -143,7 +148,7 @@ VAR hb_bruecke = false        // Wiederkehrtext mit dem Blick auf die dunkle Br�
 * [Dich vom Gitter abwenden #fliesst]
     ~ gilbert = gilbert - 2
     Er hat noch nicht ausgesprochen, als du dich abwendest. Hinter dir weicht das Gesicht vom Gitter zurück, ohne ein Wort des Vorwurfs, und eine Weile kommt aus dem Spalt kein Laut. Dann hustet er wieder, gedämpft, als presse er sich ein Tuch vor den Mund, damit es dich nicht stört.
-    -> k1_hub_b
+    -> k1_b_ankunft
 - -> themen
 
 = themen
@@ -152,36 +157,33 @@ VAR hb_bruecke = false        // Wiederkehrtext mit dem Blick auf die dunkle Br�
     -> themen
 * [Nach den verriegelten Türen fragen #fliesst]
     ~ gilbert_jagd = true
+    ~ fr_frei_machen(fr_menschen)
     Warum in dieser Stadt jede Tür verriegelt ist? „Eine Jagdnacht“, sagt er, als nenne er das Wetter. „Dann schieben die Leute die Riegel vor und hängen Räucherwerk ins Fenster, und wer das Warten nicht mehr aushält, nimmt Fackel und Mistgabel und geht selbst hinaus.“ Er senkt die Stimme, obwohl niemand zuhört. „Was ihnen da draußen begegnet, haben sie meistens gestern noch gegrüßt. Die Seuche macht aus Menschen Bestien, und wen es als Nächsten trifft, weiß keiner. Mich hat es noch nicht getroffen.“ Er hustet. „Noch nicht.“ # lore: jagdnacht # lore: bestienseuche # lore: buergerjagd
     -> themen
 * [Nach dem bleichen Blut fragen #fliesst]
     Die Worte vom Zettel in der Klinik, bleiches Blut: Gilbert denkt lange darüber nach, die Stirn am Eisen. „Das Wort kenne ich nicht. Aber Blut ist in dieser Stadt die Sache der Heilenden Kirche, jeder Tropfen, und ihr Blut, sagt man, kommt aus der großen Kathedrale drüben im Osten des Tals, so wie Wasser aus einer Quelle. Wenn einer das Wort kennt, dann sie.“ Er hustet, und als er wieder kann, spricht er leiser. „Einem Fremden sagt hier keiner etwas, in gewöhnlichen Nächten. Aber eine Jagdnacht ist keine gewöhnliche. Da stehen Türen offen, die sonst zu sind. Nur nicht die, an die man klopft.“ # lore: heilende_kirche # lore: paleblood
     ~ gilbert_bruecke = true
+    ~ fr_frei_machen(fr_blut)
     -> themen
 * {gilbert_bruecke} [Nach dem Weg zur Kathedrale fragen #fliesst]
     { kleriker == "":
         ~ gilbert_kleriker = true
-        „Zur Kathedrale? Über die große Brücke, einen anderen Weg kenne ich nicht.“ Er lauscht in die Richtung, als könne er es von hier aus hören. „Aber auf der Brücke haust etwas. Es soll einmal in der Kirche gedient haben, gesungen oder gepredigt, so genau weiß das keiner. Man sagt auch, aus Kirchenleuten werden die schlimmsten.“ Er greift nicht nach dem Räucherwerk, wie man es in Yharnam tut, wenn davon die Rede ist. Er hat keins. # lore: kleriker_bestien
+        „Zur Kathedrale? Über die große Brücke, einen anderen Weg kenne ich nicht. Gesperrt soll sie sein, sagt man, seit die Jagd begann, aber was heißt das schon.“ Er lauscht in die Richtung, als könne er es von hier aus hören. „Und auf der Brücke haust etwas. Es soll einmal in der Kirche gedient haben, gesungen oder gepredigt, so genau weiß das keiner. Man sagt auch, aus Kirchenleuten werden die schlimmsten.“ Er greift nicht nach dem Räucherwerk, wie man es in Yharnam tut, wenn davon die Rede ist. Er hat keins. # lore: kleriker_bestien # lore: kirche_sperrt_bruecke
     - else:
         „Zur Kathedrale? Über die große Brücke.“ Sein Blick geht zu deinen Händen und bleibt dort. „Aber das wissen Sie schon, nicht wahr? Sie waren oben. Ist es … ist es noch da?“ # lore: kleriker_bestien
     }
     -> themen
-* {gilbert_bruecke and (k1_b_anschlag or gehrman_jaeger or kleriker == "besiegt")} [Nach den Jägern der Kirche fragen #fliesst]
+* {gilbert_bruecke} [Nach den Jägern der Kirche fragen #fliesst]
     // [KANON lore:fraktionen/jaeger] Ludwig führte die ersten Jäger der Kirche an; viele Kirchenjäger waren Kleriker. Hier nur als Gerücht, ohne Namen.
     // [KANON lore:gegenstaende/heilende-kirche] Das Silberschwert ist das Zeichen der Kirchenjäger (Abzeichen der Schwertjäger, auf der Brücke im Fell der Bestie); Ludwig warb Bürger als Jäger an (Kleidung der Yharnam-Jäger).
     // [ERWEITERT] Das Schwert auf den Haustüren und die Kratzer. Die Mondklinge gestrichen (Zusatzinhalt, Wissenssperre).
     Wer für die Kirche jagt? Gilbert lehnt die Stirn ans Gitter. „Die Leute hier erzählen von einem, der als Erster für sie gejagt hat. Er hat geworben, wen er bekommen konnte: Fuhrknechte, Gerber, Söhne von Wäscherinnen. Und Kleriker. Viele Kleriker.“ Er wartet, bis der Husten vorbei ist. „Auf den Abzeichen seiner Leute war ein Schwert aus Silber, und eine Zeit lang hat man es ihnen zu Ehren auf die Haustüren gemalt.“ Ein schiefes Lächeln. „Dann hat man es wieder abgekratzt. An manchen Türen sieht man noch die Kratzer. Seinen Namen sagt hier keiner gern; ich habe einmal gefragt, warum, und ringsum sind die Läden zugefallen.“ # notiz: erster_kirchenjaeger
     -> themen
-* {q_gilbert == 1 and k1_hub_c} [Ihm von der Unterstadt erzählen #fliesst]
-    ~ q_gilbert = 2
-    ~ gilbert = gilbert + 1
-    Du erzählst ihm von der Brücke, von den Treppen dahinter und von der Unterstadt, in der das Wasser nie aufhört zu laufen{k1_c_graeber:, und von den Gräbern}. Gilbert hört zu, die Stirn am Eisen, und hustet die ganze Zeit kein einziges Mal. „Gibt es da unten Bäume?“, fragt er, als du fertig bist. Du denkst nach und sagst ihm die Wahrheit: einen, verkrüppelt, an einer Treppe. „Einen“, sagt er zufrieden. „Das ist einer mehr, als ich hier habe.“ # quest: gilbert_bericht
-    -> themen
 + [Dich verabschieden #fliesst]
     { gilbert >= 0 and not gilbert_geschenk: -> geschenk }
     { gilbert < 0: Hinter dir hustet er, als du gehst, und tut nicht so, als hätte er dich gehört. }
     { gilbert >= 0: „Gute Jagd“, sagt Gilbert zum Abschied, und er meint es. }
-    -> k1_hub_b
+    -> k1_b_ankunft
 
 = geschenk
 ~ gilbert_geschenk = true
@@ -193,7 +195,7 @@ Du willst dich verabschieden, doch er hebt die Hand. „Warten Sie.“ Er beugt 
     „Und noch etwas.“ Er zögert. „Wenn Sie über die Brücke kommen, erzählen Sie mir, was dahinter liegt. Ich werde es nicht mehr selbst sehen.“ # quest: gilbert_bericht
     ~ q_gilbert = 1
 }
--> k1_hub_b
+-> k1_b_ankunft
 
 === k1_b_tueren ===
 // TITEL: Türen mit Räucherlampen
@@ -207,8 +209,6 @@ Du willst dich verabschieden, doch er hebt die Hand. „Warten Sie.“ Er beugt 
     Unten liegt eine Gasse aus Türen, eine neben der anderen, so dicht, dass kaum ein Fenster dazwischen Platz hat, und vor jeder hängt eine rote Räucherlampe, deren Rauch an der Hauswand hinaufkriecht, bis er sich unter dem nächsten Sims staut. Auf manchen Schwellen liegt eine Prise Salz, auf einer ein umgedrehter Besen. In einer Jagdnacht klopft man in Yharnam nicht an, sagt man, und wer es doch tut, will etwas, das man ihm besser nicht gibt. # bild: tueren # stimmung: spannung
     Hinter den meisten Türen rührt sich nichts. Nur einmal, als du vorbeigehst, dreht innen jemand einen Schlüssel um, behutsam, damit es nicht klickt, und es klickt doch. Hinter einer anderen Tür lacht jemand, schrill und ohne Atem zu holen, und mehrere Stimmen fallen ein, als feierten sie ein Fest, zu dem du nicht geladen bist.
     An der ersten Tür, vor der du stehen bleibst, fährt dich eine Männerstimme an, noch ehe deine Hand das Holz berührt: „Ein Fremder. Natürlich. Wer sonst klopft in einer Jagdnacht? Ihr habt sie doch hergebracht, die Seuche, ihr mit eurem kranken Blut, und jetzt wollt ihr rein.“ Ein Riegel wird vorgeschoben, dann ein zweiter, obwohl der erste genügt hätte. # lore: fremde # lore: raeucherwerk
-- else:
-    Das Lachen hinter der einen Tür hat nicht aufgehört; es ist nur heiserer geworden, und manchmal setzt es aus, als hole drinnen jemand Luft, der es nicht mehr gewohnt ist. # stimmung: spannung
 }
 - (wahl)
 * [Zu der Tür mit dem mageren Hund #fliesst]
@@ -233,10 +233,10 @@ Du willst dich verabschieden, doch er hebt die Hand. „Warten Sie.“ Er beugt 
     -> wahl
 * [Mit der Faust gegen ein Türblatt schlagen #fliesst]
     Dreimal fährt die Faust gegen das Türblatt, und das Holz dröhnt bis in die Nachbarhäuser; die Lampe davor schaukelt an ihrem Haken und wirft roten Schein die Gasse hinauf und hinab. Eine junge Stimme antwortet, schnell vor Angst: „Die gehen selber jagen! Mit Gabeln, mit Fackeln! Oben auf der Hauptstraße, am Feuer, da hängt schon einer … Und Fremde halten sie immer dafür, immer! Gehen Sie doch!“ Danach verflucht sie dich mit Wörtern, die du nicht kennst, und als du dich abwendest, schwankt die Lampe noch immer. # lore: buergerjagd
-    -> k1_hub_b
+    -> k1_viertel1
 + [Die Türen hinter dir lassen #fliesst]
     Das Lachen folgt dir bis an die Treppe und noch zwei Stufen hinauf.
-    -> k1_hub_b
+    -> k1_viertel1
 
 = frau
 // [KANON lore:figuren/einsame-alte-frau] Sie fragt später nach einem sicheren Ort (Kapelle oder Klinik, erst ab Kapitel 2).
@@ -245,7 +245,7 @@ Du willst dich verabschieden, doch er hebt die Hand. „Warten Sie.“ Er beugt 
     Einen sicheren Ort versprichst du ihr, irgendwo in dieser Stadt, und Bescheid, sobald du ihn gefunden hast. Sie schnaubt, trocken, und das Schnauben wird zu einem Husten. „Sicher. Natürlich.“ Aber der Hund hört auf zu knurren, und als du gehst, hörst du, wie sie hinter der Tür murmelnd etwas wiederholt, als wolle sie es sich merken. # quest: alte_frau_ort
 * [Ohne Antwort weitergehen #fliesst]
     Ohne Antwort weiter, und die Stimme hinter der Tür ruft dir nichts nach. Der Hund sieht dir nach, bis du um die Ecke bist; erst dann legt er den Kopf wieder auf die Pfoten.
-- -> k1_hub_b
+- -> k1_viertel1
 
 === k1_b_anschlag ===
 // TITEL: Der Anschlag an der Kapellentür
@@ -260,7 +260,7 @@ Gegeben im Namen der Heilenden Kirche, zur Nacht der Jagd. # stil: anschlag
 Das Datum unter der letzten Zeile steht auf einem schmalen Papierstreifen, der über einen älteren geklebt ist, und an der Kante, wo die Feuchtigkeit den Leim gelöst hat, siehst du, dass unter dem älteren noch weitere liegen, Streifen auf Streifen, jeder ein wenig gelber als der darüber.
 Unten auf der Tür, unter dem Papier, hat jemand mit Kreide etwas dazugeschrieben, klein und schief, und dann versucht, es mit dem Ärmel wegzuwischen. Lesbar ist es noch: Mein Bruder ist gegangen. Er hatte keinen Durst. # notiz: anschlag_kreide
 Hinter der Tür, ganz nah am Holz, atmet jemand. Als dein Schatten auf die Tür fällt, hört das Atmen auf.
--> k1_hub_b
+-> k1_viertel1
 
 === k1_b_haus ===
 // TITEL: Das dunkle Haus (Zettel über die Brücke)
@@ -270,10 +270,9 @@ Hinter der Tür, ganz nah am Holz, atmet jemand. Als dein Schatten auf die Tür 
 // [ERWEITERT] Das Seil am Geländer, blank gescheuert (Lektorat 1.1 f): Jemand hat den Stuhl hinaufgezogen. Nicht erklären. Sein Lachen pfeift mit dem Atem (eigener Laut, Lektorat 1.2).
 // [Deutung, nie aussprechen] Der Rollstuhl gleicht dem des Mannes in der Klinik (RK1 §1). Nur stehen lassen: die knarrenden Räder.
 -> betreten("haus") ->
+~ kampfanfang = -> k1_b_haus
 { k1_b_haus == 1:
     Hinter der Tür liegt ein Flur, in dem seit Wochen niemand Licht gemacht hat, und eine Treppe, auf deren Stufen der Staub so dick liegt, dass deine Stiefel Abdrücke hinterlassen wie im ersten Schnee. Nur in der Mitte jeder Stufe ist er weggewischt, in zwei schmalen, gleichmäßigen Bahnen. Am Geländer ist ein Seil festgeknotet, und auf halber Höhe ist es an einer Stelle blank gescheuert. Es riecht nach kaltem Talg und nach einem Zimmer, in dem jemand schläft. # bild: haus_dunkel # stimmung: spannung
-- else:
-    Wieder die Treppe, das Seil, die zwei schmalen Bahnen im Staub, und oben das Atmen, von dem du jetzt weißt, wem es gehört. # bild: haus_dunkel # stimmung: spannung
 }
 Im ersten Stock steht ein Rollstuhl mit dem Rücken zum Fenster, und in ihm sitzt eine Gestalt unter einer Decke, den Kopf auf der Brust. Sie atmet durch den offenen Mund, lang und feucht. Als die Diele unter dir knarrt, hebt sie den Kopf, die Räder knarren mit, und aus dem offenen Mund kommt ein Lachen, das mit dem Atem geht, hoch und pfeifend, ein Ton bei jedem Einziehen, während unter der Decke eine Hand hervorkommt und in der Hand eine Pistole, deren Lauf erst zittert und dann ganz ruhig wird. Rechts von dir steht ein Schrank mit einer schweren Eichentür; links ist nur die nackte Wand. # anzeichen: schuss # kampf: rollstuhl
 + [Nach rechts hinter den Schrank #fliesst]
@@ -288,8 +287,16 @@ Im ersten Stock steht ein Rollstuhl mit dem Rücken zum Fenster, und in ihm sitz
 ~ haus_zettel = true
 Neben dem Rollstuhl steht ein Regal, und darauf, zwischen einer leeren Tasse und einem Gebetbuch mit gebrochenem Rücken, liegt ein Zettel, mehrmals gefaltet und wieder glattgestrichen. Die Schrift gehört einem, der selten schreibt und deshalb fest aufdrückt:
 Als die Jagd begann, sperrte die Kirche die große Brücke und überließ uns hier unten uns selbst. Unten im Tal, wo die Stadt früher war, brannte es die ganze Nacht, und von oben kam keiner. Sie wachen über uns, schreiben sie an die Türen; über ihre Brücke wachen sie. # stil: tagebuch # lore: kirche_sperrt_bruecke
+~ fr_frei_machen(fr_kirche)
 Der Zettel knistert, als du ihn einsteckst. Auf der Treppe, die Hand am Seil, hörst du, wie oben der Mann wieder durch den Mund zu atmen beginnt, lang und feucht, als hätte ihn nie jemand gestört.
--> k1_hub_b
+// Fundstück (Umbau 2026-11-06, ersetzt den Kauf bei den Boten): Wendels Mantel. PLATZHALTER, knapp.
+Im Flur unten hängt, an einem Haken hinter der Tür, ein Jägermantel, langes geöltes Leder, schwer wie ein Zelt nach dem Regen. Er riecht nach Teer, nach Pulver und nach einem Menschen, der nicht du bist. Am Saum fehlt ein Stück, glatt abgetrennt. Innen, ins Futter gestickt, mit rotem Garn und ungeschickten Stichen, steht ein Name: Wendel.
+* [Den Mantel vom Haken nehmen #fliesst]
+    ~ mantel = true
+    Du nimmst ihn vom Haken und ziehst ihn über. Er sitzt, als hätte jemand ihn für deine Schultern gearbeitet, und das gefällt dir nicht. # notiz: mantel_wendel
+* [Ihn hängen lassen #fliesst]
+    Du lässt ihn hängen. Die Tür fällt hinter dir ins Schloss, und der Haken schwingt noch eine Weile leer.
+- -> k1_viertel1
 
 === k1_b_scheiterhaufen ===
 // TITEL: Scheiterhaufen und Mob, erste Begegnung mit Gascoigne
@@ -300,13 +307,12 @@ Der Zettel knistert, als du ihn einsteckst. Auf der Treppe, die Hand am Seil, h�
 // [ERWEITERT] Lektorat 2026-11-05: Gascoigne tritt über den Ton auf (Schuss, dann die Namen); das Auge sieht zuerst nur den Verband, Mantel, Hut und Schal erst aus der Nähe. Sein Geruch am Platz nur einmal und leise, ohne „nasses Fell“ (die Steigerung folgt an den Gräbern, c_unterstadt). Martha mit Mehl an den Ärmeln in beiden Zweigen; die Frau mit der Fackel wie ein Kerzenleuchter.
 // Stimme Gascoigne (gesund): tief, ruhig, kurze Sätze, warm und spaßig, nennt Leute beim Namen, sagt „Fremder“, bis er deinen Namen hat; beendet Dinge mit „So.“ Wärme, die zerbricht: der Geruch, das Spiel der Bestie, ein Blick zum Feuer.
 -> betreten("scheiterhaufen") ->
-{ mob != "": -> danach }
+~ kampfanfang = -> k1_b_scheiterhaufen.kampf
+~ fr_frei_machen(fr_menschen)
 { k1_b_scheiterhaufen == 1:
     Die Hauptstraße öffnet sich zu einem Platz, und in seiner Mitte brennt ein Scheiterhaufen, höher als die Dachtraufen ringsum. Oben, an einen Pfahl gebunden, hängt etwas Großes, Behaartes, das sich nicht mehr regt; die Flammen haben ihm das Fell schwarz gefressen, und der Rauch, der von ihm aufsteigt, riecht süßlich und fett, nach einem Schlachttag, an dem keiner sein Handwerk verstand. # bild: scheiterhaufen # stimmung: spannung # lore: buergerjagd
     Um das Feuer stehen Menschen, ein Dutzend oder mehr, Männer und Frauen in Mänteln und Schürzen, mit Fackeln, Mistgabeln und Beilen, einer mit einem alten Gewehr, dessen Kolben mit Draht geflickt ist. Eine Frau hält ihre Fackel wie einen Kerzenleuchter, mit abgespreiztem kleinem Finger. Sie murmeln, alle zugleich und doch nicht zusammen. Am Rand des Platzes steht ein Riese von einem Mann, nackt bis zur Hüfte, und schlägt mit einem Ziegelstein gegen eine Doppeltür, immer wieder, im Takt eines Herzens. Zwischen zwei Schlägen murmelt er, und was er murmelt, gilt nicht der Tür: „Kalt ist es, Schwesterchen. So kalt.“
     Einer dreht sich zu dir um, dann drei, dann alle, und das Murmeln bricht ab, so wie ein Topf aufhört zu kochen, wenn man ihn vom Feuer zieht. „Der da“, sagt die Frau mit der Fackel, und ihr kleiner Finger spreizt sich noch immer ab. „Der trägt sie an sich, die Seuche, riecht ihr das nicht?“ Und ein Mann, heiser vom Rauch: „Brennen soll er! Brennen wie das da oben!“ # kampf: mob
-- else:
-    Der Scheiterhaufen ist heruntergebrannt bis auf Mannshöhe, und die Menge steht um ihn, als hätte sie sich nicht gerührt, seit du gegangen bist. Der Riese schlägt noch immer gegen die Tür. Diesmal dreht sich keiner langsam um. „Da ist er wieder“, ruft einer, „der Fremde, der so stinkt!“ # bild: scheiterhaufen # stimmung: spannung # kampf: mob
 }
 + [Stehen bleiben und die Säge ausklappen #fliesst]
     Die Säge klappt in deiner Hand auf, mit einem Schnappen, das lauter ist als das Feuer, und vorn in der Menge senken sich die ersten Gabeln auf dich.
@@ -315,9 +321,6 @@ Der Zettel knistert, als du ihn einsteckst. Auf der Treppe, die Hand am Seil, h�
     ~ mob = "umgangen"
     In den Schatten, an den Hauswänden entlang, Schritt für Schritt, und dein Puls klopft dir bis in die Zähne. Fast liegt der Platz hinter dir, als ein Kind, das du nicht gesehen hast, mit dem Finger auf dich zeigt und schreit: „Da! Der Fremde! Da ist er!“
     -> gascoigne_greift_ein
-+ [Rückwärts in die Gasse zurückweichen #fliesst]
-    Rückwärts in die Gasse, bevor sie dich erreichen. Das Murmeln schwillt an und ebbt wieder ab, und keiner folgt dir. Noch nicht.
-    -> k1_hub_b
 
 = kampf
 - (t1)
@@ -358,8 +361,6 @@ Mehr kommen. Der Riese hat aufgehört, gegen die Tür zu schlagen; er dreht sich
     -> ampulle_gefahr(1) -> t2
 
 = gascoigne_greift_ein
-// Wer Gascoigne schon zwischen den Gräbern gesehen hat, sieht ihn hier nicht mehr gesund: Er ist längst hinter dem Tor.
-{ gascoigne2: -> ohne_ihn }
 ~ q_frau = 1
 { mob == "zerstreut":
     Über das Pflaster kommen Schritte aus dem Rauch, schwer und ohne Eile, und halten bei der Frau, die liegen geblieben ist. Von dem Mann siehst du zuerst nur den Verband, schmutziges Leinen, mehrmals um die Augen gewickelt, und doch ist er geradewegs zu ihr gegangen, ohne einmal den Kopf zu wenden. Er kniet sich neben sie und nimmt ihre Hand, obwohl sie schwarz ist. „Martha“, sagt er. Nur das. # stimmung: grauen # lore: gascoigne
@@ -429,19 +430,7 @@ Mehr kommen. Der Riese hat aufgehört, gegen die Tür zu schlagen; er dreht sich
 - else:
     „Pass auf dich auf, {gascoigne_name:{name}|Fremder}.“ Er tippt an die Krempe seines Hutes und geht in den Rauch.
 }
--> k1_hub_b
-
-= ohne_ihn
-// Gascoigne ist schon hinter dem Tor des Oedon. Der Schuss kommt aus dem Rauch; niemand tritt hervor.
-Ein Schuss kracht über den Platz. Die Menge stiebt auseinander, als wüsste jeder Einzelne, wem dieser Knall gehört, und lässt dir eine Gasse frei. Niemand tritt aus dem Rauch. Wo der Schuss herkam, steht nur Qualm, und auf dem Pflaster, frisch und dunkel, eine Spur von Stiefelabdrücken, die zur großen Brücke führt. Sie glänzen. # stimmung: grauen # notiz: blutige_spur
--> k1_hub_b
-
-= danach
-{ mob:
-- "zerstreut": Der Platz ist leer. Verlassene Fackeln liegen auf dem Pflaster und rauchen noch. Jemand hat eine Decke über die Frau gelegt, die liegen geblieben ist, und auf die Decke einen Kanten Brot, und wer es war, weißt du nicht.
-- else: Das Feuer ist heruntergebrannt, und doch hängt auf dem Pfahl wieder etwas, schwarz und reglos, und am Fuß des Pfahls liegt frisches Reisig, sorgfältig geschichtet, für das nächste.
-}
--> k1_hub_b
+-> k1_nach_scheiterhaufen
 
 = mantel_frage
 // [ERWEITERT] Wendels Mantel: Gascoigne kennt den Geruch. Er wird misstrauisch. Sein eigener Geruch ist dann schon gefallen (leise, ohne Namen); hier riecht er an dir, nicht umgekehrt.
@@ -449,8 +438,8 @@ Ein Schuss kracht über den Platz. Die Menge stiebt auseinander, als wüsste jed
 „Teer. Pulver. Und Wendel.“ Er sagt den Namen, als lege er ihn auf einen Tisch. „Wendel ist seit zwei Jagden nicht heimgekommen. Woher hast du seinen Mantel?“
 ~ mantel_erkannt = true
 * [Ihm die Wahrheit über den Mantel sagen #fliesst]
-    // [ERWEITERT] PRÜFEN: Ob Gascoigne den Jägertraum kennt, ist [Offen]. Er glaubt dir, ohne zu sagen, warum.
-    Die Wahrheit, so wie sie war: der Garten, das Becken, die kleinen grauen Hände, die dir den Mantel heraufreichten. Noch während du erzählst, hörst du, wie es klingt. Gascoigne schweigt lange. „Im Traum“, sagt er endlich. „Von denen.“ Er reibt sich mit dem Daumen über den Verband, dort, wo die Augen sein müssten. „Das glaub ich dir. Das ist ja das Schlimme.“ # notiz: gascoigne_mantel
+    // [ERWEITERT] Umbau 2026-11-06: Der Mantel hing hinter der Tür im dunklen Haus (nicht mehr bei den Boten). Gascoigne glaubt dir, ohne zu sagen, warum.
+    Die Wahrheit, so wie sie war: ein Haus mit offener Tür, ein Haken hinter der Tür, ein Name im Futter. Noch während du erzählst, hörst du, wie es klingt. Gascoigne schweigt lange. „Hinter der Tür“, sagt er endlich. „Dann ist er dort hineingegangen und nicht mehr heraus.“ Er reibt sich mit dem Daumen über den Verband, dort, wo die Augen sein müssten. „Das glaub ich dir. Das ist ja das Schlimme.“ # notiz: gascoigne_mantel
 * [„Der lag in einer Gasse.“ #fliesst]
     ~ mantel_gelogen = true
     ~ gascoigne = gascoigne - 1
@@ -464,8 +453,6 @@ Ein Schuss kracht über den Platz. Die Menge stiebt auseinander, als wüsste jed
 // [ERWEITERT] Lektorat 1.3: Der Spieluhr fehlt ein Ton; an derselben Stelle jeder Runde stolpert die Melodie über eine Lücke. Wiedererkennung für Brücke und Grab (andere Dateien).
 // Stimme: schnell, ernst, zählt auf, was sie alles richtig gemacht hat. Sie kennt den Vater am Geruch, nicht an den Augen (Verband).
 -> betreten("maedchen") ->
-{ maedchen_wo == "fort": -> leer }
-{ k1_b_maedchen > 1: -> wieder }
 ~ maedchen_gesehen = true
 Hinter dem Tor liegt ein kleiner Platz mit einem versiegten Brunnen, dessen Becken voller Laub und zerbrochener Ziegel ist, und ringsum stehen schmale Häuser, so dicht, dass ihre Fenster einander in die Läden sehen. Mitten in all dem Rauch und Räucherwerk spielt eine Spieluhr, ein Lied aus wenigen hohen Tönen, und an derselben Stelle jeder Runde fehlt einer, eine kleine Lücke, über die die Melodie hinwegstolpert. Du kennst das Lied nicht, und trotzdem wird dir davon der Hals eng, so wie es nur Lieder tun, die man als Kind gehört hat. # bild: brunnenplatz # stimmung: schoen
 Die Melodie kommt aus einem Fenster im ersten Stock. Durch die Ritzen der Läden hängt eine weiße Haarschleife, um den Riegel geknotet, das Band so lang, dass es im Zug gegen das Holz schlägt. # lore: familie_gascoigne
@@ -485,7 +472,7 @@ Mit einem Trotz, der größer ist als sie, setzt sie hinzu: „Wenn Mama nicht b
     -> fort
 * [Dich ohne ein Versprechen abwenden #fliesst]
     „Kommst du wieder?“, fragt sie deinem Rücken nach. Es kommt keine Antwort, und die Finger verschwinden aus dem Spalt.
-    -> k1_hub_b
+    -> k1_viertel2
 
 = spieluhr_geben
 // [KANON lore:figuren/maedchen-und-viola] Inhalt sinngemäß, Wortlaut eigen.
@@ -495,7 +482,7 @@ Unter dem Deckel klebt ein vergilbter Zettel mit zwei Namen, in einer feinen Sch
 { q_frau == 1:
     Der Deckel bleibt offen in deiner Hand, eine ganze Weile. Dann klappst du ihn zu, und auf dem Platz verstummt etwas, von dem du nicht wusstest, dass es zu hören war.
 }
--> k1_hub_b
+-> k1_viertel2
 
 = fort
 // Falsche Entscheidung: Iosefka öffnet niemandem (das hat sie gesagt), und die Nacht ist voller Bestien. Die weiße Schleife nimmt sie mit.
@@ -503,28 +490,8 @@ Unter dem Deckel klebt ein vergilbter Zettel mit zwei Namen, in einer feinen Sch
 ~ maedchen = maedchen - 1
 „Lauf zu der Ärztin in der Klinik“, sagst du. „Dort bist du sicher.“ # quest: maedchen_fort
 „Wirklich?“ Sie zögert. Auf einer Treppe im Haus trappeln Schritte, ein Riegel geht, ein zweiter, eine Haustür knarrt. Ein kleiner Schatten huscht über den Platz und bleibt an der Ecke stehen, wo die Treppe zu den Kanälen hinabführt, in der Richtung, in die ihre Mutter gegangen ist. Dann ist er fort. Am Riegel hängt keine weiße Schleife mehr.
--> k1_hub_b
+-> k1_viertel2
 
-= wieder
-{ q_mutter == 1:
-    Sie fragt, bevor du am Brunnen bist. „Hast du Mama gefunden?“ Am Riegel schlägt die weiße Schleife im Zug gegen das Holz.
-- else:
-    Die Finger erscheinen wieder zwischen den Läden. „Du bist ja doch gekommen. Hast du Mama gesehen? Suchst du sie?“
-}
-+ [„Noch nicht.“ #fliesst]
-    „Noch nicht.“ Die Finger bleiben im Spalt. „Dann warte ich noch“, sagt sie. „Ich kann gut warten. Ich bin die Beste im Warten.“
-    -> k1_hub_b
-+ {not spieluhr} [„Ich finde deine Mama. Versprochen.“ #fliesst]
-    ~ q_mutter = 1
-    ~ maedchen = maedchen + 1
-    „Ich finde deine Mama. Versprochen“, sagst du, und diesmal sagst du es so, dass sie es hört.
-    -> spieluhr_geben
-+ {not spieluhr and q_mutter == 0} [„Lauf zu der Ärztin in der Klinik.“ #fliesst]
-    -> fort
-
-= leer
-Das Fenster im ersten Stock ist dunkel. Die Haustür steht einen Spalt offen und bewegt sich im Zug, und drinnen brennt das Räucherwerk herunter, für niemanden. # stimmung: grauen
--> k1_hub_b
 
 === k1_b_daecher ===
 // TITEL: Die Gasse unter den Dächern (Schütze)
@@ -532,14 +499,7 @@ Das Fenster im ersten Stock ist dunkel. Die Haustür steht einen Spalt offen und
 // [KANON lore:gegenstaende/jaeger-und-werkstatt] Feuerwaffen sind Vorderlader (LK §19): Pulver und Papier, keine Hülsen.
 // [ERWEITERT] Der Alte zählt (Kiesel, fünf und fünf; beim Nachladen zählen die Lippen mit). Das Zählen gehört ihm (Lektorat 1.2).
 -> betreten("daecher") ->
-{ schuetze == "erledigt":
-    Die Gasse ist ruhig. Oben in der Dachrinne liegt verschüttetes Pulver, schwarz auf dem nassen Blech, und daneben das abgebissene Ende einer Papierpatrone, an dem noch die Spuren alter Zähne sind.
-    -> k1_hub_b
-}
-{ schuetze_verschont:
-    Die Gasse ist ruhig. Oben hinter dem Schornstein sitzt der Alte ohne Gewehr und zählt seine Kiesel, immer fünf und fünf. Er sieht nicht auf.
-    -> k1_hub_b
-}
+~ kampfanfang = -> k1_b_daecher
 Die Gasse ist so schmal, dass du die Hauswände zu beiden Seiten mit den Ellbogen streifst, und über dir kreuzen sich Dachrinnen, zerbrochene Fensterläden und Wäscheleinen, an denen nichts mehr hängt als eine einzelne hölzerne Klammer. Keine Taube, kein Tropfen. Es riecht nach Schießpulver, frisch, so wie es nur riecht, wenn eben erst jemand geladen hat. # bild: gasse # stimmung: spannung
 + {not schuetze_gesehen} [Langsam, die Dächer im Blick #fliesst]
     Schritt für Schritt, den Blick auf den Dachkanten, und beim zehnten erstarrst du: Hinter einem Schornstein, kaum mehr als ein Umriss, hockt ein alter Mann, gebeugt, eine Schlafmütze auf dem Kopf und in den Händen ein Gewehr, das länger ist als er selbst. Er hat dich noch nicht gesehen. Der Lauf zielt auf eine Stelle der Gasse, zwanzig Schritte vor dir, über die du in drei Atemzügen gegangen wärst. # anzeichen: schuss
@@ -548,16 +508,10 @@ Die Gasse ist so schmal, dass du die Hauswände zu beiden Seiten mit den Ellboge
 + {not schuetze_gesehen} [Schnell geradeaus hindurch #fliesst]
     Auf halbem Weg kracht hinter dir ein Schuss. Etwas Heißes fährt dir in die Schulter, bevor du begreifst, woher es kam, und das Pflaster springt dir entgegen; du fängst dich mit den Händen. Als du dich umdrehst, lädt auf dem Dach hinter dir, hinter einem Schornstein, ein alter Mann mit zitternden Händen nach, und seine Lippen zählen dabei mit. # klang: schuss
     ~ zuletzt = schuss
-    ~ schuetze_gesehen = true
     ~ treffer(1)
     { leben <= 0: -> tod }
+    ~ schuetze_gesehen = true
     -> oben
-+ {schuetze_gesehen} [Wieder zu dem Alten hinauf #fliesst]
-    Er sitzt noch hinter seinem Schornstein, das Gewehr auf den Knien, und summt, als du hinaufsiehst.
-    -> oben
-+ [Auf der Stelle umkehren #fliesst]
-    Kaum hast du kehrtgemacht, knirscht über dir ein Dachziegel, dann noch einer, ein Stück weiter, als ginge oben jemand mit dir mit.
-    -> k1_hub_b
 
 = oben
 + [Hinaufklettern und ihn stellen #fliesst]
@@ -565,7 +519,7 @@ Die Gasse ist so schmal, dass du die Hauswände zu beiden Seiten mit den Ellboge
     -> schuetze_wahl
 + [Im Hauseingang Deckung suchen #fliesst]
     Im nächsten Hauseingang, den Rücken an der kalten Tür, wartest du, bis oben kein Lauf mehr über die Dachkante ragt. Zurück geht es dicht an der Wand, den Stein an der Schulter, bis die Gasse dich freigibt.
-    -> k1_hub_b
+    -> k1_viertel2
 
 = schuetze_wahl
 * [Ihm das Gewehr abnehmen und gehen #fliesst]
@@ -573,25 +527,48 @@ Die Gasse ist so schmal, dass du die Hauswände zu beiden Seiten mit den Ellboge
     Er lässt das Gewehr los wie ein Kind ein Spielzeug, das ihm ohnehin langweilig geworden ist, und fängt an, seine Kiesel neu zu zählen. Unten im Hof schlägt der Kolben auf das Pflaster. Zwei Kiesel nimmst du mit und eine Flasche, in deren Hals ein ölgetränkter Lappen steckt; er zählt weiter, um die Lücke herum. # notiz: kiesel
     ~ kiesel = kiesel + 2
     ~ molotow = molotow + 1
-    -> k1_hub_b
+    -> k1_viertel2
 * [Es mit der Säge beenden #fliesst]
     Es geht schnell. Er macht dabei einen kleinen, überraschten Laut, mehr nicht. Unter der Schlafmütze ist sein Haar sorgfältig gekämmt und mit Wasser angelegt, wie man es für den Sonntag tut. Zwei von seinen Kieseln steckst du ein und die Flasche mit dem öligen Lappen im Hals; die übrigen liegen weiter in ihren Reihen, fünf und fünf. # notiz: kiesel
     ~ schuetze = "erledigt"
     ~ kiesel = kiesel + 2
     ~ molotow = molotow + 1
-    ~ echos = echos + 1
-    -> k1_hub_b
+    -> k1_viertel2
+
+=== k1_b_dachweg ===
+// TITEL: Der Dachweg (neue Station, Platzhalter)
+// [ERWEITERT] Neue Station des Umbaus 2026-11-06 (Kartenmodell, zweites Viertel). PLATZHALTER: knappe Sätze, die sagen, was da ist; neu geschrieben wird mit dem Skill stil-1800.
+// Fundstücke (ersetzen den Handel im Bad der Boten): das Jagdheft eines Toten (aus dem Bestand von boten_laden), eine Brandflasche, zwei Kiesel. Von oben sind Spuren der anderen Wege zu sehen.
+-> betreten("dachweg") ->
+Oben läuft ein Weg aus Balken, Ziegeln und gespannten Leinen von Dach zu Dach, und von hier sieht die Stadt anders aus: Die Gassen sind Risse, die Fackeln wandern wie Glühwürmchen, und die Räucherlampen sind rote Punkte in Reihen. # bild: daecher_eileen # stimmung: ruhig
+{ not k1_b_maedchen: Irgendwo zwischen den Giebeln, tief unten, spielt etwas, das fast eine Melodie ist. }
+{ not k1_b_daecher: Auf einem Dach in der Ferne sitzt ein Schatten mit einem langen Gewehr und rührt sich nicht. }
+Auf einem Sims, an einem Schornstein, lehnt ein toter Jäger, den Kopf auf der Brust, die Hände im Schoß, als schliefe er. In seiner Manteltasche steckt ein Heft. Neben ihm stehen eine Flasche mit einem ölgetränkten Lappen im Hals und zwei glatte Kiesel in einer Reihe.
+* [Das Heft aus der Tasche ziehen #fliesst]
+    ~ jagdnotizen = true
+    ~ gelernt += (wurf, ansturm, axt_wirbel)
+    ~ kiesel = kiesel + 2
+    ~ molotow = molotow + 1
+    Die Seiten sind gewellt, einmal nass geworden und wieder getrocknet. Ein Jäger hat darin gezeichnet, was ihn beinahe umgebracht hat, mit Bleistift und mit Pfeilen: ein Arm, der eine Kutsche über die Schulter hebt. Ein Geweih, gesenkt, und daneben das Wort „spät“, dreimal unterstrichen. Ein Strich, gerade von oben nach unten, und darunter drei Kerben, die dritte tiefer als die anderen. Die letzte Seite ist leer bis auf einen braunen Daumenabdruck. Die Flasche und die Kiesel steckst du auch ein. # notiz: jagdnotizen
+* [Nur die Flasche und die Kiesel nehmen #fliesst]
+    ~ kiesel = kiesel + 2
+    ~ molotow = molotow + 1
+    Die Flasche und die Kiesel nimmst du an dich. Dem Toten lässt du sein Heft.
+- Der Weg führt dich hinab, zwischen zwei Giebeln hindurch, ohne dass du ein Dach verlassen hättest, das jemals ein Dach gewesen wäre.
+-> k1_viertel2
 
 === k1_b_eileen ===
 // TITEL: Eileen die Krähe (Dach)
 // [KANON lore:figuren/eileen] Eileen auf den Dachbalken über dem Kanaleingang (RK1 §7, §12), Jägerin der Jäger, gibt Jägermarken. Ihre Warnung: Menschen gebe es hier keine mehr, nur Bestien mit Hunger; ein Jäger jage Bestien, die Jäger überlasse er ihr. Sie kennt den Jägertraum (grüßt die kleine Puppe). Nächstes Treffen in Kapitel 1 auf dem Dach über den Gräbern (G2).
-// [KANON lore:gegenstaende/jaeger-und-werkstatt] Jägermarke: Wer sie benutzt, verliert alle Blutechos und erwacht wie aus einem bösen Traum (G3). Eileen deutet den Preis an; die Folge steht in den marke-Stellen der Bosskämpfe.
+// Die Jägermarken sind entfallen (Entscheidung des Nutzers 2026-11-06: Buchgefühl vor Videospiel).
 // [ERWEITERT] Tieferes Gespräch, sie kennt Gascoigne und Henryk. Die Partnerschaft beginnt erst in Kapitel 2. Die Abzeichen an der Schnur.
 // Stimme: heiser, sehr kurz, Sätze ohne Anlauf; beantwortet Fragen mit Gegenfragen oder gar nicht. Ihr Lachen ist ein Krächzen.
 -> betreten("eileen") ->
-{ eileen_stufe >= 1:
-    Auf den Dachbalken ist niemand mehr. Nur eine schwarze Feder liegt dort, wo sie saß, und zittert im Zug, der aus dem Kanal heraufsteigt.
-    -> k1_hub_b
+// Zwei Formen der ersten Begegnung (Fassung 2): über den Dachweg oder von unten über die Krampen am Kanaleingang.
+{ k1_b_dachweg:
+    Der Dachweg endet an den Balken über dem Kanaleingang, und hier hat jemand gewartet.
+- else:
+    Zu den Dachbalken über dem Kanaleingang führen eiserne Krampen in der Mauer hinauf, kalt und rau vom Rost.
 }
 ~ eileen_stufe = 1
 Oben laufen alte Dachbalken von Haus zu Haus, schwarz von Ruß und Regen, und auf ihnen, halb hinter ein paar Fässern verborgen, sitzt jemand so still, dass du ihn für einen Haufen alter Kleider gehalten hättest, wenn er nicht den Kopf gedreht hätte. # bild: daecher_eileen # stimmung: ruhig
@@ -610,14 +587,13 @@ Es ist eine Frau, in einem Mantel aus schwarzen Federn, die bei jeder Bewegung r
 * [„Kümmer dich um deine Sachen.“ #fliesst]
     ~ eileen = eileen - 1
     „Kümmer dich um deine Sachen.“ Unter dem Schnabel krächzt es, kurz und rau; so lacht sie. „Tu ich. Genau das tu ich.“ Die Abzeichen klappern. Ihren Namen sagt sie dir nicht. # lore: jaeger_der_jaeger # lore: blutrausch
-- Sie greift in ihren Mantel und wirft dir zwei kleine Marken zu, Messing, abgegriffen, mit einem eingeprägten Zeichen, das auf dem Kopf steht, ganz gleich, wie du sie drehst. „Zerdrück sie, und du bist im Garten. Lebend. Für den Fall, dass deine Beine zu langsam sind.“ Sie hält die Hand noch einen Atemzug offen, als wolle sie die Marken zurück. „Kostet alles Blut, das du bei dir trägst. Liegt danach nirgends.“ # notiz: jaegermarke
-~ jaegermarken = 2
+- Sie sieht dich an, und ihr Schnabel bleibt an deiner Armbeuge hängen, an der Stelle, wo der Einstich pocht. # notiz: eileen_armbeuge
 // [KANON lore:figuren/eileen] Sie kennt den Jägertraum (LK 5.1: grüßt die kleine Puppe).
-Du hast niemandem von dem Garten erzählt.
+Du hast niemandem von dem Garten erzählt, und sie hat ihn nicht erwähnt. Sie hat ihn gegrüßt, ohne das Wort.
 * [„Woher kennst du den Garten?“ #fliesst]
     „Woher kennst du den Garten?“ Keine Antwort. Sie rückt nur die Maske zurecht, und die Abzeichen an ihrem Hals klappern einmal.
-* [Die Marken schweigend einstecken #fliesst]
-    Die Marken verschwinden in deiner Tasche, ohne ein Wort. Sie sieht, dass du es bemerkt hast, und sagt auch nichts.
+* [Schweigen, wie sie schweigt #fliesst]
+    Du sagst nichts. Sie sieht, dass du es bemerkt hast, und sagt auch nichts.
 - Dann, während sie die Schnur ordnet: „Ein Pater. Groß, Verband über den Augen. Schon gesehen?“ # notiz: eileen_frage
 * {q_frau == 1} [„Ja. Er hat mir geholfen.“ #fliesst]
     ~ gascoigne = gascoigne + 1
@@ -628,14 +604,5 @@ Du hast niemandem von dem Garten erzählt.
     Mit ausgestrecktem Arm zeigst du über die Dächer, dorthin, wo du ihn gesehen hast, und in welche Richtung er gegangen ist. Sie nickt, langsam. Eine ihrer Hände findet die Schnur mit den Abzeichen und hält sie fest. „Danke“, sagt sie. „Ist richtig so.“ Ihre Stimme klingt nicht, als glaube sie es. # notiz: verrat_gascoigne
 * {q_frau == 1} [„Nein. Nie gesehen.“ #fliesst]
     „Nein. Nie gesehen.“ Sie nickt, als habe sie diese Antwort erwartet, und der Schnabel bleibt so lange auf dich gerichtet, dass du weißt, wie viel sie dir glaubt und wie viel nicht.
-* {q_frau == 0 and gascoigne2} [„Ja. Zwischen den Gräbern.“ #fliesst]
-    „Ja. Zwischen den Gräbern.“ Sie sieht in die Richtung der großen Brücke. „Dann weißt du's schon. Wie er riecht.“
-* {q_frau == 0 and gascoigne2} [Ihr zeigen, wohin er gegangen ist #fliesst]
-    ~ gascoigne_verraten = true
-    ~ eileen = eileen + 1
-    Dein Arm zeigt über die Dächer, zu dem Tor hinter dem Friedhof. Sie nickt, langsam. „Danke. Ist richtig so.“ # notiz: verrat_gascoigne
-* {q_frau == 0 and not gascoigne2} [„Nein. Wer ist das?“ #fliesst]
-    ~ eileen_frage_offen = true
-    „Nein. Wer ist das?“ Sie neigt den Schnabel. „Wirst du sehen. Merk dir, wie er riecht.“
 - Sie steht auf. „Bestien jagst du“, sagt sie. „Jäger jag ich.“ Sie breitet den Mantel aus wie Flügel und ist mit einem Sprung auf dem nächsten Dach, und von dort ruft sie, ohne sich umzudrehen: „Jäger sehen sich wieder. Meistens zu spät.“ # quest: eileen_treffen
--> k1_hub_b
+-> k1_vor_bruecke

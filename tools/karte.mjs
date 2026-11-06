@@ -4,7 +4,7 @@ import { writeFileSync } from "node:fs";
 import { inkFiles } from "./ink.mjs";
 
 // Bausteine, die überall vorkommen, würden die Karte unlesbar machen.
-const AUSGEBLENDET = new Set(["tod", "betreten", "ampulle_ruhig", "ampulle_gefahr", "schrei", "END", "DONE", "laterne", "traum_von_laterne", "puppe_erwacht", "boten_laden", "gehrman"]);
+const AUSGEBLENDET = new Set(["tod", "betreten", "ampulle_ruhig", "ampulle_gefahr", "schrei", "END", "DONE", "kampfanfang", "nachbild", "naechstes_fragment", "traum_fragmente", "puppe_erwacht", "gehrman", "training"]);
 const TEILE = {
   "kapitel1/a_ankunft.ink": "A Ankunft",
   "kapitel1/b_yharnam.ink": "B Zentral-Yharnam (frei)",
@@ -56,7 +56,7 @@ for (const e of [...edges].sort()) {
 const md = `# Karte Kapitel 1 (automatisch erzeugt)
 
 Erzeugt mit \`npm run karte\` aus den Ink-Dateien. Nicht von Hand bearbeiten.
-Ausgeblendet sind Bausteine, die überall vorkommen (Tod, Ampulle, Laterne, Traum-Laden).
+Ausgeblendet sind Bausteine, die überall vorkommen (Tod, Ampulle, Nachbild, Fragmente).
 
 \`\`\`mermaid
 ${out}\`\`\`

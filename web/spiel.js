@@ -101,22 +101,17 @@
     el.classList.add("leuchtet");
   }
   function leisteAktualisieren() {
-    const jetzt = { echos: wert("echos"), einsicht: wert("einsicht"), ampulle: wert("ampulle"), marken: wert("jaegermarken"), leben: wert("leben") };
-    $("h-echos").textContent = jetzt.echos;
+    const jetzt = { einsicht: wert("einsicht"), ampulle: wert("ampulle"), leben: wert("leben") };
     $("h-einsicht").textContent = jetzt.einsicht;
     $("h-ampulle").textContent = jetzt.ampulle;
     $("w-einsicht").dataset.stufe = String(Math.min(4, jetzt.einsicht));
     $("w-ampulle").dataset.voll = String(jetzt.ampulle);
-    $("h-marken-wrap").hidden = !jetzt.marken;
-    $("h-marken").textContent = jetzt.marken;
     const v = $("vignette");
     if (jetzt.leben <= 3 && jetzt.leben >= 1) v.dataset.leben = String(jetzt.leben);
     else delete v.dataset.leben;
     if (vorher) {
-      if (jetzt.echos !== vorher.echos) aufleuchten("w-echos");
       if (jetzt.einsicht !== vorher.einsicht) aufleuchten("w-einsicht");
       if (jetzt.ampulle !== vorher.ampulle) aufleuchten("w-ampulle");
-      if (jetzt.marken !== vorher.marken) aufleuchten("h-marken-wrap");
       if (jetzt.leben < vorher.leben && jetzt.leben > 0) {
         randBlitz("treffer");
         K()?.treffer();

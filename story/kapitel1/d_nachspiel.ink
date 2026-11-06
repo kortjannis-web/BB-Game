@@ -11,7 +11,6 @@
 // [OFFEN] Wer Viola getötet hat, sagt das Spiel nicht. Der Text lässt beide Lesarten offen (die Wunden; ihr Blick hinab auf die Kampfstelle).
 // [ERWEITERT] Das Zeichen auf dem Schlüssel und am Schloss des Tores (zeigen statt sagen, wohin der Schlüssel führt); die Ketten über dem Tor (von unten in k1_hub_c nur als Bogen zu sehen); die Treppe, die am Tor vorbei auf das Dach führt.
 // [ERWEITERT] Ihr zweiter Handschuh: Ernte des Damenhandschuhs auf dem Grabstein in k1_c_graeber, ohne Deutung. Das Umschlagtuch, mit dem man sie zudeckt (statt des eigenen Mantels, Lektorat 1.1 f).
-~ laterne = -> k1_d_rueckweg
 An der Friedhofsmauer brennt eine Laterne, die vorhin nicht brannte. Ihr Schein reicht bis zu dem, was von {kennt_gascoigne():Gascoigne|dem Mann mit dem Verband} übrig ist, und dort, wo der Mantel am Saum aufgerissen ist, liegt ein eiserner Schlüssel im nassen Gras, lang und grob geschmiedet, aus dem Futter gerutscht. In den Griff ist ein Zeichen geprägt: ein Kreis, durch den drei Striche laufen, die sich in der Mitte nicht treffen. Als du ihn aufhebst, zieht er dir den Arm nach unten. # lore: laternen # notiz: oedon_schluessel # bild: grab_oedon # stimmung: ruhig
 Hinter der Stelle, an der ihr gekämpft habt, steigt eine steinerne Treppe die Friedhofsmauer hinauf, schmal und in der Mitte ausgetreten, wie man sie in alten Städten für Totengräber und Glöckner baut und für niemanden sonst. Oben endet sie an einem Tor aus grauen, verzogenen Bohlen, über die man Ketten gelegt hat, Lage um Lage, und wo die Ketten sich kreuzen, hält ein Schloss sie zusammen, in dessen Eisen dasselbe Zeichen geschlagen ist, der Kreis und die drei Striche. Jenseits des Tores zieht sich die Stadt weiter hinauf, Dach über Dach, bis zu den Türmen, von denen vorhin der Gesang herabkam.
 Du steigst hinauf, Stufe um Stufe, langsamer, als deine Beine könnten. Kurz unter dem Tor zweigt ein Sims ab, hinaus auf ein flaches Dach über dem Friedhof, und über die Kante des Daches hängt ein Saum aus dunklem Stoff, so schwer vom Regen, dass der Wind ihn nicht bewegt.
@@ -42,7 +41,7 @@ Die Wunden sind breit und tief, zu breit für eine Klinge, zu ordentlich für Z�
 = abstieg
 Auf dem Weg hinab kommst du noch einmal unter dem Tor mit den Ketten vorbei. Das Schloss hängt still, und in deiner Tasche schlägt der Schlüssel bei jeder Stufe gegen dein Bein.
 { eileen_stufe >= 1 and eileen >= 0: -> eileen_spuren }
--> k1_d_rueckweg
+-> k1_d_heimweg
 
 = eileen_spuren
 // [ERWEITERT] Keine dritte Begegnung (G2, Entscheidung des Nutzers: zwei in Kapitel 1). Eileen war hier, während du auf dem Dach warst; zu sehen ist nur, was sie zurückgelassen hat, und der Spieler liest es selbst.
@@ -60,15 +59,16 @@ Auf dem Weg hinab kommst du noch einmal unter dem Tor mit den Ketten vorbei. Das
 - else:
     Zwischen den Gräbern liegt eine schwarze Feder im nassen Gras, glatt und unversehrt. Sie ist noch trocken.
 }
--> k1_d_rueckweg
+-> k1_d_heimweg
 
-=== k1_d_rueckweg ===
-// TITEL: Rückweg durch die Stadt (frei)
+=== k1_d_heimweg ===
+// TITEL: Heimweg (Akt IV, linear)
+// Umbau 2026-11-06: kein Hub mehr. Reihenfolge: Mädchen (wenn sie noch wartet) → Kanalisation (wenn sie fort ist, nach der Brosche) → Gilbert (wenn du ihm den Bericht versprochen hast) → Laterne am Grab (Kapitelende). Eileens Spuren liegen am Grab, gleich nach Viola.
 // [KANON lore:kapitel/kapitel1] Mondphase Abend; der Sonnenuntergang beginnt erst nach Gascoigne beim Betreten der Oedon-Kapelle (Kapitel 2). Der Blutmond kommt viel später (nicht hier verbrauchen).
 // [ERWEITERT] Die Sonne, die nicht sinkt: nur Wahrnehmung, keine Gewissheit des Erzählers (G5, Übergreifend 9). Stufe des Motivs hier: der Körper (in die Sonne sehen, ohne dass die Augen tränen) und der Schatten (L6).
 // [ERWEITERT] Die Stadt riecht etwas an dir (Echo auf Gascoignes „An dir noch nicht“); nur gezeigt, nie erklärt.
 -> betreten("rueckweg") ->
-{ k1_d_rueckweg == 1:
+{ k1_d_heimweg == 1:
     Der Rückweg führt durch dieselben Straßen, über dasselbe Pflaster und an denselben verriegelten Türen vorbei, und doch hat sich die Stadt verschoben, während du unten warst, so wie ein Zimmer, in dem jemand die Stühle gerückt hat, solange man schlief. Die Glocken schweigen.{k1_b_tueren: In der Gasse mit den Räucherlampen sind zwei Lampen ausgegangen, und keiner füllt sie nach; an der Tür, hinter der vorhin mehrere Stimmen lachten, lacht keine mehr.}{ alte_frau: Der Hund der alten Frau liegt vor ihrer Tür und hebt nicht einmal den Kopf.} # bild: zentral_yharnam # stimmung: grauen
     Hinter einer Tür, an der du vorbeigehst, zieht jemand die Luft ein, zweimal, tief durch die Nase. Schritte entfernen sich ins Innere des Hauses, und weiter hinten fällt eine zweite Tür zu. Am eigenen Ärmel riechst du Regen und Eisen und darunter etwas Warmes, das vorhin noch nicht da war.
     Über den Giebeln hängt die Sonne, tief und rot, und du kannst lange in sie hineinsehen, ohne zu blinzeln; die Augen tränen nicht. Dort hing sie schon, als du aus der Klinik kamst, dort hing sie über der Brücke und über dem Friedhof, und dein Schatten liegt so lang auf dem Pflaster wie zu Beginn.
@@ -78,10 +78,27 @@ Auf dem Weg hinab kommst du noch einmal unter dem Tor mit den Ketten vorbei. Das
         Hinter dir in einer Gasse scharrt es, schwer und schnell, und noch bevor du dich umdrehst, kracht oben auf einem Dach ein Schuss. Vor deine Füße rollt ein Leib mit Fell und zu langen Armen und bleibt liegen, die Klauen im Pflaster. Hinter dem Schornstein sitzt der Alte mit der Schlafmütze, ein neues Gewehr über den Knien, kichert und legt einen Kiesel zu den anderen. # klang: schuss
     }
 }
-- (wohin)
-+ {maedchen_wo == "zuhause" and q_mutter < 3} [Zum Brunnenplatz, wo das Mädchen wartet #fliesst] -> k1_d_maedchen
-+ {q_gilbert == 1} [Zu Gilberts Fenster gehen #fliesst] -> k1_d_gilbert
-+ {maedchen_wo == "fort" and not maedchen_tot} [Durch die Kanalisation zurück #fliesst] -> k1_d_kanal
+-> k1_d_heimweg_a
+
+=== k1_d_heimweg_a ===
+// Erste Station: das Fenster des Mädchens.
+{ maedchen_wo == "zuhause" and q_mutter < 3: -> k1_d_maedchen }
+-> k1_d_heimweg_b
+
+=== k1_d_heimweg_b ===
+// Zweite Station: die Kanalisation, wenn sie nach der Brosche fortgegangen ist (Kanon-Tragödie).
+{ maedchen_wo == "fort" and not maedchen_tot: -> k1_d_kanal }
+-> k1_d_heimweg_c
+
+=== k1_d_heimweg_c ===
+// Dritte Station: Gilbert.
+{ q_gilbert == 1: -> k1_d_gilbert }
+-> k1_d_heimweg_d
+
+=== k1_d_heimweg_d ===
+// Letzte Station: die Laterne am Grab, das Kapitelende. Die Ampulle kann man noch nutzen.
+- (wahl)
++ {ampulle > 0 and leben < LEBEN_MAX} [Die Ampulle in den Schenkel stoßen #fliesst] -> ampulle_ruhig -> wahl
 + [Die Laterne am Grab berühren #fliesst] -> k1_d_traum
 
 === k1_d_maedchen ===
@@ -136,7 +153,7 @@ Auf dem Weg hinab kommst du noch einmal unter dem Tor mit den Ketten vorbei. Das
 * [Unter dem Fenster stumm bleiben #fliesst]
     ~ q_mutter = 5
     Sie fragt nicht noch einmal. Die Finger verschwinden aus dem Spalt, und hinter den Läden kommt kein Summen mehr und kein Schritt; nur das Räucherwerk raucht im Fenster weiter, dünner als vorhin. # quest: maedchen_wartet
-- -> k1_d_rueckweg
+- -> k1_d_heimweg_b
 
 === k1_d_kanal ===
 // TITEL: Rückweg durch die Kanalisation
@@ -155,7 +172,7 @@ Unten riecht das Wasser nach Eisen und nach Stall. # bild: kanal_schwein # stimm
     Es kommt leicht. Das Schwein gibt es her, satt und gleichgültig, ohne den Kopf zu heben. Nass, wie es ist, lässt sich das Band nicht glattstreichen; du steckst es zu dem Schlüssel{spieluhr: und der Spieluhr}. # notiz: rotes_band
 * [Ohne das Band weitergehen #fliesst]
     Hinter dir schmatzt es weiter, bis zur Leiter und auch noch, als du auf den Sprossen stehst.
-- -> k1_d_rueckweg
+- -> k1_d_heimweg_c
 
 === k1_d_gilbert ===
 // TITEL: Gilbert hören lassen, was hinter der Brücke liegt
@@ -179,7 +196,7 @@ Es wird ein kurzer Bericht: das Tor am Ende der Brücke, von der anderen Seite v
 * [Ihm das Grab ersparen #fliesst]
     Was am Grab geschehen ist, bleibt draußen vor dem Gitter. Gilbert merkt die Lücke; er neigt den Kopf, so wie man nach einem Geräusch horcht, das ausgeblieben ist, und fragt nicht nach.
 - „Seien Sie vorsichtig mit dem, was die Kirche da oben verspricht“, sagt er zum Abschied. „Ich habe ihr Blut auch genommen, wissen Sie. Und wenn sie mir heute Nacht noch eine Ampulle durchs Gitter reichte, ich nähme sie.“ Er hustet, und als er wieder kann, sieht er an dir vorbei in die Gasse. „Daran denke ich jetzt öfter als an den Birnbaum.“ # lore: heilende_kirche
--> k1_d_rueckweg
+-> k1_d_heimweg_d
 
 === k1_d_traum ===
 // TITEL: Kapitelende im Traum
@@ -199,6 +216,11 @@ Unter deiner Hand wird das Eisen warm, und die rote Sonne über den Giebeln weic
 Das Wort bleibt zwischen euch liegen. Keiner von euch hebt es auf.
 Du setzt dich auf die Stufen vor dem Haus, und sie setzt sich neben dich, die Hände im Schoß gefaltet. Die Kälte des Daches geht dir aus den Fingern; der Schlüssel in deiner Tasche bleibt kalt. Als du ihn herausnimmst, sieht die Puppe lange auf das Zeichen im Griff, den Kreis und die drei Striche, die sich nicht treffen. „Wohin führt er?“, fragt sie. „Erzählst du es mir, wenn du dort warst?“
 Eine Weile sitzt ihr nur da, eine Puppe und ein Jäger, und unten am Hang neigen sich die Blumen zweimal unter einem Wind, der bis zu den Stufen nicht heraufkommt. Erst danach spricht sie. „Sei vorsichtig. Du kommst immer zurück. Aber jedes Mal ein wenig anders.“
+{ altar_blatt and not blatt_erinnert:
+    ~ blatt_erinnert = true
+    Zwischen den Blumen kehrt das Blatt vom Altar zu dir zurück, nicht als Bild, nur als ein Satz, so fest in dich eingedrückt wie die Buchstaben in sein Papier: Bleibt die Quelle offen, bleibt die Nacht. # lore: ende_der_nacht
+}
+-> traum_fragmente ->
 CHRONIK DER NACHT # stil: zwischentitel
 // [ERWEITERT] Was du entschieden hast, eine Zeile je Figur, nur für das, was auf diesem Weg geschah, und nur, was du gesehen hast.
 // Befund 11: Was nachwirkt, trägt den Tag `# stil: nachwirkt` (Zeichen der Oberfläche) statt eines Spielbegriffs im Text.
@@ -234,22 +256,52 @@ CHRONIK DER NACHT # stil: zwischentitel
 - gilbert < 0: Gilbert. Du hast dich von ihm abgewandt, und nun hustet er, wenn du vorbeigehst, und sieht nicht auf. # stil: chronik
 - k1_b_gilbert: Gilbert. Er wartet hinter seinem Gitter und sammelt Namen. # stil: chronik
 }
+{ schwein == "umgangen":
+    Das Schwein in der Kanalisation. Du hast dich an ihm vorbeigeschoben, und es hat nicht einmal den Kopf gehoben. # stil: chronik
+}
+{ gascoigne_lied:
+    Gascoigne. Du hast ihn auf der Brücke gefragt, was er summt. Er hat es dir nicht sagen können. # stil: chronik
+}
 { alte_frau_versprochen:
     Die alte Frau mit dem Hund. Du hast ihr einen sicheren Ort versprochen. # stil: chronik # stil: nachwirkt
 }
 {
-- kleriker == "besiegt": Die Bestie auf der Brücke. Sie ist tot, und wo sie lag, brennt jetzt eine Laterne. # stil: chronik
+- kleriker == "besiegt": Die Bestie auf der Brücke. Sie ist tot, und ihr Geweih liegt noch zwischen den Kutschen. # stil: chronik
 - kleriker != "": Die Bestie auf der Brücke. Sie lebt, und auf dem Rückweg hast du sie noch kreischen hören. # stil: chronik # stil: nachwirkt
 }
 {
 - schuetze_verschont: Der Alte mit den Kieseln. Du hast ihn leben lassen, und er hat dir den Rücken freigeschossen. # stil: chronik
 - schuetze == "erledigt": Der Alte mit den Kieseln. Sein Haar war gekämmt wie für den Sonntag. # stil: chronik
+- schuetze_gesehen: Der Alte mit den Kieseln. Du hast ihn auf seinem Dach gesehen und bist an ihm vorbeigegangen. # stil: chronik
+}
+{
+- mob == "umgangen": Der Platz am Scheiterhaufen. Du hast dich an den Wänden entlanggedrückt, bis ein Kind auf dich zeigte. # stil: chronik
+- mob == "durchbrochen": Der Platz am Scheiterhaufen. Du hast dich durch den Kreis geschlagen, und der Riese hat seine eigenen Leute niedergetrampelt. # stil: chronik
 }
 { mob_verbrannt:
     Martha. Sie hat einem Jäger manchmal Brot gegeben, wenn er spät kam, und du hast sie verbrannt. # stil: chronik
 }
 { iosefka != 0:
     Iosefka. {iosefka > 0:Sie hat sich notiert, dass du höflich warst.|Sie hat sich notiert, dass du gegen ihre Tür geschlagen hast.} # stil: chronik # stil: nachwirkt
+}
+// Was du nicht erlebt hast (Spuren des Nichtgewählten, Fassung 2): eine Zeile je ausgelassener Station.
+{ not k1_b_tueren:
+    Eine Gasse mit roten Lampen und eine Tür mit einem Hund. Du bist nicht hingegangen. # stil: chronik
+}
+{ not k1_b_anschlag:
+    Eine schmale Kapelle, ein Anschlag an der Tür. Du hast ihn nie gelesen. # stil: chronik
+}
+{ not k1_b_haus:
+    Ein Haus mit offener Tür. Du bist draußen geblieben. # stil: chronik
+}
+{ not k1_b_maedchen:
+    Eine Melodie hinter einer Mauer. Du hast nicht erfahren, wer sie spielte. # stil: chronik
+}
+{ not k1_b_daecher:
+    Ein Schuss über den Dächern. Du hast ihn nie gesehen. # stil: chronik
+}
+{ not k1_b_dachweg:
+    Eine Leiter an einer Hauswand. Sie führt noch immer hinauf. # stil: chronik
 }
 // Aufzeichnungen: Stimme A, Ich, rückblickend (wie der Prolog). Befund 7: Die anderen sterben. Keine ausgesprochenen Fragen; die offene Frage steckt in der Sonne und im Gesang.
 // Was die Nacht dem Ich getan hat, je Zweig: das Ausliefern zweimal, die Stimme beim Reinigen der Säge, das gelernte Warten gegen den Lehrer, der Name, der irgendwo stehen soll, die Hand, die sich bei einer Spieluhr hebt.
@@ -285,6 +337,15 @@ Aus den Aufzeichnungen, die man später fand: # stil: tagebuch
 }
 { grund == "luege":
     Von dem Sterbenden, den ich dem Kutscher genannt hatte, schrieb ich nichts auf. Es hatte ihn nie gegeben, und die Tinte hatte es gewusst, ehe ich die Feder ansetzte. # stil: tagebuch
+}
+{ grund == "schweigen":
+    Dem Kutscher habe ich auf seine Frage nichts geantwortet. Es war die einzige Antwort in dieser Nacht, die ich nicht zurücknehmen wollte. # stil: tagebuch
+}
+{
+- haltung_vertrag == "blind":
+    Den Bogen in der Klinik habe ich nicht gelesen. Ich habe unterschrieben, und die Feder war das einzige Geräusch im Saal. # stil: tagebuch
+- haltung_vertrag == "zoegernd":
+    Die Feder hat über dem Bogen gezögert, und ein Tropfen ist ins Papier gelaufen. Ich habe trotzdem unterschrieben. # stil: tagebuch
 }
 Ich habe in dieser Nacht gelernt, dass ich in Yharnam nicht sterbe. Die anderen schon. Ich erinnere mich, unterschrieben zu haben, und nicht mehr, was; die Tinte ging nicht von den Fingern. # stil: tagebuch
 Oft sah ich in dieser Nacht nach der Sonne, an der Laterne vor der Klinik, auf der Brücke, zwischen den Gräbern, und jedes Mal hing sie an derselben Stelle über den Giebeln, so rot und so fest wie das Siegel auf einem Brief, den noch niemand geöffnet hat. Ich wünschte mir damals, sie möge endlich sinken. Ich wusste nicht, worum ich bat. # stil: tagebuch

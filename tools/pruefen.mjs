@@ -9,7 +9,11 @@
 import { compile, play, rng, variable, visits } from "./ink.mjs";
 
 const RUNS = Number(process.argv[2] ?? 3000);
-const NADELOEHRE = ["k1_n1_kleriker", "k1_n2_gascoigne", "k1_d_traum"];
+// Feste Stationen, die in jedem Durchlauf vorkommen müssen (Entscheidungsbuch, Fassung 2): Kreuzung, Eileen, beide Nadelöhre,
+// die Kanalisation-Mündung, die zweite Traumszene, die Gräber und das Kapitelende.
+const NADELOEHRE = ["k1_b_gilbert", "k1_b_scheiterhaufen", "k1_b_eileen", "k1_n1_kleriker", "k1_c_kanal", "k1_traum_zwei", "k1_c_graeber", "k1_c_eileen", "k1_n2_gascoigne", "k1_d_traum"];
+// Wahlstationen je Viertel (zwei von drei): jede der neun Routen ist eine Auslassung je Viertel.
+const VIERTEL = [["k1_b_tueren", "k1_b_anschlag", "k1_b_haus"], ["k1_b_maedchen", "k1_b_daecher", "k1_b_dachweg"]];
 const ENDE_TAG = "kapitel: ende";
 
 const { json, errors, warnings, files } = compile();
@@ -73,6 +77,8 @@ let ohneEnde = 0;
 let todeSumme = 0;
 let maxSteps = 0;
 const todOrte = {};
+const routenLore = new Map(); // Route (Auslassungen) → Menge der gesehenen Lore-Ids
+const routenLaeufe = new Map();
 
 for (let i = 0; i < RUNS; i++) {
   const r = rng(1000 + i);
@@ -87,6 +93,10 @@ for (let i = 0; i < RUNS; i++) {
   for (const k of knots) if (visits(story, k.name) > 0) reached.set(k.name, reached.get(k.name) + 1);
   const gesehen = new Set(tags.filter((t) => t.startsWith("lore:")).map((t) => t.slice(5).trim()));
   for (const id of gesehen) loreGesehen.set(id, (loreGesehen.get(id) ?? 0) + 1);
+  const route = VIERTEL.map((v) => v.find((k) => visits(story, k) === 0) ?? "-").join(" | ohne ");
+  if (!routenLore.has(route)) routenLore.set(route, new Set());
+  for (const id of gesehen) routenLore.get(route).add(id);
+  routenLaeufe.set(route, (routenLaeufe.get(route) ?? 0) + 1);
   for (const n of NADELOEHRE) if (!s && visits(story, n) === 0) fail(`Durchlauf ${i}: Nadelöhr ${n} nicht erreicht`);
   todeSumme += variable(story, "tode");
   for (const t of tags.filter((t) => t.startsWith("tod:"))) todOrte[t.slice(4).trim()] = (todOrte[t.slice(4).trim()] ?? 0) + 1;
@@ -99,6 +109,13 @@ if (stuck) fail(`${stuck} Durchläufe steckengeblieben (mehr als ${6000} Schritt
 if (ohneEnde) fail(`${ohneEnde} Durchläufe ohne Kapitelende`);
 const tot = [...reached].filter(([, n]) => n === 0).map(([k]) => k);
 for (const k of tot) fail(`Knoten nie erreicht: ${k}`);
+
+// Lore auf jeder Route (neue Regel des Umbaus): Wer eine Station auslässt, darf keine Kern-Lore verpassen, die auf dieser Route möglich sein muss.
+console.log("  Routen (Auslassungen je Viertel) und ihre Läufe:", Object.fromEntries(routenLaeufe));
+for (const [route, ids] of routenLore) {
+  const fehlt = [...loreStellen.keys()].filter((id) => !ids.has(id));
+  if (fehlt.length) fail(`Route „ohne ${route}“: Lore nie gesehen (${routenLaeufe.get(route)} Läufe): ${fehlt.join(", ")}`);
+}
 
 const pct = (n) => `${Math.round((100 * n) / RUNS)} %`;
 console.log(`  steckengeblieben: ${stuck}, ohne Ende: ${ohneEnde}, längster Lauf: ${maxSteps} Entscheidungen`);

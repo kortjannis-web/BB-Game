@@ -7,7 +7,6 @@
 // [KANON lore:gegenstaende/jaeger-und-werkstatt] Seine Kleidung ist von Bestiengestank durchdrungen (Saat an den Gräbern). Um den Hals trägt er einen schmutzigen Schal, der als heiliges Tuch der Kirche gilt (RK1 §11, wahrscheinlich): Daran hängt der Weihrauch, nicht an seinem Atem.
 // [KANON lore:figuren/maedchen-und-viola] Die Spieluhr lässt ihn in Menschen- und in Bestienform stocken; nach dem dritten Mal verwandelt er sich, egal wie viel Leben er hat.
 // [ERWEITERT] Dem Kamm der Spieluhr fehlt ein Zahn; in der dritten Zeile fällt ein Ton aus. An den Gräbern summt Gascoigne genau diesen Ton, im Kampf presst er die Hände an den Kopf, die Bestie winselt ihn, im Moment der Klarheit fällt sein Name in die Lücke, im Tod hört er dort auf. Der Choral reißt am Ende ebenfalls ab.
-// [KANON lore:gegenstaende/jaeger-und-werkstatt] Die Jägermarke kostet alle Blutechos, und sie bleiben nicht als Fleck liegen (Festlegung G3).
 // [ERWEITERT] Der Hut mit der breiten Krempe liegt auf einem Grabstein; im Kanon trägt er ihn im Kampf. Der Ring, der ihm in den Finger gewachsen ist (Gegenbild zu Gilberts zu weitem Ring).
 // [ERWEITERT] Moment der Klarheit: nur mit Freundschaft (gascoigne >= 3), Spieluhr und dem Blutgedächtnis der Kleriker-Bestie, und nur, wenn man ihn ruft.
 // Eileen hilft in Kapitel 1 nicht im Kampf; die Partnerschaft beginnt in Kapitel 2.
@@ -19,6 +18,7 @@ VAR uhr_bestie = false        // die Spieluhr in diesem Anlauf schon der Bestie 
 === k1_n2_gascoigne ===
 // TITEL: NADELÖHR 2: Gascoigne
 -> betreten("grab") ->
+~ kampfanfang = -> k1_n2_gascoigne
 ~ spieluhr_mal = 0
 ~ uhr_bestie = false
 ~ g_phase = 1
@@ -95,7 +95,6 @@ Er lässt die Donnerbüchse sinken und kommt in langen Schritten über die Gräb
 + {ampulle > 0} [Zurückspringen und die Ampulle stoßen #fliesst]
     Zwei Sätze zurück, die Ampulle schon in der Faust.
     -> ampulle_gefahr(2) -> t2
-+ {jaegermarken > 0} [Eine Jägermarke in der Faust zerdrücken #fliesst] -> marke
 - (t2b)
 // [ERWEITERT] Der Schuss aus nächster Nähe: Er lässt dich herankommen.
 Er tritt nicht zurück. Er lässt die Axt in der Rechten sinken, ganz, bis die Schneide im Gras liegt, und dreht dir die linke Schulter zu, als wolle er dich umarmen. Die Donnerbüchse hängt an seiner linken Hüfte, der Trichter zeigt zu Boden. Nur sein Daumen bewegt sich. Er spannt den Hahn, und das Klicken ist das lauteste Geräusch auf dem Friedhof. # anzeichen: donner_nah
@@ -124,8 +123,8 @@ Er fasst den Stiel ganz am Ende und beginnt sich zu drehen. Die Schneide zieht e
     ~ treffer(2)
     { leben <= 0: -> tod }
     -> t3b
-+ {staerke >= 1} [Die lange Axt vorn abfangen #fliesst]
-    Stahl schlägt auf Stahl, mitten in ihrem Kreis, und der Schlag fährt dir bis in die Zähne. Deine Arme halten, schwer und warm von dem, was die Puppe dir gegeben hat. Einen Atemzug lang steht ihr so, Klinge an Klinge, und er neigt den Kopf, als erkenne er an dir etwas wieder. Dann reißt er sich los. # notiz: staerke_genutzt
++ {geuebt} [Die lange Axt vorn abfangen #fliesst]
+    Stahl schlägt auf Stahl, mitten in ihrem Kreis, und der Schlag fährt dir bis in die Zähne. Deine Arme halten, geübt an einem Pfahl im Hof, der für dich ausholen musste. Einen Atemzug lang steht ihr so, Klinge an Klinge, und er neigt den Kopf, als erkenne er an dir etwas wieder. Dann reißt er sich los. # notiz: uebung_genutzt
     -> t3b
 + [Vorwärts, ganz nah an ihn heran #fliesst]
     In den Kreis hinein, gegen alles, was deine Beine wollen, bis du seinen Atem riechst, Eisen und angebrannten Zucker. So nah trifft die lange Klinge nicht. So nah triffst du.
@@ -286,28 +285,16 @@ Er packt dich. Beide Klauen schließen sich um deine Schultern, und er hebt dich
     ~ treffer(1)
     { leben <= 0: -> tod }
     -> sieg
-+ {staerke >= 2} [Seine Klauen nach beiden Seiten aufbrechen #fliesst]
-    Finger um Finger biegst du sie auf, mit einer Kraft, die nicht ganz deine ist. Er heult auf, hoch und kurz, und dann bist du frei, und seine Brust ist offen. # notiz: staerke_genutzt
++ {geuebt and kleriker == "besiegt"} [Seine Klauen nach beiden Seiten aufbrechen #fliesst]
+    Finger um Finger biegst du sie auf, mit einer Kraft, die nicht ganz deine ist. Er heult auf, hoch und kurz, und dann bist du frei, und seine Brust ist offen. # notiz: uebung_genutzt
     -> sieg
 + [Nach unten aus seinem Griff fallen #fliesst]
     Schwer wie ein Sack Korn rutschst du nach unten weg, und seine Klauen schließen sich um Leder und Luft. Über den Boden, hoch, und während er sich umdreht, liegt seine Brust offen. Die Säge geht hinein, so tief sie geht, und du lässt nicht los.
     -> sieg
-+ {jaegermarken > 0} [Eine Jägermarke in der Faust zerdrücken #fliesst] -> marke
-
-= marke
-// [KANON lore:gegenstaende/jaeger-und-werkstatt] Wer die Marke zerdrückt, verliert alle Blutechos; sie bleiben nicht als Fleck liegen (Festlegung G3). Eine gemeinsame Stelle in system.ink wäre besser (Faktencheck system.ink Nr. 2); bis dahin hier und in n1_kleriker.ink.
-~ jaegermarken = jaegermarken - 1
-~ marke_benutzt = true
-Die Marke bricht in deiner Faust, und {g_phase < 3:der Friedhof und sein lachender Mund|der Friedhof und das Heulen} zerfallen, wie Asche zerfällt, wenn man hineinbläst. # klang: marke
-{ echos > 0: Was an fremdem Blut in dir gesummt hat, seit du in dieser Stadt tötest, bleibt auf dem Friedhof zurück, und nichts wird zeigen, wo. }
-~ echos = 0
-~ marke_eben = true
--> traum_von_laterne
 
 = sieg
 ~ gascoigne_tot = true
 ~ einsicht = einsicht + 1
-~ echos = echos + 10
 # stimmung: ruhig
 { gascoigne_moment:
     Er sinkt zwischen den Gräbern zusammen, und als er stirbt, weicht das Haar ein Stück zurück, bis an den Hals, und das Gesicht darunter ist beinahe wieder seines. Seine Lippen bewegen sich. Es sind die ersten Töne des Liedes, und an der Stelle, wo der Ton fehlt, hören sie auf. # notiz: gascoigne_ende_mensch
