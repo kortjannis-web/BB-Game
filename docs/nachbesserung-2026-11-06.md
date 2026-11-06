@@ -1,0 +1,14 @@
+# Nachbesserung nach den unabhängigen Prüfungen (2026-11-06)
+
+Grundlage: `docs/pruefung-stil-2026-11-06.md` (S1 bis S60) und `docs/pruefung-lore-2026-11-06.md` (L1 bis L50). Fünf Bearbeiter, je eine Dateigruppe. Gilt zusätzlich zu Ü1 bis Ü12 (`docs/ueberarbeitung-kapitel1.md`).
+
+## Gemeinsame Festlegungen (N1 bis N9)
+- **N1 Formel-Budget je Datei:** „X um X / X für X“ höchstens 1 (Ausnahme Gascoignes Verwandlung); „so …, dass“ mindestens halbieren; Sätze mit „Hinter“ am Anfang halbieren; je Kampftakt höchstens ein Vergleich, harte Folgen ohne Bild; „lange“ sparsam; Körperautomatik („Deine X erinnert sich / weiß noch / zieht sich zusammen / bevor du …“) höchstens 1 je Datei, sonst Erinnerungsbild im Präteritum oder Satz einer Figur; Hals/Kehle als Gefühl höchstens 1 je Datei; „ein X, der/das nicht Y“ höchstens 1 je Datei.
+- **N2 Mondbilder (Ü1 „nie dieselbe Formel“):** Knochen und Hof nur vor der Klinik (a_ankunft). Dachweg (b_yharnam) eigenes Bild ohne Knochen und Hof. Brücke (n1): Scherenschnitt der Türme, ohne Farbwort „knochenbleich“. Gräber (c_unterstadt): die Narben, nur dort. Grab des Oedon (n2): deutlich größer als an den Gräbern, eigenes Bild, kein „knochenbleich“. Heimweg (d_nachspiel): die halbe Gasse, eigenes Bild ohne Knochen; d:178 kein Rückfall. Tod und Nachbild (system, nachbild): keine Narben, kein Hof, eigene Wirkung (Licht, Schatten, Lage).
+- **N3 Orte um die Laterne vor der Klinik (L20):** Die Laterne steht vor der Klinik; Gilberts Fenster liegt gleich neben der Laterne, am Rand der Gasse; das dunkle Haus ist „zwei Häuser weiter“; die Treppen der Stadt beginnen „ein paar Schritte hinter Gilberts Fenster“. Das Kapitelende (Heimweg) endet an dieser Laterne.
+- **N4 Sentenzen:** je Figur höchstens eine Pointe im Kapitel. Gascoigne erzählt Anekdoten; Eileen spricht in Befunden; der Kutscher wortkarg; „Meistens …“ nur einmal. „So.“ bei Gascoigne nur dreimal (Martha, Rettung auf der Brücke, sein Moment am Grab).
+- **N5 „Gute Jagd“** nur noch bei Gehrman und Gascoigne; Gilbert und der Mann an der Tür grüßen anders.
+- **N6 Choral (Ü11):** Er bricht überall nach der dritten Zeile ab, ohne Kommentar; nur am Grab (n2) wird das Abbrechen gesteigert.
+- **N7 Gascoignes Rollen:** volle Beschreibung nur beim ersten Auftritt (Scheiterhaufen, b_yharnam), danach „sein Rollen“.
+- **N8 Wörtliche Zitate:** Sätze, die (fast) wörtlich aus dem Spiel stammen, umformen (L39, L40).
+- **N9 Technik:** Logik nur ändern, wo ein Befund es verlangt (L8, L23, L24, L25, L9, L22, L30, L31, L33, L46 …), ohne neue Variablen, wenn es geht; tote Zweige (L44) dürfen gelöscht werden, wenn per grep belegt ist, dass sie nie erreicht werden. Werden Optionstexte geändert, prüfe `tools/szenarien.mjs` (sucht Teilstrings) und ziehe dort nur die Zeilen deiner Knoten nach. `npm run check` muss grün sein.
