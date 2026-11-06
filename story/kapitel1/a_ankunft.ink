@@ -28,7 +28,7 @@ Gesprochen hat der Fahrer seit dem letzten Dorf nicht. Jetzt blickt er sich zum 
 * [Ich bin der Letzte aus einem zerstörten Dorf #fliesst]
     ~ herkunft = "ueberlebender"
     Aus einem Dorf, sagst du, das es nicht mehr gibt. Seinen Namen behältst du für dich und die Namen der Menschen darin auch; es ist keiner mehr da, der sie dir zurückgeben könnte.
-* [Ich komme aus einem Krankenbett #fliesst]
+* [Ich komme vom Krankenbett, in dem ich seit Wochen liege #fliesst]
     ~ herkunft = "kranker"
     Der Husten antwortet, bevor du es kannst, und als er vorbei ist, sagst du nur noch: aus einem Krankenbett. Die Ärzte zu Hause haben dir zuletzt nicht mehr in die Augen gesehen. An dem Tag hast du deine Sachen gepackt.
 * [Ich bin dem Galgen davongelaufen #fliesst]
