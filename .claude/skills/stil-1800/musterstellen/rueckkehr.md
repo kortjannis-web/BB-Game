@@ -45,7 +45,7 @@ Alle Stellen stehen wörtlich so in `../korpus/` (Schreibung der Datei, Zeilenum
 **Worauf hören**
 
 - Chronikton mit Patina: „itzt“, „sahe“, „erhuben“, „niemalen“, „vonnöthen“, „Kapellen“. Die altertümliche Schreibung macht die Vergangenheit hörbar, ohne sie zu erklären.
-- Die Veränderung erscheint zuerst an Tier und Haar: „zwei fahlgraue Bullenbeißer mit Stachelhalsbändern“, Dieterichs Haar „schlohweiß“, „seine sonst so lustigen Augen blickten gar matt“. Nirgends steht „alles war anders“.
+- Die Veränderung erscheint zuerst an Tier und Haar: „zwei fahlgraue Bullenbeißer mit Stachelhalsbändern“, Dieterichs Haar „schlohweiß“, „seine sonst so lustigen Augen blickten gar matt“. Nirgends behauptet der Erzähler, dass alles anders sei.
 - Die schlimme Nachricht kommt in Etappen, weil der Bote zögert: Der Alte „stund immer noch, als wolle er mich nicht zum Hof hinauf lassen“, und dann „mir ziemet Schweigen“.
 - Sonne gegen Tod: Erst „einer Grasmücke Singen“ aus den Linden, dann „die rothe Flamme der Kerzen“ und „die Fremdheit des Todes, so darauf lag“.
 - Das stärkste Bild verbindet Liebe und Tod: „erhub sich über den Rand des Sarges mir gegenüber ein junges blasses Antlitz, das aus schwarzen Schleiern fast erschrocken auf mich schaute“.

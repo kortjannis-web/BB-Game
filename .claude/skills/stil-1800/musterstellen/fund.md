@@ -47,7 +47,7 @@ Alle Stellen stehen wörtlich so in `../korpus/` (Schreibung der Datei, Zeilenum
 **Worauf hören**
 
 - Der Raum ist ein Kabinett des Schreckens, laut und blutig: der Crucifixus „mit Blute überrieselt“, die Kanzel mit „Tier- und Teufelsfratzen“, Kriegsknechte, die würfeln.
-- Das unscheinbare Ding zieht stärker als die lauten: „das unschuldige Bildnis eines toten Kindes“ mit „eine[r] weiße[n] Wasserlilie in seiner kleinen bleichen Hand“, daneben der „finstere, schwarzbärtige Mann in Priesterkragen“.
+- Das unscheinbare Ding zieht stärker als die lauten: „das unschuldige Bildnis eines toten Kindes“ mit „eine weiße Wasserlilie in seiner kleinen bleichen Hand“, daneben „ein finsterer, schwarzbärtiger Mann in Priesterkragen und Sammar“.
 - Die Spur ist klein und spät entdeckt: „unten in einer dunkeln Ecke des Bildes vier mit roter Farbe geschriebene Buchstaben … die mir bis jetzt entgangen waren.“
 - Die Deutung wird im Gespräch versucht und abgewehrt: „Casu periculoso“, „Culpa“, „Culpa patris?“ – „So wollen wir … meinen seligen Amtsbruder doch nicht beschuldigen.“ Das Rätsel bleibt offen und treibt die Geschichte.
 - Erzählerhaltung des erinnerten Knaben: „ein phantastisches Verlangen ergriff mich, von dem Leben und Sterben des Kindes eine nähere, wenn auch noch so karge Kunde zu erhalten“. Der Fund weckt das Verlangen, er stillt es nicht.

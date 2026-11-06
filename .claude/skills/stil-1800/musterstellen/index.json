@@ -1,0 +1,471 @@
+[
+ {
+  "moment": "ankunft",
+  "datei": "ankunft.md",
+  "titel": "Ankunft in Waldbach",
+  "werk": "Georg Büchner, Lenz (1839)",
+  "woerter": 714
+ },
+ {
+  "moment": "ankunft",
+  "datei": "ankunft.md",
+  "titel": "Die Stadt, in der man stirbt",
+  "werk": "Rainer Maria Rilke, Die Aufzeichnungen des Malte Laurids Brigge (1910)",
+  "woerter": 502
+ },
+ {
+  "moment": "ankunft",
+  "datei": "ankunft.md",
+  "titel": "Einfahrt nach Venedig und die schwarze Gondel",
+  "werk": "Thomas Mann, Der Tod in Venedig (1912)",
+  "woerter": 597
+ },
+ {
+  "moment": "ankunft",
+  "datei": "ankunft.md",
+  "titel": "Ankunft im landrätlichen Haus in Kessin",
+  "werk": "Theodor Fontane, Effi Briest (1895)",
+  "woerter": 670
+ },
+ {
+  "moment": "rueckkehr",
+  "datei": "rueckkehr.md",
+  "titel": "Heimkehr auf den Herrenhof",
+  "werk": "Theodor Storm, Aquis submersus (1876)",
+  "woerter": 691
+ },
+ {
+  "moment": "rueckkehr",
+  "datei": "rueckkehr.md",
+  "titel": "Der Heimkehrer in der Christnacht",
+  "werk": "Annette von Droste-Hülshoff, Die Judenbuche (1842)",
+  "woerter": 598
+ },
+ {
+  "moment": "rueckkehr",
+  "datei": "rueckkehr.md",
+  "titel": "Die Villa ist eine Hütte, der Garten eine Ruine",
+  "werk": "Joseph von Eichendorff, Das Marmorbild (1819)",
+  "woerter": 403
+ },
+ {
+  "moment": "begegnung",
+  "datei": "begegnung.md",
+  "titel": "Der Sandmann ist Coppelius",
+  "werk": "E. T. A. Hoffmann, Der Sandmann (1816)",
+  "woerter": 652
+ },
+ {
+  "moment": "begegnung",
+  "datei": "begegnung.md",
+  "titel": "Der Reiter auf dem Deich",
+  "werk": "Theodor Storm, Der Schimmelreiter (1888)",
+  "woerter": 784
+ },
+ {
+  "moment": "begegnung",
+  "datei": "begegnung.md",
+  "titel": "Der grüne Jäger",
+  "werk": "Jeremias Gotthelf, Die schwarze Spinne (1842)",
+  "woerter": 778
+ },
+ {
+  "moment": "begegnung",
+  "datei": "begegnung.md",
+  "titel": "Der Fremde am Friedhof",
+  "werk": "Thomas Mann, Der Tod in Venedig (1912)",
+  "woerter": 667
+ },
+ {
+  "moment": "gespraech",
+  "datei": "gespraech.md",
+  "titel": "Simon und Friedrich vor der Beichte",
+  "werk": "Annette von Droste-Hülshoff, Die Judenbuche (1842)",
+  "woerter": 441
+ },
+ {
+  "moment": "gespraech",
+  "datei": "gespraech.md",
+  "titel": "Der Gondolier ohne Konzession",
+  "werk": "Thomas Mann, Der Tod in Venedig (1912)",
+  "woerter": 840
+ },
+ {
+  "moment": "gespraech",
+  "datei": "gespraech.md",
+  "titel": "Kennt er sein Urteil?",
+  "werk": "Franz Kafka, In der Strafkolonie (1919)",
+  "woerter": 768
+ },
+ {
+  "moment": "gespraech",
+  "datei": "gespraech.md",
+  "titel": "Der Chinese und die Lächerlichkeit",
+  "werk": "Theodor Fontane, Effi Briest (1895)",
+  "woerter": 674
+ },
+ {
+  "moment": "anzeichen",
+  "datei": "anzeichen.md",
+  "titel": "Das Geräusch im Zimmerwinkel",
+  "werk": "Heinrich von Kleist, Das Bettelweib von Locarno (1810)",
+  "woerter": 900
+ },
+ {
+  "moment": "anzeichen",
+  "datei": "anzeichen.md",
+  "titel": "Um neun kommt der Sandmann",
+  "werk": "E. T. A. Hoffmann, Der Sandmann (1816)",
+  "woerter": 700
+ },
+ {
+  "moment": "anzeichen",
+  "datei": "anzeichen.md",
+  "titel": "Der schwarze Punkt auf der Wange",
+  "werk": "Jeremias Gotthelf, Die schwarze Spinne (1842)",
+  "woerter": 794
+ },
+ {
+  "moment": "anzeichen",
+  "datei": "anzeichen.md",
+  "titel": "Der süßliche Geruch und die Anschläge",
+  "werk": "Thomas Mann, Der Tod in Venedig (1912)",
+  "woerter": 628
+ },
+ {
+  "moment": "kampf",
+  "datei": "kampf.md",
+  "titel": "Der Mord vor der Kathedrale",
+  "werk": "Heinrich von Kleist, Das Erdbeben in Chili (1807)",
+  "woerter": 676
+ },
+ {
+  "moment": "kampf",
+  "datei": "kampf.md",
+  "titel": "Der Deich bricht",
+  "werk": "Theodor Storm, Der Schimmelreiter (1888)",
+  "woerter": 638
+ },
+ {
+  "moment": "kampf",
+  "datei": "kampf.md",
+  "titel": "Der Priester gegen den Grünen",
+  "werk": "Jeremias Gotthelf, Die schwarze Spinne (1842)",
+  "woerter": 604
+ },
+ {
+  "moment": "kampf",
+  "datei": "kampf.md",
+  "titel": "Auf dem Ratsturm",
+  "werk": "E. T. A. Hoffmann, Der Sandmann (1816)",
+  "woerter": 442
+ },
+ {
+  "moment": "tod",
+  "datei": "tod.md",
+  "titel": "Das tote Kind in Fouday",
+  "werk": "Georg Büchner, Lenz (1839)",
+  "woerter": 457
+ },
+ {
+  "moment": "tod",
+  "datei": "tod.md",
+  "titel": "Der Tod des Kammerherrn Brigge",
+  "werk": "Rainer Maria Rilke, Die Aufzeichnungen des Malte Laurids Brigge (1910)",
+  "woerter": 806
+ },
+ {
+  "moment": "tod",
+  "datei": "tod.md",
+  "titel": "Die Egge sticht nur",
+  "werk": "Franz Kafka, In der Strafkolonie (1919)",
+  "woerter": 697
+ },
+ {
+  "moment": "tod",
+  "datei": "tod.md",
+  "titel": "Aschenbachs Tod am Strand",
+  "werk": "Thomas Mann, Der Tod in Venedig (1912)",
+  "woerter": 623
+ },
+ {
+  "moment": "erwachen",
+  "datei": "erwachen.md",
+  "titel": "Augen her! und der warme Hauch",
+  "werk": "E. T. A. Hoffmann, Der Sandmann (1816)",
+  "woerter": 536
+ },
+ {
+  "moment": "erwachen",
+  "datei": "erwachen.md",
+  "titel": "Erwachen auf dem Hügel vor der Stadt",
+  "werk": "Heinrich von Kleist, Das Erdbeben in Chili (1807)",
+  "woerter": 407
+ },
+ {
+  "moment": "erwachen",
+  "datei": "erwachen.md",
+  "titel": "Die Nacht in der Hütte",
+  "werk": "Georg Büchner, Lenz (1839)",
+  "woerter": 377
+ },
+ {
+  "moment": "fund",
+  "datei": "fund.md",
+  "titel": "Die letzte Mauer",
+  "werk": "Rainer Maria Rilke, Die Aufzeichnungen des Malte Laurids Brigge (1910)",
+  "woerter": 668
+ },
+ {
+  "moment": "fund",
+  "datei": "fund.md",
+  "titel": "Das Bild des toten Knaben und die vier Buchstaben",
+  "werk": "Theodor Storm, Aquis submersus (1876)",
+  "woerter": 652
+ },
+ {
+  "moment": "fund",
+  "datei": "fund.md",
+  "titel": "Der Tote in der Buche",
+  "werk": "Annette von Droste-Hülshoff, Die Judenbuche (1842)",
+  "woerter": 527
+ },
+ {
+  "moment": "fund",
+  "datei": "fund.md",
+  "titel": "Der schwarze Fensterpfosten",
+  "werk": "Jeremias Gotthelf, Die schwarze Spinne (1842)",
+  "woerter": 405
+ },
+ {
+  "moment": "dokument",
+  "datei": "dokument.md",
+  "titel": "Nathanaels erster Brief",
+  "werk": "E. T. A. Hoffmann: Der Sandmann (1816, Erstdruck 1817)",
+  "woerter": 413
+ },
+ {
+  "moment": "dokument",
+  "datei": "dokument.md",
+  "titel": "Das Bild mit den roten Buchstaben",
+  "werk": "Theodor Storm: Aquis submersus (1876)",
+  "woerter": 669
+ },
+ {
+  "moment": "dokument",
+  "datei": "dokument.md",
+  "titel": "Die Schrift an der Buche",
+  "werk": "Annette von Droste-Hülshoff: Die Judenbuche (1842)",
+  "woerter": 348
+ },
+ {
+  "moment": "dokument",
+  "datei": "dokument.md",
+  "titel": "Der Grabstein unter dem Tisch",
+  "werk": "Franz Kafka: In der Strafkolonie (1919)",
+  "woerter": 445
+ },
+ {
+  "moment": "geruecht",
+  "datei": "geruecht.md",
+  "titel": "Das Wort „Übel“ und der Geruch",
+  "werk": "Thomas Mann: Der Tod in Venedig (1912)",
+  "woerter": 628
+ },
+ {
+  "moment": "geruecht",
+  "datei": "geruecht.md",
+  "titel": "Das Gerippe auf Jevershallig",
+  "werk": "Theodor Storm: Der Schimmelreiter (1888)",
+  "woerter": 739
+ },
+ {
+  "moment": "geruecht",
+  "datei": "geruecht.md",
+  "titel": "Die Geschichte vom Chinesen",
+  "werk": "Theodor Fontane: Effi Briest (1895)",
+  "woerter": 379
+ },
+ {
+  "moment": "geruecht",
+  "datei": "geruecht.md",
+  "titel": "Das Surren im neuen Haus",
+  "werk": "Jeremias Gotthelf: Die schwarze Spinne (1842)",
+  "woerter": 404
+ },
+ {
+  "moment": "kirche",
+  "datei": "kirche.md",
+  "titel": "Die Egge schreibt das Urteil",
+  "werk": "Franz Kafka: In der Strafkolonie (1919)",
+  "woerter": 850
+ },
+ {
+  "moment": "kirche",
+  "datei": "kirche.md",
+  "titel": "Die Politik des Verschweigens",
+  "werk": "Thomas Mann: Der Tod in Venedig (1912)",
+  "woerter": 713
+ },
+ {
+  "moment": "kirche",
+  "datei": "kirche.md",
+  "titel": "Die Predigt des Chorherrn",
+  "werk": "Heinrich von Kleist: Das Erdbeben in Chili (1807)",
+  "woerter": 780
+ },
+ {
+  "moment": "kirche",
+  "datei": "kirche.md",
+  "titel": "Gottes Hôtel",
+  "werk": "Rainer Maria Rilke: Die Aufzeichnungen des Malte Laurids Brigge (1910)",
+  "woerter": 512
+ },
+ {
+  "moment": "traum",
+  "datei": "traum.md",
+  "titel": "Das Venusbild am Weiher",
+  "werk": "Joseph von Eichendorff: Das Marmorbild (1818/19)",
+  "woerter": 431
+ },
+ {
+  "moment": "traum",
+  "datei": "traum.md",
+  "titel": "Waldeinsamkeit",
+  "werk": "Ludwig Tieck: Der blonde Eckbert (1797)",
+  "woerter": 656
+ },
+ {
+  "moment": "traum",
+  "datei": "traum.md",
+  "titel": "Der fremde Gott",
+  "werk": "Thomas Mann: Der Tod in Venedig (1912)",
+  "woerter": 580
+ },
+ {
+  "moment": "grauen",
+  "datei": "grauen.md",
+  "titel": "Coppelius am Herd",
+  "werk": "E. T. A. Hoffmann: Der Sandmann (1816, Erstdruck 1817)",
+  "woerter": 531
+ },
+ {
+  "moment": "grauen",
+  "datei": "grauen.md",
+  "titel": "Die Spinne im Haufen",
+  "werk": "Jeremias Gotthelf: Die schwarze Spinne (1842)",
+  "woerter": 706
+ },
+ {
+  "moment": "grauen",
+  "datei": "grauen.md",
+  "titel": "Christine Brahe an der Tafel",
+  "werk": "Rainer Maria Rilke: Die Aufzeichnungen des Malte Laurids Brigge (1910)",
+  "woerter": 435
+ },
+ {
+  "moment": "grauen",
+  "datei": "grauen.md",
+  "titel": "Tapp! tapp!",
+  "werk": "Heinrich von Kleist: Das Bettelweib von Locarno (1810)",
+  "woerter": 765
+ },
+ {
+  "moment": "ruhe",
+  "datei": "ruhe.md",
+  "titel": "Der Morgen des Tauffestes",
+  "werk": "Jeremias Gotthelf: Die schwarze Spinne (1842)",
+  "woerter": 350
+ },
+ {
+  "moment": "ruhe",
+  "datei": "ruhe.md",
+  "titel": "Unter dem Granatapfelbaum",
+  "werk": "Heinrich von Kleist: Das Erdbeben in Chili (1807)",
+  "woerter": 296
+ },
+ {
+  "moment": "ruhe",
+  "datei": "ruhe.md",
+  "titel": "Lichter in Waldbach",
+  "werk": "Georg Büchner: Lenz (1835/1839)",
+  "woerter": 443
+ },
+ {
+  "moment": "abschied",
+  "datei": "abschied.md",
+  "titel": "Leb wohl, mein Kind",
+  "werk": "Theodor Storm: Aquis submersus (1876)",
+  "woerter": 368
+ },
+ {
+  "moment": "abschied",
+  "datei": "abschied.md",
+  "titel": "Der Stein auf dem Rondell",
+  "werk": "Theodor Fontane: Effi Briest (1895)",
+  "woerter": 519
+ },
+ {
+  "moment": "abschied",
+  "datei": "abschied.md",
+  "titel": "Der Psychagog im Meer",
+  "werk": "Thomas Mann: Der Tod in Venedig (1912)",
+  "woerter": 765
+ },
+ {
+  "moment": "kapitelende",
+  "datei": "kapitelende.md",
+  "titel": "Die Spinne darf sich nicht regen",
+  "werk": "Jeremias Gotthelf: Die schwarze Spinne (1842)",
+  "woerter": 365
+ },
+ {
+  "moment": "kapitelende",
+  "datei": "kapitelende.md",
+  "titel": "Der Morgen über der Verwüstung",
+  "werk": "Theodor Storm: Der Schimmelreiter (1888)",
+  "woerter": 589
+ },
+ {
+  "moment": "kapitelende",
+  "datei": "kapitelende.md",
+  "titel": "So lebte er hin",
+  "werk": "Georg Büchner: Lenz (1835/1839)",
+  "woerter": 421
+ },
+ {
+  "moment": "kapitelende",
+  "datei": "kapitelende.md",
+  "titel": "Als müßt er sich freuen",
+  "werk": "Heinrich von Kleist: Das Erdbeben in Chili (1807)",
+  "woerter": 311
+ },
+ {
+  "moment": "stadt",
+  "datei": "stadt.md",
+  "titel": "Die letzte Mauer",
+  "werk": "Rainer Maria Rilke: Die Aufzeichnungen des Malte Laurids Brigge (1910)",
+  "woerter": 668
+ },
+ {
+  "moment": "stadt",
+  "datei": "stadt.md",
+  "titel": "Venedig bei Scirocco",
+  "werk": "Thomas Mann: Der Tod in Venedig (1912)",
+  "woerter": 370
+ },
+ {
+  "moment": "stadt",
+  "datei": "stadt.md",
+  "titel": "St. Jago stürzt",
+  "werk": "Heinrich von Kleist: Das Erdbeben in Chili (1807)",
+  "woerter": 437
+ },
+ {
+  "moment": "stadt",
+  "datei": "stadt.md",
+  "titel": "Das Dorf B. und seine Nächte",
+  "werk": "Annette von Droste-Hülshoff: Die Judenbuche (1842)",
+  "woerter": 319
+ }
+]

@@ -24,7 +24,7 @@ Alle Stellen stehen wörtlich so in `../korpus/` (Schreibung der Datei, Zeilenum
 
 ## 2. Theodor Storm, *Der Schimmelreiter* (1888): Der Reiter auf dem Deich
 
-**Werk:** Theodor Storm, *Der Schimmelreiter*, 1888. **Lage:** Rahmen, Anfang: Der Erzähler reitet im Oktobersturm auf dem nordfriesischen Deich und sieht den Schimmelreiter. **Korpus:** `korpus/storm_schimmelreiter.txt`, ab Zeile 21. **Umfang:** 621 Wörter.
+**Werk:** Theodor Storm, *Der Schimmelreiter*, 1888. **Lage:** Rahmen, Anfang: Der Erzähler reitet im Oktobersturm auf dem nordfriesischen Deich und sieht den Schimmelreiter. **Korpus:** `korpus/storm_schimmelreiter.txt`, ab Zeile 21. **Umfang:** 784 Wörter.
 
 > Es war im dritten Jahrzehnt unseres Jahrhunderts, an einem Oktobernachmittag – so begann der damalige Erzähler –, als ich bei starkem Unwetter auf einem nordfriesischen Deich entlangritt. Zur Linken hatte ich jetzt schon seit über einer Stunde die öde, bereits von allem Vieh geleerte Marsch, zur Rechten, und zwar in unbehaglichster Nähe, das Wattenmeer der Nordsee; zwar sollte man vom Deiche aus auf Halligen und Inseln sehen können; aber ich sah nichts als die gelbgrauen Wellen, die unaufhörlich wie mit Wutgebrüll an den Deich hinaufschlugen und mitunter mich und das Pferd mit schmutzigem Schaum bespritzten; dahinter wüste Dämmerung, die Himmel und Erde nicht unterscheiden ließ; denn auch der halbe Mond, der jetzt in der Höhe stand, war meist von treibendem Wolkendunkel überzogen. Es war eiskalt; meine verklommenen Hände konnten kaum den Zügel halten, und ich verdachte es nicht den Krähen und Möwen, die sich fortwährend krächzend und gackernd vom Sturm ins Land hineintreiben ließen. Die Nachtdämmerung hatte begonnen, und schon konnte ich nicht mehr mit Sicherheit die Hufen meines Pferdes erkennen; keine Menschenseele war mir begegnet, ich hörte nichts als das Geschrei der Vögel, wenn sie mich oder meine treue Stute fast mit den langen Flügeln streiften, und das Toben von Wind und Wasser. Ich leugne nicht, ich wünschte mich mitunter in sicheres Quartier.
 >
@@ -39,14 +39,16 @@ Alle Stellen stehen wörtlich so in `../korpus/` (Schreibung der Datei, Zeilenum
 > In Gedanken darüber ritt ich weiter, aber ich hatte nicht lange Zeit zum Denken, schon fuhr es von rückwärts wieder an mir vorbei; mir war, als streifte mich der fliegende Mantel, und die Erscheinung war, wie das erste Mal, lautlos an mir vorübergestoben. Dann sah ich sie fern und ferner vor mir; dann war's, als säh ich plötzlich ihren Schatten an der Binnenseite des Deiches hinuntergehen.
 >
 > Etwas zögernd ritt ich hintendrein. Als ich jene Stelle erreicht hatte, sah ich hart am Deich im Kooge unten das Wasser einer großen Wehle blinken – so nennen sie dort die Brüche, welche von den Sturmfluten in das Land gerissen werden und die dann meist als kleine, aber tiefgründige Teiche stehen bleiben.
+>
+> Das Wasser war, trotz des schützenden Deiches, auffallend bewegt; der Reiter konnte es nicht getrübt haben; ich sah nichts weiter von ihm. Aber ein anderes sah ich, das ich mit Freuden jetzt begrüßte: vor mir, von unten aus dem Kooge, schimmerten eine Menge zerstreuter Lichtscheine zu mir herauf, sie schienen aus jenen langgestreckten friesischen Häusern zu kommen, die vereinzelt auf mehr oder minder hohen Werften lagen, dicht vor mir aber auf halber Höhe des Binnendeiches lag ein großes Haus derselben Art; an der Südseite, rechts von der Haustür, sah ich alle Fenster erleuchtet; dahinter gewahrte ich Menschen und glaubte trotz des Sturmes sie zu hören. Mein Pferd war schon von selbst auf den Weg am Deich hinabgeschritten, der mich vor die Tür des Hauses führte. Ich sah wohl, daß es ein Wirtshaus war; denn vor den Fenstern gewahrte ich die sogenannten »Ricks«, das heißt auf zwei Ständern ruhende Balken mit großen eisernen Ringen, zum Anbinden des Viehes und der Pferde, die hier haltmachten.
 
 **Worauf hören**
 
 - Ein langer Anlauf mit Kälte, Wasser, Vögeln: „gelbgrauen Wellen, die unaufhörlich wie mit Wutgebrüll an den Deich hinaufschlugen“, „meine verklommenen Hände“, „wüste Dämmerung, die Himmel und Erde nicht unterscheiden ließ“.
 - Die Erscheinung wird über den Zweifel eingeführt: „ich hörte nichts; aber immer deutlicher, wenn der halbe Mond ein karges Licht herabließ, glaubte ich eine dunkle Gestalt zu erkennen“.
-- Ein einziges starkes Bild genügt: „im Vorbeifliegen sahen mich zwei brennende Augen aus einem bleichen Antlitz an“, dazu der „hochbeinige hagere Schimmel“.
+- Ein einziges starkes Bild genügt: „im Vorbeifliegen sahen mich zwei brennende Augen aus einem bleichen Antlitz an“, dazu das Pferd: „sie saß auf einem Pferde, einem hochbeinigen hageren Schimmel“.
 - Der Schrecken kommt nachträglich, als Erkenntnis: „Und jetzt fiel mir bei, ich hatte keinen Hufschlag, kein Keuchen des Pferdes vernommen“.
-- Danach ein sachlicher Erklärton (die Wehle, die „Ricks“, das Plattdeutsch des Knechts): Der Rahmen gibt dem Spuk Glaubwürdigkeit, gerade weil er nüchtern weiterredet.
+- Danach ein sachlicher Erklärton („so nennen sie dort die Brüche“, die »Ricks« vor dem Wirtshaus) und die Lichter der Häuser: Der Rahmen gibt dem Spuk Glaubwürdigkeit, gerade weil er nüchtern weiterredet.
 
 ## 3. Jeremias Gotthelf, *Die schwarze Spinne* (1842): Der grüne Jäger
 
@@ -88,4 +90,4 @@ Alle Stellen stehen wörtlich so in `../korpus/` (Schreibung der Datei, Zeilenum
 - Das Porträt beginnt als kühler Steckbrief und kippt ins Tierische: Die Lippen „völlig von den Zähnen zurückgezogen“, die Zähne „bis zum Zahnfleisch bloßgelegt, weiß und lang“.
 - Die Begegnung ist ein Blickkampf ohne Wort: „so kriegerisch, so gerade ins Auge hinein, so offenkundig gesonnen, die Sache aufs Äußerste zu treiben“.
 - Wirkung statt Bedeutung: Der Fremde löst eine Vision aus (Sumpf, „der laue, mephitische Odem“, „die phosphoreszierenden Lichter des Tigers“). Das Grauen entsteht im Betrachter.
-- Die Ironie verharmlost: „Es war Reiselust, nichts weiter“. Der Erzähler beruhigt, der Leser ahnt den Todesboten; dazu passen die „Zäune der Grabsteinmetzereien“.
+- Die Ironie verharmlost: „Es war Reiselust, nichts weiter“. Der Erzähler beruhigt, der Leser ahnt den Todesboten; dazu passt, dass er seinen Gang „an den Zäunen der Grabsteinmetzereien“ wieder aufnimmt.

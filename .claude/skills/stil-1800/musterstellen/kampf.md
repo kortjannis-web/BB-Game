@@ -18,7 +18,7 @@ Alle Stellen stehen wörtlich so in `../korpus/` (Schreibung der Datei, Zeilenum
 
 - Die Masse spricht als Chor ohne Anführungszeichen: „Er ist der Vater! schrie eine Stimme; und: er ist Jeronimo Rugera! eine andere; und: sie sind die gotteslästerlichen Menschen! eine dritte“. Stimmen schieben sich übereinander.
 - Gewalt steht im Hauptsatz und ohne Verzögerung: „und ihn an Donna Constanzens Seite mit einem ungeheuren Keulenschlage zu Boden streckte“; „Meister Pedrillo schlug sie mit der Keule nieder.“
-- Die kirchliche Rahmung wird verkehrt: „die ganze im Tempel Jesu versammelte Christenheit“, „heiliger Ruchlosigkeit voll“, „der Fürst der satanischen Rotte“. Das ist der Mob mit Fackeln und Keulen vor der Kirche.
+- Die kirchliche Rahmung wird verkehrt: „die ganze im Tempel Jesu versammelte Christenheit“ ruft „steinigt sie!“, und ihr Anführer heißt „der Fürst der satanischen Rotte“. Das ist der Mob mit Fackeln und Keulen vor der Kirche.
 - Ein Heldenbild wie ein Relief, in einem Satz: „den Rücken an die Kirche gelehnt; in der Linken hielt er die Kinder, in der Rechten das Schwert“, dann „ein Löwe wehrt sich nicht besser.“
 - Das härteste Detail kommt zuletzt, dann Stille: „an eines Kirchpfeilers Ecke zerschmettert hatte. Hierauf ward es still, und alles entfernte sich.“ Folge kurz und hart.
 

@@ -41,8 +41,8 @@ Alle Stellen stehen wörtlich so in `../korpus/` (Schreibung der Datei, Zeilenum
 **Worauf hören**
 
 - Der Tod wird eine eigene Figur mit eigener Stimme: „Es war eine Stimme, … es war Christoph Detlevs Tod.“ Dann die Anapher: „Verlangte, getragen zu werden, verlangte das blaue Zimmer …“.
-- Der Körper als Masse und Ding: „groß über seine dunkelblaue Uniform hinausquellend“, „der großen, dunkelnden Haufen in der Mitte“, „ein großer Anzug über einem verdorbenen Ding“.
-- Ein kleines Detail gegen das große Sterben: der Hühnerhund, dessen „zottige Vorderpfote“ auf der grauen Hand liegt.
+- Der Körper als Masse und Ding: „groß über seine dunkelblaue Uniform hinausquellend“, „nach dem großen, dunkelnden Haufen in der Mitte“, „ein großer Anzug über einem verdorbenen Ding“.
+- Ein kleines Detail gegen das große Sterben: der Harthaarige mit dem mürrischen Gesicht; „eine von seinen breiten, zottigen Vorderpfoten lag auf Christoph Detlevs großer, grauer Hand“.
 - Das Grauen breitet sich in Kreisen aus: das Dorf, die Schwangeren, die Kühe („einer riß man die tote Frucht mit allen Eingeweiden aus dem Leibe“), die Kirche, der Pfarrer, die Glocke, „die einen furchtbaren Rivalen bekommen hatte“.
 - Die lange Und-Reihe klingt wie Chronik und Bibel („Und die Frauen … Und die Kühe … Und wenn sie am Sonntag …“) und endet im Bild: „wie ein König, den man den Schrecklichen nennt, später und immer.“
 
@@ -56,7 +56,7 @@ Alle Stellen stehen wörtlich so in `../korpus/` (Schreibung der Datei, Zeilenum
 
 **Worauf hören**
 
-- Die Stille ist der Fehler: „aber alles war still, nicht das geringste Surren“. Dann das groteske Detail: Zahnräder, die „kollerte[n] im Sand und legte[n] sich“.
+- Die Stille ist der Fehler: „Durch diese stille Arbeit entschwand die Maschine förmlich der Aufmerksamkeit.“ Dann das groteske Detail: ein Zahnrad nach dem anderen „kollerte im Sand und legte sich“.
 - Komik neben dem Mord: Der Verurteilte ist „entzückt“ wie ein Kind und will die Räder fangen.
 - Ein Satz trägt den Umschlag von Ordnung in Mord: „Die Egge schrieb nicht, sie stach nur“; der Reisende nennt es: „das war unmittelbarer Mord.“
 - Blut sachlich, ohne Adjektiv des Schreckens: „Das Blut floss in hundert Strömen, nicht mit Wasser vermischt, auch die Wasserröhrchen hatten diesmal versagt.“
@@ -76,8 +76,8 @@ Alle Stellen stehen wörtlich so in `../korpus/` (Schreibung der Datei, Zeilenum
 
 **Worauf hören**
 
-- Der Ort ist vorher geleert: „Herbstlichkeit, Überlebtheit“, ein „scheinbar herrenlos[er]“ Apparat, „ein schwarzes Tuch, darüber gebreitet, flatterte klatschend im kälteren Winde“. Ein Totentuch, das niemand so nennt.
+- Der Ort ist vorher geleert: „Herbstlichkeit, Überlebtheit“, ein Apparat, „scheinbar herrenlos“, „ein schwarzes Tuch, darüber gebreitet, flatterte klatschend im kälteren Winde“. Ein Totentuch, das niemand so nennt.
 - Kleine Gewalt spiegelt das Ende: Tadzio wird in den Sand gedrückt, bis seine Versuche „sich nur noch als ein Zucken“ wiederholen.
 - Der Tod geschieht im Blick und wird nicht genannt: Das Haupt „sank auf die Brust“, das Antlitz zeigt „den schlaffen, innig versunkenen Ausdruck tiefen Schlummers“.
 - Die mythische Deutung bleibt Empfindung der Figur: „als ob der bleiche und liebliche Psychagog dort draußen ihm lächle, ihm winke“.
-- Kaltes Ende in zwei Sätzen von außen: „Minuten vergingen, bis man dem seitlich im Stuhle Hinabgesunkenen zur Hilfe eilte“, dann die Ironie der „respektvoll erschütterte[n] Welt“.
+- Kaltes Ende in zwei Sätzen von außen: „Minuten vergingen, bis man dem seitlich im Stuhle Hinabgesunkenen zur Hilfe eilte“, dann die Ironie: „eine respektvoll erschütterte Welt“.

@@ -35,7 +35,7 @@ Alle Stellen stehen wörtlich so in `../korpus/` (Schreibung der Datei, Zeilenum
 **Worauf hören**
 
 - Der erste Satz ist ein Urteil mit Umkehr, keine Beschreibung: „hierher kommen die Leute, um zu leben, ich würde eher meinen, es stürbe sich hier.“
-- Der Ton bleibt amtlich-trocken, gerade wo es grausig wird („Maison d’Accouchement. Gut. Man wird sie entbinden – man kann das.“). Die Kälte ist Abwehr, und die Abwehr macht Angst.
+- Der Ton bleibt amtlich-trocken, gerade wo es grausig wird („Maison d'Accouchement. Gut. Man wird sie entbinden – man kann das.“). Die Kälte ist Abwehr, und die Abwehr macht Angst.
 - Der Geruch kommt im Dreiklang, Gegenstand neben Gefühl: „nach Jodoform, nach dem Fett von pommes frites, nach Angst“. Später kehrt er wörtlich beim Kind wieder („atmete Jodoform, pommes frites, Angst“), ein Leitmotiv auf engstem Raum.
 - Geräusche als Wesen, in kurzen Hauptsätzen: „ich höre ihre großen Scherben lachen, die kleinen Splitter kichern“; „Jemand steigt die Treppe. Kommt, kommt unaufhörlich.“
 - Steigerung über das Gegenteil: Nach allen Geräuschen kommt „etwas, was furchtbarer ist: die Stille“, entfaltet in einem einzigen Bild (die Mauer, die sich „lautlos“ neigt).
@@ -53,10 +53,10 @@ Alle Stellen stehen wörtlich so in `../korpus/` (Schreibung der Datei, Zeilenum
 **Worauf hören**
 
 - Vor die Pracht stellt Mann einen Verfallsboten: den betrunkenen, geschminkten Greis, dem „das falsche Obergebiß vom Kiefer auf die Unterlippe“ fällt. Die Stadt wird durch das Fratzenhafte betreten („Neigung, sich ins Sonderbare und Fratzenhafte zu entstellen“).
-- Das Panorama ist eine einzige gebaute Periode mit Doppelpunkt und Aufzählung („die leichte Herrlichkeit des Palastes und die Seufzerbrücke, die Säulen mit Löw’ und Heiligem …“), geschlossen von einem klugen Gedanken über die „Hintertür“.
+- Das Panorama ist eine einzige gebaute Periode mit Doppelpunkt und Aufzählung („die leichte Herrlichkeit des Palastes und die Seufzerbrücke, die Säulen mit Löw' und Heiligem …“), geschlossen von einem klugen Gedanken über die „Hintertür“.
 - Beim Aussteigen springt das Tempus ins Präsens („Man billigt sein Vorhaben, man schreit seinen Wunsch zur Wasserfläche hinab“): Gedränge wird nah, dann kehrt die Erzählung ins Präteritum zurück.
 - Der Tod wohnt im Gegenstand, nicht in einer Behauptung: die Gondel „so eigentümlich schwarz, wie sonst unter allen Dingen nur Särge sind“, der „sargschwarz lackierte, mattschwarz gepolsterte Armstuhl“, und zugleich „der erschlaffendste Sitz von der Welt“. Grauen und Wollust in einem Ding.
-- Die rhetorische Frage („Wer hätte nicht …?“) zieht den Leser in die Empfindung; die Stille „entkörpert“ die Stimmen. Ein Verb trägt die ganze Stimmung.
+- Die rhetorische Frage („Wer hätte nicht …?“) zieht den Leser in die Empfindung; die Stille scheint die Stimmen „zu entkörpern“. Ein Verb trägt die ganze Stimmung.
 
 ## 4. Theodor Fontane, *Effi Briest* (1895): Ankunft im landrätlichen Haus in Kessin
 
