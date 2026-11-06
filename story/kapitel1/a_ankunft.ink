@@ -25,7 +25,7 @@ Gesprochen hat der Fahrer seit dem letzten Dorf nicht. Jetzt blickt er sich zum 
 * [Ich bin Lehrer einer Universität #fliesst]
     ~ herkunft = "gelehrter"
     Über diese Stadt standen in der Bibliothek deiner Universität drei Bücher, schlecht gebunden, und ihre Verfasser brachen die Sätze mitten im Gedanken ab. Damals hieltest du das für schlechten Stil. Dem Kutscher sagst du nur: Ich bin Lehrer. Es klingt hohl. „Bücher“, sagt er, wie man eine Krankheit nennt. „Hier liest keiner. Hier sieht man.“
-* [Ich bin der Letzte aus einem Dorf #fliesst]
+* [Ich bin der Letzte aus einem zerstörten Dorf #fliesst]
     ~ herkunft = "ueberlebender"
     Aus einem Dorf, sagst du, das es nicht mehr gibt. Seinen Namen behältst du für dich und die Namen der Menschen darin auch; es ist keiner mehr da, der sie dir zurückgeben könnte.
 * [Ich komme aus einem Krankenbett #fliesst]
