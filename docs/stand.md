@@ -45,6 +45,10 @@ Alle Szenen sind überarbeitet und geschliffen (Stufe 2: von Claude gebaut und z
 4. **Kapitel 2 (Kathedralbezirk):** zuerst ein Gerüst mit Ein-Satz-Platzhaltern nach `lore/kapitel/kapitel2.md`, dem Nutzer als Abfrage vorlegen.
 
 ## Offen beim Nutzer
+- **Schreibkunst (2026-11-06):** Nutzer findet die Prosa „Slop“. Analyse in `docs/schreibkunst-analyse.md` (Messung gegen sieben Klassiker, blinde Kritik, Regeln, die Formeln erzeugen, Plan Phase 2: Korpus, Skill `stil-1800`, Prüfer v2, Weltbild, Probe am Prolog). Wartet auf seine Entscheidungen (Probe-Ton, Regeln umbauen, Mond).
+- **Mond/Nacht:** Kanon Kapitel 1 = Abend (Sonnenuntergang nach Gascoigne); Nutzer erinnert ewige Nacht und großen, tiefen Mond. Entscheidung offen.
+- **Drei Werkstatt-Fixes bis zur Klinik** (2026-11-06) noch nicht übermittelt.
+- **Neu im Spiel:** Gelesenes und getroffene Entscheidungen dauerhaft grün; „← Zurück“ (eine Entscheidung).
 - **Hosting (2026-11-06):** Umstellung auf GitHub Pages ist vorbereitet. Nutzer muss: Repo öffentlich machen (https://github.com/kortjannis-web/BB-Game/settings, unten Danger Zone), dann `/settings/pages` Source „GitHub Actions“, dann Workflow „Spiel veröffentlichen“ starten. `quellen/lore-komplett.md` ist aus Repo und Geschichte entfernt (Kopie hat der Nutzer). Netlify erst trennen, wenn die Werkstatt-Vorschläge gesichert sind.
 - **Prolog (2026-11-06):** Änderungen des Nutzers (Screenshots) als Vorschlag v1 bis v5b übernommen, einzelne Commits, Tippfehler korrigiert; Muster in `docs/nutzerstil.md`. Herkunftsfrage neu gebaut (Fahrer blickt sich zum ersten Mal um, „Aus was für Verhältnissen …“), Wortlaut der Antworten ist **Entwurf**. Zweite Einreichung (v1 bis v13, Herkunft und Grund) umgesetzt: Gründe „Suche“ und „Schuld“ gestrichen (samt Folgestellen), neu „etwas krank“, „schwer krank“, „Schweigen“. **Offen:** v9 „unaufrichtig“ (Lüge?), Wortlaut der Folgetexte von mir.
 - **Herkunft Einfluss:** Entscheidung des Nutzers 2026-11-06: nur Dialog und Text, keine eigenen Optionen. Nebenzeilen dürfen in weiteren Szenen dazukommen (Figuren reagieren auf die Herkunft), aber ohne Weichen.
