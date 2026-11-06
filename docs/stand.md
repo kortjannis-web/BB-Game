@@ -2,7 +2,14 @@
 
 **Zweck:** Wer hier neu einsteigt (ein neuer Chat, eine neue Sitzung), liest zuerst diese Datei und weiß dann, wo wir stehen und was als Nächstes kommt. Claude aktualisiert sie nach jeder Arbeit, committet und merged nach `main`. Alles Wichtige liegt im Repository, nichts nur im Chat.
 
-**Zuletzt aktualisiert:** 2026-11-06, nach dem **Umbau von Kapitel 1 zum Entscheidungsbuch** (`docs/kapitel1-struktur.md`). Die Texte stammen aus dem Stand vom 2026-11-05 (Stufe 2); neue Stationen, Nachbilder (Monologe) und Fragmente sind Platzhalter. **Der Nutzer hat noch nichts davon gespielt.**
+**Zuletzt aktualisiert:** 2026-11-06, nach der **Überarbeitung von Kapitel 1, Text für Text** und dem **ganzen Buch** (alle Texte chronologisch, im Buch bearbeitbar). **Der Nutzer hat die neuen Texte noch nicht gelesen.**
+
+## Protokoll der letzten Sitzung (2026-11-06, Überarbeitung)
+1. **Abfrage vor dem Start** (Antworten des Nutzers): Nacht von Anfang an (großer, bleicher Mond, wandert nicht, wird größer; Sonne nur in der Kutsche), seine eigenen Texte bis zur Klinik frei überarbeiten, alle Platzhalter ausschreiben, Länge etwa gleich; Nachtrag: längere Texte sind gut, wenn sie Plot oder Atmosphäre dienen. Festlegungen Ü1 bis Ü12 in `docs/ueberarbeitung-kapitel1.md`.
+2. **Überarbeitung:** neun Bearbeiter parallel, je Datei, mit Skill `stil-1800`; alle Platzhalter ausgeschrieben (30 Monologe, 6 Fragmente, Dachweg, Übung im Hof, Unterstadt, Tor, Viertel), jede Option mit `// WARUM:` (230 von 230).
+3. **Zwei unabhängige Prüfungen** über das ganze Buch: Stil (60 Befunde, `docs/pruefung-stil-2026-11-06.md`) und Lore/Logik/Übergänge (50 Befunde, `docs/pruefung-lore-2026-11-06.md`). Lore nirgends verfälscht; Logikfehler, Formeln, ein fast wörtliches Spielzitat gefunden.
+4. **Nachbesserung** nach N1 bis N9 (`docs/nachbesserung-2026-11-06.md`): fünf Bearbeiter; Formeln stark gekürzt (z. B. „so …, dass“ in den Bosskämpfen 21 → 3), Mondbilder je Station eigen, Optionen an Gefühlsweichen als Rede, tote Zweige gelöscht (`q_frau == 0`, `gascoigne2`, Parade-Zweige), Logik nur wo nötig (Gascoigne rufen nur nach seinem Angebot, Griff nach Gehrmans Lehre ohne Sperre, falscher Schatten an Einsicht).
+5. **Das ganze Buch** (`tools/buch.mjs` in `npm run bauen`): `web/buch.html` (im Spiel „Buch“ in der Leiste, springt zur aktuellen Stelle), `docs/kapitel1-buch.md`. `npm run check` prüft, dass jeder Text darin steht. **Bearbeiten im Buch** (`web/buch.js`, gleiche Werkstatt wie im Spiel): Texte ändern, Notizen an Absätzen, Markierungen (auch über mehrere Absätze) und Abschnitten, Möglichkeiten und Entscheidungen hinzufügen/streichen, Abschnitte hinzufügen/streichen/umbenennen, Quelltext. **Jede Notiz ist ein Auftrag** (`docs/vorschlaege.md` 6d).
 
 ## So startet ein neuer Chat
 1. `CLAUDE.md` wird automatisch gelesen. Danach diese Datei, dann die Leseliste in `CLAUDE.md` („Lesen zu Beginn“).
@@ -32,6 +39,8 @@
 | Lore-Archiv | `lore/README.md` (Wurzel), `lore/kern.md`, `lore/kapitel/`, `lore/offen.md` |
 | Faktencheck Kapitel 1 und Umsetzungsregeln | `docs/faktencheck-kapitel1.md`, `docs/umsetzung-faktencheck.md` |
 | Quellen des Nutzers | `quellen/` (Verzeichnis in `quellen/README.md`) |
+| Alle Texte chronologisch, bearbeitbar | `web/buch.html`, `docs/kapitel1-buch.md` (automatisch) |
+| Prüfberichte der Überarbeitung | `docs/pruefung-stil-2026-11-06.md`, `docs/pruefung-lore-2026-11-06.md`, `docs/nachbesserung-2026-11-06.md` |
 | Qualität je Stück (Stufe 0 bis 4) | `docs/qualitaet.md` |
 | Was der Nutzer mag und nicht mag | `docs/nutzerstil.md` |
 
@@ -39,10 +48,10 @@
 Alle Szenen sind überarbeitet und geschliffen (Stufe 2: von Claude gebaut und zweimal gegengeprüft: Faktencheck und Lektorat). **Der Nutzer hat noch nichts davon abgenommen; er testet am Ende selbst.** Die Texte stammen aus parallelen Bearbeitungen nach gemeinsamen Regeln; eine Lektüre nach dem Feinschliff steht aus.
 
 ## Nächste Schritte (Empfehlung, in dieser Reihenfolge)
-1. **Nutzer spielt Kapitel 1** und sagt pro Szene einen Satz (oder schickt Änderungen über die Werkstatt). Das ist der wichtigste Schritt; alles andere ist Vermutung.
-2. **Rückmeldungen des Nutzers einarbeiten** (Werkstatt-Vorschläge mit `npm run vorschlaege`, Ablauf in `docs/vorschlaege.md`; Muster in `docs/nutzerstil.md`).
-3. **Offene Kleinigkeiten:** eine Stilprüfer-Warnung (kurze Sätze in der Chronik am Kapitelende, bewusst). Ein Durchlauf nach dem Feinschliff durch einen unabhängigen Leser wäre gut. `system.ink` Nr. 4 aus dem Faktencheck (Blut zurückholen durch Gegenangriff) ist eine Entscheidung des Nutzers, nicht gebaut.
-4. **Kapitel 2 (Kathedralbezirk):** zuerst ein Gerüst mit Ein-Satz-Platzhaltern nach `lore/kapitel/kapitel2.md`, dem Nutzer als Abfrage vorlegen.
+1. **Nutzer liest im ganzen Buch** (https://kortjannis-web.github.io/BB-Game/buch.html, oder im Spiel „Buch“) und bearbeitet direkt dort: Texte ändern, Notizen setzen, dann in der Werkstatt einreichen. Danach `npm run vorschlaege` und jede Notiz umsetzen oder nachfragen.
+2. **Offen aus den Berichten:** Randfall beim Rufen Gascoignes (−1 am Scheiterhaufen, dann +1 bei Eileen); `VAR eileen_frage_offen` unbenutzt; tote Notizbuch-Stufen (`puppe_gespraech>=3`, `parade_quelle==gehrman`) markiert, nicht gelöscht; n2 `{not k1_c_graeber: …}` vermutlich tot; Gascoigne wirft die Donnerbüchse weg (PRÜFEN gegen das Original); Mädchen früh zur Klinik endet trotzdem beim Schwein (Kanon anders, Entscheidung des Nutzers); Klinik-Monolog praktisch unerreichbar (Lernkampf höchstens 4 Schaden).
+3. Eine zweite Lektüre nach der Nachbesserung durch einen unabhängigen Leser.
+4. **Kapitel 2 (Kathedralbezirk):** zuerst ein Gerüst mit Ein-Satz-Platzhaltern nach `lore/kapitel/kapitel2.md`.
 
 ## Offen beim Nutzer
 - **Tod und Traum (2026-11-06, Entwurf):** Monologe je Todesszene (viele), Story-Fragmente nach dem Monolog, feste Traumstellen über Straßenlaternen, Training im Traum. Siehe `docs/struktur-entscheidungsbuch.md`, Abschnitt 9; wartet auf Abnahme der drei Stellen.
@@ -53,7 +62,7 @@ Alle Szenen sind überarbeitet und geschliffen (Stufe 2: von Claude gebaut und z
 - **Skill `stil-1800` (2026-11-06), erste Fassung fertig:** Korpus 14 Werke (345.000 Wörter), Analysen Büchner/Hoffmann/Mann, Anthologie 67 Musterstellen, Wortkammer 1.589 Einträge, Prinzipien-Netz 77 Knoten mit Kanten und Situationsindex (`npm run stil -- <moment>`). Alles Stufe 0 (ungeprüft durch Kritiker und Nutzer). Nächste Runde: Analysen Storm (Aquis, Schimmelreiter), Kleist, Rilke; Golem fehlt im Korpus.
 - **Anweisung des Nutzers (2026-11-06): Noch keine Spieltexte erneuern.** Erst Skill und Wissen aufbauen (Prinzipien-Netz `.claude/skills/stil-1800/NETZ.md`, Analysen, Anthologie `musterstellen/` nach Momenten, Wortkammer). Vorher/Nachher in den Analysen sind nur Übungen.
 - **Schreibkunst (2026-11-06):** Leseliste (nur deutsche Werke) in `docs/schreibkunst-lektuere.md`, Methode aus der KI-Schreibforschung in `docs/ki-schreibmethode.md` (Vorbilder statt Verbote, Slop-Detektor, Bibel, drei Kritiker, Varianten); nächster Schritt Wort-für-Wort-Analyse. Nutzer findet die Prosa „Slop“. Analyse in `docs/schreibkunst-analyse.md` (Messung gegen sieben Klassiker, blinde Kritik, Regeln, die Formeln erzeugen, Plan Phase 2: Korpus, Skill `stil-1800`, Prüfer v2, Weltbild, Probe am Prolog). Wartet auf seine Entscheidungen (Probe-Ton, Regeln umbauen, Mond).
-- **Mond/Nacht:** Kanon Kapitel 1 = Abend (Sonnenuntergang nach Gascoigne); Nutzer erinnert ewige Nacht und großen, tiefen Mond. Entscheidung offen.
+- **Mond/Nacht:** entschieden 2026-11-06: Nacht von Anfang an (Ü1), umgesetzt.
 - **Drei Werkstatt-Fixes bis zur Klinik** (2026-11-06) noch nicht übermittelt.
 - **Neu im Spiel:** Gelesenes und getroffene Entscheidungen dauerhaft grün; „← Zurück“ (eine Entscheidung).
 - **Hosting (2026-11-06):** Umstellung auf GitHub Pages ist vorbereitet. Nutzer muss: Repo öffentlich machen (https://github.com/kortjannis-web/BB-Game/settings, unten Danger Zone), dann `/settings/pages` Source „GitHub Actions“, dann Workflow „Spiel veröffentlichen“ starten. `quellen/lore-komplett.md` ist aus Repo und Geschichte entfernt (Kopie hat der Nutzer). Netlify erst trennen, wenn die Werkstatt-Vorschläge gesichert sind.
