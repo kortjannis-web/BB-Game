@@ -288,8 +288,8 @@ Schritte entfernen sich, und gedämpft durch eine zweite Tür stöhnt jemand, de
 
 :: k1_laterne_zentral [A] {"position":"5630,4300","size":"100,100"}
 Vor der Klinik schlägt dir kalte Luft entgegen, die nach Rauch riecht, nach nassem Stein und nach einem Brand, in dem kein Holz gebrannt hat. Die Gasse fällt steil ab und ist leer. Zwischen zwei Giebeln hängt die Sonne, tief und rot, und ihr Licht liegt nur noch auf den obersten Fenstern.
-Neben der Tür steht auf einem eisernen Pfahl eine Laterne, erloschen, das Glas von innen verrußt. Als du sie berührst, flammt sie auf, ohne dass du Feuer gemacht hättest, und um ihren Fuß hebt sich die Erde: Die Boten kriechen heraus, drei, vier, und drängen sich an das Eisen, wo es warm ist. Über dir, hinter einem vergitterten Fenster, bricht ein Husten ab, mitten im Anfall.
-Im Flackern hinter dem Glas liegt für einen Lidschlag der Garten, weiß und reglos, und mitten im Rauch der Gasse riecht es nach Leinen von der Bleiche. Dann ist die Flamme wieder nur eine Flamme. Deine Hand bleibt am warmen Eisen, so wie sie als Kind am Treppengeländer blieb, wenn oben das Licht schon gelöscht war und die Füße die Stufen trotzdem fanden. Ein Gedanke folgt dem ersten so leise, dass du nicht weißt, ob er deiner ist: Es gibt Laternen in dieser Stadt, an denen du dich sammeln kannst. Diese gehört nicht dazu. Noch nicht.
+Neben der Tür steht auf einem eisernen Pfahl eine Laterne, erloschen, das Glas von innen verrußt. Als du sie berührst, flammt sie auf, ohne dass du Feuer gemacht hättest, und um ihren Fuß hebt sich die Erde: Die Boten kriechen heraus, drei, vier, und drängen sich an das Eisen, wo es warm ist. Neben dir, hinter einem vergitterten Fenster zu ebener Erde, bricht ein Husten ab, mitten im Anfall.
+Im Flackern hinter dem Glas liegt für einen Lidschlag der Garten, weiß und reglos, und mitten im Rauch der Gasse riecht es nach Leinen von der Bleiche. Dann ist die Flamme wieder nur eine Flamme. Deine Hand bleibt am warmen Eisen, so wie sie als Kind am Treppengeländer blieb, wenn oben das Licht schon gelöscht war und die Füße die Stufen trotzdem fanden. Ein Gedanke folgt dem ersten so leise, dass du nicht weißt, ob er deiner ist: Das Licht flackert und trägt dich nirgendwohin. Noch nicht.
 [[weiter->k1_b_gilbert]]
 
 :: k1_b_ankunft [B] {"position":"5710,5490","size":"100,100"}
@@ -378,7 +378,7 @@ Eine Leiter an der Hauswand, die Sprossen kalt und rau vom Rost, und über dir w
 ⟨wenn not k1_b_daecher⟩ Irgendwo über den Dächern kracht noch einmal ein Schuss. Niemand hat auf dich gezielt. 
 ⟨wenn not k1_b_dachweg⟩ An einer Hauswand lehnt eine Leiter, und du bist nicht hinaufgestiegen. 
 ⟨wenn spieluhr⟩ Die Spieluhr in deiner Tasche klickt bei jedem Schritt gegen einen Knopf deines Mantels, und du legst die Hand darauf, damit sie still ist, und lässt sie dort. 
-⟨wenn schreie == 2⟩ Die alte Stimme, die vorhin hinter einer Tür zu beten begann, betet noch immer. Sie ist heiser geworden, aber den Faden hat sie nicht verloren. 
+⟨wenn schreie == 2⟩ Die alte Stimme, die hinter einer Tür zu beten begonnen hat, betet noch immer. Sie ist heiser geworden, aber den Faden hat sie nicht verloren. 
 Der Schatten des Laternenpfahls liegt über derselben Fuge im Pflaster wie bei deiner Ankunft, auf den Fingerbreit genau, und über den Giebeln ist die rote Sonne nicht von der Stelle gerückt.
 <!-- Logik: fr_frei_machen(fr_nacht) -->
 [[weiter->k1_b_eileen]]
@@ -403,6 +403,7 @@ Dahinter atmet jemand, nass und tief, und der Atem verhakt sich an einer Stelle 
 Am Gitter erscheint ein Gesicht, hager und gelb wie Kerzenwachs, mit Augen, die freundlicher sind, als eine Jagdnacht es erlaubt. In jedem steht eine winzige Laterne. „Sie riechen nach Regen“, sagt der Mann, „und nach Landstraße. Nicht nach Rauch. Von draußen also.“ Er legt die Hand an einen Stab, eine Hand, an der der Ring zu weit geworden ist. „Gilbert. Auch von draußen, nur schon länger, als mir lieb ist. Und Jäger sind Sie geworden, nicht wahr? Man sieht es an der Art, wie Sie stehen.“
 ⟨wenn herkunft == "kranker"⟩
 Da hustest du selbst, und er hört auf zu lächeln. „Oh“, sagt er leise. „Das kenne ich. Das kenne ich sehr gut.“
+<!-- Logik: fr_frei_machen(fr_blut) -->
 [[(bedingt) weiter->k1_b_gilbert.haltung]]
 
 :: k1_b_gilbert.haltung [B] {"position":"5630,4640","size":"100,100"}
@@ -537,6 +538,7 @@ Gegeben im Namen der Heilenden Kirche, zur Nacht der Jagd.
 Das Datum unter der letzten Zeile steht auf einem schmalen Papierstreifen, der über einen älteren geklebt ist, und an der Kante, wo die Feuchtigkeit den Leim gelöst hat, siehst du, dass unter dem älteren noch weitere liegen, Streifen auf Streifen, jeder ein wenig gelber als der darüber.
 Unten auf der Tür, unter dem Papier, hat jemand mit Kreide etwas dazugeschrieben, klein und schief, und dann versucht, es mit dem Ärmel wegzuwischen. Lesbar ist es noch: Mein Bruder ist gegangen. Er hatte keinen Durst.
 Hinter der Tür, ganz nah am Holz, atmet jemand. Als dein Schatten auf die Tür fällt, hört das Atmen auf.
+<!-- Logik: fr_frei_machen(fr_kirche) -->
 [[weiter->k1_viertel1]]
 
 :: k1_b_haus [B] {"position":"3430,23340","size":"100,100"}
@@ -712,9 +714,9 @@ Er nimmt deine Feuerwaffe, wiegt sie in der Hand und gibt sie dir zurück. „Da
 Er lehnt sich an einen Laternenpfahl und zieht eine flache Blechflasche aus dem Mantel. „Gegen die Kälte. Und gegen das andere.“ { mantel_gelogen: Er trinkt zuerst und reicht sie dir, ohne den Hals abzuwischen.| Er reicht sie dir zuerst, und als du getrunken hast, nimmt er sie zurück und wischt den Hals mit dem Ärmel ab, sorgfältig, wie ein Mann, der das zu Hause für jemanden tut.} Der Branntwein ist scharf und schmeckt nach Torf und Rauch, nach einem Land mit mehr Moor als Straßen. „Von daheim“, sagt er. „Das Letzte, was ich davon hab.“
 Einmal, mitten im Trinken, dreht er den Kopf zum Scheiterhaufen und zieht die Luft ein, tief, und was dabei über sein Gesicht geht, ist kein Ekel. Er schraubt die Flasche zu, fester als nötig.
 ⟨wenn mob == "zerstreut"⟩
-Er wendet sich zum Gehen und bleibt nach drei Schritten stehen. „Eins noch.“ Er sagt es zum Pflaster vor seinen Stiefeln. „Wenn du heute Nacht einer Frau begegnest, mit einer großen roten Brosche am Kleid, sag ihr, ich komm bald. Sie soll bei der Kleinen bleiben.“ Eine Pause. „Ich hab heute Nacht keinen, den ich sonst fragen könnte.“
+Er wendet sich zum Gehen und bleibt nach drei Schritten stehen. „Eins noch.“ Er sagt es zum Pflaster vor seinen Stiefeln. „Wenn du heute Nacht einer Frau begegnest, mit einer großen roten Brosche am Kleid, sag ihr, ich komm bald. Sie soll bei der Kleinen bleiben. Und wenn du irgendwo eine Spieluhr hörst: Das ist meine Kleine. Geh hin, wenn du kannst.“ Eine Pause. „Ich hab heute Nacht keinen, den ich sonst fragen könnte.“
 ⟨sonst⟩
-Er dreht die Flasche in den Händen, bevor er sie einsteckt, und sagt, beinahe verlegen: „Wenn du heute Nacht einer Frau begegnest, mit einer großen roten Brosche am Kleid, sag ihr, ich komm bald. Sie macht sich immer Sorgen. Sie soll bei der Kleinen bleiben.“
+Er dreht die Flasche in den Händen, bevor er sie einsteckt, und sagt, beinahe verlegen: „Wenn du heute Nacht einer Frau begegnest, mit einer großen roten Brosche am Kleid, sag ihr, ich komm bald. Sie macht sich immer Sorgen. Sie soll bei der Kleinen bleiben. Und wenn du irgendwo eine Spieluhr hörst: Das ist meine Kleine. Geh hin, wenn du kannst.“
 <!-- Logik: parade = true · parade_quelle = "gascoigne" -->
 [[„Ich richte es ihr aus.“ #fliesst->k1_b_scheiterhaufen.gascoigne_greift_ein.~2 ✦ 1]]
 [[Ihm stumm zunicken #fliesst->k1_b_scheiterhaufen.gascoigne_greift_ein.~2 ✦ 2]]
@@ -873,7 +875,7 @@ Der Weg führt dich hinab, zwischen zwei Giebeln hindurch, ohne dass du ein Dach
 :: k1_b_eileen [B] {"position":"1035,9570","size":"100,100"}
 <!-- [ERWEITERT] Tieferes Gespräch, sie kennt Gascoigne und Henryk. Die Partnerschaft beginnt erst in Kapitel 2. Die Abzeichen an der Schnur. -->
 ⟨wenn k1_b_dachweg⟩
-Der Dachweg endet an den Balken über dem Kanaleingang, und hier hat jemand gewartet.
+Über dem Kanaleingang laufen Balken von Haus zu Haus, und hier hat jemand gewartet.
 ⟨sonst⟩
 Zu den Dachbalken über dem Kanaleingang führen eiserne Krampen in der Mauer hinauf, kalt und rau vom Rost.
 Oben laufen alte Dachbalken von Haus zu Haus, schwarz von Ruß und Regen, und auf ihnen, halb hinter ein paar Fässern verborgen, sitzt jemand so still, dass du ihn für einen Haufen alter Kleider gehalten hättest, wenn er nicht den Kopf gedreht hätte.
@@ -1121,7 +1123,7 @@ Ein paar Worte über die Nacht und die Gräber, mehr fällt dir nicht ein, und e
 [[weiter->k1_c_graeber.warnung]]
 
 :: k1_c_graeber ✦ 5 [C folge] {"position":"5470,17730","size":"100,100"}
-Schritt um Schritt, ohne ihn aus den Augen zu lassen. Er sieht dir nach, mit dem verbundenen Gesicht, und folgt dir nicht.
+Schritt um Schritt, ohne ihn aus den Augen zu lassen. Er sieht dir nach, mit dem verbundenen Gesicht, und folgt dir nicht. Dann wendet er sich ab, geht durch das Tor mit dem Namen darüber, und es schwingt hinter ihm zu und bleibt einen Spalt offen.
 <!-- Logik: gascoigne = gascoigne - 1 -->
 [[weiter->k1_c_eileen]]
 
@@ -1245,7 +1247,7 @@ Hinter dir in einer Gasse scharrt es, schwer und schnell, und noch bevor du dich
 
 :: k1_d_heimweg_d.wahl [D] {"position":"2450,27420","size":"100,100"}
 [[Die Ampulle in den Schenkel stoßen #fliesst (nur wenn ampulle > 0 and leben < LEBEN_MAX)->k1_d_heimweg_d.wahl]]
-[[Die Laterne am Grab berühren #fliesst->k1_d_traum]]
+[[An einer Laterne am Weg die Hand ans Glas legen #fliesst->k1_d_traum]]
 
 :: k1_d_maedchen [D] {"position":"2410,24700","size":"100,100"}
 <!-- [KANON] Behält man die Brosche, bleibt sie und sagt, der Morgen komme immer (eigene Worte). Ab Kapitel 2 kann man sie zur Kapelle oder zur Klinik schicken (beides endet schlimm). Kein Ausgang rettet sie. -->
@@ -1316,7 +1318,7 @@ Sie fragt nicht noch einmal. Die Finger verschwinden aus dem Spalt, und hinter d
 
 :: k1_d_kanal [D] {"position":"2410,26060","size":"100,100"}
 Unten riecht das Wasser nach Eisen und nach Stall.
-{k1_c_kanal:Das Schwein ist zurück, an derselben Stelle, bis an die Knie im Wasser.|Im Kanal steht ein Schwein, doppelt so groß wie ein Ochse, bis an die Knie im Wasser.} Es frisst, und neben ihm treibt ein heller Stoff, ein kleiner Schuh. Aus seinem Maul hängt zwischen den gelben Hauern ein Band, rot und schwer bis auf den Knoten.
+{schwein == "tot":Wieder steht ein Schwein im Wasser, doppelt so groß wie ein Ochse, als hätte die Nacht es neu geboren, so wie sie dich neu gebiert.|Im Kanal steht ein Schwein, doppelt so groß wie ein Ochse, bis an die Knie im Wasser.} Es frisst, und neben ihm treibt ein heller Stoff, ein kleiner Schuh. Aus seinem Maul hängt zwischen den gelben Hauern ein Band, rot und schwer bis auf den Knoten.
 ⟨wenn q_mutter == 3⟩
 Im Wasser suchst du nach dem Gold der Fassung und findest es nicht.
 ⟨sonst⟩
@@ -1331,7 +1333,7 @@ Es kommt leicht. Das Schwein gibt es her, satt und gleichgültig, ohne den Kopf 
 [[weiter->k1_d_kanal.~1]]
 
 :: k1_d_kanal ✦ 2 [D folge] {"position":"2480,26230","size":"100,100"}
-Hinter dir schmatzt es weiter, bis zur Leiter und auch noch, als du auf den Sprossen stehst.
+Hinter dir schmatzt es weiter, bis zu den Stufen und auch noch, als du auf ihnen stehst.
 [[weiter->k1_d_kanal.~1]]
 
 :: k1_d_kanal.~1 [D] {"position":"2410,26400","size":"100,100"}
@@ -1341,7 +1343,7 @@ Hinter dir schmatzt es weiter, bis zur Leiter und auch noch, als du auf den Spro
 <!-- [ERWEITERT] Sein Versprechen bereitet seinen Blutmond in einem späteren Kapitel vor. -->
 <!-- [ERWEITERT] Der Abschiedssatz geht einen Schritt weiter als „Aufschub“ in k1_b_gilbert: Er würde das Blut wieder nehmen (der Birnbaum als Maß). -->
 Als du in die Gasse biegst, sitzt Gilbert schon am Gitter, den Stuhl so dicht ans Fenster gerückt, dass seine Knie gegen die Wand stoßen. Sein Husten kommt jetzt von tiefer, mit einem Reißen am Ende, und danach braucht er lange, bis er wieder sprechen kann. Mit dem Daumen hält er den Ring fest, damit er ihm nicht vom Finger rutscht. „Erzählen Sie“, sagt er. „Bitte. Was liegt dahinter?“
-Es wird ein kurzer Bericht: das Tor am Ende der Brücke, von der anderen Seite verriegelt, die Treppen hinab, die Unterstadt, in der das Wasser nie aufhört zu laufen{k1_c_graeber:, die Gräber und der Name über dem Tor}. Er hört zu, die Stirn ans Gitter gelehnt. „Von der anderen Seite“, wiederholt er. „Dann wollte dort oben jemand nicht, dass man hinaufkommt. Oder dass von dort etwas herunterkommt.“ Er hustet. „Und die Glocken? Klingen sie da unten anders?“
+Es wird ein kurzer Bericht: {kleriker == "geflohen":die Brücke, die du in Panik verlassen hast, der Sturz in den Kanal, die Unterstadt,|das Tor am Ende der Brücke, von der anderen Seite verriegelt, die Treppen hinab, die Unterstadt,} in der das Wasser nie aufhört zu laufen{k1_c_graeber:, die Gräber und der Name über dem Tor}. Er hört zu, die Stirn ans Gitter gelehnt. „Von der anderen Seite“, wiederholt er. „Dann wollte dort oben jemand nicht, dass man hinaufkommt. Oder dass von dort etwas herunterkommt.“ Er hustet. „Und die Glocken? Klingen sie da unten anders?“
 „Da unten hört man sie nicht“, sagst du. Er nickt, und eine Weile ist nur sein Atem zu hören, nass und tief, mit dem Haken darin.
 <!-- Logik: q_gilbert = 2 · gilbert = gilbert + 1 -->
 [[Ihm vom Kampf am Grab erzählen #fliesst->k1_d_gilbert ✦ 1]]
@@ -1508,6 +1510,8 @@ ENDE DES ERSTEN KAPITELS
 
 :: k1_n1_kleriker [N1] {"position":"3750,10930","size":"100,100"}
 ⟨wenn k1_n1_kleriker == 1⟩
+⟨sonst⟩
+⟨wenn k1_n1_kleriker == 1⟩
 Die Große Brücke trägt den Weg aus der unteren Stadt hinauf zur Kathedrale, auf Bögen aus grauem Stein, die so tief in den Nebel hinabreichen, dass keiner, den man fragt, ihren Fuß je gesehen haben will. Breit genug ist sie für vier Kutschen nebeneinander, und als die Jagd ausgerufen wurde, wollten alle zugleich hinüber; drüben, sagt man in den Gassen, habe ihnen niemand aufgemacht. Die Kutschen stehen noch da, umgestürzt und ineinander verkeilt, die Pferde im Geschirr, aufgedunsen und starr, und zwischen den Rädern liegen die Menschen, die hinüberwollten. Fortgeräumt hat man sie nicht. Am anderen Ende ragt ein Turm über das schmiedeeiserne Geländer, und hinter ihm steht schwarz die Kathedrale. Die Sonne hängt am Turm, so tief wie vor der Klinik, keinen Fingerbreit tiefer.
 Nur deine Stiefel sind auf dem Pflaster zu hören, und auf halbem Weg der Atem eines der Pferde, das keinen Atem mehr hat; es ist der Wind in seinen Nüstern. Vom Turm her kommt ein Kratzen, hoch über dir. Horn auf Stein, ein Schaben, eine Pause, wieder Horn auf Stein. Was da herabsteigt, lässt sich Zeit.
 ⟨sonst⟩
@@ -1519,7 +1523,7 @@ In den Hinterläufen stecken Nägel, rostige, Dutzende, und um jeden Nagel ist d
 Dein Blick bleibt an dem langen Arm hängen und will nicht los. Ohne es zu wollen, zählst du die Gelenke: Schulter, Ellbogen, noch ein Ellbogen, noch einer. Beim zweiten Zählen kommst du auf eine andere Zahl. Hinter deiner Stirn tut sich ein Spalt auf, so schmal wie der unter einer Tür, und durch ihn siehst du, dass der Arm noch wächst, jetzt, während du hinsiehst.
 ⟨wenn schreie >= 1⟩ Es reißt das Maul auf und kreischt, hoch und lang, und deine Schultern kennen den Ton von den Dächern her, bevor du ihn erkennst. Jetzt hat er einen Körper. 
 ⟨wenn kleriker == "abgelenkt" or kleriker == "geflohen"⟩ Es hat dich nicht vergessen. Der schwere Kopf dreht sich, Zoll um Zoll, und sucht genau die Stelle, an der du stehst. 
-<!-- Logik: kampfanfang = -> k1_n1_kleriker · einsicht = einsicht + 1 · fr_frei_machen(fr_ich) -->
+<!-- Logik: kampfanfang = -> k1_n1_kleriker · n1_gascoigne = gascoigne · n1_molotow = molotow · n1_kiesel = kiesel · gascoigne = n1_gascoigne · molotow = n1_molotow · kiesel = n1_kiesel · einsicht = einsicht + 1 -->
 [[Nach Gascoigne rufen #fliesst (nur wenn q_frau == 1)->k1_n1_kleriker.rufen]]
 [[Die Säge ausklappen und ihr allein entgegengehen #fliesst->k1_n1_kleriker ✦ 2]]
 [[Sie mit einem Wurf ablenken und vorbeischleichen #fliesst (nur wenn kiesel > 0 or molotow > 0)->k1_n1_kleriker.ablenken]]
@@ -1733,7 +1737,7 @@ Unter dem Streifen Stoff am Hals der Bestie steckt etwas Festes im Fell, ein Bri
 Die Hand darin ist klein und sorgfältig, jede Zeile gleich weit von der nächsten.
 „Liebe Schwester, ich darf dir mitteilen, dass die Kapelle oben im Bezirk auf Weisung nunmehr jeden aufnimmt, der an die Tür klopft und noch sprechen kann. Wer nicht mehr sprechen kann, wird an die nächste Stelle des Blutes verwiesen. Die Vikarin betet in der großen Kathedrale jede Nacht am längsten von uns allen; wo sie kniet, sind die Steine danach nass, und es wird gewischt. Mir ist aufgetragen, die Glocken zu läuten, auch wenn niemand mehr kommt. Ich läute sie.“
 Darunter steht ein letzter Satz, so fest ausgestrichen, dass die Feder das Papier zerrissen hat. Lesbar sind davon nur die ersten beiden Wörter: Komm nicht.
-<!-- Logik: kleriker = "besiegt" · einsicht = einsicht + 1 · abzeichen_schwert = true · kirchenbrief = true -->
+<!-- Logik: kleriker = "besiegt" · einsicht = einsicht + 1 · fr_frei_machen(fr_ich) · abzeichen_schwert = true · kirchenbrief = true -->
 [[weiter->k1_n1_kleriker.gedaechtnis]]
 
 :: k1_n1_kleriker.mit_gascoigne [N1] {"position":"2700,12120","size":"100,100"}
@@ -1886,6 +1890,8 @@ Am Ende der Brücke, wo der Weg zur Kathedrale hinaufführen müsste, schließt 
 :: k1_n2_gascoigne [N2] {"position":"5350,19090","size":"100,100"}
 <!-- [ERWEITERT] Der Bäckerjunge (Jonas) ist erfunden und liegt im frischen Grab an den Gräbern; Martha, Hennings und der alte Brack stammen aus der Szene am Scheiterhaufen. -->
 ⟨wenn k1_n2_gascoigne == 1⟩
+⟨sonst⟩
+⟨wenn k1_n2_gascoigne == 1⟩
 Hinter dem Tor hört das Wasser auf. Den ganzen Weg durch die Unterstadt ist es neben dir hergelaufen, in den Rinnen, über die Stufen, aus den Fugen der Mauern, und erst jetzt, da es fehlt, merkst du, wie laut es war. Hier riecht es nach umgegrabener Erde und kaltem Eisen. Der Friedhof steigt in breiten Stufen an, Grab über Grab, und der Nebel liegt so flach zwischen den Steinen, dass nur ihre Köpfe herausragen, Reihe um Reihe, eine Gemeinde, die auf den Beginn der Predigt wartet. Über der obersten Mauer hängt die Sonne, tief und rot, und du kannst in sie hineinsehen, ohne dass dir die Augen tränen.{not k1_c_graeber: Über dem Tor, durch das du gekommen bist, steht ein einziges Wort im Stein: Oedon.}
 Weiter oben schlägt es. Schwer und ohne Eile kommt es herunter, im Takt eines Dreschflegels auf der Tenne, und zwischen zwei Schlägen schmatzt es jedes Mal leise und nass. Ab und zu fährt die Klinge ganz hindurch und trifft auf Stein; dann klingt es hell und kurz, und der Ton läuft über die Gräber davon, bis der Nebel ihn schluckt.
 Er steht auf der obersten Stufe, mit dem Rücken zu dir, der lange Mantel nass bis an die Knie, und die Axt hebt sich und fällt. Seinen Hut hat er auf einen Grabstein gelegt, die breite Krempe nach oben, so ordentlich, wie man ihn vor der Andacht auf die Bank legt. Was zu seinen Füßen liegt, trägt noch einen Stiefel, und die Schnalle daran ist blank geputzt. Der Wind kommt von oben herab, und du atmest schon durch den Mund. Der Griff deiner Feuerwaffe ist warm in deiner Hand; wann du ihn gepackt hast, weißt du nicht.
@@ -1905,7 +1911,7 @@ Er hebt das Kinn und zieht die Luft ein, einmal, zweimal, wie ein Hund an einer 
 ⟨sonst⟩
 Die Axt bleibt oben stehen. Er hebt den Kopf und nimmt Witterung auf, mit kleinen Rucken, wie ein Jagdhund im Wind, und dreht sich um. Die Augen sind verbunden, der Verband ist schwarz und steif, und das Gesicht darunter ist das eines Mannes, der seit Nächten nicht geschlafen hat.
 „Noch einer“, sagt er. Seine Stimme kommt tief und ruhig, mit einem Rollen darin, das nicht aus diesen Gassen stammt. Er deutet mit der Axt über die Gräber hinab auf die Stadt. „Da unten. Hinter jeder Tür, in jedem Bett, in jeder Kirchenbank. Die tragen ihre Gesichter nur noch wie Mäntel.“ Er zieht die Luft ein und legt den Kopf schief. „Du auch. Nicht heute vielleicht. Aber du auch.“
-<!-- Logik: kampfanfang = -> k1_n2_gascoigne · spieluhr_mal = 0 · uhr_bestie = false · g_phase = 1 · moment_moeglich = gascoigne >= 3 and spieluhr and gedaechtnis_kleriker · einsicht = einsicht + 1 -->
+<!-- Logik: kampfanfang = -> k1_n2_gascoigne · n2_gascoigne = gascoigne · n2_molotow = molotow · gascoigne = n2_gascoigne · molotow = n2_molotow · gascoigne_moment = false · versprechen_gascoigne = false · im_lied_getroffen = false · spieluhr_mal = 0 · uhr_bestie = false · g_phase = 1 · moment_moeglich = gascoigne >= 3 and spieluhr and gedaechtnis_kleriker · einsicht = einsicht + 1 -->
 [[(bedingt) weiter->k1_n2_gascoigne.p1]]
 [[weiter->k1_n2_gascoigne.p1]]
 
@@ -2259,7 +2265,7 @@ Zwischen den Blumen kehrt das Blatt vom Altar zu dir zurück, nicht als Bild, nu
 ⟨sonst⟩
 ⟨wenn tode >= 6⟩ Wie oft noch. Du fragst nicht, wer zählt. 
 ⟨wenn fr_offen()⟩
-⟨wenn ampulle == 0⟩ An deinem Gürtel hängt die Ampulle wieder, voll und warm. 
+⟨wenn ampulle == 0⟩ An deinem Gürtel hängt die Ampulle wieder. 
 Dann zupft etwas an deinem Ärmel, und die Stadt kehrt zurück: der Geruch zuerst, dann die Geräusche, zuletzt die Kälte.
 <!-- Logik: gehrman_gesehen = true · puppe_daheim = true · blatt_erinnert = true · ampulle = 1 · leben = LEBEN_MAX -->
 [[weiter->KAMPFANFANG]]
@@ -2282,10 +2288,10 @@ Beim Einschlafen setzt du zusammen, was du in dieser Nacht gesehen hast, wie man
 [[(bedingt) weiter->traum_fragmente.schleife]]
 
 :: frag_blut [T] {"position":"5430,50","size":"100,100"}
-Das Blut der Klinik hat das Fieber genommen, von einem Tag auf den anderen. Gilbert sagt, es habe ihm nur Aufschub gekauft. Was hat es dafür bekommen?
+Das Blut der Klinik hat dir das Fieber genommen, von einem Tag auf den anderen. Hinter dem Gitter hustet ein Mann, der dasselbe Blut genommen hat. Was hat es dafür bekommen?
 
 :: frag_menschen [T] {"position":"5570,50","size":"100,100"}
-Gilbert sagt, die Leute draußen hätten die Bestien gestern noch gegrüßt. Wenn sie Menschen waren, ist jede Jagd ein Mord an Nachbarn. Und die Nachbarn tragen Fackeln.
+Wenn die Bestien einmal Menschen waren, ist jede Jagd ein Mord an Nachbarn. Und die Nachbarn tragen Fackeln, und sie trauen dir nicht.
 
 :: frag_kirche [T] {"position":"5710,50","size":"100,100"}
 Die Kirche gibt das Blut aus. Die Kirche hängt Anschläge an die Türen. Die Kirche sperrt die Brücke. Sie weiß mehr, als sie schreibt, und was hat sie getan, dass sie es so weit hat kommen lassen?
@@ -2297,7 +2303,7 @@ In der Haut der Bestie sitzen Nadelnarben, Reihe an Reihe. Du reibst dir die Arm
 Die Sonne hängt dort, wo sie hing. Niemand in dieser Stadt spricht von einem Morgen. Du kannst nicht sagen, wie lange die Nacht schon dauert. Gibt es hier jemals einen Tag?
 
 :: frag_kippen [T] {"position":"6130,50","size":"100,100"}
-Jäger kippen, sagt die Frau im Federmantel. Vorher lachen sie an falschen Stellen. In deiner Armbeuge pocht es im Takt von Gilberts Husten. Wie lange noch, bis du lachst?
+Gascoigne lacht an den falschen Stellen und weiß seinen eigenen Namen nicht mehr. In deiner Armbeuge pocht es im Takt von Gilberts Husten. Wie lange noch, bis du lachst?
 
 :: betreten [S baustein] {"position":"6270,50","size":"100,100"}
 <!-- Logik: ort = hier -->
