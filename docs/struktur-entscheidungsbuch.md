@@ -127,5 +127,5 @@ Antworten auf die vier Fragen der Übergabe:
 
 Neue Leitlinie: **Das Spiel soll sich wie eine Geschichte anfühlen, voll wie ein Buch. Alles, was an ein Videospiel erinnert, kann raus.**
 - **Bleibt:** die Blutampulle (injizieren).
-- **Raus:** Blutechos (Währung und Fleck am Todesort), Stärkung bei der Puppe, der Handel im Bad der Boten (verstanden als „Brunnenshop“; Bestätigung steht aus). Gegenstände, Wissen und Kleidung (Brandflasche, Jagdheft, Brief, Wendels Mantel) findet man stattdessen **in der Geschichte selbst**, ohne Preis und ohne Menüton.
+- **Raus:** Blutechos (Währung und Fleck am Todesort), Stärkung bei der Puppe, das Bad der Boten samt Handel (vom Nutzer bestätigt: „überfällig“; der Brunnenplatz mit dem Mädchen bleibt). Gegenstände, Wissen und Kleidung (Brandflasche, Jagdheft, Brief, Wendels Mantel) findet man stattdessen **in der Geschichte selbst**, ohne Preis und ohne Menüton.
 - Weitere Kandidaten, die über das Videospielgefühl entschieden werden müssen: Laternen als Speicherpunkte, die Jägermarke, Einsicht als ausgebbare Währung, Zähler und Symbole in der Leiste.
