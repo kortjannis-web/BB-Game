@@ -2,7 +2,10 @@
 // Handgearbeitet 2026-11-05 nach docs/stimme.md und docs/faktencheck-kapitel1.md: Ortsbild in A, Kampf in B (Anzeichen ruhig und genau, Folge kurz und hart). Optionen fließen in den Satz (#fliesst) und nennen die Richtung.
 // Feinschliff 2026-11-05 nach docs/lektorat-kapitel1.md und docs/umsetzung-lektorat.md (L1 bis L6): Fortsetzungen ohne „Du“-Protokoll, Lernsätze als Erinnerung des Körpers, „er“ bis zum Tod, Verwandlung als langsamer Vorgang, Moment der Klarheit ohne Erklärung.
 // Überarbeitung 2026-11-06 nach docs/ueberarbeitung-kapitel1.md (Ü1 bis Ü12) und stil-1800 (Momente anzeichen, kampf, grauen, tod): Mond statt Sonne, Choral nach der dritten Zeile, WARUM über jeder Option, Anzeichen geschärft, wo eine falsche Wahl vorher nicht lesbar war (t2: das lockere Handgelenk; t3b: genau eine Stiellänge Abstand). Takte, Variablen, Bedingungen und Zahl der Möglichkeiten unverändert; neu sind nur Textfärbungen mit vorhandenen Variablen (gascoigne_verraten, gascoigne_lied, mantel_erkannt, gascoigne_name).
-// [ERWEITERT, Entscheidung des Nutzers Ü1] Nacht von Anfang an. Im Kanon ist bis Gascoigne Abend, der Sonnenuntergang folgt erst danach (lore/kapitel/kapitel1.md); darum hier kein Sonnenuntergang nach dem Kampf. Der Mond über dem Grab: knochenbleich, nie rot, so nah, dass die Mauerkrone ihn anschneidet (Stufe zwischen den Gräbern und dem Heimweg); er wandert nicht. Der falsche Schatten fällt ihm entgegen.
+// [ERWEITERT, Entscheidung des Nutzers Ü1] Nacht von Anfang an. Im Kanon ist bis Gascoigne Abend, der Sonnenuntergang folgt erst danach (lore/kapitel/kapitel1.md); darum hier kein Sonnenuntergang nach dem Kampf. Der Mond über dem Grab: nie rot, ohne Farbwort (N2), deutlich größer als über den Gräbern: Er sitzt auf der Mauerkrone, die ihm ein Drittel abschneidet, und ragt an beiden Enden über sie hinaus (Stufe zwischen den Gräbern und dem Heimweg); er wandert nicht. Der falsche Schatten fällt ihm entgegen (nur mit Einsicht, L25). Nach dem Tod Gascoignes zieht Dunst vor ihn, und es beginnt zu regnen (L3, Saat für den Hut im Regen und d_nachspiel).
+// Nachbesserung 2026-11-06 (N1 bis N9, Prüfberichte S und L): Lernsätze als Erinnerungsbild im Präteritum, Formeln ausgedünnt, Witterung als Kennzeichen (kurze Rucke, in Phase 2 ein einziger gieriger Zug),
+//   „sein Rollen“ statt der vollen Formel (N7), Satz vom süßen Blut weiter weg vom Original (N8), tote Zweige ohne q_frau/gascoigne2 gelöscht (L44), Schatten und Optionen in t4 stimmig (L24),
+//   der Griff nach Gehrmans Lehre und ohne die Bedingung kleriker == "besiegt" (L23), Choral am Grab gesteigert (N6), „wieder“ nur, wenn der Choral schon zu hören war (L9).
 // [KANON lore:figuren/gascoigne, RK1 §11] Er hackt auf eine Leiche ein. Eröffnung sinngemäß: überall Bestien, früher oder später wirst du selbst eine. Im Rausch: was sich bewegt, ist Bestie, und was sich nicht bewegt, dem traut er auch nicht. Beim Übergang in die zweite Phase riecht er süßes Blut, es singt ihm, und ihm wird übel davon. Alles sinngemäß, eigene Worte; das Bild (angebrannter Kandis, ein Lied, das er kennt) ist unser.
 // [KANON] Drei Phasen: Axt und Donnerbüchse (parierbar), lange Axt, Bestie (feueranfällig, schneller, springt viel; kleiner als die Kleriker-Bestie). PRÜFEN: Dass er die Donnerbüchse in der zweiten Phase wegwirft, ist unsere Zuspitzung; ob er sie im Original danach noch benutzt, ist nicht am Spiel geprüft.
 // [KANON lore:gegenstaende/jaeger-und-werkstatt] „Vater“ ist ein Titel für Geistliche in einem fremden Land (seine Geste am Ende des Moments der Klarheit ist die eines Paters).
@@ -43,42 +46,39 @@ VAR uhr_bestie = false        // die Spieluhr in diesem Anlauf schon der Bestie 
 ~ moment_moeglich = gascoigne >= 3 and spieluhr and gedaechtnis_kleriker
 { k1_n2_gascoigne == 1:
     ~ einsicht = einsicht + 1
-    Hinter dem Tor hört das Wasser auf. Den ganzen Weg durch die Unterstadt ist es neben dir hergelaufen, in den Rinnen, über die Stufen, aus den Fugen der Mauern, und erst jetzt, da es fehlt, merkst du, wie laut es war. Hier riecht es nach umgegrabener Erde und kaltem Eisen. Der Friedhof steigt in breiten Stufen an, Grab über Grab, und der Nebel liegt so flach zwischen den Steinen, dass nur ihre Köpfe herausragen, Reihe um Reihe, eine Gemeinde, die auf den Beginn der Predigt wartet. Über der obersten Mauer steht der Mond, knochenbleich und so nah herangekommen, dass die Mauerkrone ihm den unteren Rand abschneidet. Sein Licht ist so hell, dass sich auf den nächsten Steinen die Namen lesen lassen, Buchstabe für Buchstabe, bis in das Moos in den Kerben.{not k1_c_graeber: Über dem Tor, durch das du gekommen bist, steht ein einziges Wort im Stein: Oedon.} # bild: grab_oedon # stimmung: grauen # lore: oedon
-    Weiter oben schlägt es. Schwer und ohne Eile kommt es herunter, im Takt eines Dreschflegels auf der Tenne, und zwischen zwei Schlägen schmatzt es jedes Mal leise und nass. Ab und zu fährt die Klinge ganz hindurch und trifft auf Stein; dann klingt es hell und kurz, und der Ton läuft über die Gräber davon, bis der Nebel ihn schluckt.
-    Er steht auf der obersten Stufe, mit dem Rücken zu dir, der lange Mantel nass bis an die Knie, und die Axt hebt sich und fällt. Seinen Hut hat er auf einen Grabstein gelegt, die breite Krempe nach oben, so ordentlich, wie man ihn vor der Andacht auf die Bank legt. Was zu seinen Füßen liegt, trägt noch einen Stiefel, und die Schnalle daran ist blank geputzt. Der Wind kommt von oben herab, und du atmest schon durch den Mund. Der Griff deiner Feuerwaffe ist warm in deiner Hand; wann du ihn gepackt hast, weißt du nicht. # kampf: gascoigne
-    Sein Schatten liegt auf dem Nebel, und er liegt falsch. Statt die Stufen herab zu dir fällt er hinauf, dem Mond entgegen. Hinter dir, woher das Licht dann kommen müsste, ist nur das Tor und das Dunkel der Unterstadt. # lore: einsicht
+    Hinter dem Tor hört das Wasser auf. Den ganzen Weg durch die Unterstadt ist es neben dir hergelaufen, in den Rinnen, über die Stufen, aus den Fugen der Mauern, und erst jetzt, da es fehlt, merkst du, wie laut es war. Hier riecht es nach umgegrabener Erde und kaltem Eisen. Der Friedhof steigt in breiten Stufen an, Grab über Grab, und der Nebel liegt flach zwischen den Steinen; nur ihre Köpfe ragen heraus, eine Gemeinde, die auf den Beginn der Predigt wartet. Über der obersten Mauer steht der Mond. Vor dem Tor hing er noch frei über den hintersten Gräbern; jetzt sitzt er auf der Mauerkrone, die ihm das untere Drittel abschneidet, und ragt an beiden Enden über sie hinaus. In seinem Licht lassen sich auf den nächsten Steinen die Namen lesen, bis in das Moos in den Kerben.{not k1_c_graeber: Über dem Tor, durch das du gekommen bist, steht ein einziges Wort im Stein: Oedon.} # bild: grab_oedon # stimmung: grauen # lore: oedon
+    Weiter oben schlägt es. Schwer und gleichmäßig kommt es herunter, und zwischen zwei Schlägen schmatzt es jedes Mal leise und nass. Ab und zu fährt die Klinge ganz hindurch und trifft auf Stein; dann klingt es hell und kurz, und der Ton läuft über die Gräber davon, bis der Nebel ihn schluckt.
+    Er steht auf der obersten Stufe, mit dem Rücken zu dir, der lange Mantel nass bis an die Knie, und die Axt hebt sich und fällt. Seinen Hut hat er auf einen Grabstein gelegt, die breite Krempe nach oben, genau in die Mitte des Steins gerückt. Was zu seinen Füßen liegt, trägt noch einen Stiefel, und die Schnalle daran ist blank geputzt. Der Wind kommt von oben herab, und du atmest schon durch den Mund. Du nimmst die Feuerwaffe in die Hand; ihr Griff ist warm. # kampf: gascoigne
+    // L25: Der falsche Schatten ist ein Zeichen der Einsicht (Ü1, Notizbuch „einsicht>=3“ am Kapitelende). Hier ist die Bedingung auf jedem Weg erfüllt (Anblick der Kleriker-Bestie und Ankunft je +1), sie bindet das Bild aber an die Mechanik.
+    { einsicht >= 1:
+        Sein Schatten liegt auf dem Nebel, und er liegt falsch. Statt die Stufen herab zu dir fällt er hinauf, dem Mond entgegen. In deinem Rücken, woher das Licht dann kommen müsste, ist nur das Tor und das Dunkel der Unterstadt. # lore: einsicht
+    }
 - else:
-    Hinter dem Tor verstummt das Wasser wieder. Oben auf der letzten Stufe hebt sich die Axt und fällt, im selben Takt wie beim ersten Mal; kein Schlag kommt früher, weil du zurück bist. Der Hut liegt auf seinem Grabstein, die Krempe nach oben, und der Mond sitzt auf der Mauerkrone, um nichts gewandert. # bild: grab_oedon # stimmung: grauen # kampf: gascoigne
+    Wieder verstummt hinter dem Tor das Wasser. Oben auf der letzten Stufe hebt sich die Axt und fällt, im selben Takt wie beim ersten Mal; kein Schlag kommt früher, weil du zurück bist. Der Hut liegt auf seinem Grabstein, die Krempe nach oben, und der Mond sitzt auf der Mauerkrone, um nichts gewandert. # bild: grab_oedon # stimmung: grauen # kampf: gascoigne
 }
+// L44: Die Zweige für einen Jäger, der Gascoigne nie begegnet ist („Noch einer“), sind gelöscht. Das Grab wird nur über k1_c_tor betreten, k1_c_tor nur aus k1_c_eileen,
+//   k1_c_eileen nur aus k1_c_graeber, und dort wird gascoigne2 auf jedem Weg gesetzt (c_unterstadt); q_frau ist ohnehin immer 1 (b_yharnam, gascoigne_greift_ein).
 { k1_n2_gascoigne > 1:
-    Die Axt bleibt oben stehen. Er dreht sich um, die Schulter zuerst, dann die Hüfte, genau wie beim ersten Mal, und zieht die Luft ein, lange, durch die Nase. Nichts in seinem Gesicht weiß davon, dass er dich hier schon einmal ins Gras gelegt hat. { q_frau == 1 or gascoigne2: „{gascoigne_name:{name}|Fremder}“, sagt er, und es ist derselbe Gruß, Wort für Wort. „Dann siehst du's auch.“ | „Noch einer“, sagt er. „Immer noch einer.“ }
+    Die Axt bleibt oben stehen. Er dreht sich um, die Schulter zuerst, dann die Hüfte, genau wie beim ersten Mal, und wittert in kurzen Rucken. Nichts in seinem Gesicht weiß davon, dass er dich hier schon einmal ins Gras gelegt hat. „{gascoigne_name:{name}|Fremder}“, sagt er, derselbe Gruß wie zuvor. „Dann siehst du's auch.“
     -> p1
 }
-{ q_frau == 1 or gascoigne2:
-    Die Axt bleibt oben stehen. Er dreht sich um, die Schulter zuerst, dann die Hüfte. Der Verband über seinen Augen ist steif geworden und dunkel bis zum Knoten, und trotzdem findet sein Gesicht dich sofort.{ gascoigne2 and q_frau == 1: An den Gräbern hat er einen Atemzug zu lang gebraucht. Jetzt lächelt er, bevor du stehst.| Er lächelt.}
-    „{gascoigne_name:{name}|Fremder}.“ Es klingt wie ein Gruß an der Haustür{ q_frau == 1:, mit dem Rollen in der Stimme, das du vom Scheiterhaufen kennst}. „Gut. Gut, dass du kommst. Dann siehst du's auch.“{ gascoigne_verraten: Er hebt das Gesicht zu den Dächern über der Mauer und zieht die Luft ein, lange. „Allein?“, fragt er. „Keine Federn diesmal?“ Auf die Antwort wartet er nicht.}
-    // [ERWEITERT] Der Bäckerjunge (Jonas) ist erfunden und liegt im frischen Grab an den Gräbern; Martha, Hennings und der alte Brack stammen aus der Szene am Scheiterhaufen.
-    { q_frau == 1:
-        Er deutet mit der Axt hinab auf die Dächer, und von der Schneide fällt Tropfen um Tropfen in den Nebel. { mob_verbrannt: „Martha. Die hast du mir abgenommen. Hennings. Der alte Brack. Der Bäckerjunge.“ Er wartet, als müsse er nachzählen. „Alle.|„Martha. Hennings. Der alte Brack. Der Bäckerjunge. Alle.} Hinter jeder Tür, unter jedem Hut. Ich riech's durch das Räucherwerk.“
-    - else:
-        Er deutet mit der Axt hinab auf die Dächer, und von der Schneide fällt Tropfen um Tropfen in den Nebel. „Alle da unten. Der Bäckerjunge. Hinter jeder Tür, unter jedem Hut. Ich riech's durch das Räucherwerk.“
-    }
-    Er hebt das Kinn und zieht die Luft ein, einmal, zweimal, in kurzen, prüfenden Zügen, und sein Kopf folgt dabei deinem Atem. „An dir noch nicht.“ Es klingt, als gratuliere er dir. „Noch nicht, {gascoigne_name:{name}|Fremder}. Ist nur eine Frage der Nächte.“
-- else:
-    Die Axt bleibt oben stehen. Er hebt den Kopf und nimmt Witterung auf, in kleinen Rucken, und dreht sich um. Die Augen sind verbunden, der Verband ist schwarz und steif, und das Gesicht darunter ist das eines Mannes, der seit Nächten nicht geschlafen hat. # lore: gascoigne
-    „Noch einer“, sagt er. Seine Stimme kommt tief und ruhig, mit einem Rollen darin, das nicht aus diesen Gassen stammt. Er deutet mit der Axt über die Gräber hinab auf die Stadt. „Da unten. Hinter jeder Tür, in jedem Bett, in jeder Kirchenbank. Die tragen ihre Gesichter nur noch wie Mäntel.“ Er zieht die Luft ein und legt den Kopf schief. „Du auch. Nicht heute vielleicht. Aber du auch.“
-}
+Die Axt bleibt oben stehen. Er dreht sich um, die Schulter zuerst, dann die Hüfte. Der Verband über seinen Augen ist steif geworden und dunkel bis zum Knoten, und trotzdem findet sein Gesicht dich sofort. An den Gräbern hat er einen Atemzug zu lang gebraucht. Jetzt lächelt er, bevor du stehst.
+„{gascoigne_name:{name}|Fremder}.“ Es klingt wie ein Gruß an der Haustür, mit seinem Rollen, das du vom Scheiterhaufen kennst. „Gut. Gut, dass du kommst. Dann siehst du's auch.“{ gascoigne_verraten: Er hebt das Gesicht zu den Dächern über der Mauer. „Allein?“, fragt er. „Keine Federn diesmal?“ Auf die Antwort wartet er nicht.}
+// [ERWEITERT] Der Bäckerjunge (Jonas) ist erfunden und liegt im frischen Grab an den Gräbern; Martha, Hennings und der alte Brack stammen aus der Szene am Scheiterhaufen.
+// [KANON lore:figuren/gascoigne] Eröffnung sinngemäß: überall Bestien, früher oder später auch du.
+Er deutet mit der Axt hinab auf die Dächer, und von der Schneide tropft es in den Nebel. { mob_verbrannt: „Martha. Die hast du mir abgenommen. Hennings. Der alte Brack. Der Bäckerjunge.“ Er wartet, als müsse er nachzählen. „Alle.|„Martha. Hennings. Der alte Brack. Der Bäckerjunge. Alle.} Hinter jeder Tür, unter jedem Hut. Ich riech's durch das Räucherwerk.“
+Er hebt das Kinn und zieht die Luft ein, einmal, zweimal, in kurzen, prüfenden Rucken, und sein Kopf folgt dabei deinem Atem. „An dir noch nicht.“ Es klingt, als gratuliere er dir. „Noch nicht, {gascoigne_name:{name}|Fremder}. Ist nur eine Frage der Nächte.“
 -> p1
 
 = p1
 # stimmung: kampf
 - (t1)
 { t1 == 1:
-    Ohne Hast hebt er die Donnerbüchse. Der Trichter des Laufs schwenkt über die Steine, findet dich und bleibt stehen; das Gewicht liegt auf seinem hinteren Fuß, und die Axt hängt locker an seiner Seite. Links von dir steht ein Grabstein, breit genug für zwei.{ parade_quelle == "gascoigne": Diese Haltung kennst du. Auf dem Platz am Scheiterhaufen hat er sie dir vorgemacht, für den Augenblick, in dem eine Bestie ausholt. Nicht davor, nicht danach. Jetzt wartet er darauf, dass du ausholst.| Er wartet darauf, dass du dich rührst.} # anzeichen: gascoigne_schuss
+    Er hebt die Donnerbüchse. Der Trichter des Laufs schwenkt über die Steine, findet dich und bleibt stehen; das Gewicht liegt auf seinem hinteren Fuß, und die Axt hängt locker an seiner Seite. Links von dir steht ein Grabstein, breit genug für zwei.{ parade_quelle == "gascoigne": Diese Haltung kennst du. Auf dem Platz am Scheiterhaufen hat er sie dir vorgemacht, für den Augenblick, in dem eine Bestie ausholt. Nicht davor, nicht danach. Jetzt wartet er darauf, dass du ausholst.| Er wartet darauf, dass du dich rührst.} # anzeichen: gascoigne_schuss
 - else:
-    Wieder hebt er die Donnerbüchse, ohne Hast. Der Trichter findet dich und bleibt stehen, sein Finger liegt am Abzug, und links von dir wartet derselbe breite Grabstein. # anzeichen: gascoigne_schuss
+    Wieder hebt er die Donnerbüchse. Der Trichter findet dich und bleibt stehen, sein Finger liegt am Abzug, und links von dir wartet derselbe breite Grabstein. # anzeichen: gascoigne_schuss
 }
-{ gelernt ? gascoigne_schuss: Unter deinem Brustbein brennen die Körner der letzten Ladung noch einmal auf, und deine Augen gehen von selbst zu dem Stein zur Linken. }
+{ gelernt ? gascoigne_schuss: Zuletzt bist du geradewegs in diese Ladung gelaufen, und die Körner brannten dir in der Brust. Der Stein zur Linken stand die ganze Zeit da. }
 // WARUM: Falsch, für Aufmerksame erkennbar: Der Lauf zielt schon ruhig auf dich, und das Anzeichen bietet den breiten Stein zur Linken als Deckung an. Wer losstürmt, läuft in die Ladung.
 + [Geradeaus auf ihn zustürmen #fliesst]
     Zwei Reihen Gräber weit kommst du. Dann spuckt der Trichter Feuer, eine Handvoll glühender Körner schlägt dir in die Brust und wirft dich rückwärts über einen Stein.
@@ -98,7 +98,7 @@ VAR uhr_bestie = false        // die Spieluhr in diesem Anlauf schon der Bestie 
 + {spieluhr and spieluhr_mal < 3} [Die Spieluhr aufziehen und hochhalten #fliesst] -> uhr
 - (t2)
 Er lässt die Donnerbüchse sinken und kommt über die Gräber, in Schritten, die länger sind als deine. Die Axt nimmt er tief hinter die Hüfte, die Schneide flach, genau auf der Höhe der Grabsteinköpfe; nur das Handgelenk hält sie, locker, als prüfe er ihr Gewicht. Zwei Schritte vor dir dreht sich seine Schulter ein. # anzeichen: gascoigne_bogen
-{ gelernt ? gascoigne_bogen: Deine Knie geben schon nach, bevor seine Schulter sich eindreht; sie wissen noch, auf welcher Höhe die Schneide kommt. }
+{ gelernt ? gascoigne_bogen: Zuletzt kam die Schneide in Höhe der Grabsteinköpfe. Darunter war sie nie. }
 // WARUM: Falsch, erkennbar: Das Anzeichen sagt, dass seine Schritte länger sind als deine; zwischen den Gräbern holt er jeden ein, der weicht.
 + [Rückwärts zwischen die Gräber weichen #fliesst]
     Er folgt dir, und zwischen zwei Steinen geht dir der Platz aus. Die Axt holt dich ein und beißt dir in die Schulter.
@@ -115,7 +115,7 @@ Er lässt die Donnerbüchse sinken und kommt über die Gräber, in Schritten, di
     -> t2b
 // WARUM: Richtig: Der Hieb kommt flach in Höhe der Grabsteinköpfe; darunter ist Platz, und nah an ihm ist er offen.
 + [Unter dem Bogen durch und zuschlagen #fliesst]
-    Tief, beinahe auf den Knien: Die Axt pfeift dir über den Scheitel, und dann bist du an ihm, so nah, dass dir der nasse Saum seines Mantels über die Wange streicht. Die Säge findet seine Seite. Er grunzt und sieht an sich hinab, als suche er die Stelle.
+    Tief, beinahe auf den Knien: Die Axt pfeift dir über den Scheitel, und dann bist du an ihm, so nah, dass dir der nasse Saum seines Mantels über die Wange streicht. Die Säge findet seine Seite. Er grunzt und sieht an sich hinab.
     -> t2b
 // WARUM: Falsch zur falschen Zeit: Er ist mitten im Angriff; die Ampulle heilt, aber der Hieb trifft beim Stoßen, und der Takt beginnt von vorn. Die ruhige Gelegenheit kommt mit dem Lied.
 + {ampulle > 0} [Zurückspringen und die Ampulle stoßen #fliesst]
@@ -124,7 +124,7 @@ Er lässt die Donnerbüchse sinken und kommt über die Gräber, in Schritten, di
 - (t2b)
 // [ERWEITERT] Der Schuss aus nächster Nähe: Er lässt dich herankommen.
 Er weicht nicht. Er lässt die Axt in der Rechten sinken, ganz, bis die Schneide im Gras liegt, und dreht dir die linke Schulter zu, als wolle er dich umarmen. Die Donnerbüchse hängt an seiner linken Hüfte, der Trichter zeigt zu Boden. Nur sein Daumen bewegt sich. Er spannt den Hahn, und das Klicken ist das lauteste Geräusch auf dem Friedhof. # anzeichen: donner_nah
-{ gelernt ? donner_nah: Beim Klicken brennt dir die Haut im Gesicht, wo vorhin die Glut saß, und deine Füße ziehen nach rechts, dorthin, wo die Axt im Gras liegt. }
+{ gelernt ? donner_nah: Zuletzt kam auf dieses Klicken der Trichter hoch, mitten in dein Gesicht. Die Axt lag dabei rechts im Gras, nutzlos. }
 // WARUM: Falsch, erkennbar: Die offene Brust ist eine Einladung, und der gespannte Hahn an der linken Hüfte zeigt, dass der Schuss aus nächster Nähe kommt.
 + [Von vorn in die offene Brust #fliesst]
     Die Säge trifft, und im selben Augenblick kommt der Trichter hoch. Der Schuss reißt dich von den Füßen, und als du wieder sehen kannst, liegst du auf dem Rücken, Glut im Gesicht und Erde zwischen den Zähnen.
@@ -142,20 +142,21 @@ Er weicht nicht. Er lässt die Axt in der Rechten sinken, ganz, bis die Schneide
 = p2
 ~ g_phase = 2
 Er tritt zurück, und mit einem Ruck der Handgelenke klappt er die Axt aus: Der Stiel fährt heraus, doppelt so lang wie zuvor, und er packt ihn mit beiden Händen. Die Donnerbüchse wirft er weg, achtlos, zwischen die Gräber, und sieht ihr nicht nach. Er lacht dabei, tief in der Kehle, und er lacht auch beim Einatmen, nach innen, mit dem Geräusch eines Blasebalgs, der einen Riss hat. # phase # stimmung: kampf
-Mitten darin hält er inne. Er hebt das Gesicht und zieht die Luft ein, lange, durch die Nase, und das Lachen bricht ab. „Riechst du's{gascoigne_name:, {name}}? Das Blut.“ Seine Stimme ist ganz weich geworden. „Wie Kandis in der Pfanne, kurz bevor er schwarz wird. Und es summt mir was vor. Ich kenn das Lied. Ich kenn's doch …“ Er krümmt sich über den langen Stiel, eine Hand vor dem Mund, und würgt, und durch die Finger hindurch lacht er weiter.
+// N8 (L40): Kanon sinngemäß (das Blut ist süß, es singt ihm, ihm wird übel davon), Wortlaut und Reihenfolge eigen: zuerst das Bild, dann das Blut, das Lied im Geruch, der Magen als Tat.
+Mitten darin hält er inne. Er hebt das Gesicht und wittert, ein einziger tiefer Zug, gierig, ohne die kurzen Rucke von vorhin, und das Lachen bricht ab. „Kandis“, sagt er, und seine Stimme ist ganz weich geworden. „Kandis in der Pfanne, kurz bevor er schwarz wird. So riecht das Blut hier oben{gascoigne_name:, {name}}. Und ein Lied steckt darin, eins, das ich kenn. Ich kenn's doch …“ Er krümmt sich über den langen Stiel, eine Hand vor dem Mund, und sein Magen hebt sich; durch die Finger hindurch lacht er weiter.
 - (t3)
 Er fasst den Stiel ganz am Ende und beginnt sich zu drehen. Die Schneide zieht einen Kreis, weiter, als seine Arme reichen, und wo sie einen Grabstein streift, fliegt der Kopf des Steins davon. Nur innen, dicht an seinem Körper, schwingt der Stiel leer durch die Luft. # anzeichen: axt_lang
-{ gelernt ? axt_lang: Deine Rippen erinnern sich an die Schneide, die durch den Stein kam, und diesmal ziehen dich deine Füße nach vorn, ihm entgegen. }
+{ gelernt ? axt_lang: Zuletzt kam die Schneide durch den Stein, hinter dem du standest. Nah an ihm schwang nur der Stiel. }
 // WARUM: Falsch, erkennbar: Im Anzeichen fliegen die Köpfe der Grabsteine davon; kein Stein hält diese Schneide.
 + [Zurück hinter einen hohen Stein #fliesst]
-    Hinter dem Stein ist es einen Atemzug lang ruhig. Dann geht die Axt durch ihn hindurch wie durch Kreide, und durch dich.
+    Einen Atemzug lang ist es hinter dem Stein ruhig. Dann geht die Axt durch ihn hindurch, und durch dich.
     ~ zuletzt = axt_lang
     ~ treffer(2)
     { leben <= 0: -> tod }
     -> t3b
 // WARUM: Richtig für den, der im Hof des Traumes geübt hat: Mitten im Kreis ist die Wucht abzufangen. Die Möglichkeit gibt es nur mit der Übung (geuebt), und er erkennt an dir etwas wieder.
 + {geuebt} [Die lange Axt vorn abfangen #fliesst]
-    Stahl schlägt auf Stahl, mitten in ihrem Kreis, und der Schlag fährt dir bis in die Zähne. Deine Arme halten; im Hof des Traumes haben sie gelernt, Schwereres abzufangen, als sie tragen können. Einen Atemzug lang steht ihr so, Klinge an Klinge, und er neigt den Kopf, als erkenne er an dir etwas wieder. Dann reißt er sich los. # notiz: uebung_genutzt
+    Die Säge quer, beide Hände, die Füße in den Boden, wie Gehrman es dich am Pfahl im Hof gelehrt hat: Stahl schlägt auf Stahl, mitten in ihrem Kreis, der Schlag fährt dir bis in die Zähne, und deine Arme halten. Einen Atemzug lang steht ihr so, Klinge an Klinge, und er neigt den Kopf, als erkenne er an dir etwas wieder. Dann reißt er sich los. # notiz: uebung_genutzt
     -> t3b
 // WARUM: Richtig, erkennbar: Das Anzeichen sagt, dass der Stiel innen leer schwingt; nah an ihm ist der einzige Ort ohne Schneide.
 + [Vorwärts, ganz nah an ihn heran #fliesst]
@@ -165,13 +166,13 @@ Er fasst den Stiel ganz am Ende und beginnt sich zu drehen. Die Schneide zieht e
 + {spieluhr and spieluhr_mal < 3} [Die Spieluhr aufziehen und hochhalten #fliesst] -> uhr
 // WARUM: Falsch zur falschen Zeit: Der Kreis wandert mit dir; wer im Weichen die Ampulle setzt, wird dabei getroffen und muss den Takt noch einmal bestehen.
 + {ampulle > 0} [Rückwärts gehen und die Ampulle stoßen #fliesst]
-    Rückwärts, Schritt um Schritt, die Ampulle schon in der Hand, und der Kreis der Axt wandert mit dir.
+    Rückwärts, die Ampulle schon in der Hand, und der Kreis der Axt wandert mit dir.
     -> ampulle_gefahr(2) -> t3
 - (t3b)
 // [ERWEITERT] Der Hieb von oben: Er stemmt die lange Axt in die Höhe und zählt stumm bis drei. Ü1: Die Schneide steht vor dem Mond.
-Mit dem Stiel stößt er dich von sich, nicht fest, nur so weit, wie der Stiel lang ist. Dann hebt er die lange Axt über den Kopf, beide Hände am Ende des Stiels, und hält sie dort, und hoch über ihm steht die Schneide vor dem Mond, schwarz auf der bleichen Scheibe, und zittert. Er lacht nicht mehr. Wohin du auch trittst, sein Kopf wandert mit dir, gleichmäßig und genau. # anzeichen: axt_wirbel
+Mit dem Stiel stößt er dich von sich, nicht fest, nur so weit, wie der Stiel lang ist. Dann hebt er die lange Axt über den Kopf, beide Hände am Ende des Stiels, und hält sie dort, und hoch über ihm steht die Schneide vor dem Mond und zittert. Er lacht nicht mehr. Wohin du auch trittst, sein Kopf wandert mit dir, gleichmäßig und genau. # anzeichen: axt_wirbel
 Stumm zählen seine Lippen. Eins.
-{ gelernt ? axt_wirbel: Die Stelle, an der dich diese Axt zuletzt gefunden hat, beginnt zu pochen, und sie pocht in seinem Takt. }
+{ gelernt ? axt_wirbel: Zuletzt hat dich diese Axt gefunden, ehe er bei drei war. }
 // WARUM: Falsch, erkennbar: Sein Kopf wandert mit jedem deiner Schritte mit; wer früh läuft, gibt ihm nur Zeit zu zielen.
 + [Sofort nach hinten weglaufen #fliesst]
     Bei eins hast du ihm schon den Rücken zugedreht. Sein Kopf folgt dir, und die Schneide folgt seinem Kopf; sie trifft dich zwischen die Schulterblätter.
@@ -196,7 +197,7 @@ Stumm zählen seine Lippen. Eins.
 = uhr
 ~ spieluhr_mal = spieluhr_mal + 1
 { spieluhr_mal:
-- 1: Die Feder knirscht unter deinem Daumen, eine Umdrehung, zwei, und das Lied steigt über die Gräber, ein Kinderlied an einem Ort, an dem keine Kinder mehr sind. Gascoigne erstarrt mitten in der Bewegung. In der dritten Zeile, wo dem Kamm ein Zahn fehlt, fällt ein Ton aus, und in diese Lücke hinein lässt er los, was er in den Händen hält, und presst beide Hände an den Kopf, fest, mit gespreizten Fingern.{ gascoigne_lied: Seine Lippen formen zwei Wörter, „Sie heißt“, und weiter kommen sie nicht, wie auf der Brücke.} Aus seiner Kehle kommt der Laut eines Mannes, der im Schlaf etwas Schweres hebt. # klang: spieluhr # lore: spieluhr
+- 1: Die Feder knirscht unter deinem Daumen, eine Umdrehung, zwei, und das Lied steigt über die Gräber. Gascoigne erstarrt mitten in der Bewegung. In der dritten Zeile, wo dem Kamm ein Zahn fehlt, fällt ein Ton aus, und in diese Lücke hinein lässt er los, was er in den Händen hält, und presst beide Hände an den Kopf, fest, mit gespreizten Fingern.{ gascoigne_lied: Seine Lippen formen zwei Wörter, „Sie heißt“, und weiter kommen sie nicht, wie auf der Brücke.} Aus seiner Kehle kommt der Laut eines Mannes, der im Schlaf etwas Schweres hebt. # klang: spieluhr # lore: spieluhr
 - 2: Noch einmal die Feder, noch einmal das Lied, und zwischen den Steinen klingt es jetzt blechern; die Mauer gibt es einen halben Takt zu spät zurück, so dass zwei Lieder über die Gräber laufen und eines davon falsch. Er dreht den Kopf, suchend, nach links, nach rechts. „Viola?“, sagt er. „Viola, wo …“ Er findet sie nicht, und die Hände an seinem Kopf zittern. # klang: spieluhr
 - else: Beim dritten Aufziehen hakt die Feder, ehe sie das Lied freigibt, und es kommt nicht mehr bis zur Lücke. Er krümmt sich darunter wie unter einem Schlag und schreit, und der Schrei geht über in ein Brüllen, das aus einem größeren Brustkorb kommt, als er ihn hat. # klang: spieluhr # notiz: spieluhr_dritte # stimmung: grauen
     -> p3
@@ -208,11 +209,11 @@ Stumm zählen seine Lippen. Eins.
     -> weiter_nach_lied
 // WARUM: Richtig für den Verwundeten: Solange das Lied spielt, greift er nicht an; die Ampulle heilt ohne Gefahr.
 + {ampulle > 0} [Hinter einem Stein die Ampulle stoßen #fliesst]
-    Hinter dem nächsten Stein gehst du in die Knie. Er hört nur das Lied, und du hast Zeit.
+    Du gehst hinter dem nächsten Stein in die Knie. Er hört nur das Lied, und du hast Zeit.
     -> ampulle_ruhig -> weiter_nach_lied
 // WARUM: Die Haltung des Schonens: Du lässt ihm das Lied bis zum Ende. Nichts gewonnen, nichts verloren, aber du hast nicht in sein Zuhören geschlagen.
 + [Einen Schritt zurück, das Lied abwarten #fliesst]
-    Ton um Ton läuft das Lied aus, und mit dem letzten lässt er die Hände sinken und greift wieder nach der Axt, zögernder als vorher, wie ein Mann, der aus dem Schlaf hochfährt und nicht weiß, wo er ist.
+    Das Lied läuft aus, und mit dem letzten Ton lässt er die Hände sinken und greift wieder nach der Axt, zögernder als vorher, und sieht sich um, als wisse er nicht, wo er ist.
     -> weiter_nach_lied
 // WARUM: Öffnet den Moment der Klarheit, wenn die Freundschaft trägt (gascoigne >= 3), die Spieluhr da ist und du im Blutgedächtnis der Kleriker-Bestie gesehen hast, wie eine Stimme mitten im Lied kippt; das ist das Zeichen zum Rufen. Sonst bleibt es ein halber Augenblick, in dem er dich für Henryk hält.
 + [Ihn leise beim Namen rufen #fliesst]
@@ -230,16 +231,16 @@ Stumm zählen seine Lippen. Eins.
 = moment
 // Die bessere Entscheidung, die das Blutgedächtnis möglich macht. Der Text zeigt nur das Echo der kippenden Stimme; er erklärt nicht, warum es hilft.
 ~ gascoigne_moment = true
-Das Lied läuft wieder auf die Lücke zu. Seine Lippen gehen mit, Ton um Ton, und kurz davor kippt ihm die Stimme, mitten im Summen, so wie auf der Brücke ein anderes Lied in einer anderen Kehle gekippt ist. In die Lücke, wo der Ton fehlt, sagst du seinen Namen, leise, so wie er im Deckel steht. # gedaechtnis: gascoigne_klarheit # stimmung: schoen
+Das Lied läuft wieder auf die Lücke zu. Seine Lippen gehen mit, und kurz davor kippt ihm die Stimme, mitten im Summen, so wie auf der Brücke ein anderes Lied in einer anderen Kehle gekippt ist. In die Lücke, wo der Ton fehlt, sagst du seinen Namen, leise, so wie er im Deckel steht. # gedaechtnis: gascoigne_klarheit # stimmung: schoen
 Gascoigne hebt den Kopf. Für einen Atemzug, einen einzigen, ist er da. Er steht gerade, die Axt hängt ihm locker in der Hand wie ein Werkzeug nach Feierabend, und er neigt den Kopf zur Seite.
 „Viola“, sagt er. Nicht zu dir.
-Dann spricht er, und es ist die Stimme vom Platz am Scheiterhaufen, tief, mit dem Rollen darin, nur in Stücken: „Ich weiß. Was ich bin. Lang schon.“ Er atmet. „Mach's. Bevor ich wieder geh.“ Er atmet noch einmal, und es klingt schon nicht mehr ganz nach ihm. „So.“
+Dann spricht er, und es ist die Stimme vom Platz am Scheiterhaufen, tief, mit seinem Rollen, nur in Stücken: „Ich weiß. Was ich bin. Lang schon.“ Er atmet. „Mach's. Bevor ich wieder geh.“ Er atmet noch einmal, und es klingt schon nicht mehr ganz nach ihm. „So.“
 // WARUM: Die wärmste Antwort, und eine Schuld: Du versprichst, nach dem Mädchen zu sehen (versprechen_gascoigne); die Weiche beim Mädchen liest es.
 + [Ihm versprechen, nach der Kleinen zu sehen #fliesst]
     ~ versprechen_gascoigne = true
     „Ich sehe nach der Kleinen. Das verspreche ich dir.“ Schon beim ersten Wort nickt er, und unter dem Verband laufen Tränen hervor, und er lässt sie laufen. „Sag ihr …“ Er sucht. „Das Lied. Sag ihr, das Lied weiß ich noch. Nur alles andere nicht.“
 // WARUM: Die Frage, die das Mädchen dir mitgegeben hat. Er weiß es nicht mehr, und was er nicht weiß, bleibt offen (wer Viola getötet hat, sagt das Spiel nicht).
-+ [Ihn nach Viola fragen #fliesst]
++ [„Wo ist Viola?“ #fliesst]
     „Wo ist Viola?“ Bei ihrem Namen öffnet sich sein Mund und schließt sich wieder. „Weiß nicht“, sagt er. „Weiß es nicht mehr.“ Seine Hände suchen an seinem Mantel nach einer Tasche, einem Knopf, und finden nichts. # notiz: viola_frage
 // WARUM: Die Antwort auf seine Bitte ohne ein Wort: ehrlich und hart, ohne Versprechen, das später etwas schuldet. Er antwortet mit der Geste eines Paters.
 + [Schweigend die Säge heben #fliesst]
@@ -256,9 +257,9 @@ Dort sitzt der Schal, wie er immer saß, ordentlich geknotet, an einem Hals, der
 Der Knoten hält.
 - (t4)
 Mit einem Satz ist er rechts von dir auf einem Grabstein und kauert dort, Hände und Füße dicht beisammen auf dem schmalen Kopf des Steins, und unter dem Haar ziehen sich die Hinterläufe zusammen. Sein Kopf zielt auf die Stelle, an der du jetzt stehst, und bleibt dort, auch als du das Gewicht verlagerst. Dann springt er, von rechts, über drei Gräber hinweg, die Klauen voran, und sein Heulen klettert an den Grabsteinen hoch und kommt oben von der Mauer zurück. # anzeichen: bestie_sprung
-{ gelernt ? bestie_sprung: Deine linke Schulter senkt sich schon, ehe er abspringt; die rechte erinnert sich an seine Klauen. }
-// [ERWEITERT] Einsicht kostet: Wer zu viel sieht, sieht auch den falschen Schatten (angekündigt bei der Ankunft). Der Schatten springt nach links, dem Mond entgegen; wer ihm nach rechts ausweicht, läuft der Bestie entgegen. Der richtige Weg bleibt links, für alle.
-{ einsicht >= 3: Sein Schatten springt ihm voraus über die Gräber, nach links, dem Mond entgegen, und er selbst ist noch in der Luft. }
+{ gelernt ? bestie_sprung: Zuletzt kamen seine Klauen von rechts, auf die Stelle, an der du standest. }
+// [ERWEITERT] Einsicht kostet: Wer zu viel sieht, sieht auch den falschen Schatten (angekündigt bei der Ankunft). Der Schatten kommt von links, von der Seite des Mondes, auf dich zu und lügt; wer vor ihm nach rechts ausweicht, läuft der Bestie entgegen. Der richtige Weg bleibt links, dem Schatten entgegen, für alle (L24: „Der Schatten lügt“ passt nur so).
+{ einsicht >= 3: Sein Schatten aber fliegt dir von links entgegen, von der Seite des Mondes her, die Klauen voran, und er selbst ist noch in der Luft. }
 // WARUM: Richtig: In Bestiengestalt ist er feueranfällig (Kanon); Gilberts Flamme trifft ihn mitten im Sprung.
 + {feuer} [Gilberts Flamme hoch in den Sprung halten #fliesst]
     Mitten im Sprung fährt ihm Gilberts Flamme entgegen, und das Haar auf seiner Brust fängt Feuer. Er heult und wälzt sich zwischen den Gräbern, und es riecht nach versengtem Haar und nach Fett.
@@ -268,20 +269,20 @@ Mit einem Satz ist er rechts von dir auf einem Grabstein und kauert dort, Hände
     ~ molotow = molotow - 1
     Das Glas zerspringt an seiner Brust, und das Feuer läuft ihm über das Haar wie Wasser über einen Stein. Brennend kommt er auf, eine Armlänge neben dir, und wälzt sich im nassen Gras.
     -> t4b
-// WARUM: Falsch, und nur wer viel Einsicht hat, sieht diese Falle: Der Schatten fällt dem Mond entgegen und lügt; das Anzeichen sagt klar, dass er von rechts springt.
+// WARUM: Falsch, und nur wer viel Einsicht hat, sieht diese Falle: Der Schatten kommt von links, von der Seite des Mondes, und lügt; das Anzeichen sagt klar, dass er von rechts springt.
 + {einsicht >= 3} [Vor dem Schatten nach rechts weichen #fliesst]
     Der Schatten lügt. Er landet genau dort, wo du aufkommst, mit beiden Klauen voran.
     ~ zuletzt = bestie_sprung
     ~ treffer(2)
     { leben <= 0: -> tod }
     -> t4b
-// WARUM: Richtig, erkennbar: Er springt von rechts auf die Stelle, an der du stehst; links aus seiner Bahn fällt er ins Leere.
-+ [{einsicht >= 3:Nach links, dem Schatten nach|Nach links aus seiner Bahn} #fliesst]
-    Er schlägt hinter dir auf, so schwer, dass ein Grabstein aus der Erde springt und dir gegen die Fersen rollt.
+// WARUM: Richtig, erkennbar: Er springt von rechts auf die Stelle, an der du stehst; links aus seiner Bahn fällt er ins Leere. Wer den falschen Schatten sieht, muss ihm dafür entgegengehen.
++ [{einsicht >= 3:Nach links, dem Schatten entgegen|Nach links aus seiner Bahn} #fliesst]
+    Er schlägt hinter dir auf; ein Grabstein springt aus der Erde und rollt dir gegen die Fersen.
     -> t4b
 // WARUM: Falsch, erkennbar: Er springt mit dem ganzen Gewicht über drei Gräber; was so fliegt, fängt keine Säge.
 + [Den Sprung von vorn abfangen #fliesst]
-    Säge gegen Klauen, und die Klauen sind schwerer. Er reißt dich um wie ein Fuhrwerk einen Zaunpfahl, und die Erde des Grabes unter dir ist kalt.
+    Säge gegen Klauen, und die Klauen sind schwerer. Er reißt dich um, und unter dir ist die Erde des Grabes kalt.
     ~ zuletzt = bestie_sprung
     ~ treffer(2)
     { leben <= 0: -> tod }
@@ -294,12 +295,12 @@ Mit einem Satz ist er rechts von dir auf einem Grabstein und kauert dort, Hände
 // [ERWEITERT] Kreis und Stille in einem Takt (Festlegung G9): Er umkreist dich heulend; wenn das Heulen aussetzt, springt er von dort, wo die Stille anfing.
 Er greift nicht gleich wieder an. Auf allen vieren läuft er im Kreis um dich herum über die Gräber, und wo seine Klauen aufsetzen, reißt die Erde in Furchen auf. Dabei heult er ohne Pause, ein langer Ton, den die Mauer zurückgibt, so dass er von zwei Seiten zugleich kommt: links, dann hinten, dann rechts, dann wieder hinten. # anzeichen: bestie_kreis
 Hinter dir bricht das Heulen ab, mitten im Atem.
-{ gelernt ? bestie_kreis: In deinem Nacken stellen sich die Haare auf, genau dort, wo das Heulen aufgehört hat. }
+{ gelernt ? bestie_kreis: Zuletzt hat das Heulen an derselben Stelle aufgehört, und von dort kam er. }
 // [ERWEITERT] Einsicht kostet: Wer zu viel hört, hört das Heulen weiter, auch als es schon aufgehört hat.
 { einsicht >= 3: In deinem Kopf aber hört es nicht auf. Es läuft weiter, rund um dich, und jetzt kommt es von vorn. }
 // [KANON lore:figuren/maedchen-und-viola] Die Spieluhr lässt ihn auch in Bestienform stocken. Einmal je Anlauf.
 // WARUM: Richtig im Kampf, mit Gewicht: Die Spieluhr lässt auch die Bestie stocken (Kanon), einmal je Anlauf, und die Option sagt offen, dass du in sein Lauschen schlägst (im_lied_getroffen).
-+ {spieluhr and not uhr_bestie} [Mit der Spieluhr nach hinten herumfahren, dann zuschlagen #fliesst]
++ {spieluhr and not uhr_bestie} [Nach hinten herumfahren, Spieluhr und Säge #fliesst]
     ~ uhr_bestie = true
     ~ im_lied_getroffen = true
     Die Feder ist schon gespannt, als du herumkommst, und das Lied fällt in die Stille wie ein Stein in einen Brunnen. Er bleibt stehen, mitten im Ansatz zum Sprung, und senkt den Kopf zur Melodie, tief, bis die Schnauze das Gras berührt. An der Stelle, wo der Ton fehlt, winselt er, hoch und dünn, genau einen Ton lang. Er rührt sich nicht, als du zuschlägst. # klang: spieluhr # stimmung: grauen
@@ -334,22 +335,22 @@ Hinter dir bricht das Heulen ab, mitten im Atem.
     Der Stein zur Rechten ist breit genug für deine Schultern und für nichts sonst; die Ampulle hast du schon in der Faust.
     -> ampulle_gefahr(2) -> t4b
 - (t5)
-Er packt dich. Beide Klauen schließen sich um deine Schultern, und er hebt dich hoch, bis sein Gesicht vor deinem ist und dir sein Atem entgegenschlägt, Blut und Eisen und nasses Fell. Der Schal an seinem Hals schwingt dicht vor deinen Augen, noch immer geknotet, und aus dem schmutzigen Stoff steigt, ganz schwach, ein herber, harziger Geruch, der nicht hierher gehört: Weihrauch. Die Klauen haben sich in {mantel_erkannt:Wendels|deinen} Mantel gekrallt, nicht in dich, und das Leder knarrt an den Nähten. # anzeichen: griff
-{ gelernt ? griff: Deine Schultern erinnern sich, wie das Leder an den Nähten nachgab, und werden schwer, von selbst. }
+Er packt dich. Beide Klauen schließen sich um deine Schultern, und er hebt dich hoch, bis sein Gesicht vor deinem ist und dir sein Atem entgegenschlägt, Blut und Eisen und nasses Fell. Der Schal an seinem Hals schwingt dicht vor deinen Augen, noch immer geknotet, und aus dem schmutzigen Stoff steigt, ganz schwach, ein herber, harziger Geruch, der nicht hierher gehört: Weihrauch. Die Klauen haben sich in {mantel_erkannt:Wendels|deinen} Mantel gekrallt, nicht in dich, und das Leder knarrt an den Nähten. Seine Daumen liegen vorn, an deinen Schlüsselbeinen. # anzeichen: griff
+{ gelernt ? griff: Zuletzt hast du in diesen Griff gestochen, und die Klauen fanden durch das Leder dein Fleisch. }
 // WARUM: Falsch, aber nicht tödlich: Wer in den Griff sticht, gewinnt, doch die Klauen, die nur im Mantel saßen, finden dabei dein Fleisch.
 + [Von vorn in seinen Griff stechen #fliesst]
-    Seine Klauen graben sich in dein Fleisch und deine Säge in seines, und einen langen Augenblick haltet ihr einander fest wie zwei Tänzer, die nicht loslassen können. Dann gibt er nach.
+    Seine Klauen graben sich in dein Fleisch und deine Säge in seines, und einen langen Augenblick haltet ihr einander fest. Dann gibt er nach.
     ~ zuletzt = griff
     ~ treffer(1)
     { leben <= 0: -> tod }
     -> sieg
-// WARUM: Richtig für den, der im Traum geübt und die Kleriker-Bestie getötet hat: eine Kraft, die nicht ganz deine ist.
-+ {geuebt and kleriker == "besiegt"} [Seine Klauen nach beiden Seiten aufbrechen #fliesst]
-    Finger um Finger biegst du sie auf, mit einer Kraft, die nicht ganz deine ist. Er heult auf, hoch und kurz, und dann bist du frei, und seine Brust ist offen. # notiz: uebung_genutzt
+// WARUM: Richtig für den, der im Hof des Traumes geübt hat: Gehrmans Lehre, wer packt, ist zum Daumen hin offen; die Daumen liegen laut Anzeichen vorn. L23: Die frühere Bedingung kleriker == "besiegt" ist entfallen, denn die Übung im Traum hängt nicht an der Brücke.
++ {geuebt} [Seine Arme nach außen aufbrechen #fliesst]
+    Zwischen seinen Armen hindurch stößt du die Unterarme nach außen, gegen seine Daumen, beide zugleich, mit einem Ruck, so wie Gehrman es dich vor seinem Stuhl hat tun lassen. Die Klauen springen auf. Er heult, hoch und kurz, und dann bist du frei, und seine Brust ist offen. # notiz: uebung_genutzt
     -> sieg
 // WARUM: Richtig, erkennbar: Die Klauen sitzen im Mantel, nicht in dir, und das Leder gibt an den Nähten nach; wer sich schwer macht, fällt heraus.
 + [Nach unten aus seinem Griff fallen #fliesst]
-    Schwer wie ein Sack Korn rutschst du nach unten weg, und seine Klauen schließen sich um Leder und Luft. Abrollen, hoch, und während er sich nach dir umdreht, liegt seine Brust offen. Die Säge geht hinein, so tief sie geht, und du lässt nicht los.
+    Du machst dich schwer und rutschst nach unten weg, und seine Klauen schließen sich um Leder und Luft. Abrollen, hoch, und während er sich nach dir umdreht, liegt seine Brust offen. Die Säge geht hinein, so tief sie geht, und du lässt nicht los.
     -> sieg
 
 = sieg
@@ -359,11 +360,14 @@ Er packt dich. Beide Klauen schließen sich um deine Schultern, und er hebt dich
 { gascoigne_moment:
     Er sinkt zwischen den Gräbern zusammen, und als er stirbt, weicht das Haar ein Stück zurück, bis an den Hals, und das Gesicht darunter ist beinahe wieder seines. Seine Lippen bewegen sich. Es sind die ersten Töne des Liedes, ohne Stimme, und an der Stelle, wo der Ton fehlt, hören sie auf. # notiz: gascoigne_ende_mensch
 - else:
-    Er fällt zwischen die Gräber und rührt sich nicht mehr. Der Schal sitzt noch, geknotet, und eine Hand liegt offen auf der Erde, halb Klaue, halb Hand; an einem der Finger steckt ein schmaler Ring, so tief eingewachsen, dass das Fleisch darüber zusammengeschlagen ist. # notiz: gascoigne_ende_bestie
+    Er fällt zwischen die Gräber und rührt sich nicht mehr. Der Schal sitzt noch, geknotet, und eine Hand liegt offen auf der Erde, halb Klaue, halb Hand; an einem der Finger steckt ein schmaler Ring, tief eingewachsen, das Fleisch darüber zusammengeschlagen. # notiz: gascoigne_ende_bestie
 }
 Eine Weile wartest du, dass etwas geschieht. Es geschieht nichts. Er ist tot. Er bleibt tot. Er wacht nicht zwischen weißen Blumen auf.
 Neben seiner Schulter liegt eine flache Blechflasche im Gras, verbeult, der Verschluss aufgesprungen, und was ausläuft, riecht nach Torf und Rauch. Darüber aber, aus seinen Wunden, steigt ein Dunst in die kalte Luft, und der riecht süß, nach Kandis in der Pfanne. Du atmest ihn ein. Du atmest ihn noch einmal ein, tiefer.
 Deine Hand liegt an deiner Armbeuge, dort, wo der Einstich pocht, und sie bleibt lange dort.
-Hinter der Mauer, oben im Bezirk der Kathedrale, setzt der Gesang wieder ein, viele Stimmen, gemessen und rein. Drei Zeilen singen sie zu Ende. Dann bricht er ab, mitten im Atemholen für die vierte, und niemand nimmt sie auf.{ gedaechtnis_kleriker: Wie die vierte klingt, weißt du. Du hast sie schon einmal brechen hören.} # klang: choral
+// L3: Der Regen beginnt hier, vor dem Choral (Ernte: der Hut im Regen, d_nachspiel). Dunst vor dem Mond, ohne Hof (N2).
+Über der Mauer ist Dunst vor den Mond gezogen, und er steht matt dahinter. Aus dem Dunst fallen die ersten Tropfen, schwer und einzeln, auf die Steine, auf seinen Mantel, auf deine Hände.
+// L9: „wieder“ nur, wenn der Choral schon zu hören war (am Scheiterhaufen, wenn Martha verbrannt ist; auf der Brücke nach dem Sieg ohne Gascoigne). N6: Das Abbrechen ist hier gesteigert: alle Stimmen zugleich, eine atmet noch ein.
+Oben im Bezirk der Kathedrale, hinter der Mauer, { mob_verbrannt or k1_n1_kleriker.kampf.sieg: setzt der Gesang wieder ein|setzt ein Gesang ein}, viele Stimmen, gemessen und rein. Drei Zeilen singen sie zu Ende. Im Atemholen für die vierte bricht er ab, alle Stimmen im selben Augenblick, und in die Stille danach atmet weit oben noch eine einzelne ein, hörbar, und singt nicht.{ gedaechtnis_kleriker: Wie die vierte klingt, weißt du. Du hast sie schon einmal brechen hören.} # klang: choral
 Auf dem Grabstein liegt noch sein Hut, die Krempe nach oben, und es regnet hinein.
 -> k1_d_grab
