@@ -22,9 +22,9 @@ Gesprochen hat der Fahrer seit dem letzten Dorf nicht. Jetzt blickt er sich zum 
 * [Ich bin Überlebender aus Schlachten und Kriegen #fliesst]
     ~ herkunft = "soldat"
     Aus dem Krieg. Mehr sagst du nicht, und dein Daumen sucht am Mantel nach dem Riemen, an dem drei Jahre lang die Patronentasche hing. Den Riemen gibt es längst nicht mehr. Der Daumen sucht trotzdem. Der Kutscher nickt langsam. „Dann kennst du das Warten auf den Morgen“, sagt er. „Das wirst du brauchen.“
-* [Ich habe an einer Universität gelehrt #fliesst]
+* [Ich bin Lehrer einer Universität #fliesst]
     ~ herkunft = "gelehrter"
-    Über diese Stadt standen in der Bibliothek deiner Universität drei Bücher, schlecht gebunden, und ihre Verfasser brachen die Sätze mitten im Gedanken ab. Damals hieltest du das für schlechten Stil. Dem Kutscher sagst du nur: Ich habe gelehrt. Es klingt hohl. „Bücher“, sagt er, wie man eine Krankheit nennt. „Hier liest keiner. Hier sieht man.“
+    Über diese Stadt standen in der Bibliothek deiner Universität drei Bücher, schlecht gebunden, und ihre Verfasser brachen die Sätze mitten im Gedanken ab. Damals hieltest du das für schlechten Stil. Dem Kutscher sagst du nur: Ich bin Lehrer. Es klingt hohl. „Bücher“, sagt er, wie man eine Krankheit nennt. „Hier liest keiner. Hier sieht man.“
 * [Ich bin der Letzte aus einem Dorf #fliesst]
     ~ herkunft = "ueberlebender"
     Aus einem Dorf, sagst du, das es nicht mehr gibt. Seinen Namen behältst du für dich und die Namen der Menschen darin auch; es ist keiner mehr da, der sie dir zurückgeben könnte.
