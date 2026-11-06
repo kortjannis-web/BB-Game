@@ -35,9 +35,9 @@ Gesprochen hat der Fahrer seit dem letzten Dorf nicht. Jetzt blickt er sich zum 
     ~ herkunft = "gesuchter"
     Zwischen dir und dem Galgen liegen drei Grenzen und eine Nacht im Heu, aber davon sagst du nichts; du sagst überhaupt nichts. Der Kutscher nickt, als sei auch das eine Antwort, die er kennt. „In Yharnam fragt keiner, was einer getan hat“, sagt er. „Nur, was aus ihm geworden ist.“
 - „Und warum“, fragt er weiter, „fährt einer freiwillig dorthin, in diesen Tagen?“
-* [Um selbst zu genesen #fliesst]
+* [Weil ich etwas krank bin #fliesst]
     ~ grund = "heilung_selbst"
-    Um gesund zu werden, sagst du. Das Fieber frisst dich sonst noch vor dem ersten Schnee, und du sagst es so ruhig, dass der Kutscher sich noch einmal halb nach dir umdreht.
+    Etwas krank, sagst du, nicht der Rede wert, und du sagst es leichthin, wie man vom Wetter spricht. Dass das Fieber dich seit Wochen frisst, behältst du für dich. Der Kutscher sieht auf deine Hand, die auf dem Knie zittert, und sagt nichts.
 * [Für jemanden, der zu Hause stirbt #fliesst]
     ~ grund = "heilung_anderer"
     Für jemanden, der zu Hause in einem abgedunkelten Zimmer liegt und auf einen Brief wartet, in dem steht, dass es Hoffnung gibt. Du hast versprochen, diesen Brief zu schreiben.
