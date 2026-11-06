@@ -2,7 +2,7 @@
 
 Lebendes Profil, gepflegt von Claude aus den Vorschlägen der Werkstatt (`docs/vorschlaege.md`). Jede Regel hier hat mindestens einen Beleg (Einreichung und Änderungs-ID). Gilt zusätzlich zu den Schreibregeln in `CLAUDE.md`; bei Widerspruch gilt die neuere, ausdrückliche Entscheidung des Nutzers.
 
-**Stand:** noch keine Einreichungen aus der Werkstatt; erste Antworten aus einer Abfragerunde (2026-11-04, Abfrage im Chat, Belege unten mit „Abfrage“).
+**Stand:** erste Änderungen des Nutzers 2026-11-06 (als Screenshots, Prolog); sonst noch keine Einreichungen aus der Werkstatt; erste Antworten aus einer Abfragerunde (2026-11-04, Abfrage im Chat, Belege unten mit „Abfrage“).
 
 **Arbeitsweise:** Der Nutzer will Fragen als Abfrage mit Auswahl nacheinander beantworten; danach setzt Claude alles um, prüft und merged selbst (2026-11-04).
 
@@ -56,3 +56,11 @@ Lebendes Profil, gepflegt von Claude aus den Vorschlägen der Werkstatt (`docs/v
 | 2026-11-04 | Abfrage Runde 3 | Härte, Einsicht, Ton | | 2 bis 3 Tode; mehr, aber leise; Wahl beim Start | |
 | 2026-11-04 | Abfrage Runde 4 | Kapitel 2, Reihenfolge, Kleidung | | Kathedralbezirk; Kämpfe zuerst; Mantel eines toten Jägers | |
 | 2026-11-04 | Stimmproben Gilbert | Stimme | ein einheitlicher Erzählton | A Orte/Vergangenheit, B Standard, C Kirche | Register nach Gegenstand wechseln |
+
+## Belege aus dem Prolog (Screenshots, 2026-11-06, v1 bis v5b)
+- **Konkretes und Bodenständiges vor Stilisiertem:** „Schlagloch“ und „es knackt einmal“ statt der geschliffenen Radachse allein; „Schädel“ statt „Kiefer“; ein Schild mit dem Namen der Stadt am Eingang (v3, v5b). Das Lektorat hatte „Schlaglöcher“ gestrichen; der Nutzer holt es zurück.
+- **Erzählerton ruhig und erklärend, kürzer gebaut:** „Ereignisse im Kopf“ statt „Reihenfolge der Dinge“, Einleitung der Aufzeichnungen schlichter (v1, v2). Er streicht Nachsätze, die Rätsel stellen („sie hing schon dort, als die Kutsche losfuhr“, v5a).
+- **Schwebende Ankündigung statt Andeutung:** „einen Vertrag, den ich noch bitter bereuen werde“ (v2): Er nennt das Kommende ausdrücklich, statt es zu verstecken.
+- **Ortsangaben:** Stil benennen („im gotischen Baustil“, v5a). PRÜFEN: gegen die Regel „Details statt Behauptungen“; nicht übertragen, solange offen.
+- **Herkunft als Verhältnisse:** Die Frage soll die Figur und ihr Umfeld zeigen (der Fahrer dreht sich zum ersten Mal um und mustert), die Antworten sind Berufe und Lebenslagen (Universität, Krieg), keine Schlagworte.
+- Tippfehler im eingegebenen Text („Baustiel“, „Yahrnam“, „dirchdrückt“, „auf einem Schlaglöcher“) habe ich still korrigiert; der Wortlaut sonst wörtlich.

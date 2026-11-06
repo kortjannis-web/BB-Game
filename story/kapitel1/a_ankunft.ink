@@ -7,6 +7,7 @@
 // [ERWEITERT] Eigene Szene vor dem Original, eingeleitet von einem Auszug aus den Aufzeichnungen des Jägers. Den Namen setzt die Oberfläche (VAR name).
 // [ERWEITERT] Das schlagende Rad: kehrt am Ende der Fahrt wieder, wenn die Kutsche ohne dich davonfährt.
 // Lore: lore/kern.md, lore/kapitel/kapitel1.md (Wissenssperre), lore/welt/welt.md (Fremde sind verhasst, Blut als Heilmittel).
+// Nutzer 2026-11-06 (Screenshots der Werkstatt): Einleitung, Tagebuch, Anreise und Stadtansicht von ihm umgeschrieben (Vorschlag v1 bis v5b, Tippfehler korrigiert); Herkunftsfrage: Der Fahrer blickt sich zum ersten Mal um und fragt nach den Verhältnissen. ENTWURF, nicht vom Nutzer bestätigt: Wortlaut der Antworten.
 # kapitel: 1
 KAPITEL EINS: YHARNAM # stil: titel
 Aus den Aufzeichnungen, die man später fand, mit einer Schrift verfasst, die von Seite zu Seite unleserlich wird, bis sie schließlich kaum noch lesbar ist und durch die Seiten durchdrückt. # stil: tagebuch
@@ -14,29 +15,29 @@ Aus den Aufzeichnungen, die man später fand, mit einer Schrift verfasst, die vo
 Die Straße ist nass und lässt die Sonne in einem schimmernden Grau durch die Wolken erscheinen. Das Rad kommt auf einem Schlagloch auf, und es knackt einmal. Bei jeder Umdrehung schlägt das Rad einmal dumpf gegen die Achse, wie ein Knöchel gegen eine Tür, und nach so vielen Stunden klopft es dir längst im eigenen Schädel. Hinter der beschlagenen Scheibe geht Moor in Wald über und Wald wieder in Moor, ohne dass eine Grenze zu sehen wäre; die Birken stehen bis an die Knie im schwarzen Wasser, und keine trägt mehr Laub. In den Dörfern, durch die ihr kommt, sind die Läden geschlossen, und an manchen Türen hängt ein Bündel trockener Kräuter, das niemand mehr erneuert hat. # bild: anreise # stimmung: ruhig
 Das Fieber sitzt dir hinter den Augen. Es kommt in Wellen, seit Wochen, und in den Tälern zwischen den Wellen denkst du an das, was man sich in Häfen und Gasthäusern erzählt hat, halblaut und mit einem Blick zur Tür: Im Osten, jenseits der Berge, liege eine Stadt, deren Blut jede Krankheit heile. Keine Arznei, kein Gebet. Blut.
 Im Westen hängt die Sonne tief, ein kleiner roter Fleck hinter dem Regen. Hinter einer Kehre tritt der Wald zurück, und vor dir liegt eine Stadt, über dem Tal im gotischen Baustil aufgetürmt wie etwas, das gewachsen ist und nicht gebaut: Turm auf Turm, Giebel auf Giebel, schwarze Spitzen, so dicht gedrängt, dass vom Himmel zwischen ihnen nur schmale rote Streifen bleiben. Über allem steht eine Kathedrale, Strebe auf Strebe, und ihre Glocken schweigen. Der Kutscher sieht nicht hinauf. Seit die ersten Türme über den Bäumen standen, sitzt ihm die Hutkrempe tiefer in der Stirn. Ein rustikales, abgenutztes Schild begrüßt euch: „Yharnam. Die Stadt der Heilenden Kirche.“
-Gesprochen hat er seit dem letzten Dorf nicht. Jetzt fragt er, ohne sich umzudrehen, woher du kommst.
+Gesprochen hat der Fahrer seit dem letzten Dorf nicht. Jetzt blickt er sich zum ersten Mal nach dir um, und der Wagen schwankt, als habe er die Zügel vergessen. Er mustert dich einmal genau, von den Stiefeln bis zur Stirn, wie ein Pfandleiher einen Ring wiegt. „Aus was für Verhältnissen kommst du eigentlich, Fremder? Wo kommst du her?“
 * [Aus einem Haus mit großem Namen #fliesst]
     ~ herkunft = "adel"
-    Ein großer Name, sagst du, und leere Keller darunter. Der Kutscher dreht den Kopf eine Handbreit, nicht weiter, und spuckt in den Regen hinaus. „Hier gilt ein Name so viel wie das Blut dahinter“, sagt er.
-* [Aus dem Krieg #fliesst]
+    Aus gutem Hause, sagst du, einem mit großem Namen und leeren Kellern darunter. Der Kutscher spuckt in den Regen hinaus. „Hier gilt ein Name so viel wie das Blut dahinter“, sagt er.
+* [Ich komme aus dem Krieg zurück #fliesst]
     ~ herkunft = "soldat"
-    Aus dem Krieg. Mehr sagst du nicht, und dein Daumen sucht am Mantel nach dem Riemen, an dem drei Jahre lang die Patronentasche hing. Den Riemen gibt es längst nicht mehr. Der Daumen sucht trotzdem.
-* [Aus den Hörsälen einer Universität #fliesst]
+    Aus dem Krieg. Mehr sagst du nicht, und dein Daumen sucht am Mantel nach dem Riemen, an dem drei Jahre lang die Patronentasche hing. Den Riemen gibt es längst nicht mehr. Der Daumen sucht trotzdem. Der Kutscher nickt langsam. „Dann kennst du das Warten auf den Morgen“, sagt er. „Das wirst du brauchen.“
+* [Ich habe an einer Universität gelehrt #fliesst]
     ~ herkunft = "gelehrter"
-    Über diese Stadt standen in der Bibliothek deiner Universität drei Bücher, schlecht gebunden, und ihre Verfasser brachen die Sätze mitten im Gedanken ab. Damals hieltest du das für schlechten Stil. Dem Kutscher sagst du nur: aus den Hörsälen.
-* [Aus einem Dorf, das es nicht mehr gibt #fliesst]
+    Über diese Stadt standen in der Bibliothek deiner Universität drei Bücher, schlecht gebunden, und ihre Verfasser brachen die Sätze mitten im Gedanken ab. Damals hieltest du das für schlechten Stil. Dem Kutscher sagst du nur: Ich habe gelehrt. Es klingt hohl. „Bücher“, sagt er, wie man eine Krankheit nennt. „Hier liest keiner. Hier sieht man.“
+* [Ich bin der Letzte aus einem Dorf #fliesst]
     ~ herkunft = "ueberlebender"
     Aus einem Dorf, sagst du, das es nicht mehr gibt. Seinen Namen behältst du für dich und die Namen der Menschen darin auch; es ist keiner mehr da, der sie dir zurückgeben könnte.
-* [Aus einem Krankenbett #fliesst]
+* [Ich komme aus einem Krankenbett #fliesst]
     ~ herkunft = "kranker"
     Der Husten antwortet, bevor du es kannst, und als er vorbei ist, sagst du nur noch: aus einem Krankenbett. Die Ärzte zu Hause haben dir zuletzt nicht mehr in die Augen gesehen. An dem Tag hast du deine Sachen gepackt.
-* [Vor dem Galgen davon #fliesst]
+* [Ich bin dem Galgen davongelaufen #fliesst]
     ~ herkunft = "gesuchter"
     Zwischen dir und dem Galgen liegen drei Grenzen und eine Nacht im Heu, aber davon sagst du nichts; du sagst überhaupt nichts. Der Kutscher nickt, als sei auch das eine Antwort, die er kennt. „In Yharnam fragt keiner, was einer getan hat“, sagt er. „Nur, was aus ihm geworden ist.“
 - Und warum, will er wissen, fährt einer freiwillig dorthin, in diesen Tagen?
 * [Um selbst zu genesen #fliesst]
     ~ grund = "heilung_selbst"
-    Um gesund zu werden, sagst du. Das Fieber frisst dich sonst noch vor dem ersten Schnee, und du sagst es so ruhig, dass der Kutscher sich zum ersten Mal halb nach dir umdreht.
+    Um gesund zu werden, sagst du. Das Fieber frisst dich sonst noch vor dem ersten Schnee, und du sagst es so ruhig, dass der Kutscher sich noch einmal halb nach dir umdreht.
 * [Für jemanden, der zu Hause stirbt #fliesst]
     ~ grund = "heilung_anderer"
     Für jemanden, der zu Hause in einem abgedunkelten Zimmer liegt und auf einen Brief wartet, in dem steht, dass es Hoffnung gibt. Du hast versprochen, diesen Brief zu schreiben.
