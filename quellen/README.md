@@ -1,7 +1,7 @@
 # Quellen (Rohmaterial für das Lore-Archiv)
 
 Hier liegen Quellen, die der Nutzer liefert: PDF-Analysen, Transkripte von Videos, Exporte von Tabellen.
-Der Ordner liegt außerhalb von `web/` und kommt deshalb nicht auf die Spielseite (GitHub Pages veröffentlicht nur `web/`). **Achtung:** Sobald das Repository öffentlich ist (seit 2026-11-05), kann jeder den Ordner im Repository lesen.
+Der Ordner liegt außerhalb von `web/` und kommt deshalb nicht auf die Spielseite (GitHub Pages veröffentlicht nur `web/`). **Achtung:** Das Repository ist öffentlich. Deshalb liegen Rohmaterialien (`lore-komplett.md`, `pdf/`, `videos/`) **nicht** im Repository, sondern nur lokal beim Nutzer; `.gitignore` hält sie draußen (am 2026-11-06 samt Git-Geschichte entfernt). Die Skripte `tools/lore-aufteilen.mjs` und `tools/lore-teil-b.py` brauchen die Datei und sind einmalige Werkzeuge; das Ergebnis liegt in `lore/`.
 
 Regeln:
 - Rohmaterial wird **gelesen und ausgewertet, nie ins Spiel kopiert**. Ins Archiv (`lore/`) kommen nur eigene Zusammenfassungen mit Fundstelle.

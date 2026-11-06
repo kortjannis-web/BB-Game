@@ -2,3 +2,8 @@ node_modules/
 *.log
 .DS_Store
 .claude/worktrees/
+
+# Rohmaterial fremder Quellen: nie ins öffentliche Repository (siehe quellen/README.md)
+quellen/lore-komplett.md
+quellen/pdf/
+quellen/videos/
