@@ -19,16 +19,16 @@ Aus den Aufzeichnungen, die man später fand, mit einer Schrift verfasst, die vo
 Die Straße ist nass und lässt die Sonne in einem schimmernden Grau durch die Wolken erscheinen. Das Rad kommt auf einem Schlagloch auf, und es knackt einmal. Bei jeder Umdrehung schlägt das Rad einmal dumpf gegen die Achse, wie ein Knöchel gegen eine Tür, und nach so vielen Stunden klopft es dir längst im eigenen Schädel. Hinter der beschlagenen Scheibe geht Moor in Wald über und Wald wieder in Moor, ohne dass eine Grenze zu sehen wäre; die Birken stehen bis an die Knie im schwarzen Wasser, und keine trägt mehr Laub. In den Dörfern, durch die ihr kommt, sind die Läden geschlossen, und an manchen Türen hängt ein Bündel trockener Kräuter, das niemand mehr erneuert hat.
 Das Fieber sitzt dir hinter den Augen. Es kommt in Wellen, seit Wochen, und in den Tälern zwischen den Wellen denkst du an das, was man sich in Häfen und Gasthäusern erzählt hat, halblaut und mit einem Blick zur Tür: Im Osten, jenseits der Berge, liege eine Stadt, deren Blut jede Krankheit heile. Keine Arznei, kein Gebet. Blut.
 Im Westen hängt die Sonne tief, ein kleiner roter Fleck hinter dem Regen. Hinter einer Kehre tritt der Wald zurück, und vor dir liegt eine Stadt, über dem Tal im gotischen Baustil aufgetürmt wie etwas, das gewachsen ist und nicht gebaut: Turm auf Turm, Giebel auf Giebel, schwarze Spitzen, so dicht gedrängt, dass vom Himmel zwischen ihnen nur schmale rote Streifen bleiben. Über allem steht eine Kathedrale, Strebe auf Strebe, und ihre Glocken schweigen. Der Kutscher sieht nicht hinauf. Seit die ersten Türme über den Bäumen standen, sitzt ihm die Hutkrempe tiefer in der Stirn. Ein rustikales, abgenutztes Schild begrüßt euch: „Yharnam. Die Stadt der Heilenden Kirche.“
-Gesprochen hat der Fahrer seit dem letzten Dorf nicht. Jetzt blickt er sich zum ersten Mal nach dir um, und der Wagen schwankt, als habe er die Zügel vergessen. Er mustert dich einmal genau, von den Stiefeln bis zur Stirn, wie ein Pfandleiher einen Ring wiegt. „Aus was für Verhältnissen kommst du eigentlich, Fremder? Wo kommst du her?“
+Gesprochen hat der Fahrer seit dem letzten Dorf nicht. Jetzt blickt er sich zum ersten Mal nach dir um, und der Wagen schwankt, als habe er die Zügel vergessen. Er mustert dich einmal genau, von den Stiefeln bis zum Hut. „Aus was für Verhältnissen kommst du eigentlich, Fremder? Wo kommst du her?“
 [[Aus einem Haus mit großem Namen #fliesst->k1_prolog ✦ 1]]
-[[Ich komme aus dem Krieg zurück #fliesst->k1_prolog ✦ 2]]
-[[Ich habe an einer Universität gelehrt #fliesst->k1_prolog ✦ 3]]
-[[Ich bin der Letzte aus einem Dorf #fliesst->k1_prolog ✦ 4]]
-[[Ich komme aus einem Krankenbett #fliesst->k1_prolog ✦ 5]]
+[[Ich bin Überlebender aus Schlachten und Kriegen #fliesst->k1_prolog ✦ 2]]
+[[Ich bin Lehrer einer Universität #fliesst->k1_prolog ✦ 3]]
+[[Ich bin der Letzte aus einem zerstörten Dorf #fliesst->k1_prolog ✦ 4]]
+[[Ich komme vom Krankenbett, in dem ich seit Wochen liege #fliesst->k1_prolog ✦ 5]]
 [[Ich bin dem Galgen davongelaufen #fliesst->k1_prolog ✦ 6]]
 
 :: k1_prolog ✦ 1 [A folge] {"position":"7540,220","size":"100,100"}
-Aus gutem Hause, sagst du, einem mit großem Namen und leeren Kellern darunter. Der Kutscher spuckt in den Regen hinaus. „Hier gilt ein Name so viel wie das Blut dahinter“, sagt er.
+Aus gutem Hause, sagst du, einem mit großem Namen, aber Leichen im Keller. Der Kutscher spuckt an den Wegrand. „Hier gilt ein Name so viel wie das Blut seines Trägers“, sagt er.
 <!-- Logik: herkunft = "adel" -->
 [[weiter->k1_prolog.~1]]
 
@@ -38,7 +38,7 @@ Aus dem Krieg. Mehr sagst du nicht, und dein Daumen sucht am Mantel nach dem Rie
 [[weiter->k1_prolog.~1]]
 
 :: k1_prolog ✦ 3 [A folge] {"position":"7820,220","size":"100,100"}
-Über diese Stadt standen in der Bibliothek deiner Universität drei Bücher, schlecht gebunden, und ihre Verfasser brachen die Sätze mitten im Gedanken ab. Damals hieltest du das für schlechten Stil. Dem Kutscher sagst du nur: Ich habe gelehrt. Es klingt hohl. „Bücher“, sagt er, wie man eine Krankheit nennt. „Hier liest keiner. Hier sieht man.“
+Über diese Stadt standen in der Bibliothek deiner Universität drei Bücher, schlecht gebunden, und ihre Verfasser brachen die Sätze mitten im Gedanken ab. Damals hieltest du das für schlechten Stil. Dem Kutscher sagst du nur: Ich bin Lehrer. Es klingt hohl. „Bücher“, sagt er, wie man eine Krankheit nennt. „Hier liest keiner. Hier sieht man.“
 <!-- Logik: herkunft = "gelehrter" -->
 [[weiter->k1_prolog.~1]]
 
@@ -58,30 +58,30 @@ Zwischen dir und dem Galgen liegen drei Grenzen und eine Nacht im Heu, aber davo
 [[weiter->k1_prolog.~1]]
 
 :: k1_prolog.~1 [A] {"position":"7750,390","size":"100,100"}
-Und warum, will er wissen, fährt einer freiwillig dorthin, in diesen Tagen?
-[[Um selbst zu genesen #fliesst->k1_prolog.~1 ✦ 1]]
-[[Für jemanden, der zu Hause stirbt #fliesst->k1_prolog.~1 ✦ 2]]
-[[Um jemanden zu finden, der vorausging #fliesst->k1_prolog.~1 ✦ 3]]
-[[Um eine Schuld abzutragen #fliesst->k1_prolog.~1 ✦ 4]]
+„Und warum“, fragt er weiter, „fährt einer freiwillig dorthin, in diesen Tagen?“
+[[Weil ich etwas krank bin #fliesst->k1_prolog.~1 ✦ 1]]
+[[Weil ich seit Wochen schwer krank bin. Es ist meine letzte Hoffnung #fliesst->k1_prolog.~1 ✦ 2]]
+[[Weil jemand zu Hause im Sterben liegt #fliesst->k1_prolog.~1 ✦ 3]]
+[[Schweigen, weil es ihn nichts angeht #fliesst->k1_prolog.~1 ✦ 4]]
 
 :: k1_prolog.~1 ✦ 1 [A folge] {"position":"7470,560","size":"100,100"}
-Um gesund zu werden, sagst du. Das Fieber frisst dich sonst noch vor dem ersten Schnee, und du sagst es so ruhig, dass der Kutscher sich noch einmal halb nach dir umdreht.
+Etwas krank, sagst du, nicht der Rede wert, und du sagst es leichthin, wie man vom Wetter spricht. Dass das Fieber dich seit Wochen frisst, behältst du für dich. Der Kutscher sieht auf deine Hand, die auf dem Knie zittert, und sagt nichts.
 <!-- Logik: grund = "heilung_selbst" -->
 [[weiter->k1_prolog.~2]]
 
 :: k1_prolog.~1 ✦ 2 [A folge] {"position":"7610,560","size":"100,100"}
+Seit Wochen schwer krank, sagst du, und Yharnam ist die letzte Hoffnung, die dir geblieben ist. Das Fieber frisst dich sonst noch vor dem ersten Schnee, und du sagst es so ruhig, dass der Kutscher sich noch einmal halb nach dir umdreht.
+<!-- Logik: grund = "heilung_selbst" -->
+[[weiter->k1_prolog.~2]]
+
+:: k1_prolog.~1 ✦ 3 [A folge] {"position":"8100,560","size":"100,100"}
 Für jemanden, der zu Hause in einem abgedunkelten Zimmer liegt und auf einen Brief wartet, in dem steht, dass es Hoffnung gibt. Du hast versprochen, diesen Brief zu schreiben.
 <!-- Logik: grund = "heilung_anderer" -->
 [[weiter->k1_prolog.~2]]
 
-:: k1_prolog.~1 ✦ 3 [A folge] {"position":"8100,560","size":"100,100"}
-Vor einem Jahr ist jemand in dieselbe Richtung gefahren und hat seither nicht mehr geschrieben; den suchst du. Der letzte Brief roch nach Weihrauch und nach etwas darunter, für das du keinen Namen hattest.
-<!-- Logik: grund = "suche" -->
-[[weiter->k1_prolog.~2]]
-
 :: k1_prolog.~1 ✦ 4 [A folge] {"position":"8240,560","size":"100,100"}
-Eine Schuld, sagst du, eine, die sich mit Geld nicht begleichen lässt und mit Reue auch nicht. Man erzählt sich, Yharnam mache aus einem Menschen etwas Neues. Vielleicht genügt das.
-<!-- Logik: grund = "schuld" -->
+Du schweigst, und du schweigst mit Absicht: Es geht ihn nichts an. Er fragt nicht noch einmal.
+<!-- Logik: grund = "schweigen" -->
 [[weiter->k1_prolog.~2]]
 
 :: k1_prolog.~2 [A] {"position":"7610,730","size":"100,100"}
@@ -336,7 +336,7 @@ Die alte Stimme, die vorhin hinter einer Tür zu beten begann, betet noch immer.
 Zu der schmalen Kapelle führen drei Stufen hinab, glatt getreten von vielen Füßen, die nicht mehr kommen.
 [[weiter->k1_b_anschlag]]
 
-:: k1_hub_b.wohin ✦ 9 [B folge] {"position":"7150,4810","size":"100,100"}
+:: k1_hub_b.wohin ✦ 9 [B folge] {"position":"7160,4810","size":"100,100"}
 Durch die Kanäle hinab, Sprosse um Sprosse die Leiter entlang, die du schon kennst, bis unten das Rauschen dich wieder aufnimmt.
 [[weiter->k1_hub_c]]
 
@@ -345,7 +345,7 @@ An die Laterne, an das kleine, schiefe Licht vor der Klinik, und die Flamme dari
 <!-- Logik: laterne = -> k1_hub_b -->
 [[weiter->traum_von_laterne]]
 
-:: k1_hub_b.wohin ✦ 13 [B folge] {"position":"9730,4810","size":"100,100"}
+:: k1_hub_b.wohin ✦ 13 [B folge] {"position":"9740,4810","size":"100,100"}
 Über die große Brücke, vorbei an dem, was auf ihr liegt. Fortgeräumt hat es niemand.
 <!-- Logik: bruecke_von = "oben" -->
 [[weiter->k1_n1_kleriker]]
@@ -403,25 +403,24 @@ Er hat noch nicht ausgesprochen, als du dich abwendest. Hinter dir weicht das Ge
 [[Nach dem bleichen Blut fragen #fliesst->k1_b_gilbert.themen ✦ 3]]
 [[Nach dem Weg zur Kathedrale fragen #fliesst (nur wenn gilbert_bruecke)->k1_b_gilbert.themen ✦ 4]]
 [[Nach den Jägern der Kirche fragen #fliesst (nur wenn gilbert_bruecke and (k1_b_anschlag or gehrman_jaeger or kleriker == "besiegt"))->k1_b_gilbert.themen ✦ 5]]
-[[Ihm den Menschen beschreiben, den du suchst #fliesst (nur wenn grund == "suche")->k1_b_gilbert.themen ✦ 6]]
-[[Ihm von der Unterstadt erzählen #fliesst (nur wenn q_gilbert == 1 and k1_hub_c)->k1_b_gilbert.themen ✦ 7]]
+[[Ihm von der Unterstadt erzählen #fliesst (nur wenn q_gilbert == 1 and k1_hub_c)->k1_b_gilbert.themen ✦ 6]]
 [[Dich verabschieden #fliesst->k1_hub_b]]
 
-:: k1_b_gilbert.themen ✦ 1 [B folge] {"position":"660,5660","size":"100,100"}
+:: k1_b_gilbert.themen ✦ 1 [B folge] {"position":"730,5660","size":"100,100"}
 Über seinen Husten lacht er, kurz, und das Lachen kostet ihn einen neuen Anfall. „Eine Krankheit, für die mein Arzt zu Hause keinen Namen hatte“, sagt er, als er wieder kann. „Dann ein Gerücht über diese Stadt, in einer Postkutsche, von einem Mann, der nicht hustete. Dann eine lange Reise.“ Er dreht den zu weiten Ring am Finger. „Man hat mir hier Blut gegeben. Es hat geholfen, eine Weile. Im Spital lagen Leute, bei denen hat es nicht bloß aufgehört zu helfen.“ Sein Blick geht an dir vorbei in die Gasse. „Wir hatten einen Birnbaum hinter dem Haus. Ich denke dauernd an diesen Birnbaum, ist das nicht albern? Gehen Sie, sobald Sie können. Was diese Stadt einem gibt, holt sie sich doppelt zurück.“
 [[weiter->k1_b_gilbert.themen]]
 
-:: k1_b_gilbert.themen ✦ 2 [B folge] {"position":"800,5660","size":"100,100"}
+:: k1_b_gilbert.themen ✦ 2 [B folge] {"position":"870,5660","size":"100,100"}
 Warum in dieser Stadt jede Tür verriegelt ist? „Eine Jagdnacht“, sagt er, als nenne er das Wetter. „Dann schieben die Leute die Riegel vor und hängen Räucherwerk ins Fenster, und wer das Warten nicht mehr aushält, nimmt Fackel und Mistgabel und geht selbst hinaus.“ Er senkt die Stimme, obwohl niemand zuhört. „Was ihnen da draußen begegnet, haben sie meistens gestern noch gegrüßt. Die Seuche macht aus Menschen Bestien, und wen es als Nächsten trifft, weiß keiner. Mich hat es noch nicht getroffen.“ Er hustet. „Noch nicht.“
 <!-- Logik: gilbert_jagd = true -->
 [[weiter->k1_b_gilbert.themen]]
 
-:: k1_b_gilbert.themen ✦ 3 [B folge] {"position":"940,5660","size":"100,100"}
+:: k1_b_gilbert.themen ✦ 3 [B folge] {"position":"1010,5660","size":"100,100"}
 Die Worte vom Zettel in der Klinik, bleiches Blut: Gilbert denkt lange darüber nach, die Stirn am Eisen. „Das Wort kenne ich nicht. Aber Blut ist in dieser Stadt die Sache der Heilenden Kirche, jeder Tropfen, und ihr Blut, sagt man, kommt aus der großen Kathedrale drüben im Osten des Tals, so wie Wasser aus einer Quelle. Wenn einer das Wort kennt, dann sie.“ Er hustet, und als er wieder kann, spricht er leiser. „Einem Fremden sagt hier keiner etwas, in gewöhnlichen Nächten. Aber eine Jagdnacht ist keine gewöhnliche. Da stehen Türen offen, die sonst zu sind. Nur nicht die, an die man klopft.“
 <!-- Logik: gilbert_bruecke = true -->
 [[weiter->k1_b_gilbert.themen]]
 
-:: k1_b_gilbert.themen ✦ 4 [B folge] {"position":"1080,5660","size":"100,100"}
+:: k1_b_gilbert.themen ✦ 4 [B folge] {"position":"1150,5660","size":"100,100"}
 ⟨wenn kleriker == ""⟩
 „Zur Kathedrale? Über die große Brücke, einen anderen Weg kenne ich nicht.“ Er lauscht in die Richtung, als könne er es von hier aus hören. „Aber auf der Brücke haust etwas. Es soll einmal in der Kirche gedient haben, gesungen oder gepredigt, so genau weiß das keiner. Man sagt auch, aus Kirchenleuten werden die schlimmsten.“ Er greift nicht nach dem Räucherwerk, wie man es in Yharnam tut, wenn davon die Rede ist. Er hat keins.
 ⟨sonst⟩
@@ -429,15 +428,11 @@ Die Worte vom Zettel in der Klinik, bleiches Blut: Gilbert denkt lange darüber 
 <!-- Logik: gilbert_kleriker = true -->
 [[weiter->k1_b_gilbert.themen]]
 
-:: k1_b_gilbert.themen ✦ 5 [B folge] {"position":"2350,5660","size":"100,100"}
+:: k1_b_gilbert.themen ✦ 5 [B folge] {"position":"2480,5660","size":"100,100"}
 Wer für die Kirche jagt? Gilbert lehnt die Stirn ans Gitter. „Die Leute hier erzählen von einem, der als Erster für sie gejagt hat. Er hat geworben, wen er bekommen konnte: Fuhrknechte, Gerber, Söhne von Wäscherinnen. Und Kleriker. Viele Kleriker.“ Er wartet, bis der Husten vorbei ist. „Auf den Abzeichen seiner Leute war ein Schwert aus Silber, und eine Zeit lang hat man es ihnen zu Ehren auf die Haustüren gemalt.“ Ein schiefes Lächeln. „Dann hat man es wieder abgekratzt. An manchen Türen sieht man noch die Kratzer. Seinen Namen sagt hier keiner gern; ich habe einmal gefragt, warum, und ringsum sind die Läden zugefallen.“
 [[weiter->k1_b_gilbert.themen]]
 
-:: k1_b_gilbert.themen ✦ 6 [B folge] {"position":"2490,5660","size":"100,100"}
-Du beschreibst ihm den Menschen, den du suchst, so gut es sich durch ein Gitter beschreiben lässt, und erzählst vom letzten Brief, der nach Weihrauch roch. Gilbert schüttelt langsam den Kopf. „Hier kommt niemand vorbei, der stehen bleibt. Außer Ihnen.“ Nach einer Weile sagt er: „Weihrauch. Den riecht man nur oben, bei der Kathedrale. Hier unten ist es Räucherwerk. Weihrauch ist bitterer.“
-[[weiter->k1_b_gilbert.themen]]
-
-:: k1_b_gilbert.themen ✦ 7 [B folge] {"position":"2630,5660","size":"100,100"}
+:: k1_b_gilbert.themen ✦ 6 [B folge] {"position":"2620,5660","size":"100,100"}
 Du erzählst ihm von der Brücke, von den Treppen dahinter und von der Unterstadt, in der das Wasser nie aufhört zu laufen{k1_c_graeber:, und von den Gräbern}. Gilbert hört zu, die Stirn am Eisen, und hustet die ganze Zeit kein einziges Mal. „Gibt es da unten Bäume?“, fragt er, als du fertig bist. Du denkst nach und sagst ihm die Wahrheit: einen, verkrüppelt, an einer Treppe. „Einen“, sagt er zufrieden. „Das ist einer mehr, als ich hier habe.“
 <!-- Logik: q_gilbert = 2 · gilbert = gilbert + 1 -->
 [[weiter->k1_b_gilbert.themen]]
@@ -563,7 +558,7 @@ Der Scheiterhaufen ist heruntergebrannt bis auf Mannshöhe, und die Menge steht 
 [[Rückwärts in die Gasse zurückweichen #fliesst->k1_b_scheiterhaufen ✦ 3]]
 [[(bedingt) weiter->k1_b_scheiterhaufen.danach]]
 
-:: k1_b_scheiterhaufen ✦ 1 [B folge] {"position":"6690,4980","size":"100,100"}
+:: k1_b_scheiterhaufen ✦ 1 [B folge] {"position":"6700,4980","size":"100,100"}
 Die Säge klappt in deiner Hand auf, mit einem Schnappen, das lauter ist als das Feuer, und vorn in der Menge senken sich die ersten Gabeln auf dich.
 [[weiter->k1_b_scheiterhaufen.kampf]]
 
@@ -874,7 +869,7 @@ Es geht schnell. Er macht dabei einen kleinen, überraschten Laut, mehr nicht. U
 <!-- Logik: schuetze = "erledigt" · kiesel = kiesel + 2 · molotow = molotow + 1 · echos = echos + 1 -->
 [[weiter->k1_hub_b]]
 
-:: k1_b_eileen [B] {"position":"4720,4810","size":"100,100"}
+:: k1_b_eileen [B] {"position":"4730,4810","size":"100,100"}
 <!-- [ERWEITERT] Tieferes Gespräch, sie kennt Gascoigne und Henryk. Die Partnerschaft beginnt erst in Kapitel 2. Die Abzeichen an der Schnur. -->
 ⟨wenn eileen_stufe >= 1⟩
 Auf den Dachbalken ist niemand mehr. Nur eine schwarze Feder liegt dort, wo sie saß, und zittert im Zug, der aus dem Kanal heraufsteigt.
@@ -893,7 +888,7 @@ Ihr Schnabel senkt sich zu deinem Mantel, zum Saum, wo das Stück fehlt. Sie str
 <!-- Logik: eileen = eileen + 1 · eileen_genannt = true -->
 [[weiter->k1_b_eileen.~1]]
 
-:: k1_b_eileen ✦ 2 [B folge] {"position":"4790,4980","size":"100,100"}
+:: k1_b_eileen ✦ 2 [B folge] {"position":"4800,4980","size":"100,100"}
 Sie sieht die Hand am Griff der Säge und nickt, beinahe zufrieden. „Gut. Misstrauen hält länger als Mut.“ Sie klopft gegen die Abzeichen an ihrer Schnur. „Die hier waren mutig. Eileen.“
 <!-- Logik: eileen_genannt = true -->
 [[weiter->k1_b_eileen.~1]]
@@ -959,7 +954,7 @@ Dein Arm zeigt über die Dächer, zu dem Tor hinter dem Friedhof. Sie nickt, lan
 Sie steht auf. „Bestien jagst du“, sagt sie. „Jäger jag ich.“ Sie breitet den Mantel aus wie Flügel und ist mit einem Sprung auf dem nächsten Dach, und von dort ruft sie, ohne sich umzudrehen: „Jäger sehen sich wieder. Meistens zu spät.“
 [[weiter->k1_hub_b]]
 
-:: k1_hub_c [C] {"position":"7150,4980","size":"100,100"}
+:: k1_hub_c [C] {"position":"7160,4980","size":"100,100"}
 <!-- [ERWEITERT] Einsicht kostet leise: Ab 2 hört man, was nicht da ist (einmal). -->
 ⟨wenn k1_hub_c == 1⟩
 Am Fuß der Treppen stehen die Häuser aus einem dunkleren Stein, den der Regen vieler Generationen glatt geschliffen hat, und sie rücken so dicht zusammen, dass sich ihre Traufen über den Gassen berühren und es darunter niemals ganz Tag wird. Wasser läuft hier überall, in Rinnen, über die Stufen, aus den Fugen der Mauern, und sein Geräusch hört nicht auf, auch dann nicht, wenn du stehen bleibst und den Atem anhältst. An einer Treppe wächst ein einzelner Baum, verkrüppelt und schwarz, mit drei Blättern daran.
@@ -1009,7 +1004,7 @@ Mit jeder Stufe wird das Wasser leiser und der Wind lauter, bis die Brücke wied
 <!-- Logik: bruecke_von = "unten" -->
 [[weiter->k1_n1_kleriker]]
 
-:: k1_hub_c.wohin ✦ 9 [C folge] {"position":"9620,5320","size":"100,100"}
+:: k1_hub_c.wohin ✦ 9 [C folge] {"position":"9630,5320","size":"100,100"}
 Das Tor{k1_c_graeber: mit dem Namen darüber|, das hinter dem Friedhof in einem Bogen aus schwarzem Stein steht,} gibt unter deiner Hand nach, ohne zu knarren, als habe es eben erst jemand geölt.
 [[weiter->k1_n2_gascoigne]]
 
@@ -1278,7 +1273,7 @@ Auf dem Weg hinab kommst du noch einmal unter dem Tor mit den Ketten vorbei. Das
 [[(bedingt) weiter->k1_d_grab.eileen_spuren]]
 [[weiter->k1_d_rueckweg]]
 
-:: k1_d_grab.eileen_spuren [D] {"position":"11180,10590","size":"100,100"}
+:: k1_d_grab.eileen_spuren [D] {"position":"11190,10590","size":"100,100"}
 <!-- [ERWEITERT] Keine dritte Begegnung (G2, Entscheidung des Nutzers: zwei in Kapitel 1). Eileen war hier, während du auf dem Dach warst; zu sehen ist nur, was sie zurückgelassen hat, und der Spieler liest es selbst. -->
 ⟨wenn not gascoigne_gewarnt and eileen >= 2⟩
 Im Holz des Tores sitzen zwei frische Kerben, in der Höhe eines Gesichts, eine dicht neben der anderen, schmal und spitz, wie ein Schnabel aus Stahl sie schlägt. Auf der Schwelle liegen noch die hellen Späne.
@@ -1292,7 +1287,7 @@ Zwischen den Gräbern liegt eine schwarze Feder im nassen Gras, glatt und unvers
 <!-- Logik: eileen_partner = true -->
 [[weiter->k1_d_rueckweg]]
 
-:: k1_d_rueckweg [D] {"position":"7610,10760","size":"100,100"}
+:: k1_d_rueckweg [D] {"position":"7620,10760","size":"100,100"}
 <!-- [ERWEITERT] Die Sonne, die nicht sinkt: nur Wahrnehmung, keine Gewissheit des Erzählers (G5, Übergreifend 9). Stufe des Motivs hier: der Körper (in die Sonne sehen, ohne dass die Augen tränen) und der Schatten (L6). -->
 <!-- [ERWEITERT] Die Stadt riecht etwas an dir (Echo auf Gascoignes „An dir noch nicht“); nur gezeigt, nie erklärt. -->
 ⟨wenn k1_d_rueckweg == 1⟩
@@ -1305,13 +1300,13 @@ Hinter einer Tür, an der du vorbeigehst, zieht jemand die Luft ein, zweimal, ti
 Hinter dir in einer Gasse scharrt es, schwer und schnell, und noch bevor du dich umdrehst, kracht oben auf einem Dach ein Schuss. Vor deine Füße rollt ein Leib mit Fell und zu langen Armen und bleibt liegen, die Klauen im Pflaster. Hinter dem Schornstein sitzt der Alte mit der Schlafmütze, ein neues Gewehr über den Knien, kichert und legt einen Kiesel zu den anderen.
 [[weiter->k1_d_rueckweg.wohin]]
 
-:: k1_d_rueckweg.wohin [D] {"position":"7210,10930","size":"100,100"}
+:: k1_d_rueckweg.wohin [D] {"position":"7220,10930","size":"100,100"}
 [[Zum Brunnenplatz, wo das Mädchen wartet #fliesst (nur wenn maedchen_wo == "zuhause" and q_mutter < 3)->k1_d_maedchen]]
 [[Zu Gilberts Fenster gehen #fliesst (nur wenn q_gilbert == 1)->k1_d_gilbert]]
 [[Durch die Kanalisation zurück #fliesst (nur wenn maedchen_wo == "fort" and not maedchen_tot)->k1_d_kanal]]
 [[Die Laterne am Grab berühren #fliesst->k1_d_traum]]
 
-:: k1_d_maedchen [D] {"position":"7280,11100","size":"100,100"}
+:: k1_d_maedchen [D] {"position":"7290,11100","size":"100,100"}
 <!-- [KANON] Behält man die Brosche, bleibt sie und sagt, der Morgen komme immer (eigene Worte). Ab Kapitel 2 kann man sie zur Kapelle oder zur Klinik schicken (beides endet schlimm). Kein Ausgang rettet sie. -->
 <!-- [ERWEITERT] Sie riecht ihren Vater an dir („nach Papa“, beim ersten Mal „wie Papa“); der Text erklärt es nicht. -->
 <!-- [ERWEITERT] Der Ton, der in der Melodie fehlt (Leitmotiv Spieluhr, Lektorat 1.3); das Kind summt ihn mit. -->
@@ -1331,54 +1326,54 @@ Am Fensterbrett schabt Holz, und durch den Spalt schiebt sich eine kleine Spielu
 [[(bedingt) weiter->k1_d_maedchen.vater]]
 [[weiter->k1_d_maedchen.weiche]]
 
-:: k1_d_maedchen.vater [D] {"position":"7560,11270","size":"100,100"}
+:: k1_d_maedchen.vater [D] {"position":"7570,11270","size":"100,100"}
 <!-- [ERWEITERT] Nur, wenn Gascoigne im Moment der Klarheit um etwas gebeten hat. -->
 [[Ihr sagen, ihr Vater wusste das Lied #fliesst->k1_d_maedchen.vater ✦ 1]]
 [[Es für dich behalten #fliesst->k1_d_maedchen.vater ✦ 2]]
 
-:: k1_d_maedchen.vater ✦ 1 [D folge] {"position":"7170,11440","size":"100,100"}
+:: k1_d_maedchen.vater ✦ 1 [D folge] {"position":"7180,11440","size":"100,100"}
 „Dein Papa wusste das Lied noch“, sagst du, „als er sonst nichts mehr wusste. Er hat an dich gedacht.“ Hinter den Läden kommt lange nichts, so lange, dass du glaubst, sie sei gegangen. Dann summt sie die Melodie, Note für Note, ein wenig zu langsam, so wie man summt, damit ein anderer mitkommen kann, und wo der Spieluhr der Ton fehlt, summt sie ihn.
 <!-- Logik: maedchen = maedchen + 2 -->
 [[weiter->k1_d_maedchen.vater.~1]]
 
-:: k1_d_maedchen.vater ✦ 2 [D folge] {"position":"8120,11440","size":"100,100"}
+:: k1_d_maedchen.vater ✦ 2 [D folge] {"position":"8130,11440","size":"100,100"}
 Es bleibt, wo es ist, hinter deinen Zähnen. Durch einen Fensterspalt reicht man so etwas nicht.
 [[weiter->k1_d_maedchen.vater.~1]]
 
-:: k1_d_maedchen.vater.~1 [D] {"position":"7680,11610","size":"100,100"}
+:: k1_d_maedchen.vater.~1 [D] {"position":"7690,11610","size":"100,100"}
 [[weiter->k1_d_maedchen.weiche]]
 
-:: k1_d_maedchen.weiche [D] {"position":"7640,11780","size":"100,100"}
+:: k1_d_maedchen.weiche [D] {"position":"7650,11780","size":"100,100"}
 [[Ihr die Brosche geben #fliesst (nur wenn brosche)->k1_d_maedchen.weiche ✦ 1]]
 [[Ihr die Wahrheit sagen, ohne Beweis #fliesst (nur wenn not brosche)->k1_d_maedchen.weiche ✦ 2]]
 [[Ihr sagen, ihre Mutter komme bald #fliesst->k1_d_maedchen.weiche ✦ 3]]
 [[Unter dem Fenster stumm bleiben #fliesst->k1_d_maedchen.weiche ✦ 4]]
 
-:: k1_d_maedchen.weiche ✦ 1 [D folge] {"position":"7430,11950","size":"100,100"}
+:: k1_d_maedchen.weiche ✦ 1 [D folge] {"position":"7440,11950","size":"100,100"}
 Durch den Spalt zwischen den Läden passt sie gerade so; das Gold schabt am Holz, und eine kleine Hand nimmt sie dir ab. Lange kommt nichts. Dann, so leise, dass du dich zum Fenster hinaufbeugen musst: „War das wirklich Mama?“ Du nickst, obwohl sie es durch die Läden nicht sehen kann. „Geh nicht weg“, sagt sie. „Bleib da unten stehen, ja? Nicht du auch noch.“
 Sie weint, so gleichmäßig wie jemand, der es in vielen Nächten allein geübt hat.{ gruss_ausgerichtet: „Ich habe es ihr noch gesagt“, sagst du. „Dass er bald kommt.“ Das Weinen hört nicht auf.} Als es endlich aufhört, antwortet sie nicht mehr, auch nicht, als du an die Läden klopfst. Du bist noch keine zwanzig Schritte über den Platz, da hörst du hinter dir einen Riegel zurückgleiten, dann einen zweiten.
 <!-- Logik: q_mutter = 3 · maedchen_wo = "fort" -->
 [[weiter->k1_d_maedchen.weiche.~1]]
 
-:: k1_d_maedchen.weiche ✦ 2 [D folge] {"position":"7840,11950","size":"100,100"}
+:: k1_d_maedchen.weiche ✦ 2 [D folge] {"position":"7850,11950","size":"100,100"}
 So einfach, wie es geht: „Deine Mama kommt nicht wieder.“ „Das stimmt nicht“, sagt sie sofort. „Das sagst du nur.“ Nach einer langen Weile, sehr leise: „Woher weißt du das?“ Du hast nichts in der Hand, das du ihr durch den Spalt reichen könntest. Die Finger ziehen sich zurück, aber die Haustür bleibt zu. Hinter den Läden schlägt sie Feuer, Stahl auf Stein, einmal und noch einmal, weil der Zunder nicht fängt, und bald riecht es wieder nach Räucherwerk.
 <!-- Logik: q_mutter = 7 -->
 [[weiter->k1_d_maedchen.weiche.~1]]
 
-:: k1_d_maedchen.weiche ✦ 3 [D folge] {"position":"7980,11950","size":"100,100"}
+:: k1_d_maedchen.weiche ✦ 3 [D folge] {"position":"7990,11950","size":"100,100"}
 „Bald. Sie musste unterwegs nur noch etwas erledigen.“ Sie glaubt dir sofort. „Dann warte ich“, sagt sie. „Mama sagt, der Morgen kommt immer. Man muss nur lang genug wach bleiben.“ Über den Giebeln hängt die Sonne, rot und reglos.
 <!-- Logik: q_mutter = 4 -->
 [[weiter->k1_d_maedchen.weiche.~1]]
 
-:: k1_d_maedchen.weiche ✦ 4 [D folge] {"position":"8120,11950","size":"100,100"}
+:: k1_d_maedchen.weiche ✦ 4 [D folge] {"position":"8130,11950","size":"100,100"}
 Sie fragt nicht noch einmal. Die Finger verschwinden aus dem Spalt, und hinter den Läden kommt kein Summen mehr und kein Schritt; nur das Räucherwerk raucht im Fenster weiter, dünner als vorhin.
 <!-- Logik: q_mutter = 5 -->
 [[weiter->k1_d_maedchen.weiche.~1]]
 
-:: k1_d_maedchen.weiche.~1 [D] {"position":"7980,12120","size":"100,100"}
+:: k1_d_maedchen.weiche.~1 [D] {"position":"7990,12120","size":"100,100"}
 [[weiter->k1_d_rueckweg]]
 
-:: k1_d_kanal [D] {"position":"7140,11100","size":"100,100"}
+:: k1_d_kanal [D] {"position":"7150,11100","size":"100,100"}
 Unten riecht das Wasser nach Eisen und nach Stall.
 {k1_c_kanal:Das Schwein ist zurück, an derselben Stelle, bis an die Knie im Wasser.|Im Kanal steht ein Schwein, doppelt so groß wie ein Ochse, bis an die Knie im Wasser.} Es frisst, und neben ihm treibt ein heller Stoff, ein kleiner Schuh. Aus seinem Maul hängt zwischen den gelben Hauern ein Band, rot und schwer bis auf den Knoten.
 ⟨wenn q_mutter == 3⟩
@@ -1389,19 +1384,19 @@ Die Treppe, an der vorhin ein kleiner Schatten stehen geblieben ist, führt hier
 [[Das Band an dich nehmen #fliesst->k1_d_kanal ✦ 1]]
 [[Ohne das Band weitergehen #fliesst->k1_d_kanal ✦ 2]]
 
-:: k1_d_kanal ✦ 1 [D folge] {"position":"7190,11270","size":"100,100"}
+:: k1_d_kanal ✦ 1 [D folge] {"position":"7200,11270","size":"100,100"}
 Es kommt leicht. Das Schwein gibt es her, satt und gleichgültig, ohne den Kopf zu heben. Nass, wie es ist, lässt sich das Band nicht glattstreichen; du steckst es zu dem Schlüssel{spieluhr: und der Spieluhr}.
 <!-- Logik: band = true -->
 [[weiter->k1_d_kanal.~1]]
 
-:: k1_d_kanal ✦ 2 [D folge] {"position":"7330,11270","size":"100,100"}
+:: k1_d_kanal ✦ 2 [D folge] {"position":"7340,11270","size":"100,100"}
 Hinter dir schmatzt es weiter, bis zur Leiter und auch noch, als du auf den Sprossen stehst.
 [[weiter->k1_d_kanal.~1]]
 
-:: k1_d_kanal.~1 [D] {"position":"7330,11440","size":"100,100"}
+:: k1_d_kanal.~1 [D] {"position":"7340,11440","size":"100,100"}
 [[weiter->k1_d_rueckweg]]
 
-:: k1_d_gilbert [D] {"position":"7910,11100","size":"100,100"}
+:: k1_d_gilbert [D] {"position":"7920,11100","size":"100,100"}
 <!-- [ERWEITERT] Sein Versprechen bereitet seinen Blutmond in einem späteren Kapitel vor. -->
 <!-- [ERWEITERT] Der Abschiedssatz geht einen Schritt weiter als „Aufschub“ in k1_b_gilbert: Er würde das Blut wieder nehmen (der Birnbaum als Maß). -->
 Als du in die Gasse biegst, sitzt Gilbert schon am Gitter, den Stuhl so dicht ans Fenster gerückt, dass seine Knie gegen die Wand stoßen. Sein Husten kommt jetzt von tiefer, mit einem Reißen am Ende, und danach braucht er lange, bis er wieder sprechen kann. Mit dem Daumen hält er den Ring fest, damit er ihm nicht vom Finger rutscht. „Erzählen Sie“, sagt er. „Bitte. Was liegt dahinter?“
@@ -1411,7 +1406,7 @@ Es wird ein kurzer Bericht: das Tor am Ende der Brücke, von der anderen Seite v
 [[Ihm vom Kampf am Grab erzählen #fliesst->k1_d_gilbert ✦ 1]]
 [[Ihm das Grab ersparen #fliesst->k1_d_gilbert ✦ 2]]
 
-:: k1_d_gilbert ✦ 1 [D folge] {"position":"7840,11270","size":"100,100"}
+:: k1_d_gilbert ✦ 1 [D folge] {"position":"7850,11270","size":"100,100"}
 Der Kampf am Grab, {kennt_gascoigne():Gascoigne, der Pater mit dem Verband,|der Mann mit dem Verband und dem Priesterschal} und was am Ende aus ihm geworden ist: Gilbert unterbricht dich kein einziges Mal, und danach sagt er lange nichts. „Und wenn es bei mir so weit ist?“, fragt er schließlich, und er lächelt schief, so wie beim ersten Mal am Gitter. „Holen Sie mich dann? Ich hätte gern, dass es jemand ist, der meinen Namen weiß.“
 ** [Es ihm versprechen
 „Ich hole Sie.“ Durch die Stäbe reicht er dir die Hand, die mit dem zu weiten Ring; sie ist heiß und so leicht, dass du sie kaum spürst, und er hält deine einen Atemzug länger, als ein Händedruck dauert. „Danke“, sagt er.
@@ -1420,15 +1415,15 @@ Kein Versprechen. Er nickt langsam, die Stirn am Eisen. „Ehrlich. Das ist auch
 <!-- Logik: versprechen_gilbert = true -->
 [[weiter->k1_d_gilbert.~1]]
 
-:: k1_d_gilbert ✦ 2 [D folge] {"position":"7980,11270","size":"100,100"}
+:: k1_d_gilbert ✦ 2 [D folge] {"position":"7990,11270","size":"100,100"}
 Was am Grab geschehen ist, bleibt draußen vor dem Gitter. Gilbert merkt die Lücke; er neigt den Kopf, so wie man nach einem Geräusch horcht, das ausgeblieben ist, und fragt nicht nach.
 [[weiter->k1_d_gilbert.~1]]
 
-:: k1_d_gilbert.~1 [D] {"position":"7980,11440","size":"100,100"}
+:: k1_d_gilbert.~1 [D] {"position":"7990,11440","size":"100,100"}
 „Seien Sie vorsichtig mit dem, was die Kirche da oben verspricht“, sagt er zum Abschied. „Ich habe ihr Blut auch genommen, wissen Sie. Und wenn sie mir heute Nacht noch eine Ampulle durchs Gitter reichte, ich nähme sie.“ Er hustet, und als er wieder kann, sieht er an dir vorbei in die Gasse. „Daran denke ich jetzt öfter als an den Birnbaum.“
 [[weiter->k1_d_rueckweg]]
 
-:: k1_d_traum [D] {"position":"7700,11100","size":"100,100"}
+:: k1_d_traum [D] {"position":"7710,11100","size":"100,100"}
 <!-- [KANON] Die Puppe ist mit der ersten Einsicht erwacht (spätestens jetzt). Ihr Gruß spricht sinngemäß von daheim (eigener Wortlaut). -->
 <!-- [ERWEITERT] Was du entschieden hast, eine Zeile je Figur, nur für das, was auf diesem Weg geschah, und nur, was du gesehen hast. -->
 Unter deiner Hand wird das Eisen warm, und die rote Sonne über den Giebeln weicht dem elfenbeinfarbenen Himmel des Traumes. Weiße Blumen, so weit der Hang reicht. Das Haus auf dem Hügel mit seinen erleuchteten Fenstern. In deinen Ohren läuft die Stadt noch eine Weile weiter, das Wasser in den Rinnen, die Riegel, der Gesang hinter der Mauer, und hört dann auf, eines nach dem anderen.
@@ -1531,10 +1526,6 @@ Einem Kind habe ich gesagt, seine Mutter komme bald. Es glaubte mir so schnell, 
 Das Fieber, mit dem ich gekommen war, war fort. Ich bemerkte es erst auf dem Friedhof, zwischen zwei Gräbern, und ich weiß noch, dass ich mich nicht freute.
 ⟨wenn grund == "heilung_anderer"⟩
 Den Brief nach Hause, den ich versprochen hatte, schrieb ich in dieser Nacht nicht. Ich wusste nicht, was darin stehen sollte.
-⟨wenn grund == "schuld"⟩
-Man hatte mir gesagt, Yharnam mache aus einem Menschen etwas Neues. Niemand hatte gesagt, was.
-⟨wenn grund == "suche"⟩
-Weihrauch, wie an dem letzten Brief, der mich hierher gebracht hatte. Ich wusste jetzt, wo man ihn riecht: oben, bei der Kathedrale.
 Ich habe in dieser Nacht gelernt, dass ich in Yharnam nicht sterbe. Die anderen schon. Ich erinnere mich, unterschrieben zu haben, und nicht mehr, was; die Tinte ging nicht von den Fingern.
 Oft sah ich in dieser Nacht nach der Sonne, an der Laterne vor der Klinik, auf der Brücke, zwischen den Gräbern, und jedes Mal hing sie an derselben Stelle über den Giebeln, so rot und so fest wie das Siegel auf einem Brief, den noch niemand geöffnet hat. Ich wünschte mir damals, sie möge endlich sinken. Ich wusste nicht, worum ich bat.
 Ich trug einen Schlüssel bei mir, der zu schwer war für einen Schlüssel, und ich ging hinauf, dorthin, wo der Gesang herkam.“
@@ -1542,7 +1533,7 @@ ENDE DES ERSTEN KAPITELS
 <!-- Logik: ort = "traum" · leben = LEBEN_MAX · ampulle = 1 -->
 [[weiter->ENDE]]
 
-:: k1_n1_kleriker [N1] {"position":"10590,5490","size":"100,100"}
+:: k1_n1_kleriker [N1] {"position":"10600,5490","size":"100,100"}
 ⟨wenn k1_n1_kleriker == 1⟩
 Die Große Brücke trägt den Weg aus der unteren Stadt hinauf zur Kathedrale, auf Bögen aus grauem Stein, die so tief in den Nebel hinabreichen, dass keiner, den man fragt, ihren Fuß je gesehen haben will. Breit genug ist sie für vier Kutschen nebeneinander, und als die Jagd ausgerufen wurde, wollten alle zugleich hinüber; drüben, sagt man in den Gassen, habe ihnen niemand aufgemacht. Die Kutschen stehen noch da, umgestürzt und ineinander verkeilt, die Pferde im Geschirr, aufgedunsen und starr, und zwischen den Rädern liegen die Menschen, die hinüberwollten. Fortgeräumt hat man sie nicht. Am anderen Ende ragt ein Turm über das schmiedeeiserne Geländer, und hinter ihm steht schwarz die Kathedrale. Die Sonne hängt am Turm, so tief wie vor der Klinik, keinen Fingerbreit tiefer.
 Nur deine Stiefel sind auf dem Pflaster zu hören, und auf halbem Weg der Atem eines der Pferde, das keinen Atem mehr hat; es ist der Wind in seinen Nüstern. Vom Turm her kommt ein Kratzen, hoch über dir. Horn auf Stein, ein Schaben, eine Pause, wieder Horn auf Stein. Was da herabsteigt, lässt sich Zeit.
@@ -1563,7 +1554,7 @@ Dein Blick bleibt an dem langen Arm hängen und will nicht los. Ohne es zu wolle
 [[Die Jägermarke in der Faust zerdrücken #fliesst (nur wenn jaegermarken > 0)->k1_n1_kleriker.marke]]
 [[(bedingt) weiter->k1_n1_kleriker.uebergang]]
 
-:: k1_n1_kleriker ✦ 2 [N1 folge] {"position":"8900,5660","size":"100,100"}
+:: k1_n1_kleriker ✦ 2 [N1 folge] {"position":"8910,5660","size":"100,100"}
 Das Blatt schnappt aus dem Griff und rastet ein. Allein gehst du ihr entgegen, zwischen den toten Pferden hindurch, und mit jedem Schritt riecht die Luft schwerer, nach Schimmel und kaltem Stall.
 [[weiter->k1_n1_kleriker.kampf]]
 
@@ -1576,10 +1567,10 @@ Unten zwischen den Dächern bellt ein Hund, ein einziges Mal, und sonst antworte
 [[(bedingt) weiter->k1_n1_kleriker.kampf]]
 [[weiter->k1_n1_kleriker.mit_gascoigne]]
 
-:: k1_n1_kleriker.kampf [N1] {"position":"9400,5830","size":"100,100"}
+:: k1_n1_kleriker.kampf [N1] {"position":"9410,5830","size":"100,100"}
 [[weiter->k1_n1_kleriker.kampf.t1]]
 
-:: k1_n1_kleriker.kampf.t1 [N1] {"position":"9400,6850","size":"100,100"}
+:: k1_n1_kleriker.kampf.t1 [N1] {"position":"9410,6850","size":"100,100"}
 Die Bestie stützt sich auf den langen Arm und schiebt den Kopf vor, schnüffelnd, die Augen halb geschlossen; sie sucht dich mit der Nase. Unter dem Fell der Schulter ziehen sich die Muskeln zusammen, Faser um Faser, zu einem Knoten, so groß wie ein Mehlsack. Der lange Arm steht dir zur Rechten, und unter ihm, zwischen Ellbogen und Pflaster, bleibt ein Spalt.
 ⟨wenn gelernt ? kleriker_hieb⟩ Die Stelle, an der dich zuletzt die Krallen fanden, brennt, obwohl dort keine Wunde mehr ist. Von rechts kam der Arm, flach und weiter, als ein Sprung trägt, und Platz war nur darunter. 
 [[Nach rechts, unter den Arm #fliesst->k1_n1_kleriker.kampf.t1 ✦ 1]]
@@ -1587,11 +1578,11 @@ Die Bestie stützt sich auf den langen Arm und schiebt den Kopf vor, schnüffeln
 [[Nach links, aus dem Bogen #fliesst->k1_n1_kleriker.kampf.t1 ✦ 3]]
 [[Gilberts Flamme nach vorn, in die Schnauze #fliesst (nur wenn feuer)->k1_n1_kleriker.kampf.t1 ✦ 4]]
 
-:: k1_n1_kleriker.kampf.t1 ✦ 1 [N1 folge] {"position":"9260,7020","size":"100,100"}
+:: k1_n1_kleriker.kampf.t1 ✦ 1 [N1 folge] {"position":"9270,7020","size":"100,100"}
 Hinein statt fort, dorthin, wo der Bogen beginnt: Ein Luftzug fährt dir über den Scheitel, hinter dir kippt eine Kutsche in den Abgrund, und schon bist du an ihrer Flanke. Die Säge beißt in Rippen.
 [[weiter->k1_n1_kleriker.kampf.t2]]
 
-:: k1_n1_kleriker.kampf.t1 ✦ 2 [N1 folge] {"position":"9400,7020","size":"100,100"}
+:: k1_n1_kleriker.kampf.t1 ✦ 2 [N1 folge] {"position":"9410,7020","size":"100,100"}
 Der Satz ist zu kurz. Der Bogen reicht einen Schritt weiter, als dein Sprung dich trägt, und holt dich ein: Krallen an der Hüfte, dann ein Wagenrad im Rücken.
 <!-- Logik: zuletzt = kleriker_hieb · treffer(2) -->
 [[weiter->k1_n1_kleriker.kampf.t2]]
@@ -1917,7 +1908,7 @@ Mit einem Ruck gehört deine Hand wieder dir. Du kniest auf der Brücke, der Ate
 Eine Handbreit über dem nassen Fell hält deine Hand an und kehrt um. Als du dich abwendest, geht der Wind durch das verknotete Geweih und zieht einen Ton daraus, lang und hohl wie aus einer Orgelpfeife, deren Spieler längst gegangen ist.
 [[weiter->k1_n1_kleriker.uebergang]]
 
-:: k1_n1_kleriker.uebergang [N1] {"position":"11220,10080","size":"100,100"}
+:: k1_n1_kleriker.uebergang [N1] {"position":"11230,10080","size":"100,100"}
 ⟨wenn kleriker == "besiegt" and not bruecke_laterne⟩
 Wo der Turm in den Fels übergeht, steht eine Laterne. Kaum berührt deine Hand das kalte Glas, flammt sie auf, und die Boten kriechen aus dem Boden und neigen die Köpfe, als grüßten sie dich.
 ⟨wenn bruecke_von == "unten"⟩
@@ -1928,12 +1919,11 @@ Neben dem Tor bleiben nur die Treppen, breit und so steil, dass du die unteren e
 [[(bedingt) weiter->k1_n1_kleriker.bruecken_tor]]
 [[weiter->k1_hub_c]]
 
-:: k1_n1_kleriker.bruecken_tor [N1] {"position":"11220,10250","size":"100,100"}
+:: k1_n1_kleriker.bruecken_tor [N1] {"position":"11230,10250","size":"100,100"}
 <!-- [KANON lore:welt/notizen Nr. 2] Die Kirche hat die Große Brücke gesperrt. [ERWEITERT] Das Tor, die Kette, die Ritzung (Übergreifend Nr. 2a). -->
-<!-- [ERWEITERT] Der Weihrauch durch den Spalt: Gilbert sagt, den rieche man nur oben, bei der Kathedrale (k1_b_gilbert, Spur des Vermissten). -->
 Am Ende der Brücke, wo der Weg zur Kathedrale hinaufführen müsste, schließt ein Tor die Straße ab, doppelt so hoch wie ein Reiter und von der anderen Seite verriegelt. Durch den Spalt zwischen den Flügeln zieht kühle Luft, harzig und hell; so riecht in den Gassen hier unten nichts. Dahinter hängt eine Kette, frisch geschmiedet und noch blank, und an ihr ein Schloss, schwarz vor Alter, älter als jeder, der in dieser Stadt noch lebt. In Schulterhöhe hat jemand mit einem Messer Buchstaben ins Holz geritzt, tief und mit Mühe, und mitten im dritten aufgehört.
 
-:: k1_n2_gascoigne [N2] {"position":"9620,5490","size":"100,100"}
+:: k1_n2_gascoigne [N2] {"position":"9630,5490","size":"100,100"}
 <!-- [ERWEITERT] Der Bäckerjunge (Jonas) ist erfunden und liegt im frischen Grab an den Gräbern; Martha, Hennings und der alte Brack stammen aus der Szene am Scheiterhaufen. -->
 ⟨wenn k1_n2_gascoigne == 1⟩
 Hinter dem Tor hört das Wasser auf. Den ganzen Weg durch die Unterstadt ist es neben dir hergelaufen, in den Rinnen, über die Stufen, aus den Fugen der Mauern, und erst jetzt, da es fehlt, merkst du, wie laut es war. Hier riecht es nach umgegrabener Erde und kaltem Eisen. Der Friedhof steigt in breiten Stufen an, Grab über Grab, und der Nebel liegt so flach zwischen den Steinen, dass nur ihre Köpfe herausragen, Reihe um Reihe, eine Gemeinde, die auf den Beginn der Predigt wartet. Über der obersten Mauer hängt die Sonne, tief und rot, und du kannst in sie hineinsehen, ohne dass dir die Augen tränen.{not k1_c_graeber: Über dem Tor, durch das du gekommen bist, steht ein einziges Wort im Stein: Oedon.}
@@ -2021,22 +2011,22 @@ Er tritt nicht zurück. Er lässt die Axt in der Rechten sinken, ganz, bis die S
 [[Rechts um ihn herum, hinter ihn #fliesst->k1_n2_gascoigne.p1.t2b ✦ 2]]
 [[Die Spieluhr aufziehen und hochhalten #fliesst (nur wenn spieluhr and spieluhr_mal < 3)->k1_n2_gascoigne.uhr]]
 
-:: k1_n2_gascoigne.p1.t2b ✦ 1 [N2 folge] {"position":"8670,6680","size":"100,100"}
+:: k1_n2_gascoigne.p1.t2b ✦ 1 [N2 folge] {"position":"8680,6680","size":"100,100"}
 Die Säge trifft, und im selben Augenblick kommt der Trichter hoch. Der Schuss reißt dich von den Füßen, und als du wieder sehen kannst, liegst du auf dem Rücken, Glut im Gesicht und Erde zwischen den Zähnen.
 <!-- Logik: zuletzt = donner_nah · treffer(2) -->
 [[weiter->k1_n2_gascoigne.p2]]
 
-:: k1_n2_gascoigne.p1.t2b ✦ 2 [N2 folge] {"position":"9150,6680","size":"100,100"}
+:: k1_n2_gascoigne.p1.t2b ✦ 2 [N2 folge] {"position":"9160,6680","size":"100,100"}
 Um seine Schulter herum, zwei Schritte, drei, und der Schuss fährt dorthin, wo du eben noch standest, zwischen die Gräber. Dein Hieb trifft ihn dicht unter dem Mantelkragen. Er brüllt.
 [[weiter->k1_n2_gascoigne.p2]]
 
-:: k1_n2_gascoigne.p2 [N2] {"position":"8960,6850","size":"100,100"}
+:: k1_n2_gascoigne.p2 [N2] {"position":"8970,6850","size":"100,100"}
 Er tritt zurück, und mit einem Ruck der Handgelenke klappt er die Axt aus: Der Stiel fährt heraus, doppelt so lang wie zuvor, und er packt ihn mit beiden Händen. Die Donnerbüchse wirft er weg, achtlos, zwischen die Gräber. Er lacht dabei, tief in der Kehle, und er lacht auch beim Einatmen, nach innen, mit einem Geräusch wie ein Blasebalg mit einem Riss.
 Mitten darin hält er inne. Er hebt das Gesicht und zieht die Luft ein, lange, durch die Nase, und das Lachen bricht ab. „Riechst du's? Das Blut.“ Seine Stimme ist ganz weich geworden. „Wie Kandis in der Pfanne, kurz bevor er schwarz wird. Und es summt mir was vor. Ich kenn das Lied. Ich kenn's doch …“ Er krümmt sich über den langen Stiel, eine Hand vor dem Mund, und würgt, und durch die Finger hindurch lacht er weiter.
 <!-- Logik: g_phase = 2 -->
 [[weiter->k1_n2_gascoigne.p2.t3]]
 
-:: k1_n2_gascoigne.p2.t3 [N2] {"position":"8960,7020","size":"100,100"}
+:: k1_n2_gascoigne.p2.t3 [N2] {"position":"8970,7020","size":"100,100"}
 Er fasst den Stiel ganz am Ende und beginnt sich zu drehen. Die Schneide zieht einen Kreis, weiter, als seine Arme reichen, und wo sie einen Grabstein streift, fliegt der Kopf des Steins davon; nur innen, dicht an seinem Körper, schwingt der Stiel leer durch die Luft.
 ⟨wenn gelernt ? axt_lang⟩ Deine Rippen erinnern sich an die Schneide, die durch den Stein kam, und zum ersten Mal in diesem Kampf ziehen dich deine Füße nach vorn. 
 [[Zurück hinter einen hohen Stein #fliesst->k1_n2_gascoigne.p2.t3 ✦ 1]]
@@ -2045,20 +2035,20 @@ Er fasst den Stiel ganz am Ende und beginnt sich zu drehen. Die Schneide zieht e
 [[Die Spieluhr aufziehen und hochhalten #fliesst (nur wenn spieluhr and spieluhr_mal < 3)->k1_n2_gascoigne.uhr]]
 [[Rückwärts gehen und die Ampulle stoßen #fliesst (nur wenn ampulle > 0)->k1_n2_gascoigne.p2.t3 ✦ 5]]
 
-:: k1_n2_gascoigne.p2.t3 ✦ 1 [N2 folge] {"position":"8750,7190","size":"100,100"}
+:: k1_n2_gascoigne.p2.t3 ✦ 1 [N2 folge] {"position":"8760,7190","size":"100,100"}
 Hinter dem Stein ist es einen Atemzug lang ruhig. Dann geht die Axt durch ihn hindurch wie durch Kreide, und durch dich.
 <!-- Logik: zuletzt = axt_lang · treffer(2) -->
 [[weiter->k1_n2_gascoigne.p2.t3b]]
 
-:: k1_n2_gascoigne.p2.t3 ✦ 2 [N2 folge] {"position":"8890,7190","size":"100,100"}
+:: k1_n2_gascoigne.p2.t3 ✦ 2 [N2 folge] {"position":"8900,7190","size":"100,100"}
 Stahl schlägt auf Stahl, mitten in ihrem Kreis, und der Schlag fährt dir bis in die Zähne. Deine Arme halten, schwer und warm von dem, was die Puppe dir gegeben hat. Einen Atemzug lang steht ihr so, Klinge an Klinge, und er neigt den Kopf, als erkenne er an dir etwas wieder. Dann reißt er sich los.
 [[weiter->k1_n2_gascoigne.p2.t3b]]
 
-:: k1_n2_gascoigne.p2.t3 ✦ 3 [N2 folge] {"position":"9030,7190","size":"100,100"}
+:: k1_n2_gascoigne.p2.t3 ✦ 3 [N2 folge] {"position":"9040,7190","size":"100,100"}
 In den Kreis hinein, gegen alles, was deine Beine wollen, bis du seinen Atem riechst, Eisen und angebrannten Zucker. So nah trifft die lange Klinge nicht. So nah triffst du.
 [[weiter->k1_n2_gascoigne.p2.t3b]]
 
-:: k1_n2_gascoigne.p2.t3 ✦ 5 [N2 folge] {"position":"9170,7190","size":"100,100"}
+:: k1_n2_gascoigne.p2.t3 ✦ 5 [N2 folge] {"position":"9180,7190","size":"100,100"}
 Rückwärts, Schritt um Schritt, die Ampulle schon in der Hand, und der Kreis der Axt wandert mit dir.
 [[weiter->k1_n2_gascoigne.p2.t3]]
 
@@ -2244,7 +2234,6 @@ Der Stein zur Rechten ist breit genug für deine Schultern und für nichts sonst
 :: k1_n2_gascoigne.p3.t5 [N2] {"position":"9100,9060","size":"100,100"}
 Er packt dich. Beide Klauen schließen sich um deine Schultern, und er hebt dich hoch, bis sein Gesicht vor deinem ist und dir sein Atem entgegenschlägt, Blut und Eisen und nasses Fell. Der Schal an seinem Hals schwingt dicht vor deinen Augen, noch immer geknotet, und aus dem schmutzigen Stoff steigt, ganz schwach, ein herber, harziger Geruch, der nicht hierher gehört: Weihrauch. Die Klauen haben sich in deinen Mantel gekrallt, nicht in dich, und das Leder knarrt an den Nähten.
 ⟨wenn gelernt ? griff⟩ Deine Schultern erinnern sich, wie das Leder an den Nähten nachgab, und werden schwer, von selbst. 
-⟨wenn grund == "suche"⟩ Weihrauch, wie an deinem letzten Brief. 
 [[Von vorn in seinen Griff stechen #fliesst->k1_n2_gascoigne.p3.t5 ✦ 1]]
 [[Seine Klauen nach beiden Seiten aufbrechen #fliesst (nur wenn staerke >= 2)->k1_n2_gascoigne.p3.t5 ✦ 2]]
 [[Nach unten aus seinem Griff fallen #fliesst->k1_n2_gascoigne.p3.t5 ✦ 3]]
@@ -2582,7 +2571,7 @@ Zwei Boten ziehen ihn gemeinsam aus dem Wasser, langes, geöltes Leder, schwer w
 :: boten_laden.wahl ✦ 6 [T folge] {"position":"10900,390","size":"100,100"}
 Hinter dir sinken sie zurück ins trübe Wasser, und der mit dem zerbeulten Hut taucht als Letzter unter.
 
-:: ENDE [D] {"position":"7700,11270","size":"100,100"}
+:: ENDE [D] {"position":"7710,11270","size":"100,100"}
 
 :: LATERNE [T] {"position":"13650,10080","size":"100,100"}
 Rückkehr zur zuletzt entzündeten Laterne (Klinik, Zentral-Yharnam, Brücke oder Grab).
