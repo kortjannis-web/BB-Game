@@ -206,12 +206,12 @@ Das Lied läuft wieder auf die Lücke zu. Seine Lippen gehen mit, Ton um Ton, un
 Gascoigne hebt den Kopf. Für einen Atemzug, einen einzigen, ist er da. Er steht gerade, die Axt hängt ihm locker in der Hand wie ein Werkzeug nach Feierabend, und er neigt den Kopf zur Seite.
 „Viola“, sagt er. Nicht zu dir.
 Seine alte Stimme kommt zurück, die warme, tiefe, aber in Stücken: „Ich weiß. Was ich bin. Lang schon.“ Er atmet. „Mach's. Bevor ich wieder geh.“ Er atmet noch einmal, und es klingt schon nicht mehr ganz nach ihm. „So.“
-* [Ihm versprechen, nach der Kleinen zu sehen #fliesst]
++ [Ihm versprechen, nach der Kleinen zu sehen #fliesst]
     ~ versprechen_gascoigne = true
     Noch bevor du ausgesprochen hast, nickt er, und unter dem Verband laufen Tränen hervor, und er lässt sie laufen. „Sag ihr …“ Er sucht. „Das Lied. Sag ihr, das Lied weiß ich noch. Nur alles andere nicht.“
-* [Ihn nach Viola fragen #fliesst]
++ [Ihn nach Viola fragen #fliesst]
     Bei ihrem Namen öffnet sich sein Mund und schließt sich wieder. „Weiß nicht“, sagt er. „Weiß es nicht mehr.“ Seine Hände suchen an seinem Mantel nach einer Tasche, einem Knopf, und finden nichts. # notiz: viola_frage
-* [Schweigend die Säge heben #fliesst]
++ [Schweigend die Säge heben #fliesst]
     Die Säge steht zwischen euch, und er versteht. Er breitet die Arme aus, nur ein wenig, die Handflächen nach vorn, so wie am Ende einer Andacht die Gemeinde entlassen wird.
 - Dann kippt er.
 -> p3
