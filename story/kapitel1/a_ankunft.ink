@@ -19,7 +19,7 @@ Gesprochen hat der Fahrer seit dem letzten Dorf nicht. Jetzt blickt er sich zum 
 * [Aus einem Haus mit großem Namen #fliesst]
     ~ herkunft = "adel"
     Aus gutem Hause, sagst du, einem mit großem Namen und leeren Kellern darunter. Der Kutscher spuckt in den Regen hinaus. „Hier gilt ein Name so viel wie das Blut dahinter“, sagt er.
-* [Ich komme aus dem Krieg zurück #fliesst]
+* [Ich bin Überlebender aus Schlachten und Kriegen #fliesst]
     ~ herkunft = "soldat"
     Aus dem Krieg. Mehr sagst du nicht, und dein Daumen sucht am Mantel nach dem Riemen, an dem drei Jahre lang die Patronentasche hing. Den Riemen gibt es längst nicht mehr. Der Daumen sucht trotzdem. Der Kutscher nickt langsam. „Dann kennst du das Warten auf den Morgen“, sagt er. „Das wirst du brauchen.“
 * [Ich habe an einer Universität gelehrt #fliesst]
