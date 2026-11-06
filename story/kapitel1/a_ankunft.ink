@@ -42,8 +42,8 @@ Gesprochen hat der Fahrer seit dem letzten Dorf nicht. Jetzt blickt er sich zum 
     ~ grund = "heilung_selbst"
     Seit Wochen schwer krank, sagst du, und Yharnam ist die letzte Hoffnung, die dir geblieben ist. Das Fieber frisst dich sonst noch vor dem ersten Schnee, und du sagst es so ruhig, dass der Kutscher sich noch einmal halb nach dir umdreht.
 * [Weil jemand zu Hause im Sterben liegt #fliesst]
-    ~ grund = "heilung_anderer"
-    Für jemanden, der zu Hause in einem abgedunkelten Zimmer liegt und auf einen Brief wartet, in dem steht, dass es Hoffnung gibt. Du hast versprochen, diesen Brief zu schreiben.
+    ~ grund = "luege"
+    „Weil zu Hause jemand im Sterben liegt“, sagst du, und du sagst es glatt, mit einem Zittern an der richtigen Stelle. Es liegt niemand im Sterben. Es ist die erste Lüge in diesem Wagen, und sie geht dir leichter über die Lippen, als dir lieb ist. Der Kutscher nickt, als habe er sie schon oft gehört.
 * [Schweigen, weil es ihn nichts angeht #fliesst]
     ~ grund = "schweigen"
     Du schweigst, und du schweigst mit Absicht: Es geht ihn nichts an. Er fragt nicht noch einmal.
@@ -70,6 +70,9 @@ Am Ende des Saals sitzt ein alter Mann in einem Rollstuhl, das Gesicht zur Hälf
 „Erst die Papiere. Ohne Papiere kein Blut, so ist das hier.“ # lore: bluttransfusion
 Er schiebt dir einen Bogen hin, eng bedruckt, mit einer Feder darauf. Aus dem offenen Tintenfass steigt ein Geruch nach Eisen, und die Tinte darin ist braun.
 Vereinbarung über die Behandlung mit Blut. Der Unterzeichnete erklärt, aus freien Stücken und bei klarem Verstand zu kommen. Er erklärt, die Behandlung zu empfangen, wie sie ihm gereicht wird, und keine andere zu verlangen. Er erklärt, dass er den Grund seiner Reise wahrheitsgemäß angegeben hat. Folgen, die aus der Behandlung erwachsen, fallen dem Empfänger zu. # stil: anschlag
+{ grund == "luege":
+    Du setzt die Feder an, um den Menschen einzutragen, für den du angeblich gekommen bist, und die Spitze verfängt sich im Papier. Wie du auch ansetzt, die Tinte läuft in der Zeile für den Grund zu zwei anderen Wörtern zusammen, bleiches Blut, und lässt keinen fremden Namen zu. Der alte Mann sieht dir zu und schnalzt nicht. „Der Bogen nimmt nur an, was stimmt“, sagt er, nicht unfreundlich. „Wir machen es dir leichter. Du hast nur zu unterschreiben.“
+}
 * [Ungelesen unterschreiben #fliesst]
     ~ haltung_vertrag = "blind"
     Kein Satz des Bogens hält dich auf. Die Feder kratzt deinen Namen unter den Text, und solange sie kratzt, ist sie das einzige Geräusch im Saal. Der alte Mann lächelt, und als du die Feder ablegst, lächelt er noch immer.

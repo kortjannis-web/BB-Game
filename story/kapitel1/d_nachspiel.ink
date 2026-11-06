@@ -283,8 +283,8 @@ Aus den Aufzeichnungen, die man später fand: # stil: tagebuch
 { grund == "heilung_selbst":
     Das Fieber, mit dem ich gekommen war, war fort. Ich bemerkte es erst auf dem Friedhof, zwischen zwei Gräbern, und ich weiß noch, dass ich mich nicht freute. # stil: tagebuch
 }
-{ grund == "heilung_anderer":
-    Den Brief nach Hause, den ich versprochen hatte, schrieb ich in dieser Nacht nicht. Ich wusste nicht, was darin stehen sollte. # stil: tagebuch
+{ grund == "luege":
+    Von dem Sterbenden, den ich dem Kutscher genannt hatte, schrieb ich nichts auf. Es hatte ihn nie gegeben, und die Tinte hatte es gewusst, ehe ich die Feder ansetzte. # stil: tagebuch
 }
 Ich habe in dieser Nacht gelernt, dass ich in Yharnam nicht sterbe. Die anderen schon. Ich erinnere mich, unterschrieben zu haben, und nicht mehr, was; die Tinte ging nicht von den Fingern. # stil: tagebuch
 Oft sah ich in dieser Nacht nach der Sonne, an der Laterne vor der Klinik, auf der Brücke, zwischen den Gräbern, und jedes Mal hing sie an derselben Stelle über den Giebeln, so rot und so fest wie das Siegel auf einem Brief, den noch niemand geöffnet hat. Ich wünschte mir damals, sie möge endlich sinken. Ich wusste nicht, worum ich bat. # stil: tagebuch
