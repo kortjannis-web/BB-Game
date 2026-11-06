@@ -7,7 +7,7 @@ import { compile, play, rng, variable } from "./ink.mjs";
 const SZENARIEN = [
   {
     name: "Bester Weg: Moment der Klarheit mit Gascoigne",
-    wuensche: ["Ihm danken", "Ihm deinen Namen sagen", "Ich richte es ihr aus", "Ich finde deine Mama", "allein entgegengehen", "Nach Gascoigne rufen", "„Gascoigne. Gascoigne!“", "Den Kopf berühren", "an seine Tochter", "Spieluhr aufziehen", "Ihn rufen", "Ihm versprechen", "Lügen", "Ihr sagen, ihr Vater", "Versprechen, es auszurichten", "Versprechen, die Mutter", "ihre Mutter komme bald", "beim Namen rufen"],
+    wuensche: ["Ihm danken", "Ihm deinen Namen sagen", "Ich richte es ihr aus", "Ich finde deine Mama", "allein entgegengehen", "Nach Gascoigne rufen", "„Gascoigne. Gascoigne!“", "Den Kopf berühren", "Deine Kleine wartet", "Spieluhr aufziehen", "Ihn rufen", "Ihm versprechen", "Lügen", "Dein Papa wusste", "Versprechen, es auszurichten", "Versprechen, die Mutter", "Sie kommt bald", "beim Namen rufen"],
     verbote: ["Lauf zu der Ärztin", "anfahren", "gegen ein Türblatt", "fliehen", "Wurf ablenken", "wo du ihn gesehen", "Brosche geben", "Klinik zu laufen", "drohen"],
     erwartet: { gascoigne_moment: true, gedaechtnis_kleriker: true, versprechen_gascoigne: true, maedchen_wo: "zuhause" },
   },
@@ -37,13 +37,13 @@ const SZENARIEN = [
   },
   {
     name: "Gascoigne gewarnt, Bruch mit Eileen",
-    wuensche: ["Ihm danken", "für Abzeichen", "anbieten, mit ihr zu jagen", "vor der Frau im Federmantel"],
+    wuensche: ["Ihm danken", "für Abzeichen", "anbieten, mit ihr zu jagen", "Die Frau im Federmantel jagt"],
     verbote: ["wo du ihn gesehen"],
     erwartet: { gascoigne_gewarnt: true, eileen_partner: false },
   },
   {
     name: "Lüge an das Mädchen",
-    wuensche: ["Ich finde deine Mama", "Lügen", "Versprechen, die Mutter", "ihre Mutter komme bald"],
+    wuensche: ["Ich finde deine Mama", "Lügen", "Versprechen, die Mutter", "Sie kommt bald"],
     verbote: ["Lauf zu der Ärztin", "Klinik zu laufen"],
     erwartet: { q_mutter: 4, maedchen_wo: "zuhause" },
   },
@@ -73,7 +73,7 @@ const SZENARIEN = [
   },
   {
     name: "Wahrheit ohne Brosche: Sie glaubt halb und bleibt",
-    wuensche: ["Ich finde deine Mama", "zum Brunnenplatz", "Sie ihr lassen", "Die Wahrheit sagen, ohne Beweis", "Ihr die Wahrheit sagen, ohne Beweis"],
+    wuensche: ["Ich finde deine Mama", "zum Brunnenplatz", "Sie ihr lassen", "Deine Mama kommt nicht wieder"],
     verbote: ["Lauf zu der Ärztin", "Die Brosche an dich"],
     erwartet: { q_mutter: 7, maedchen_wo: "zuhause" },
   },
@@ -91,13 +91,13 @@ const SZENARIEN = [
   },
   {
     name: "Gilbert das Versprechen gegeben",
-    wuensche: ["Ihm deinen Namen nennen", "Dich verabschieden", "Es ihm versprechen", "Ihm vom Kampf am Grab erzählen"],
+    wuensche: ["Ihm deinen Namen nennen", "Dich verabschieden", "Es ihm versprechen", "Am Grab war ein Pater"],
     verbote: [],
     erwartet: { versprechen_gilbert: true },
   },
   {
     name: "Verraten und gewarnt: Eileen wendet sich ab",
-    wuensche: ["Ihm danken", "In den Schatten um den Platz", "wo du ihn gesehen", "vor der Frau im Federmantel"],
+    wuensche: ["Ihm danken", "In den Schatten um den Platz", "wo du ihn gesehen", "Die Frau im Federmantel jagt"],
     verbote: [],
     erwartet: { gascoigne_verraten: true, gascoigne_gewarnt: true, eileen_partner: false },
   },
