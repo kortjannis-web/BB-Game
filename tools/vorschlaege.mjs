@@ -87,7 +87,7 @@ function zeigen(name, paket, antwort) {
   if (paket.kommentar) console.log(`  Kommentar: ${paket.kommentar}`);
   for (const a of paket.aenderungen) {
     const wo = a.ort?.datei ? `${a.ort.datei}:${a.ort.zeile}` : stelle(a.vorher ?? a.nach ?? "") ?? knotenStelle(a.knoten ?? a.passage);
-    console.log(`\n  [${a.id}] ${ARTEN[a.art] ?? a.art}${a.passage ? ` · ${a.passage}` : ""}${wo ? ` · ${wo}` : ""}${a.seite ? ` · aus ${a.seite === "baum" ? "dem Erzählbaum" : "dem Spiel"}` : ""}`);
+    console.log(`\n  [${a.id}] ${ARTEN[a.art] ?? a.art}${a.passage ? ` · ${a.passage}` : ""}${wo ? ` · ${wo}` : ""}${a.seite ? ` · aus ${{ baum: "dem Erzählbaum", buch: "dem ganzen Buch", spiel: "dem Spiel" }[a.seite] ?? a.seite}` : ""}`);
     if (a.art === "quelle") {
       console.log(`      ${a.datei}${a.knoten ? ` › ${a.knoten}` : " (ganze Datei)"}`);
       console.log(einr(diff(a.vorher, a.nachher)));
@@ -99,6 +99,9 @@ function zeigen(name, paket, antwort) {
       console.log(`      ${a.name} (${a.nachher.length} Zeichen; vollständig in der JSON-Datei)`);
     } else {
       if (a.wahlText) console.log(`      Entscheidung: ${a.wahlText}`);
+      if (a.nachWahl) console.log(`      in der Entscheidung nach: ${a.nachWahl}`);
+      if (a.markiert) console.log(`      MARKIERT:\n${einr(a.markiert, 8)}`);
+      if (a.bis) console.log(`      bis Absatz${a.bisPassage && a.bisPassage !== a.passage ? ` (in ${a.bisPassage})` : ""}: ${a.bis}`);
       if (a.nach !== undefined) console.log(`      nach: ${a.nach}`);
       if (a.vorher !== undefined && a.vorher !== "") console.log(`      VORHER:\n${einr(a.vorher, 8)}`);
       const neu = a.art === "wahl-neu" ? a.text : a.nachher;

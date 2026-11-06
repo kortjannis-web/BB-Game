@@ -1,5 +1,5 @@
 // Werkstatt: Vorschläge des Nutzers sammeln, ansehen, testen und über GitHub einreichen.
-// Gemeinsam für Spiel (index.html) und Erzählbaum (karte.html). Alles bleibt ein Vorschlag:
+// Gemeinsam für Spiel (index.html), Erzählbaum (karte.html) und das ganze Buch (buch.html, mit web/buch.js). Alles bleibt ein Vorschlag:
 // Die Seite schreibt nie in die Geschichte selbst, sondern nur eine Datei nach vorschlaege/eingang/
 // auf dem Zweig "vorschlaege". Claude liest sie dort, setzt jede Änderung einzeln um und antwortet
 // in vorschlaege/antworten/. Ablauf und Format: docs/vorschlaege.md
@@ -355,6 +355,7 @@
       ? "Was fällt dir an dieser Stelle auf? Was soll anders sein, auch Mechanik, Tempo, Gefühl …"
       : "Was soll anders sein? Ideen, Mechanik, ganze Bereiche …";
     if (kontext.passage) d.appendChild(el("p", "ws-info", `Zu: ${kontext.titel ?? kontext.passage}`));
+    if (kontext.markiert) d.appendChild(el("p", "ws-info", `Markiert: „${kurz(kontext.markiert, 300)}“`));
     d.appendChild(t);
     d.appendChild(el("div", "ws-leiste")).append(
       knopf("Kommentar speichern", () => {
@@ -503,7 +504,8 @@
     } else if (a.art === "datei") {
       zeile("ws-nachher", `${a.name}, ${a.nachher.length.toLocaleString("de-DE")} Zeichen`);
     } else {
-      if (a.vorher && a.art !== "loeschen" && a.art !== "passage-loeschen") zeile("ws-vorher", a.vorher);
+      if (a.markiert) zeile("ws-vorher", `Markiert: „${a.markiert}“`);
+      else if (a.vorher && a.art !== "loeschen" && a.art !== "passage-loeschen") zeile("ws-vorher", a.vorher);
       if (a.art === "loeschen" || a.art === "wahl-loeschen") zeile("ws-vorher ws-weg", a.vorher ?? a.text);
       else zeile("ws-nachher", a.nachher ?? a.text);
       if (a.ziel) zeile("ws-ort", `→ ${a.ziel}`);

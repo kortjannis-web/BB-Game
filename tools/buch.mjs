@@ -28,10 +28,10 @@ const AKTE = [
 const knoten = new Map(); // name -> { name, titel, datei, zeilen: [roh] }
 for (const [datei, src] of Object.entries(inkFiles())) {
   let cur = null;
-  for (const roh of src.split("\n")) {
+  for (const [nr, roh] of src.split("\n").entries()) {
     const k = roh.match(/^\s*===\s*(function\s+)?([A-Za-z_]\w*)/);
     if (k) {
-      cur = k[1] ? null : { name: k[2], titel: k[2], datei, zeilen: [] };
+      cur = k[1] ? null : { name: k[2], titel: k[2], datei, zeilen: [], nummern: [], ab: nr + 1 };
       if (cur) knoten.set(cur.name, cur);
       continue;
     }
@@ -43,6 +43,7 @@ for (const [datei, src] of Object.entries(inkFiles())) {
       const c = !cur.zeilen.some((z) => z.trim() && !z.trim().startsWith("//")) && roh.match(/^\s*\/\/\s*([^[].{3,80}?)\.?\s*$/);
       if (c && !cur.ersatz && !/^(KANON|ERWEITERT|PRÜFEN|Umbau|Feinschliff|Handgearbeitet|Faktencheck)/.test(c[1])) cur.ersatz = c[1];
       cur.zeilen.push(roh);
+      cur.nummern.push(nr + 1);
     }
   }
 }
@@ -227,15 +228,17 @@ function zerlege(k) {
         const label = x.art === "wenn" ? `wenn ${bedingungLesbar(x.bedingung)}` : x.art === "alt" ? x.wie : "der Reihe nach";
         const zweige = x.teile.map((p, i) => ({
           label: x.art === "wenn" ? (i === 0 ? `wenn ${bedingungLesbar(x.bedingung)}` : "sonst") : x.art === "alt" && x.wie === "wechselt bei jedem Mal" ? `beim ${i + 1}. Mal` : x.art === "folge" ? `beim ${i + 1}. Mal` : `Variante ${i + 1}`,
-          kinder: p.trim() ? [{ art: "absatz", text: p.trim() }] : [{ art: "leer" }],
+          kinder: p.trim() ? [{ art: "absatz", text: p.trim(), zeile }] : [{ art: "leer" }],
         }));
         hinein({ art: "block", label, zweige });
-      } else hinein({ art: "absatz", text: s });
+      } else hinein({ art: "absatz", text: s, zeile });
     }
     for (const z of spruenge) if (!["END", "DONE", "betreten"].includes(z)) hinein({ art: "sprung", ziel: aufloesen(z, k.name) });
   };
 
-  for (const roh of k.zeilen) {
+  let zeile = 0;
+  for (const [idx, roh] of k.zeilen.entries()) {
+    zeile = k.nummern[idx];
     const t = roh.trim();
     if (!t) continue;
     const w = t.match(/^\/\/\s*WARUM:\s*(.*)$/);
@@ -263,11 +266,11 @@ function zerlege(k) {
       const nach = rest.slice(e + 1);
       schliesseOptionen(tiefe, false);
       if (!(oben().art === "wahl" && oben().tiefe === tiefe)) {
-        const wahl = { art: "wahl", tiefe, optionen: [], kinder: null };
+        const wahl = { art: "wahl", tiefe, optionen: [], kinder: null, zeile };
         hinein(wahl);
         stapel.push(wahl);
       }
-      const opt = { art: "option", tiefe, text: ohneTags(vor + drin).trim(), bedingung: bed, wiederholbar: ch[1].includes("+"), warum, kinder: [] };
+      const opt = { art: "option", tiefe, text: ohneTags(vor + drin).trim(), bedingung: bed, wiederholbar: ch[1].includes("+"), warum, zeile, kinder: [] };
       warum = null;
       oben().optionen.push(opt);
       stapel.push(opt);
@@ -358,24 +361,25 @@ const titelVon = (ziel) => {
 };
 const anker = (ziel) => ziel.replace(/\./g, "--");
 const ankerBekannt = new Set();
+const attr = (s) => esc(String(s)).replace(/"/g, "&quot;");
 
-function html(kinder) {
+function html(kinder, passage) {
   let out = "";
   for (const n of kinder) {
-    if (n.art === "absatz") out += `<p>${inline(n.text, "html")}</p>\n`;
+    if (n.art === "absatz") out += `<p data-orig="${attr(n.text)}" data-zeile="${n.zeile}">${inline(n.text, "html")}</p>\n`;
     else if (n.art === "leer") out += `<p class="leer">(nichts)</p>\n`;
     else if (n.art === "sprung") out += ankerBekannt.has(n.ziel) ? `<p class="sprung">→ <a href="#${anker(n.ziel)}">${esc(titelVon(n.ziel))}</a></p>\n` : `<p class="sprung">→ ${esc(titelVon(n.ziel))}</p>\n`;
     else if (n.art === "stitch") out += `<h4 id="${anker(n.id)}">› ${esc(n.name)}</h4>\n`;
     else if (n.art === "wahl") {
-      out += `<div class="wahl"><div class="wahl-kopf">Entscheidung (${n.optionen.length} Möglichkeiten)</div>\n`;
+      out += `<div class="wahl" data-zeile="${n.zeile}"><div class="wahl-kopf">Entscheidung (${n.optionen.length} Möglichkeiten)</div>\n`;
       n.optionen.forEach((o, i) => {
         const zusatz = [o.bedingung && `nur wenn ${o.bedingung}`, o.wiederholbar && "wiederholbar"].filter(Boolean).join(" · ");
-        out += `<div class="option"><div class="option-text"><span class="nr">${String.fromCharCode(65 + i)}</span> ${inline(o.text, "html") || "<em>(weiter)</em>"}${zusatz ? ` <span class="zusatz">${esc(zusatz)}</span>` : ""}</div>${o.warum ? `<div class="warum">Warum: ${esc(o.warum)}</div>` : ""}\n<div class="antwort">${html(o.kinder)}</div></div>\n`;
+        out += `<div class="option" data-wahl="${attr(o.text)}" data-zeile="${o.zeile}"><div class="option-text"><span class="nr">${String.fromCharCode(65 + i)}</span> ${inline(o.text, "html") || "<em>(weiter)</em>"}${zusatz ? ` <span class="zusatz">${esc(zusatz)}</span>` : ""}</div>${o.warum ? `<div class="warum">Warum: ${esc(o.warum)}</div>` : ""}\n<div class="antwort">${html(o.kinder, passage)}</div></div>\n`;
       });
       out += `</div>\n`;
     } else if (n.art === "block") {
       out += `<div class="block">\n`;
-      for (const z of n.zweige) out += `<div class="zweig"><div class="zweig-kopf">${esc(z.label)}</div>\n${html(z.kinder)}</div>\n`;
+      for (const z of n.zweige) out += `<div class="zweig"><div class="zweig-kopf">${esc(z.label)}</div>\n${html(z.kinder, passage)}</div>\n`;
       out += `</div>\n`;
     }
   }
@@ -472,7 +476,7 @@ for (const a of alle) {
     verzeichnis += `<li class="akt"><a href="#akt-${anker(a.name)}">${esc(a.akt)}</a></li>\n`;
     verzeichnisMd += `- **${a.akt}**\n`;
   }
-  inhaltHtml += `<section id="${anker(a.name)}"><h3>${esc(k.titel)} <span class="kennung">${esc(a.name)}</span></h3>\n${html(baum)}</section>\n`;
+  inhaltHtml += `<section id="${anker(a.name)}" data-passage="${attr(a.name)}" data-datei="story/${attr(k.datei)}" data-zeile="${k.ab}"><h3><span class="titel">${esc(k.titel)}</span> <span class="kennung">${esc(a.name)}</span></h3>\n${html(baum, a.name)}</section>\n`;
   inhaltMd += `### ${k.titel}\n\n<sub>${a.name} · ${k.datei}</sub>\n\n${md(baum)}\n`;
   verzeichnis += `<li><a href="#${anker(a.name)}">${esc(k.titel)}</a></li>\n`;
   verzeichnisMd += `  - ${k.titel}\n`;
@@ -557,6 +561,32 @@ p{margin:.55rem 0}
 .var{font-style:italic;color:var(--bed)}
 .leer{color:var(--leise);font-style:italic}
 .notizbuch p{font-style:italic}
+.kopf-leiste{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+.bearbeiten-knopf{font:600 13px system-ui,sans-serif;padding:.35rem .7rem;border:1px solid var(--rand);border-radius:4px;background:var(--wahl);color:var(--text);cursor:pointer}
+body.bearbeiten .bearbeiten-knopf{background:#c9a35e;color:#14110f;border-color:#c9a35e}
+.hilfe-bearbeiten{display:none;font:14px/1.45 system-ui,sans-serif;background:var(--wahl);border:1px solid var(--rand);border-radius:6px;padding:.6rem .8rem;margin:.6rem 0}
+body.bearbeiten .hilfe-bearbeiten{display:block}
+body.bearbeiten main p[data-orig],body.bearbeiten main p.eingefuegt,body.bearbeiten .option-text{cursor:text;border-radius:2px}
+body.bearbeiten main p[data-orig]:hover,body.bearbeiten main p.eingefuegt:hover,body.bearbeiten .option-text:hover{background:color-mix(in srgb,#c9a35e 14%,transparent)}
+main p.geaendert,.option.geaendert>.option-text{box-shadow:inset 3px 0 0 #7fae86;padding-left:.6rem}
+main p.eingefuegt,.option.neu>.option-text{box-shadow:inset 3px 0 0 #7fae86;padding-left:.6rem;color:color-mix(in srgb,var(--text) 85%,#2e7d3a)}
+main p.gestrichen,.option.gestrichen>.option-text,section.gestrichen h3 .titel{text-decoration:line-through;text-decoration-color:#c25b4f;opacity:.55}
+section.gestrichen>*:not(h3):not(.kommentar):not(.abschnitt-werkzeug){opacity:.45}
+.kommentar{margin:.2rem 0 .9rem;padding:.45rem .8rem;border-left:3px solid #c9a35e;background:color-mix(in srgb,#c9a35e 10%,transparent);font:14px/1.45 system-ui,sans-serif}
+.kommentar p{margin:.2rem 0}
+.kommentar .wer{font-weight:600;color:#9a7330}
+.kommentar .claude,.kommentar .claude .wer{color:var(--bed)}
+.kommentar .offen{cursor:pointer}
+.kommentar .zitat{font-style:italic;color:var(--leise)}
+.abschnitt-werkzeug,.wahl-werkzeug{display:none;flex-wrap:wrap;gap:.35rem;margin:.2rem 0 .8rem}
+body.bearbeiten .abschnitt-werkzeug,body.bearbeiten .wahl-werkzeug{display:flex}
+.abschnitt-werkzeug button,.wahl-werkzeug button,.buch-werkzeug button{font:13px system-ui,sans-serif;padding:.25rem .55rem;border:1px solid var(--rand);border-radius:4px;background:var(--grund);color:var(--text);cursor:pointer}
+.abschnitt-werkzeug button:hover,.wahl-werkzeug button:hover,.buch-werkzeug button:hover{border-color:#c9a35e}
+.buch-werkzeug{display:flex;flex-wrap:wrap;gap:.35rem;margin:.3rem 0 1rem}
+.buch-werkzeug .haupt{background:#c9a35e;color:#14110f;border-color:#c9a35e}
+textarea.buch-editor{width:100%;min-height:5rem;font:17px/1.55 Georgia,serif;padding:.5rem .6rem;border:1px dashed #c9a35e;border-radius:4px;background:var(--grund);color:var(--text)}
+.neuer-abschnitt{border:1px dashed #7fae86;border-radius:6px;padding:.4rem .9rem;margin:1.5rem 0}
+#markier-knopf{position:absolute;z-index:50;font:600 13px system-ui,sans-serif;padding:.35rem .6rem;border-radius:4px;border:1px solid #c9a35e;background:#14110f;color:#e8e0d2;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.3)}
 @media (max-width:860px){.seite{grid-template-columns:minmax(0,1fr)}nav.verzeichnis{position:static;max-height:none;border-bottom:1px solid var(--rand)}}
 `;
 const koerper = `<div class="seite">
@@ -568,7 +598,8 @@ ${verzeichnis}<li class="akt"><a href="#notizbuch">Notizbuch</a></li>
 <header><h1>Yharnam, Kapitel 1: Das ganze Buch</h1>
 <p>Alle Texte des Kapitels in der Reihenfolge, in der man sie erlebt. Jede Entscheidung mit allen Möglichkeiten (A, B, C …) und darunter, was jeweils folgt. Blau: Stellen, die nur unter einer Bedingung erscheinen; violett: Varianten bei Wiederholung oder Zufall.</p>
 <p>${esc(kopfInfo)}</p>
-<p><a href="index.html" class="zurueck">← Zurück zum Spiel</a></p></header>
+<p class="kopf-leiste"><a href="index.html" class="zurueck">← Zurück zum Spiel</a> <button type="button" class="bearbeiten-knopf" data-werkstatt-modus aria-pressed="false">✎ Bearbeiten</button></p>
+<div class="hilfe-bearbeiten"><b>Bearbeiten:</b> Absatz anklicken zum Umschreiben, Streichen, Einfügen oder für eine Notiz. Text markieren (auch über mehrere Absätze) für eine Notiz zur Markierung. An jeder Entscheidung: Möglichkeiten umbenennen, streichen, hinzufügen. Am Kopf jedes Abschnitts: Notiz zum Abschnitt, Absatz oder Entscheidung anhängen, neuer Abschnitt danach, Titel ändern, streichen, Quelltext. Alles sammelt sich in der <b>Werkstatt</b> (unten rechts) und geht von dort an Claude. Jede Notiz ist ein Auftrag.</div></header>
 ${inhaltHtml}
 <h2 class="akt" id="notizbuch">Notizbuch</h2>
 <div class="notizbuch">${nbHtml}</div>
@@ -583,9 +614,12 @@ writeFileSync(
 <html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Das ganze Buch</title>
 <meta name="robots" content="noindex">
+<link rel="stylesheet" href="werkstatt.css">
 <style>${STIL}</style></head>
-<body>
+<body data-seite="buch">
 ${koerper}
+<script src="werkstatt.js"></script>
+<script src="buch.js"></script>
 </body></html>
 `,
 );
@@ -596,7 +630,7 @@ try {
 } catch {}
 writeFileSync(
   new URL("artefakt/buch.html", web),
-  `<title>Das ganze Buch</title>\n<style>${STIL}</style>\n${adressen.spiel ? koerper.replace('href="index.html" class="zurueck"', `href="${adressen.spiel}" target="_blank" rel="noopener" class="zurueck"`) : koerper}\n`,
+  `<title>Das ganze Buch</title>\n<link rel="stylesheet" href="werkstatt.css">\n<style>${STIL}</style>\n<div data-seite-buch></div>\n${adressen.spiel ? koerper.replace('href="index.html" class="zurueck"', `href="${adressen.spiel}" target="_blank" rel="noopener" class="zurueck"`) : koerper}\n<script>document.body.dataset.seite = "buch";</script>\n<script src="werkstatt.js"></script>\n<script src="buch.js"></script>\n`,
 );
 writeFileSync(
   new URL("../docs/kapitel1-buch.md", import.meta.url),
