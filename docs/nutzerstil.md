@@ -32,6 +32,7 @@ Lebendes Profil, gepflegt von Claude aus den Vorschlägen der Werkstatt (`docs/v
 ## Entscheidungen und Struktur
 - Optionen als Variante 1 gewählt: Die Wahl fließt in den Satz des Buches (2026-11-04).
 - Weniger Text im Ganzen, mehr handgearbeitetes Gefühl; immer fragen, wie ein Buch es schreiben würde (2026-11-04, nach der Probe der neuen Optionen).
+- **Länge folgt dem Sinn (2026-11-06):** Längere Texte sind in Ordnung, solange sie sinnig sind und dem Plot oder der Atmosphäre dienen. Das relativiert „weniger Text“: Gemeint ist weniger Füllung, nicht weniger Atmosphäre.
 *(Wie Entscheidungen formuliert werden; wie viele; welche Folgen der Nutzer erwartet; neue Wege)*
 
 ## Mechanik

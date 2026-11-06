@@ -7,6 +7,7 @@ Auftrag des Nutzers (2026-11-06): Jeden Text von Kapitel 1 einzeln vornehmen, gr
 2. **Frei überarbeiten**, auch die Texte des Nutzers bis zur Klinik (Prolog, Herkunft, Grund); seine Muster (`docs/nutzerstil.md`) bleiben Richtschnur.
 3. **Alle Platzhalter ausschreiben** (Monologe, Fragmente, Dachweg, Übung im Hof, Übergänge der Viertel).
 4. **Länge etwa gleich, dichter:** Füllsätze raus, dafür Sinne, Lore-Details, Figurenstimme. Einzelne Szenen dürfen wachsen, andere schrumpfen.
+   **Nachtrag des Nutzers (2026-11-06):** Längere Texte sind nicht schlimm, solange sie sinnig sind und dem Plot oder der Atmosphäre dienen. Füllsätze, Wiederholungen und Erklärungen bleiben draußen.
 
 ## Gemeinsame Festlegungen (Ü1 bis Ü12), verbindlich für alle Bearbeiter
 
