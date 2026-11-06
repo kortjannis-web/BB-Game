@@ -22,6 +22,7 @@
     "passage-titel": "Passage umbenannt",
     quelle: "Quelltext (Mechanik) geändert",
     notiz: "Kommentar an Claude",
+    bewertung: "Entscheidung bewertet",
     datei: "Datei angehängt",
   };
 

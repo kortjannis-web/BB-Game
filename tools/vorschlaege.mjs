@@ -58,7 +58,7 @@ const ARTEN = {
   text: "Text geändert", einfuegen: "Absatz eingefügt", loeschen: "Absatz gestrichen", wahl: "Entscheidung umbenannt",
   "wahl-ziel": "Entscheidung führt woandershin", "wahl-folge": "Folgetext einer Entscheidung", "wahl-neu": "Neue Entscheidung",
   "wahl-loeschen": "Entscheidung gestrichen", "passage-neu": "Neue Passage", "passage-loeschen": "Passage gestrichen",
-  "passage-titel": "Passage umbenannt", quelle: "Quelltext geändert", notiz: "Kommentar an Claude (prüfen und umsetzen, nicht wörtlich übernehmen)", datei: "Datei angehängt",
+  "passage-titel": "Passage umbenannt", quelle: "Quelltext geändert", notiz: "Kommentar an Claude (prüfen und umsetzen, nicht wörtlich übernehmen)", bewertung: "Entscheidung bewertet (gut/schlecht: analysieren)", datei: "Datei angehängt",
 };
 const einr = (s, n = 6) => String(s ?? "").split("\n").map((z) => " ".repeat(n) + z).join("\n");
 

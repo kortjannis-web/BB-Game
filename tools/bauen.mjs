@@ -72,3 +72,6 @@ mkdirSync(new URL("artefakt/", web), { recursive: true });
 writeFileSync(new URL("artefakt/spiel.html", web), fragment("index.html", [['href="karte.html"', adressen.karte && `href="${adressen.karte}" target="_blank" rel="noopener"`]]));
 writeFileSync(new URL("artefakt/karte.html", web), fragment("karte.html", [['href="index.html"', adressen.spiel && `href="${adressen.spiel}" target="_blank" rel="noopener"`]]));
 console.log("Gebaut: web/artefakt/spiel.html und web/artefakt/karte.html");
+
+// Erklärungen zu jeder Entscheidung für das Spiel (Block „Claude erklärt“)
+execFileSync(process.execPath, [new URL("entscheidungen.mjs", import.meta.url).pathname], { stdio: "inherit" });

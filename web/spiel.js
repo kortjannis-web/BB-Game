@@ -22,6 +22,8 @@
   let vorher = null;
   // Zurück: Schnappschüsse vor jeder Entscheidung (Ink-Zustand, Textlänge, gedimmte Absätze).
   let verlauf = [];
+  // Erklärungen zu jeder Entscheidung (web/entscheidungen.json, erzeugt beim Bauen); im Modus Bearbeiten sichtbar.
+  let erklaerungen = null;
 
   // Gelesen-Markierung (Wunsch des Nutzers 2026-11-06): Absätze, die schon einmal angezeigt wurden, und
   // Entscheidungen, die schon einmal getroffen wurden, erscheinen grün. Eigener Speicher, den weder
@@ -426,6 +428,8 @@
       b.textContent = r ? r.nachher : c.text;
       if (r) b.classList.add("geaendert");
       if (wahlWeg.has(c.text)) b.classList.add("gestrichen");
+      const bw = W?.liste().find((a) => a.art === "bewertung" && a.vorher === c.text);
+      if (bw) b.dataset.bewertung = bw.wert;
       if (gesehen.w.has(wahlKennung(c))) {
         b.classList.add("gelesen");
         b.title = "Diese Entscheidung hast du schon einmal getroffen";
@@ -447,7 +451,61 @@
       const k = kommentarBox(c.text);
       if (k) wahl.appendChild(k);
     });
+    if (W?.bearbeiten() && erklaerungen) {
+      const e = erklaerBlock(story.currentChoices);
+      if (e) wahl.appendChild(e);
+    }
     wahlWerkzeuge();
+  }
+
+  // Block „Claude erklärt“: je Option Ziel, Veränderung, spätere Wirkung, Begründung (Wunsch des Nutzers 2026-11-06).
+  function erklaerBlock(choices) {
+    const box = document.createElement("div");
+    box.className = "erklaerung";
+    const kopf = document.createElement("p");
+    kopf.className = "erkl-kopf";
+    kopf.textContent = "Claude erklärt diese Entscheidung";
+    box.appendChild(kopf);
+    let gefunden = 0;
+    for (const c of choices) {
+      const knoten = String(c.sourcePath ?? letzterPfad).split(".")[0];
+      const e = erklaerungen.find((x) => x.knoten === knoten && x.text === c.text) ?? erklaerungen.find((x) => x.text === c.text);
+      if (!e) continue;
+      gefunden++;
+      const opt = document.createElement("div");
+      opt.className = "erkl-option";
+      const t = document.createElement("p");
+      t.className = "erkl-text";
+      t.textContent = `› ${c.text}`;
+      opt.appendChild(t);
+      const ul = document.createElement("ul");
+      const punkt = (label, wert, cls) => {
+        if (!wert) return;
+        const li = document.createElement("li");
+        if (cls) li.className = cls;
+        const b = document.createElement("b");
+        b.textContent = `${label} `;
+        li.append(b, document.createTextNode(wert));
+        ul.appendChild(li);
+      };
+      punkt("Warum:", e.warum ?? "Begründung folgt.", e.warum ? "" : "fehlt");
+      punkt("Führt zu:", e.ziel);
+      punkt("Verändert:", e.setzt.length ? e.setzt.join(", ") : "nichts Dauerhaftes");
+      for (const s of e.spaeter) punkt("Wirkt später:", `${s.variable} → ${s.orte.join(", ")}`);
+      if (e.ohneEcho?.length) punkt("Noch ohne Echo:", e.ohneEcho.join(", "), "fehlt");
+      punkt("Nur wenn:", e.bedingung);
+      opt.appendChild(ul);
+      box.appendChild(opt);
+    }
+    return gefunden ? box : null;
+  }
+
+  // Eine Option bewerten (gut oder schlecht); erneutes Tippen auf dieselbe Bewertung nimmt sie zurück.
+  function bewerten(passage, original, wert) {
+    const alt = W.liste().find((a) => a.art === "bewertung" && a.vorher === original);
+    if (alt && alt.wert === wert) W.entfernen(alt.id);
+    else if (alt) W.aendern(alt.id, { wert, nachher: wert });
+    else W.hinzufuegen({ art: "bewertung", passage, vorher: original, wert, nachher: wert, kontext: kontext() });
   }
 
   async function wahlBearbeiten(zeile, original) {
@@ -481,6 +539,14 @@
           W.hinzufuegen({ art: "wahl-loeschen", passage, vorher: original, kontext: kontext() });
           fertig();
         }),
+      knopf("👍 Gut", () => {
+        bewerten(passage, original, "gut");
+        fertig();
+      }),
+      knopf("👎 Schlecht", () => {
+        bewerten(passage, original, "schlecht");
+        fertig();
+      }),
       knopf("💬 Kommentar an Claude", () => W.notizOeffnen({ passage, vorher: original, kontext: kontext() })),
       knopf("Abbrechen", fertig, "ws-leise"),
     );
@@ -872,9 +938,21 @@
       ueberarbeitungAnwenden();
       if (!wahl.querySelector(".wahl-editor, .neue-wahl")) zeigeWahl(true);
     });
+    try {
+      fetch(new URL("entscheidungen.json", location.href), { cache: "no-store" })
+        .then((r) => (r.ok ? r.json() : null))
+        .then((e) => {
+          erklaerungen = Array.isArray(e) ? e : null;
+          if (erklaerungen && story && $("titel").hidden && W?.bearbeiten()) zeigeWahl(true);
+        })
+        .catch(() => {});
+    } catch {
+      /* ohne Netz keine Erklärungen */
+    }
     W?.beiModus(() => {
       if (!$("titel").hidden) return;
       werkzeugSchliessen();
+      zeigeWahl(true);
     });
   }
 
