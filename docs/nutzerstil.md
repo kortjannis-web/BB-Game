@@ -82,3 +82,8 @@ Belege zu den neun Hypothesen und neue Muster, wieder ohne Begründungen des Nut
 - **Mehr Abstufung im Grund, weniger Kategorien:** Heilung als „etwas krank“ und als „schwer krank, letzte Hoffnung“ (v8, v12); „Suche“ und „Schuld“ gestrichen (v10, v11). Vermutung: Er will Gründe, die ein Mensch aus seiner Lage ehrlich oder nicht sagt, keine Romanmotive mit eigener Handlung. Offen, ob ihm die Fäden (Weihrauch, Schuld) zu groß oder zu fremd waren.
 - **Ein Weg zum Schweigen** (v13): Der Spieler darf Auskunft verweigern. Gilt vermutlich auch an anderen Stellen, wo eine Figur fragt.
 - **Lüge beim Grund** (v9, Antwort des Nutzers 2026-11-06): Der Spieler darf lügen, aber **die Lüge muss beim Vertrag auffallen**; er kann dort keinen anderen Menschen eintragen. Muster: Entscheidungen, die Täuschung erlauben, haben eine spätere, sichtbare Folge in der Welt (die Welt „weiß“ es), keine Bestrafung durch Zahlen. Umgesetzt: grund = luege, die Tinte verweigert den Namen.
+
+## Vorbilder und Ziel (Nutzer, 2026-11-06)
+- **Nur deutsche Werke** als Vorbild (oder herausragende deutsche Übersetzungen), weil es ein deutsches Spiel ist.
+- Ziel: Texte, die sich **hautnah** anfühlen, als erlebe man es gerade, **mystisch und unheimlich**, mit **viktorianischer Eleganz**, auf dem Niveau eines **deutschen Meisterwerks**; „das absolute Ziel und nicht weniger“. Leseliste: `docs/schreibkunst-lektuere.md`.
+
