@@ -2,7 +2,12 @@
 // Handgearbeitet 2026-11-05 nach docs/stimme.md und dem Faktencheck (docs/faktencheck-kapitel1.md, Abschnitt b_yharnam und Übergreifend 2b, 4, 10):
 // Ortsbilder in Stimme A, Geschehen in B, alles von der Kirche in C. Alle Optionen fließen in den Satz (#fliesst).
 // Feinschliff 2026-11-05 nach docs/lektorat-kapitel1.md und docs/umsetzung-lektorat.md (L1 bis L6): Fortsetzungen nach der Wahl beginnen mit dem, was geschieht;
-// keine christlichen Formeln; die Sonne als nicht wandernder Schatten; der Choral ohne Kommentar; die Spieluhr mit ihrer Lücke; Gascoignes Geruch am Platz nur leise.
+// keine christlichen Formeln; der Choral ohne Kommentar; die Spieluhr mit ihrer Lücke; Gascoignes Geruch am Platz nur leise.
+// Überarbeitung 2026-11-06 (docs/ueberarbeitung-kapitel1.md, Ü1 bis Ü12), Teil 1 bis vor k1_b_scheiterhaufen: Text für Text mit stil-1800.
+//   Ü1: Mond statt Sonne. Er steht links vom höchsten Turm der Kathedrale und wandert nicht; Saat in k1_b_ankunft (eine Handbreit Himmel
+//   zwischen Rand und Turm), Ernte in k1_nach_viertel2 (nur noch ein Finger: er ist gewachsen). Die Brücke (n1) zeigt die nächste Stufe.
+//   Ü10: Die Spuren der Viertel kündigen an, was dort wartet (Hund, Glöckchen, Knarren; Spieluhr, Knall in der Gasse, Mantelzipfel am Dach),
+//   und hinterlassen, wenn man sie auslässt, je einen Satz, der verrät, was man verpasst hat. Ü7: Jede Option hat ein WARUM.
 // Rede: Figuren sprechen in direkter Rede mit eigener Stimme (siehe hpl-horror, references/bb-game.md).
 // Lore: lore/kern.md, lore/kapitel/kapitel1.md (Wissenssperre), lore/orte/zentral-yharnam.md, lore/welt/aussehen.md und die Figurendateien je Szene.
 
@@ -16,105 +21,135 @@ VAR tuer_stimme = 0           // wie viele weitere Stimmen hinter den Türen geh
 === k1_b_ankunft ===
 // TITEL: Zentral-Yharnam: Ankunft (Akt II)
 // [KANON lore:orte/zentral-yharnam] Särge in den Gassen, Gaslaternen, Hunde in Käfigen (Artbook, LK §25.1, §25.4; gegner/hunde.md).
-// Früher der erste Besuch des Hubs; jetzt die Ankunft nach Gilbert, einmal.
+// Früher der erste Besuch des Hubs; jetzt die Ankunft nach Gilbert, einmal. Seit 2026-11-06 der erste Blick über die Stadt, ein paar Schritte hinter Gilberts Fenster
+//   (löst die Schwäche „Gilbert vor der Ankunft“ aus docs/qualitaet.md: Gilbert ist die Gasse, dies ist die Stadt).
+// [ERWEITERT, Ü1] Der Mond links vom höchsten Turm der Kathedrale, eine Handbreit Himmel dazwischen: Saat für k1_nach_viertel2. Keine Größenformel hier,
+//   die Stufe „über den Giebeln“ gehört der Laterne vor der Klinik (a_ankunft).
+// [ERWEITERT] Der Schluss mit dem Hasen und den Treibern: Saat für den Mob am Scheiterhaufen. Ersetzt „der nicht weiß, worauf alle warten“
+//   (widersprach dem Gespräch mit Gilbert über die Jagdnacht).
 -> betreten("zentral") ->
-Yharnam ist eine Stadt aus Treppen. Sie steigen und fallen zwischen Häusern, deren Giebel sich so weit über die Gassen neigen, dass zwischen ihnen nur ein Streifen Himmel bleibt, und über den Dächern steht ein Rauch, der sich nicht verzieht. Irgendwo läuten Glocken, unregelmäßig, als zöge niemand an den Seilen. Unten in den Straßen wandern Fackeln. # bild: zentral_yharnam # stimmung: spannung # lore: jagdnacht # klang: glocke
-An den Hauswänden lehnen Särge, aufrecht, mit Ketten an die eisernen Ringe geschlossen, an denen man sonst die Pferde festmacht, als sollte aus ihnen nichts mehr herauskommen. Gleich neben deiner Laterne steht eine Haustür offen, die einzige in der ganzen Straße, und gleich hinter ihrer Schwelle fängt das Dunkel an.
+Ein paar Schritte hinter Gilberts Fenster bricht die Gasse über eine Kante ab, und zum ersten Mal siehst du, dass Yharnam eine Stadt aus Treppen ist. Sie steigen und fallen zwischen Häusern, deren Giebel sich so weit über die Gassen neigen, dass zwischen ihnen nur ein Streifen Himmel bleibt, und über allen Dächern steht ein Rauch, der sich nicht verzieht. Fern im Osten ragt die Kathedrale daraus auf, und links von ihrem höchsten Turm, eine Handbreit Himmel dazwischen, steht der Mond. Von irgendwo läuten Glocken, unregelmäßig, als zöge niemand an den Seilen; unten in den Straßen wandern Fackeln. # bild: zentral_yharnam # stimmung: spannung # lore: jagdnacht # klang: glocke
+An den Hauswänden lehnen Särge, aufrecht, mit Ketten an die eisernen Ringe geschlossen, an denen man sonst die Pferde festmacht, als sollte aus ihnen nichts mehr herauskommen. Das Pflaster ist noch nass vom Regen, in dem du gekommen bist, und die Kälte steigt dir durch die Sohlen in die Knöchel. Gleich neben deiner Laterne steht eine Haustür offen, die einzige in der ganzen Straße, und schon hinter ihrer Schwelle fängt das Dunkel an.
 Vor vielen Fenstern hängen kleine Laternen mit rotem Glas, in denen Räucherwerk schwelt, an manchen Häusern drei oder vier übereinander, an einem ein ganzes Dutzend, so dicht, dass das Fenster dahinter verschwindet. Der Geruch ist süß und schwer und legt sich dir auf die Zunge wie ein Tuch auf ein Gesicht. # lore: raeucherwerk
-Hinter den Fenstern brennt kein Licht als das rote, die Riegel sind vorgeschoben, und auf der ganzen Straße bist du der Einzige, der nicht weiß, worauf alle warten.
+Hinter den Fenstern brennt kein Licht als das rote, die Riegel sind vorgeschoben, und die Straße gehört dir allein, so wie ein Feld dem Hasen gehört, wenn die Treiber kommen.
 -> k1_viertel1
 
 === k1_viertel1 ===
 // TITEL: Erstes Viertel (zwei von drei)
-// Kartenmodell (Sorcery!): Von drei Stationen besucht man zwei, in beliebiger Reihenfolge; die dritte bleibt verloren. Die Wahl ist nicht blind: jede Station kündigt sich durch eine Spur an (Hund, Glocke, offene Tür).
+// Kartenmodell (Sorcery!): Von drei Stationen besucht man zwei, in beliebiger Reihenfolge; die dritte bleibt verloren. Die Wahl ist nicht blind: jede Station kündigt sich durch einen Laut an,
+//   der verrät, was dort wartet (Ü10, 2026-11-06): der Hund vor der Tür der alten Frau (k1_b_tueren), das Glöckchen über der Kapelle mit dem Anschlag (k1_b_anschlag),
+//   das Knarren des Rollstuhls oben im dunklen Haus (k1_b_haus; zugleich ein erstes Anzeichen für den Schützen).
 { v1_zahl >= 2: -> k1_nach_viertel1 }
 { v1_zahl == 0:
-    Drei Spuren ziehen dich in verschiedene Richtungen: ein Hund, der weit unten bellt, eine Glocke aus der Tiefe einer Gasse, und die offene Tür, hinter der das Dunkel anfängt. Zwei davon kannst du folgen. Die dritte bleibt hinter dir.
+    Drei Laute ziehen dich von der Ecke an der Laterne in drei Richtungen. Unten, wo die roten Lampen am dichtesten hängen, bellt ein Hund, heiser und ohne Pause. Aus einer Seitengasse schlägt ein einzelnes Glöckchen an, dünn und in keinem Takt, ein ganz anderer Ton als die großen Glocken über der Stadt. Und aus der offenen Tür kommt, wenn du still stehst, ein Knarren von Holz, oben irgendwo im Haus, langsam und in gleichen Abständen. Zweien davon kannst du nachgehen. Den dritten wirst du hinter dir lassen, und was an seinem Ende wartet, erfährst du nicht.
 - else:
-    Zwei Spuren sind noch da. Eine davon darfst du noch gehen, dann ist der Weg weiter vorn.
+    Wieder an der Ecke bei der Laterne. Zwei Laute sind noch übrig, und einem davon kannst du noch nachgehen; danach führt dich die Straße weiter.
 }
 - (wahl)
-+ {not k1_b_tueren and v1_zahl < 2} [Dem Hund folgen, in die Gasse mit den Räucherlampen hinab #fliesst]
+// WARUM: Der Spieler folgt dem Hund in die Gasse der Türen: die Stimmen der Stadt, die alte Frau und Violas Spur. Keine Gefahr; die Station schenkt Wissen und ein Versprechen.
++ {not k1_b_tueren and v1_zahl < 2} [Dem Bellen nach, die Stufen hinab #fliesst]
     ~ v1_zahl = v1_zahl + 1
-    In die Gasse mit den Räucherlampen führen sieben Stufen hinab, in der Mitte zu Mulden ausgetreten.
+    Dem Bellen nach führen sieben Stufen hinab, in der Mitte zu Mulden ausgetreten, und mit jeder wird es heiserer und näher, bis es auf der letzten in ein Knurren übergeht und aufhört.
     -> k1_b_tueren
-+ {not k1_b_anschlag and v1_zahl < 2} [Den Glocken folgen, zu der schmalen Kapelle hinab #fliesst]
+// WARUM: Der Spieler folgt dem Glöckchen zur Kapelle: der Anschlag der Kirche (Stimme C) und die Kreide eines Bruders darunter. Keine Gefahr; Lore über das Blut und die Ordnung der Kirche.
++ {not k1_b_anschlag and v1_zahl < 2} [Dem Glöckchen nach in die Seitengasse #fliesst]
     ~ v1_zahl = v1_zahl + 1
-    Zu der schmalen Kapelle führen drei Stufen hinab, glatt getreten von vielen Füßen, die nicht mehr kommen.
+    Dem Glöckchen nach in die Seitengasse, so schmal, dass dein Mantel die Mauern streift, und an ihrem Ende führen drei Stufen hinab, glatt getreten von vielen Füßen, die nicht mehr kommen.
     -> k1_b_anschlag
-+ {not k1_b_haus and v1_zahl < 2} [Der offenen Tür folgen, in das dunkle Haus #fliesst]
+// WARUM: Der Spieler geht dem Knarren in das dunkle Haus nach: ein Schütze im Rollstuhl, der Zettel über die gesperrte Brücke, Wendels Mantel. Die einzige Station mit Kampf; das Knarren in gleichen Abständen warnt den Aufmerksamen, dass oben jemand sitzt.
++ {not k1_b_haus and v1_zahl < 2} [Durch die offene Tür ins Haus #fliesst]
     ~ v1_zahl = v1_zahl + 1
-    In das dunkle Haus mit der offenen Tür, und unter dem ersten Schritt knarrt die Schwelle so laut, dass du stehen bleibst und horchst.
+    Durch die offene Tür ins Haus, und unter dem ersten Schritt knarrt die Schwelle so laut, dass du stehen bleibst und horchst. Oben knarrt es weiter, in seinen gleichen Abständen, als hätte es nichts gehört.
     -> k1_b_haus
+// WARUM: Heilen in Ruhe, zwischen zwei Stationen: hier trifft kein Gegner beim Trinken. Prüft nichts; erinnert daran, dass die eine Ampulle verbraucht werden kann.
 + {ampulle > 0 and leben < LEBEN_MAX} [Die Ampulle in den Schenkel stoßen #fliesst] -> ampulle_ruhig -> wahl
 
 === k1_nach_viertel1 ===
-// Spuren des Nichtgewählten: ein Satz je ausgelassener Station. Dann das erste Kreischen, dann der Rauch.
-{ not k1_b_tueren: Weit hinter dir bellt noch der Hund, und du gehst nicht hin. }
-{ not k1_b_anschlag: Die Glocke in der Tiefe der Gasse schlägt noch einmal, und du gehst nicht hin. }
-{ not k1_b_haus: Die offene Tür steht hinter dir im Dunkel, und du gehst nicht hinein. }
+// Spuren des Nichtgewählten: ein Satz je ausgelassener Station, der andeutet, was dort wartete (Ü10). Dann das erste Kreischen, dann der Rauch.
+// [ERWEITERT] Die alte Stimme, die auf „Fremde“ schimpft (alte Frau); der Anschlag, den ein anderer liest; das Knarren wie ein Atem (der Mann im Rollstuhl).
+{ not k1_b_tueren: Unten bei den roten Lampen bellt der Hund noch immer, und eine alte Stimme schimpft auf ihn ein, oder auf etwas anderes; du verstehst nur das Wort Fremde. }
+{ not k1_b_anschlag: Das Glöckchen in der Seitengasse schlägt noch einmal an. Was an der Tür darunter angeschlagen hängt, liest heute Nacht ein anderer, oder keiner. }
+{ not k1_b_haus: Die Tür neben der Laterne bleibt hinter dir offen, und oben im Haus knarrt es weiter, so ruhig, wie ein Schlafender atmet. }
 { haus_zettel:
-    Von der Ecke an der Laterne sieht man zwischen zwei Giebeln ein Stück der großen Brücke, einen schwarzen Bogen gegen den Rauch, und auf ihrer ganzen Länge brennt nicht ein Licht. Der Zettel aus dem dunklen Haus knistert in deiner Tasche. # lore: kirche_sperrt_bruecke
+    Von der Ecke an der Laterne sieht man zwischen zwei Giebeln ein Stück der großen Brücke, einen schwarzen Bogen gegen den Rauch, und auf ihrer ganzen Länge brennt nicht ein Licht. Der Zettel aus dem dunklen Haus steckt in deiner Tasche, und du musst ihn nicht noch einmal lesen. # lore: kirche_sperrt_bruecke
 }
 -> schrei ->
-Dem Rauch nach die Hauptstraße hinauf, und mit jedem Schritt wird der Geruch fetter.
+Danach führt nur noch ein Weg weiter, die Hauptstraße hinauf, dem Rauch entgegen, und mit jedem Schritt wird er schwerer; unter dem Holzrauch liegt ein Geruch, der in eine Küche gehört und nicht auf die Straße.
 -> k1_b_scheiterhaufen
 
 === k1_nach_scheiterhaufen ===
 // Nach der Kreuzung: Wiederkehrsatz aus dem alten Hub, einmal, an fester Stelle.
+// Martha: Die Bäckerei am Markt erntet „unten am Markt Brot gebacken, mit zu viel Kümmel“ (Gascoigne, „Wer war sie?“). Das frische Reisig bleibt unerklärt.
 { mob_verbrannt:
-    Vor einer Tür an der Ecke zum Markt liegt eine verkohlte Fackel, sorgsam quer über die Schwelle gelegt. Die Läden der Bäckerei daneben sind geschlossen, um die Klinke hat jemand ein schwarzes Tuch gebunden, und aus der Ritze unter der Tür riecht es nach kaltem Ofen und nach Kümmel.
+    An der Ecke zum Markt liegt vor der Tür einer Bäckerei eine verkohlte Fackel, sorgsam quer über die Schwelle gelegt. Die Läden sind geschlossen, um die Klinke hat jemand ein schwarzes Tuch gebunden, und aus der Ritze unter der Tür riecht es nach kaltem Ofen und nach Kümmel.
 - else:
-    Hinter dir bleibt der Platz zurück. Das Feuer ist heruntergebrannt, und am Fuß des Pfahls liegt frisches Reisig, sorgfältig geschichtet, für das nächste.
+    Am Ende des Platzes siehst du dich noch einmal um. Das Feuer ist heruntergebrannt, und am Fuß des Pfahls liegt schon frisches Reisig, sorgfältig geschichtet, für das nächste.
 }
 -> k1_viertel2
 
 === k1_viertel2 ===
 // TITEL: Zweites Viertel (zwei von drei)
+// Ü10 (2026-11-06): Jede Spur kündigt an, was dort wartet. Die Spieluhr erntet Gascoignes Bitte („wenn du irgendwo eine Spieluhr hörst“) und hakt an ihrer Stelle (Ü11, die Lücke);
+//   der Knall springt zwischen engen Mauern (Gasse mit dem Schützen); über der Dachrinne hängt ein Mantelzipfel (der tote Jäger auf dem Dachweg).
+// [ERWEITERT] Der Mantelzipfel über der Dachrinne. Anschluss für k1_b_dachweg: der Tote am Schornstein trägt einen langen Mantel, dessen Saum über die Rinne hängt.
 { v2_zahl >= 2: -> k1_nach_viertel2 }
 { v2_zahl == 0:
-    Wieder drei Spuren: eine Melodie, so leise, dass du zweimal stehen bleibst, um sicher zu sein; ein Schuss, weit weg, und danach Stille; und eine Leiter, die an einer Hauswand hinauf zu den Dächern führt. Zwei davon kannst du folgen.
+    Hinter dem Platz teilt sich die Straße, und wieder ziehen dich drei Spuren in drei Richtungen. Hinter einer Mauer spielt eine Spieluhr, so leise, dass du zweimal stehen bleibst, um sicher zu sein, und an einer Stelle hakt sie, jedes Mal an derselben. Aus einer Gasse zur Linken kracht ein Schuss, und der Knall springt zwischen den Hauswänden hin und her, so eng stehen sie; einen Schrei hörst du danach nicht. Und an einer Hauswand lehnt eine Leiter, die zu den Dächern hinaufführt, und über der Dachrinne hängt der Zipfel eines Mantels herab, der sich nur rührt, wenn der Wind ihn anfasst. Zweien davon kannst du folgen.
 - else:
-    Zwei Spuren sind noch da. Eine darfst du noch gehen.
+    Wieder dort, wo die Straße sich teilt. Einer der beiden übrigen Spuren kannst du noch folgen; dann führt dich die Straße weiter.
 }
 - (wahl)
-+ {not k1_b_maedchen and v2_zahl < 2} [Der Melodie folgen, zum Brunnenplatz #fliesst]
+// WARUM: Der Spieler folgt der Spieluhr, um die Gascoigne gebeten hat: das Mädchen am Fenster, die Spieluhr mit den zwei Namen, ein Versprechen. Wer Gascoigne zugehört hat, weiß, wessen Kind dort wartet.
++ {not k1_b_maedchen and v2_zahl < 2} [Hinter die Mauer, der Spieluhr nach #fliesst]
     ~ v2_zahl = v2_zahl + 1
-    Zum Brunnenplatz führt dich eine Melodie, so leise, dass du zweimal stehen bleibst, um sicher zu sein, und dann durch ein Tor in der Mauer.
+    Hinter die Mauer, der Spieluhr nach, und ein Stück an ihr entlang, bis eine Pforte sich auftut, kaum höher als du, der Flügel nur angelehnt.
     -> k1_b_maedchen
-+ {not k1_b_daecher and v2_zahl < 2} [Dem Schuss folgen, in die Gasse unter den Dächern #fliesst]
+// WARUM: Der Spieler geht dem Schuss nach: die Gasse mit dem Schützen auf dem Dach, der Schuss von hinten. Der Knall zwischen engen Mauern und die Stille danach warnen: Dort wartet jemand mit einem Gewehr, der nicht gefehlt hat.
++ {not k1_b_daecher and v2_zahl < 2} [In die enge Gasse, dem Knall nach #fliesst]
     ~ v2_zahl = v2_zahl + 1
-    In die Gasse unter den Dächern, und mit dem ersten Schritt wird es eng.
+    In die enge Gasse, aus der der Knall kam, und nach dem ersten Schritt bleibt das Mondlicht oben auf den Dächern zurück.
     -> k1_b_daecher
-+ {not k1_b_dachweg and v2_zahl < 2} [Die Leiter hinaufsteigen, auf die Dächer #fliesst]
+// WARUM: Der Spieler steigt zu dem Mantelzipfel hinauf: der Dachweg mit dem toten Jäger, seinem Heft und Wurfzeug. Keine Gefahr; Wissen über Gegner, die noch kommen, und ein Blick auf die anderen Wege.
++ {not k1_b_dachweg and v2_zahl < 2} [Hinauf über die Leiter, zum Mantel #fliesst]
     ~ v2_zahl = v2_zahl + 1
-    Eine Leiter an der Hauswand, die Sprossen kalt und rau vom Rost, und über dir wird der Rauch dünner.
+    Hinauf über die Leiter, die Sprossen kalt und rau vom Rost, und mit jeder Sprosse wird der Rauch unter dir dünner und der Mantelzipfel über dir schwerer und nasser.
     -> k1_b_dachweg
+// WARUM: Heilen in Ruhe, zwischen zwei Stationen: hier trifft kein Gegner beim Trinken. Prüft nichts; erinnert daran, dass die eine Ampulle verbraucht werden kann.
 + {ampulle > 0 and leben < LEBEN_MAX} [Die Ampulle in den Schenkel stoßen #fliesst] -> ampulle_ruhig -> wahl
 
 === k1_nach_viertel2 ===
-// Spuren des Nichtgewählten, das zweite Kreischen, die Sonne; dann Eileen (fest).
-{ not k1_b_maedchen: Von irgendwo hinter den Mauern weht eine Melodie herüber, so leise, dass du sie nicht erkennst, und bricht ab. }
-{ not k1_b_daecher: Irgendwo über den Dächern kracht noch einmal ein Schuss. Niemand hat auf dich gezielt. }
-{ not k1_b_dachweg: An einer Hauswand lehnt eine Leiter, und du bist nicht hinaufgestiegen. }
+// Spuren des Nichtgewählten (je ein Satz, der verrät, was verpasst ist), das zweite Kreischen, der Mond; dann Eileen (fest).
+// [ERWEITERT, Ü1] Ernte der Saat aus k1_b_ankunft: Der Mond steht noch links vom höchsten Turm, aber zwischen Rand und Turm passt nur noch ein Finger. Er wandert nicht, er wächst.
+//   Ersetzt den Satz von der roten Sonne über den Giebeln. Danach der Weg hinab zum Kanaleingang, wo Eileen wartet.
+// Die betende Stimme nach dem zweiten Kreischen (schreie == 2) jetzt als Nachklang im Weitergehen; vorher wurde sie im selben Atemzug „heiser“ (Zeitsprung aus dem alten Hub).
+{ not k1_b_maedchen: Hinter der Mauer setzt die Spieluhr noch einmal ein, hakt an ihrer Stelle und schweigt dann, mitten im Lauf. }
+{ not k1_b_daecher: Aus der engen Gasse kracht noch ein Schuss, und danach schreit jemand, kurz, und dann nicht mehr. }
+{ not k1_b_dachweg: Der Mantelzipfel über der Dachrinne hängt noch, wo er hing, und heute Nacht steigt keiner mehr hinauf, um nachzusehen, wem er gehört. }
 { spieluhr: Die Spieluhr in deiner Tasche klickt bei jedem Schritt gegen einen Knopf deines Mantels, und du legst die Hand darauf, damit sie still ist, und lässt sie dort. }
 -> schrei ->
-{ schreie == 2: Die alte Stimme, die hinter einer Tür zu beten begonnen hat, betet noch immer. Sie ist heiser geworden, aber den Faden hat sie nicht verloren. }
+{ schreie == 2: Noch zwei Gassen weiter hörst du die alte Stimme beten, durch Holz und Stein, und als sie nicht mehr zu hören ist, weißt du nicht, ob sie aufgehört hat oder ob du nur zu weit gegangen bist. }
 ~ fr_frei_machen(fr_nacht)
-Der Schatten des Laternenpfahls liegt über derselben Fuge im Pflaster wie bei deiner Ankunft, auf den Fingerbreit genau, und über den Giebeln ist die rote Sonne nicht von der Stelle gerückt.
+Links vom höchsten Turm der Kathedrale steht der Mond, genau dort, wo er stand, als du zum ersten Mal auf die Treppen der Stadt hinabsahst. Nur lag vorhin eine Handbreit Himmel zwischen seinem Rand und dem Turm, und jetzt passt kaum ein Finger hinein. Gewandert ist er nicht. Er ist größer geworden.
+Die Straße fällt ab, zu einem gemauerten Bogen, aus dem kalte Luft steigt und das Rauschen von Wasser, und dein Schatten läuft dir voraus, die Stufen hinunter, bis er im Dunkel unter dem Bogen verschwindet.
 -> k1_b_eileen
 
 === k1_vor_bruecke ===
 // Nach Eileen: der Weg zur Brücke.
-Hinauf zur großen Brücke führt eine Straße, die mit jedem Schritt breiter und leerer wird, bis an den Fenstern keine Räucherlampe mehr hängt und nur noch Wind ist.
+// [ERWEITERT] Die leeren Haken, die offenen Läden, das Hufeisen: Saat für die Kutschen und toten Pferde auf der Brücke (n1_kleriker). Ü1: Der Weg führt auf den Mond zu,
+//   darum fällt der Schatten jetzt hinter dich; seine Größe zeigt erst die Brücke.
+Zur großen Brücke führt eine Straße hinauf, die mit jedem Schritt breiter und leerer wird. Die Räucherlampen an den Fenstern werden seltener, dann hängen nur noch leere Haken da, und die Läden stehen offen, die Zimmer dahinter ausgeräumt bis auf die Tapeten. Mitten auf dem Pflaster liegt ein Hufeisen, die Nägel noch darin, so wie es einem Pferd vom Huf gerissen wurde, das zu schnell bergauf wollte. Dein Schatten fällt hinter dich, lang und schmal, den Weg zurück, den du gekommen bist, und vor dir ist nur noch Wind.
 -> k1_n1_kleriker
 
 === schrei ===
 // TITEL: Kreischen von der Brücke
+// [KANON lore:bosse/kleriker-bestie] Das Kreischen hört man durch die Stadt, lange bevor man die Bestie sieht. Ein Kernmoment des Spielgefühls: Ankündigung ohne Erklärung.
+// Überarbeitung 2026-11-06 (Moment anzeichen: das Ohr zuerst, zwei Gewohnte und ein Drittes; der Hund als Zeuge nach Kleist): Beim ersten Mal stellt sich der Laut neben
+//   das Bellen und die Glocken und bringt den Hund zum Schweigen; beim zweiten Mal steckt ein Wort darin, und der Körper antwortet (die Schultern: Saat für n1_kleriker,
+//   „deine Schultern kennen den Ton“).
 ~ schreie = schreie + 1
 { schreie:
-- 1: Von weit her, aus der Richtung, in der die Stadt über eine Brücke zur Kathedrale hinaufsteigt, kommt ein Laut. Ein Kreischen, das länger dauert, als ein Mensch Atem hat, und noch immer nicht abreißt, bis dir selbst die Luft knapp wird und du merkst, dass du sie angehalten hast. Hinter einem Fenster löscht jemand hastig eine Kerze, und das rote Räucherlicht davor brennt allein weiter. # klang: kleriker_schrei # stimmung: grauen
-- 2: Wieder das Kreischen, und diesmal näher. Ein Wort steckt darin, oder was von einem Wort übrig bleibt, wenn man es lange genug zieht und zerreißt; du hörst es zweimal und könntest beim dritten Mal nicht mehr sagen, welches. Hinter einer Tür beginnt eine alte Stimme zu beten, schnell und tonlos, und hört nicht mehr auf. # klang: kleriker_schrei # stimmung: grauen
+- 1: Zu dem Bellen von unten und den Glocken, die in keinem Takt schlagen, kommt ein dritter Laut, von weit her, aus der Richtung, in der die Stadt über eine Brücke zur Kathedrale hinaufsteigt. Ein Kreischen, das länger dauert, als ein Mensch Atem hat, und noch immer nicht abreißt, bis dir selbst die Luft knapp wird und du merkst, dass du sie angehalten hast. Unten in der Gasse verstummt der Hund mitten im Bellen. Hinter einem Fenster löscht jemand hastig eine Kerze, und das rote Räucherlicht davor brennt allein weiter. # klang: kleriker_schrei # stimmung: grauen
+- 2: Wieder das Kreischen, und diesmal näher. Ein Wort steckt darin, oder was von einem Wort übrig bleibt, wenn man es lange genug zieht und zerreißt; du hörst es zweimal und könntest beim dritten Mal nicht mehr sagen, welches. Deine Schultern sind oben, bis an die Ohren, ehe du es merkst, und lassen sich nicht gleich wieder senken. Hinter einer Tür beginnt eine alte Stimme zu beten, schnell und tonlos, und hört nicht mehr auf. # klang: kleriker_schrei # stimmung: grauen
 }
 ->->
 
@@ -123,8 +158,10 @@ Hinauf zur großen Brücke führt eine Straße, die mit jedem Schritt breiter un
 // Handgearbeitet 2026-11-04 nach docs/stimme.md: Ortsbild in Stimme A, Begegnung in Stimme B. Optionen fließen in den Satz (#fliesst).
 // 2026-11-05 nur die Befunde des Faktenchecks: Gilbert sitzt (kann nicht aufstehen), Jagdnacht als Gelegenheit und der Osten des Tals, Ludwigs Silberschwert statt der Mondklinge, Merker gilbert_jagd und gilbert_kleriker.
 // 2026-11-05 Lektorat (Maßstab, nur das Genannte): Antwort zum bleichen Blut gekürzt, keine Bekreuzigung, Weihrauch ohne Formel, Fortsetzungen nach der Wahl ohne „Du fragst“.
+// Überarbeitung 2026-11-06 (Momente begegnung, gespraech, geruecht): Was trägt, bleibt. Die Fragen sind jetzt Rede des Jägers (er siezt Gilbert, wie Gilbert ihn), keine Menüpunkte;
+//   „gelb wie Kerzenwachs“ gestrichen (Wachs gehört dem Mond, Ü1); die Seuche in Gilberts Worten statt als Lehrsatz; die Frage nach den Jägern kommt vom neuen Jäger selbst.
 // Lore: lore/figuren/gilbert.md, lore/orte/zentral-yharnam.md, RK1 §5. Wissenssperre: lore/kapitel/kapitel1.md.
-// [KANON lore:figuren/gilbert] Kranker Fremder hinter dem Fenster bei der ersten Laterne; nennt den Jäger einen Mitfremden; kann nicht aufstehen; kennt bleiches Blut nicht und verweist auf die Kirche und die Kathedrale im Osten des Tals; in der Jagdnacht sei die Gelegenheit; nennt zuerst die Große Brücke als Weg (RK1 §5, sicher); wird nach dem Blutmond zur Bestie.
+// [KANON lore:figuren/gilbert] Kranker Fremder hinter dem Fenster bei der ersten Laterne; nennt den Jäger einen Mitfremden; kann nicht aufstehen; kennt bleiches Blut nicht und verweist auf die Kirche und die Kathedrale im Osten des Tals; in der Jagdnacht sei die Gelegenheit; nennt zuerst die Große Brücke als Weg (RK1 §5, sicher); rät, die Stadt bald zu verlassen; wird nach dem Blutmond zur Bestie.
 // [ERWEITERT] Kampfer und kalter Tee, der zu weite Ring, der Birnbaum, das Sammeln von Namen, seine Bitte. Der Flammenwerfer kommt bei uns schon in Kapitel 1 und mit ihm der Satz vom erkauften Aufschub (Kanon: beides ab Sonnenuntergang).
 // [Deutung, nur als Detail, nie aussprechen] Er könnte einst Kirchenjäger gewesen sein (LK 5.1): Die Düse ist alt verrußt, obwohl er sagt, er habe das Gerät nie benutzt.
 // Stimme Gilbert: höflich, siezt, selbstironisch, fragt zurück; der Husten schneidet ihm die Sätze ab.
@@ -132,20 +169,23 @@ Hinauf zur großen Brücke führt eine Straße, die mit jedem Schritt breiter un
 ~ fr_frei_machen(fr_blut)
 { k1_b_gilbert == 1:
     Neben der Laterne, wo die Gasse sich zum Platz hin weitet, steht ein schmales Haus mit einem Fenster zu ebener Erde, und vor dem Fenster sitzt ein Gitter, wie man es in Yharnam vor die Kammern der Kranken setzt, damit nichts hinein kann und nichts heraus. Die Läden sind bis auf einen Spalt geschlossen. Aus dem Spalt dringt kein Räucherwerk wie aus den Nachbarhäusern; es riecht nach Kampfer und kaltem Tee, nach einer Stube, in der seit Wochen niemand gelüftet hat. # bild: gilbert # stimmung: ruhig
-    Dahinter atmet jemand, nass und tief, und der Atem verhakt sich an einer Stelle und reißt und wird zu einem Husten, der nicht enden will. Dein eigener Hals zieht sich zusammen. Der Einstich in deiner Armbeuge, durch den in der Klinik das fremde Blut in dich hineinlief, pocht im Takt dieses Hustens, so genau, dass du die Hand darauflegst.
-    Am Gitter erscheint ein Gesicht, hager und gelb wie Kerzenwachs, mit Augen, die freundlicher sind, als eine Jagdnacht es erlaubt. In jedem steht eine winzige Laterne. „Sie riechen nach Regen“, sagt der Mann, „und nach Landstraße. Nicht nach Rauch. Von draußen also.“ Er legt die Hand an einen Stab, eine Hand, an der der Ring zu weit geworden ist. „Gilbert. Auch von draußen, nur schon länger, als mir lieb ist. Und Jäger sind Sie geworden, nicht wahr? Man sieht es an der Art, wie Sie stehen.“ # lore: fremde
+    Dahinter atmet jemand, nass und tief, und der Atem verhakt sich an einer Stelle und reißt und wird zu einem Husten, der kein Ende findet. Dein eigener Hals zieht sich zusammen. Der Einstich in deiner Armbeuge, durch den in der Klinik das fremde Blut in dich hineinlief, pocht im Takt dieses Hustens, so genau, dass du die Hand darauflegst.
+    Am Gitter erscheint ein Gesicht, hager und gelb, mit Augen, die freundlicher sind, als eine Jagdnacht es erlaubt. In jedem steht eine winzige Laterne. „Sie riechen nach Regen“, sagt der Mann, „und nach Landstraße. Nicht nach Rauch. Von draußen also.“ Er legt die Hand an einen Stab, eine Hand, an der der Ring zu weit geworden ist. „Gilbert. Auch von draußen, nur schon länger, als mir lieb ist. Und Jäger sind Sie geworden, nicht wahr? Man sieht es an der Art, wie Sie stehen.“ # lore: fremde
     { herkunft == "kranker":
-        Da hustest du selbst, und er hört auf zu lächeln. „Oh“, sagt er leise. „Das kenne ich. Das kenne ich sehr gut.“
+        Da hustest du selbst, trocken und kurz, und er hält mitten im Satz inne. „Oh“, sagt er leise. „Das kenne ich. Das kenne ich sehr gut.“
     }
     -> haltung
 }
 
 = haltung
+// WARUM: Der Spieler gibt sich zu erkennen. Öffnet Gilberts Freundschaft (er sammelt Namen) und damit später seine Bitte um den Bericht.
 * [Ihm deinen Namen nennen #fliesst]
     ~ gilbert = gilbert + 1
     Du nennst ihm deinen Namen und bleibst am Gitter, bis der Husten sich gelegt hat. „{name}“, wiederholt er, leise, zweimal, so wie man sich eine Hausnummer merkt. „Danke. Hinter so einem Gitter wird man wunderlich, wissen Sie. Man sammelt Namen, wie andere Leute Knöpfe sammeln.“
-* [Dich für einen Durchreisenden ausgeben #fliesst]
-    Nur auf der Durchreise, sagst du. Er lächelt, als hättest du einen alten Scherz erzählt, den er gern noch einmal hört. „Das waren wir alle, als wir kamen.“ Er hustet in die Faust und wartet, bis es vorbei ist. „Jäger reden wenig, ich weiß. Ich rede für zwei, das gleicht sich aus.“
+// WARUM: Der Spieler hält sich bedeckt, ohne unfreundlich zu sein. Gilbert durchschaut die kleine Lüge und bleibt freundlich; das Gespräch geht weiter, die Freundschaft wächst nicht.
+* [„Ich bin nur auf der Durchreise.“ #fliesst]
+    „Ich bin nur auf der Durchreise.“ Er lächelt, als hättest du einen alten Scherz erzählt, den er gern noch einmal hört. „Das waren wir alle, als wir kamen.“ Er hustet in die Faust und wartet, bis es vorbei ist. „Jäger reden wenig, ich weiß. Ich rede für zwei, das gleicht sich aus.“
+// WARUM: Der Spieler weist den Kranken ab. Falsch für den, der zugehört hat (er ist ein Fremder wie du und will helfen): Es kostet das Gespräch, das Feuer und Gilberts Bitte.
 * [Dich vom Gitter abwenden #fliesst]
     ~ gilbert = gilbert - 2
     Er hat noch nicht ausgesprochen, als du dich abwendest. Hinter dir weicht das Gesicht vom Gitter zurück, ohne ein Wort des Vorwurfs, und eine Weile kommt aus dem Spalt kein Laut. Dann hustet er wieder, gedämpft, als presse er sich ein Tuch vor den Mund, damit es dich nicht stört.
@@ -153,44 +193,51 @@ Hinauf zur großen Brücke führt eine Straße, die mit jedem Schritt breiter un
 - -> themen
 
 = themen
-* [Nach seinem Husten fragen #fliesst]
-    Über seinen Husten lacht er, kurz, und das Lachen kostet ihn einen neuen Anfall. „Eine Krankheit, für die mein Arzt zu Hause keinen Namen hatte“, sagt er, als er wieder kann. „Dann ein Gerücht über diese Stadt, in einer Postkutsche, von einem Mann, der nicht hustete. Dann eine lange Reise.“ Er dreht den zu weiten Ring am Finger. „Man hat mir hier Blut gegeben. Es hat geholfen, eine Weile. Im Spital lagen Leute, bei denen hat es nicht bloß aufgehört zu helfen.“ Sein Blick geht an dir vorbei in die Gasse. „Wir hatten einen Birnbaum hinter dem Haus. Ich denke dauernd an diesen Birnbaum, ist das nicht albern? Gehen Sie, sobald Sie können. Was diese Stadt einem gibt, holt sie sich doppelt zurück.“ # lore: bluttransfusion
+// WARUM: Der Spieler fragt nach dem Menschen, nicht nach dem Weg. Öffnet Gilberts Geschichte und die erste Warnung vor dem Blut (Lore Bluttransfusion).
+* [„Seit wann husten Sie so?“ #fliesst]
+    „Seit wann husten Sie so?“ Er lacht, kurz, und das Lachen kostet ihn einen neuen Anfall. „Eine Krankheit, für die mein Arzt zu Hause keinen Namen hatte“, sagt er, als er wieder kann. „Dann ein Gerücht über diese Stadt, in einer Postkutsche, von einem Mann, der nicht hustete. Dann eine lange Reise.“ Er dreht den zu weiten Ring am Finger. „Man hat mir hier Blut gegeben. Es hat geholfen, eine Weile. Im Spital lagen Leute, bei denen hat es nicht bloß aufgehört zu helfen.“ Sein Blick geht an dir vorbei in die Gasse. „Wir hatten einen Birnbaum hinter dem Haus. Ich denke dauernd an diesen Birnbaum, ist das nicht albern? Gehen Sie, sobald Sie können. Was diese Stadt einem gibt, holt sie sich doppelt zurück.“ # lore: bluttransfusion
     -> themen
-* [Nach den verriegelten Türen fragen #fliesst]
+// WARUM: Der Spieler will die Regeln der Nacht verstehen. Öffnet Jagdnacht, Seuche und Bürgerjagd (Lore) und warnt vor dem Mob am Scheiterhaufen.
+* [„Warum ist hier jede Tür verriegelt?“ #fliesst]
     ~ gilbert_jagd = true
     ~ fr_frei_machen(fr_menschen)
-    Warum in dieser Stadt jede Tür verriegelt ist? „Eine Jagdnacht“, sagt er, als nenne er das Wetter. „Dann schieben die Leute die Riegel vor und hängen Räucherwerk ins Fenster, und wer das Warten nicht mehr aushält, nimmt Fackel und Mistgabel und geht selbst hinaus.“ Er senkt die Stimme, obwohl niemand zuhört. „Was ihnen da draußen begegnet, haben sie meistens gestern noch gegrüßt. Die Seuche macht aus Menschen Bestien, und wen es als Nächsten trifft, weiß keiner. Mich hat es noch nicht getroffen.“ Er hustet. „Noch nicht.“ # lore: jagdnacht # lore: bestienseuche # lore: buergerjagd
+    „Warum ist hier jede Tür verriegelt?“ „Eine Jagdnacht“, sagt er, als nenne er das Wetter. „Dann schieben die Leute die Riegel vor und hängen Räucherwerk ins Fenster, und wer das Warten nicht mehr aushält, nimmt Fackel und Mistgabel und geht selbst hinaus.“ Er senkt die Stimme, obwohl niemand zuhört. „Was ihnen da draußen begegnet, haben sie meistens gestern noch gegrüßt. Es ist eine Seuche, verstehen Sie. Aus Menschen werden Bestien, bei dem einen langsam, beim anderen über Nacht, und wen es als Nächsten trifft, weiß keiner. Mich hat es noch nicht getroffen.“ Er hustet. „Noch nicht.“ # lore: jagdnacht # lore: bestienseuche # lore: buergerjagd
     -> themen
-* [Nach dem bleichen Blut fragen #fliesst]
-    Die Worte vom Zettel in der Klinik, bleiches Blut: Gilbert denkt lange darüber nach, die Stirn am Eisen. „Das Wort kenne ich nicht. Aber Blut ist in dieser Stadt die Sache der Heilenden Kirche, jeder Tropfen, und ihr Blut, sagt man, kommt aus der großen Kathedrale drüben im Osten des Tals, so wie Wasser aus einer Quelle. Wenn einer das Wort kennt, dann sie.“ Er hustet, und als er wieder kann, spricht er leiser. „Einem Fremden sagt hier keiner etwas, in gewöhnlichen Nächten. Aber eine Jagdnacht ist keine gewöhnliche. Da stehen Türen offen, die sonst zu sind. Nur nicht die, an die man klopft.“ # lore: heilende_kirche # lore: paleblood
+// WARUM: Der Spieler fragt nach dem Grund seiner Reise (der Zettel in der Klinik). Öffnet die Heilende Kirche als Herrin des Blutes und den Weg zur Kathedrale.
+* [„Wissen Sie, was bleiches Blut ist?“ #fliesst]
+    „Wissen Sie, was bleiches Blut ist?“ Gilbert wiederholt die zwei Wörter, die Stirn am Eisen, und denkt lange darüber nach. „Davon habe ich nie gehört. Aber Blut ist in dieser Stadt die Sache der Heilenden Kirche, jeder Tropfen, und ihr Blut, sagt man, kommt aus der großen Kathedrale drüben im Osten des Tals, so wie Wasser aus einer Quelle. Wenn einer das Wort kennt, dann sie.“ Er hustet, und als er wieder kann, spricht er leiser. „Einem Fremden sagt hier keiner etwas, in gewöhnlichen Nächten. Aber eine Jagdnacht ist keine gewöhnliche. Da stehen Türen offen, die sonst zu sind. Nur nicht die, an die man klopft.“ # lore: heilende_kirche # lore: paleblood
     ~ gilbert_bruecke = true
     ~ fr_frei_machen(fr_blut)
     -> themen
-* {gilbert_bruecke} [Nach dem Weg zur Kathedrale fragen #fliesst]
+// WARUM: Der Spieler fragt nach dem Weg. Öffnet die Brücke, das Gerücht von der Bestie, die einmal in der Kirche diente, und die Sperre der Kirche; bereitet Nadelöhr 1 vor.
+* {gilbert_bruecke} [„Wie komme ich zur Kathedrale?“ #fliesst]
+    „Wie komme ich zur Kathedrale?“
     { kleriker == "":
         ~ gilbert_kleriker = true
-        „Zur Kathedrale? Über die große Brücke, einen anderen Weg kenne ich nicht. Gesperrt soll sie sein, sagt man, seit die Jagd begann, aber was heißt das schon.“ Er lauscht in die Richtung, als könne er es von hier aus hören. „Und auf der Brücke haust etwas. Es soll einmal in der Kirche gedient haben, gesungen oder gepredigt, so genau weiß das keiner. Man sagt auch, aus Kirchenleuten werden die schlimmsten.“ Er greift nicht nach dem Räucherwerk, wie man es in Yharnam tut, wenn davon die Rede ist. Er hat keins. # lore: kleriker_bestien # lore: kirche_sperrt_bruecke
+        „Über die große Brücke, einen anderen Weg kenne ich nicht. Gesperrt soll sie sein, sagt man, seit die Jagd begann, aber was heißt das schon.“ Er lauscht in die Richtung, als könne er es von hier aus hören. „Und auf der Brücke haust etwas. Es soll einmal in der Kirche gedient haben, gesungen oder gepredigt, so genau weiß das keiner. Man sagt auch, aus Kirchenleuten werden die schlimmsten.“ Er greift nicht nach dem Räucherwerk, wie man es in Yharnam tut, wenn davon die Rede ist. Er hat keins. # lore: kleriker_bestien # lore: kirche_sperrt_bruecke
     - else:
-        „Zur Kathedrale? Über die große Brücke.“ Sein Blick geht zu deinen Händen und bleibt dort. „Aber das wissen Sie schon, nicht wahr? Sie waren oben. Ist es … ist es noch da?“ # lore: kleriker_bestien
+        „Über die große Brücke.“ Sein Blick geht zu deinen Händen und bleibt dort. „Aber das wissen Sie schon, nicht wahr? Sie waren oben. Ist es … ist es noch da?“ # lore: kleriker_bestien
     }
     -> themen
-* {gilbert_bruecke} [Nach den Jägern der Kirche fragen #fliesst]
+// WARUM: Der neue Jäger fragt nach seinesgleichen. Öffnet das Gerücht vom ersten Jäger der Kirche ohne Namen (Wissenssperre: Ludwig) und das Silberschwert, das auf der Brücke wiederkehrt.
+* {gilbert_bruecke} [„Gibt es hier noch andere Jäger?“ #fliesst]
     // [KANON lore:fraktionen/jaeger] Ludwig führte die ersten Jäger der Kirche an; viele Kirchenjäger waren Kleriker. Hier nur als Gerücht, ohne Namen.
     // [KANON lore:gegenstaende/heilende-kirche] Das Silberschwert ist das Zeichen der Kirchenjäger (Abzeichen der Schwertjäger, auf der Brücke im Fell der Bestie); Ludwig warb Bürger als Jäger an (Kleidung der Yharnam-Jäger).
     // [ERWEITERT] Das Schwert auf den Haustüren und die Kratzer. Die Mondklinge gestrichen (Zusatzinhalt, Wissenssperre).
-    Wer für die Kirche jagt? Gilbert lehnt die Stirn ans Gitter. „Die Leute hier erzählen von einem, der als Erster für sie gejagt hat. Er hat geworben, wen er bekommen konnte: Fuhrknechte, Gerber, Söhne von Wäscherinnen. Und Kleriker. Viele Kleriker.“ Er wartet, bis der Husten vorbei ist. „Auf den Abzeichen seiner Leute war ein Schwert aus Silber, und eine Zeit lang hat man es ihnen zu Ehren auf die Haustüren gemalt.“ Ein schiefes Lächeln. „Dann hat man es wieder abgekratzt. An manchen Türen sieht man noch die Kratzer. Seinen Namen sagt hier keiner gern; ich habe einmal gefragt, warum, und ringsum sind die Läden zugefallen.“ # notiz: erster_kirchenjaeger
+    „Gibt es hier noch andere Jäger?“ Gilbert lehnt die Stirn ans Gitter. „Für die Kirche jagen welche, das schon. Die Leute hier erzählen von einem, der als Erster für sie gejagt hat. Er hat geworben, wen er bekommen konnte: Fuhrknechte, Gerber, Söhne von Wäscherinnen. Und Kleriker. Viele Kleriker.“ Er wartet, bis der Husten vorbei ist. „Auf den Abzeichen seiner Leute war ein Schwert aus Silber, und eine Zeit lang hat man es ihnen zu Ehren auf die Haustüren gemalt.“ Ein schiefes Lächeln. „Dann hat man es wieder abgekratzt. An manchen Türen sieht man noch die Kratzer. Seinen Namen sagt hier keiner gern; ich habe einmal gefragt, warum, und ringsum sind die Läden zugefallen.“ # notiz: erster_kirchenjaeger
     -> themen
-+ [Dich verabschieden #fliesst]
+// WARUM: Der Spieler beendet das Gespräch, wann er will. Wer Gilbert nicht abgewiesen hat, bekommt beim Abschied das Feuer (Waffe gegen Mob, Brücke und Gascoigne).
++ [Die Hand zum Abschied heben #fliesst]
     { gilbert >= 0 and not gilbert_geschenk: -> geschenk }
-    { gilbert < 0: Hinter dir hustet er, als du gehst, und tut nicht so, als hätte er dich gehört. }
-    { gilbert >= 0: „Gute Jagd“, sagt Gilbert zum Abschied, und er meint es. }
+    { gilbert < 0: Du hebst die Hand, und hinter dem Gitter hustet er und tut nicht so, als hätte er es gesehen. }
+    { gilbert >= 0: Du hebst die Hand. „Gute Jagd“, sagt Gilbert, und er meint es. }
     -> k1_b_ankunft
 
 = geschenk
 ~ gilbert_geschenk = true
 ~ feuer = true
 // [KANON lore:figuren/gilbert] Er kann nicht aufstehen: Er angelt den Tank mit dem Stock heran.
-Du willst dich verabschieden, doch er hebt die Hand. „Warten Sie.“ Er beugt sich zur Seite, so weit der Stuhl es erlaubt, und angelt mit seinem Stock nach etwas unter dem Fensterbrett, das dort seit Wochen gestanden haben muss, denn als es über die Dielen schleift, zieht es eine Bahn durch den Staub. Es ist ein eiserner Tank mit Schlauch und Düse. Mit beiden Händen schiebt er ihn dir durch die Lücke zwischen zwei Stäben, so behutsam, als reiche er ein schlafendes Kind über einen Zaun, und danach hustet er lange, länger als je zuvor, die Stirn am kalten Eisen.
+Noch ehe deine Hand oben ist, hebt er seine. „Warten Sie.“ Er beugt sich zur Seite, so weit der Stuhl es erlaubt, und angelt mit seinem Stock nach etwas unter dem Fensterbrett, das dort seit Wochen gestanden haben muss, denn als es über die Dielen schleift, zieht es eine Bahn durch den Staub. Es ist ein eiserner Tank mit Schlauch und Düse. Mit beiden Händen schiebt er ihn dir durch die Lücke zwischen zwei Stäben, so behutsam, als reiche er ein schlafendes Kind über einen Zaun, und danach hustet er lange, länger als je zuvor, die Stirn am kalten Eisen.
 „Feuer“, sagt er, als er wieder kann. „Die Bestien fürchten es mehr als alles andere. Ich habe es nie benutzt.“ Die Düse ist schwarz von Ruß, alt und tief ins Eisen gebrannt. Er sieht, wohin du siehst, und sieht weg. „Das Blut dieser Stadt hat mir Aufschub gekauft, wissen Sie. Nur Aufschub, nichts weiter. Ich dachte immer, eines Tages brauche ich das Ding selbst, und dann …“ Der Husten schneidet ihm den Satz ab, und er nimmt ihn nicht wieder auf. „Nehmen Sie es einfach.“ # notiz: bestien_feuer
 { gilbert >= 1:
     „Und noch etwas.“ Er zögert. „Wenn Sie über die Brücke kommen, erzählen Sie mir, was dahinter liegt. Ich werde es nicht mehr selbst sehen.“ # quest: gilbert_bericht
@@ -205,6 +252,7 @@ Du willst dich verabschieden, doch er hebt die Hand. „Warten Sie.“ Er beugt 
 // [KANON lore:figuren/einsame-alte-frau] Die einsame alte Frau: Fremde und die Kirche seien schuld; fragt später nach einem sicheren Ort.
 // [ERWEITERT] Der Hund vor ihrer Tür, die fromme Stimme und Violas Spur (sie fragte nach dem Weg zu den Gräbern). Salz und ein umgedrehter Besen auf den Schwellen (Abwehrbrauch), das gute Kleid der Alten, die Türen, die sich innen über dem Husten schließen.
 // Lektorat 2026-11-05: Hier dreht innen jemand einen Schlüssel um; das Atmen hinter dem Holz bleibt dem Anschlag.
+// Überarbeitung 2026-11-06: Der Hund ist der, dessen Bellen der Spieler gefolgt ist (Ernte der Spur aus k1_viertel1); das Versprechen an die Alte als Rede des Jägers.
 -> betreten("tueren") ->
 { k1_b_tueren == 1:
     Unten liegt eine Gasse aus Türen, eine neben der anderen, so dicht, dass kaum ein Fenster dazwischen Platz hat, und vor jeder hängt eine rote Räucherlampe, deren Rauch an der Hauswand hinaufkriecht, bis er sich unter dem nächsten Sims staut. Auf manchen Schwellen liegt eine Prise Salz, auf einer ein umgedrehter Besen. In einer Jagdnacht klopft man in Yharnam nicht an, sagt man, und wer es doch tut, will etwas, das man ihm besser nicht gibt. # bild: tueren # stimmung: spannung
@@ -212,15 +260,18 @@ Du willst dich verabschieden, doch er hebt die Hand. „Warten Sie.“ Er beugt 
     An der ersten Tür, vor der du stehen bleibst, fährt dich eine Männerstimme an, noch ehe deine Hand das Holz berührt: „Ein Fremder. Natürlich. Wer sonst klopft in einer Jagdnacht? Ihr habt sie doch hergebracht, die Seuche, ihr mit eurem kranken Blut, und jetzt wollt ihr rein.“ Ein Riegel wird vorgeschoben, dann ein zweiter, obwohl der erste genügt hätte. # lore: fremde # lore: raeucherwerk
 }
 - (wahl)
-* [Zu der Tür mit dem mageren Hund #fliesst]
+// WARUM: Der Spieler geht zu dem Hund, dem er gefolgt ist: die einsame alte Frau, die Fremden die Schuld gibt. Öffnet ein Versprechen, das in Kapitel 2 Folgen hat.
+* [Zu dem Hund am Ende der Gasse #fliesst]
     ~ alte_frau = true
-    Ganz am Ende der Gasse, wo eine Treppe zu den Kanälen hinunterführt, wartet die Tür mit dem mageren Hund. Er liegt quer über der Schwelle und knurrt dich an, ohne aufzustehen, und wenn er knurrt, bewegt sich nur sein Bauch. Hinter der Tür antwortet eine alte Stimme, bevor du etwas gesagt hast, brüchig und bitter. „Fremde. Nichts als Fremde. Und die Kirche lässt sie alle rein mit ihrem Blut, und dann wundert man sich.“ Ein Schniefen, und die Stimme wird dünn. „Das Räucherwerk hält sie fern. Sonst hält gar nichts mehr irgendwas fern.“ # lore: raeucherwerk
+    Zu dem Hund am Ende der Gasse, wo eine Treppe zu den Kanälen hinunterführt: Mager liegt er quer über einer Schwelle und knurrt dich an, ohne aufzustehen, und wenn er knurrt, bewegt sich nur sein Bauch. Hinter der Tür antwortet eine alte Stimme, bevor du etwas gesagt hast, brüchig und bitter. „Fremde. Nichts als Fremde. Und die Kirche lässt sie alle rein mit ihrem Blut, und dann wundert man sich.“ Ein Schniefen, und die Stimme wird dünn. „Das Räucherwerk hält sie fern. Sonst hält gar nichts mehr irgendwas fern.“ # lore: raeucherwerk
     -> frau
+// WARUM: Der Spieler hört zu, statt zu klopfen. Belohnt das Leise mit Violas Spur (die Dame mit der roten Brosche fragte nach den Gräbern), die beim Mädchen und am Grab wiederkehrt.
 * [An der Tür mit den drei Lampen lauschen #fliesst]
     ~ frau_betet = true
     An der Tür mit den drei Lampen, das Ohr dicht am Holz: Dahinter murmelt eine Frauenstimme ein Gebet, Silbe für Silbe, und bricht ab, als dein Stiefel auf dem Stein knirscht. „Gehen Sie weiter. Das Blut behüte Sie, aber gehen Sie weiter.“ Die Stimme ist heiser vom Beten, und Schärfe hat sie keine mehr. „Die Kirche hat uns das Räucherwerk gesegnet. Ohne die Kirche wären wir alle schon … Sie verstehen.“ # lore: heilende_kirche
     Nach einer Weile, mehr zu sich selbst: „Da war vorhin schon eine. Eine Dame, mit so einer großen roten Brosche. Hat geklopft und nach dem Weg zu den Gräbern gefragt. Ich hab nicht aufgemacht.“ Die Silben fangen wieder an, schneller als zuvor. # notiz: viola_spur
     -> wahl
+// WARUM: Der Spieler sammelt Stimmen der Stadt, eine nach der anderen (bis zu drei): Gesundheitslüge, Todeslust, Aberglaube. Reine Atmosphäre und Volkskunde; keine Gefahr.
 + {tuer_stimme < 3} [Weiter an den Türen klopfen #fliesst]
     ~ tuer_stimme = tuer_stimme + 1
     { tuer_stimme:
@@ -232,18 +283,22 @@ Du willst dich verabschieden, doch er hebt die Hand. „Warten Sie.“ Er beugt 
         Hinter der letzten Tür vor der Treppe fleht eine Frau, so leise, dass du dich bücken musst, um sie zu verstehen: „Bitte nicht. Bitte hören Sie auf zu klopfen. Jeder Laut bringt Unglück ins Haus, jeder einzelne, und wir haben schon so viel davon.“ Danach kommt kein Laut mehr, auch kein Schritt, der sich entfernt. Sie steht noch hinter dem Holz, eine Handbreit von dir, und wartet, bis du gehst.
     }
     -> wahl
+// WARUM: Der Spieler erzwingt eine Antwort mit Gewalt. Er erfährt vom Feuer auf der Hauptstraße und davon, dass man Fremde dafür hält (Warnung vor dem Mob), verliert aber die übrigen Türen: Die Gasse schließt sich.
 * [Mit der Faust gegen ein Türblatt schlagen #fliesst]
     Dreimal fährt die Faust gegen das Türblatt, und das Holz dröhnt bis in die Nachbarhäuser; die Lampe davor schaukelt an ihrem Haken und wirft roten Schein die Gasse hinauf und hinab. Eine junge Stimme antwortet, schnell vor Angst: „Die gehen selber jagen! Mit Gabeln, mit Fackeln! Oben auf der Hauptstraße, am Feuer, da hängt schon einer … Und Fremde halten sie immer dafür, immer! Gehen Sie doch!“ Danach verflucht sie dich mit Wörtern, die du nicht kennst, und als du dich abwendest, schwankt die Lampe noch immer. # lore: buergerjagd
     -> k1_viertel1
+// WARUM: Der Spieler geht, wann er will. Was er nicht gehört hat, bleibt hinter den Türen.
 + [Die Türen hinter dir lassen #fliesst]
-    Das Lachen folgt dir bis an die Treppe und noch zwei Stufen hinauf.
+    Die Türen bleiben hinter dir, aber das Lachen folgt dir bis an die Treppe und noch zwei Stufen hinauf.
     -> k1_viertel1
 
 = frau
 // [KANON lore:figuren/einsame-alte-frau] Sie fragt später nach einem sicheren Ort (Kapelle oder Klinik, erst ab Kapitel 2).
-* [Ihr einen sicheren Ort versprechen #fliesst]
+// WARUM: Der Spieler verspricht einer Frau, die ihn verachtet, einen sicheren Ort. Öffnet die Quest der alten Frau (Kapitel 2); der Hund hört auf zu knurren.
+* [„Ich finde einen sicheren Ort für Sie.“ #fliesst]
     ~ alte_frau_versprochen = true
-    Einen sicheren Ort versprichst du ihr, irgendwo in dieser Stadt, und Bescheid, sobald du ihn gefunden hast. Sie schnaubt, trocken, und das Schnauben wird zu einem Husten. „Sicher. Natürlich.“ Aber der Hund hört auf zu knurren, und als du gehst, hörst du, wie sie hinter der Tür murmelnd etwas wiederholt, als wolle sie es sich merken. # quest: alte_frau_ort
+    „Ich finde einen sicheren Ort für Sie, und dann sage ich Ihnen Bescheid.“ Sie schnaubt, trocken, und das Schnauben wird zu einem Husten. „Sicher. Natürlich.“ Aber der Hund hört auf zu knurren, und als du gehst, hörst du, wie sie hinter der Tür murmelnd etwas wiederholt, als wolle sie es sich merken. # quest: alte_frau_ort
+// WARUM: Der Spieler lässt die Verbitterte, wie sie ist. Kein Versprechen, keine Quest; nichts Falsches, nur nichts Gewonnenes.
 * [Ohne Antwort weitergehen #fliesst]
     Ohne Antwort weiter, und die Stimme hinter der Tür ruft dir nichts nach. Der Hund sieht dir nach, bis du um die Ecke bist; erst dann legt er den Kopf wieder auf die Pfoten.
 - -> k1_viertel1
@@ -253,10 +308,12 @@ Du willst dich verabschieden, doch er hebt die Hand. „Warten Sie.“ Er beugt 
 // [ERWEITERT] Ein Anschlag der Heilenden Kirche zur Jagdnacht, eigener Wortlaut. Das Siegel bleibt unbestimmt (rotes Wachs, abgegriffenes Zeichen): Das Archiv kennt kein Zeichen der Kirche, und ein Kelch zeigte auf Gesperrtes (Faktencheck b_yharnam Nr. 9). Die übereinander geklebten Datumsstreifen: Die Jagd kehrt wieder.
 // [KANON lore:fraktionen/heilende-kirche] Die Kirche verwaltet das Blut; die Bürger verriegeln sich mit Räucherwerk.
 // Die Kirche ist in Kapitel 1 nur zu hören und zu lesen, nie zu sehen (Entscheidung des Nutzers 2026-11-04). Ortsbild A, der Anschlag C, das Atmen hinter der Tür B.
+// [ERWEITERT, Überarbeitung 2026-11-06] Das Glöckchen, dem der Spieler gefolgt ist, schlägt nur der Wind an; sein Strick ist über der Tür abgeschnitten. Nicht erklären.
+//   Die Kapelle wird jetzt beim Namen genannt (vorher hing „Sie duckt sich“ am Satz der Option).
 -> betreten("anschlag") ->
 ~ fr_frei_machen(fr_kirche)
-Sie duckt sich zwischen zwei Häuser, kaum breiter als ein Hauseingang, mit einer Tür aus schwarzem Holz und einem Fenster darüber, das man von innen mit Brettern vernagelt hat. Auf der Tür hängt ein Anschlag, mit vier Nägeln befestigt; drei sind braun vor Rost, der vierte ist neu und blank. Das Papier hat sich in der feuchten Luft gewellt, und als du dich vorbeugst, riecht es herb und harzig, nach Weihrauch. # bild: tueren # stimmung: spannung
-Oben sitzt ein Siegel aus rotem Wachs, darin ein Zeichen, so oft gestempelt, dass seine Linien sich abgegriffen haben wie die Prägung einer Münze, die durch zu viele Hände ging. Darunter steht in großen, sauberen Lettern:
+Die Kapelle duckt sich zwischen zwei Häuser, kaum breiter als ein Hauseingang, mit einer Tür aus schwarzem Holz und einem Fenster darüber, das man von innen mit Brettern vernagelt hat. Auf dem First sitzt ein Türmchen aus Latten, und darin hängt das Glöckchen, dem du gefolgt bist, nicht größer als ein Milcheimer; es schlägt an, wenn der Wind in die Gasse fährt. Der Strick, an dem man es läuten könnte, ist dicht über dem Türsturz abgeschnitten. # bild: tueren # stimmung: spannung
+Auf der Tür hängt ein Anschlag, mit vier Nägeln befestigt; drei sind braun vor Rost, der vierte ist neu und blank. Das Papier hat sich in der feuchten Luft gewellt, und als du dich vorbeugst, riecht es herb und harzig, nach Weihrauch. Oben sitzt ein Siegel aus rotem Wachs, darin ein Zeichen, so oft gestempelt, dass seine Linien sich abgegriffen haben wie die Prägung einer Münze, die durch zu viele Hände ging. Darunter steht in großen, sauberen Lettern:
 An die Gemeinde in der Nacht der Jagd. Bleibt in euren Häusern und lasst das Räucherwerk nicht erlöschen. Die Jäger der Kirche wachen über euch. Wer Fieber an sich spürt, wer Durst hat, den kein Wasser stillt, wer seine eigene Stimme fremd findet, der zögere nicht und begebe sich zur nächsten Stelle des Blutes. Das Blut der Kirche heilt, was es berührt. Fürchtet nicht das Blut. Fürchtet, was ohne das Blut aus euch würde. # stil: anschlag # lore: heilende_kirche
 Gegeben im Namen der Heilenden Kirche, zur Nacht der Jagd. # stil: anschlag
 Das Datum unter der letzten Zeile steht auf einem schmalen Papierstreifen, der über einen älteren geklebt ist, und an der Kante, wo die Feuchtigkeit den Leim gelöst hat, siehst du, dass unter dem älteren noch weitere liegen, Streifen auf Streifen, jeder ein wenig gelber als der darüber.
@@ -271,14 +328,19 @@ Hinter der Tür, ganz nah am Holz, atmet jemand. Als dein Schatten auf die Tür 
 // [ERWEITERT] Wortlaut und Schreiber des Zettels; der eine Takt mit der Pistole. Den alten Stadtteil nicht beim Namen nennen, nur „unten im Tal, wo die Stadt früher war“ (Faktencheck).
 // [ERWEITERT] Das Seil am Geländer, blank gescheuert (Lektorat 1.1 f): Jemand hat den Stuhl hinaufgezogen. Nicht erklären. Sein Lachen pfeift mit dem Atem (eigener Laut, Lektorat 1.2).
 // [Deutung, nie aussprechen] Der Rollstuhl gleicht dem des Mannes in der Klinik (RK1 §1). Nur stehen lassen: die knarrenden Räder.
+// Überarbeitung 2026-11-06: Das Knarren, dem der Spieler gefolgt ist, ist der Stuhl, der bei jedem Atemzug nachgibt (Ernte der Spur und Anzeichen vor dem Schuss).
+//   „Gestalt … sie“ wurde „ein Mann … er“ (der Wechsel des Pronomens warf heraus). Wendels Mantel ausgeschrieben (Ü10, vorher PLATZHALTER): Er hängt hinter der Haustür
+//   (hinter dem Blatt der offenen Tür) und zeigt sich erst beim Gehen; „der Haken schwingt leer“ beim Hängenlassen war ein Logikfehler.
 -> betreten("haus") ->
 ~ kampfanfang = -> k1_b_haus
 { k1_b_haus == 1:
     Hinter der Tür liegt ein Flur, in dem seit Wochen niemand Licht gemacht hat, und eine Treppe, auf deren Stufen der Staub so dick liegt, dass deine Stiefel Abdrücke hinterlassen wie im ersten Schnee. Nur in der Mitte jeder Stufe ist er weggewischt, in zwei schmalen, gleichmäßigen Bahnen. Am Geländer ist ein Seil festgeknotet, und auf halber Höhe ist es an einer Stelle blank gescheuert. Es riecht nach kaltem Talg und nach einem Zimmer, in dem jemand schläft. # bild: haus_dunkel # stimmung: spannung
 }
-Im ersten Stock steht ein Rollstuhl mit dem Rücken zum Fenster, und in ihm sitzt eine Gestalt unter einer Decke, den Kopf auf der Brust. Sie atmet durch den offenen Mund, lang und feucht. Als die Diele unter dir knarrt, hebt sie den Kopf, die Räder knarren mit, und aus dem offenen Mund kommt ein Lachen, das mit dem Atem geht, hoch und pfeifend, ein Ton bei jedem Einziehen, während unter der Decke eine Hand hervorkommt und in der Hand eine Pistole, deren Lauf erst zittert und dann ganz ruhig wird. Rechts von dir steht ein Schrank mit einer schweren Eichentür; links ist nur die nackte Wand. # anzeichen: schuss # kampf: rollstuhl
+Im ersten Stock steht ein Rollstuhl mit dem Rücken zum Fenster, und in ihm sitzt ein Mann unter einer Decke, den Kopf auf der Brust. Er atmet durch den offenen Mund, lang und feucht, und bei jedem Zug gibt der Stuhl ein wenig nach und knarrt. Als unter deinem Stiefel eine Diele knackt, hebt er den Kopf, und aus dem offenen Mund kommt ein Lachen, das mit dem Atem geht, hoch und pfeifend, ein Ton bei jedem Einziehen, während unter der Decke eine Hand hervorkommt und in der Hand eine Pistole, deren Lauf erst zittert und dann ganz ruhig wird. Rechts von dir steht ein Schrank mit einer schweren Eichentür; links ist nur die nackte Wand. # anzeichen: schuss # kampf: rollstuhl
+// WARUM: Richtig für den Aufmerksamen: Der Lauf wird ruhig, und rechts steht das einzige, was eine Kugel aufhält. Der Schuss geht ins Holz, der Spieler bleibt heil.
 + [Nach rechts hinter den Schrank #fliesst]
-    Der Schuss schlägt in die Eichentür, eine Handbreit über deinem Kopf, und die Splitter regnen dir in den Kragen. Bevor er nachladen kann, bist du bei ihm und drehst ihm die Pistole aus der Hand. Er wehrt sich nicht. Sein Lachen pfeift weiter durch den offenen Mund, und seine Augen folgen dir, wie ein Kind einem Ball folgt.
+    Nach rechts, hinter die Eichentür: Der Schuss schlägt in das Holz, eine Handbreit über deinem Kopf, und die Splitter regnen dir in den Kragen. Bevor er nachladen kann, bist du bei ihm und drehst ihm die Pistole aus der Hand. Er wehrt sich nicht. Sein Lachen pfeift weiter durch den offenen Mund, und seine Augen folgen dir, wie ein Kind einem Ball folgt.
+// WARUM: Falsch, und erkennbar: Ein ruhiger Lauf auf drei, vier Schritte Entfernung trifft. Der Spieler kommt an ihn heran, aber mit einer Kugel in der Seite.
 + [Geradeaus auf ihn zu #fliesst]
     Drei Schritte, vier, und auf halbem Weg schießt er. Die Kugel fährt dir in die Seite, heiß und dumpf zugleich.
     ~ zuletzt = schuss
@@ -290,14 +352,18 @@ Im ersten Stock steht ein Rollstuhl mit dem Rücken zum Fenster, und in ihm sitz
 Neben dem Rollstuhl steht ein Regal, und darauf, zwischen einer leeren Tasse und einem Gebetbuch mit gebrochenem Rücken, liegt ein Zettel, mehrmals gefaltet und wieder glattgestrichen. Die Schrift gehört einem, der selten schreibt und deshalb fest aufdrückt:
 Als die Jagd begann, sperrte die Kirche die große Brücke und überließ uns hier unten uns selbst. Unten im Tal, wo die Stadt früher war, brannte es die ganze Nacht, und von oben kam keiner. Sie wachen über uns, schreiben sie an die Türen; über ihre Brücke wachen sie. # stil: tagebuch # lore: kirche_sperrt_bruecke
 ~ fr_frei_machen(fr_kirche)
-Der Zettel knistert, als du ihn einsteckst. Auf der Treppe, die Hand am Seil, hörst du, wie oben der Mann wieder durch den Mund zu atmen beginnt, lang und feucht, als hätte ihn nie jemand gestört.
-// Fundstück (Umbau 2026-11-06, ersetzt den Kauf bei den Boten): Wendels Mantel. PLATZHALTER, knapp.
-Im Flur unten hängt, an einem Haken hinter der Tür, ein Jägermantel, langes geöltes Leder, schwer wie ein Zelt nach dem Regen. Er riecht nach Teer, nach Pulver und nach einem Menschen, der nicht du bist. Am Saum fehlt ein Stück, glatt abgetrennt. Innen, ins Futter gestickt, mit rotem Garn und ungeschickten Stichen, steht ein Name: Wendel.
+Der Zettel knistert, als du ihn einsteckst. Auf der Treppe, die Hand am Seil, hörst du, wie oben der Mann wieder durch den Mund zu atmen beginnt, lang und feucht, und wie der Stuhl dazu knarrt, als hätte ihn nie jemand gestört.
+// Fundstück (Umbau 2026-11-06, ersetzt den Kauf bei den Boten): Wendels Mantel. Ausgeschrieben 2026-11-06 (vorher Platzhalter).
+// [ERWEITERT] Das fehlende, glatt abgetrennte Stück am Saum (erntet Eileen: „Wendel. Steht dir nicht.“), der Geruch nach Teer und Pulver (erntet Gascoigne: „Teer. Pulver. Und Wendel.“),
+//   der Name im Futter (erntet Gascoignes „ein Name im Futter“). Wer Wendel war und warum sein Mantel hier hängt, bleibt offen: Gascoigne zieht den Schluss, nicht der Text.
+Erst unten, als du nach der Haustür greifst, die noch immer offen steht, siehst du, was die ganze Zeit hinter ihrem Blatt hing, an einem Haken an der Wand: ein Jägermantel, langes geöltes Leder, schwer wie ein Zelt nach dem Regen. Er riecht nach Teer, nach Pulver und nach einem Menschen, der nicht du bist. Am Saum fehlt ein Stück, glatt abgetrennt. Innen, ins Futter gestickt, mit rotem Garn und ungeschickten Stichen, steht ein Name: Wendel.
+// WARUM: Der Spieler nimmt einem Toten, den andere kennen, den Mantel. Nicht falsch, aber mit Folgen: Gascoigne und Eileen erkennen ihn am Geruch und am Saum, und der Spieler muss sagen, woher er ihn hat.
 * [Den Mantel vom Haken nehmen #fliesst]
     ~ mantel = true
-    Du nimmst ihn vom Haken und ziehst ihn über. Er sitzt, als hätte jemand ihn für deine Schultern gearbeitet, und das gefällt dir nicht. # notiz: mantel_wendel
-* [Ihn hängen lassen #fliesst]
-    Du lässt ihn hängen. Die Tür fällt hinter dir ins Schloss, und der Haken schwingt noch eine Weile leer.
+    Der Mantel kommt schwer vom Haken, und als du ihn überziehst, sitzt er, als hätte ihn jemand für deine Schultern gearbeitet. Das Futter ist kalt, und es wird nicht wärmer. # notiz: mantel_wendel
+// WARUM: Der Spieler lässt dem Toten, was ihm gehört. Kein Fundstück, keine Fragen von Gascoigne und Eileen; der Name im Futter bleibt die einzige Spur.
+* [Den Mantel hängen lassen #fliesst]
+    Der Mantel bleibt am Haken. Als du die Tür hinter dir zuziehst, schlägt er einmal von innen gegen das Holz, schwer, so wie sich einer anlehnt, der müde ist.
 - -> k1_viertel1
 
 === k1_b_scheiterhaufen ===
