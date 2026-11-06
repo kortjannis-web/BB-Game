@@ -40,7 +40,7 @@ Der Nutzer ist der Visionär mit wenig Zeit. Claude führt, prüft und holt die 
 - Ton: im Browser erzeugt (eigene Spieluhr-Melodie) plus CC0-Geräusche, abschaltbar. Darstellung: Icons in der Leiste, sichtbare Kämpfe, Ortskarten, Notizbuch mit Reitern. Mechaniken: Stärkung bei der Puppe gegen Echos, Chronik der Nacht, Einsicht mit Kosten (alle 2026-11-04).
 
 ## Schreibregeln
-Vor jedem Schreiben die Skills laden: `erzaehlkunst-deutsch` (allgemeines Handwerk, aus dem Spielleiter des Nutzers im Repo AI-Dungeon-Master) und `hpl-horror` (Horror von gotischer Volkskunde bis kosmisch, Lovecraft, Perspektiven, Dialog, Buchbau; Projektteil in `references/bb-game.md`). Quellen in `.claude/skills/`, Pakete zum Hochladen in claude.ai in `skills-pakete/` (nach Änderungen neu packen).
+Vor jedem Schreiben zuerst den Skill **`stil-1800`** laden (seit 2026-11-06: Prinzipien-Netz aus den Meistern, Musterstellen, Wortkammer; `npm run stil -- <moment>` vor jeder Szene; bei Widerspruch gilt: Muster des Nutzers vor `stil-1800` vor den älteren Skills). Dazu die Skills `erzaehlkunst-deutsch` (allgemeines Handwerk, aus dem Spielleiter des Nutzers im Repo AI-Dungeon-Master) und `hpl-horror` (Horror von gotischer Volkskunde bis kosmisch, Lovecraft, Perspektiven, Dialog, Buchbau; Projektteil in `references/bb-game.md`). Quellen in `.claude/skills/`, Pakete zum Hochladen in claude.ai in `skills-pakete/` (nach Änderungen neu packen).
 - Nur eigene Prosa. **Keine wörtlichen Zitate** aus dem Spiel (Dialoge, Itemtexte), höchstens sinngemäß.
 - Kanon vor Erfindung; Erfindungen mit `// [ERWEITERT]` kennzeichnen, Kanon mit `// [KANON]`, Unsicheres mit `PRÜFEN:`.
 - [Deutung] nie als Tatsache erzählen, nur als Meinung einer Figur. [Offen] bleibt offen.

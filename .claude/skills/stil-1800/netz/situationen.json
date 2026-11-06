@@ -1,0 +1,2953 @@
+{
+ "stand": "2026-11-06, erste Fassung (Stufe 0)",
+ "hinweis": "Prinzipien je Moment nach Gewicht (von Hand), Musterstellen aus musterstellen/index.json, Wörter aus wortkammer/wortkammer.json (nach Moment und Kategorie gemischt, ohne Wörter der Dosis „selten“, höchstens drei der Dosis „höchstens 1 je Kapitel“, Altertümliches nur in Chronik, Dokument, Gerücht, Kirche, Fund und Stadt). Die Wörter sind ein Angebot, kein Pensum.",
+ "momente": {
+  "ankunft": {
+   "beispiel": "ein Ort zum ersten Mal: Yharnam hinter der Kehre, die Klinik",
+   "register": "A, dann B",
+   "hinweis": "Wetter und Ferne zuerst, dann die Schwelle, dann Menschen; ein Gleichnis, kein Inventar.",
+   "prinzipien": [
+    "SZ-01",
+    "SA-01",
+    "ST-01",
+    "WO-06",
+    "FB-05",
+    "SA-08",
+    "FB-01",
+    "SZ-02",
+    "WO-03",
+    "ST-05",
+    "AB-01",
+    "SP-07"
+   ],
+   "musterstellen": [
+    {
+     "datei": "musterstellen/ankunft.md",
+     "titel": "Ankunft in Waldbach",
+     "werk": "Georg Büchner, Lenz (1839)",
+     "woerter": 714
+    },
+    {
+     "datei": "musterstellen/ankunft.md",
+     "titel": "Einfahrt nach Venedig und die schwarze Gondel",
+     "werk": "Thomas Mann, Der Tod in Venedig (1912)",
+     "woerter": 597
+    },
+    {
+     "datei": "musterstellen/ankunft.md",
+     "titel": "Die Stadt, in der man stirbt",
+     "werk": "Rainer Maria Rilke, Die Aufzeichnungen des Malte Laurids Brigge (1910)",
+     "woerter": 502
+    }
+   ],
+   "woerter": [
+    {
+     "wort": "doch",
+     "dosis": "frei",
+     "register": "elegant-neutral",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "gar",
+     "dosis": "frei",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "wohl",
+     "dosis": "frei",
+     "register": "elegant-neutral",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "Tür",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Haus und Dinge alter Zeit"
+    },
+    {
+     "wort": "Strom",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Natur, Wetter und Nacht"
+    },
+    {
+     "wort": "dringen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben der Bewegung"
+    },
+    {
+     "wort": "bleich",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Licht, Dunkel und Farbe"
+    },
+    {
+     "wort": "beschwerlich",
+     "dosis": "höchstens 1 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Gestalt, Würde und Art der Dinge"
+    },
+    {
+     "wort": "Fremde",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Stadt, Weg und Menschen"
+    },
+    {
+     "wort": "Dunst",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Klang, Stille, Geruch und Tastsinn"
+    },
+    {
+     "wort": "zur Linken",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Fügungen und Wendungen"
+    },
+    {
+     "wort": "erblicken",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben der Wahrnehmung und Erkenntnis"
+    },
+    {
+     "wort": "eilen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben der Bewegung"
+    },
+    {
+     "wort": "knarren",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Klang, Stille, Geruch und Tastsinn"
+    },
+    {
+     "wort": "überblicken",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben der Wahrnehmung und Erkenntnis"
+    },
+    {
+     "wort": "dürr",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Alter, Verfall und Krankheit"
+    },
+    {
+     "wort": "verrammeln",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben des Tuns, Geschehens und Verweilens"
+    },
+    {
+     "wort": "Schloss",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Haus und Dinge alter Zeit"
+    },
+    {
+     "wort": "Stiege",
+     "dosis": "bis 3 je Kapitel",
+     "register": "volkstümlich",
+     "kategorie": "Haus und Dinge alter Zeit"
+    },
+    {
+     "wort": "Gaul",
+     "dosis": "bis 3 je Kapitel",
+     "register": "volkstümlich",
+     "kategorie": "Natur, Wetter und Nacht"
+    }
+   ]
+  },
+  "rueckkehr": {
+   "beispiel": "ein bekannter Ort, verändert",
+   "register": "B",
+   "hinweis": "Was gleich blieb, zuerst; die Veränderung als Leitmotiv, das sich verwandelt, nicht als Liste.",
+   "prinzipien": [
+    "SZ-02",
+    "WE-01",
+    "SZ-03",
+    "AB-01",
+    "FI-08",
+    "WO-02",
+    "FB-02",
+    "SA-08",
+    "SZ-01"
+   ],
+   "musterstellen": [
+    {
+     "datei": "musterstellen/rueckkehr.md",
+     "titel": "Der Heimkehrer in der Christnacht",
+     "werk": "Annette von Droste-Hülshoff, Die Judenbuche (1842)",
+     "woerter": 598
+    },
+    {
+     "datei": "musterstellen/rueckkehr.md",
+     "titel": "Die Villa ist eine Hütte, der Garten eine Ruine",
+     "werk": "Joseph von Eichendorff, Das Marmorbild (1819)",
+     "woerter": 403
+    },
+    {
+     "datei": "musterstellen/rueckkehr.md",
+     "titel": "Heimkehr auf den Herrenhof",
+     "werk": "Theodor Storm, Aquis submersus (1876)",
+     "woerter": 691
+    }
+   ],
+   "woerter": [
+    {
+     "wort": "ehe",
+     "dosis": "frei",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "indem",
+     "dosis": "frei",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "freilich",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "Tür",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Haus und Dinge alter Zeit"
+    },
+    {
+     "wort": "verlassen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Alter, Verfall und Krankheit"
+    },
+    {
+     "wort": "Fremde",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Stadt, Weg und Menschen"
+    },
+    {
+     "wort": "einsam",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Adjektive für Seele, Gemüt und Ausdruck"
+    },
+    {
+     "wort": "bleich",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Licht, Dunkel und Farbe"
+    },
+    {
+     "wort": "Einsamkeit",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Substantive der Seele, des Gemüts und Gedankens"
+    },
+    {
+     "wort": "hallen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Klang, Stille, Geruch und Tastsinn"
+    },
+    {
+     "wort": "inmitten",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Adverbien der Zeit und Weise"
+    },
+    {
+     "wort": "Trost",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Substantive der Seele, des Gemüts und Gedankens"
+    },
+    {
+     "wort": "Seufzer",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Klang, Stille, Geruch und Tastsinn"
+    },
+    {
+     "wort": "spähen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben der Wahrnehmung und Erkenntnis"
+    },
+    {
+     "wort": "Schloss",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Haus und Dinge alter Zeit"
+    },
+    {
+     "wort": "Heimat",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Stadt, Weg und Menschen"
+    },
+    {
+     "wort": "überblicken",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben der Wahrnehmung und Erkenntnis"
+    },
+    {
+     "wort": "Mantel",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Haus und Dinge alter Zeit"
+    },
+    {
+     "wort": "Stiege",
+     "dosis": "bis 3 je Kapitel",
+     "register": "volkstümlich",
+     "kategorie": "Haus und Dinge alter Zeit"
+    },
+    {
+     "wort": "Tenne",
+     "dosis": "bis 3 je Kapitel",
+     "register": "volkstümlich",
+     "kategorie": "Haus und Dinge alter Zeit"
+    }
+   ]
+  },
+  "begegnung": {
+   "beispiel": "eine Figur tritt auf: der Blutminister, Gilbert am Fenster",
+   "register": "B",
+   "hinweis": "Das Ungeheuer mit bürgerlicher Adresse; ein Steckbrief, dann trägt die Gewohnheit.",
+   "prinzipien": [
+    "SZ-06",
+    "FI-02",
+    "FI-01",
+    "FI-05",
+    "ST-04",
+    "WE-02",
+    "SA-05",
+    "FI-08",
+    "WO-04",
+    "FB-06"
+   ],
+   "musterstellen": [
+    {
+     "datei": "musterstellen/begegnung.md",
+     "titel": "Der Sandmann ist Coppelius",
+     "werk": "E. T. A. Hoffmann, Der Sandmann (1816)",
+     "woerter": 652
+    },
+    {
+     "datei": "musterstellen/begegnung.md",
+     "titel": "Der Fremde am Friedhof",
+     "werk": "Thomas Mann, Der Tod in Venedig (1912)",
+     "woerter": 667
+    },
+    {
+     "datei": "musterstellen/begegnung.md",
+     "titel": "Der grüne Jäger",
+     "werk": "Jeremias Gotthelf, Die schwarze Spinne (1842)",
+     "woerter": 778
+    }
+   ],
+   "woerter": [
+    {
+     "wort": "ferner",
+     "dosis": "frei",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "indessen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "worin",
+     "dosis": "frei",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "milde",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Adjektive für Seele, Gemüt und Ausdruck"
+    },
+    {
+     "wort": "Stirn",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Leib, Antlitz und Gebärde"
+    },
+    {
+     "wort": "edel",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Gestalt, Würde und Art der Dinge"
+    },
+    {
+     "wort": "Fremde",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Stadt, Weg und Menschen"
+    },
+    {
+     "wort": "Ehre",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Kirche, Glaube, Ordnung und Stand"
+    },
+    {
+     "wort": "Gunst",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Substantive der Seele, des Gemüts und Gedankens"
+    },
+    {
+     "wort": "Tracht",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Haus und Dinge alter Zeit"
+    },
+    {
+     "wort": "gebeugt",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Alter, Verfall und Krankheit"
+    },
+    {
+     "wort": "hochrot",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Licht, Dunkel und Farbe"
+    },
+    {
+     "wort": "sich wenden",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben der Bewegung"
+    },
+    {
+     "wort": "kränklich",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Alter, Verfall und Krankheit"
+    },
+    {
+     "wort": "mustern",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben der Wahrnehmung und Erkenntnis"
+    },
+    {
+     "wort": "Bube",
+     "dosis": "bis 3 je Kapitel",
+     "register": "volkstümlich",
+     "kategorie": "Stadt, Weg und Menschen"
+    },
+    {
+     "wort": "Kopftuch",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Haus und Dinge alter Zeit"
+    },
+    {
+     "wort": "blinzeln",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben der Wahrnehmung und Erkenntnis"
+    },
+    {
+     "wort": "Gnaden",
+     "dosis": "bis 3 je Kapitel",
+     "register": "kirchlich-amtlich",
+     "kategorie": "Kirche, Glaube, Ordnung und Stand"
+    },
+    {
+     "wort": "Maske",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Haus und Dinge alter Zeit"
+    }
+   ]
+  },
+  "gespraech": {
+   "beispiel": "Rede und Gegenrede, Lüge, Verschweigen",
+   "register": "Figurenrede, B",
+   "hinweis": "Jede Figur nach Stand und Absicht; Auskunft mit zweitem Sinn statt Kalenderspruch.",
+   "prinzipien": [
+    "FI-10",
+    "FI-05",
+    "FI-03",
+    "FI-07",
+    "FI-06",
+    "FI-09",
+    "ST-09",
+    "FB-10",
+    "SP-03"
+   ],
+   "musterstellen": [
+    {
+     "datei": "musterstellen/gespraech.md",
+     "titel": "Der Gondolier ohne Konzession",
+     "werk": "Thomas Mann, Der Tod in Venedig (1912)",
+     "woerter": 840
+    },
+    {
+     "datei": "musterstellen/gespraech.md",
+     "titel": "Simon und Friedrich vor der Beichte",
+     "werk": "Annette von Droste-Hülshoff, Die Judenbuche (1842)",
+     "woerter": 441
+    },
+    {
+     "datei": "musterstellen/gespraech.md",
+     "titel": "Kennt er sein Urteil?",
+     "werk": "Franz Kafka, In der Strafkolonie (1919)",
+     "woerter": 768
+    }
+   ],
+   "woerter": [
+    {
+     "wort": "doch",
+     "dosis": "frei",
+     "register": "elegant-neutral",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "gar",
+     "dosis": "frei",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "wohl",
+     "dosis": "frei",
+     "register": "elegant-neutral",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "teuer",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Adjektive für Seele, Gemüt und Ausdruck"
+    },
+    {
+     "wort": "weder … noch",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Fügungen und Wendungen"
+    },
+    {
+     "wort": "gewiss",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Adverbien der Zeit und Weise"
+    },
+    {
+     "wort": "schweigen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben des Sprechens und Schweigens"
+    },
+    {
+     "wort": "Geist",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Substantive der Seele, des Gemüts und Gedankens"
+    },
+    {
+     "wort": "deren",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verweis-, Mengen- und Artwörter"
+    },
+    {
+     "wort": "pflegen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben des Tuns, Geschehens und Verweilens"
+    },
+    {
+     "wort": "sich wenden",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben der Bewegung"
+    },
+    {
+     "wort": "Miene",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Leib, Antlitz und Gebärde"
+    },
+    {
+     "wort": "halblaut",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Klang, Stille, Geruch und Tastsinn"
+    },
+    {
+     "wort": "empfinden",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben der Wahrnehmung und Erkenntnis"
+    },
+    {
+     "wort": "sich besinnen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben des Fühlens und Erschreckens"
+    },
+    {
+     "wort": "Unrecht",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Stadt, Weg und Menschen"
+    },
+    {
+     "wort": "unwillig",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Adjektive für Seele, Gemüt und Ausdruck"
+    },
+    {
+     "wort": "den Kopf schütteln",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Fügungen und Wendungen"
+    },
+    {
+     "wort": "mein Lebtag",
+     "dosis": "bis 3 je Kapitel",
+     "register": "volkstümlich",
+     "kategorie": "Fügungen und Wendungen"
+    }
+   ]
+  },
+  "anzeichen": {
+   "beispiel": "etwas kündigt sich an: Laut, Geruch, Stille",
+   "register": "B, ruhig und genau",
+   "hinweis": "Das Ohr zuerst; zwei Gewohnte, ein Drittes; vor einer Wahl muss das Zeichen lesbar sein.",
+   "prinzipien": [
+    "SZ-04",
+    "AB-06",
+    "SP-06",
+    "SA-07",
+    "FB-02",
+    "SZ-03",
+    "AB-03",
+    "FB-09",
+    "WO-08"
+   ],
+   "musterstellen": [
+    {
+     "datei": "musterstellen/anzeichen.md",
+     "titel": "Um neun kommt der Sandmann",
+     "werk": "E. T. A. Hoffmann, Der Sandmann (1816)",
+     "woerter": 700
+    },
+    {
+     "datei": "musterstellen/anzeichen.md",
+     "titel": "Der süßliche Geruch und die Anschläge",
+     "werk": "Thomas Mann, Der Tod in Venedig (1912)",
+     "woerter": 628
+    },
+    {
+     "datei": "musterstellen/anzeichen.md",
+     "titel": "Das Geräusch im Zimmerwinkel",
+     "werk": "Heinrich von Kleist, Das Bettelweib von Locarno (1810)",
+     "woerter": 900
+    }
+   ],
+   "woerter": [
+    {
+     "wort": "ehe",
+     "dosis": "frei",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "gleichwohl",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "indes",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "dringen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben der Bewegung"
+    },
+    {
+     "wort": "dumpf",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Klang, Stille, Geruch und Tastsinn"
+    },
+    {
+     "wort": "unwillkürlich",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Adverbien der Zeit und Weise"
+    },
+    {
+     "wort": "seltsam",
+     "dosis": "höchstens 1 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Adjektive des Schreckens und des Unheimlichen"
+    },
+    {
+     "wort": "Ferne",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Substantive der Seele, des Gemüts und Gedankens"
+    },
+    {
+     "wort": "vernehmen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben der Wahrnehmung und Erkenntnis"
+    },
+    {
+     "wort": "Gebüsch",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Natur, Wetter und Nacht"
+    },
+    {
+     "wort": "Riegel",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Haus und Dinge alter Zeit"
+    },
+    {
+     "wort": "Herzklopfen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Leib, Antlitz und Gebärde"
+    },
+    {
+     "wort": "horchen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben der Wahrnehmung und Erkenntnis"
+    },
+    {
+     "wort": "in der Ferne",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Fügungen und Wendungen"
+    },
+    {
+     "wort": "Vorhang",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Haus und Dinge alter Zeit"
+    },
+    {
+     "wort": "Unruhe",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Substantive der Seele, des Gemüts und Gedankens"
+    },
+    {
+     "wort": "unruhig",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Adjektive für Seele, Gemüt und Ausdruck"
+    },
+    {
+     "wort": "scharren",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben des Tuns, Geschehens und Verweilens"
+    }
+   ]
+  },
+  "kampf": {
+   "beispiel": "Takt um Takt, Folge kurz und hart",
+   "register": "B: Anzeichen ruhig, Folge kurz",
+   "hinweis": "Anzeichen ruhig und genau mit Richtung; Folge als Komma-Kette; nach dem Sieg der nüchterne Fall.",
+   "prinzipien": [
+    "SZ-08",
+    "SP-06",
+    "SA-03",
+    "AB-03",
+    "SP-03",
+    "SP-05",
+    "AB-02",
+    "SA-07",
+    "WO-07",
+    "FB-06"
+   ],
+   "musterstellen": [
+    {
+     "datei": "musterstellen/kampf.md",
+     "titel": "Auf dem Ratsturm",
+     "werk": "E. T. A. Hoffmann, Der Sandmann (1816)",
+     "woerter": 442
+    },
+    {
+     "datei": "musterstellen/kampf.md",
+     "titel": "Der Mord vor der Kathedrale",
+     "werk": "Heinrich von Kleist, Das Erdbeben in Chili (1807)",
+     "woerter": 676
+    },
+    {
+     "datei": "musterstellen/kampf.md",
+     "titel": "Der Priester gegen den Grünen",
+     "werk": "Jeremias Gotthelf, Die schwarze Spinne (1842)",
+     "woerter": 604
+    }
+   ],
+   "woerter": [
+    {
+     "wort": "ehe",
+     "dosis": "frei",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "unterdessen",
+     "dosis": "frei",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "obgleich",
+     "dosis": "frei",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "nieder",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben der Bewegung"
+    },
+    {
+     "wort": "verwandeln",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben des Tuns, Geschehens und Verweilens"
+    },
+    {
+     "wort": "dumpf",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Klang, Stille, Geruch und Tastsinn"
+    },
+    {
+     "wort": "Augenblick",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Leib, Antlitz und Gebärde"
+    },
+    {
+     "wort": "plötzlich",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Adverbien der Zeit und Weise"
+    },
+    {
+     "wort": "krampfhaft",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Adjektive für Seele, Gemüt und Ausdruck"
+    },
+    {
+     "wort": "funkeln",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Licht, Dunkel und Farbe"
+    },
+    {
+     "wort": "in demselben Augenblick",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Fügungen und Wendungen"
+    },
+    {
+     "wort": "Rache",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Substantive der Seele, des Gemüts und Gedankens"
+    },
+    {
+     "wort": "erschöpft",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Alter, Verfall und Krankheit"
+    },
+    {
+     "wort": "Hilfe",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Stadt, Weg und Menschen"
+    },
+    {
+     "wort": "fürchterlich",
+     "dosis": "höchstens 1 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Adjektive des Schreckens und des Unheimlichen"
+    },
+    {
+     "wort": "geraten",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben des Tuns, Geschehens und Verweilens"
+    },
+    {
+     "wort": "Geheul",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Klang, Stille, Geruch und Tastsinn"
+    },
+    {
+     "wort": "blutig",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Alter, Verfall und Krankheit"
+    }
+   ]
+  },
+  "tod": {
+   "beispiel": "der Spieler stirbt; eine Figur stirbt",
+   "register": "B, dann A",
+   "hinweis": "Nebenfiguren im Nebensatz oder im Schnitt; der Tod des Spielers mit Ursache, damit er lernen kann.",
+   "prinzipien": [
+    "SZ-07",
+    "AB-02",
+    "WO-02",
+    "SZ-05",
+    "SZ-04",
+    "AB-05",
+    "WE-07",
+    "SP-05",
+    "SA-04"
+   ],
+   "musterstellen": [
+    {
+     "datei": "musterstellen/tod.md",
+     "titel": "Das tote Kind in Fouday",
+     "werk": "Georg Büchner, Lenz (1839)",
+     "woerter": 457
+    },
+    {
+     "datei": "musterstellen/tod.md",
+     "titel": "Der Tod des Kammerherrn Brigge",
+     "werk": "Rainer Maria Rilke, Die Aufzeichnungen des Malte Laurids Brigge (1910)",
+     "woerter": 806
+    },
+    {
+     "datei": "musterstellen/tod.md",
+     "titel": "Aschenbachs Tod am Strand",
+     "werk": "Thomas Mann, Der Tod in Venedig (1912)",
+     "woerter": 623
+    }
+   ],
+   "woerter": [
+    {
+     "wort": "zudem",
+     "dosis": "frei",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "allein",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "ebensowenig",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "Sterben",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Tod, Blut und Gewalt"
+    },
+    {
+     "wort": "nieder",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben der Bewegung"
+    },
+    {
+     "wort": "Leib",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Leib, Antlitz und Gebärde"
+    },
+    {
+     "wort": "gedenken",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben des Tuns, Geschehens und Verweilens"
+    },
+    {
+     "wort": "eingefallen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Alter, Verfall und Krankheit"
+    },
+    {
+     "wort": "bleich",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Licht, Dunkel und Farbe"
+    },
+    {
+     "wort": "Kirchhof",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Kirche, Glaube, Ordnung und Stand"
+    },
+    {
+     "wort": "beten",
+     "dosis": "bis 3 je Kapitel",
+     "register": "kirchlich-amtlich",
+     "kategorie": "Verben des Sprechens und Schweigens"
+    },
+    {
+     "wort": "stumm",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Klang, Stille, Geruch und Tastsinn"
+    },
+    {
+     "wort": "Wiege",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Haus und Dinge alter Zeit"
+    },
+    {
+     "wort": "starren",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben der Wahrnehmung und Erkenntnis"
+    },
+    {
+     "wort": "Rabe",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Natur, Wetter und Nacht"
+    },
+    {
+     "wort": "sinken",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben der Bewegung"
+    },
+    {
+     "wort": "umklammern",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben des Tuns, Geschehens und Verweilens"
+    },
+    {
+     "wort": "blutig",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Alter, Verfall und Krankheit"
+    },
+    {
+     "wort": "matt",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Licht, Dunkel und Farbe"
+    },
+    {
+     "wort": "Begräbnis",
+     "dosis": "bis 3 je Kapitel",
+     "register": "kirchlich-amtlich",
+     "kategorie": "Kirche, Glaube, Ordnung und Stand"
+    }
+   ]
+  },
+  "erwachen": {
+   "beispiel": "nach dem Tod, im Traum, in der Klinik",
+   "register": "B, an der Naht A",
+   "hinweis": "Zu sich kommen, nüchtern; an der Naht darf der Erzähler hervortreten.",
+   "prinzipien": [
+    "AB-02",
+    "SA-07",
+    "ST-08",
+    "SZ-09",
+    "FB-09",
+    "SP-05",
+    "WO-02",
+    "FB-02"
+   ],
+   "musterstellen": [
+    {
+     "datei": "musterstellen/erwachen.md",
+     "titel": "Augen her! und der warme Hauch",
+     "werk": "E. T. A. Hoffmann, Der Sandmann (1816)",
+     "woerter": 536
+    },
+    {
+     "datei": "musterstellen/erwachen.md",
+     "titel": "Erwachen auf dem Hügel vor der Stadt",
+     "werk": "Heinrich von Kleist, Das Erdbeben in Chili (1807)",
+     "woerter": 407
+    },
+    {
+     "datei": "musterstellen/erwachen.md",
+     "titel": "Die Nacht in der Hütte",
+     "werk": "Georg Büchner, Lenz (1839)",
+     "woerter": 377
+    }
+   ],
+   "woerter": [
+    {
+     "wort": "hiermit",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "ohnedies",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "überdies",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "sich erheben",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben der Bewegung"
+    },
+    {
+     "wort": "dämmern",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Licht, Dunkel und Farbe"
+    },
+    {
+     "wort": "am andern Morgen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Fügungen und Wendungen"
+    },
+    {
+     "wort": "Morgenluft",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Natur, Wetter und Nacht"
+    },
+    {
+     "wort": "grauen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben des Fühlens und Erschreckens"
+    },
+    {
+     "wort": "geblendet",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben der Wahrnehmung und Erkenntnis"
+    },
+    {
+     "wort": "erwachen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben des Tuns, Geschehens und Verweilens"
+    },
+    {
+     "wort": "nüchtern",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Adjektive für Seele, Gemüt und Ausdruck"
+    },
+    {
+     "wort": "aufspringen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben der Bewegung"
+    },
+    {
+     "wort": "blendend",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Licht, Dunkel und Farbe"
+    },
+    {
+     "wort": "blinzeln",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben der Wahrnehmung und Erkenntnis"
+    },
+    {
+     "wort": "sich aufrichten",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben der Bewegung"
+    },
+    {
+     "wort": "taumeln",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben der Bewegung"
+    },
+    {
+     "wort": "zu sich kommen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Fügungen und Wendungen"
+    },
+    {
+     "wort": "sich recken",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben der Bewegung"
+    }
+   ]
+  },
+  "fund": {
+   "beispiel": "ein Gegenstand, eine Leiche, eine Spur",
+   "register": "A oder B",
+   "hinweis": "Ein Ding mit Geschichte statt Inventar; nur säen, was geerntet wird.",
+   "prinzipien": [
+    "SZ-02",
+    "WE-04",
+    "SZ-03",
+    "WE-06",
+    "ST-03",
+    "SP-07",
+    "WO-06",
+    "FB-04",
+    "ST-02"
+   ],
+   "musterstellen": [
+    {
+     "datei": "musterstellen/fund.md",
+     "titel": "Der schwarze Fensterpfosten",
+     "werk": "Jeremias Gotthelf, Die schwarze Spinne (1842)",
+     "woerter": 405
+    },
+    {
+     "datei": "musterstellen/fund.md",
+     "titel": "Der Tote in der Buche",
+     "werk": "Annette von Droste-Hülshoff, Die Judenbuche (1842)",
+     "woerter": 527
+    },
+    {
+     "datei": "musterstellen/fund.md",
+     "titel": "Das Bild des toten Knaben und die vier Buchstaben",
+     "werk": "Theodor Storm, Aquis submersus (1876)",
+     "woerter": 652
+    }
+   ],
+   "woerter": [
+    {
+     "wort": "doch",
+     "dosis": "frei",
+     "register": "elegant-neutral",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "gar",
+     "dosis": "frei",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "wohl",
+     "dosis": "frei",
+     "register": "elegant-neutral",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "Kammer",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Haus und Dinge alter Zeit"
+    },
+    {
+     "wort": "begreifen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben der Wahrnehmung und Erkenntnis"
+    },
+    {
+     "wort": "uralt",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Alter, Verfall und Krankheit"
+    },
+    {
+     "wort": "Glanz",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Licht, Dunkel und Farbe"
+    },
+    {
+     "wort": "streifen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben des Tuns, Geschehens und Verweilens"
+    },
+    {
+     "wort": "Anblick",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Leib, Antlitz und Gebärde"
+    },
+    {
+     "wort": "Andenken",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Substantive der Seele, des Gemüts und Gedankens"
+    },
+    {
+     "wort": "Blutfleck",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Tod, Blut und Gewalt"
+    },
+    {
+     "wort": "übel",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Adjektive für Seele, Gemüt und Ausdruck"
+    },
+    {
+     "wort": "allerlei",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verweis-, Mengen- und Artwörter"
+    },
+    {
+     "wort": "knien",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben der Bewegung"
+    },
+    {
+     "wort": "Geschlecht",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Kirche, Glaube, Ordnung und Stand"
+    },
+    {
+     "wort": "unverkennbar",
+     "dosis": "höchstens 1 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Adjektive des Schreckens und des Unheimlichen"
+    },
+    {
+     "wort": "säuberlich",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Gestalt, Würde und Art der Dinge"
+    },
+    {
+     "wort": "Werkstatt",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Stadt, Weg und Menschen"
+    },
+    {
+     "wort": "Lade",
+     "dosis": "höchstens 1 je Kapitel",
+     "register": "altertümlich",
+     "kategorie": "Haus und Dinge alter Zeit"
+    },
+    {
+     "wort": "Schnupftuch",
+     "dosis": "höchstens 1 je Kapitel",
+     "register": "altertümlich",
+     "kategorie": "Haus und Dinge alter Zeit"
+    }
+   ]
+  },
+  "dokument": {
+   "beispiel": "Zettel, Anschlag, Tagebuch, Vertrag",
+   "register": "A oder C, Präteritum erlaubt",
+   "hinweis": "Bericht mit Datum, Berufen, Passiv; die Wahrheit wechselt das Register.",
+   "prinzipien": [
+    "WE-06",
+    "SZ-11",
+    "AB-04",
+    "ST-02",
+    "SZ-10",
+    "WE-04",
+    "ST-09",
+    "SP-07",
+    "FI-06"
+   ],
+   "musterstellen": [
+    {
+     "datei": "musterstellen/dokument.md",
+     "titel": "Die Schrift an der Buche",
+     "werk": "Annette von Droste-Hülshoff: Die Judenbuche (1842)",
+     "woerter": 348
+    },
+    {
+     "datei": "musterstellen/dokument.md",
+     "titel": "Nathanaels erster Brief",
+     "werk": "E. T. A. Hoffmann: Der Sandmann (1816, Erstdruck 1817)",
+     "woerter": 413
+    },
+    {
+     "datei": "musterstellen/dokument.md",
+     "titel": "Der Grabstein unter dem Tisch",
+     "werk": "Franz Kafka: In der Strafkolonie (1919)",
+     "woerter": 445
+    }
+   ],
+   "woerter": [
+    {
+     "wort": "indem",
+     "dosis": "frei",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "freilich",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "ferner",
+     "dosis": "frei",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "Dativ auf -e",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Fügungen und Wendungen"
+    },
+    {
+     "wort": "einst",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Adverbien der Zeit und Weise"
+    },
+    {
+     "wort": "welcher",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verweis-, Mengen- und Artwörter"
+    },
+    {
+     "wort": "pflegen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben des Tuns, Geschehens und Verweilens"
+    },
+    {
+     "wort": "Gericht",
+     "dosis": "bis 3 je Kapitel",
+     "register": "kirchlich-amtlich",
+     "kategorie": "Kirche, Glaube, Ordnung und Stand"
+    },
+    {
+     "wort": "Inschrift",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Haus und Dinge alter Zeit"
+    },
+    {
+     "wort": "sei",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Konjunktiv der indirekten Rede"
+    },
+    {
+     "wort": "ward",
+     "dosis": "höchstens 1 je Kapitel",
+     "register": "altertümlich",
+     "kategorie": "Altertümliche Formen für Chronik und Dokument"
+    },
+    {
+     "wort": "Begebenheit",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Substantive der Seele, des Gemüts und Gedankens"
+    },
+    {
+     "wort": "förmlich",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Gestalt, Würde und Art der Dinge"
+    },
+    {
+     "wort": "vergilbt",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Alter, Verfall und Krankheit"
+    },
+    {
+     "wort": "weder … noch",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Fügungen und Wendungen"
+    },
+    {
+     "wort": "Maßregel",
+     "dosis": "bis 3 je Kapitel",
+     "register": "kirchlich-amtlich",
+     "kategorie": "Kirche, Glaube, Ordnung und Stand"
+    },
+    {
+     "wort": "Tafel",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Haus und Dinge alter Zeit"
+    },
+    {
+     "wort": "habe",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Konjunktiv der indirekten Rede"
+    },
+    {
+     "wort": "frug",
+     "dosis": "höchstens 1 je Kapitel",
+     "register": "altertümlich",
+     "kategorie": "Altertümliche Formen für Chronik und Dokument"
+    },
+    {
+     "wort": "Zeugnis",
+     "dosis": "bis 3 je Kapitel",
+     "register": "kirchlich-amtlich",
+     "kategorie": "Substantive der Seele, des Gemüts und Gedankens"
+    }
+   ]
+  },
+  "geruecht": {
+   "beispiel": "was man sich erzählt (Konjunktiv)",
+   "register": "A, Konjunktiv I",
+   "hinweis": "Die Gemeinde als Gedächtnis; der vorsichtige Erzähler; das Ammenmärchen vorweg.",
+   "prinzipien": [
+    "SZ-10",
+    "ST-03",
+    "WE-05",
+    "FI-06",
+    "ST-06",
+    "SA-09",
+    "SZ-03",
+    "WO-01",
+    "FB-10"
+   ],
+   "musterstellen": [
+    {
+     "datei": "musterstellen/geruecht.md",
+     "titel": "Das Wort „Übel“ und der Geruch",
+     "werk": "Thomas Mann: Der Tod in Venedig (1912)",
+     "woerter": 628
+    },
+    {
+     "datei": "musterstellen/geruecht.md",
+     "titel": "Das Gerippe auf Jevershallig",
+     "werk": "Theodor Storm: Der Schimmelreiter (1888)",
+     "woerter": 739
+    },
+    {
+     "datei": "musterstellen/geruecht.md",
+     "titel": "Das Surren im neuen Haus",
+     "werk": "Jeremias Gotthelf: Die schwarze Spinne (1842)",
+     "woerter": 404
+    }
+   ],
+   "woerter": [
+    {
+     "wort": "wohl",
+     "dosis": "frei",
+     "register": "elegant-neutral",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "indem",
+     "dosis": "frei",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "freilich",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "deren",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verweis-, Mengen- und Artwörter"
+    },
+    {
+     "wort": "sei",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Konjunktiv der indirekten Rede"
+    },
+    {
+     "wort": "heimlich",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Adverbien der Zeit und Weise"
+    },
+    {
+     "wort": "es heißt",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Fügungen und Wendungen"
+    },
+    {
+     "wort": "Kunde",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Stadt, Weg und Menschen"
+    },
+    {
+     "wort": "Hexe",
+     "dosis": "bis 3 je Kapitel",
+     "register": "volkstümlich",
+     "kategorie": "Spuk, Ungeheuer und Zauber"
+    },
+    {
+     "wort": "vernehmen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben der Wahrnehmung und Erkenntnis"
+    },
+    {
+     "wort": "sich zutragen",
+     "dosis": "höchstens 1 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben des Tuns, Geschehens und Verweilens"
+    },
+    {
+     "wort": "Flüstern",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Substantive der Seele, des Gemüts und Gedankens"
+    },
+    {
+     "wort": "verschweigen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben des Sprechens und Schweigens"
+    },
+    {
+     "wort": "verschwiegen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Adjektive für Seele, Gemüt und Ausdruck"
+    },
+    {
+     "wort": "Konventikel",
+     "dosis": "bis 3 je Kapitel",
+     "register": "kirchlich-amtlich",
+     "kategorie": "Kirche, Glaube, Ordnung und Stand"
+    },
+    {
+     "wort": "Verbrechen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Tod, Blut und Gewalt"
+    },
+    {
+     "wort": "verschollen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Alter, Verfall und Krankheit"
+    },
+    {
+     "wort": "dessen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verweis-, Mengen- und Artwörter"
+    },
+    {
+     "wort": "habe",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Konjunktiv der indirekten Rede"
+    },
+    {
+     "wort": "Märchen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Stadt, Weg und Menschen"
+    }
+   ]
+  },
+  "kirche": {
+   "beispiel": "Register C: Amt, Ordnung, Vermerk",
+   "register": "C",
+   "hinweis": "Amtssatz ohne Zweifel und ohne Partikeln; die Formel wandert; das Urteil kommt danach, in einem Wort.",
+   "prinzipien": [
+    "SZ-11",
+    "ST-02",
+    "ST-09",
+    "WO-04",
+    "FB-04",
+    "ST-06",
+    "FI-09",
+    "WE-06"
+   ],
+   "musterstellen": [
+    {
+     "datei": "musterstellen/kirche.md",
+     "titel": "Die Politik des Verschweigens",
+     "werk": "Thomas Mann: Der Tod in Venedig (1912)",
+     "woerter": 713
+    },
+    {
+     "datei": "musterstellen/kirche.md",
+     "titel": "Die Egge schreibt das Urteil",
+     "werk": "Franz Kafka: In der Strafkolonie (1919)",
+     "woerter": 850
+    },
+    {
+     "datei": "musterstellen/kirche.md",
+     "titel": "Die Predigt des Chorherrn",
+     "werk": "Heinrich von Kleist: Das Erdbeben in Chili (1807)",
+     "woerter": 780
+    }
+   ],
+   "woerter": [
+    {
+     "wort": "Engel",
+     "dosis": "bis 3 je Kapitel",
+     "register": "kirchlich-amtlich",
+     "kategorie": "Kirche, Glaube, Ordnung und Stand"
+    },
+    {
+     "wort": "Seele",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Substantive der Seele, des Gemüts und Gedankens"
+    },
+    {
+     "wort": "beten",
+     "dosis": "bis 3 je Kapitel",
+     "register": "kirchlich-amtlich",
+     "kategorie": "Verben des Sprechens und Schweigens"
+    },
+    {
+     "wort": "sich fügen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben des Tuns, Geschehens und Verweilens"
+    },
+    {
+     "wort": "nieder",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben der Bewegung"
+    },
+    {
+     "wort": "ergriffen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Adjektive für Seele, Gemüt und Ausdruck"
+    },
+    {
+     "wort": "Stab",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Haus und Dinge alter Zeit"
+    },
+    {
+     "wort": "hallen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Klang, Stille, Geruch und Tastsinn"
+    },
+    {
+     "wort": "wahrhaftig",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Adverbien der Zeit und Weise"
+    },
+    {
+     "wort": "Glanz",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Licht, Dunkel und Farbe"
+    },
+    {
+     "wort": "um … willen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Fügungen und Wendungen"
+    },
+    {
+     "wort": "rühren",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben des Fühlens und Erschreckens"
+    },
+    {
+     "wort": "Gnade",
+     "dosis": "bis 3 je Kapitel",
+     "register": "kirchlich-amtlich",
+     "kategorie": "Kirche, Glaube, Ordnung und Stand"
+    },
+    {
+     "wort": "die Hände falten",
+     "dosis": "bis 3 je Kapitel",
+     "register": "kirchlich-amtlich",
+     "kategorie": "Fügungen und Wendungen"
+    },
+    {
+     "wort": "auferstehen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "kirchlich-amtlich",
+     "kategorie": "Tod, Blut und Gewalt"
+    },
+    {
+     "wort": "Widersacher",
+     "dosis": "bis 3 je Kapitel",
+     "register": "kirchlich-amtlich",
+     "kategorie": "Spuk, Ungeheuer und Zauber"
+    },
+    {
+     "wort": "heilig",
+     "dosis": "bis 3 je Kapitel",
+     "register": "kirchlich-amtlich",
+     "kategorie": "Kirche, Glaube, Ordnung und Stand"
+    },
+    {
+     "wort": "droben",
+     "dosis": "höchstens 1 je Kapitel",
+     "register": "altertümlich",
+     "kategorie": "Adverbien der Zeit und Weise"
+    },
+    {
+     "wort": "siehe",
+     "dosis": "höchstens 1 je Kapitel",
+     "register": "altertümlich",
+     "kategorie": "Fügungen und Wendungen"
+    },
+    {
+     "wort": "gottlos",
+     "dosis": "höchstens 1 je Kapitel",
+     "register": "kirchlich-amtlich",
+     "kategorie": "Adjektive des Schreckens und des Unheimlichen"
+    }
+   ]
+  },
+  "traum": {
+   "beispiel": "Jägertraum, Vision, Einsicht",
+   "register": "B, an der Naht A",
+   "hinweis": "Die Wahrnehmung kippt leise; Einbruch in den Satz; das Maß stimmt nicht.",
+   "prinzipien": [
+    "SZ-09",
+    "FB-02",
+    "SA-06",
+    "SA-02",
+    "WO-05",
+    "FB-08",
+    "FI-07",
+    "ST-08",
+    "WO-03"
+   ],
+   "musterstellen": [
+    {
+     "datei": "musterstellen/traum.md",
+     "titel": "Der fremde Gott",
+     "werk": "Thomas Mann: Der Tod in Venedig (1912)",
+     "woerter": 580
+    },
+    {
+     "datei": "musterstellen/traum.md",
+     "titel": "Waldeinsamkeit",
+     "werk": "Ludwig Tieck: Der blonde Eckbert (1797)",
+     "woerter": 656
+    },
+    {
+     "datei": "musterstellen/traum.md",
+     "titel": "Das Venusbild am Weiher",
+     "werk": "Joseph von Eichendorff: Das Marmorbild (1818/19)",
+     "woerter": 431
+    }
+   ],
+   "woerter": [
+    {
+     "wort": "gleichwohl",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "indes",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "obschon",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "Schein",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Licht, Dunkel und Farbe"
+    },
+    {
+     "wort": "als ob",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Fügungen und Wendungen"
+    },
+    {
+     "wort": "Ferne",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Substantive der Seele, des Gemüts und Gedankens"
+    },
+    {
+     "wort": "ewig",
+     "dosis": "höchstens 1 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Adjektive des Schreckens und des Unheimlichen"
+    },
+    {
+     "wort": "gleiten",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben der Bewegung"
+    },
+    {
+     "wort": "Mondschein",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Natur, Wetter und Nacht"
+    },
+    {
+     "wort": "Erscheinung",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Spuk, Ungeheuer und Zauber"
+    },
+    {
+     "wort": "erwachen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben des Tuns, Geschehens und Verweilens"
+    },
+    {
+     "wort": "himmlisch",
+     "dosis": "bis 3 je Kapitel",
+     "register": "kirchlich-amtlich",
+     "kategorie": "Kirche, Glaube, Ordnung und Stand"
+    },
+    {
+     "wort": "Spiegel",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Haus und Dinge alter Zeit"
+    },
+    {
+     "wort": "fiebernd",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Alter, Verfall und Krankheit"
+    },
+    {
+     "wort": "weder … noch",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Fügungen und Wendungen"
+    },
+    {
+     "wort": "Paradies",
+     "dosis": "bis 3 je Kapitel",
+     "register": "kirchlich-amtlich",
+     "kategorie": "Kirche, Glaube, Ordnung und Stand"
+    },
+    {
+     "wort": "Verlangen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Substantive der Seele, des Gemüts und Gedankens"
+    },
+    {
+     "wort": "Schwindel",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Leib, Antlitz und Gebärde"
+    },
+    {
+     "wort": "schwindeln",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben des Fühlens und Erschreckens"
+    },
+    {
+     "wort": "Mysterien",
+     "dosis": "bis 3 je Kapitel",
+     "register": "kirchlich-amtlich",
+     "kategorie": "Kirche, Glaube, Ordnung und Stand"
+    }
+   ]
+  },
+  "grauen": {
+   "beispiel": "der Moment des Schreckens",
+   "register": "B",
+   "hinweis": "Das Ohr zuerst, das Gefühl als Paar, das „es“ statt der Gliederpuppe; das starke Wort nur hier.",
+   "prinzipien": [
+    "SZ-04",
+    "FB-06",
+    "SA-07",
+    "FB-02",
+    "SZ-06",
+    "WO-05",
+    "AB-02",
+    "SA-04",
+    "WO-08",
+    "FB-08"
+   ],
+   "musterstellen": [
+    {
+     "datei": "musterstellen/grauen.md",
+     "titel": "Coppelius am Herd",
+     "werk": "E. T. A. Hoffmann: Der Sandmann (1816, Erstdruck 1817)",
+     "woerter": 531
+    },
+    {
+     "datei": "musterstellen/grauen.md",
+     "titel": "Tapp! tapp!",
+     "werk": "Heinrich von Kleist: Das Bettelweib von Locarno (1810)",
+     "woerter": 765
+    },
+    {
+     "datei": "musterstellen/grauen.md",
+     "titel": "Die Spinne im Haufen",
+     "werk": "Jeremias Gotthelf: Die schwarze Spinne (1842)",
+     "woerter": 706
+    }
+   ],
+   "woerter": [
+    {
+     "wort": "unterdessen",
+     "dosis": "frei",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "obgleich",
+     "dosis": "frei",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "sooft",
+     "dosis": "frei",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "als ob",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Fügungen und Wendungen"
+    },
+    {
+     "wort": "entsetzlich",
+     "dosis": "höchstens 1 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Adjektive des Schreckens und des Unheimlichen"
+    },
+    {
+     "wort": "gleiten",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben der Bewegung"
+    },
+    {
+     "wort": "erschüttern",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben des Fühlens und Erschreckens"
+    },
+    {
+     "wort": "Geist",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Substantive der Seele, des Gemüts und Gedankens"
+    },
+    {
+     "wort": "verwandeln",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben des Tuns, Geschehens und Verweilens"
+    },
+    {
+     "wort": "bange",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Adjektive für Seele, Gemüt und Ausdruck"
+    },
+    {
+     "wort": "stocken",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben des Sprechens und Schweigens"
+    },
+    {
+     "wort": "Anblick",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Leib, Antlitz und Gebärde"
+    },
+    {
+     "wort": "Mitternacht",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Natur, Wetter und Nacht"
+    },
+    {
+     "wort": "Spiegel",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Haus und Dinge alter Zeit"
+    },
+    {
+     "wort": "Hölle",
+     "dosis": "bis 3 je Kapitel",
+     "register": "kirchlich-amtlich",
+     "kategorie": "Kirche, Glaube, Ordnung und Stand"
+    },
+    {
+     "wort": "weder … noch",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Fügungen und Wendungen"
+    },
+    {
+     "wort": "fürchterlich",
+     "dosis": "höchstens 1 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Adjektive des Schreckens und des Unheimlichen"
+    },
+    {
+     "wort": "schleichen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben der Bewegung"
+    },
+    {
+     "wort": "Satan",
+     "dosis": "bis 3 je Kapitel",
+     "register": "kirchlich-amtlich",
+     "kategorie": "Spuk, Ungeheuer und Zauber"
+    },
+    {
+     "wort": "stumm",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Klang, Stille, Geruch und Tastsinn"
+    }
+   ]
+  },
+  "ruhe": {
+   "beispiel": "Atem nach dem Schrecken, Wärme",
+   "register": "A oder ruhiges B",
+   "hinweis": "Echte Ruhe, ausschwingend, mit einem einzigen unheimlichen Bild; der Erzähler darf lächeln.",
+   "prinzipien": [
+    "SZ-05",
+    "AB-01",
+    "SA-01",
+    "WO-01",
+    "ST-01",
+    "WO-02",
+    "SZ-02",
+    "AB-03"
+   ],
+   "musterstellen": [
+    {
+     "datei": "musterstellen/ruhe.md",
+     "titel": "Lichter in Waldbach",
+     "werk": "Georg Büchner: Lenz (1835/1839)",
+     "woerter": 443
+    },
+    {
+     "datei": "musterstellen/ruhe.md",
+     "titel": "Der Morgen des Tauffestes",
+     "werk": "Jeremias Gotthelf: Die schwarze Spinne (1842)",
+     "woerter": 350
+    },
+    {
+     "datei": "musterstellen/ruhe.md",
+     "titel": "Unter dem Granatapfelbaum",
+     "werk": "Heinrich von Kleist: Das Erdbeben in Chili (1807)",
+     "woerter": 296
+    }
+   ],
+   "woerter": [
+    {
+     "wort": "zudem",
+     "dosis": "frei",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "allein",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "ebensowenig",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "milde",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Adjektive für Seele, Gemüt und Ausdruck"
+    },
+    {
+     "wort": "sinken",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben der Bewegung"
+    },
+    {
+     "wort": "Kammer",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Haus und Dinge alter Zeit"
+    },
+    {
+     "wort": "Seele",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Substantive der Seele, des Gemüts und Gedankens"
+    },
+    {
+     "wort": "vergehen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben des Tuns, Geschehens und Verweilens"
+    },
+    {
+     "wort": "vor sich hin",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Fügungen und Wendungen"
+    },
+    {
+     "wort": "betrachten",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben der Wahrnehmung und Erkenntnis"
+    },
+    {
+     "wort": "Seufzer",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Klang, Stille, Geruch und Tastsinn"
+    },
+    {
+     "wort": "Wipfel",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Natur, Wetter und Nacht"
+    },
+    {
+     "wort": "sich sehnen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben des Fühlens und Erschreckens"
+    },
+    {
+     "wort": "matt",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Licht, Dunkel und Farbe"
+    },
+    {
+     "wort": "erschöpft",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Alter, Verfall und Krankheit"
+    },
+    {
+     "wort": "Schoß",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Leib, Antlitz und Gebärde"
+    },
+    {
+     "wort": "zuweilen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Adverbien der Zeit und Weise"
+    },
+    {
+     "wort": "lieblich",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Gestalt, Würde und Art der Dinge"
+    },
+    {
+     "wort": "Gott sei Dank",
+     "dosis": "bis 3 je Kapitel",
+     "register": "volkstümlich",
+     "kategorie": "Fügungen und Wendungen"
+    },
+    {
+     "wort": "Deckbett",
+     "dosis": "bis 3 je Kapitel",
+     "register": "volkstümlich",
+     "kategorie": "Haus und Dinge alter Zeit"
+    }
+   ]
+  },
+  "abschied": {
+   "beispiel": "eine Figur bleibt zurück",
+   "register": "B",
+   "hinweis": "Die Ruhe davor ist echt; der Kehrreim der Figur ein letztes Mal, verwandelt; keine Pointe.",
+   "prinzipien": [
+    "SZ-05",
+    "WE-07",
+    "FI-03",
+    "FI-04",
+    "AB-01",
+    "AB-05",
+    "ST-07",
+    "WE-02",
+    "WO-02"
+   ],
+   "musterstellen": [
+    {
+     "datei": "musterstellen/abschied.md",
+     "titel": "Leb wohl, mein Kind",
+     "werk": "Theodor Storm: Aquis submersus (1876)",
+     "woerter": 368
+    },
+    {
+     "datei": "musterstellen/abschied.md",
+     "titel": "Der Psychagog im Meer",
+     "werk": "Thomas Mann: Der Tod in Venedig (1912)",
+     "woerter": 765
+    },
+    {
+     "datei": "musterstellen/abschied.md",
+     "titel": "Der Stein auf dem Rondell",
+     "werk": "Theodor Fontane: Effi Briest (1895)",
+     "woerter": 519
+    }
+   ],
+   "woerter": [
+    {
+     "wort": "hiermit",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "ohnedies",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "überdies",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "einsam",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Adjektive für Seele, Gemüt und Ausdruck"
+    },
+    {
+     "wort": "Einsamkeit",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Substantive der Seele, des Gemüts und Gedankens"
+    },
+    {
+     "wort": "sich wenden",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben der Bewegung"
+    },
+    {
+     "wort": "Seufzer",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Klang, Stille, Geruch und Tastsinn"
+    },
+    {
+     "wort": "rühren",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben des Fühlens und Erschreckens"
+    },
+    {
+     "wort": "schweigend",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben des Sprechens und Schweigens"
+    },
+    {
+     "wort": "daheim",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Adverbien der Zeit und Weise"
+    },
+    {
+     "wort": "Heimat",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Stadt, Weg und Menschen"
+    },
+    {
+     "wort": "auf ewig",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Fügungen und Wendungen"
+    },
+    {
+     "wort": "verlassen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Alter, Verfall und Krankheit"
+    },
+    {
+     "wort": "zart",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Gestalt, Würde und Art der Dinge"
+    },
+    {
+     "wort": "zuliebe",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "Trost",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Substantive der Seele, des Gemüts und Gedankens"
+    },
+    {
+     "wort": "segnen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "kirchlich-amtlich",
+     "kategorie": "Verben des Sprechens und Schweigens"
+    },
+    {
+     "wort": "Geliebte",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Stadt, Weg und Menschen"
+    },
+    {
+     "wort": "Trauer",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Substantive der Seele, des Gemüts und Gedankens"
+    }
+   ]
+  },
+  "kapitelende": {
+   "beispiel": "Nachklang, Chronik",
+   "register": "A",
+   "hinweis": "Echo des Anfangs, Öffnung in Zeit und Ferne; ein trockenes Urteil über die Welt.",
+   "prinzipien": [
+    "WE-07",
+    "AB-01",
+    "WE-06",
+    "AB-04",
+    "SZ-07",
+    "ST-08",
+    "WE-01",
+    "ST-06",
+    "SZ-10"
+   ],
+   "musterstellen": [
+    {
+     "datei": "musterstellen/kapitelende.md",
+     "titel": "So lebte er hin",
+     "werk": "Georg Büchner: Lenz (1835/1839)",
+     "woerter": 421
+    },
+    {
+     "datei": "musterstellen/kapitelende.md",
+     "titel": "Die Spinne darf sich nicht regen",
+     "werk": "Jeremias Gotthelf: Die schwarze Spinne (1842)",
+     "woerter": 365
+    },
+    {
+     "datei": "musterstellen/kapitelende.md",
+     "titel": "Der Morgen über der Verwüstung",
+     "werk": "Theodor Storm: Der Schimmelreiter (1888)",
+     "woerter": 589
+    }
+   ],
+   "woerter": [
+    {
+     "wort": "indessen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "allein",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "doch",
+     "dosis": "frei",
+     "register": "elegant-neutral",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "kehren",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben der Bewegung"
+    },
+    {
+     "wort": "einsam",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Adjektive für Seele, Gemüt und Ausdruck"
+    },
+    {
+     "wort": "Seele",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Substantive der Seele, des Gemüts und Gedankens"
+    },
+    {
+     "wort": "vergehen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben des Tuns, Geschehens und Verweilens"
+    },
+    {
+     "wort": "Kammer",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Haus und Dinge alter Zeit"
+    },
+    {
+     "wort": "einst",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Adverbien der Zeit und Weise"
+    },
+    {
+     "wort": "vor sich hin",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Fügungen und Wendungen"
+    },
+    {
+     "wort": "Dämmerung",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Natur, Wetter und Nacht"
+    },
+    {
+     "wort": "Seufzer",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Klang, Stille, Geruch und Tastsinn"
+    },
+    {
+     "wort": "rühren",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben des Fühlens und Erschreckens"
+    },
+    {
+     "wort": "schweigen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben des Sprechens und Schweigens"
+    },
+    {
+     "wort": "betrachten",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben der Wahrnehmung und Erkenntnis"
+    },
+    {
+     "wort": "trübe",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Licht, Dunkel und Farbe"
+    },
+    {
+     "wort": "verlassen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Alter, Verfall und Krankheit"
+    },
+    {
+     "wort": "zart",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Gestalt, Würde und Art der Dinge"
+    },
+    {
+     "wort": "ward",
+     "dosis": "höchstens 1 je Kapitel",
+     "register": "altertümlich",
+     "kategorie": "Altertümliche Formen für Chronik und Dokument"
+    },
+    {
+     "wort": "Erlösung",
+     "dosis": "bis 3 je Kapitel",
+     "register": "kirchlich-amtlich",
+     "kategorie": "Kirche, Glaube, Ordnung und Stand"
+    }
+   ]
+  },
+  "option": {
+   "beispiel": "der sichtbare Anfang einer Wahl und die Fortsetzung im Satz",
+   "register": "B, kurz",
+   "hinweis": "Die Wahl setzt den Satz des Buches fort; Richtung ausdrücklich; Regung ja, Entscheidung nie.",
+   "prinzipien": [
+    "SP-03",
+    "SP-02",
+    "SP-06",
+    "SP-04",
+    "SZ-08",
+    "FI-10",
+    "FB-10",
+    "WE-03"
+   ],
+   "musterstellen": [
+    {
+     "datei": "musterstellen/kampf.md",
+     "titel": "Auf dem Ratsturm",
+     "werk": "E. T. A. Hoffmann, Der Sandmann (1816)",
+     "woerter": 442
+    },
+    {
+     "datei": "musterstellen/gespraech.md",
+     "titel": "Simon und Friedrich vor der Beichte",
+     "werk": "Annette von Droste-Hülshoff, Die Judenbuche (1842)",
+     "woerter": 441
+    }
+   ],
+   "anmerkung_musterstellen": "Für Optionen gibt es keine eigene Musterstelle; die beiden Stellen zeigen, wie eine Entscheidung in den Erzählsatz fällt („Gesagt, getan!“; Friedrichs Wahl vor der Beichte).",
+   "woerter": [
+    {
+     "wort": "ehe",
+     "dosis": "frei",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "indem",
+     "dosis": "frei",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "freilich",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "weder … noch",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Fügungen und Wendungen"
+    },
+    {
+     "wort": "pflegen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben des Tuns, Geschehens und Verweilens"
+    },
+    {
+     "wort": "nieder",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben der Bewegung"
+    },
+    {
+     "wort": "schweigen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben des Sprechens und Schweigens"
+    },
+    {
+     "wort": "den Kopf schütteln",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Fügungen und Wendungen"
+    },
+    {
+     "wort": "sich fügen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben des Tuns, Geschehens und Verweilens"
+    },
+    {
+     "wort": "sich erheben",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben der Bewegung"
+    },
+    {
+     "wort": "heißen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Verben des Sprechens und Schweigens"
+    },
+    {
+     "wort": "in demselben Augenblick",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Fügungen und Wendungen"
+    },
+    {
+     "wort": "treiben",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben der Bewegung"
+    },
+    {
+     "wort": "stocken",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben des Sprechens und Schweigens"
+    },
+    {
+     "wort": "eilen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben der Bewegung"
+    },
+    {
+     "wort": "geraten",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben des Tuns, Geschehens und Verweilens"
+    },
+    {
+     "wort": "nach und nach",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Fügungen und Wendungen"
+    },
+    {
+     "wort": "sich wenden",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben der Bewegung"
+    },
+    {
+     "wort": "mein Lebtag",
+     "dosis": "bis 3 je Kapitel",
+     "register": "volkstümlich",
+     "kategorie": "Fügungen und Wendungen"
+    }
+   ]
+  },
+  "stadt": {
+   "beispiel": "Yharnam als Ganzes: Gassen, Treppen, Türen, Rauch",
+   "register": "A, dann B",
+   "hinweis": "Die Stadt als Wesen: Doppelformel, Seelenverb, die Kirche aus der Ferne; Menschen hinter Türen.",
+   "prinzipien": [
+    "SZ-01",
+    "FB-05",
+    "WO-03",
+    "ST-01",
+    "SZ-05",
+    "SA-01",
+    "SZ-11",
+    "FB-02",
+    "SZ-04",
+    "SP-07",
+    "WE-01"
+   ],
+   "musterstellen": [
+    {
+     "datei": "musterstellen/stadt.md",
+     "titel": "Venedig bei Scirocco",
+     "werk": "Thomas Mann: Der Tod in Venedig (1912)",
+     "woerter": 370
+    },
+    {
+     "datei": "musterstellen/stadt.md",
+     "titel": "Das Dorf B. und seine Nächte",
+     "werk": "Annette von Droste-Hülshoff: Die Judenbuche (1842)",
+     "woerter": 319
+    },
+    {
+     "datei": "musterstellen/fund.md",
+     "titel": "Die letzte Mauer",
+     "werk": "Rainer Maria Rilke, Die Aufzeichnungen des Malte Laurids Brigge (1910)",
+     "woerter": 668
+    }
+   ],
+   "woerter": [
+    {
+     "wort": "ferner",
+     "dosis": "frei",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "indessen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "worin",
+     "dosis": "frei",
+     "register": "gehoben",
+     "kategorie": "Partikeln, Konjunktionen und Gelenke"
+    },
+    {
+     "wort": "verlassen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Alter, Verfall und Krankheit"
+    },
+    {
+     "wort": "treiben",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben der Bewegung"
+    },
+    {
+     "wort": "Weib",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Stadt, Weg und Menschen"
+    },
+    {
+     "wort": "Tracht",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Haus und Dinge alter Zeit"
+    },
+    {
+     "wort": "Magd",
+     "dosis": "bis 3 je Kapitel",
+     "register": "volkstümlich",
+     "kategorie": "Kirche, Glaube, Ordnung und Stand"
+    },
+    {
+     "wort": "trübe",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Licht, Dunkel und Farbe"
+    },
+    {
+     "wort": "einsam",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Adjektive für Seele, Gemüt und Ausdruck"
+    },
+    {
+     "wort": "Einsamkeit",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Substantive der Seele, des Gemüts und Gedankens"
+    },
+    {
+     "wort": "hallen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "gehoben",
+     "kategorie": "Klang, Stille, Geruch und Tastsinn"
+    },
+    {
+     "wort": "geraten",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben des Tuns, Geschehens und Verweilens"
+    },
+    {
+     "wort": "allerhand",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verweis-, Mengen- und Artwörter"
+    },
+    {
+     "wort": "spähen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben der Wahrnehmung und Erkenntnis"
+    },
+    {
+     "wort": "Irrlichter",
+     "dosis": "bis 3 je Kapitel",
+     "register": "volkstümlich",
+     "kategorie": "Spuk, Ungeheuer und Zauber"
+    },
+    {
+     "wort": "eilen",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Verben der Bewegung"
+    },
+    {
+     "wort": "Säule",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Haus und Dinge alter Zeit"
+    },
+    {
+     "wort": "Gedränge",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Stadt, Weg und Menschen"
+    },
+    {
+     "wort": "Gitter",
+     "dosis": "bis 3 je Kapitel",
+     "register": "elegant-neutral",
+     "kategorie": "Haus und Dinge alter Zeit"
+    }
+   ]
+  }
+ }
+}

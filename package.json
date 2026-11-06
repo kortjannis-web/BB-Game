@@ -11,7 +11,7 @@
     "karte": "node tools/karte.mjs",
     "szenarien": "node tools/szenarien.mjs",
     "check": "node tools/pruefen.mjs && node tools/szenarien.mjs && node tools/stil.mjs --kurz && node tools/karte.mjs && node tools/bauen.mjs",
-    "stil": "node tools/stil.mjs",
+    "stil": "node tools/stil-netz.mjs",
     "twine": "node tools/twine.mjs",
     "vorschlaege": "node tools/vorschlaege.mjs"
   },
