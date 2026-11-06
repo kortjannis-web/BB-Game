@@ -34,7 +34,7 @@ Gesprochen hat der Fahrer seit dem letzten Dorf nicht. Jetzt blickt er sich zum 
 * [Ich bin dem Galgen davongelaufen #fliesst]
     ~ herkunft = "gesuchter"
     Zwischen dir und dem Galgen liegen drei Grenzen und eine Nacht im Heu, aber davon sagst du nichts; du sagst überhaupt nichts. Der Kutscher nickt, als sei auch das eine Antwort, die er kennt. „In Yharnam fragt keiner, was einer getan hat“, sagt er. „Nur, was aus ihm geworden ist.“
-- Und warum, will er wissen, fährt einer freiwillig dorthin, in diesen Tagen?
+- „Und warum“, fragt er weiter, „fährt einer freiwillig dorthin, in diesen Tagen?“
 * [Um selbst zu genesen #fliesst]
     ~ grund = "heilung_selbst"
     Um gesund zu werden, sagst du. Das Fieber frisst dich sonst noch vor dem ersten Schnee, und du sagst es so ruhig, dass der Kutscher sich noch einmal halb nach dir umdreht.
