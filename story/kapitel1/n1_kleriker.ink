@@ -21,7 +21,10 @@
 // [KANON lore:welt/notizen Nr. 2] Die Kirche hat beim Beginn der Jagd die Große Brücke gesperrt. [ERWEITERT, bewusst] Bei uns führen von der
 //   Brücke Treppen hinab in die Unterstadt; am Brückenende ein von drüben verriegeltes Tor.
 // [ERWEITERT] Ablenken, Fliehen, das Blutgedächtnis, das Lied auf der Brücke, der Wurf mit der Kutsche, der Ansturm, die falsche Ruhe, der Brief.
-// [ERWEITERT, Ü1] Der Mond über der Brücke (zweite Stufe: an der Klinik über den Giebeln, hier die Türme als Schattenriss, über den Gräbern seine Narben). Bleich, nie rot.
+// [ERWEITERT, Ü1] Der Mond über der Brücke (zweite Stufe: an der Klinik über den Giebeln, hier die Türme als Schattenriss, über den Gräbern seine Narben). Nie rot; ohne Farbwort (N2: Knochen und Hof nur vor der Klinik).
+// Nachbesserung 2026-11-06 (docs/nachbesserung-2026-11-06.md, N1 bis N9; Prüfberichte S und L): Lernsätze als Erinnerungsbild im Präteritum statt Körperautomatik,
+//   Formeln (X um X, so …, dass, Hinter am Satzanfang) ausgedünnt, je Kampftakt höchstens ein Bild, Rufen nur bei gascoigne >= 0 (L8), Flucht am Brückenkopf (L19),
+//   Blutrausch statt Aufnehmen (L28), Choral bricht ohne Kommentar ab (N6), toter Zweig gascoigne2 gelöscht (L44), Kopf nach Gascoignes Hieben (L46).
 // [ERWEITERT] Die vierte Zeile: Im Gedächtnis kippt seine Stimme in der vierten Zeile; der Choral nach dem Sieg endet nach der dritten.
 //   Der Leser verbindet es selbst; am Grab (n2_gascoigne) reißt die Zeile an derselben Stelle.
 
@@ -47,41 +50,39 @@ VAR n1_kiesel = 0
 { kleriker == "besiegt": -> uebergang }
 // Stimme A für das Ortsbild, dann B. Beim ersten Mal ganz; nach einem Tod nur das, was sich wiederholt, als Regel (SP-05).
 { k1_n1_kleriker == 1:
-    Die Große Brücke trägt den Weg aus der unteren Stadt hinauf zur Kathedrale, auf Bögen aus grauem Stein, die so tief in den Nebel hinabreichen, dass keiner, den man fragt, ihren Fuß je gesehen haben will. Vier Kutschen fänden auf ihr nebeneinander Platz, und als die Jagd ausgerufen wurde, wollten alle zugleich hinüber; drüben, sagt man in den Gassen, habe ihnen niemand aufgetan. Die Kutschen stehen noch da, umgestürzt und ineinander verkeilt, die Pferde im Geschirr, aufgedunsen und starr. Aus einem geplatzten Koffer quillt, was einer in der letzten Stunde für wichtig hielt: Hemden, zwei Kerzenleuchter, ein Gebetbuch mit silbernem Schloss. Zwischen den Rädern liegen die Menschen, die hinüberwollten. Fortgeräumt hat man sie nicht. # bild: bruecke # stimmung: grauen
-    Am anderen Ende ragt ein Turm über das schmiedeeiserne Geländer, und dahinter steigen die Spitzen der Kathedrale auf. Hinter ihnen steht der Mond. Seit er über den Giebeln der Klinik hing, ist er keinen Fingerbreit gewandert, aber nun ist er so groß, dass Turm und Kathedrale schwarz vor seiner Scheibe stehen, jede Spitze, jeder Wasserspeier, so scharf umrissen, als hätte sie einer mit der Schere aus Papier geschnitten. Sein Licht liegt knochenbleich auf dem nassen Pflaster, und in jeder Pfütze steht er noch einmal, klein und genau.
+    Die Große Brücke trägt den Weg aus der unteren Stadt hinauf zur Kathedrale, auf Bögen aus grauem Stein, die tief in den Nebel hinabreichen; ihren Fuß will keiner, den man fragt, je gesehen haben. Vier Kutschen fänden auf ihr nebeneinander Platz, aber als die Jagd ausgerufen wurde, wollten freilich alle zugleich hinüber, und drüben, sagt man in den Gassen, habe ihnen niemand aufgetan. Die Kutschen stehen noch da, umgestürzt und ineinander verkeilt, die Pferde im Geschirr, aufgedunsen und starr. Aus einem geplatzten Koffer quillt, was einer in der letzten Stunde für wichtig hielt: Hemden, zwei Kerzenleuchter, ein Gebetbuch mit silbernem Schloss. Zwischen den Rädern liegen die Menschen, die hinüberwollten. Fortgeräumt hat man sie nicht. # bild: bruecke # stimmung: grauen
+    Am anderen Ende ragt ein Turm über das schmiedeeiserne Geländer, und dahinter steigen die Spitzen der Kathedrale auf, und der Mond steht hinter ihnen. Seit er über den Giebeln der Klinik hing, ist er nicht von der Stelle gerückt, aber er ist gewachsen: Turm und Kathedrale stehen schwarz vor seiner Scheibe, jede Spitze, jeder Wasserspeier, scharf umrissen, als hätte sie einer mit der Schere aus Papier geschnitten. Sein Licht liegt auf dem nassen Pflaster, und in jeder Pfütze steht er noch einmal, klein und genau.
     Nur deine Stiefel sind zu hören, und auf halbem Weg der Atem eines der Pferde, das keinen Atem mehr hat; es ist der Wind in seinen Nüstern. Vom Turm her, hoch über dir, kommt ein Kratzen: Horn auf Stein, ein Schaben, eine Pause, wieder Horn auf Stein. Vor der hellen Scheibe löst sich ein Stück vom Umriss des Turms, ein Klumpen mit Zacken, hängt eine Weile still und kriecht dann abwärts. Was da herabsteigt, lässt sich Zeit.
-    Auf halber Höhe lässt es los. Zwischen den Kutschen schlägt es auf, so schwer, dass dir das Pflaster gegen die Sohlen stößt und vom Geländer Steine in den Nebel fallen, ohne dass du sie unten aufkommen hörst. # kampf: kleriker
-    Selbst gekauert überragt die Bestie die umgestürzten Kutschen um zwei Mannslängen, und dabei ist sie so mager, dass unter dem Fell jede Rippe einzeln steht. Das Fell hängt in verfilzten Strähnen von ihr herab, bleich und nass wie Moos an einem toten Baum. Aus dem Schädel wächst ihr ein Geweih, verdreht und in sich verknotet, Horn, das gegen sich selbst gewachsen ist. Der linke Arm ist doppelt so lang wie der rechte und aufgebläht von Muskeln, und an seinem Ende krümmen sich Krallen, jede länger als das Blatt deiner Säge.
+    Auf halber Höhe lässt es los und schlägt zwischen den Kutschen auf. Das Pflaster stößt dir gegen die Sohlen, vom Geländer fallen Steine in den Nebel, und unten aufkommen hörst du sie nicht. # kampf: kleriker
+    Selbst gekauert überragt die Bestie die umgestürzten Kutschen um zwei Mannslängen, und dabei ist sie ausgehungert: Unter dem Fell kann man ihr die Rippen zählen. Das Fell hängt in verfilzten Strähnen von ihr herab, bleich und nass wie Moos an einem toten Baum. Aus dem Schädel wächst ihr ein Geweih, verdreht und in sich verknotet, Horn, das gegen sich selbst gewachsen ist. Der linke Arm ist doppelt so lang wie der rechte und aufgebläht von Muskeln, und an seinem Ende krümmen sich Krallen, jede länger als das Blatt deiner Säge.
     In den Hinterläufen stecken Nägel, rostige, Dutzende, und um jeden Nagel ist das Fell weißlich aufgeworfen und weich, Schimmel auf altem Brot. Um den Hals, ins Fell eingewachsen, hängt ein Streifen Stoff, der einmal weiß war. Kragen oder Verband: Von hier aus kannst du es nicht sagen.
 - else:
-    Wieder die Kutschen, die Pferde im Geschirr, der Mond hinter dem Turm, und an derselben Stelle wie zuvor das Kratzen, Horn auf Stein. Deine Schultern ziehen sich hoch, bevor du hinsiehst. # bild: bruecke # stimmung: grauen
-    Auf halber Höhe lässt sie los, wie zuvor, und schlägt zwischen den Kutschen auf; das Pflaster stößt dir gegen die Sohlen. Das verknotete Geweih, die Nägel in den Läufen, der Streifen Stoff am Hals: Alles ist, wie es war. Deine Augen gehen von selbst zuerst zu dem langen Arm. # kampf: kleriker
+    Wieder die Kutschen, die Pferde im Geschirr, der Mond hinter dem Turm, und an derselben Stelle wie zuvor das Kratzen, Horn auf Stein. Diesmal siehst du gleich hinauf. # bild: bruecke # stimmung: grauen
+    Auf halber Höhe lässt sie los, wie zuvor, und schlägt zwischen den Kutschen auf; das Pflaster stößt dir gegen die Sohlen. Das verknotete Geweih, die Nägel in den Läufen, der Streifen Stoff am Hals: Alles ist, wie es war. Du suchst zuerst den langen Arm. # kampf: kleriker
 }
 { k1_n1_kleriker == 1:
     ~ einsicht = einsicht + 1
-    { schreie >= 1: Sie reißt das Maul auf und kreischt, hoch und lang, und deine Schultern kennen den Ton von den Dächern her, bevor du ihn erkennst. Jetzt hat er einen Körper. }
-    Dein Blick bleibt an dem langen Arm hängen und kommt nicht los. Ohne es zu wollen, zählst du die Gelenke: Schulter, Ellbogen, noch ein Ellbogen, noch einer. Beim zweiten Zählen kommst du auf eine andere Zahl. Hinter deiner Stirn tut sich ein Spalt auf, so schmal wie der unter einer Tür, und durch ihn siehst du, dass der Arm noch wächst, jetzt, während du hinsiehst. # notiz: erste_einsicht # lore: einsicht # stimmung: grauen
+    { schreie >= 1: Sie reißt das Maul auf und kreischt, hoch und lang. Den Ton hast du schon gehört, von weit her, aus den Gassen. Jetzt hat er einen Körper. }
+    Dein Blick bleibt an dem langen Arm hängen und kommt nicht los. Ohne es zu wollen, zählst du die Gelenke: Schulter, Ellbogen, noch ein Ellbogen, noch einer. Beim zweiten Zählen kommst du auf eine andere Zahl. Ein Spalt tut sich dir hinter der Stirn auf, schmal wie der unter einer Tür, und durch ihn siehst du, dass der Arm noch wächst, jetzt, während du hinsiehst. # notiz: erste_einsicht # lore: einsicht # stimmung: grauen
 }
-{ kleriker == "abgelenkt" or kleriker == "geflohen": Sie hat dich nicht vergessen. Der schwere Kopf dreht sich, Zoll um Zoll, und sucht genau die Stelle, an der du stehst. }
-// WARUM: Wer Gascoigne am Scheiterhaufen beigestanden hat, kann ihn rufen; zu zweit ist der Kampf kürzer und zeigt, wie er kippt (Lachen, Summen, er hört nicht auf). Kein falscher Weg; hat man ihn verraten, antwortet niemand.
-+ {q_frau == 1} [Nach Gascoigne rufen #fliesst] -> rufen
+{ kleriker == "abgelenkt" or kleriker == "geflohen": Sie hat dich nicht vergessen. Langsam dreht sich der schwere Kopf und sucht genau die Stelle, an der du stehst. }
+// WARUM: Rufen kann ihn, wen er am Scheiterhaufen eingeladen hat („Ruf mich“, nur bei gascoigne >= 0, L8); zu zweit ist der Kampf kürzer und zeigt, wie er kippt (Lachen, Summen, er hört nicht auf). Kein falscher Weg; hat man ihn verraten, antwortet niemand.
++ {gascoigne >= 0} [Nach Gascoigne rufen #fliesst] -> rufen
 // WARUM: Der Weg ohne Hilfe: sieben Takte gegen die ganze Bestie, danach Brief, Abzeichen und Gedächtnis. Richtig für den, der die Anzeichen liest.
 + [Die Säge ausklappen und ihr allein entgegengehen #fliesst]
     Das Blatt schnappt aus dem Griff und rastet ein. Zwischen den toten Pferden hindurch, und mit jedem Schritt riecht die Luft schwerer, nach Schimmel und kaltem Stall.
     -> kampf
 // WARUM: Mit Kiesel oder Brandflasche kommt man ohne Kampf vorbei; die Bestie lebt weiter (ihr Kreischen begleitet den Heimweg), und was sie im Fell trägt, bleibt dort.
 + {kiesel > 0 or molotow > 0} [Sie mit einem Wurf ablenken und vorbeischleichen #fliesst] -> ablenken
-// WARUM: Der Ausweg der Panik: kostet zwei Treffer und alles, was die Bestie bei sich trägt. Für Aufmerksame falsch, denn eben ist sie vom Turm herabgestiegen: Die Höhe ist ihr Gelände, nicht deins.
-+ [Über das Geländer springen und fliehen #fliesst] -> fliehen
+// WARUM: Der Ausweg der Panik: kostet zwei Treffer und alles, was die Bestie bei sich trägt. Für Aufmerksame falsch, denn eben ist sie vom Turm herabgestiegen: Die Höhe ist ihr Gelände, nicht deins. Der Sprung geht am Brückenkopf hinab, wo die Dächer bis ans Geländer reichen (L19).
++ [Zurück zum Brückenkopf und über das Geländer fliehen #fliesst] -> fliehen
 
 = rufen
-„Gascoigne!“ Der Name kratzt dir im Hals und läuft über die Brücke davon, zwischen den Kutschen hindurch, bis hinüber zum Turm.
+// L44: Der frühere Zweig „gascoigne2“ (Gascoigne an den Gräbern) ist gelöscht: Die Brücke wird nur aus k1_nach_scheiterhaufen (b_yharnam) betreten,
+//   gascoigne2 wird erst an den Gräbern gesetzt (c_unterstadt), danach führt kein Weg zurück auf die Brücke.
+„Gascoigne!“ Der Name läuft über die Brücke davon, zwischen den Kutschen hindurch, bis hinüber zum Turm.
 { gascoigne_verraten:
     Das Echo kommt zurück, einmal, zweimal, und sonst nichts. Erst jetzt siehst du die Federn auf dem Pflaster am Brückenkopf, schwarz, ein ganzer Kreis davon, und dazwischen dunkle Tropfen. Gewartet hat hier jemand, aber nicht auf dich. # notiz: federn_bruecke
-    -> kampf
-}
-{ gascoigne2:
-    Unten zwischen den Dächern bellt ein Hund, ein einziges Mal, und sonst antwortet niemand.{k1_c_graeber.warnung: Wo er jetzt ist, hast du gesehen: hinter einem Tor mit einem Namen darüber.}
     -> kampf
 }
 -> mit_gascoigne
@@ -89,15 +90,15 @@ VAR n1_kiesel = 0
 = kampf
 // Sieben Takte in zwei Phasen (Entscheidung des Nutzers 2026-11-04: Bosskämpfe 6 bis 8 Takte).
 // Tempo gemischt: das Anzeichen ruhig und genau, die Folge kurz und hart. Jede Möglichkeit nennt Richtung und Handlung;
-// die Begründung steht im Anzeichen, die Richtung in seinem letzten Satz. Lernsätze (gelernt) als Erinnerung des Körpers an den letzten Tod, jeder anders (L3).
+// die Begründung steht im Anzeichen, die Richtung in seinem letzten Satz. Lernsätze (gelernt) als Erinnerungsbild im Präteritum an den letzten Tod, jeder anders (L3; N1: keine Körperautomatik).
 // Die Fortsetzungen beginnen mit dem, was geschieht, nicht mit den Wörtern der Option (Ü6).
 # stimmung: kampf
 - (t1)
-Die Bestie stützt sich auf den langen Arm und schiebt den Kopf vor, die Augen halb geschlossen; sie sucht dich mit der Nase. Unter dem Fell der Schulter ziehen sich die Muskeln zusammen, Faser um Faser, zu einem Knoten, so groß wie ein Mehlsack. Die Krallen liegen flach auf dem Pflaster und reichen bis an die übernächste Kutsche. Der lange Arm steht dir zur Rechten, und unter ihm, zwischen Ellbogen und Pflaster, bleibt ein Spalt. # anzeichen: kleriker_hieb
-{ gelernt ? kleriker_hieb: Die Stelle, an der dich zuletzt die Krallen fanden, brennt, obwohl dort keine Wunde mehr ist. Von rechts kam der Arm, flach und weiter, als ein Sprung trägt, und Platz war nur darunter. }
+Die Bestie stützt sich auf den langen Arm und schiebt den Kopf vor, die Augen halb geschlossen; sie sucht dich mit der Nase. Unter dem Fell der Schulter ballen sich die Muskeln zu einem Knoten, groß wie ein Mehlsack. Die Krallen liegen flach auf dem Pflaster und reichen bis an die übernächste Kutsche. Der lange Arm steht dir zur Rechten, und unter ihm, zwischen Ellbogen und Pflaster, bleibt ein Spalt. # anzeichen: kleriker_hieb
+{ gelernt ? kleriker_hieb: Beim letzten Mal kam der Arm von rechts, flach und weiter, als ein Sprung trägt. Platz war nur darunter. }
 // WARUM: Richtig. Das Anzeichen nennt den Spalt unter dem Ellbogen zur Rechten; nah am Ansatz hat der Bogen noch keine Wucht.
 + [Nach rechts, unter den Arm #fliesst]
-    Dorthin, wo der Bogen beginnt, den Kopf zwischen den Schultern: Ein Luftzug fährt dir über den Scheitel, hinter dir kippt eine Kutsche in den Abgrund, und schon bist du an ihrer Flanke. Die Säge beißt in Rippen.
+    Dorthin, wo der Bogen beginnt, den Kopf zwischen den Schultern: Ein Luftzug fährt dir über den Scheitel, hinter dir kippt eine Kutsche in den Abgrund, und schon bist du an der Flanke der Bestie. Die Säge beißt in Rippen.
     -> t2
 // WARUM: Falsch (zwei Treffer). Das Anzeichen sagt, dass die Krallen bis an die übernächste Kutsche reichen; so weit trägt kein Sprung.
 + [Mit einem Satz nach hinten springen #fliesst]
@@ -115,21 +116,21 @@ Die Bestie stützt sich auf den langen Arm und schiebt den Kopf vor, die Augen h
     -> t2
 // WARUM: Richtig, wenn Gilbert dir die Flamme gegeben hat: Die Schnauze ist vorgestreckt, und Feuer ist, wogegen diese Bestie nichts hat (Kanon: feueranfällig). Gilberts Husten kehrt als dein eigener wieder.
 + {feuer} [Gilberts Flamme nach vorn, in die Schnauze #fliesst]
-    Das Feuer fährt aus der Düse mitten in die schnüffelnde Schnauze. Das nasse, verfilzte Fell zischt zuerst, dann fängt es. Sie wirft sich zurück und schlägt blind um sich, den brennenden Kopf zwischen den Schultern, und der Gestank von versengtem Haar setzt sich dir so tief in den Hals, dass du selbst zu husten beginnst. # notiz: kleriker_feuer
+    Das Feuer fährt aus der Düse mitten in die schnüffelnde Schnauze. Das nasse, verfilzte Fell zischt zuerst, dann fängt es. Sie wirft sich zurück und schlägt blind um sich, den brennenden Kopf zwischen den Schultern, und der Gestank von versengtem Haar setzt sich dir in den Hals, bis du selbst husten musst. # notiz: kleriker_feuer
     -> t2
 - (t2)
-Sie richtet sich auf, höher und höher, bis du den Kopf in den Nacken legen musst, um das Geweih zu sehen, und reißt das Maul auf. Ihr Hals weitet sich wie ein Blasebalg, die Rippen treten unter dem Fell hervor, und für einen Herzschlag hört alles auf, ihr Atem, das Knarren der Kutschen, der Wind in den Nüstern der Pferde. Nur die Tropfen hörst du noch, die von ihrem Geweih fallen, und das offene Maul hängt so nah über dir, dass dir sein Atem warm in den Kragen fällt. # anzeichen: kreischen
-{ gelernt ? kreischen: In deinen Ohren singt es schon, ehe sie schreit, hoch und dünn, so wie zuletzt, als du ihrem Maul zu nahe warst. }
+Sie richtet sich auf, höher und höher, bis du den Kopf in den Nacken legen musst, um das Geweih zu sehen, und reißt das Maul auf. Ihr Hals bläht sich, die Rippen treten unter dem Fell hervor, und für einen Herzschlag hört alles auf, ihr Atem, das Knarren der Kutschen, der Wind in den Nüstern der Pferde. Nur die Tropfen hörst du noch, die von ihrem Geweih fallen, und das offene Maul hängt so nah über dir, dass dir sein Atem warm in den Kragen fällt. # anzeichen: kreischen
+{ gelernt ? kreischen: Zuletzt warst du ihrem Maul zu nahe, als sie schrie, und die Brücke kippte unter dir weg. }
 // WARUM: Falsch (ein Treffer). Das Maul hängt laut Anzeichen so nah, dass ihr Atem dich erreicht; wer noch näher geht, steht mitten im Schrei.
 + [Nach vorn, in den Schrei hinein #fliesst]
-    Aus nächster Nähe trifft dich der Schrei, eine Glocke, die man dir dicht am Kopf anschlägt, und die Brücke kippt. Im Taumeln erwischt dich ihr kleiner Arm, beinahe beiläufig.
+    Aus nächster Nähe trifft dich der Schrei, und die Brücke kippt. Im Taumeln erwischt dich ihr kleiner Arm, beinahe beiläufig.
     ~ zuletzt = kreischen
     ~ treffer(1)
     { leben <= 0: -> tod }
     -> t3
 // WARUM: Richtig. Die Stille und der geweitete Hals kündigen den Schrei an; Abstand und zugehaltene Ohren lassen dich stehen.
 + [Ohren zuhalten und nach hinten weichen #fliesst]
-    Die Handballen fest auf den Ohren, Schritt um Schritt zurück. Der Schrei geht trotzdem durch dich hindurch, durch Haut und Knochen, und einen Augenblick lang weißt du nicht, wo oben ist. Aber du stehst.
+    Die Handballen fest auf den Ohren, rückwärts, einen Schritt, noch einen. Der Schrei geht trotzdem durch dich hindurch, durch Haut und Knochen, und einen Augenblick lang weißt du nicht, wo oben ist. Aber du stehst.
     -> t3
 // WARUM: Richtig und stark, wenn du eine Brandflasche trägst: Das Maul steht offen, und Feuer im Schlund erspart dir den nächsten Takt.
 + {molotow > 0} [Die Brandflasche hinauf ins Maul werfen #fliesst]
@@ -143,7 +144,7 @@ Sie richtet sich auf, höher und höher, bis du den Kopf in den Nacken legen mus
 - (t3)
 // [ERWEITERT] Der Wurf mit der Kutsche.
 Sie fällt auf alle viere zurück und tastet mit dem langen Arm zwischen die Kutschen, wie eine Hand, die im Dunkeln nach einem Becher sucht. Die Krallen schließen sich um eine Achse. Fast andächtig hebt sie die ganze Kutsche vom Pflaster, und der Arm wandert damit nach hinten, weit über ihre Schulter, bis das Holz knarrt. Der kleine Arm hängt frei vor ihrer Brust, die Finger gespreizt. Ihr Kopf zeigt auf dich; links von dir stehen Kutschen, rechts liegt die Brücke frei bis an das andere Geländer. # anzeichen: wurf
-{ gelernt ? wurf: Diesen Arm mit der Kutsche über der Schulter hast du schon gesehen, und dein Rücken zieht sich zusammen, ehe das Holz die Schulter verlässt. Sie wirft dorthin, wohin ihr Kopf zeigt, und eine Kutsche hält keine Kutsche auf. }
+{ gelernt ? wurf: Diesen Arm mit der Kutsche über der Schulter hast du schon gesehen. Sie warf dorthin, wohin ihr Kopf zeigte, und die Kutsche, hinter der du kauertest, hielt die andere nicht auf. }
 // WARUM: Falsch (zwei Treffer). Sie hebt selbst eine ganze Kutsche; links stehen laut Anzeichen nur Kutschen, und Holz hält kein Holz auf.
 + [Links hinter die nächste Kutsche ducken #fliesst]
     Die Kutsche, hinter der du kauerst, hält genau einen Herzschlag lang. Die zweite schlägt in die erste, und beide kommen über dich, in Splittern und Eisen, und zuletzt legt sich das Gewicht eines toten Pferdes auf dein Bein.
@@ -153,21 +154,21 @@ Sie fällt auf alle viere zurück und tastet mit dem langen Arm zwischen die Kut
     -> t4
 // WARUM: Richtig. Sie wirft, wohin ihr Kopf zeigt; rechts liegt laut Anzeichen die Brücke frei, also hinaus aus der Linie.
 + [Nach rechts, quer über die Brücke #fliesst]
-    So schnell die Stiefel auf dem nassen Pflaster greifen, hinaus aus der Linie ihres Kopfes: Hinter dir schlägt die Kutsche dort auf, wo du eben noch standest. Glas springt über die Steine, an dir vorbei wirbelt ein Pferdebein, das Eisen noch am Huf, und das letzte Rad rollt aus, kippt und liegt.
+    So schnell die Stiefel auf dem nassen Pflaster greifen, hinaus aus der Linie ihres Kopfes, und dort, wo du eben noch standest, schlägt die Kutsche auf. Glas springt über die Steine, an dir vorbei wirbelt ein Pferdebein, das Eisen noch am Huf, und das letzte Rad rollt aus, kippt und liegt.
     -> t4
 // WARUM: Halb richtig (ein Treffer, aber ein Hieb für dich). Das Anzeichen zeigt den kleinen Arm frei vor ihrer Brust; wer unter dem Wurf hindurchgeht, läuft ihm in die Hand.
 + [Nach vorn, unter den erhobenen Arm #fliesst]
-    Die Kutsche fliegt über dich hinweg und zerschellt in deinem Rücken, und du bist an ihrem Bauch, wo das Fell dünn ist; die Säge geht hinein, und sie heult. Aber der kleine Arm hat gewartet. Er schlägt dich zu Boden, beinahe ohne Eile.
+    Die Kutsche fliegt über dich hinweg und zerschellt in deinem Rücken, und du bist an ihrem Bauch, wo das Fell dünn ist; die Säge geht hinein, und sie heult. Aber der kleine Arm hat gewartet. Er schlägt dich zu Boden, mit dem Handrücken.
     ~ zuletzt = wurf
     ~ treffer(1)
     { leben <= 0: -> tod }
     -> t4
 - (t4)
 Sie zieht die Hinterläufe unter den Leib und streckt den langen Arm nach vorn, und ihr ganzes Gewicht sackt nach hinten, bis die Läufe darunter zittern. Die Nägel darin schaben über das Pflaster. Die Krallen des langen Armes graben sich in die Fugen zwischen den Steinen, und ihr Kopf hält still, genau auf die Stelle gerichtet, an der du stehst. Zu deiner Rechten ist das Pflaster frei bis an eine umgestürzte Kutsche. # anzeichen: sprung
-{ gelernt ? sprung: Unter deinen Schulterblättern ist das Pflaster wieder kalt, obwohl du stehst. Wo du jetzt stehst, landet sie. }
+{ gelernt ? sprung: Zuletzt lagst du unter ihr, das kalte Pflaster unter den Schulterblättern. Sie landete genau dort, wo du standest. }
 // WARUM: Richtig und am stärksten, wenn Gascoigne (oder Gehrman) dir die Parade gezeigt hat: Ihr ganzes Gewicht liegt im Absprung, genau der Augenblick, von dem er gesprochen hat.
 + {parade} [Im Absprung nach oben schießen #fliesst]
-    {parade_quelle == "gascoigne":„Nicht davor“, sagt in deinem Kopf eine tiefe Stimme, die nicht aus diesen Gassen stammt. „Nicht danach.“|„Genau dann, wenn sie ihr Gewicht hineinlegt“, sagt in deinem Kopf eine müde Stimme, eine für Höfe und Übungsplätze.} Erst als sie ganz in der Luft hängt, drückst du ab. Sie wankt mitten im Sprung und schlägt vor dir auf die Brust. Bevor sie sich fängt, bist du über ihr und stößt zu, tief, mit beiden Händen. # notiz: viszeral
+    {parade_quelle == "gascoigne":„Nicht davor“, sagt in deinem Kopf Gascoigne, tief und mit seinem Rollen. „Nicht danach.“|„Genau dann, wenn sie ihr Gewicht hineinlegt“, sagt in deinem Kopf eine müde Stimme, eine für Höfe und Übungsplätze.} Erst als sie ganz in der Luft hängt, drückst du ab. Sie wankt mitten im Sprung und schlägt vor dir auf die Brust. Bevor sie sich fängt, bist du über ihr und stößt zu, tief, mit beiden Händen. # notiz: viszeral
     -> phase2
 // WARUM: Richtig. Ihr Kopf zielt auf die Stelle, an der du stehst, und rechts ist das Pflaster laut Anzeichen frei.
 + [Nach rechts wegrollen #fliesst]
@@ -175,7 +176,7 @@ Sie zieht die Hinterläufe unter den Leib und streckt den langen Arm nach vorn, 
     -> phase2
 // WARUM: Falsch (zwei Treffer). Das Anzeichen zeigt, wie viel Gewicht in den Sprung geht (die Läufe zittern darunter); das fängt keine Klinge.
 + [Den Sprung von vorn abfangen #fliesst]
-    Die Säge quer vor der Brust, die Füße fest, und schon dabei weiß dein Rücken, dass es falsch ist. Das Gewicht begräbt dich. Unter deinen Schulterblättern ist die Brücke kalt, und über dir ist nur noch Fell.
+    Die Säge quer vor der Brust, die Füße fest. Das Gewicht begräbt dich. Unter deinen Schulterblättern ist die Brücke kalt, und über dir ist nur noch Fell.
     ~ zuletzt = sprung
     ~ treffer(2)
     { leben <= 0: -> tod }
@@ -185,7 +186,7 @@ Die Bestie kommt wieder hoch, und sie ist schneller geworden: Der nächste Schri
 - (t5)
 // Atemlos und kurz (Lektorat 1.4), gegen die lange falsche Ruhe in t7.
 Links, rechts, links. Der verzweigte Arm schlägt um sich, und jeder Schlag reicht weiter als der vorige, bis in die Kutschen hinter dir. Dazwischen, einen Atemzug lang, steht ihre Brust offen. # anzeichen: knochensturm
-{ gelernt ? knochensturm: Deine Schläfe pocht im Takt der Schläge, links, rechts, links, und wartet mit dir auf die Lücke. Bis an ihre Brust reicht der Sturm nicht. }
+{ gelernt ? knochensturm: Zuletzt hat dich dieser Sturm gefunden, als du vor ihm zurückwichst. Bis an ihre Brust reichte er nicht. }
 // WARUM: Falsch (ein Treffer). Jeder Schlag reicht weiter als der vorige, laut Anzeichen bis in die Kutschen hinter dir.
 + [Nach hinten, hinter die Kutschen #fliesst]
     Die Kutsche, hinter die du dich flüchtest, birst unter dem nächsten Schlag in Latten und Glas, und ein Speichenrad trifft dich an der Schläfe.
@@ -200,7 +201,7 @@ Links, rechts, links. Der verzweigte Arm schlägt um sich, und jeder Schlag reic
     -> t6
 // WARUM: Richtig. Das Anzeichen nennt die offene Brust zwischen den Hieben; vorn ist der einzige Ort, den der Sturm nicht erreicht.
 + [Zwischen den Hieben nach vorn, an ihre Brust #fliesst]
-    In den einen Atemzug hinein, so nah an sie heran, dass du ihr Herz durch das Fell schlagen spürst, schwer und mit zu langen Pausen. Hinter deinem Rücken schlägt der Arm ins Leere. Die Säge geht hinein, wieder und wieder, bis sie rückwärts gegen das Geländer taumelt.
+    In den einen Atemzug hinein, an sie heran, bis du ihr Herz durch das Fell schlagen spürst, schwer und mit zu langen Pausen. In deinem Rücken schlägt der Arm ins Leere. Die Säge geht hinein, wieder und wieder, bis sie rückwärts gegen das Geländer taumelt.
     -> t6
 // WARUM: Der falsche Augenblick für die Ampulle: Mitten im Sturm trifft dich der nächste Schlag beim Setzen, und der Sturm beginnt von vorn.
 + {ampulle > 0} [Nach hinten weichen, die Ampulle setzen #fliesst]
@@ -209,7 +210,7 @@ Links, rechts, links. Der verzweigte Arm schlägt um sich, und jeder Schlag reic
 - (t6)
 // [ERWEITERT] Der Ansturm mit dem Geweih.
 Am Geländer senkt sie den Kopf, bis das verknotete Geweih auf der Höhe deiner Brust steht. Die Hinterläufe scharren über das Pflaster, einmal, zweimal, und mit jedem Scharren rückt sie ein Stück zur Seite, bis sie dich genau vor den Hörnern hat. Ihre Augen sind halb geschlossen, als ziele sie mit etwas anderem als mit ihnen. Machst du einen halben Schritt nach links, scharrt sie und rückt nach. # anzeichen: ansturm
-{ gelernt ? ansturm: Dieses gesenkte Geweih hattest du schon einmal vor Augen, und was es dich gelehrt hat, sitzt dir in den Beinen: Davonlaufen hilft nicht, und wer zu früh weicht, dem lenkt sie nach. Dir gehört nur der letzte Augenblick. }
+{ gelernt ? ansturm: Dieses gesenkte Geweih hattest du schon einmal vor Augen. Davonlaufen half nicht, und als du zu früh wichst, lenkte sie nach. }
 // WARUM: Falsch (zwei Treffer). Wer eben in einem Satz über Kutschen gesprungen ist, holt einen Läufer ein.
 + [Nach hinten über die Brücke rennen #fliesst]
     So schnell du kannst, und hinter dir trommeln ihre Läufe, näher, näher, bis das Geweih dich ins Kreuz trifft und über eine Kutsche hinwegwirft.
@@ -226,7 +227,7 @@ Am Geländer senkt sie den Kopf, bis das verknotete Geweih auf der Höhe deiner 
     -> t7
 // WARUM: Richtig. Weil sie jeder frühen Bewegung nachlenkt, gehört dir nur der letzte Augenblick; dann trägt ihr eigenes Gewicht sie ins Geländer.
 + [Warten, dann im letzten Augenblick links #fliesst]
-    Das Geweih wächst vor dir, bis es ein Wald aus Horn ist, so nah, dass du die Kruste aus altem Blut in seinen Gabelungen siehst. Jetzt. Ein Schritt nach links. Sie rast vorbei, und das Geländer, gegen das sie prallt, bricht in Stücken in den Abgrund. Sie hängt halb darüber, die Hinterläufe in der Luft, und zieht sich mit dem kleinen Arm zurück auf die Brücke.
+    Das Geweih wächst vor dir, bis es ein Wald aus Horn ist und du die Kruste aus altem Blut in seinen Gabelungen siehst. Jetzt. Ein Schritt nach links. Sie rast vorbei, und das Geländer, gegen das sie prallt, bricht in Stücken in den Abgrund. Sie hängt halb darüber, die Hinterläufe in der Luft, und zieht sich mit dem kleinen Arm zurück auf die Brücke.
     -> t7
 // WARUM: Falsch (zwei Treffer). Gegen ein gesenktes, verknotetes Geweih mit dem ganzen Gewicht dahinter richtet die Säge nichts aus.
 + [Nach vorn, dem Geweih entgegen #fliesst]
@@ -241,8 +242,8 @@ Am Geländer senkt sie den Kopf, bis das verknotete Geweih auf der Höhe deiner 
     -> ampulle_gefahr(2) -> t6
 - (t7)
 // [ERWEITERT] Die falsche Ruhe: Sie liegt still, aber der kleine Arm lauert. Lang und langsam erzählt, gegen den Knochensturm.
-Sie liegt auf der Seite, den Knochenarm unter sich begraben, und ihr Atem geht rasselnd und flach, wie bei einem Tier, das ein Fuhrwerk auf der Straße erfasst hat. Zwischen zwei Atemzügen vergeht so viel Zeit, dass du jedes Mal glaubst, der letzte sei schon gewesen, und jedes Mal kommt noch einer, nasser als der vorige. Der Kopf liegt auf dem Pflaster, ganz nah, das Auge geschlossen, und auf dem Lid liegt das Mondlicht. Nur der kleine Arm, der rechte, liegt nicht still. Seine Finger öffnen und schließen sich, ohne Eile, auf und zu, auf und zu. # anzeichen: letzter_griff
-{ gelernt ? letzter_griff: Um deinen Knöchel liegt noch ein Griff, den es nicht mehr gibt. Diese Finger warten darauf, dass sich einer über den Kopf beugt. }
+Sie liegt auf der Seite, den Knochenarm unter sich begraben, und ihr Atem geht rasselnd und flach. Nach jedem Atemzug glaubst du, es sei der letzte gewesen, und jedes Mal kommt noch einer, nasser als der vorige. Der Kopf liegt auf dem Pflaster, ganz nah, das Auge geschlossen, und auf dem Lid liegt das Mondlicht. Nur der kleine Arm, der rechte, liegt nicht still. Seine Finger öffnen und schließen sich, auf und zu, auf und zu. # anzeichen: letzter_griff
+{ gelernt ? letzter_griff: Zuletzt hast du dich über diesen Kopf gebeugt, und die kleine Hand hat dich am Knöchel von den Füßen gerissen. }
 // WARUM: Falsch (ein Treffer, aber der Kampf endet). Das Anzeichen zeigt die kleine Hand, die sich öffnet und schließt: Sie wartet auf den, der sich über den Kopf beugt.
 + [Über den Kopf gebeugt zustoßen #fliesst]
     Kaum fällt dein Schatten auf das Lid, schließt sich die kleine Hand um deinen Knöchel und reißt dich von den Füßen. Ihr Auge ist offen. Erst als deine Säge in diesem Auge steckt, lässt die Hand los.
@@ -252,7 +253,7 @@ Sie liegt auf der Seite, den Knochenarm unter sich begraben, und ihr Atem geht r
     -> sieg
 // WARUM: Richtig. Erst die lauernde Hand, dann der Stoß hinter das Ohr; wer das Anzeichen gelesen hat, sieht, woher die Gefahr kommt.
 + [Zuerst nach unten, auf die Hand treten #fliesst]
-    Dein Stiefel kommt mit dem ganzen Gewicht auf die kleine Hand, und die Finger schnappen zu, um nichts. Hinter dem Ohr, wo der Schädel dünn ist, findet die Säge ihren Weg. Einmal. Es genügt.
+    Dein Stiefel kommt mit dem ganzen Gewicht auf die kleine Hand, und die Finger schnappen zu, um nichts. Die Säge findet ihren Weg hinter das Ohr, wo der Schädel dünn ist, und ein Stoß genügt.
     -> sieg
 // WARUM: Ein sicherer Augenblick für die Ampulle: Sie liegt, und die Hand reicht nicht bis zu dir; danach liegt sie noch genauso da.
 + {ampulle > 0} [Zwei Schritte zurück, die Ampulle setzen #fliesst]
@@ -261,21 +262,23 @@ Sie liegt auf der Seite, den Knochenarm unter sich begraben, und ihr Atem geht r
 - (sieg)
 Die Bestie stirbt, wie ein alter Speicher einstürzt: lange nur ein Ächzen im Gebälk, dann alles zugleich, und ihr Geweih schabt noch über das Pflaster, als der Rest längst liegt. # stimmung: ruhig
 Zuletzt liegt auch das Geweih still.
-// Stimme C: Die Kirche betritt die Szene nur als Klang. Der Choral setzt ein, ohne dass der Erzähler das Timing kommentiert (L6); er bricht nach der dritten Zeile ab (Ü11).
-Jenseits des Turms, im Bezirk der Kathedrale, setzt ein Gesang ein: viele Stimmen hinter geschlossenen Türen, gleichmäßig und ohne Eile, in einer Tonart, die nicht aufgeht. Nach der dritten Zeile endet er ordnungsgemäß, und niemand stimmt die vierte an. # klang: choral
+// Stimme C: Die Kirche betritt die Szene nur als Klang. Der Choral setzt ein, ohne dass der Erzähler das Timing kommentiert (L6); er bricht nach der dritten Zeile ab, ohne Kommentar (Ü11, N6). Gesteigert wird das Abbrechen erst am Grab.
+Jenseits des Turms, im Bezirk der Kathedrale, setzt ein Gesang ein: viele Stimmen hinter geschlossenen Türen, alle im selben Atem, in einer Tonart, die nicht aufgeht. Nach der dritten Zeile bricht er ab. # klang: choral
 Die Zähne deiner Klinge haben sich in ihrem Fell festgefressen. Um sie herauszuziehen, musst du den Fuß auf ihre Brust stellen.
 -> beute
 
 = beute
 // Kein Blutecho mehr (2026-11-06). Der Dunst gehört zur Einsicht dieses Augenblicks: Er zieht gegen den Wind, ein Detail, das nicht stimmt.
+// L28: Nichts geht in den Jäger hinein (das war sichtbar das Blutecho); der Dunst weckt nur den Blutrausch, als Gegensatzpaar (weiche Knie, Lust zuzuschlagen). Saat für den süßen Dunst am Grab.
 ~ kleriker = "besiegt"
 ~ einsicht = einsicht + 1
 ~ fr_frei_machen(fr_ich)
 ~ abzeichen_schwert = true
-Aus ihrem Leib steigt ein roter Dunst und zieht gegen den Wind zu dir herüber. Er schmeckt nach Eisen. Als er in dir ist, musst du dich auf die Säge stützen, bis die Knie wieder tragen.
-Unter dem Fell, über der Brust, wo es dünn wird, sitzen Narben, klein und rund und in ordentlichen Reihen, Dutzende, Hunderte, Stich neben Stich. Du reibst dir die Armbeuge, ohne es zu merken. # notiz: nadelnarben
+Aus ihrem Leib steigt ein roter Dunst und zieht gegen den Wind zu dir herüber. Er schmeckt nach Eisen. Deine Knie werden weich davon, und zugleich steigt dir eine Hitze in die Arme, eine Lust, gleich noch einmal zuzuschlagen. Du stützt dich auf die Säge, bis beides vergeht.
+Unter dem Fell, über der Brust, wo es dünn wird, sitzen Narben, klein und rund und in ordentlichen Reihen, Dutzende, Hunderte, Stich neben Stich. In deiner eigenen Armbeuge sitzt seit der Klinik eine einzige. # notiz: nadelnarben
 // [ERWEITERT] Das zerkratzte Schwert: Indiz, das sich auf Gilberts abgekratzte Haustüren reimt, ohne zu beweisen, wem das Abzeichen gehörte.
-In den Fellsträhnen hat sich Silber verfangen, ein Abzeichen, ein Schwert auf einem Wappen, wie es in Yharnam die Jäger der Kirche tragen. Unter dem Daumen löst sich das Blut vom Silber. Darunter ist das Schwert zerkratzt, kreuz und quer, Strich um Strich, bis nur noch die Spitze klar zu erkennen ist.{gilbert_kleriker: Aus Kirchenleuten, hat Gilbert gesagt, werden die schlimmsten.} Du steckst es ein und wischst den Daumen lange am Mantel ab. # lore: kleriker_bestien # notiz: jaegerabzeichen
+// L33: Dass es das Zeichen der Kirchenjäger ist, sagt der Erzähler nicht mehr (er hätte keine Quelle); wer Gilberts Geschichte vom Silberschwert gehört hat, erkennt es selbst.
+In den Fellsträhnen hat sich Silber verfangen, ein Abzeichen, ein Schwert auf einem Wappen. Unter dem Daumen löst sich das Blut vom Silber. Darunter ist das Schwert zerkratzt, kreuz und quer, bis nur noch die Spitze klar zu erkennen ist.{gilbert_kleriker: Aus Kirchenleuten, hat Gilbert gesagt, werden die schlimmsten.} Du steckst es ein und wischst den Daumen lange am Mantel ab. # lore: kleriker_bestien # notiz: jaegerabzeichen
 // Fundstück (ersetzt den Kauf bei den Boten, 2026-11-06): der Brief in einem Rest Tuch unter dem Schlüsselbein (auf beiden Wegen gleich, denn der Streifen am Hals ist nach Phase 2 fort).
 Höher, unter dem Schlüsselbein, ist das Fell mit einem Rest Tuch verfilzt, schwarz von Blut, eine Tasche vielleicht, und darin steckt, mehrfach gefaltet, ein Brief. Das Siegel ist gebrochen; gelesen hat ihn schon jemand vor dir.
 ~ kirchenbrief = true
@@ -285,7 +288,7 @@ Höher, unter dem Schlüsselbein, ist das Fell mit einem Rest Tuch verfilzt, sch
 // Das Notizbuch (web/notizbuch.js, kirchenbrief) fasst zusammen: Kapelle nimmt auf, wer noch sprechen kann; die Vikarin betet am längsten; „Komm nicht“. Beides muss zusammenpassen.
 Die Hand darin ist klein und sorgfältig, jede Zeile gleich weit von der nächsten.
 „Liebe Schwester, ich darf dir mitteilen, dass die Kapelle oben im Bezirk auf Weisung nunmehr jeden aufnimmt, der an die Tür klopft und auf die Frage nach seinem Namen noch antworten kann. Wer nicht mehr antwortet, wird an die nächste Stelle des Blutes verwiesen; dafür ist gesorgt. Die Vikarin betet in der großen Kathedrale am längsten von uns allen. Wo sie gekniet hat, sind die Steine danach nass, und es wird gewischt. Mir ist das Läuten der Glocken übertragen, zu jeder vollen Stunde, auch wenn niemand mehr kommt. Es sind, seit ich damit begonnen habe, sehr viele volle Stunden gewesen. Ich läute sie alle.“ # stil: anschlag # notiz: kirchenbrief
-Darunter steht ein letzter Satz, so fest ausgestrichen, dass die Feder das Papier zerrissen hat. Lesbar sind davon nur die ersten beiden Wörter: Komm nicht.
+Darunter steht ein letzter Satz, ausgestrichen, bis die Feder das Papier zerrissen hat. Lesbar sind davon nur die ersten beiden Wörter: Komm nicht.
 -> gedaechtnis
 
 = mit_gascoigne
@@ -308,11 +311,11 @@ Die Bestie hat nur noch Augen für ihn. Ihr langer Arm hebt sich, der Muskelknot
     -> g_schrei
 // WARUM: Richtig. Neben ihm ist laut Anzeichen Platz; zu zweit nehmt ihr den Schlag, und er zeigt dir seinen Takt.
 + [Links neben ihn, Schulter an Schulter #fliesst]
-    Gemeinsam nehmt ihr den Schlag, du mit der Säge, er mit der Axt, und treibt sie Schritt für Schritt zurück, bis das Geländer in ihrem Rücken knirscht. Er hält den Takt, Hieb, Schritt, Hieb, ohne den Kopf zu wenden, und atmet dabei wie ein Mann beim Holzhacken, ruhig und gleichmäßig. „Du links, ich rechts“, sagt er einmal, ohne hinzusehen, dabei stehst du längst links von ihm.
+    Gemeinsam nehmt ihr den Schlag, du mit der Säge, er mit der Axt, und treibt sie zurück, bis das Geländer in ihrem Rücken knirscht. Er hält den Takt, Hieb, Schritt, Hieb, ohne den Kopf zu wenden, und atmet dabei wie ein Mann beim Holzhacken, ruhig und gleichmäßig. „Du links, ich rechts“, sagt er einmal, ohne hinzusehen, dabei stehst du längst links von ihm.
     -> g_schrei
 // WARUM: Richtig. Sie hat nur Augen für ihn, also liegt ihre Flanke frei.
 + [Rechts herum, ihr in die Flanke #fliesst]
-    Während sie nach ihm schlägt, bist du an ihrer Seite, und die Säge geht tief hinein. Gascoigne fängt den Arm mit der Axt ab und brüllt dabei Worte, kehlig und rund, in einer Sprache, die nicht die dieser Stadt ist.
+    Während sie nach ihm schlägt, bist du an ihrer Seite, und die Säge geht tief hinein. Gascoigne fängt den Arm mit der Axt ab und brüllt dabei Worte in einer fremden Sprache, kehlig und rund.
     -> g_schrei
 - (g_schrei)
 Sie richtet sich auf, das Maul weit offen, und die Rippen treten unter dem Fell hervor wie die Spanten eines Bootes. Gascoigne achtet nicht darauf. Er hackt nach ihrem Hals, immer wieder auf dieselbe Stelle, und hebt nicht einmal den Kopf. # anzeichen: kreischen
@@ -341,11 +344,11 @@ Sie tastet mit dem langen Arm zwischen die Kutschen und hebt eine vom Pflaster, 
 // WARUM: Richtig und Freundschaft: Er kniet in Reichweite, und die Kutsche fliegt dorthin, wohin ihr Kopf zeigt, auf ihn.
 + [Nach vorn, ihn aus der Bahn stoßen #fliesst]
     ~ gascoigne = gascoigne + 1
-    Deine Schulter trifft ihn in die Seite, und ihr rollt über das Pflaster. Die Kutsche schlägt dort ein, wo er gekniet hat, und ein Rad springt über euch hinweg in den Abgrund. Er liegt auf dem Rücken und schnauft wie nach einem Wettlauf. „So“, sagt er. „So. Das war knapp.“
+    Deine Schulter trifft ihn in die Seite, und ihr rollt über das Pflaster. Die Kutsche schlägt dort ein, wo er gekniet hat, und ein Rad springt über euch hinweg in den Abgrund. Er liegt auf dem Rücken und schnauft wie nach einem Wettlauf. „So“, sagt er. „Das war knapp.“
     -> g2
 - (g2)
 { spieluhr:
-    Zwischen zwei Axthieben fängt er an zu summen, eine Melodie, die in eine Kinderstube gehört. Noch ehe du sie erkannt hast, findet deine Hand in der Tasche die Spieluhr und hält den Deckel zu. Er summt weiter, auch als die Axt im Knochen stecken bleibt und er sie mit dem Stiefel herausstemmt. # notiz: gascoigne_lied
+    Zwischen zwei Axthieben fängt er an zu summen, eine Melodie, die in eine Kinderstube gehört. Du kennst sie. In deiner Tasche liegt die Spieluhr, und du legst die Hand auf ihren Deckel. Er summt weiter, auch als die Axt im Knochen stecken bleibt und er sie mit dem Stiefel herausstemmt. # notiz: gascoigne_lied
 - else:
     Zwischen zwei Axthieben fängt er an zu summen, ein Kinderlied, und summt weiter, auch als die Axt im Knochen stecken bleibt und er sie mit dem Stiefel herausstemmt. # notiz: gascoigne_lied
     -> g_fall
@@ -353,26 +356,27 @@ Sie tastet mit dem langen Arm zwischen die Kutschen und hebt eine vom Pflaster, 
 // Die Spieluhr zählt hier nicht für spieluhr_mal (n2_gascoigne).
 // WARUM: Wer die Spieluhr des Mädchens trägt, gibt ihm das Lied zurück, das er summt; er lacht an der Lücke (Kanon: er lacht leise) und fragt, woher du sie hast. Kein Fehler, eine Saat für die Gräber.
 * [Die Spieluhr aus der Tasche ziehen #fliesst]
-    Zwischen zwei Hieben ziehst du die Feder auf. Die Töne kommen spitz und einzeln gegen das Krachen der Axt an und gehen beinahe darin unter. Er hört sie trotzdem. An der Stelle, an der dem Lied ein Ton fehlt, lacht er, leise, ein Lachen, das du von ihm noch nicht kanntest. „Woher hast du die?“, fragt er über die Schulter. Du fängst an zu antworten, und mitten in deinem Satz wendet er sich ab und schlägt wieder zu. # notiz: gascoigne_lacht
+    Zwischen zwei Hieben ziehst du die Feder auf. Die Töne kommen spitz und einzeln gegen das Krachen der Axt an und gehen beinahe darin unter. Er hört sie trotzdem. An der Stelle, an der dem Lied ein Ton fehlt, lacht er, leise, beinahe zärtlich. „Woher hast du die?“, fragt er über die Schulter. Du fängst an zu antworten, und mitten in deinem Satz wendet er sich ab und schlägt wieder zu. # notiz: gascoigne_lacht
 // WARUM: Die Spieluhr bleibt verborgen, und das Lied gehört noch ihm allein. Kein Fehler, aber eine Nähe, die du nicht nimmst.
 * [Die Spieluhr in der Tasche lassen #fliesst]
     Sie bleibt, wo sie ist, unter deiner Hand. Sein Summen bricht ab, mitten in einer Wendung der Melodie, und kommt nicht wieder.
 - (g_fall)
 Die Bestie fällt. # stimmung: grauen
-Gascoigne hört nicht auf. Er schlägt weiter in den Kadaver hinein, nass und gleichmäßig, Hieb um Hieb, und lacht dabei, tief in der Brust. # notiz: gascoigne_kippt
+Gascoigne hört nicht auf. Er schlägt weiter in den Kadaver hinein, in den Hals, in den Schädel, nass und gleichmäßig, Hieb um Hieb, und lacht dabei, tief in der Brust. # notiz: gascoigne_kippt
 // WARUM: Ihn beim Namen zurückholen: Freundschaft, und sein Satz vom Blut ist eine Warnung, die auch dir gilt. Die beste Antwort auf den Rausch.
 * [„Gascoigne. Gascoigne!“ #fliesst]
     ~ gascoigne = gascoigne + 1
-    Erst beim dritten Mal, und erst, als deine Hand auf seiner Schulter liegt, hält er inne, blinzelt hinter dem Verband und senkt die Axt. Er räuspert sich verlegen, und die Stimme, die dann kommt, ist wieder seine eigene. „Ruhig. Ruhig. Das geht einem ins Blut, wenn man nicht aufpasst.“ Er wischt die Klinge am Mantel ab. „Pass du besser auf als ich.“ Ohne sich umzusehen, geht er zum Ende der Brücke und steigt dort hinab, Stufe um Stufe, bis der Nebel ihn hat.
+    „Gascoigne. Gascoigne!“ Erst beim dritten Mal, und erst, als deine Hand auf seiner Schulter liegt, hält er inne, blinzelt hinter dem Verband und senkt die Axt. Er räuspert sich verlegen, und die Stimme, die dann kommt, ist wieder seine eigene. „Ruhig. Ruhig. Das geht einem ins Blut, wenn man nicht aufpasst.“ Er wischt die Klinge am Mantel ab. „Pass du besser auf als ich.“ Ohne sich umzusehen, geht er zum Ende der Brücke und steigt dort die Stufen hinab, bis der Nebel ihn hat.
 // WARUM: Fragt nach dem Lied; er findet den Namen seiner Tochter nicht (Saat für den Moment am Grab, Merker gascoigne_lied).
 * [„Was hast du da gesummt?“ #fliesst]
     ~ gascoigne = gascoigne + 1
     ~ gascoigne_lied = true
-    Er hört auf zu schlagen und wendet dir das Gesicht zu, wie einer, den man aus dem Schlaf geholt hat. „Gesummt?“ Er muss nachdenken. „Das Lied von der Kleinen. Sie heißt …“ Er bricht ab. Sein Mund bleibt offen. „Sie heißt“, sagt er noch einmal, und dann nichts mehr. Die Axt senkt er, bis die Schneide auf dem Pflaster liegt, und hebt sie nicht wieder. Ohne ein weiteres Wort geht er davon, zum Ende der Brücke, und die Schneide schleift hinter ihm über die Steine.
+    „Was hast du da gesummt?“ Er hört auf zu schlagen und wendet dir das Gesicht zu, wie einer, den man aus dem Schlaf geholt hat. „Gesummt?“ Er muss nachdenken. „Das Lied von der Kleinen. Sie heißt …“ Er bricht ab. Sein Mund bleibt offen. „Sie heißt“, sagt er noch einmal, und dann nichts mehr. Die Axt senkt er, bis die Schneide auf dem Pflaster liegt, und hebt sie nicht wieder. Ohne ein weiteres Wort geht er davon, zum Ende der Brücke, und die Schneide schleift hinter ihm über die Steine.
 // WARUM: Fragt, ob er den Toten kannte; seine Antwort hält das Gerücht vom Kleriker offen, als Meinung eines Mannes, der selbst Vater genannt wird, ohne es zu beweisen.
 * [„Hast du ihn gekannt?“ #fliesst]
     ~ gascoigne = gascoigne + 1
-    Seine Hand findet im Fell den Streifen Stoff, der einmal weiß war, und reibt ihn zwischen den Fingern, wie man auf dem Markt ein Tuch prüft. „Von weitem hab ich's geglaubt“, sagt er. „An der Stimme. In dem Schrei steckt noch einer, der mal gesungen hat.“ Er lässt den Stoff los. „Von nah hat er kein Gesicht mehr, an dem man einen erkennt.“ Er geht und dreht sich nicht um.
+    // Auf diesem Weg gibt es keine Phase 2, der Streifen am Hals ist noch da; Gascoignes Axt hat ihn aber zerhackt (g_fall): darum ein Fetzen (passt zum Notizbuch „hatte gehangen“).
+    „Hast du ihn gekannt?“ Seine Hand sucht im zerhackten Fell am Hals und findet einen Fetzen von dem Streifen Stoff, der einmal weiß war. Er reibt ihn zwischen den Fingern, wie man auf dem Markt ein Tuch prüft. „Von weitem hab ich's geglaubt“, sagt er. „An der Stimme. In dem Schrei steckt noch einer, der mal gesungen hat.“ Er lässt den Stoff los. „Von nah hat er kein Gesicht mehr, an dem man einen erkennt.“ Er geht und dreht sich nicht um.
 // WARUM: Zusehen statt eingreifen: Er findet allein zurück, aber er sieht dich danach nicht mehr an (Freundschaft sinkt). Für Aufmerksame ein Fehler, denn er hat dir eben noch gezeigt, dass er Hilfe annimmt.
 * [Schweigen und warten, bis er aufhört #fliesst]
     ~ gascoigne = gascoigne - 1
@@ -382,18 +386,19 @@ Gascoigne hört nicht auf. Er schlägt weiter in den Kadaver hinein, nass und gl
 = ablenken
 { kiesel > 0:
     ~ kiesel = kiesel - 1
-    Der Kiesel fliegt zurück, zu dem Ende der Brücke, von dem du gekommen bist, und klappert gegen eine Kutsche, hell und deutlich. Die Bestie fährt herum, so jäh, dass ihr Geweih gegen das Geländer schlägt, und schnüffelt dem Klang nach.
+    Der Kiesel fliegt zurück, zu dem Ende der Brücke, von dem du gekommen bist, und klappert gegen eine Kutsche, hell und deutlich. Die Bestie fährt herum, ihr Geweih schlägt gegen das Geländer, und sie schnüffelt dem Klang nach.
 - else:
     ~ molotow = molotow - 1
     Die Brandflasche zerspringt auf den Kutschen am Rand, das alte Holz fängt sofort, und die Bestie wendet sich kreischend dem Brand zu. Vor den Flammen senkt sie den Kopf und wird still, und für einen Atemzug sieht es aus, als knie sie.
 }
-Geduckt läufst du zwischen den toten Pferden hindurch, so leise, wie es mit dem Herzschlag im Hals geht. Hinter dir kracht eine Kutsche aufs Pflaster, so schwer, dass dir die Zähne aufeinanderschlagen; umdrehen kannst du dich erst am anderen Ende, mit dem Rücken an kaltem Holz. Sie steht noch zwischen den Kutschen, den Kopf gesenkt, und sieht dir nach. # notiz: kleriker_lebt
+Geduckt läufst du zwischen den toten Pferden hindurch und setzt die Stiefel nur mit den Spitzen auf. In deinem Rücken kracht eine Kutsche aufs Pflaster, und dir schlagen die Zähne aufeinander; umdrehen kannst du dich erst am anderen Ende, mit dem Rücken an kaltem Holz. Sie steht noch zwischen den Kutschen, den Kopf gesenkt, und sieht dir nach. # notiz: kleriker_lebt
 ~ kleriker = "abgelenkt"
 -> uebergang
 
 = fliehen
 ~ ort = "gassen"
-Das Geländer ist kalt unter deiner Hand, dann ist es fort, und unter dir liegt ein tieferes Dach. Über nasse Ziegel rutschst du hinab und fällst in eine Gasse. Oben folgt sie dir über die Dächer, von First zu First, ein Umriss vor dem Mond, und wo sie aufsetzt, regnen die Ziegel herab. An einer Ecke holt sie dich ein, ein einziger Hieb, und die Hauswand kommt dir entgegen. # stimmung: kampf
+// L19: Unter der Brücke ist nur Nebel; gesprungen wird am Brückenkopf, wo die Dächer der Stadt bis ans Geländer heranreichen.
+Zurück, bis an den Brückenkopf, wo die Dächer der Stadt bis ans Geländer heranreichen. Das Eisen ist kalt unter deiner Hand, dann ist es fort, und unter dir liegen nasse Ziegel. Du rutschst sie hinab und fällst in eine Gasse. Oben folgt sie dir über die Dächer, von First zu First, ein Umriss vor dem Mond, und wo sie aufsetzt, regnen die Ziegel herab. An einer Ecke holt sie dich ein, ein einziger Hieb, und die Hauswand kommt dir entgegen. # stimmung: kampf
 ~ zuletzt = sprung
 ~ treffer(2)
 { leben <= 0: -> tod }
@@ -406,7 +411,9 @@ Auf und weiter, eine Treppe hinab, noch eine, bis der Boden unter dir nachgibt u
 // Wissenssperre: Das Gedächtnis darf den Kragen zeigen; es ist ein fremder Blick, und der Jäger kann ihm nicht trauen. „Das Blut der Kirche“ nur als „hieß es“.
 // Was n2_gascoigne.moment braucht, steht im Gedächtnis selbst: die kippende Stimme in der vierten Zeile, der Blick auf die Hände, einer ganz hinten, der seinen Namen sucht.
 // Perspektive: er, Präteritum (fremde Erinnerung, hpl-horror); danach zurück ins Du und ins Präsens.
-Ihr Kopf reicht dir, wie er da auf dem Pflaster liegt, bis an die Brust. Aus dem verknoteten Geweih tropft noch Blut, einzeln, in Abständen, die länger werden. Der Einstich in deiner Armbeuge pocht, so wie er in der Klinik gepocht hat, als das fremde Blut hineinlief und Bilder mitbrachte, die nicht deine waren. Deine Hand will zu dem Kopf hin, wie die Zunge zu einem wackelnden Zahn will, und deine Schultern wollen weg.
+// L46: Nach Gascoignes Hieben ist der Kopf nicht mehr ganz (g_fall sagt es jetzt: Hals und Schädel). Der Satz hier passt auf beide Wege, ohne Bedingung:
+//   Ein Besuchszähler würde nach einem Tod und einem neuen Anlauf allein falsch stehen bleiben.
+Was von ihrem Kopf auf dem Pflaster liegt, reicht dir bis an die Brust. Aus dem verknoteten Geweih tropft noch Blut, einzeln, in Abständen, die länger werden. Der Einstich in deiner Armbeuge pocht, so wie er in der Klinik gepocht hat, als das fremde Blut hineinlief und Bilder mitbrachte, die nicht deine waren. Deine Hand will zu dem Kopf hin, wie die Zunge zu einem wackelnden Zahn will, und deine Schultern wollen weg.
 // WARUM: Öffnet das Blutgedächtnis (gedaechtnis_kleriker): eine fremde Erinnerung, an der du bei Gascoigne erkennst, wann eine Stimme kippt. Kostet nichts als das Grauen; richtig für den Neugierigen.
 + [Den Kopf berühren #fliesst]
     Unter der flachen Hand ist das Fell nass und das Blut darin noch warm, und dann ist die Brücke fort. # stimmung: grauen
@@ -417,14 +424,15 @@ Ihr Kopf reicht dir, wie er da auf dem Pflaster liegt, bis an die Brust. Aus dem
     -> uebergang
 // WARUM: Vorsicht vor fremdem Blut. Kein Fehler, aber das Wissen für den Moment mit Gascoigne bleibt aus.
 + [Die Hand zurückziehen #fliesst]
-    Eine Handbreit über dem nassen Fell hält deine Hand an und kehrt um. Als du dich abwendest, geht der Wind durch das verknotete Geweih und zieht einen Ton daraus, lang und hohl wie aus einer Orgelpfeife, deren Spieler längst gegangen ist.
+    Eine Handbreit über dem nassen Fell hält deine Hand an und kehrt um. Als du dich abwendest, geht der Wind durch das verknotete Geweih und zieht einen Ton daraus, lang und hohl, beinahe eine Note.
     -> uebergang
 
 = uebergang
 // Sieg und Ablenkung führen über die Treppen hinab; es gibt keine Laterne und keinen Rückweg mehr (Entscheidung des Nutzers 2026-11-06).
 // Anschluss: k1_c_kanal beginnt unter der Stadt, im knietiefen Wasser des Kanals (c_unterstadt).
 { not bruecken_tor: -> bruecken_tor -> }
-Neben dem Tor bleiben nur die Treppen, breit und so steil, dass du die unteren erst siehst, wenn du auf den oberen stehst, und sie führen hinab in einen tieferen, älteren Teil der Stadt, wo die Häuser enger stehen und die Luft nach Wasser und Moder riecht. Weiter unten, zwischen den Dächern, stehen die grauen Köpfe von Grabsteinen, dicht an dicht, wie Leute, die über eine Mauer sehen. Am Fuß der Treppen endet die Straße an einem gemauerten Bogen, aus dem ein Kanal ins Freie tritt, und weiter geht es nur gegen seinen Strom, hinein ins Dunkel.
+// L18: Der gemauerte Bogen gehört dem Kanaleingang vor der Brücke (b_yharnam, k1_nach_viertel2); hier ist es eine tiefere, ältere Mündung mit Eisengitter.
+Neben dem Tor bleiben nur die Treppen, breit und steil; die unteren siehst du erst, wenn du auf den oberen stehst. Sie führen hinab in einen tieferen, älteren Teil der Stadt, wo die Häuser enger stehen und die Luft nach Wasser und Moder riecht. Weiter unten, zwischen den Dächern, stehen die grauen Köpfe von Grabsteinen, dicht an dicht, wie Leute, die über eine Mauer sehen. Am Fuß der Treppen endet die Straße vor einer Mündung, tief unten in die Stützmauer gebrochen, mit einem Gitter davor, das der Rost aus den Angeln gefressen hat. Ein Kanal tritt dort ins Freie, und weiter geht es nur gegen seinen Strom, hinein ins Dunkel.
 -> k1_c_kanal
 
 = bruecken_tor
