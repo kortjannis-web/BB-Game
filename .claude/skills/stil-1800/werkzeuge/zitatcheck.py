@@ -6,11 +6,11 @@ K=norm(kor)
 kand=[]
 for blk in re.findall(r'(?:^>.*\n?)+',ana,flags=re.M):
     t=norm(re.sub(r'^>\s?','',blk,flags=re.M))
-    for teil in re.split(r'\[…\]|\[\.\.\.\]|…',t):
+    for teil in re.split(r'\[…\]|\[\.\.\.\]|…|\.\.\.',t):
         teil=teil.strip(' "*_')
         if len(teil.split())>=6: kand.append(teil)
 for q in re.findall(r'[„»"]([^„“»«"]{30,400})[“«"]',ana):
-    for teil in re.split(r'\[…\]|\[\.\.\.\]|…',norm(q)):
+    for teil in re.split(r'\[…\]|\[\.\.\.\]|…|\.\.\.',norm(q)):
         teil=teil.strip(' .,*_')
         if len(teil.split())>=6: kand.append(teil)
 ok=fehl=0; falsch=[]
