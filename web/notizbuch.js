@@ -27,6 +27,7 @@ window.NOTIZBUCH = {
     ["", "Ein Garten voll weißer Blumen, die nach frisch gebleichtem Leinen rochen, unter einem Himmel von der Farbe alten Elfenbeins, an dem kein Gestirn stand. Grabsteine im Gras, und auf dem Hügel ein Haus, in dessen Fenstern Licht brannte, ohne dass sich dahinter ein Schatten regte. Jeder Weg, den ich ging, führte zurück zum Grabstein ohne Namen."],
     ["tode>=2", "Dorthin kehrte ich zurück, wenn ich starb. Ich starb nicht; ich erwachte zwischen den Blumen, und der Einstich in meiner Armbeuge war danach jedes Mal frisch."],
     ["tode>=3", "Die braune Tinte der Unterschrift blieb an meinen Fingern. Ich war gestorben, und sie war noch da."],
+    // TOT (L44): puppe_gespraech spielt in Kapitel 1 nur seinen ersten Teil (traum.ink); diese Stufe bleibt für spätere Kapitel.
     ["puppe_gespraech>=3", "Für jeden Grabstein im Garten, sagte die Puppe, sei einmal einer gekommen wie ich. Es sei so lange her, dass sie die Gesichter verwechsle. Meines wolle sie sich merken."],
     ["einsicht>=2", "Was ich ahnte: Man kam nicht dorthin, um sich auszuruhen. Man wurde dort aufbewahrt."],
   ] },
@@ -36,7 +37,7 @@ window.NOTIZBUCH = {
     ["gehrman_wann", "Als ich fragte, wann sie vorbei sei, nahm er ein Werkzeug von der Bank und putzte es. Es war schon sauber."],
   ] },
   puppe: { titel: "Die Puppe", stufen: [
-    ["!puppe_wach", "Am Fuß der Treppe im Garten stand eine Puppe in Menschengröße, die Hände vor dem Kleid gefaltet, das Gesicht so sorgfältig gemalt, dass an den Wimpern jeder Pinselstrich zu sehen war. Ihre Augen waren offen und sahen nichts."],
+    ["!puppe_wach", "Am Fuß der Treppe im Garten stand eine Puppe in Menschengröße, die Hände vor dem Kleid gefaltet; erst aus der Nähe sah ich die Gelenke an ihren Händen. Die Wimpern waren einzeln aufgemalt, und ihre Augen waren offen und sahen nichts."],
     ["puppe_wach", "Sie bewegte sich. Ein Lid hob sich, nur eines, der Kopf wandte sich mit einem Knirschen in der Halsfuge nach mir, und sie sprach, sanft und klar und ohne zwischen den Sätzen zu atmen. Man habe sie in den Garten gestellt, um mich zu behüten. Ihre ersten Worte schrieb ich mir auf, ohne zu wissen, warum: Da bist du ja."],
     ["puppe_daheim || k1_d_traum", "Sie nannte den Traum daheim. Ich widersprach ihr nicht."],
   ] },
@@ -46,12 +47,13 @@ window.NOTIZBUCH = {
     ["puppe_gespraech", "Die Puppe nannte sie die Kleinen. Sie gruben nach Leuten wie mir, sagte sie, und mich hätten sie ausgegraben."],
   ] },
   laternen: { titel: "Die Laternen", stufen: [
-    ["", "Vor der Klinik stand eine Laterne auf einem eisernen Pfahl, erloschen, das Glas von innen verrußt. Als ich sie berührte, brannte sie, ohne dass ich Feuer gemacht hatte, und ihr Licht war kalt und weiß, von der Farbe des Himmels über dem Garten."],
+    ["", "Vor der Klinik stand eine Laterne auf einem eisernen Pfahl, erloschen, das Glas von innen verrußt. Als ich sie berührte, brannte sie, ohne dass ich Feuer gemacht hatte, und im Flackern hinter dem Glas lag für einen Lidschlag der Garten."],
+    ["k1_c_unterstadt", "Unten an den Stufen der Unterstadt stand eine zweite. Sie flackerte nicht; ihr Licht war kalt und weiß, von der Farbe des Himmels über dem Garten."],
   ] },
   jagdnacht: { titel: "Die Jagdnacht", stufen: [
     ["", "In manchen Nächten jagte Yharnam. Dann schoben die Bürger die Riegel vor und hängten Räucherwerk in die Fenster, und hinaus gingen die Jäger, mit Säge, Axt und Feuerwaffe, als ginge es zur Ernte."],
     ["gilbert_jagd", "Was sie jagten, sagte Gilbert, hätten sie tags zuvor meist noch gegrüßt."],
-    ["k1_d_heimweg", "Auf dem Rückweg stand der Mond noch, wo er gestanden hatte, als ich aus der Klinik trat. Nur war er so groß geworden, dass er die halbe Gasse ausfüllte, und mein Schatten fiel auf dieselben Steine wie am Anfang."],
+    ["k1_d_heimweg", "Auf dem Rückweg stand der Mond noch, wo er gestanden hatte, als ich aus der Klinik trat. Nur füllte er jetzt die halbe Gasse aus, und mein Schatten fiel auf dieselben Steine wie am Anfang."],
   ] },
   raeucherwerk: { titel: "Räucherwerk", stufen: [
     ["", "Vor den Fenstern hingen rote Lampen, und ihr Rauch setzte sich in die Kleider, bis man ihn nicht mehr roch. Er sollte die Bestien fernhalten. An der Zahl der Lampen, sagte man, lasse sich ablesen, wie viel Angst in einem Haus wohne."],
@@ -71,7 +73,7 @@ window.NOTIZBUCH = {
     ["frau_betet", "Hinter einer Tür betete eine Frau, und in ihrem Gebet hieß es, die Kirche habe ihnen das Räucherwerk gesegnet."],
     ["alte_frau", "Eine alte Frau hinter ihrer Tür sagte, die Kirche lasse die Fremden mit ihrem Blut herein."],
     ["k1_b_anschlag", "An einer Kapellentür hing ein Anschlag an die Gemeinde: Wer Fieber an sich spüre oder einen Durst, den kein Wasser stille, solle sich zur nächsten Stelle des Blutes begeben. Darunter stand in Kreide, klein und schief und halb weggewischt: Mein Bruder ist gegangen. Er hatte keinen Durst. Das Papier roch herb, nach Weihrauch."],
-    ["kirchenbrief", "Ein Kirchendiener schrieb seiner Schwester von einer Kapelle oben im Bezirk, die jeden aufnehme, der noch sprechen könne, und von einer Vikarin, die am längsten bete. Seinen letzten Satz hatte er so fest ausgestrichen, dass die Feder das Papier zerriss. Lesbar waren zwei Wörter: Komm nicht."],
+    ["kirchenbrief", "Ein Kirchendiener schrieb seiner Schwester von einer Kapelle oben im Bezirk, die jeden aufnehme, der noch sprechen könne, und von einer Vikarin, die am längsten bete. Seinen letzten Satz hatte er ausgestrichen, bis die Feder das Papier zerriss. Lesbar waren zwei Wörter: Komm nicht."],
   ] },
   bestienseuche: { titel: "Die Seuche", stufen: [
     ["", "In Yharnam wurden Menschen zu Bestien, und niemand wusste, wen es als Nächsten traf."],
@@ -79,8 +81,8 @@ window.NOTIZBUCH = {
   ] },
   kleriker_bestien: { titel: "Kleriker-Bestien", stufen: [
     ["gilbert_kleriker", "Man erzählte sich, aus Kirchenleuten würden die schlimmsten Bestien, ausgerechnet aus denen, die beten und singen. Warum gerade aus ihnen, sagte keiner."],
-    ["k1_n1_kleriker", "Auf der großen Brücke hauste eine Bestie, so mager, dass sich unter dem Fell jede Rippe abzeichnete, mit einem Geweih, das gegen sich selbst gewachsen war, und einem Arm, doppelt so lang wie der andere."],
-    ["kleriker==besiegt", "Im Fell der Bestie steckte ein silbernes Abzeichen mit einem Schwert, und um ihren Hals hing ein Streifen Stoff, der einmal weiß gewesen war, Kragen oder Verband. Über der Brust, wo das Fell dünn wurde, saßen Narben von Nadeln, Reihe um Reihe."],
+    ["k1_n1_kleriker", "Auf der großen Brücke hauste eine Bestie, unter deren Fell sich jede Rippe abzeichnete, mit einem Geweih, das gegen sich selbst gewachsen war, und einem Arm, doppelt so lang wie der andere."],
+    ["kleriker==besiegt", "Im Fell der Bestie steckte ein silbernes Abzeichen mit einem Schwert. Um ihren Hals hatte ein Streifen Stoff gehangen, der einmal weiß gewesen war, Kragen oder Verband. Über der Brust, wo das Fell dünn wurde, saßen Narben von Nadeln, Reihe um Reihe."],
     ["gedaechtnis_kleriker && einsicht>=2", "Was ich ahnte: Wem sie am meisten von ihrem heiligen Blut gaben, dem geschah es zuerst. Beweisen konnte ich es nicht."],
   ] },
   blutgedaechtnis: { titel: "Das Gedächtnis des Blutes", stufen: [
@@ -96,18 +98,20 @@ window.NOTIZBUCH = {
   jaeger_der_jaeger: { titel: "Die Jägerin der Jäger", stufen: [
     ["", "Eine Frau mit Federmantel und Schnabelmaske. An einer Schnur um ihren Hals klapperten Abzeichen, Messing, Silber, Eisen, jedes abgegriffen."],
     ["eileen_genannt", "Sie hieß Eileen. Die Abzeichen an ihrer Schnur hatten Jägern gehört."],
-    ["k1_b_eileen", "Sie sah mir lange auf die Armbeuge, dorthin, wo der Einstich pochte, und sagte nichts. Dass ich niemandem vom Garten erzählt hatte, schien ihr gleich."],
+    ["k1_b_eileen", "Sie sah mir lange auf die Armbeuge, dorthin, wo der Einstich pochte, und auf die Tinte an meinen Fingern. Ich hätte also unterschrieben, sagte sie; dann wache ich wohl auch im Gras auf, bei der Puppe. Ich hatte niemandem von dem Garten erzählt."],
     ["eileen_name", "Sie gab mir ein Stück Dörrfleisch und fragte nach meinem Namen."],
   ] },
   parade: { titel: "Die Parade", stufen: [
     ["", "Mit der Feuerwaffe tötete man nicht. Man wartete, bis die Bestie ausholte und ihr ganzes Gewicht im Schlag lag, und genau dann schoss man. Dann wankte sie."],
-    ["parade_quelle==gascoigne", "Gascoigne zeigte es mir auf dem Platz, mit dem Feuer im Rücken. Nicht davor, sagte er. Nicht danach."],
+    ["parade_quelle==gascoigne", "Gascoigne zeigte es mir auf dem Platz, am Feuer. Nicht davor, sagte er. Nicht danach."],
+    // TOT (L44): Gehrman lehrt die Parade nicht mehr selbst (traum.ink, Zweig „ohne parade“ gelöscht); die Stufe bleibt verborgen.
     ["parade_quelle==gehrman", "Gehrman erklärte es mir, und für drei Sätze klang er wie einer, der über Übungsplätze ruft."],
+    ["geuebt", "Im Traum ließ Gehrman mich im Hof an einem Pfahl üben, bis der Sandsack auf meiner Klinge stillstand. Dass mir das Schießen schon einer beigebracht hatte, sah er sofort."],
   ] },
   gascoigne: { titel: "Der Pater mit dem Verband", stufen: [
     ["", "Ein großer Mann mit verbundenen Augen und einem Priesterschal, in der Hand eine Axt."],
     ["q_frau==1 || gascoigne2", "Er hieß Gascoigne."],
-    ["q_frau==1 && mob!=zerstreut", "Am Scheiterhaufen schickte er die Bürger beim Namen nach Hause, einen nach dem anderen, mit einem Rollen in der Stimme, das nicht aus diesen Gassen stammte."],
+    ["q_frau==1 && mob!=zerstreut", "Am Scheiterhaufen schickte er die Bürger beim Namen nach Hause, einen nach dem anderen, mit einem Rollen in der Stimme, wie man in Yharnam nicht spricht."],
     ["q_frau==1", "Er bat mich, einer Frau mit einer großen roten Brosche auszurichten, er komme bald."],
     ["gascoigne2", "Zwischen den Gräbern traf ich ihn wieder. Er wühlte in frischer Erde."],
     ["gascoigne_tot", "Am Grab des Oedon tötete ich ihn. Sein Hut blieb auf einem Grabstein liegen, die Krempe nach oben."],
@@ -124,8 +128,8 @@ window.NOTIZBUCH = {
     ["spieluhr_mal>=3", "Beim dritten Mal zerriss es ihn."],
   ] },
   oedon: { titel: "Oedon", stufen: [
-    ["", "Ein Name über einem Friedhof, ohne Vornamen, ohne Jahreszahl, ohne Gebet. Wer oder was Oedon war, wusste ich nicht."],
-    ["einsicht>=1 && k1_c_graeber", "Als ich den Namen aussprach, kam ein Druck hinter den Ohren, wie vor einem Gewitter, das nicht vom Himmel kommt."],
+    ["", "Ein einziger Name über einem Friedhof, tief in den Stein gemeißelt. Wer oder was Oedon war, wusste ich nicht."],
+    ["einsicht>=1 && k1_c_graeber", "Als ich den Namen aussprach, kam ein Druck hinter den Ohren, wie vor einem Gewitter."],
   ] },
   einsicht: { titel: "Einsicht", stufen: [
     ["", "Auf der Brücke zählte ich die Gelenke eines Arms und kam beim zweiten Mal auf eine andere Zahl. Dabei öffnete sich hinter meiner Stirn ein Spalt, schmal wie der unter einer Tür, und seither sah ich Dinge, die vorher nicht da waren, oder die da waren, ohne dass ich sie sah. Ob sich so ein Spalt wieder schließen lässt, wusste ich nicht."],
@@ -139,8 +143,9 @@ window.NOTIZBUCH = {
   ] },
   // Erwarteter Lore-Tag aus b_yharnam.ink (Faktencheck b_yharnam Nr. 6): der Zettel im dunklen Haus. Ohne den Tag bleibt der Eintrag unsichtbar.
   kirche_sperrt_bruecke: { titel: "Die gesperrte Brücke", stufen: [
-    // Der Tag steht auch bei Gilbert (Weg zur Kathedrale); darum nennt die erste Stufe nur, was beide Stellen sagen. PRÜFEN: Den Zettel im dunklen Haus trüge eine eigene Stufe mit "haus_zettel" (Bedingung, hier nicht ergänzt).
+    // Der Tag steht auch bei Gilbert (Weg zur Kathedrale); darum nennt die erste Stufe nur, was beide Stellen sagen. Der Zettel im dunklen Haus hat seit 2026-11-06 eine eigene Stufe (haus_zettel).
     ["", "Die große Brücke zur Kathedrale sei gesperrt, hieß es, seit die Jagd begann, und wer auf dieser Seite wohnte, sei sich selbst überlassen."],
+    ["haus_zettel", "Im dunklen Haus lag neben dem Rollstuhl ein Zettel, oft gefaltet, in der festen Schrift von einem, der selten schreibt. Als die Jagd begann, habe die Kirche die große Brücke gesperrt; unten im Tal habe es die ganze Nacht gebrannt, und von oben sei keiner gekommen. Sie wachten über uns, schrieben sie an die Türen. Über ihre Brücke wachten sie."],
     ["k1_n1_kleriker.uebergang", "Am Ende der Brücke stand ein Tor zur Kathedrale hin, von drüben verriegelt. Wer davor gewartet hatte, lag noch zwischen den Kutschen."],
   ] },
 };
@@ -156,8 +161,8 @@ window.PERSONEN = [
   ] },
   { name: "Gascoigne", wenn: "q_frau==1 || gascoigne2", stufen: [
     ["gascoigne_tot", "Tot, am Grab des Oedon. Sein Hut blieb auf dem Grabstein liegen."],
-    ["gascoigne>=3 && q_frau==1", "Ein Freund, glaubte ich. Er gab mir aus seiner Blechflasche zu trinken, einen Branntwein, der nach Torf und Rauch schmeckte, nach einem Land, das nicht dieses war."],
-    ["gascoigne>=1 && q_frau==1", "Er zeigte mir, wie man wartet. Unter dem Teer roch er nach noch etwas, und ich schrieb nicht auf, wonach."],
+    ["gascoigne>=3 && q_frau==1", "Ein Freund, glaubte ich. Er gab mir aus seiner Blechflasche zu trinken, einen Branntwein, der nach Torf und Rauch schmeckte und nach einem fremden Land."],
+    ["gascoigne>=1 && q_frau==1", "Er zeigte mir, wie man wartet. Unter Torf und Rauch roch er nach noch etwas, und ich schrieb nicht auf, wonach."],
     ["gascoigne2 && q_frau==0", "Ein Pater, der zwischen den Gräbern in frischer Erde wühlte. Er musste sich seinen eigenen Namen vorsagen."],
     ["", "Er traute mir nicht. Vielleicht hatte er recht."],
   ] },
@@ -168,9 +173,9 @@ window.PERSONEN = [
   { name: "Das Mädchen", wenn: "maedchen_gesehen || k1_b_maedchen", stufen: [
     ["maedchen_tot", "Tot. Im Maul eines Schweins hing ihr Band, rot und schwer. Am Riegel war es weiß gewesen."],
     ["maedchen_wo==fort", "Ich schickte sie zu der Ärztin in der Klinik. An der Ecke bog sie ab, zu der Treppe, die zu den Kanälen hinabführt."],
-    ["q_mutter==4", "Sie wartete. Ich hatte ihr gesagt, ihre Mutter komme bald."],
-    ["maedchen>=1", "Sie wartete hinter dem Fenster am Brunnenplatz. Warten könne sie gut, sagte sie."],
-    ["k1_d_maedchen && !maedchen_tot", "Der Morgen komme immer, sage ihre Mama; man müsse ihn nur abwarten. Über ihrem Fenster stand der Mond und füllte die halbe Gasse."],
+    ["q_mutter==4", "Sie wartete. Ich hatte ihr gesagt, ihre Mutter komme bald, und sie glaubte es sofort. Ihr Fenster stand im Licht des Mondes, so groß war er inzwischen."],
+    ["maedchen>=1", "Sie wartete hinter dem Fenster am Brunnenplatz. Sie bleibe wach, sagte sie; ihre Mama sage, der Morgen komme immer."],
+    ["k1_d_maedchen && !maedchen_tot", "Auf dem Heimweg stand ich noch einmal unter ihrem Fenster. Ich röche nach Papa, sagte sie."],
     ["", "Sie wartete hinter dem Fenster am Brunnenplatz, die weiße Schleife am Riegel."],
   ] },
   { name: "Die Frau im Federmantel", wenn: "eileen_stufe>=1", stufen: [
@@ -191,6 +196,7 @@ window.PERSONEN = [
   ] },
   { name: "Die Puppe", wenn: "puppe_wach", stufen: [
     ["puppe_daheim || k1_d_traum", "Sie sprach sanft und atmete nicht. Den Traum nannte sie daheim."],
+    // TOT (L44): puppe_gespraech.frage wird in Kapitel 1 nie erreicht (traum.ink).
     ["puppe_gespraech.frage", "Sie sprach sanft und atmete nicht. Sie wollte wissen, wie es draußen riecht."],
     ["", "Sie sprach sanft, und zwischen den Sätzen atmete sie nicht."],
   ] },
@@ -206,7 +212,6 @@ window.FRAGEN = [
   ["kleriker!=", "Warum werden ausgerechnet Kirchenleute zu Bestien?"],
   ["k1_c_graeber || k1_n2_gascoigne", "Wer oder was ist Oedon?"],
   ["gascoigne_tot", "Wer hat Viola getötet?"],
-  ["grund==suche", "Wo ist der Mensch, den ich suche? Wo riecht es nach Weihrauch?"],
   ["gehrman_versprochen", "Wem hat Gehrman etwas versprochen?"],
   ["k1_b_eileen", "Woher kennt Eileen den Garten?"],
 ];
