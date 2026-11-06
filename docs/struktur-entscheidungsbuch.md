@@ -1,4 +1,4 @@
-# Vom Level zum Entscheidungsbuch: Analyse und Vorschlag (2026-11-06, Entwurf)
+# Vom Level zum Entscheidungsbuch: Analyse und Vorschlag (2026-11-06, Fassung 2 nach unabhängiger Prüfung)
 
 Frage des Nutzers: Kapitel 1 ist heute gebaut wie ein Level: zwei freie Gebiete (Zentral-Yharnam, Unterstadt) als Drehscheiben, man geht hin und her, stirbt und erwacht an der Laterne. Wäre eine geführtere Geschichte besser? Sie soll immer vorangehen und keinen Ort zweimal besuchen, also weniger Level und mehr **Entscheidungsbuch**. Manche Orte erreicht man über mehrere Pfade, manche nur über bestimmte. Viele Entscheidungen verändern Dialoge, Handlungen, Gegner, Orte und Figuren. Die Stränge laufen immer wieder zusammen, und das Gefühl soll sein: „Mein Strang ist der einzig wahre.“
 
@@ -33,12 +33,14 @@ Die Fachwelt nennt das Muster *Branch and Bottleneck*: Die Geschichte verzweigt 
 8. **Die Chronik der Nacht.** Am Kapitelende schreibt der Jäger in sein Tagebuch, was *er* getan hat, mit allen eigenen Entscheidungen. Hier spürt man „mein Strang ist der wahre“. (Die Mechanik steht schon in den Entscheidungen des Nutzers.)
 9. **Der Zustand bleibt** über alle Kapitel gespeichert; ab Kapitel 2 kehren Fäden aus Kapitel 1 zurück.
 
-## 3 Tod im Buch
+## 3 Tod im Buch (Fassung 2)
 
-Heute: Tod, dann Traum, dann zurück zur letzten Laterne und der Weg von dort neu. Im Buch fiele dieser Rückweg weg. Vorschlag:
-- **Tod, dann Traum, dann zurück an den Anfang der Station**, in der man starb. Die Laterne steht am Stationsanfang, ein Rückweg entfällt.
-- Alles, was die Regeln des Nutzers festlegen, bleibt: 5 Leben, Lernen durch Sterben (das Anzeichen erkennt man beim nächsten Mal), Blutechos am Todesort, zwei bis drei Tode für Aufmerksame.
-- Die Entscheidungen vor dem Tod bleiben gültig; nur der Kampf oder der Moment wird neu gespielt.
+Die Prüfung hat gezeigt: „Zurück an den Anfang der Station“ macht die Blutechos wertlos, nimmt den Rückweg zum Vorbereiten weg und verbilligt das Fliehen. Darum:
+- **Tod, dann Traum, dann zurück an den Anfang des Kampfes oder Moments**, nicht der ganzen Station. Im Traum kann man einkaufen und sich vorbereiten.
+- **Der Blutecho-Fleck liegt am Takt, an dem man starb.** Wer ihn erreicht, hebt ihn auf; wer vorher wieder stirbt, verliert ihn. Das Risiko bleibt.
+- **Laternen erwirbt man je Akt.** Ohne Sieg an der Brücke gibt es in der Unterstadt keine Laterne: Ein Tod in Akt III führt an den Anfang von Akt III. Der Weg wird beim zweiten Mal verdichtet erzählt, in Wiederkehrsätzen. Fliehen bleibt damit teuer.
+- **Die Jägermarke** wird zum Rückzug in den Traum, um sich vorzubereiten.
+- **Festgeschrieben wird, was ein Tod überdauert:** gelernte Anzeichen, Zahl der Tode und Entscheidungen *vor* dem Kampf. Zurückgesetzt wird nur der Kampf selbst. Technisch speichert das Spiel dazu am Kampfbeginn einen Stand und übernimmt nach dem Tod die festen Werte in diesen Stand.
 
 ## 4 Risiken und wie wir sie fangen
 
@@ -50,49 +52,56 @@ Heute: Tod, dann Traum, dann zurück zur letzten Laterne und der Weg von dort ne
 | Der Reiz des Wiederspielens sinkt. | Er steigt eher: Andere Routen bedeuten andere Orte und Szenen, nicht nur andere Reihenfolge. Die grüne Markierung zeigt, was man schon kennt. |
 | Viel Umbau. | Die meisten Szenen bleiben als Stationen erhalten. Umgebaut werden vor allem die Drehscheiben (`k1_hub_b`, `k1_hub_c`) und die Laternen-Logik. |
 
-## 5 Skizze: Kapitel 1 als Entscheidungsbuch (Gerüst, Ein-Satz-Platzhalter)
+## 5 Skizze: Kapitel 1 als Entscheidungsbuch (Fassung 2)
 
-**Akt I: Ankunft** (geführt, wie heute)
-Kutsche (Herkunft, Grund) → Klinik (Vertrag, Transfusion) → erster Tod → Jägertraum → Lernkampf → Iosefkas Tür → erste Laterne.
+Was die Prüfung an der ersten Skizze fand:
+- Der Moment der Klarheit mit Gascoigne wäre auf zwei von drei Routen unerreichbar gewesen (seine Freundschaftspunkte und der Gruß an seine Frau entstehen am Scheiterhaufen).
+- Gilberts Feuer und das Feuer gegen den Mob lagen auf verschiedenen Routen.
+- Eileen wäre auf zwei Routen verpassbar gewesen.
+- Das Schwein mit der Leiche hätte nur bei Flucht existiert.
+- Die Wahl der Route wäre blind gewesen.
 
-**Akt II: Zentral-Yharnam** (drei Routen, Kreuzung am Brunnen)
-- **Route der Gassen:**
-  1. Gilbert am Fenster (Gespräch, Feuer).
-  2. Die Türen und die alte Frau.
-  3. Der Kirchenanschlag.
-- **Route des Platzes:**
-  1. Der Scheiterhaufen und der Mob.
-  2. Gascoigne rettet dich und lehrt die Parade.
-  3. Er bittet um den Gruß an seine Frau.
-- **Route der Dächer:**
-  1. Der Schütze, man hört den Schuss von hinten.
-  2. Eileen auf dem Dach (Jägermarken).
-  3. Der Blick auf die Brücke.
-- **Kreuzung, der Brunnenplatz:** Alle Routen führen hierher.
-  - Das Mädchen am Fenster mit der Spieluhr.
-  - Wen man noch nicht getroffen hat, trifft man hier in anderer Form. Wer über die Dächer kam, sieht Gascoigne zum Beispiel unten am Brunnen. Wer über den Platz kam, hört Gilbert nur husten.
-- **Zweite Hälfte:** zwei Wege zur Brücke, die Hauptstraße oder das dunkle Haus. Jeder Weg hat eine Station.
+Neues Rückgrat: **Feste Begegnungen mit den Hauptfiguren, freie Wahl der Wege dazwischen.** Gewählt werden Stationen nach dem **Kartenmodell**: Von drei möglichen Stationen wählt man zwei in beliebiger Reihenfolge, die dritte ist verloren (wie in *Sorcery!*). So bleibt die Freiheit „wie und wo“, und jeder Ort kommt trotzdem nur einmal.
 
-**Nadelöhr 1: Die Große Brücke, die Kleriker-Bestie.** Man kann kämpfen, sie ablenken oder fliehen. Je nach Faden kommt Gascoigne als Helfer dazu.
+**Akt I: Ankunft** (geführt): Kutsche → Klinik → erster Tod → Jägertraum → Lernkampf → Iosefkas Tür → **erste Laterne mit Gilbert am Fenster** (fest für alle: Gespräch, Feuer, Bitte).
 
-**Akt III: Unterstadt** (Route nach dem Ausgang an der Brücke)
-- **Nach einem Sieg:** über die Treppen hinab, mit dem Blutgedächtnis.
-- **Nach Ablenkung oder Flucht:** durch die Kanalisation. Dort wartet das Schwein, und das Band, falls das Mädchen fortgeschickt wurde.
-- **Beide Wege kreuzen sich an den Gräbern:** Eileens zweite Begegnung.
+**Akt II: Zentral-Yharnam**
+1. **Erstes Viertel, zwei von drei:** die Türen und die alte Frau; der Kirchenanschlag; das dunkle Haus. Angekündigt durch Spuren, damit die Wahl nicht blind ist: Rauch und Schreie, Glocken, ein Hund.
+2. **Kreuzung, fest: der Scheiterhaufen.** Gascoigne für alle: Mob, Rettung, Parade, Gruß an seine Frau. Gilberts Feuer wirkt hier.
+3. **Zweites Viertel, zwei von drei:** der Brunnenplatz mit dem Mädchen (Spieluhr); die Gasse mit dem Schützen; die Dächer.
+4. **Fest vor der Brücke: Eileens erste Begegnung,** in zwei Formen je nach Weg (Dach über dem Kanaleingang oder Turm). Sie kommt immer **nach** Gascoigne, damit Verraten und Verteidigen möglich bleiben.
 
-**Nadelöhr 2: Das Grab des Oedon, Gascoigne.** Moment der Klarheit nur, wenn die Fäden es tragen (Freundschaft, Spieluhr, Blutgedächtnis).
+**Nadelöhr 1: die Große Brücke** (kämpfen, ablenken, fliehen; Gascoigne als Helfer, wenn sein Faden es trägt). Die Laterne an der Brücke gibt es nur bei einem Sieg.
 
-**Akt IV: Der Heimweg** (eine einzige, bewusste Rückkehr)
-- Ein Weg zurück, der zeigt, was deine Nacht verändert hat: Violas Leiche, das Fenster des Mädchens, Gilberts Fenster, Eileens Spuren.
-- Je nach Zustand ist jede Station anders oder fehlt ganz. Eine Rückkehr, die alles verwandelt, ist ein Meistermotiv (Storm, Mann). Sie ist die Ausnahme von „nie zweimal am selben Ort“.
+**Akt III: Unterstadt**
+1. Nach einem Sieg geht es über die Treppen, nach Ablenkung oder Flucht durch die Kanalisation.
+2. **Das Schwein mit der Leiche liegt auf beiden Wegen:** nach einem Sieg an der Mündung der Kanalisation unter den Treppen. Das Band liegt dort, wenn das Mädchen fortgeschickt wurde.
+3. **Die Gräber, fest:** Gascoigne kippt (erinnern, warnen, fragen), Eileen über den Gräbern (Schonung, Zusammenarbeit, Schweigen). Die Reihenfolge ist festgelegt, damit Warnen und Angebot sich sauber ausschließen.
 
-**Kapitelende: Die Chronik der Nacht** (Tagebuch mit deinen Entscheidungen), dann der Traum.
+**Nadelöhr 2: das Grab des Oedon**, Gascoigne.
+
+**Akt IV: Der Heimweg.** Das bestehende Nachspiel wird zu einem einzigen Weg, ohne Drehscheibe:
+1. Viola.
+2. Die Kanalisation, wenn das Mädchen fort ist (Kanon-Tragödie, Brosche).
+3. Das Fenster des Mädchens.
+4. Gilbert.
+5. Eileens Spuren.
+
+Jede Station ist je nach Zustand anders oder fehlt ganz.
+
+**Kapitelende: die Chronik der Nacht.** Sie besteht schon (`k1_d_traum`) und wird erweitert: Sie nennt auch, was du **nicht** erlebt hast („ein Haus, dessen Tür du nie geöffnet hast“).
+
+**Damit sich der eigene Strang einzig anfühlt:**
+- **Spuren des Nichtgewählten:** Rauch über einem Dach, das du nie betreten hast. Ein Gerücht über eine Tür, an der du nicht geklopft hast.
+- **Die Route aus der Haltung wählen** statt nach Ortsnamen: „Dem Hund folgen“, „Den Glocken nach“.
+- **Echo-Tabelle:** Jede gesetzte Variable wird später gelesen, und der Prüfer erzwingt das. Die Wiederkehrsätze aus der heutigen Drehscheibe (Fackel, Glocke, Spieluhr) wandern an feste Stellen.
+- **Lore auf jeder Route,** nicht nur an zwei Stellen (neue Regel im Prüfer).
 
 ## 6 Wie wir den Umbau machen (nach Zustimmung)
 
 1. **Gerüst** mit Ein-Satz-Platzhaltern je Station und die Fadentabelle: welcher Faden auf welcher Route, welche Folge welcher Art. Abnahme durch den Nutzer.
 2. **Ink umbauen:** Drehscheiben werden zu Routenwahlen, Laternen stehen am Stationsanfang, der Tod führt an den Stationsanfang zurück. Prüfer und Szenarien werden angepasst: Lore auf zwei Routen, Echo-Regel prüfbar, jede Route spielbar.
-3. **Bestehende Szenen übernehmen** und an die neue Reihenfolge anpassen. Neue Stationen (Begegnungen in anderer Form, Heimweg, Chronik) zuerst als Platzhalter.
+3. **Bestehende Szenen übernehmen** und an die neue Reihenfolge anpassen. Neue Stationen (Spuren des Nichtgewählten, die zweite Form von Eileens erster Begegnung) zuerst als Platzhalter. Heimweg und Chronik gibt es schon, sie werden umgebaut.
 4. **Texte neu schreiben** erst mit dem fertigen Skill `stil-1800` (Anweisung des Nutzers: erst Wissen, dann Texte).
 
 ## Quellen
@@ -101,3 +110,9 @@ Kutsche (Herkunft, Grund) → Klinik (Vertrag, Transfusion) → erster Tod → J
 - Branch-and-Bottleneck: <https://www.christytuckerlearning.com/branch-and-bottleneck-scenario-structure/>
 - Emily Short, Small-Scale Structures in CYOA: <https://emshort.blog/2016/11/05/small-scale-structures-in-cyoa/>
 - inkle, 80 Days: <https://if50.substack.com/p/2014-80-days>; Sorcery! Postmortem: <https://gamedeveloper.com/business/postmortem-i-steve-jackson-s-sorcery-i-series-by-inkle>; Q&A Jon Ingold: <https://www.gamedeveloper.com/design/q-a-jon-ingold-on-i-sorcery-i-and-crafting-interactive-fiction>
+
+## 7 Unabhängige Prüfung (2026-11-06)
+
+Ein Agent hat Fassung 1 gegen die verbindlichen Entscheidungen des Nutzers, die Variablen im Ink-Code und die Tod-Mechanik geprüft. Seine Befunde sind in Fassung 2 eingearbeitet (Abschnitte 3 und 5).
+
+Offen bleibt ein Widerspruch: Er rät, die grüne Markierung des Gelesenen erst nach dem Kapitelende zu zeigen, weil sie verrät, dass es andere Wege gibt. Der Nutzer hat die Markierung aber ausdrücklich so gewünscht (2026-11-06). Sie bleibt also; das ist eine Frage an ihn.
