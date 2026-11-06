@@ -280,7 +280,6 @@ Hinter dir, mitten im Kreis, setzt das Heulen aus.
 - (t5)
 Er packt dich. Beide Klauen schließen sich um deine Schultern, und er hebt dich hoch, bis sein Gesicht vor deinem ist und dir sein Atem entgegenschlägt, Blut und Eisen und nasses Fell. Der Schal an seinem Hals schwingt dicht vor deinen Augen, noch immer geknotet, und aus dem schmutzigen Stoff steigt, ganz schwach, ein herber, harziger Geruch, der nicht hierher gehört: Weihrauch. Die Klauen haben sich in deinen Mantel gekrallt, nicht in dich, und das Leder knarrt an den Nähten. # anzeichen: griff
 { gelernt ? griff: Deine Schultern erinnern sich, wie das Leder an den Nähten nachgab, und werden schwer, von selbst. }
-{ grund == "suche": Weihrauch, wie an deinem letzten Brief. }
 + [Von vorn in seinen Griff stechen #fliesst]
     Seine Klauen graben sich in dein Fleisch und deine Säge in seines, und einen langen Moment haltet ihr einander fest wie zwei Tänzer, die nicht loslassen können. Dann gibt er nach.
     ~ zuletzt = griff

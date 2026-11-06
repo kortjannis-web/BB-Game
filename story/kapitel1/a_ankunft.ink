@@ -44,9 +44,6 @@ Gesprochen hat der Fahrer seit dem letzten Dorf nicht. Jetzt blickt er sich zum 
 * [Weil jemand zu Hause im Sterben liegt #fliesst]
     ~ grund = "heilung_anderer"
     Für jemanden, der zu Hause in einem abgedunkelten Zimmer liegt und auf einen Brief wartet, in dem steht, dass es Hoffnung gibt. Du hast versprochen, diesen Brief zu schreiben.
-* [Um jemanden zu finden, der vorausging #fliesst]
-    ~ grund = "suche"
-    Vor einem Jahr ist jemand in dieselbe Richtung gefahren und hat seither nicht mehr geschrieben; den suchst du. Der letzte Brief roch nach Weihrauch und nach etwas darunter, für das du keinen Namen hattest.
 * [Um eine Schuld abzutragen #fliesst]
     ~ grund = "schuld"
     Eine Schuld, sagst du, eine, die sich mit Geld nicht begleichen lässt und mit Reue auch nicht. Man erzählt sich, Yharnam mache aus einem Menschen etwas Neues. Vielleicht genügt das.

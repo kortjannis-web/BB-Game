@@ -172,9 +172,6 @@ VAR hb_bruecke = false        // Wiederkehrtext mit dem Blick auf die dunkle Br�
     // [ERWEITERT] Das Schwert auf den Haustüren und die Kratzer. Die Mondklinge gestrichen (Zusatzinhalt, Wissenssperre).
     Wer für die Kirche jagt? Gilbert lehnt die Stirn ans Gitter. „Die Leute hier erzählen von einem, der als Erster für sie gejagt hat. Er hat geworben, wen er bekommen konnte: Fuhrknechte, Gerber, Söhne von Wäscherinnen. Und Kleriker. Viele Kleriker.“ Er wartet, bis der Husten vorbei ist. „Auf den Abzeichen seiner Leute war ein Schwert aus Silber, und eine Zeit lang hat man es ihnen zu Ehren auf die Haustüren gemalt.“ Ein schiefes Lächeln. „Dann hat man es wieder abgekratzt. An manchen Türen sieht man noch die Kratzer. Seinen Namen sagt hier keiner gern; ich habe einmal gefragt, warum, und ringsum sind die Läden zugefallen.“ # notiz: erster_kirchenjaeger
     -> themen
-* {grund == "suche"} [Ihm den Menschen beschreiben, den du suchst #fliesst]
-    Du beschreibst ihm den Menschen, den du suchst, so gut es sich durch ein Gitter beschreiben lässt, und erzählst vom letzten Brief, der nach Weihrauch roch. Gilbert schüttelt langsam den Kopf. „Hier kommt niemand vorbei, der stehen bleibt. Außer Ihnen.“ Nach einer Weile sagt er: „Weihrauch. Den riecht man nur oben, bei der Kathedrale. Hier unten ist es Räucherwerk. Weihrauch ist bitterer.“ # notiz: spur_vermisst
-    -> themen
 * {q_gilbert == 1 and k1_hub_c} [Ihm von der Unterstadt erzählen #fliesst]
     ~ q_gilbert = 2
     ~ gilbert = gilbert + 1

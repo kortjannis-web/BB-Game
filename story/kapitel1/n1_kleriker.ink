@@ -365,6 +365,5 @@ Neben dem Tor bleiben nur die Treppen, breit und so steil, dass du die unteren e
 
 = bruecken_tor
 // [KANON lore:welt/notizen Nr. 2] Die Kirche hat die Große Brücke gesperrt. [ERWEITERT] Das Tor, die Kette, die Ritzung (Übergreifend Nr. 2a).
-// [ERWEITERT] Der Weihrauch durch den Spalt: Gilbert sagt, den rieche man nur oben, bei der Kathedrale (k1_b_gilbert, Spur des Vermissten).
 Am Ende der Brücke, wo der Weg zur Kathedrale hinaufführen müsste, schließt ein Tor die Straße ab, doppelt so hoch wie ein Reiter und von der anderen Seite verriegelt. Durch den Spalt zwischen den Flügeln zieht kühle Luft, harzig und hell; so riecht in den Gassen hier unten nichts. Dahinter hängt eine Kette, frisch geschmiedet und noch blank, und an ihr ein Schloss, schwarz vor Alter, älter als jeder, der in dieser Stadt noch lebt. In Schulterhöhe hat jemand mit einem Messer Buchstaben ins Holz geritzt, tief und mit Mühe, und mitten im dritten aufgehört.
 ->->
