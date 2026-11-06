@@ -52,6 +52,25 @@
     for (const f of hoerer) f(daten.aenderungen);
     zaehlerZeigen();
   };
+  // Eingearbeitete Vorschläge verschwinden von selbst: web/uebernommen.json nennt den Zeitpunkt ("bis"),
+  // bis zu dem Claude alles bearbeitet hat. Was der Browser davon noch gesammelt hat, wird beim Laden entfernt.
+  // Neuere und danach geänderte Vorschläge bleiben. Fehlt die Datei (Artefakt, offline), passiert nichts.
+  try {
+    fetch(new URL("uebernommen.json", location.href), { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((u) => {
+        if (!u?.bis) return;
+        const vorher = daten.aenderungen.length;
+        daten.aenderungen = daten.aenderungen.filter((a) => !(a.zeit && a.zeit <= u.bis));
+        const weg = vorher - daten.aenderungen.length;
+        if (!weg) return;
+        daten.eingearbeitet = weg;
+        melden();
+      })
+      .catch(() => {});
+  } catch {
+    /* ohne Netz oder im Artefakt: nichts zu tun */
+  }
   // Zwischen Spiel und Baum in zwei Tabs: Änderungen des anderen Tabs übernehmen.
   window.addEventListener("storage", (e) => {
     if (e.key !== SPEICHER) return;
@@ -83,6 +102,7 @@
       melden();
       return alt;
     }
+    daten.eingearbeitet = 0;
     const neu = { id: `v${++daten.zaehler}`, zeit: new Date().toISOString(), seite: document.body.dataset.seite ?? "", ...a };
     daten.aenderungen.push(neu);
     melden();
@@ -486,8 +506,9 @@
     const e = einstellungen();
     const anzahl = el("p", "ws-info");
     fensterZaehler = () => {
+      const eingearbeitet = daten.eingearbeitet ? ` ${daten.eingearbeitet} frühere Vorschläge sind schon eingearbeitet und hier entfernt.` : "";
       anzahl.textContent = daten.aenderungen.length
-        ? `${daten.aenderungen.length} Vorschläge gesammelt. Alles bleibt Vorschlag, bis ich es mir angesehen habe.`
+        ? `${daten.aenderungen.length} Vorschläge gesammelt. Alles bleibt Vorschlag, bis ich es mir angesehen habe.${eingearbeitet}`
         : "Noch keine Vorschläge. Schalte oben „✎ Bearbeiten“ ein und klicke beim Spielen oder im Erzählbaum auf einen Absatz, eine Entscheidung oder eine Passage.";
     };
     fensterZaehler();
