@@ -2,6 +2,7 @@
 // Geschrieben in der Stimme des Jägers: Ich, rückblickend im Präteritum, Stimme A (docs/stimme.md); Kanon sinngemäß, Offenes bleibt offen.
 // Lektorat 2026-11-05: keine Spielsprache (Echos, kaufen; Blutechos, Stärkung und Handel sind seit 2026-11-06 ganz entfallen), keine Formeln aus dem Erzähltext (süß und schwer, nasses Fell), keine Sätze aus
 // Lore-Dateien. Die Fragen der Nacht bleiben im Präsens: Sie sind noch offen.
+// Überarbeitung 2026-11-06 (Ü1 bis Ü12): Mond statt Sonne, Traum ohne Gestirn, Stimme A durchgehend; nur Texte geändert, keine Schlüssel oder Bedingungen. Entwurf, Stufe 1.
 // Jeder Eintrag hat Stufen: [Bedingung, Text]. Gezeigt werden alle Stufen, deren Bedingung im Spielstand gilt,
 // damit das Notizbuch nur weiß, was der Spieler auf seinem Weg erlebt hat (CLAUDE.md: nichts vorwegnehmen).
 // Bedingungen: "" (immer), "var", "!var", "var>=2", "var==wert", mehrere mit "&&". Die letzte Stufe mit
@@ -13,18 +14,18 @@
 // gilbert_kleriker (Gilbert, Weg zur Kathedrale, Zweig mit dem Gerücht), frau_betet (Türen, die Betende).
 window.NOTIZBUCH = {
   bluttransfusion: { titel: "Die Bluttransfusion", stufen: [
-    ["", "In Yharnam heilte man mit Blut. Man unterschrieb einen Bogen, man ließ sich in einem Stuhl mit Riemen festschnallen, und dann empfing man. Es heile, sagten sie. Was es sonst noch tue, sagte keiner."],
-    ["gilbert_geschenk", "Gilbert hatte es auch empfangen. Es habe ihm Aufschub gekauft, sagte er, nur Aufschub."],
+    ["", "In Yharnam heilte man mit Blut. Man unterschrieb einen Bogen, ließ sich die Riemen eines schweren Stuhls um die Handgelenke legen und empfing es aus einer dunklen Flasche, durch eine Nadel in der Armbeuge. Es heile, sagte man. Was es sonst noch tue, sagte keiner."],
+    ["gilbert_geschenk", "Gilbert hatte es lange vor mir empfangen. Es habe ihm Aufschub gekauft, sagte er, nur Aufschub; dann nahm ihm der Husten den Rest des Satzes."],
   ] },
   paleblood: { titel: "Bleiches Blut", stufen: [
-    ["", "Bleiches Blut. Der alte Mann in der Klinik sprach es aus, als lese er es mir von der Stirn ab."],
-    ["k1_erwachen", "Neben dem Stuhl mit den Riemen lag ein Zettel in eiliger Hand, die letzte Zeile über den Rand gelaufen. Bleiches Blut solle man suchen, stand darin, wenn man über die Jagd hinausgelangen wolle. Wer das geschrieben hatte, wusste ich nicht."],
-    ["haltung_vertrag==wach", "In meinem Vertrag stand es schon, ehe ich unterschrieb, in der Zeile für den Grund meiner Reise, und die Schrift sah der meinen ähnlich."],
+    ["", "Bleiches Blut. Der alte Mann in der Klinik sprach es aus, als lese er es mir von der Stirn ab, und tief in seinem Hals gluckste dabei ein Lachen."],
+    ["k1_erwachen", "Als ich erwachte, lag auf dem Besucherstuhl neben mir ein Zettel in eiliger Hand, die letzte Zeile über den Rand gelaufen. Bleiches Blut solle man suchen, stand darin, wenn man über die Jagd hinausgelangen wolle. Wer das geschrieben hatte, wusste ich nicht."],
+    ["haltung_vertrag==wach", "In meinem Vertrag stand es schon, ehe ich unterschrieb, in der Zeile für den Grund meiner Reise. Die Schrift sah der meinen ähnlich. Geschrieben hatte ich sie nicht, oder ich wusste es nicht mehr."],
     ["gilbert_bruecke", "Gilbert kannte das Wort nicht. Wenn es einer wisse, meinte er, dann die Kirche."],
   ] },
   jaegertraum: { titel: "Der Jägertraum", stufen: [
-    ["", "Ein Garten voll weißer Blumen unter einem Himmel ohne Sonne, Grabsteine im Gras und auf dem Hügel ein Haus, in dem immer Licht brannte. Jeder Weg, den ich ging, führte zurück zum Grabstein ohne Namen."],
-    ["tode>=2", "Dorthin kehrte ich zurück, wenn ich starb. Ich starb nicht; ich erwachte, und der Einstich in meiner Armbeuge war danach jedes Mal frisch."],
+    ["", "Ein Garten voll weißer Blumen, die nach frisch gebleichtem Leinen rochen, unter einem Himmel von der Farbe alten Elfenbeins, an dem kein Gestirn stand. Grabsteine im Gras, und auf dem Hügel ein Haus, in dessen Fenstern Licht brannte, ohne dass sich dahinter ein Schatten regte. Jeder Weg, den ich ging, führte zurück zum Grabstein ohne Namen."],
+    ["tode>=2", "Dorthin kehrte ich zurück, wenn ich starb. Ich starb nicht; ich erwachte zwischen den Blumen, und der Einstich in meiner Armbeuge war danach jedes Mal frisch."],
     ["tode>=3", "Die braune Tinte der Unterschrift blieb an meinen Fingern. Ich war gestorben, und sie war noch da."],
     ["puppe_gespraech>=3", "Für jeden Grabstein im Garten, sagte die Puppe, sei einmal einer gekommen wie ich. Es sei so lange her, dass sie die Gesichter verwechsle. Meines wolle sie sich merken."],
     ["einsicht>=2", "Was ich ahnte: Man kam nicht dorthin, um sich auszuruhen. Man wurde dort aufbewahrt."],
@@ -40,31 +41,31 @@ window.NOTIZBUCH = {
     ["puppe_daheim || k1_d_traum", "Sie nannte den Traum daheim. Ich widersprach ihr nicht."],
   ] },
   boten: { titel: "Die Boten", stufen: [
-    ["", "Kleine graue Wesen, nicht größer als ein Kind, mit Gesichtern aus nassem Ton. Zuerst sah ich sie im Fieber der Klinik, wie sie mir über die Riemen auf die Brust krochen. Im Garten kamen sie aus der Erde und reichten mir Waffen."],
-    ["k1_laterne_zentral", "Wo ich eine Laterne entzündete, brachen sie aus dem Boden und drängten sich an das Eisen, wo es warm war."],
+    ["", "Kleine graue Wesen, nicht größer als ein Kind, mit Gesichtern aus nassem Ton. Zuerst sah ich sie im Fieber der Klinik, wie sie mir über die Riemen auf die Brust krochen; eines hatte einen Riss quer über der Stirn. Im Garten kamen sie aus der Erde und reichten mir Waffen, und das mit dem Riss war unter ihnen."],
+    ["k1_laterne_zentral", "Als die Laterne vor der Klinik unter meiner Hand aufflammte, krochen sie um ihren Fuß aus der Erde und drängten sich an das Eisen, wo es warm war."],
     ["puppe_gespraech", "Die Puppe nannte sie die Kleinen. Sie gruben nach Leuten wie mir, sagte sie, und mich hätten sie ausgegraben."],
   ] },
   laternen: { titel: "Die Laternen", stufen: [
-    ["", "Manche Laternen brannten mit einem kalten, weißen Licht, das mich an den Himmel über dem Garten erinnerte. An einer von ihnen sammelte ich mich, und der Garten nahm mich auf."],
+    ["", "Vor der Klinik stand eine Laterne auf einem eisernen Pfahl, erloschen, das Glas von innen verrußt. Als ich sie berührte, brannte sie, ohne dass ich Feuer gemacht hatte, und ihr Licht war kalt und weiß, von der Farbe des Himmels über dem Garten."],
   ] },
   jagdnacht: { titel: "Die Jagdnacht", stufen: [
-    ["", "In manchen Nächten jagte Yharnam. Dann schoben die Bürger die Riegel vor, hängten Räucherwerk in die Fenster, und hinaus gingen die Jäger."],
+    ["", "In manchen Nächten jagte Yharnam. Dann schoben die Bürger die Riegel vor und hängten Räucherwerk in die Fenster, und hinaus gingen die Jäger, mit Säge, Axt und Feuerwaffe, als ginge es zur Ernte."],
     ["gilbert_jagd", "Was sie jagten, sagte Gilbert, hätten sie tags zuvor meist noch gegrüßt."],
-    ["k1_d_heimweg", "Auf dem Rückweg hing die Sonne noch über den Dächern, wo sie gehangen hatte, als ich aus der Klinik trat, und mein Schatten lag so lang auf dem Pflaster wie am Anfang."],
+    ["k1_d_heimweg", "Auf dem Rückweg stand der Mond noch, wo er gestanden hatte, als ich aus der Klinik trat. Nur war er so groß geworden, dass er die halbe Gasse ausfüllte, und mein Schatten fiel auf dieselben Steine wie am Anfang."],
   ] },
   raeucherwerk: { titel: "Räucherwerk", stufen: [
     ["", "Vor den Fenstern hingen rote Lampen, und ihr Rauch setzte sich in die Kleider, bis man ihn nicht mehr roch. Er sollte die Bestien fernhalten. An der Zahl der Lampen, sagte man, lasse sich ablesen, wie viel Angst in einem Haus wohne."],
   ] },
   buergerjagd: { titel: "Die Jagd der Bürger", stufen: [
     ["", "Nicht nur die Jäger jagten. Wer von den Bürgern das Warten nicht mehr aushielt, ging mit Fackel und Mistgabel selbst hinaus, und was sie für eine Bestie hielten, verbrannten sie. Einen Fremden hielten sie leicht dafür."],
-    ["mob_verbrannt", "Eine von ihnen hieß Martha. Sie hatte einem Jäger manchmal Brot gegeben."],
+    ["mob_verbrannt", "Eine von ihnen hieß Martha und hatte Mehl an den Ärmeln. Sie habe ihm Brot gegeben, wenn er spät kam, sagte Gascoigne. Das Feuer, das sie traf, hatte ich in der Hand gehalten."],
   ] },
   fremde: { titel: "Fremde", stufen: [
-    ["", "Yharnam hasste Fremde. Man sagte, wir hätten die Seuche gebracht."],
+    ["", "Yharnam traute keinem Fremden. Man erkannte uns am Geruch, an den Stiefeln, an der Art, wie wir an verriegelten Türen stehen blieben, und man sagte, wir hätten die Seuche gebracht."],
     ["k1_b_gilbert", "Gilbert hinter seinem Gitter war einer von uns. Er roch es an mir, sagte er: Regen und Landstraße."],
   ] },
   heilende_kirche: { titel: "Die Heilende Kirche", stufen: [
-    ["", "Sie verwaltete das Blut in Yharnam, jede Behandlung, jede Ampulle."],
+    ["", "Sie verwaltete das Blut in Yharnam, jede Behandlung, jede Ampulle, und ihre Glocken läuteten in dieser Nacht, ohne dass jemand an den Seilen zu ziehen schien."],
     ["gilbert_bruecke", "Ihr Blut, sagte Gilbert, komme aus der großen Kathedrale über der Stadt, so wie Wasser aus einer Quelle."],
     ["k1_c_unterstadt", "Über den Gräbern der Unterstadt stieg eine schmale Treppe die Felswand hinauf zu einem Tor. Dahinter, hieß es, liege der Bezirk der Kathedrale. Das Tor war zu."],
     ["frau_betet", "Hinter einer Tür betete eine Frau, und in ihrem Gebet hieß es, die Kirche habe ihnen das Räucherwerk gesegnet."],
@@ -118,7 +119,7 @@ window.NOTIZBUCH = {
     ["gascoigne_tot", "Auf einem Dach über dem Grab lag eine Frau mit der roten Brosche. Viola. Wer sie getötet hatte, erfuhr ich nicht."],
   ] },
   spieluhr: { titel: "Die Spieluhr", stufen: [
-    ["", "Die Spieluhr sei von Papa, sagte das Mädchen. Wenn er fremd werde, ziehe sie sie auf, und hinterher sei er wieder Papa."],
+    ["", "Die Spieluhr sei von Papa, sagte das Mädchen. Wenn er fremd werde, ziehe sie sie auf, und hinterher sei er wieder Papa. Dem Lied fehlte ein Ton, immer an derselben Stelle, und die Melodie stolperte jedes Mal darüber hinweg."],
     ["spieluhr_mal>=1", "Am Grab hielt ihn das Lied fest, solange es spielte."],
     ["spieluhr_mal>=3", "Beim dritten Mal zerriss es ihn."],
   ] },
@@ -128,7 +129,7 @@ window.NOTIZBUCH = {
   ] },
   einsicht: { titel: "Einsicht", stufen: [
     ["", "Auf der Brücke zählte ich die Gelenke eines Arms und kam beim zweiten Mal auf eine andere Zahl. Dabei öffnete sich hinter meiner Stirn ein Spalt, schmal wie der unter einer Tür, und seither sah ich Dinge, die vorher nicht da waren, oder die da waren, ohne dass ich sie sah. Ob sich so ein Spalt wieder schließen lässt, wusste ich nicht."],
-    ["einsicht>=3", "Am Grab des Oedon fiel sein Schatten falsch, dem Licht entgegen. Ich erzählte es niemandem."],
+    ["einsicht>=3", "Am Grab des Oedon fiel sein Schatten falsch, dem Mond entgegen, als käme das Licht von anderswo. Ich erzählte es niemandem."],
   ] },
   gehrman: { titel: "Gehrman", stufen: [
     ["", "Ein alter Mann im Rollstuhl im Garten, mit einem breitkrempigen Hut und einer Decke über den Knien."],
@@ -137,9 +138,10 @@ window.NOTIZBUCH = {
     ["gehrman_versprochen", "Er hatte einem Freund etwas versprochen. Er wisse noch, sagte er, dass er es versprochen habe."],
   ] },
   // Erwarteter Lore-Tag aus b_yharnam.ink (Faktencheck b_yharnam Nr. 6): der Zettel im dunklen Haus. Ohne den Tag bleibt der Eintrag unsichtbar.
-  kirche_sperrt_bruecke: { titel: "Der Zettel im dunklen Haus", stufen: [
-    ["", "Im dunklen Haus neben der Laterne, im ersten Stock, neben einem Rollstuhl mit einer Gestalt, die durch den offenen Mund atmete, lag ein Zettel. Ein Bürger hatte geschrieben, die Kirche habe die große Brücke gesperrt, als die Jagd begann, und die Leute sich selbst überlassen, während unten im Tal, wo die Stadt früher war, alles brannte."],
-    ["k1_n1_kleriker.uebergang", "Am Ende der Brücke stand ein Tor zur Kathedrale hin, von drüben verriegelt."],
+  kirche_sperrt_bruecke: { titel: "Die gesperrte Brücke", stufen: [
+    // Der Tag steht auch bei Gilbert (Weg zur Kathedrale); darum nennt die erste Stufe nur, was beide Stellen sagen. PRÜFEN: Den Zettel im dunklen Haus trüge eine eigene Stufe mit "haus_zettel" (Bedingung, hier nicht ergänzt).
+    ["", "Die große Brücke zur Kathedrale sei gesperrt, hieß es, seit die Jagd begann, und wer auf dieser Seite wohnte, sei sich selbst überlassen."],
+    ["k1_n1_kleriker.uebergang", "Am Ende der Brücke stand ein Tor zur Kathedrale hin, von drüben verriegelt. Wer davor gewartet hatte, lag noch zwischen den Kutschen."],
   ] },
 };
 
@@ -149,8 +151,8 @@ window.PERSONEN = [
   { name: "Gilbert", wenn: "k1_b_gilbert", stufen: [
     ["versprechen_gilbert", "Ich versprach ihm, ihn zu holen, wenn es bei ihm so weit wäre."],
     ["gilbert>=2", "Er sammelte Namen hinter seinem Gitter. Meinen behielt er."],
-    ["gilbert>=0", "Ein Fremder wie ich, krank und höflich. Er hörte, wer vorbeiging."],
-    ["", "Ich wandte mich von ihm ab, ehe er ausgesprochen hatte. Danach hustete er gedämpft, wenn ich vorbeiging, und sah nicht auf."],
+    ["gilbert>=0", "Ein Fremder wie ich, krank und höflich, mit einem Ring, der ihm zu weit geworden war. Er hörte, wer vorbeiging."],
+    ["", "Ich wandte mich von ihm ab, ehe er ausgesprochen hatte. Danach hustete er gedämpft, als presse er sich ein Tuch vor den Mund, damit es mich nicht störe."],
   ] },
   { name: "Gascoigne", wenn: "q_frau==1 || gascoigne2", stufen: [
     ["gascoigne_tot", "Tot, am Grab des Oedon. Sein Hut blieb auf dem Grabstein liegen."],
@@ -165,10 +167,10 @@ window.PERSONEN = [
   ] },
   { name: "Das Mädchen", wenn: "maedchen_gesehen || k1_b_maedchen", stufen: [
     ["maedchen_tot", "Tot. Im Maul eines Schweins hing ihr Band, rot und schwer. Am Riegel war es weiß gewesen."],
-    ["maedchen_wo==fort", "Sie lief los. Wohin, wusste ich nicht."],
+    ["maedchen_wo==fort", "Ich schickte sie zu der Ärztin in der Klinik. An der Ecke bog sie ab, zu der Treppe, die zu den Kanälen hinabführt."],
     ["q_mutter==4", "Sie wartete. Ich hatte ihr gesagt, ihre Mutter komme bald."],
     ["maedchen>=1", "Sie wartete hinter dem Fenster am Brunnenplatz. Warten könne sie gut, sagte sie."],
-    ["k1_d_maedchen && !maedchen_tot", "Der Morgen komme immer, sagte sie, man müsse ihn nur abwarten."],
+    ["k1_d_maedchen && !maedchen_tot", "Der Morgen komme immer, sage ihre Mama; man müsse ihn nur abwarten. Über ihrem Fenster stand der Mond und füllte die halbe Gasse."],
     ["", "Sie wartete hinter dem Fenster am Brunnenplatz, die weiße Schleife am Riegel."],
   ] },
   { name: "Die Frau im Federmantel", wenn: "eileen_stufe>=1", stufen: [
@@ -185,7 +187,7 @@ window.PERSONEN = [
   { name: "Gehrman", wenn: "gehrman || gehrman_gesehen", stufen: [
     ["gehrman_bestien", "Der alte Mann in der Werkstatt im Traum. Freundlich. Als ich nach den Bestien fragte, hielten seine Hände die Lehnen, bis das Holz knackte."],
     ["gehrman", "Der alte Mann in der Werkstatt im Traum, freundlich und müde. Er sprach meist zum Feuer hin, und seine Pausen kamen, wo keiner sie erwartet."],
-    ["", "Ein alter Mann im Rollstuhl am Weg im Garten. Sterben könne ich dort nicht, sagte er, nur aufwachen."],
+    ["", "Ein alter Mann im Rollstuhl am Weg im Garten, eine Decke über den Knien. Dort sterbe man nicht, sagte er, dort wache man auf; daran gewöhne man sich."],
   ] },
   { name: "Die Puppe", wenn: "puppe_wach", stufen: [
     ["puppe_daheim || k1_d_traum", "Sie sprach sanft und atmete nicht. Den Traum nannte sie daheim."],
@@ -200,7 +202,7 @@ window.FRAGEN = [
   ["", "Wer war der alte Mann in der Klinik, und was habe ich unterschrieben?"],
   ["tode>=2", "Warum sterbe ich nicht?"],
   ["altar_blatt", "Wo hat die Seuche ihre Quelle?"],
-  ["k1_d_heimweg", "Warum sinkt die Sonne nicht?"],
+  ["k1_d_heimweg", "Warum geht der Mond nicht unter, und warum kommt er näher?"],
   ["kleriker!=", "Warum werden ausgerechnet Kirchenleute zu Bestien?"],
   ["k1_c_graeber || k1_n2_gascoigne", "Wer oder was ist Oedon?"],
   ["gascoigne_tot", "Wer hat Viola getötet?"],
