@@ -116,3 +116,16 @@ Jede Station ist je nach Zustand anders oder fehlt ganz.
 Ein Agent hat Fassung 1 gegen die verbindlichen Entscheidungen des Nutzers, die Variablen im Ink-Code und die Tod-Mechanik geprüft. Seine Befunde sind in Fassung 2 eingearbeitet (Abschnitte 3 und 5).
 
 Offen bleibt ein Widerspruch: Er rät, die grüne Markierung des Gelesenen erst nach dem Kapitelende zu zeigen, weil sie verrät, dass es andere Wege gibt. Der Nutzer hat die Markierung aber ausdrücklich so gewünscht (2026-11-06). Sie bleibt also; das ist eine Frage an ihn.
+
+## 8 Entscheidung des Nutzers (2026-11-06): Fassung fix, Buchgefühl vor Videospiel
+
+Antworten auf die vier Fragen der Übergabe:
+1. **Fassung 2 ist die Richtung** (feste Begegnungen, freie Wege dazwischen). Bestätigt.
+2. **Kartenmodell zwei von drei** je Viertel. Bestätigt.
+3. **Tod:** Zurück an den Anfang des Kampfes oder Moments bleibt, aber die Bausteine des Videospiels fallen weg (siehe unten). Die Laternen-Regel „je Akt“ ist damit neu zu fassen.
+4. **Grüne Markierung des Gelesenen bleibt**, wie sie ist. Sie ist dem Nutzer „als Spielmacher wichtig“.
+
+Neue Leitlinie: **Das Spiel soll sich wie eine Geschichte anfühlen, voll wie ein Buch. Alles, was an ein Videospiel erinnert, kann raus.**
+- **Bleibt:** die Blutampulle (injizieren).
+- **Raus:** Blutechos (Währung und Fleck am Todesort), Stärkung bei der Puppe, der Handel im Bad der Boten (verstanden als „Brunnenshop“; Bestätigung steht aus). Gegenstände, Wissen und Kleidung (Brandflasche, Jagdheft, Brief, Wendels Mantel) findet man stattdessen **in der Geschichte selbst**, ohne Preis und ohne Menüton.
+- Weitere Kandidaten, die über das Videospielgefühl entschieden werden müssen: Laternen als Speicherpunkte, die Jägermarke, Einsicht als ausgebbare Währung, Zähler und Symbole in der Leiste.

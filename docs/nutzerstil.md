@@ -87,3 +87,7 @@ Belege zu den neun Hypothesen und neue Muster, wieder ohne Begründungen des Nut
 - **Nur deutsche Werke** als Vorbild (oder herausragende deutsche Übersetzungen), weil es ein deutsches Spiel ist.
 - Ziel: Texte, die sich **hautnah** anfühlen, als erlebe man es gerade, **mystisch und unheimlich**, mit **viktorianischer Eleganz**, auf dem Niveau eines **deutschen Meisterwerks**; „das absolute Ziel und nicht weniger“. Leseliste: `docs/schreibkunst-lektuere.md`.
 
+
+## Videospiel raus, Buch rein (2026-11-06)
+- **Regel:** Mechaniken, die nach Videospiel klingen oder aussehen (Währung, Shop, Stärken, Speicherpunkt), sind verdächtig; was Gegenstand oder Wissen liefert, geschieht in der Geschichte. Beleg: „Blutechos rausnehmen und generell Dinge, die zu sehr an Videospiel erinnern. Nur Blutampulle injizieren sollte bleiben … soll sich mehr wie ne Story anfühlen … voll wie ein Buch.“
+- **Ausnahme für den Spielmacher:** Hilfen für ihn als Autor und Tester (grüne Markierung des Gelesenen, Werkstatt) bleiben ausdrücklich.
