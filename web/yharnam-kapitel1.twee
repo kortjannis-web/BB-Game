@@ -75,8 +75,8 @@ Seit Wochen schwer krank, sagst du, und Yharnam ist die letzte Hoffnung, die dir
 [[weiter->k1_prolog.~2]]
 
 :: k1_prolog.~1 ✦ 3 [A folge] {"position":"8100,560","size":"100,100"}
-Für jemanden, der zu Hause in einem abgedunkelten Zimmer liegt und auf einen Brief wartet, in dem steht, dass es Hoffnung gibt. Du hast versprochen, diesen Brief zu schreiben.
-<!-- Logik: grund = "heilung_anderer" -->
+„Weil zu Hause jemand im Sterben liegt“, sagst du, und du sagst es glatt, mit einem Zittern an der richtigen Stelle. Es liegt niemand im Sterben. Es ist die erste Lüge in diesem Wagen, und sie geht dir leichter über die Lippen, als dir lieb ist. Der Kutscher nickt, als habe er sie schon oft gehört.
+<!-- Logik: grund = "luege" -->
 [[weiter->k1_prolog.~2]]
 
 :: k1_prolog.~1 ✦ 4 [A folge] {"position":"8240,560","size":"100,100"}
@@ -101,6 +101,8 @@ Am Ende des Saals sitzt ein alter Mann in einem Rollstuhl, das Gesicht zur Hälf
 „Erst die Papiere. Ohne Papiere kein Blut, so ist das hier.“
 Er schiebt dir einen Bogen hin, eng bedruckt, mit einer Feder darauf. Aus dem offenen Tintenfass steigt ein Geruch nach Eisen, und die Tinte darin ist braun.
 Vereinbarung über die Behandlung mit Blut. Der Unterzeichnete erklärt, aus freien Stücken und bei klarem Verstand zu kommen. Er erklärt, die Behandlung zu empfangen, wie sie ihm gereicht wird, und keine andere zu verlangen. Er erklärt, dass er den Grund seiner Reise wahrheitsgemäß angegeben hat. Folgen, die aus der Behandlung erwachsen, fallen dem Empfänger zu.
+⟨wenn grund == "luege"⟩
+Du setzt die Feder an, um den Menschen einzutragen, für den du angeblich gekommen bist, und die Spitze verfängt sich im Papier. Wie du auch ansetzt, die Tinte läuft in der Zeile für den Grund zu zwei anderen Wörtern zusammen, bleiches Blut, und lässt keinen fremden Namen zu. Der alte Mann sieht dir zu und schnalzt nicht. „Der Bogen nimmt nur an, was stimmt“, sagt er, nicht unfreundlich. „Wir machen es dir leichter. Du hast nur zu unterschreiben.“
 [[Ungelesen unterschreiben #fliesst->k1_klinik ✦ 1]]
 [[Erst lesen, dann unterschreiben #fliesst->k1_klinik ✦ 2]]
 [[Die Feder über dem Bogen zögern lassen #fliesst->k1_klinik ✦ 3]]
@@ -1524,8 +1526,8 @@ Einem Kind habe ich die Brosche seiner Mutter gegeben. Es bat mich, unten stehen
 Einem Kind habe ich gesagt, seine Mutter komme bald. Es glaubte mir so schnell, dass ich mich heute frage, wie oft man ihm das schon gesagt hatte.
 ⟨wenn grund == "heilung_selbst"⟩
 Das Fieber, mit dem ich gekommen war, war fort. Ich bemerkte es erst auf dem Friedhof, zwischen zwei Gräbern, und ich weiß noch, dass ich mich nicht freute.
-⟨wenn grund == "heilung_anderer"⟩
-Den Brief nach Hause, den ich versprochen hatte, schrieb ich in dieser Nacht nicht. Ich wusste nicht, was darin stehen sollte.
+⟨wenn grund == "luege"⟩
+Von dem Sterbenden, den ich dem Kutscher genannt hatte, schrieb ich nichts auf. Es hatte ihn nie gegeben, und die Tinte hatte es gewusst, ehe ich die Feder ansetzte.
 Ich habe in dieser Nacht gelernt, dass ich in Yharnam nicht sterbe. Die anderen schon. Ich erinnere mich, unterschrieben zu haben, und nicht mehr, was; die Tinte ging nicht von den Fingern.
 Oft sah ich in dieser Nacht nach der Sonne, an der Laterne vor der Klinik, auf der Brücke, zwischen den Gräbern, und jedes Mal hing sie an derselben Stelle über den Giebeln, so rot und so fest wie das Siegel auf einem Brief, den noch niemand geöffnet hat. Ich wünschte mir damals, sie möge endlich sinken. Ich wusste nicht, worum ich bat.
 Ich trug einen Schlüssel bei mir, der zu schwer war für einen Schlüssel, und ich ging hinauf, dorthin, wo der Gesang herkam.“
