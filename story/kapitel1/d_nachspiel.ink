@@ -99,7 +99,7 @@ Auf dem Weg hinab kommst du noch einmal unter dem Tor mit den Ketten vorbei. Das
 // Letzte Station: die Laterne am Grab, das Kapitelende. Die Ampulle kann man noch nutzen.
 - (wahl)
 + {ampulle > 0 and leben < LEBEN_MAX} [Die Ampulle in den Schenkel stoßen #fliesst] -> ampulle_ruhig -> wahl
-+ [Die Laterne am Grab berühren #fliesst] -> k1_d_traum
++ [An einer Laterne am Weg die Hand ans Glas legen #fliesst] -> k1_d_traum
 
 === k1_d_maedchen ===
 // TITEL: WEICHE: Was sagst du dem Mädchen?
@@ -161,7 +161,7 @@ Auf dem Weg hinab kommst du noch einmal unter dem Tor mit den Ketten vorbei. Das
 // [KANON lore:figuren/maedchen-und-viola] Das Band ist durchtränkt von Blut (G1: erst hier rot). Was mit dem Kind geschah, sagt niemand; der Jäger sieht nur, was im Wasser treibt.
 ~ maedchen_tot = true
 Unten riecht das Wasser nach Eisen und nach Stall. # bild: kanal_schwein # stimmung: grauen
-{k1_c_kanal:Das Schwein ist zurück, an derselben Stelle, bis an die Knie im Wasser.|Im Kanal steht ein Schwein, doppelt so groß wie ein Ochse, bis an die Knie im Wasser.} Es frisst, und neben ihm treibt ein heller Stoff, ein kleiner Schuh. Aus seinem Maul hängt zwischen den gelben Hauern ein Band, rot und schwer bis auf den Knoten. # quest: maedchen_tot
+{schwein == "tot":Wieder steht ein Schwein im Wasser, doppelt so groß wie ein Ochse, als hätte die Nacht es neu geboren, so wie sie dich neu gebiert.|Im Kanal steht ein Schwein, doppelt so groß wie ein Ochse, bis an die Knie im Wasser.} Es frisst, und neben ihm treibt ein heller Stoff, ein kleiner Schuh. Aus seinem Maul hängt zwischen den gelben Hauern ein Band, rot und schwer bis auf den Knoten. # quest: maedchen_tot
 { q_mutter == 3:
     Im Wasser suchst du nach dem Gold der Fassung und findest es nicht.
 - else:
@@ -171,7 +171,7 @@ Unten riecht das Wasser nach Eisen und nach Stall. # bild: kanal_schwein # stimm
     ~ band = true
     Es kommt leicht. Das Schwein gibt es her, satt und gleichgültig, ohne den Kopf zu heben. Nass, wie es ist, lässt sich das Band nicht glattstreichen; du steckst es zu dem Schlüssel{spieluhr: und der Spieluhr}. # notiz: rotes_band
 * [Ohne das Band weitergehen #fliesst]
-    Hinter dir schmatzt es weiter, bis zur Leiter und auch noch, als du auf den Sprossen stehst.
+    Hinter dir schmatzt es weiter, bis zu den Stufen und auch noch, als du auf ihnen stehst.
 - -> k1_d_heimweg_c
 
 === k1_d_gilbert ===
@@ -184,7 +184,7 @@ Unten riecht das Wasser nach Eisen und nach Stall. # bild: kanal_schwein # stimm
 ~ q_gilbert = 2
 ~ gilbert = gilbert + 1
 Als du in die Gasse biegst, sitzt Gilbert schon am Gitter, den Stuhl so dicht ans Fenster gerückt, dass seine Knie gegen die Wand stoßen. Sein Husten kommt jetzt von tiefer, mit einem Reißen am Ende, und danach braucht er lange, bis er wieder sprechen kann. Mit dem Daumen hält er den Ring fest, damit er ihm nicht vom Finger rutscht. „Erzählen Sie“, sagt er. „Bitte. Was liegt dahinter?“ # bild: gilbert # stimmung: ruhig # quest: gilbert_bericht
-Es wird ein kurzer Bericht: das Tor am Ende der Brücke, von der anderen Seite verriegelt, die Treppen hinab, die Unterstadt, in der das Wasser nie aufhört zu laufen{k1_c_graeber:, die Gräber und der Name über dem Tor}. Er hört zu, die Stirn ans Gitter gelehnt. „Von der anderen Seite“, wiederholt er. „Dann wollte dort oben jemand nicht, dass man hinaufkommt. Oder dass von dort etwas herunterkommt.“ Er hustet. „Und die Glocken? Klingen sie da unten anders?“
+Es wird ein kurzer Bericht: {kleriker == "geflohen":die Brücke, die du in Panik verlassen hast, der Sturz in den Kanal, die Unterstadt,|das Tor am Ende der Brücke, von der anderen Seite verriegelt, die Treppen hinab, die Unterstadt,} in der das Wasser nie aufhört zu laufen{k1_c_graeber:, die Gräber und der Name über dem Tor}. Er hört zu, die Stirn ans Gitter gelehnt. „Von der anderen Seite“, wiederholt er. „Dann wollte dort oben jemand nicht, dass man hinaufkommt. Oder dass von dort etwas herunterkommt.“ Er hustet. „Und die Glocken? Klingen sie da unten anders?“
 „Da unten hört man sie nicht“, sagst du. Er nickt, und eine Weile ist nur sein Atem zu hören, nass und tief, mit dem Haken darin.
 * [Ihm vom Kampf am Grab erzählen #fliesst]
     Der Kampf am Grab, {kennt_gascoigne():Gascoigne, der Pater mit dem Verband,|der Mann mit dem Verband und dem Priesterschal} und was am Ende aus ihm geworden ist: Gilbert unterbricht dich kein einziges Mal, und danach sagt er lange nichts. „Und wenn es bei mir so weit ist?“, fragt er schließlich, und er lächelt schief, so wie beim ersten Mal am Gitter. „Holen Sie mich dann? Ich hätte gern, dass es jemand ist, der meinen Namen weiß.“

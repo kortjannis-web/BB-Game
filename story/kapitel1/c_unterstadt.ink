@@ -192,7 +192,7 @@ Der Wind dreht, und sein Geruch kommt herüber, stärker als die Gräber: nasses
     -> warnung
 * [Leise zurückweichen #fliesst]
     ~ gascoigne = gascoigne - 1
-    Schritt um Schritt, ohne ihn aus den Augen zu lassen. Er sieht dir nach, mit dem verbundenen Gesicht, und folgt dir nicht.
+    Schritt um Schritt, ohne ihn aus den Augen zu lassen. Er sieht dir nach, mit dem verbundenen Gesicht, und folgt dir nicht. Dann wendet er sich ab, geht durch das Tor mit dem Namen darüber, und es schwingt hinter ihm zu und bleibt einen Spalt offen.
     -> k1_c_eileen
 
 = tochter

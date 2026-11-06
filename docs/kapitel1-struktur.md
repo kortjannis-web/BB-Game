@@ -116,7 +116,9 @@ Blutechos samt Fleck am Todesort · Stärkung bei der Puppe · Bad der Boten sam
 3. Eileens Spuren liegen am Grab, gleich nach Viola, nicht am Ende des Heimwegs (Ort der Spuren).
 4. Eileens zweite Form der ersten Begegnung ist nur ein Satz Unterschied im Auftakt (Dachweg oder Krampen); eine eigene Szene folgt, wenn der Nutzer es will.
 5. Die Chronik nennt Nichtgewähltes in je einer Zeile; die „Spuren des Nichtgewählten“ im Spiel selbst sind je ein Satz nach dem Viertel.
-6. Das Gilbert-Gespräch „Nach den Jägern der Kirche fragen“ hängt nur noch an der Frage nach dem Weg zur Kathedrale (vorher an einer späteren Entdeckung).
+6. Beide Gilbert-Gespräche „Nach dem Weg zur Kathedrale“ und „Nach den Jägern der Kirche“ hängen nur noch an `gilbert_bruecke` (vorher an einer späteren Entdeckung). Gilberts Bitte um den Bericht kommt automatisch, wenn die Freundschaft reicht; es gibt keine Antwortoption.
+7. Die Parade kommt immer von Gascoigne am Scheiterhaufen; die Übung im Hof (Traum 2) setzt immer `geuebt`. Der Zweig, in dem Gehrman die Parade erstmals zeigt, ist deshalb tot und bleibt als Rückfall.
+8. Das Nachbild füllt die Ampulle mit einem Halbsatz, nicht ganz ohne Meldung.
 
 ## 7 Echo-Tabelle (erzeugt aus `web/entscheidungen.json`)
 
@@ -193,3 +195,9 @@ Jede Entscheidung, die etwas setzt, wird später in einem anderen Knoten gelesen
 - **Lore auf jeder Route**: Für jede der neun Auslassungs-Routen (eine Station je Viertel) muss jede Kern-Lore in mindestens einem Durchlauf erscheinen.
 - Lore an mindestens zwei Stellen; Echo-Regel (siehe 7); Stilprüfer; Karte; Bau der Webfassung.
 - 20 Szenarien erreichbar, darunter neu: Dachweg mit Jagdheft, Route ohne dunkles Haus, Tod mit Fragment und Rückkehr, Brief aus dem Fell der Bestie.
+
+## 9 Unabhängige Prüfung (2026-11-06) und was daraus wurde
+
+Ein Agent ohne Claudes Urteil hat den Umbau geprüft (21 Befunde). **Behoben:** (1) Neustart eines Kampfes setzt `gascoigne_moment`, `versprechen_gascoigne`, `im_lied_getroffen` zurück; (2) verbrauchte Brandflaschen und Kiesel, (3) die Freundschaft zu Gascoigne werden beim Neustart auf den Stand des ersten Betretens zurückgesetzt (n1 und n2); Fragmente: Texte unabhängig von ungesehenen Szenen, `fr_ich` erst nach dem Sieg, `fr_kirche` auch am Anschlag, Reihenfolge nach Handlungsablauf; „Leise zurückweichen“ an den Gräbern lässt Gascoigne durchs Tor gehen; Gilberts Bericht passt zur Flucht; der Kanal im Heimweg ohne Leiter und ohne „Schwein ist zurück“; Laterne vor der Klinik ohne Sammelpunkt-Satz; Notizbuch-Verweise auf entfallene Knoten; Gascoignes Bitte weist auf die Spieluhr hin, damit das Auslassen des Brunnenplatzes nicht ganz blind ist; der Prüfer verlangt jetzt `kampfanfang` in jedem Knoten mit `-> tod`.
+
+**Offen (bewusst):** tote Zweige aus den Wiederbesuchen (q_frau, gascoigne2, Gehrman schläft u. a.); Zähl- und Lore-Prüfung zählt statisch, nicht dynamisch; „Lore auf jeder Route“ gilt als erfüllt, wenn sie in einem Zufallslauf erscheint; keine Prüfung auf nie angebotene Optionen; die dünnste Route ist Türen+Anschlag mit Gasse+Dachweg (kein Fundstück im ersten Viertel, kein Spieluhr-Faden, kein Moment der Klarheit): Das ist **eine Entscheidung für den Nutzer** (mehr Gewicht für Anschlag und Dachweg oder die Spieluhr auch anders erreichbar machen).

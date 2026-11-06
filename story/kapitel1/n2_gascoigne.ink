@@ -13,12 +13,26 @@
 // Rede: Hier bricht seine Stimme wörtlich durch, kurz und kippend; im Moment der Klarheit nur noch Reste, zuletzt sein „So.“.
 // Geruch (L5): An den Gräbern einmal „nasses Fell“, am Grab unbenannt (der Körper atmet schon durch den Mund), Ernte erst im Griff (t5).
 
+// Stand beim ersten Betreten (Neustart nach dem Tod stellt ihn wieder her)
+VAR n2_gascoigne = 0
+VAR n2_molotow = 0
 VAR uhr_bestie = false        // die Spieluhr in diesem Anlauf schon der Bestie vorgespielt (einmal je Anlauf)
 
 === k1_n2_gascoigne ===
 // TITEL: NADELÖHR 2: Gascoigne
 -> betreten("grab") ->
 ~ kampfanfang = -> k1_n2_gascoigne
+{ k1_n2_gascoigne == 1:
+    ~ n2_gascoigne = gascoigne
+    ~ n2_molotow = molotow
+- else:
+    ~ gascoigne = n2_gascoigne
+    ~ molotow = n2_molotow
+}
+// Der Kampf beginnt von vorn: Was in einem früheren Anlauf geschah, gilt nicht.
+~ gascoigne_moment = false
+~ versprechen_gascoigne = false
+~ im_lied_getroffen = false
 ~ spieluhr_mal = 0
 ~ uhr_bestie = false
 ~ g_phase = 1

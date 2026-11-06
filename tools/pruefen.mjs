@@ -57,6 +57,20 @@ for (const [file, src] of Object.entries(files)) {
   }
 }
 
+// Tod und Neustart (Prüfbericht 2026-11-06): Jeder Knoten, der `-> tod` enthält, muss sein Ziel `kampfanfang` selbst setzen.
+const knotenText = new Map();
+for (const [file, src] of Object.entries(files)) {
+  let cur = null;
+  for (const line of src.split("\n")) {
+    const m = line.match(/^===\s*(?:function\s+)?([A-Za-z_]\w*)/);
+    if (m) cur = m[1];
+    if (cur) knotenText.set(cur, (knotenText.get(cur) ?? "") + line + "\n");
+  }
+}
+for (const [name, text] of knotenText) {
+  if (/->\s*tod\b/.test(text.replace(/\/\/.*$/gm, "")) && !/~\s*kampfanfang\s*=/.test(text) && name !== "tod") fail(`Knoten ${name} führt zum Tod, setzt aber kein kampfanfang (Rückkehr an den Anfang des Kampfes)`);
+}
+
 console.log("2) Kern-Lore an mindestens zwei Stellen");
 for (const [id, stellen] of [...loreStellen].sort()) {
   if (stellen.size < 2) fail(`Lore "${id}" nur an einer Stelle: ${[...stellen].join(", ")}`);

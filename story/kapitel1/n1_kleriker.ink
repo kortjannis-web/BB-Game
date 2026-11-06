@@ -18,11 +18,24 @@
 //   Der Leser verbindet es selbst; am Grab (n2_gascoigne) reißt die Zeile an derselben Stelle.
 
 VAR abzeichen_schwert = false   // Abzeichen der Schwertjäger aus der Beute der Bestie
+// Stand beim ersten Betreten: Ein Neustart nach dem Tod stellt ihn wieder her (verbrauchte Brandflasche und Kiesel kehren zurück, die Freundschaft zu Gascoigne zählt nicht doppelt).
+VAR n1_gascoigne = 0
+VAR n1_molotow = 0
+VAR n1_kiesel = 0
 
 === k1_n1_kleriker ===
 // TITEL: NADELÖHR 1: Kleriker-Bestie
 -> betreten("bruecke") ->
 ~ kampfanfang = -> k1_n1_kleriker
+{ k1_n1_kleriker == 1:
+    ~ n1_gascoigne = gascoigne
+    ~ n1_molotow = molotow
+    ~ n1_kiesel = kiesel
+- else:
+    ~ gascoigne = n1_gascoigne
+    ~ molotow = n1_molotow
+    ~ kiesel = n1_kiesel
+}
 { kleriker == "besiegt": -> uebergang }
 { k1_n1_kleriker == 1:
     Die Große Brücke trägt den Weg aus der unteren Stadt hinauf zur Kathedrale, auf Bögen aus grauem Stein, die so tief in den Nebel hinabreichen, dass keiner, den man fragt, ihren Fuß je gesehen haben will. Breit genug ist sie für vier Kutschen nebeneinander, und als die Jagd ausgerufen wurde, wollten alle zugleich hinüber; drüben, sagt man in den Gassen, habe ihnen niemand aufgemacht. Die Kutschen stehen noch da, umgestürzt und ineinander verkeilt, die Pferde im Geschirr, aufgedunsen und starr, und zwischen den Rädern liegen die Menschen, die hinüberwollten. Fortgeräumt hat man sie nicht. Am anderen Ende ragt ein Turm über das schmiedeeiserne Geländer, und hinter ihm steht schwarz die Kathedrale. Die Sonne hängt am Turm, so tief wie vor der Klinik, keinen Fingerbreit tiefer. # bild: bruecke # stimmung: grauen
@@ -35,7 +48,6 @@ Selbst gekauert überragt es die umgestürzten Kutschen um zwei Mannslängen, un
 In den Hinterläufen stecken Nägel, rostige, Dutzende, und um jeden Nagel ist das Fell weißlich aufgeworfen und weich, Schimmel auf altem Brot. Um den Hals, ins Fell eingewachsen, hängt ein Streifen Stoff, der einmal weiß war. Kragen oder Verband, du kannst es von hier aus nicht sagen.
 { k1_n1_kleriker == 1:
     ~ einsicht = einsicht + 1
-    ~ fr_frei_machen(fr_ich)
     Dein Blick bleibt an dem langen Arm hängen und will nicht los. Ohne es zu wollen, zählst du die Gelenke: Schulter, Ellbogen, noch ein Ellbogen, noch einer. Beim zweiten Zählen kommst du auf eine andere Zahl. Hinter deiner Stirn tut sich ein Spalt auf, so schmal wie der unter einer Tür, und durch ihn siehst du, dass der Arm noch wächst, jetzt, während du hinsiehst. # notiz: erste_einsicht # lore: einsicht # stimmung: grauen
 }
 { schreie >= 1: Es reißt das Maul auf und kreischt, hoch und lang, und deine Schultern kennen den Ton von den Dächern her, bevor du ihn erkennst. Jetzt hat er einen Körper. }
@@ -214,6 +226,7 @@ Die Zähne deiner Klinge haben sich in ihrem Fell festgefressen. Um sie herauszu
 = beute
 ~ kleriker = "besiegt"
 ~ einsicht = einsicht + 1
+~ fr_frei_machen(fr_ich)
 ~ abzeichen_schwert = true
 Aus ihrem Leib steigt ein roter Dunst, dicht wie Rauch aus nassem Holz, und als du ihn einatmest, stützt du dich auf die Säge, bis die Knie wieder tragen.
 Unter dem Fell, über der Brust, wo es dünn wird, sitzen Narben, klein und rund und in ordentlichen Reihen, Dutzende, Hunderte, Stich neben Stich. Du reibst dir die Armbeuge, ohne es zu merken. # notiz: nadelnarben

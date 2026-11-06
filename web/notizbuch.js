@@ -50,7 +50,7 @@ window.NOTIZBUCH = {
   jagdnacht: { titel: "Die Jagdnacht", stufen: [
     ["", "In manchen Nächten jagte Yharnam. Dann schoben die Bürger die Riegel vor, hängten Räucherwerk in die Fenster, und hinaus gingen die Jäger."],
     ["gilbert_jagd", "Was sie jagten, sagte Gilbert, hätten sie tags zuvor meist noch gegrüßt."],
-    ["k1_d_rueckweg", "Auf dem Rückweg hing die Sonne noch über den Dächern, wo sie gehangen hatte, als ich aus der Klinik trat, und mein Schatten lag so lang auf dem Pflaster wie am Anfang."],
+    ["k1_d_heimweg", "Auf dem Rückweg hing die Sonne noch über den Dächern, wo sie gehangen hatte, als ich aus der Klinik trat, und mein Schatten lag so lang auf dem Pflaster wie am Anfang."],
   ] },
   raeucherwerk: { titel: "Räucherwerk", stufen: [
     ["", "Vor den Fenstern hingen rote Lampen, und ihr Rauch setzte sich in die Kleider, bis man ihn nicht mehr roch. Er sollte die Bestien fernhalten. An der Zahl der Lampen, sagte man, lasse sich ablesen, wie viel Angst in einem Haus wohne."],
@@ -66,7 +66,7 @@ window.NOTIZBUCH = {
   heilende_kirche: { titel: "Die Heilende Kirche", stufen: [
     ["", "Sie verwaltete das Blut in Yharnam, jede Behandlung, jede Ampulle."],
     ["gilbert_bruecke", "Ihr Blut, sagte Gilbert, komme aus der großen Kathedrale über der Stadt, so wie Wasser aus einer Quelle."],
-    ["k1_hub_c", "Über den Gräbern der Unterstadt stieg eine schmale Treppe die Felswand hinauf zu einem Tor. Dahinter, hieß es, liege der Bezirk der Kathedrale. Das Tor war zu."],
+    ["k1_c_unterstadt", "Über den Gräbern der Unterstadt stieg eine schmale Treppe die Felswand hinauf zu einem Tor. Dahinter, hieß es, liege der Bezirk der Kathedrale. Das Tor war zu."],
     ["frau_betet", "Hinter einer Tür betete eine Frau, und in ihrem Gebet hieß es, die Kirche habe ihnen das Räucherwerk gesegnet."],
     ["alte_frau", "Eine alte Frau hinter ihrer Tür sagte, die Kirche lasse die Fremden mit ihrem Blut herein."],
     ["k1_b_anschlag", "An einer Kapellentür hing ein Anschlag an die Gemeinde: Wer Fieber an sich spüre oder einen Durst, den kein Wasser stille, solle sich zur nächsten Stelle des Blutes begeben. Darunter stand in Kreide, klein und schief und halb weggewischt: Mein Bruder ist gegangen. Er hatte keinen Durst. Das Papier roch herb, nach Weihrauch."],
@@ -200,7 +200,7 @@ window.FRAGEN = [
   ["", "Wer war der alte Mann in der Klinik, und was habe ich unterschrieben?"],
   ["tode>=2", "Warum sterbe ich nicht?"],
   ["altar_blatt", "Wo hat die Seuche ihre Quelle?"],
-  ["k1_d_rueckweg", "Warum sinkt die Sonne nicht?"],
+  ["k1_d_heimweg", "Warum sinkt die Sonne nicht?"],
   ["kleriker!=", "Warum werden ausgerechnet Kirchenleute zu Bestien?"],
   ["k1_c_graeber || k1_n2_gascoigne", "Wer oder was ist Oedon?"],
   ["gascoigne_tot", "Wer hat Viola getötet?"],

@@ -8,7 +8,7 @@
 // Fragmente sind Deutungen des Jägers, nie Tatsachen des Erzählers (CLAUDE.md: [Deutung] nur als Meinung). Wissenssperre Kapitel 1 beachten.
 
 // --- Fragmente --------------------------------------------------------------------
-LIST fragmente = fr_blut, fr_menschen, fr_kirche, fr_ich, fr_nacht, fr_kippen
+LIST fragmente = fr_blut, fr_menschen, fr_kirche, fr_nacht, fr_ich, fr_kippen
 VAR fr_frei = ()       // freigeschaltet
 VAR fr_gespielt = ()   // schon abgespielt
 
@@ -78,10 +78,10 @@ VAR fr_gespielt = ()   // schon abgespielt
 { fr_offen():
     -> naechstes_fragment ->
 }
-{ ampulle == 0: An deinem Gürtel hängt die Ampulle wieder, voll und warm. }
+{ ampulle == 0: An deinem Gürtel hängt die Ampulle wieder. }
 ~ ampulle = 1
 ~ leben = LEBEN_MAX
-Dann zupft etwas an deinem Ärmel, und die Stadt kehrt zurück: der Geruch zuerst, dann die Geräusche, zuletzt die Kälte. # klang: nachbild
+Dann zupft etwas an deinem Ärmel, und die Stadt kehrt zurück: der Geruch zuerst, dann die Geräusche, zuletzt die Kälte.
 -> kampfanfang
 
 === naechstes_fragment ===
@@ -109,12 +109,12 @@ Beim Einschlafen setzt du zusammen, was du in dieser Nacht gesehen hast, wie man
 
 === frag_blut ===
 // PLATZHALTER. Freigeschaltet bei Gilbert.
-Das Blut der Klinik hat das Fieber genommen, von einem Tag auf den anderen. Gilbert sagt, es habe ihm nur Aufschub gekauft. Was hat es dafür bekommen? # notiz: fragment_blut
+Das Blut der Klinik hat dir das Fieber genommen, von einem Tag auf den anderen. Hinter dem Gitter hustet ein Mann, der dasselbe Blut genommen hat. Was hat es dafür bekommen? # notiz: fragment_blut
 ->->
 
 === frag_menschen ===
 // PLATZHALTER. Freigeschaltet bei Gilberts Bericht über die Jagdnacht oder am Scheiterhaufen.
-Gilbert sagt, die Leute draußen hätten die Bestien gestern noch gegrüßt. Wenn sie Menschen waren, ist jede Jagd ein Mord an Nachbarn. Und die Nachbarn tragen Fackeln. # notiz: fragment_menschen
+Wenn die Bestien einmal Menschen waren, ist jede Jagd ein Mord an Nachbarn. Und die Nachbarn tragen Fackeln, und sie trauen dir nicht. # notiz: fragment_menschen
 ->->
 
 === frag_kirche ===
@@ -134,5 +134,5 @@ Die Sonne hängt dort, wo sie hing. Niemand in dieser Stadt spricht von einem Mo
 
 === frag_kippen ===
 // PLATZHALTER. Freigeschaltet an den Gräbern.
-Jäger kippen, sagt die Frau im Federmantel. Vorher lachen sie an falschen Stellen. In deiner Armbeuge pocht es im Takt von Gilberts Husten. Wie lange noch, bis du lachst? # notiz: fragment_kippen
+Gascoigne lacht an den falschen Stellen und weiß seinen eigenen Namen nicht mehr. In deiner Armbeuge pocht es im Takt von Gilberts Husten. Wie lange noch, bis du lachst? # notiz: fragment_kippen
 ->->
