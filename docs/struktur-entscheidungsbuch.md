@@ -129,3 +129,18 @@ Neue Leitlinie: **Das Spiel soll sich wie eine Geschichte anfühlen, voll wie ei
 - **Bleibt:** die Blutampulle (injizieren).
 - **Raus:** Blutechos (Währung und Fleck am Todesort), Stärkung bei der Puppe, das Bad der Boten samt Handel (vom Nutzer bestätigt: „überfällig“; der Brunnenplatz mit dem Mädchen bleibt). Gegenstände, Wissen und Kleidung (Brandflasche, Jagdheft, Brief, Wendels Mantel) findet man stattdessen **in der Geschichte selbst**, ohne Preis und ohne Menüton.
 - Weitere Kandidaten, die über das Videospielgefühl entschieden werden müssen: Laternen als Speicherpunkte, die Jägermarke, Einsicht als ausgebbare Währung, Zähler und Symbole in der Leiste.
+
+## 9 Tod, Traum und Story-Fragmente (Entscheidungen des Nutzers 2026-11-06, Entwurf von Claude)
+
+**Bestätigt:** Jeder Tod bringt einen **inneren Monolog in kurzen, klaren Sätzen**. Davon werden **sehr viele** geschrieben: jede mögliche Todesszene bekommt zwei bis drei, je nach Entscheidung des Spielers.
+
+**Neu vom Nutzer:**
+- **Story-Fragmente.** Im Lauf der Geschichte schaltet der Jäger Fragmente frei, in denen er selbst etwas zusammensetzt (Waren die Bestien einmal Menschen? Was hat die Kirche getan?). Beim **nächsten Tod** wird eines abgespielt, **immer nach dem Monolog, als letzte Handlung**.
+- **Feste Traumstellen mit Laterne.** An wenigen Stellen der Geschichte steht eine Straßenlaterne; ihr kaltes Licht erinnert den Jäger an den blassen Traum, er sammelt sich und gelangt in den Traum. Das ist eine **Schwelle der Geschichte**, kein Speicherpunkt.
+- **Training im Traum** als eigene Szene (Idee des Nutzers).
+
+**Claudes Vorschlag zur Umsetzung (zur Abnahme):**
+- Zwei Stufen: Tod führt in ein **kurzes Nachbild** (Körper, Monolog, Fragment) und dann direkt zurück an den Anfang des Kampfes. **Feste Traumszenen** (Klinik-Tod, Laterne nach der Brücke, Kapitelende) haben Handlung (Gehrman, Puppe, Training, Chronik).
+- Fragmente, die kein Tod abgerufen hat, kommen als Gedanken beim Einschlafen in der nächsten festen Traumszene. So geht keine Lore verloren (Prüfer: Lore auf jeder Route).
+- Fragmente sind Deutungen des Jägers, nie Tatsachen des Erzählers.
+- Texte erst mit dem Skill `stil-1800`; jetzt entsteht nur das Gerüst mit Platzhaltern.

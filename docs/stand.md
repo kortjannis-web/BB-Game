@@ -45,6 +45,7 @@ Alle Szenen sind überarbeitet und geschliffen (Stufe 2: von Claude gebaut und z
 4. **Kapitel 2 (Kathedralbezirk):** zuerst ein Gerüst mit Ein-Satz-Platzhaltern nach `lore/kapitel/kapitel2.md`, dem Nutzer als Abfrage vorlegen.
 
 ## Offen beim Nutzer
+- **Tod und Traum (2026-11-06, Entwurf):** Monologe je Todesszene (viele), Story-Fragmente nach dem Monolog, feste Traumstellen über Straßenlaternen, Training im Traum. Siehe `docs/struktur-entscheidungsbuch.md`, Abschnitt 9; wartet auf Abnahme der drei Stellen.
 - **Umbau Kapitel 1, Antworten (2026-11-06):** Fassung 2 und Kartenmodell zwei von drei bestätigt, grüne Markierung bleibt. **Neu:** Blutechos, Stärkung bei der Puppe und Boten-Handel entfallen („wie ein Buch, nicht wie ein Videospiel“); nur die Blutampulle bleibt. Offen: Laternen, Jägermarke, Einsicht als Währung, Leiste (Häppchen im Chat). Noch nichts gebaut. Siehe `docs/struktur-entscheidungsbuch.md`, Abschnitt 8.
 - **Struktur (2026-11-06):** Umbau vom Level zum Entscheidungsbuch. Fassung 2 (nach unabhängiger Prüfung) in `docs/struktur-entscheidungsbuch.md`. **Wird in einem eigenen Chat umgesetzt:** Auftrag und Startsatz in `docs/uebergabe-umbau-kapitel1.md`. Nichts gebaut.
 - **Neu im Spiel (2026-11-06):** Kommentare an Claude als Sprechblasen an der Stelle (Antworten in `web/kommentare.json`); Block „Claude erklärt“ unter jeder Entscheidung im Modus Bearbeiten; Bewerten mit 👍/👎. Begründungen (`// WARUM:`) folgen nach dem Umbau.
