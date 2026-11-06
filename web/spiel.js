@@ -679,6 +679,14 @@
     const basis = a.dataset.basis ?? (a.dataset.basis = a.getAttribute("href"));
     const id = await W.passageVonPfad(letzterPfad);
     a.href = id ? `${basis}#p=${encodeURIComponent(id)}` : basis;
+    // Das ganze Buch: zur Sprungmarke des Knotens (oder Stitches) der aktuellen Stelle
+    const b = $("link-buch-leiste");
+    if (b) {
+      const bBasis = b.dataset.basis ?? (b.dataset.basis = b.getAttribute("href"));
+      const teile = (id ?? "").split(".");
+      const marke = teile.length > 1 && /^[A-Za-z_]/.test(teile[1]) ? `${teile[0]}--${teile[1]}` : teile[0];
+      b.href = marke ? `${bBasis}#${marke}` : bBasis;
+    }
   }
 
   function zeigeSpiel() {

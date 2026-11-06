@@ -1,6 +1,7 @@
 // Bauen: kompiliert die Geschichte für den Browser und erzeugt den Erzählbaum.
 //   web/story.json, web/ink.js        Spiel (web/index.html)
 //   web/twine.json                    Erzählbaum (web/karte.html), über tools/twine.mjs
+//   web/buch.html, docs/kapitel1-buch.md   alle Texte chronologisch („Das ganze Buch“), über tools/buch.mjs
 //   web/quelle.json, web/ink-full.js  Quelltexte und Compiler für die Werkstatt (Bearbeiten, Testen im Browser)
 //   web/artefakt/spiel.html, karte.html   dieselben Seiten ohne HTML-Grundgerüst für die Veröffentlichung als
 //                                        claude.ai-Artefakt; Links zeigen auf die Adressen aus web/artefakte.json
@@ -20,6 +21,8 @@ copyFileSync(new URL("../node_modules/inkjs/dist/ink.js", import.meta.url), new 
 console.log(`Gebaut: web/story.json (${Math.round(json.length / 1024)} KB) und web/ink.js`);
 
 execFileSync(process.execPath, [new URL("twine.mjs", import.meta.url).pathname], { stdio: "inherit" });
+// Das ganze Buch: alle Texte chronologisch (web/buch.html, web/artefakt/buch.html, docs/kapitel1-buch.md)
+execFileSync(process.execPath, [new URL("buch.mjs", import.meta.url).pathname], { stdio: "inherit" });
 
 // Werkstatt: alle Quelltexte, die man im Browser lesen, ändern und (Ink) testweise neu kompilieren kann.
 // knoten: wo jeder Knoten und Stitch steht (Datei, erste und letzte Zeile, 1-basiert), damit man von einer
