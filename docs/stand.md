@@ -45,6 +45,9 @@ Alle Szenen sind überarbeitet und geschliffen (Stufe 2: von Claude gebaut und z
 4. **Kapitel 2 (Kathedralbezirk):** zuerst ein Gerüst mit Ein-Satz-Platzhaltern nach `lore/kapitel/kapitel2.md`, dem Nutzer als Abfrage vorlegen.
 
 ## Offen beim Nutzer
+- **Hosting (2026-11-06):** Umstellung auf GitHub Pages ist vorbereitet. Nutzer muss: Repo öffentlich machen (https://github.com/kortjannis-web/BB-Game/settings, unten Danger Zone), dann `/settings/pages` Source „GitHub Actions“, dann Workflow „Spiel veröffentlichen“ starten. `quellen/lore-komplett.md` ist aus Repo und Geschichte entfernt (Kopie hat der Nutzer). Netlify erst trennen, wenn die Werkstatt-Vorschläge gesichert sind.
+- **Werkstatt-Vorschläge der ersten Seite:** nie auf GitHub angekommen (liegen im Browser bei der Netlify-Adresse). Nutzer schickt die Datei („Als Datei speichern“); danach einzeln übernehmen, erst dann die erste Seite anfassen.
+- **Herkunft neu:** Kutscher dreht sich zum ersten Mal um und fragt „Aus was für Verhältnissen kommst du eigentlich, Fremder? Wo kommst du her?“; Antworten als Hintergründe (Dozent, Kriegsheimkehrer …). Dazu je Herkunft eine eigene Möglichkeit pro Kapitel (heute nur sechs Nebenzeilen). Proben stehen im Chat, noch nicht gebaut.
 - Abnahme von Kapitel 1 (siehe oben).
 - Entscheidung: Soll ein sofortiger Gegenangriff nach einem Treffer Blut zurückbringen (Kanon: „Rally“)?
 - Lore: Der Nutzer hat geliefert, was er hat. Restlücken in `lore/offen.md` (Bewegungen der Bosse für Anzeichen, einige Werkzeuge, welches Fenster welche Bürgerstimme spricht).
