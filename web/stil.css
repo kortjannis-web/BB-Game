@@ -205,3 +205,9 @@ body[data-ort="grab_oedon"], body[data-ort="graeber"] { --tint: rgba(110, 50, 40
 #notizen .fragen { margin: 0; padding-left: 1.1rem; }
 #notizen .fragen li { margin-bottom: 0.45rem; color: #bdb3a3; font-style: italic; }
 @media (prefers-reduced-motion: reduce) { #text p.anzeichen, #ueberblende.an, #ueberblende.an p, #leiste .wert.leuchtet svg { animation: none; } }
+
+/* Gelesen (Wunsch des Nutzers 2026-11-06): schon einmal gesehene Absätze und getroffene Entscheidungen grün. */
+#text p.gelesen:not(.titel):not(.zwischentitel) { color: #9fc8a4; }
+#text p.gelesen.alt { opacity: 0.72; }
+#wahl .wahlzeile > button.gelesen { color: #9fc8a4; border-color: rgba(127, 174, 134, 0.5); }
+#knopf-zurueck:disabled { opacity: 0.35; cursor: default; }

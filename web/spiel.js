@@ -20,6 +20,37 @@
   let letztesBild = "";
   let gelesen = [];
   let vorher = null;
+  // Zurück: Schnappschüsse vor jeder Entscheidung (Ink-Zustand, Textlänge, gedimmte Absätze).
+  let verlauf = [];
+
+  // Gelesen-Markierung (Wunsch des Nutzers 2026-11-06): Absätze, die schon einmal angezeigt wurden, und
+  // Entscheidungen, die schon einmal getroffen wurden, erscheinen grün. Eigener Speicher, den weder
+  // „Neu beginnen“ noch ein neuer Charakter löscht. Erkannt wird der Originaltext (nicht die Werkstatt-Fassung).
+  const GELESEN = "yharnam-gelesen-v1";
+  const kennung = (s) => {
+    let h = 0x811c9dc5;
+    for (const z of String(s).replace(/\s+/g, " ").trim()) h = Math.imul(h ^ z.codePointAt(0), 16777619) >>> 0;
+    return h.toString(36);
+  };
+  const gesehen = (() => {
+    try {
+      const d = JSON.parse(localStorage.getItem(GELESEN) ?? "null");
+      return { a: new Set(d?.a ?? []), w: new Set(d?.w ?? []) };
+    } catch {
+      return { a: new Set(), w: new Set() };
+    }
+  })();
+  const gesehenSpeichern = () => {
+    try {
+      localStorage.setItem(GELESEN, JSON.stringify({ a: [...gesehen.a], w: [...gesehen.w] }));
+    } catch {
+      /* ohne Speicher keine Markierung, das Spiel läuft trotzdem */
+    }
+  };
+  const wahlKennung = (c) => kennung(`${String(c.sourcePath ?? letzterPfad).split(".")[0]}|${c.text}`);
+  function gelesenMarkieren() {
+    for (const p of text.querySelectorAll("p[data-orig]")) if (gesehen.a.has(kennung(p.dataset.orig))) p.classList.add("gelesen");
+  }
   const K = () => window.KLANG;
   // Ortskarten: Name des Ortes beim Betreten (Tag # bild: id), ein Zeichen, bis es echte Bilder gibt.
   const ORTE = {
@@ -34,9 +65,15 @@
     try {
       const absaetze = [...text.children]
         .filter((el) => !el.classList.contains("eingefuegt") && !el.classList.contains("ws-werkzeug") && el.tagName !== "TEXTAREA")
-        .slice(-40)
+        .slice(-400)
         .map((el) => ({ tag: el.tagName, html: el.dataset.orig === undefined ? el.innerHTML : "", orig: el.dataset.orig, pfad: el.dataset.pfad, cls: el.className.replace(/\b(geaendert|gestrichen)\b/g, "").trim() }));
-      localStorage.setItem(SPEICHER, JSON.stringify({ state: story.state.toJson(), notizen, gelesen, absaetze, stimmung: document.body.dataset.stimmung, pfad: letzterPfad, bild: letztesBild }));
+      const versatz = text.children.length - absaetze.length;
+      const daten = { state: story.state.toJson(), notizen, gelesen, absaetze, versatz, stimmung: document.body.dataset.stimmung, pfad: letzterPfad, bild: letztesBild };
+      try {
+        localStorage.setItem(SPEICHER, JSON.stringify({ ...daten, verlauf: verlauf.slice(-12) }));
+      } catch {
+        localStorage.setItem(SPEICHER, JSON.stringify(daten));
+      }
     } catch {
       /* Speichern ist Komfort; ohne Speicher läuft das Spiel trotzdem. */
     }
@@ -169,10 +206,14 @@
         text.appendChild(karte);
         erster ??= karte;
       }
+      const k = kennung(zeile);
+      if (gesehen.a.has(k)) p.classList.add("gelesen");
+      else gesehen.a.add(k);
       text.appendChild(p);
       erster ??= p;
       if (p.classList.contains("tod")) ueberblende("Du erwachst.");
     }
+    gesehenSpeichern();
     ueberarbeitungAnwenden();
     leisteAktualisieren();
     zeigeWahl();
@@ -320,6 +361,7 @@
   // ------------------------------------------------------------ Entscheidungen
   function zeigeWahl(ruhig = false) {
     wahl.innerHTML = "";
+    if ($("knopf-zurueck")) $("knopf-zurueck").disabled = !verlauf.length;
     wahl.classList.toggle("ruhig", ruhig);
     if (story.currentChoices.length === 0) {
       const ende = document.createElement("p");
@@ -349,6 +391,10 @@
       b.textContent = r ? r.nachher : c.text;
       if (r) b.classList.add("geaendert");
       if (wahlWeg.has(c.text)) b.classList.add("gestrichen");
+      if (gesehen.w.has(wahlKennung(c))) {
+        b.classList.add("gelesen");
+        b.title = "Diese Entscheidung hast du schon einmal getroffen";
+      }
       b.onclick = () => waehlen(i);
       b.style.animationDelay = `${i * 60}ms`;
       zeile.appendChild(b);
@@ -472,7 +518,22 @@
 
   function waehlen(i) {
     werkzeugSchliessen();
-    for (const p of text.querySelectorAll("p:not(.alt)")) p.classList.add("alt");
+    const kinder = [...text.children];
+    const neuAlt = [...text.querySelectorAll("p:not(.alt)")];
+    verlauf.push({
+      state: story.state.toJson(),
+      anzahl: kinder.length,
+      alt: neuAlt.map((p) => kinder.indexOf(p)),
+      notizen: [...notizen],
+      pfad: letzterPfad,
+      bild: letztesBild,
+      stimmung: document.body.dataset.stimmung,
+      wahl: letzteWahl,
+    });
+    if (verlauf.length > 30) verlauf.shift();
+    gesehen.w.add(wahlKennung(story.currentChoices[i]));
+    gesehenSpeichern();
+    for (const p of neuAlt) p.classList.add("alt");
     letzteWahl = story.currentChoices[i].text;
     // Wahl mit #fliesst: Der folgende Text setzt sie als Satz fort (Entscheidung des Nutzers 2026-11-04);
     // dann keine eigene Zeile mit der Wahl, nur ein leiser Absatzwechsel.
@@ -488,6 +549,28 @@
     text.appendChild(document.createElement("hr"));
     story.ChooseChoiceIndex(i);
     weiter();
+  }
+
+  // Eine Entscheidung zurück (Wunsch des Nutzers 2026-11-06). Gelesenes bleibt grün.
+  function zurueck() {
+    const s = verlauf.pop();
+    if (!s) return;
+    werkzeugSchliessen();
+    story.state.LoadJson(s.state);
+    while (text.children.length > s.anzahl) text.lastElementChild.remove();
+    for (const i of s.alt) text.children[i]?.classList.remove("alt");
+    notizen = s.notizen;
+    letzterPfad = s.pfad;
+    letztesBild = s.bild;
+    letzteWahl = s.wahl;
+    document.body.dataset.stimmung = s.stimmung;
+    gelesenMarkieren();
+    ueberarbeitungAnwenden();
+    leisteAktualisieren();
+    zeigeWahl(true);
+    baumLink();
+    speichern();
+    wahl.scrollIntoView({ block: "end" });
   }
 
   // Link in den Erzählbaum, direkt zur aktuellen Passage.
@@ -717,6 +800,11 @@
         el.className = a.cls;
         text.appendChild(el);
       }
+      const v = gespeichert.versatz ?? 0;
+      verlauf = (gespeichert.verlauf ?? [])
+        .map((s) => ({ ...s, anzahl: s.anzahl - v, alt: (s.alt ?? []).map((i) => i - v).filter((i) => i >= 0) }))
+        .filter((s) => s.anzahl >= 0);
+      gelesenMarkieren();
       ueberarbeitungAnwenden();
       zeigeSpiel();
       leisteAktualisieren();
@@ -725,6 +813,7 @@
       wahl.scrollIntoView({ block: "end" });
     });
     $("knopf-notizbuch").addEventListener("click", notizbuchZeigen);
+    $("knopf-zurueck")?.addEventListener("click", zurueck);
     const tonKnopf = $("knopf-ton");
     const tonZeigen = () => {
       const an = K()?.an() ?? false;
