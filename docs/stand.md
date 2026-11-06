@@ -45,7 +45,7 @@ Alle Szenen sind überarbeitet und geschliffen (Stufe 2: von Claude gebaut und z
 4. **Kapitel 2 (Kathedralbezirk):** zuerst ein Gerüst mit Ein-Satz-Platzhaltern nach `lore/kapitel/kapitel2.md`, dem Nutzer als Abfrage vorlegen.
 
 ## Offen beim Nutzer
-- **Schreibkunst (2026-11-06):** Leseliste in drei Kategorien in `docs/schreibkunst-lektuere.md` (Kernliste neun Werke), nächster Schritt Wort-für-Wort-Analyse. Nutzer findet die Prosa „Slop“. Analyse in `docs/schreibkunst-analyse.md` (Messung gegen sieben Klassiker, blinde Kritik, Regeln, die Formeln erzeugen, Plan Phase 2: Korpus, Skill `stil-1800`, Prüfer v2, Weltbild, Probe am Prolog). Wartet auf seine Entscheidungen (Probe-Ton, Regeln umbauen, Mond).
+- **Schreibkunst (2026-11-06):** Leseliste (nur deutsche Werke) in `docs/schreibkunst-lektuere.md`, Methode aus der KI-Schreibforschung in `docs/ki-schreibmethode.md` (Vorbilder statt Verbote, Slop-Detektor, Bibel, drei Kritiker, Varianten); nächster Schritt Wort-für-Wort-Analyse. Nutzer findet die Prosa „Slop“. Analyse in `docs/schreibkunst-analyse.md` (Messung gegen sieben Klassiker, blinde Kritik, Regeln, die Formeln erzeugen, Plan Phase 2: Korpus, Skill `stil-1800`, Prüfer v2, Weltbild, Probe am Prolog). Wartet auf seine Entscheidungen (Probe-Ton, Regeln umbauen, Mond).
 - **Mond/Nacht:** Kanon Kapitel 1 = Abend (Sonnenuntergang nach Gascoigne); Nutzer erinnert ewige Nacht und großen, tiefen Mond. Entscheidung offen.
 - **Drei Werkstatt-Fixes bis zur Klinik** (2026-11-06) noch nicht übermittelt.
 - **Neu im Spiel:** Gelesenes und getroffene Entscheidungen dauerhaft grün; „← Zurück“ (eine Entscheidung).
