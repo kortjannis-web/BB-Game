@@ -175,7 +175,7 @@ Am Fuß der Treppe steht die Puppe, wie sie beim ersten Mal stand, die Hände vo
 === training ===
 // TITEL: Übung im Hof
 // [KANON lore:figuren/gehrman, lore:figuren/gascoigne] Die Parade lernt man von Gehrman wie von Gascoigne. [ERWEITERT] Die Übung im Hof ist eine Szene, kein Menü: Sie öffnet gegen Gascoigne je eine Möglichkeit (`geuebt`).
-// Ausgeschrieben 2026-11-06 aus dem Platzhalter (Ü10). Saat für n2_gascoigne, ohne die Optionen zu verraten: der Schwenkbalken am Pfahl (Ernte: „Die lange Axt vorn abfangen“, „geübt an einem Pfahl im Hof, der für dich ausholen musste“) und der Griff um die Handgelenke, den man zum Daumen hin bricht (Ernte: „Seine Klauen nach beiden Seiten aufbrechen“). [ERWEITERT] Hof, Pfahl mit Schwenkbalken und Sandsack (nach Art einer Quintane), die Kerben früherer Jäger, die Rinnen seiner Räder in den Dielen.
+// Ausgeschrieben 2026-11-06 aus dem Platzhalter (Ü10). Saat für n2_gascoigne, ohne die Optionen zu verraten: der Schwenkbalken am Pfahl (Ernte: „Die lange Axt vorn abfangen“, „geübt an einem Pfahl im Hof, der für dich ausholen musste“) und der Griff um die Handgelenke, den man zum Daumen hin bricht (Ernte: „Seine Arme nach außen aufbrechen“). [ERWEITERT] Hof, Pfahl mit Schwenkbalken und Sandsack (nach Art einer Quintane), die Kerben früherer Jäger, die Rinnen seiner Räder in den Dielen.
 // Parade: Nach dem Umbau kommt sie immer von Gascoigne (docs/kapitel1-struktur.md, Abweichung 7). Der Zweig „not parade“ war tot (L44: `parade` wird in k1_b_scheiterhaufen.gascoigne_greift_ein
 //   auf jedem Weg gesetzt, nie zurückgesetzt, und der Scheiterhaufen liegt vor diesem Traum) und ist seit der Nachbesserung 2026-11-06 gelöscht.
 ~ geuebt = true
