@@ -6,7 +6,7 @@
 // --- Wer du bist ------------------------------------------------------------
 VAR name = "Jäger"          // setzt die Oberfläche bei der Namenswahl
 VAR herkunft = ""           // adel, soldat, gelehrter, ueberlebender, kranker, gesuchter
-VAR grund = ""              // heilung_selbst, heilung_anderer, suche, schuld
+VAR grund = ""              // heilung_selbst, heilung_anderer, schweigen (Gründe „suche“ und „schuld“ vom Nutzer gestrichen, 2026-11-06)
 VAR haltung_vertrag = ""    // blind, wach, zoegernd
 VAR waffe = ""              // saege (Entscheidung des Nutzers: keine Waffenwahl)
 VAR feuerwaffe = ""         // pistole, donnerbuechse
